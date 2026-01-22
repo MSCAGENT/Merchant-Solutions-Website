@@ -49,7 +49,7 @@ function App() {
           <Route path="/pos/self-ordering-kiosk" element={<POSHardware />} />
           
           {/* Gateway Routes */}
-          <Route path="/gateway/payments-gateway" element={<Gateway />} />
+          <Route path="/gateway/payments-gateway" element={<MSCGateway />} />
           <Route path="/gateway/virtual-terminal" element={<Gateway />} />
           <Route path="/gateway/api-integrations" element={<Gateway />} />
           <Route path="/gateway/mobile-payments" element={<Gateway />} />
