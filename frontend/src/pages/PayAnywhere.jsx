@@ -153,48 +153,42 @@ const PayAnywhere = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 to-blue-700 text-white py-16 lg:py-24">
+      <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Get Free PayAnywhere POS with Zero Processing Fees
               </h1>
-              <p className="text-xl text-purple-100 mb-2">
+              <p className="text-xl text-gray-600 mb-2">
                 Approved in <span className="font-semibold">15 minutes or less</span>. 100% compliant.
               </p>
-              <p className="text-lg text-purple-100 mb-8">Built for retail and service businesses.</p>
+              <p className="text-lg text-gray-600 mb-8">Built for retail and service businesses.</p>
               
               <div className="space-y-3 mb-8">
                 <div className="flex items-center space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <Check className="h-4 w-4 text-purple-900" />
-                  </div>
-                  <span className="text-lg">No upfront cost</span>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                  <span className="text-lg text-gray-700">No upfront cost</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <Check className="h-4 w-4 text-purple-900" />
-                  </div>
-                  <span className="text-lg">Free smart terminal</span>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                  <span className="text-lg text-gray-700">Free smart terminal</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <Check className="h-4 w-4 text-purple-900" />
-                  </div>
-                  <span className="text-lg">Cash discount or flat rate pricing</span>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                  <span className="text-lg text-gray-700">Cash discount or flat rate pricing</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 font-semibold text-lg px-8 py-6 shadow-lg">
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
                     Request a Free Demo
                   </Button>
                 </Link>
                 <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6">
+                  <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
                     Apply Now <ChevronRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
@@ -204,13 +198,14 @@ const PayAnywhere = () => {
             {/* Right - Device Image */}
             <div className="hidden lg:flex justify-center items-center">
               <div className="relative">
-                <div className="w-80 h-96 bg-white/10 backdrop-blur-sm rounded-3xl p-8 flex items-center justify-center">
-                  <CreditCard className="w-48 h-48 text-white/80" />
+                <div className="w-80 h-96 bg-gradient-to-br from-purple-100 to-yellow-100 rounded-3xl p-8 flex items-center justify-center shadow-xl">
+                  <CreditCard className="w-48 h-48 text-purple-600" />
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
       {/* Three Simple Steps */}
