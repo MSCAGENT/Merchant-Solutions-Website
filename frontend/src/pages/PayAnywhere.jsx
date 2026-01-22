@@ -303,7 +303,7 @@ const PayAnywhere = () => {
           <div className="text-center">
             <p className="text-gray-600 mb-6">$19.95/month software subscription per device</p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 font-semibold text-lg px-12 py-6 shadow-lg">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-12 py-6 shadow-lg">
                 Start Saving Today
               </Button>
             </Link>
