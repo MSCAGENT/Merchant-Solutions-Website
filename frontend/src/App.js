@@ -27,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/payanywhere" element={<PayAnywhere />} />
           
           {/* Solution Routes */}
           <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
