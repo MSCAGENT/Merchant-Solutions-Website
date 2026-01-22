@@ -129,7 +129,7 @@ const Partnerships = () => {
                 Merchant Services Agents, ISOs & Referral Partners
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                in the USA, Canada and US territories.
+                in the USA, Canada, Caribbean (USVI & PR)
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
