@@ -15,7 +15,7 @@ const SolutionDetail = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Solution Not Found</h1>
           <Link to="/">
-            <Button className="bg-emerald-500 hover:bg-emerald-600">Back to Home</Button>
+            <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg">Back to Home</Button>
           </Link>
         </div>
       </div>
@@ -31,7 +31,7 @@ const SolutionDetail = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{solution.title}</h1>
             <p className="text-xl text-gray-600 mb-8">{solution.description}</p>
             <Link to="/contact">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg text-white">
                 Get Started
               </Button>
             </Link>

@@ -22,7 +22,7 @@ const Partners = () => {
               Join our network of successful partners and grow your business with industry-leading payment solutions
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg text-white">
                 Become a Partner
               </Button>
             </Link>
@@ -107,7 +107,7 @@ const Partners = () => {
             We're always looking for talented individuals to join our growing team
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg text-white">
               View Open Positions
             </Button>
           </Link>

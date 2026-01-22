@@ -19,7 +19,7 @@ const Gateway = () => {
               Powerful, secure, and developer-friendly payment gateway with 99.99% uptime
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg text-white">
                 Start Integration
               </Button>
             </Link>

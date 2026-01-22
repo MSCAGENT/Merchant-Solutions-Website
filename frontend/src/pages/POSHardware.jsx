@@ -20,7 +20,7 @@ const POSHardware = () => {
               Industry-leading point-of-sale solutions and payment terminals for every business
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg text-white">
                 Find Your Perfect POS
               </Button>
             </Link>
@@ -69,7 +69,7 @@ const POSHardware = () => {
                           ))}
                         </ul>
                         <Link to="/contact">
-                          <Button className="w-full bg-emerald-500 hover:bg-emerald-600">
+                          <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg">
                             Get Quote
                           </Button>
                         </Link>
