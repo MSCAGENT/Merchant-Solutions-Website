@@ -51,12 +51,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-yellow-400 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">M</span>
-              </div>
-              <span className="font-bold text-xl text-white">Merchant Solutions</span>
-            </div>
+            <Link to="/" className="flex items-center space-x-2 mb-4">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/qzb8rk4l_JPG.jpg" 
+                alt="Merchant Solutions Corp" 
+                className="h-10 w-auto"
+              />
+            </Link>
             <p className="text-sm mb-6 text-gray-400">
               Empowering businesses with cutting-edge payment processing solutions. Trusted by over 50,000 merchants nationwide.
             </p>
