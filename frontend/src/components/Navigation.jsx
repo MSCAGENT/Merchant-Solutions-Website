@@ -57,12 +57,9 @@ const Navigation = () => {
       ]
     },
     {
-      label: 'Partners',
+      label: 'Partnerships',
       children: [
-        { label: 'Agent Program', path: '/partners/agents' },
-        { label: 'ISO Program', path: '/partners/iso-program' },
-        { label: 'White-Label Solutions', path: '/partners/white-label' },
-        { label: 'Financial Institutions', path: '/partners/financial-institutions' },
+        { label: 'Agent & ISO Program', path: '/partnerships' },
         { label: 'Careers', path: '/partners/careers' }
       ]
     },
