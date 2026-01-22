@@ -18,6 +18,7 @@ import About from "./pages/About";
 import Security from "./pages/Security";
 import Login from "./pages/Login";
 import PayAnywhere from "./pages/PayAnywhere";
+import CloverPOS from "./pages/CloverPOS";
 
 function App() {
   return (
