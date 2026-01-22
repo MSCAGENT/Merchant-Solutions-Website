@@ -192,7 +192,7 @@ const Home = () => {
           <p className="text-xl mb-8 text-purple-100">Join thousands of businesses that trust us with their payments</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
                 Get Started Today
               </Button>
             </Link>
