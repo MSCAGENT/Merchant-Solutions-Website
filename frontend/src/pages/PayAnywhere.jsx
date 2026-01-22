@@ -333,37 +333,37 @@ const PayAnywhere = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <Check className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                <Check className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 mb-1">No credit card processing fees with cash discount pricing</h3>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Check className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                <Check className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 mb-1">Free placement of smart PAX terminals</h3>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Check className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                <Check className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 mb-1">Flat rate option with low monthly fee available</h3>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Check className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                <Check className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 mb-1">Mobile and countertop terminals</h3>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Check className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                <Check className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 mb-1">Next-day or same-day funding</h3>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Check className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                <Check className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 mb-1">Works for retail, restaurants, and service businesses</h3>
                 </div>
