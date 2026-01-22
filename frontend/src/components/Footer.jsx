@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <img 
-                src="https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/qzb8rk4l_JPG.jpg" 
+                src="https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png" 
                 alt="Merchant Solutions Corp" 
                 className="h-10 w-auto"
               />
