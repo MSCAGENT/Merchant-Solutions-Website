@@ -197,12 +197,12 @@ const PayAnywhere = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6 shadow-lg">
+                  <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white text-lg px-8 py-6 shadow-lg">
                     Request a Free Demo
                   </Button>
                 </Link>
                 <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-6">
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6">
                     Apply Now <ChevronRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
