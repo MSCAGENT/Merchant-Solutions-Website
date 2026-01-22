@@ -438,6 +438,144 @@ const CloverPOS = () => {
           </p>
         </div>
       </section>
+
+      {/* Clover Station Systems */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-4">
+            Complete Clover Station Systems
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Full-featured POS solutions for your business
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Clover Solo */}
+            <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
+              <CardContent className="p-6">
+                {/* Device Image */}
+                <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
+                  <CreditCard className="w-32 h-32 text-purple-600" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Station Solo</h3>
+                <p className="text-sm text-gray-500 mb-4">Complete countertop POS system</p>
+                
+                <div className="mb-6">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">$1,349</div>
+                  <div className="space-y-1">
+                    <div className="text-xs text-gray-500">Software:</div>
+                    <div className="text-sm text-gray-600">Retail: $89.95/month</div>
+                    <div className="text-sm text-gray-600">Restaurant: $89.95/month</div>
+                  </div>
+                </div>
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                      onClick={() => setSelectedDevice({
+                        id: 'clover-station-solo',
+                        name: 'Clover Station Solo',
+                        subtitle: 'Full POS System',
+                        price: '$1,349',
+                        monthlyFee: '$89.95/month software'
+                      })}
+                    >
+                      Pricing
+                    </Button>
+                  </DialogTrigger>
+                  <PricingModal device={selectedDevice} />
+                </Dialog>
+              </CardContent>
+            </Card>
+
+            {/* Clover Duo */}
+            <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
+              <CardContent className="p-6">
+                {/* Device Image */}
+                <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
+                  <CreditCard className="w-32 h-32 text-purple-600" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Station Duo</h3>
+                <p className="text-sm text-gray-500 mb-4">Dual-screen POS system</p>
+                
+                <div className="mb-6">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">$1,649</div>
+                  <div className="space-y-1">
+                    <div className="text-xs text-gray-500">Software:</div>
+                    <div className="text-sm text-gray-600">Retail: $89.95/month</div>
+                    <div className="text-sm text-gray-600">Restaurant: $89.95/month</div>
+                  </div>
+                </div>
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                      onClick={() => setSelectedDevice({
+                        id: 'clover-station-duo',
+                        name: 'Clover Station Duo',
+                        subtitle: 'Dual-Screen POS',
+                        price: '$1,649',
+                        monthlyFee: '$89.95/month software'
+                      })}
+                    >
+                      Pricing
+                    </Button>
+                  </DialogTrigger>
+                  <PricingModal device={selectedDevice} />
+                </Dialog>
+              </CardContent>
+            </Card>
+
+            {/* Clover Kiosk */}
+            <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
+              <CardContent className="p-6">
+                {/* Device Image */}
+                <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
+                  <CreditCard className="w-32 h-32 text-purple-600" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Kiosk</h3>
+                <p className="text-sm text-gray-500 mb-4">Self-service kiosk system</p>
+                
+                <div className="mb-6">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">$1,899</div>
+                  <div className="space-y-1">
+                    <div className="text-xs text-gray-500">Software:</div>
+                    <div className="text-sm text-gray-600">Retail: $89.95/month</div>
+                    <div className="text-sm text-gray-600">Restaurant: $89.95/month</div>
+                  </div>
+                </div>
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                      onClick={() => setSelectedDevice({
+                        id: 'clover-kiosk',
+                        name: 'Clover Kiosk',
+                        subtitle: 'Self-Service System',
+                        price: '$1,899',
+                        monthlyFee: '$89.95/month software'
+                      })}
+                    >
+                      Pricing
+                    </Button>
+                  </DialogTrigger>
+                  <PricingModal device={selectedDevice} />
+                </Dialog>
+              </CardContent>
+            </Card>
+          </div>
+
+          <p className="text-center text-xs text-gray-500 mt-8">
+            Final pricing shown after approval
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
