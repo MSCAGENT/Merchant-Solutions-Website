@@ -38,8 +38,8 @@ const Navigation = () => {
     {
       label: 'POS & Hardware',
       children: [
+        { label: 'PayAnywhere POS', path: '/payanywhere' },
         { label: 'Clover POS', path: '/pos/clover' },
-        { label: 'PAX Terminals', path: '/pos/pax-terminals' },
         { label: 'Dejavoo Terminals', path: '/pos/dejavoo-terminals' },
         { label: 'Ingenico Terminals', path: '/pos/ingenico-terminals' },
         { label: 'Restaurant POS', path: '/pos/restaurant-pos' },
