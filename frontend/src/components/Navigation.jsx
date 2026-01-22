@@ -53,9 +53,7 @@ const Navigation = () => {
       children: [
         { label: 'Payment Gateway', path: '/gateway/payments-gateway' },
         { label: 'Virtual Terminal', path: '/gateway/virtual-terminal' },
-        { label: 'API Integrations', path: '/gateway/api-integrations' },
-        { label: 'Mobile Payments', path: '/gateway/mobile-payments' },
-        { label: 'Secure Checkout', path: '/gateway/secure-checkout' }
+        { label: 'API Integrations', path: 'https://developers.merchantsolutionscorpdb.com/#/', external: true }
       ]
     },
     {
