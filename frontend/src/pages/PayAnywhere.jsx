@@ -183,15 +183,15 @@ const PayAnywhere = () => {
               </div>
               <div className="space-y-3 mb-8">
                 <div className="flex items-center space-x-3">
-                  <Check className="h-6 w-6 text-green-400" />
+                  <Check className="h-6 w-6 text-yellow-400" />
                   <span className="text-lg">No upfront cost</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="h-6 w-6 text-green-400" />
+                  <Check className="h-6 w-6 text-yellow-400" />
                   <span className="text-lg">Free smart terminal</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="h-6 w-6 text-green-400" />
+                  <Check className="h-6 w-6 text-yellow-400" />
                   <span className="text-lg">Cash discount or flat rate pricing</span>
                 </div>
               </div>
