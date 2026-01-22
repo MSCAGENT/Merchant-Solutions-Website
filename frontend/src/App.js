@@ -20,6 +20,7 @@ import Login from "./pages/Login";
 import PayAnywhere from "./pages/PayAnywhere";
 import CloverPOS from "./pages/CloverPOS";
 import DejavooTerminals from "./pages/DejavooTerminals";
+import MSCGateway from "./pages/MSCGateway";
 
 function App() {
   return (
