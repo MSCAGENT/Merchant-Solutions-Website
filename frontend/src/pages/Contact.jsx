@@ -432,7 +432,7 @@ const Contact = () => {
                       </PopoverContent>
                     </Popover>
                   </div>
-                  <Button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600 text-white">
+                  <Button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
                     <CalendarIcon className="mr-2 h-4 w-4" />
                     Book Demo
                   </Button>
