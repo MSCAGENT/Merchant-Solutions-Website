@@ -51,9 +51,6 @@ function App() {
           {/* Gateway Routes */}
           <Route path="/gateway/payments-gateway" element={<MSCGateway />} />
           <Route path="/gateway/virtual-terminal" element={<Gateway />} />
-          <Route path="/gateway/api-integrations" element={<Gateway />} />
-          <Route path="/gateway/mobile-payments" element={<Gateway />} />
-          <Route path="/gateway/secure-checkout" element={<Gateway />} />
           
           {/* Partner Routes */}
           <Route path="/partners/agents" element={<Partners />} />
