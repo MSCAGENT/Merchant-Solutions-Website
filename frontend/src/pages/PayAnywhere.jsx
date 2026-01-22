@@ -323,39 +323,27 @@ const PayAnywhere = () => {
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center mt-1">
-                    <Check className="h-4 w-4 text-gray-900" />
-                  </div>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-700">No credit card processing fees with cash discount pricing</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center mt-1">
-                    <Check className="h-4 w-4 text-gray-900" />
-                  </div>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-700">Free placement of smart PAX terminals</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center mt-1">
-                    <Check className="h-4 w-4 text-gray-900" />
-                  </div>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-700">Flat rate option with low monthly fee available</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center mt-1">
-                    <Check className="h-4 w-4 text-gray-900" />
-                  </div>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-700">Mobile and countertop terminals</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center mt-1">
-                    <Check className="h-4 w-4 text-gray-900" />
-                  </div>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-700">Next-day or same-day funding</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center mt-1">
-                    <Check className="h-4 w-4 text-gray-900" />
-                  </div>
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-700">Works for retail, restaurants, and service businesses</p>
                 </div>
               </div>
