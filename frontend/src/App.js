@@ -1,51 +1,89 @@
-import { useEffect } from "react";
-import "@/App.css";
+import React from "react";
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import { Toaster } from "./components/ui/sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+// Pages
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import SolutionDetail from "./pages/SolutionDetail";
+import IndustryDetail from "./pages/IndustryDetail";
+import POSHardware from "./pages/POSHardware";
+import Gateway from "./pages/Gateway";
+import Partners from "./pages/Partners";
+import Resources from "./pages/Resources";
+import About from "./pages/About";
+import Security from "./pages/Security";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navigation />
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          
+          {/* Solution Routes */}
+          <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
+          
+          {/* Industry Routes */}
+          <Route path="/industries/:industryId" element={<IndustryDetail />} />
+          
+          {/* POS & Hardware Routes */}
+          <Route path="/pos/clover" element={<POSHardware />} />
+          <Route path="/pos/pax-terminals" element={<POSHardware />} />
+          <Route path="/pos/dejavoo-terminals" element={<POSHardware />} />
+          <Route path="/pos/ingenico-terminals" element={<POSHardware />} />
+          <Route path="/pos/restaurant-pos" element={<POSHardware />} />
+          <Route path="/pos/retail-pos" element={<POSHardware />} />
+          <Route path="/pos/qsr-pos" element={<POSHardware />} />
+          <Route path="/pos/self-ordering-kiosk" element={<POSHardware />} />
+          
+          {/* Gateway Routes */}
+          <Route path="/gateway/payments-gateway" element={<Gateway />} />
+          <Route path="/gateway/virtual-terminal" element={<Gateway />} />
+          <Route path="/gateway/api-integrations" element={<Gateway />} />
+          <Route path="/gateway/mobile-payments" element={<Gateway />} />
+          <Route path="/gateway/secure-checkout" element={<Gateway />} />
+          
+          {/* Partner Routes */}
+          <Route path="/partners/agents" element={<Partners />} />
+          <Route path="/partners/iso-program" element={<Partners />} />
+          <Route path="/partners/white-label" element={<Partners />} />
+          <Route path="/partners/financial-institutions" element={<Partners />} />
+          <Route path="/partners/careers" element={<Partners />} />
+          
+          {/* Resources Routes */}
+          <Route path="/resources/blog" element={<Resources />} />
+          <Route path="/resources/payment-processing" element={<Resources />} />
+          <Route path="/resources/pos-systems" element={<Resources />} />
+          <Route path="/resources/high-risk-merchants" element={<Resources />} />
+          <Route path="/resources/industry-guides" element={<Resources />} />
+          
+          {/* Company Routes */}
+          <Route path="/company/about" element={<About />} />
+          <Route path="/company/mission" element={<About />} />
+          <Route path="/company/why-us" element={<About />} />
+          <Route path="/company/security-compliance" element={<Security />} />
+          <Route path="/company/contact" element={<Contact />} />
+          
+          {/* Login Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/agent-login" element={<Login />} />
+          <Route path="/developer-login" element={<Login />} />
+          
+          {/* Legal Pages (placeholder routes) */}
+          <Route path="/privacy-policy" element={<About />} />
+          <Route path="/terms-of-service" element={<About />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/compliance" element={<Security />} />
         </Routes>
+        <Footer />
+        <Toaster />
       </BrowserRouter>
     </div>
   );
