@@ -81,7 +81,7 @@ const SolutionDetail = () => {
             </Card>
             <Card className="text-center">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl text-white font-bold">3</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">24/7 Support</h3>

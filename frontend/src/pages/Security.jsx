@@ -49,7 +49,7 @@ const Security = () => {
             </Card>
             <Card className="text-center border-2 hover:border-purple-400 transition-all duration-300">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Tokenization</h3>

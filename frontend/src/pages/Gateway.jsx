@@ -85,7 +85,7 @@ const Gateway = () => {
             </Card>
             <Card className="text-center border-0 shadow-lg">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Lightning Fast</h3>
