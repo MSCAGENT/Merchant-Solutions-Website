@@ -21,6 +21,7 @@ import PayAnywhere from "./pages/PayAnywhere";
 import CloverPOS from "./pages/CloverPOS";
 import DejavooTerminals from "./pages/DejavooTerminals";
 import MSCGateway from "./pages/MSCGateway";
+import Partnerships from "./pages/Partnerships";
 
 function App() {
   return (
