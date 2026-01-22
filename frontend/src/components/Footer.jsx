@@ -63,15 +63,15 @@ const Footer = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
-                <Phone className="h-4 w-4 text-emerald-500" />
+                <Phone className="h-4 w-4 text-purple-600" />
                 <span>1-800-MERCHANT</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
-                <Mail className="h-4 w-4 text-emerald-500" />
+                <Mail className="h-4 w-4 text-purple-600" />
                 <span>info@merchantsolutions.com</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
-                <MapPin className="h-4 w-4 text-emerald-500" />
+                <MapPin className="h-4 w-4 text-purple-600" />
                 <span>123 Commerce St, NY 10001</span>
               </div>
             </div>
@@ -86,7 +86,7 @@ const Footer = () => {
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className="text-sm hover:text-emerald-400 transition-colors duration-200"
+                      className="text-sm hover:text-purple-500 transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -103,16 +103,16 @@ const Footer = () => {
             © {new Date().getFullYear()} Merchant Solutions Corp. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
+            <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors duration-200">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
+            <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors duration-200">
               <Twitter className="h-5 w-5" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
+            <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors duration-200">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
+            <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors duration-200">
               <Instagram className="h-5 w-5" />
             </a>
           </div>
@@ -120,16 +120,16 @@ const Footer = () => {
 
         {/* Legal Links */}
         <div className="flex flex-wrap justify-center gap-6 mt-6 text-xs text-gray-500">
-          <Link to="/privacy-policy" className="hover:text-emerald-400 transition-colors duration-200">
+          <Link to="/privacy-policy" className="hover:text-purple-500 transition-colors duration-200">
             Privacy Policy
           </Link>
-          <Link to="/terms-of-service" className="hover:text-emerald-400 transition-colors duration-200">
+          <Link to="/terms-of-service" className="hover:text-purple-500 transition-colors duration-200">
             Terms of Service
           </Link>
-          <Link to="/security" className="hover:text-emerald-400 transition-colors duration-200">
+          <Link to="/security" className="hover:text-purple-500 transition-colors duration-200">
             Security
           </Link>
-          <Link to="/compliance" className="hover:text-emerald-400 transition-colors duration-200">
+          <Link to="/compliance" className="hover:text-purple-500 transition-colors duration-200">
             Compliance
           </Link>
         </div>

@@ -49,7 +49,7 @@ const Partners = () => {
                     <ul className="space-y-2 mb-6">
                       {partner.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start text-gray-600">
-                          <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg className="h-5 w-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           {benefit}
@@ -90,7 +90,7 @@ const Partners = () => {
             </Card>
             <Card className="text-center border-0 shadow-lg">
               <CardContent className="p-8">
-                <div className="text-4xl font-bold text-emerald-500 mb-2">$5B+</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">$5B+</div>
                 <h3 className="text-xl font-semibold mb-3">Annual Volume</h3>
                 <p className="text-gray-600">Trusted to process billions in transactions yearly</p>
               </CardContent>

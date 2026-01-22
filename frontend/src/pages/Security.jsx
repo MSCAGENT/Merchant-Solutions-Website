@@ -80,15 +80,15 @@ const Security = () => {
                 <p className="text-gray-600 mb-4">We maintain the highest level of PCI DSS certification, ensuring that all payment data is processed, stored, and transmitted securely.</p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Annual security audits
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Quarterly network scans
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Continuous monitoring
                   </li>
                 </ul>
@@ -100,15 +100,15 @@ const Security = () => {
                 <p className="text-gray-600 mb-4">Healthcare merchants can trust our HIPAA-compliant payment solutions to protect patient information and maintain compliance.</p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Encrypted data transmission
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Secure patient portals
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Audit trail logging
                   </li>
                 </ul>
@@ -120,15 +120,15 @@ const Security = () => {
                 <p className="text-gray-600 mb-4">We comply with international data protection regulations including GDPR, ensuring customer privacy and data rights.</p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Data privacy controls
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Right to deletion
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                     Consent management
                   </li>
                 </ul>

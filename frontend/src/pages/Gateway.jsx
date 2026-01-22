@@ -43,7 +43,7 @@ const Gateway = () => {
                   <ul className="space-y-2">
                     {item.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}

@@ -47,7 +47,7 @@ const SolutionDetail = () => {
             {solution.features.map((feature, index) => (
               <Card key={index} className="border-2 hover:border-purple-400 transition-all duration-300">
                 <CardContent className="p-6 flex items-start">
-                  <CheckCircle className="h-6 w-6 text-emerald-500 mr-4 flex-shrink-0 mt-1" />
+                  <CheckCircle className="h-6 w-6 text-purple-600 mr-4 flex-shrink-0 mt-1" />
                   <p className="text-gray-700 text-lg">{feature}</p>
                 </CardContent>
               </Card>
