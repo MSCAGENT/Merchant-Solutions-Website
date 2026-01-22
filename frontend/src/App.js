@@ -54,11 +54,8 @@ function App() {
           <Route path="/gateway/virtual-terminal" element={<Gateway />} />
           
           {/* Partner Routes */}
-          <Route path="/partners/agents" element={<Partners />} />
-          <Route path="/partners/iso-program" element={<Partners />} />
-          <Route path="/partners/white-label" element={<Partners />} />
-          <Route path="/partners/financial-institutions" element={<Partners />} />
-          <Route path="/partners/careers" element={<Partners />} />
+          <Route path="/partnerships" element={<Partnerships />} />
+          <Route path="/partners/agents" element={<Partnerships />} />
           
           {/* Resources Routes */}
           <Route path="/resources/blog" element={<Resources />} />
