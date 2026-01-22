@@ -419,7 +419,7 @@ const PayAnywhere = () => {
       <section className="py-20 bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Get Started with PayAnywhere POS</h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-purple-100">
             Join thousands of businesses saving on payment processing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
