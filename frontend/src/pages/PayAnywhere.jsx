@@ -402,7 +402,7 @@ const PayAnywhere = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6 shadow-lg">
+              <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white text-lg px-8 py-6 shadow-lg">
                 Request a Free Demo
               </Button>
             </Link>
