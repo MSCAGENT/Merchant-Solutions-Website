@@ -37,7 +37,7 @@ function App() {
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           
           {/* POS & Hardware Routes */}
-          <Route path="/pos/clover" element={<POSHardware />} />
+          <Route path="/pos/clover" element={<CloverPOS />} />
           <Route path="/pos/pax-terminals" element={<POSHardware />} />
           <Route path="/pos/dejavoo-terminals" element={<POSHardware />} />
           <Route path="/pos/ingenico-terminals" element={<POSHardware />} />
