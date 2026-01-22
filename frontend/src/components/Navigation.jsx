@@ -230,7 +230,7 @@ const Navigation = () => {
                 </Button>
               </Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white">
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
                   Get Started
                 </Button>
               </Link>
