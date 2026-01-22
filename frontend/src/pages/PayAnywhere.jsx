@@ -226,7 +226,7 @@ const PayAnywhere = () => {
             Three Simple Steps to Save on Processing Fees
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-2 hover:border-blue-600 transition-all duration-300">
+            <Card className="text-center border-2 hover:border-purple-600 transition-all duration-300">
               <CardContent className="p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-4xl font-bold text-white">1</span>
@@ -235,7 +235,7 @@ const PayAnywhere = () => {
                 <p className="text-gray-600">See how PayAnywhere works for your business</p>
               </CardContent>
             </Card>
-            <Card className="text-center border-2 hover:border-blue-600 transition-all duration-300">
+            <Card className="text-center border-2 hover:border-purple-600 transition-all duration-300">
               <CardContent className="p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-4xl font-bold text-white">2</span>
@@ -244,7 +244,7 @@ const PayAnywhere = () => {
                 <p className="text-gray-600">Fast approval process, typically under 15 minutes</p>
               </CardContent>
             </Card>
-            <Card className="text-center border-2 hover:border-blue-600 transition-all duration-300">
+            <Card className="text-center border-2 hover:border-purple-600 transition-all duration-300">
               <CardContent className="p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-4xl font-bold text-white">3</span>
