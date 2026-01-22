@@ -176,7 +176,7 @@ const PayAnywhere = () => {
                 Get Free PayAnywhere POS with Zero Processing Fees
               </h1>
               <div className="space-y-4 mb-8">
-                <p className="text-xl text-blue-100">
+                <p className="text-xl text-purple-100">
                   Approved in <span className="font-bold">15 minutes or less</span>. 100% compliant.
                 </p>
                 <p className="text-lg text-blue-100">Built for retail and service businesses.</p>
