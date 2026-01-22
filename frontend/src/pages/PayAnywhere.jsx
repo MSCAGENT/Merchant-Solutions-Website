@@ -388,15 +388,15 @@ const PayAnywhere = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="flex items-center justify-center space-x-3">
-              <Check className="h-8 w-8 text-green-600" />
+              <Check className="h-8 w-8 text-yellow-500" />
               <span className="text-xl font-semibold text-gray-900">No upfront cost</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
-              <Check className="h-8 w-8 text-green-600" />
+              <Check className="h-8 w-8 text-yellow-500" />
               <span className="text-xl font-semibold text-gray-900">No processing fees</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
-              <Check className="h-8 w-8 text-green-600" />
+              <Check className="h-8 w-8 text-yellow-500" />
               <span className="text-xl font-semibold text-gray-900">Fast approval</span>
             </div>
           </div>
