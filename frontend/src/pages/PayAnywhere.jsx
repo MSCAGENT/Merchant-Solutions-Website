@@ -179,7 +179,7 @@ const PayAnywhere = () => {
                 <p className="text-xl text-purple-100">
                   Approved in <span className="font-bold">15 minutes or less</span>. 100% compliant.
                 </p>
-                <p className="text-lg text-blue-100">Built for retail and service businesses.</p>
+                <p className="text-lg text-purple-100">Built for retail and service businesses.</p>
               </div>
               <div className="space-y-3 mb-8">
                 <div className="flex items-center space-x-3">
