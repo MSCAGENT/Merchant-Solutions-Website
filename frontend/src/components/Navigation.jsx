@@ -210,14 +210,27 @@ const Navigation = () => {
                     {openDropdown === item.label && (
                       <div className="pl-4 space-y-1 mt-1">
                         {item.children.map((child) => (
-                          <Link
-                            key={child.path}
-                            to={child.path}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {child.label}
-                          </Link>
+                          child.external ? (
+                            <a
+                              key={child.path}
+                              href={child.path}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {child.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.path}
+                              to={child.path}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          )
                         ))}
                       </div>
                     )}
