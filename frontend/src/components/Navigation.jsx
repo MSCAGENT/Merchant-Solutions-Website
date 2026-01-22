@@ -162,7 +162,7 @@ const Navigation = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white">
+              <Button size="sm" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-md">
                 Get Started
               </Button>
             </Link>
