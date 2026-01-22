@@ -17,6 +17,7 @@ import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Security from "./pages/Security";
 import Login from "./pages/Login";
+import PayAnywhere from "./pages/PayAnywhere";
 
 function App() {
   return (
