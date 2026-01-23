@@ -14,12 +14,12 @@ const Navigation = () => {
       label: 'Solutions',
       children: [
         { label: 'Payment Processing', path: '/solutions/payment-processing' },
-        { label: 'Online Payments', path: '/solutions/online-payments' },
-        { label: 'In-Person Payments', path: '/solutions/in-person-payments' },
-        { label: 'High-Risk Processing', path: '/solutions/high-risk-processing' },
-        { label: 'Virtual Terminal', path: '/solutions/virtual-terminal' },
-        { label: 'Invoicing & Payments', path: '/solutions/invoicing-payments' },
-        { label: 'Recurring Billing', path: '/solutions/recurring-billing' }
+        { label: 'Crypto Processing', path: '/solutions/crypto-processing' },
+        { label: 'Loyalty & Rewards', path: '/solutions/loyalty-rewards' },
+        { label: 'Gift Cards', path: '/solutions/gift-cards' },
+        { label: 'Business Loans & Cash Advances', path: '/solutions/business-loans' },
+        { label: 'ATMs', path: '/solutions/atms' },
+        { label: 'Payroll Services by ADP', path: '/solutions/payroll-services' }
       ]
     },
     {
