@@ -37,6 +37,7 @@ function App() {
           <Route path="/payanywhere" element={<PayAnywhere />} />
           
           {/* Solution Routes */}
+          <Route path="/solutions/payment-processing" element={<PaymentProcessingSolution />} />
           <Route path="/solutions/it-services" element={<ITServices />} />
           <Route path="/solutions/tranzaction-gateway" element={<MSCTranzActionGateway />} />
           <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
