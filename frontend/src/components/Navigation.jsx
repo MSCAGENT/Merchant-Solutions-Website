@@ -242,7 +242,48 @@ const Navigation = () => {
                     {openDropdown === item.label && (
                       <div className="pl-4 space-y-1 mt-1">
                         {item.children.map((child) => (
-                          child.external ? (
+                          child.hasSubmenu ? (
+                            <div key={child.label}>
+                              <button
+                                className="w-full flex justify-between items-center px-3 py-2 text-sm text-gray-600 hover:text-purple-600"
+                                onClick={() => setOpenSubmenu(openSubmenu === child.label ? null : child.label)}
+                              >
+                                {child.label}
+                                <ChevronRight
+                                  className={`h-4 w-4 transition-transform duration-200 ${
+                                    openSubmenu === child.label ? 'rotate-90' : ''
+                                  }`}
+                                />
+                              </button>
+                              {openSubmenu === child.label && (
+                                <div className="pl-4 space-y-1 mt-1">
+                                  {child.submenuItems.map((subItem) => (
+                                    subItem.external ? (
+                                      <a
+                                        key={subItem.path}
+                                        href={subItem.path}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block px-3 py-2 text-sm text-gray-500 hover:text-purple-600"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                      >
+                                        {subItem.label}
+                                      </a>
+                                    ) : (
+                                      <Link
+                                        key={subItem.path}
+                                        to={subItem.path}
+                                        className="block px-3 py-2 text-sm text-gray-500 hover:text-purple-600"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                      >
+                                        {subItem.label}
+                                      </Link>
+                                    )
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ) : child.external ? (
                             <a
                               key={child.path}
                               href={child.path}
