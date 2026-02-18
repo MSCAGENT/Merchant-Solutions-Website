@@ -15,6 +15,7 @@ const Navigation = () => {
       label: 'Solutions',
       children: [
         { label: 'Payment Processing', path: '/solutions/payment-processing' },
+        { label: 'MSC TranzAction Gateway', path: '/solutions/tranzaction-gateway' },
         { label: 'Crypto Processing', path: '/solutions/crypto-processing' },
         { label: 'Loyalty & Rewards', path: '/solutions/loyalty-rewards' },
         { label: 'Gift Cards', path: '/solutions/gift-cards' },
@@ -55,11 +56,7 @@ const Navigation = () => {
       children: [
         { label: 'Agent & ISO Program', path: '/partnerships' },
         { label: 'Careers', path: '/partners/careers' },
-        { label: 'Developer Friendly', path: '/partnerships/developer', hasSubmenu: true, submenuItems: [
-          { label: 'Payment Gateway', path: '/gateway/payments-gateway' },
-          { label: 'Virtual Terminal', path: '/gateway/virtual-terminal' },
-          { label: 'API Integrations', path: 'https://developers.merchantsolutionscorpdb.com/#/', external: true }
-        ]}
+        { label: 'API Integrations', path: 'https://developers.merchantsolutionscorpdb.com/#/', external: true }
       ]
     },
     {
