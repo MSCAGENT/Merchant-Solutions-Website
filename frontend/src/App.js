@@ -25,6 +25,7 @@ import Partnerships from "./pages/Partnerships";
 import ITServices from "./pages/solutions/ITServices";
 import MSCTranzActionGateway from "./pages/solutions/MSCTranzActionGateway";
 import PaymentProcessingSolution from "./pages/solutions/PaymentProcessingSolution";
+import GiftCardsSolution from "./pages/solutions/GiftCardsSolution";
 
 function App() {
   return (
