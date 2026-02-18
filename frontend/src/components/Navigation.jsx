@@ -19,7 +19,8 @@ const Navigation = () => {
         { label: 'Gift Cards', path: '/solutions/gift-cards' },
         { label: 'Business Loans & Cash Advances', path: '/solutions/business-loans' },
         { label: 'ATMs', path: '/solutions/atms' },
-        { label: 'Payroll Services by ADP', path: '/solutions/payroll-services' }
+        { label: 'Payroll Services by ADP', path: '/solutions/payroll-services' },
+        { label: 'IT Services', path: '/solutions/it-services' }
       ]
     },
     {
@@ -49,18 +50,15 @@ const Navigation = () => {
       ]
     },
     {
-      label: 'Gateway & APIs',
-      children: [
-        { label: 'Payment Gateway', path: '/gateway/payments-gateway' },
-        { label: 'Virtual Terminal', path: '/gateway/virtual-terminal' },
-        { label: 'API Integrations', path: 'https://developers.merchantsolutionscorpdb.com/#/', external: true }
-      ]
-    },
-    {
       label: 'Partnerships',
       children: [
         { label: 'Agent & ISO Program', path: '/partnerships' },
-        { label: 'Careers', path: '/partners/careers' }
+        { label: 'Careers', path: '/partners/careers' },
+        { label: 'Developer Friendly', path: '/partnerships/developer', hasSubmenu: true, submenuItems: [
+          { label: 'Payment Gateway', path: '/gateway/payments-gateway' },
+          { label: 'Virtual Terminal', path: '/gateway/virtual-terminal' },
+          { label: 'API Integrations', path: 'https://developers.merchantsolutionscorpdb.com/#/', external: true }
+        ]}
       ]
     },
     {
@@ -80,10 +78,9 @@ const Navigation = () => {
         { label: 'Our Mission', path: '/company/mission' },
         { label: 'Why Choose Us', path: '/company/why-us' },
         { label: 'Security & Compliance', path: '/company/security-compliance' },
-        { label: 'Contact', path: '/company/contact' }
+        { label: 'Contact Us', path: '/contact' }
       ]
-    },
-    { label: 'Contact', path: '/contact' }
+    }
   ];
 
   const handleDropdownToggle = (label) => {
