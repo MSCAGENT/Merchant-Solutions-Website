@@ -45,6 +45,11 @@ function App() {
           {/* Solution Routes */}
           <Route path="/solutions/payment-processing" element={<PaymentProcessingSolution />} />
           <Route path="/solutions/gift-cards" element={<GiftCardsSolution />} />
+          <Route path="/solutions/crypto-processing" element={<CryptoProcessingSolution />} />
+          <Route path="/solutions/loyalty-rewards" element={<LoyaltyRewardsSolution />} />
+          <Route path="/solutions/business-loans" element={<BusinessLoansSolution />} />
+          <Route path="/solutions/atms" element={<ATMsSolution />} />
+          <Route path="/solutions/payroll-services" element={<PayrollServicesSolution />} />
           <Route path="/solutions/it-services" element={<ITServices />} />
           <Route path="/solutions/tranzaction-gateway" element={<MSCTranzActionGateway />} />
           <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
