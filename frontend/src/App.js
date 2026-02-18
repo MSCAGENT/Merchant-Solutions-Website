@@ -37,6 +37,7 @@ function App() {
           
           {/* Solution Routes */}
           <Route path="/solutions/it-services" element={<ITServices />} />
+          <Route path="/solutions/tranzaction-gateway" element={<MSCTranzActionGateway />} />
           <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
           
           {/* Industry Routes */}
