@@ -117,10 +117,47 @@ const Navigation = () => {
                     {openDropdown === item.label && (
                       <div
                         className="absolute left-0 mt-0 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                        onMouseLeave={() => setOpenDropdown(null)}
+                        onMouseLeave={() => { setOpenDropdown(null); setOpenSubmenu(null); }}
                       >
                         {item.children.map((child) => (
-                          child.external ? (
+                          child.hasSubmenu ? (
+                            <div
+                              key={child.label}
+                              className="relative"
+                              onMouseEnter={() => setOpenSubmenu(child.label)}
+                              onMouseLeave={() => setOpenSubmenu(null)}
+                            >
+                              <div className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-150 cursor-pointer">
+                                <span>{child.label}</span>
+                                <ChevronRight className="h-4 w-4" />
+                              </div>
+                              {openSubmenu === child.label && (
+                                <div className="absolute left-full top-0 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 ml-1">
+                                  {child.submenuItems.map((subItem) => (
+                                    subItem.external ? (
+                                      <a
+                                        key={subItem.path}
+                                        href={subItem.path}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-150"
+                                      >
+                                        {subItem.label}
+                                      </a>
+                                    ) : (
+                                      <Link
+                                        key={subItem.path}
+                                        to={subItem.path}
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-150"
+                                      >
+                                        {subItem.label}
+                                      </Link>
+                                    )
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ) : child.external ? (
                             <a
                               key={child.path}
                               href={child.path}
