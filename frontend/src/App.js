@@ -23,6 +23,7 @@ import DejavooTerminals from "./pages/DejavooTerminals";
 import MSCGateway from "./pages/MSCGateway";
 import Partnerships from "./pages/Partnerships";
 import ITServices from "./pages/solutions/ITServices";
+import MSCTranzActionGateway from "./pages/solutions/MSCTranzActionGateway";
 
 function App() {
   return (
