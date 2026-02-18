@@ -35,6 +35,7 @@ function App() {
           <Route path="/payanywhere" element={<PayAnywhere />} />
           
           {/* Solution Routes */}
+          <Route path="/solutions/it-services" element={<ITServices />} />
           <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
           
           {/* Industry Routes */}
