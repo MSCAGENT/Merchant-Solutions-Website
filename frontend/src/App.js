@@ -26,6 +26,11 @@ import ITServices from "./pages/solutions/ITServices";
 import MSCTranzActionGateway from "./pages/solutions/MSCTranzActionGateway";
 import PaymentProcessingSolution from "./pages/solutions/PaymentProcessingSolution";
 import GiftCardsSolution from "./pages/solutions/GiftCardsSolution";
+import CryptoProcessingSolution from "./pages/solutions/CryptoProcessingSolution";
+import LoyaltyRewardsSolution from "./pages/solutions/LoyaltyRewardsSolution";
+import BusinessLoansSolution from "./pages/solutions/BusinessLoansSolution";
+import ATMsSolution from "./pages/solutions/ATMsSolution";
+import PayrollServicesSolution from "./pages/solutions/PayrollServicesSolution";
 
 function App() {
   return (
