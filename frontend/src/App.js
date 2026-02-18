@@ -22,6 +22,7 @@ import CloverPOS from "./pages/CloverPOS";
 import DejavooTerminals from "./pages/DejavooTerminals";
 import MSCGateway from "./pages/MSCGateway";
 import Partnerships from "./pages/Partnerships";
+import ITServices from "./pages/solutions/ITServices";
 
 function App() {
   return (
