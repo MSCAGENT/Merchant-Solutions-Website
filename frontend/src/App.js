@@ -33,6 +33,7 @@ import ATMsSolution from "./pages/solutions/ATMsSolution";
 import PayrollServicesSolution from "./pages/solutions/PayrollServicesSolution";
 import Restaurants from "./pages/Restaurants";
 import SquarePOS from "./pages/SquarePOS";
+import IngenicoTerminals from "./pages/IngenicoTerminals";
 
 function App() {
   return (
