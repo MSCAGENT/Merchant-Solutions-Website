@@ -89,6 +89,7 @@ Build a comprehensive, SEO-optimized payment processing website for Merchant Sol
 - ✅ solutions/ITServices.jsx (Site surveys, installation, training)
 - ✅ solutions/MSCTranzActionGateway.jsx (Consolidated gateway page)
 - ✅ **Restaurants.jsx** (NEW - comprehensive 12-section restaurant industry page)
+- ✅ **SquarePOS.jsx** (NEW - Square POS hardware, software plans, industry features)
 
 #### Latest Changes (This Session)
 1. ✅ Created **IT Services** page under Solutions
