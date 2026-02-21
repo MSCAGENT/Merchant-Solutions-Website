@@ -81,8 +81,14 @@ Build a comprehensive, SEO-optimized payment processing website for Merchant Sol
 - ✅ Partnerships.jsx (Agent/ISO Program focused)
 - ✅ **solutions/PaymentProcessingSolution.jsx** (UPDATED - full copywriting with image placeholders)
 - ✅ **solutions/GiftCardsSolution.jsx** (NEW - full SEO copywriting for gift card solutions)
+- ✅ **solutions/CryptoProcessingSolution.jsx** (NEW - Bitcoin, Ethereum, stablecoins)
+- ✅ **solutions/LoyaltyRewardsSolution.jsx** (NEW - points, rewards, POS integration)
+- ✅ **solutions/BusinessLoansSolution.jsx** (NEW - MCA, lines of credit, equipment financing)
+- ✅ **solutions/ATMsSolution.jsx** (NEW - free placement, processing, purchase options)
+- ✅ **solutions/PayrollServicesSolution.jsx** (NEW - ADP powered, itab POS integrated)
 - ✅ solutions/ITServices.jsx (Site surveys, installation, training)
 - ✅ solutions/MSCTranzActionGateway.jsx (Consolidated gateway page)
+- ✅ **Restaurants.jsx** (NEW - comprehensive 12-section restaurant industry page)
 
 #### Latest Changes (This Session)
 1. ✅ Created **IT Services** page under Solutions
