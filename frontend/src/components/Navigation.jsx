@@ -43,6 +43,7 @@ const Navigation = () => {
       children: [
         { label: 'PayAnywhere POS', path: '/payanywhere' },
         { label: 'Clover POS', path: '/pos/clover' },
+        { label: 'Square POS', path: '/pos/square' },
         { label: 'Dejavoo Terminals', path: '/pos/dejavoo-terminals' },
         { label: 'Ingenico Terminals', path: '/pos/ingenico-terminals' },
         { label: 'Restaurant POS', path: '/pos/restaurant-pos' },
