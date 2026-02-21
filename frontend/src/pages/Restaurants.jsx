@@ -138,7 +138,7 @@ const Restaurants = () => {
     { step: '3', title: 'Hardware Prep & Configuration', desc: 'Configure all devices before shipping' },
     { step: '4', title: 'On-Site or Remote Install', desc: 'Professional installation at your location' },
     { step: '5', title: 'Staff Training', desc: 'Train your team on the new system' },
-    { step: '6', title: 'Go-Live Support', desc: 'We're there when you flip the switch' },
+    { step: '6', title: 'Go-Live Support', desc: 'We are there when you flip the switch' },
     { step: '7', title: 'Post-Launch Check-In', desc: 'Follow up to ensure everything runs smoothly' }
   ];
 
