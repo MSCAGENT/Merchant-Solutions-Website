@@ -116,6 +116,70 @@ const IngenicoTerminals = () => {
     { icon: CreditCard, title: 'Increase Sales', desc: 'Accept tap-to-pay and mobile wallet transactions' }
   ];
 
+  const faqs = [
+    {
+      question: 'What is the difference between Tetra and Axium?',
+      answer: `Tetra runs on Ingenico's secure proprietary system, while Axium runs on Android.
+
+Use Tetra for maximum stability and proven reliability.
+Use Axium for apps, advanced features, and customization.`
+    },
+    {
+      question: 'Do these terminals accept tap, chip, and swipe?',
+      answer: `Yes. Both Tetra and Axium support:
+
+• Tap (NFC / contactless)
+• Chip (EMV)
+• Swipe (magstripe)
+• Apple Pay, Google Pay, Samsung Pay`
+    },
+    {
+      question: 'Do I need internet for the terminal to work?',
+      answer: `Yes. You can connect by:
+
+• Ethernet
+• WiFi
+• Cellular (on supported models)
+
+If the internet goes down, some models can store limited offline transactions.`
+    },
+    {
+      question: 'Can I use my terminal anywhere, or is it locked?',
+      answer: `Most terminals are programmed to one processor and account. They are not "plug and play" between providers.
+
+If you change processors, the terminal must be reprogrammed or replaced.`
+    },
+    {
+      question: 'Are Tetra and Axium terminals PCI compliant?',
+      answer: `Yes. They meet:
+
+• PCI PTS standards
+• EMV security requirements
+• End-to-end encryption
+
+This protects cardholder data and reduces fraud risk.`
+    },
+    {
+      question: 'Can these terminals run apps and POS software?',
+      answer: `Axium: Yes — Supports Android apps, POS systems, loyalty, ordering, and reporting.
+
+Tetra: Limited — Designed mainly for payments, not third-party apps.
+
+If you need customization, Axium is the better option.`
+    },
+    {
+      question: 'What happens if my terminal stops working?',
+      answer: `We provide support for:
+
+• Remote troubleshooting
+• Software reloads
+• Replacement if needed
+• Warranty processing
+
+Most issues can be fixed without replacing the device.`
+    }
+  ];
+
   const TerminalCard = ({ terminal }) => (
     <Card className="border-2 hover:border-purple-600 transition-all duration-300 h-full">
       <CardContent className="p-6">
