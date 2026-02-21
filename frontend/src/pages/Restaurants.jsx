@@ -75,7 +75,7 @@ const Restaurants = () => {
     {
       name: 'Square for Restaurants',
       bestFor: 'Fast setup, simple workflows, modern add-ons, pop-up businesses',
-      link: '/contact',
+      link: '/pos/square',
       cta: 'See Square Setup'
     },
     {
