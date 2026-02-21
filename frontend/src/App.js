@@ -56,6 +56,7 @@ function App() {
           <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
           
           {/* Industry Routes */}
+          <Route path="/industries/restaurants" element={<Restaurants />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           
           {/* POS & Hardware Routes */}
