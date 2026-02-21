@@ -31,6 +31,7 @@ import LoyaltyRewardsSolution from "./pages/solutions/LoyaltyRewardsSolution";
 import BusinessLoansSolution from "./pages/solutions/BusinessLoansSolution";
 import ATMsSolution from "./pages/solutions/ATMsSolution";
 import PayrollServicesSolution from "./pages/solutions/PayrollServicesSolution";
+import Restaurants from "./pages/Restaurants";
 
 function App() {
   return (
