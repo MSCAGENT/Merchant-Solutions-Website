@@ -62,6 +62,7 @@ function App() {
           
           {/* POS & Hardware Routes */}
           <Route path="/pos/clover" element={<CloverPOS />} />
+          <Route path="/pos/square" element={<SquarePOS />} />
           <Route path="/pos/pax-terminals" element={<POSHardware />} />
           <Route path="/pos/dejavoo-terminals" element={<DejavooTerminals />} />
           <Route path="/pos/ingenico-terminals" element={<POSHardware />} />
