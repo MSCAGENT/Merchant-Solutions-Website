@@ -94,11 +94,12 @@ const SquarePOS = () => {
         'Digital receipts',
         'Online checkout links'
       ],
-      processing: '2.6% + 10¢ in-person'
+      processing: '2.6% + 10¢ in-person',
+      badge: null
     },
     {
       name: 'Plus',
-      price: '$60/mo',
+      price: '$49/mo',
       desc: 'Advanced features for growing businesses',
       features: [
         'Everything in Free',
@@ -108,11 +109,12 @@ const SquarePOS = () => {
         'Loyalty program',
         'Marketing tools'
       ],
-      processing: '2.5% + 10¢ in-person'
+      processing: '2.5% + 10¢ in-person',
+      badge: 'BEST VALUE'
     },
     {
       name: 'Premium',
-      price: 'Custom',
+      price: '$149/mo',
       desc: 'Tailored solutions for high-volume businesses',
       features: [
         'Everything in Plus',
@@ -122,7 +124,35 @@ const SquarePOS = () => {
         'Multi-location tools',
         'Advanced integrations'
       ],
-      processing: 'Custom rates'
+      processing: 'Custom rates',
+      badge: null
+    }
+  ];
+
+  const faqs = [
+    {
+      question: 'What is a POS (Point of Sale) system?',
+      answer: 'A POS (Point of Sale) system is the hardware and software that allows your business to accept payments and manage sales. It includes features like payment processing, inventory tracking, sales reporting, and customer management. Modern POS systems like Square are cloud-based, meaning your data syncs across devices and you can access reports from anywhere.'
+    },
+    {
+      question: 'How do I take payments with Square Point of Sale?',
+      answer: 'Square Point of Sale lets you accept all major credit and debit cards, contactless payments like Apple Pay and Google Pay, and cash. Simply download the free Square POS app, connect a Square card reader or terminal, and you can start accepting payments immediately. Funds are typically deposited in your bank account the next business day.'
+    },
+    {
+      question: 'How long does it take to set up my point of sale?',
+      answer: 'Basic setup with Square can be completed in minutes. Download the app, create your account, and connect a card reader to start taking payments right away. For more complex setups with inventory, menus, and team permissions, our team can have you fully configured within a few days depending on your needs.'
+    },
+    {
+      question: 'How does Square Point of Sale work for different business types?',
+      answer: 'Square offers specialized features for different industries. Restaurants get table management, menu modifiers, and kitchen tickets. Retail stores get inventory tracking, barcode scanning, and purchase orders. Service businesses get appointment booking, invoicing, and client management. You can customize Square to fit your specific workflow.'
+    },
+    {
+      question: 'Can I change my plan after I choose one?',
+      answer: 'Yes, you can upgrade or downgrade your Square plan at any time. Start with the free plan to test features, then upgrade to Plus or Premium as your business grows. There are no long-term contracts, so you have flexibility to adjust based on your needs.'
+    },
+    {
+      question: 'Do I need to purchase hardware to use Square Point of Sale?',
+      answer: 'You can use Square Point of Sale for free on your smartphone or tablet without purchasing any hardware. However, to accept card payments, you will need a Square card reader (starting at $49) or a full terminal. We offer various hardware options from mobile readers to full countertop registers depending on your business setup.'
     }
   ];
 
