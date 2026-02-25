@@ -525,11 +525,12 @@ const Restaurants = () => {
                 </Button>
               </Link>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="cash-discount-image">
-              <div className="text-center text-gray-400">
-                <Banknote className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Cash Discount Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden flex items-center justify-center" data-testid="cash-discount-image">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/suvi0y8j_Pseries%20Dual%20Price.png" 
+                alt="Dejavoo terminal showing dual pricing - cash vs card" 
+                className="max-h-[500px] w-auto object-contain"
+              />
             </div>
           </div>
         </div>
