@@ -26,6 +26,10 @@ const IndustryDetail = () => {
     retail: {
       src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/p0m4hwu3_Square%20for%20Retail.mp4',
       title: 'Payment Solutions for Retail'
+    },
+    healthcare: {
+      src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/aqsxqbxm_Healthcare%20Practice%20POS%20%20Management%20Solutions%20%20Clover.mp4',
+      title: 'Payment Solutions for Healthcare'
     }
   };
 
