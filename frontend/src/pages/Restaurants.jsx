@@ -350,11 +350,12 @@ const Restaurants = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="dealer-advantage-image">
-              <div className="text-center text-gray-400">
-                <Utensils className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Restaurant Setup Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden" data-testid="dealer-advantage-image">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/889xwcgb_IT%20tech_installer.png" 
+                alt="MSC technician installing POS system in restaurant" 
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
