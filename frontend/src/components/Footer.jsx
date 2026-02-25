@@ -68,7 +68,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                <a href="mailto:info@merchantsolutions.com" className="hover:text-purple-500 transition-colors">info@merchantsolutions.com</a>
+                <a href="mailto:info@merchantsolutionscorp.com" className="hover:text-purple-500 transition-colors">info@merchantsolutionscorp.com</a>
               </div>
               <div className="flex items-start space-x-3 text-sm">
                 <MapPin className="h-4 w-4 text-purple-600 flex-shrink-0 mt-0.5" />
