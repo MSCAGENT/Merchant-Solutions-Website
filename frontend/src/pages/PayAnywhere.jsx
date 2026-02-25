@@ -197,11 +197,11 @@ const PayAnywhere = () => {
 
             {/* Right - Device Image */}
             <div className="hidden lg:flex justify-center items-center">
-              <div className="relative">
-                <div className="w-80 h-96 bg-gradient-to-br from-purple-100 to-yellow-100 rounded-3xl p-8 flex items-center justify-center shadow-xl">
-                  <CreditCard className="w-48 h-48 text-purple-600" />
-                </div>
-              </div>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/7l58y5a8_img-satisfy-payment-processing.png" 
+                alt="PayAnywhere POS payment processing terminals" 
+                className="w-full max-w-lg rounded-2xl shadow-xl object-cover"
+              />
             </div>
           </div>
         </div>
