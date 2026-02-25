@@ -22,8 +22,44 @@ const IndustryDetail = () => {
     );
   }
 
+  const videoHeroMap = {
+    retail: {
+      src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/p0m4hwu3_Square%20for%20Retail.mp4',
+      title: 'Payment Solutions for Retail'
+    }
+  };
+
+  const videoHero = videoHeroMap[industryId];
+
   return (
     <div className="min-h-screen">
+      {/* Video Hero Section */}
+      {videoHero && (
+        <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={videoHero.src} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-purple-600/50" />
+          <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl leading-tight drop-shadow-lg">
+              {videoHero.title}
+            </h1>
+            <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-2xl">{industry.description}</p>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
+                Get Custom Solution
+              </Button>
+            </Link>
+          </div>
+        </section>
+      )}
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
