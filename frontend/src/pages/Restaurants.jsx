@@ -70,19 +70,22 @@ const Restaurants = () => {
       name: 'Clover for Restaurants',
       bestFor: 'Quick service, counter service, or small businesses',
       link: '/pos/clover',
-      cta: 'See Clover Setup'
+      cta: 'See Clover Setup',
+      logo: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/fga5kaim_Clover%20logo.jpg'
     },
     {
       name: 'Square for Restaurants',
       bestFor: 'Fast setup, simple workflows, modern add-ons, pop-up businesses',
       link: '/pos/square',
-      cta: 'See Square Setup'
+      cta: 'See Square Setup',
+      logo: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/6q1f7o7j_Square_Logo_Landscape.png'
     },
     {
       name: 'iTabPOS for Restaurants',
       bestFor: 'Full-service restaurants, bars, multi-location brands',
       link: '/contact',
-      cta: 'See iTabPOS Setup'
+      cta: 'See iTabPOS Setup',
+      logo: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/saip30kz_itabPOS_logo.png'
     }
   ];
 
@@ -311,8 +314,8 @@ const Restaurants = () => {
             {platforms.map((platform, index) => (
               <Card key={index} className="border-2 hover:border-purple-600 transition-all duration-300">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <CreditCard className="h-8 w-8 text-white" />
+                  <div className="h-16 flex items-center justify-center mx-auto mb-6">
+                    <img src={platform.logo} alt={platform.name} className="h-full w-auto object-contain max-w-[180px]" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{platform.name}</h3>
                   <p className="text-gray-600 mb-6">Best for: {platform.bestFor}</p>
