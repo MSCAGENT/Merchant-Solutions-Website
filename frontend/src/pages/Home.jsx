@@ -102,14 +102,15 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {mockData.industries.map((industry) => (
-              <Link key={industry.id} to={`/industries/${industry.id}`}>
-                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{industry.title}</h3>
-                    <p className="text-sm text-gray-600">{industry.description}</p>
-                  </CardContent>
-                </Card>
-              </Link>
+              <Card key={industry.id} className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{industry.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{industry.description}</p>
+                  <Link to={`/industries/${industry.id}`} className="inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-700 transition-colors">
+                    Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -135,7 +136,7 @@ const Home = () => {
                 <Clock className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Fast Approvals</h3>
-              <p className="text-gray-600">Get approved in 24-48 hours, even for high-risk industries</p>
+              <p className="text-gray-600">15-25 minutes for Low Risk and 48-72 hours for High Risk industries</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -196,11 +197,11 @@ const Home = () => {
                 Get Started Today
               </Button>
             </Link>
-            <Link to="/company/contact">
+            <a href="https://www.calendly.com/mscpayments" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6">
                 Talk to Sales
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

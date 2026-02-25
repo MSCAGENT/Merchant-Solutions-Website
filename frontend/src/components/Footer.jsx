@@ -63,16 +63,16 @@ const Footer = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
-                <Phone className="h-4 w-4 text-purple-600" />
-                <span>1-800-MERCHANT</span>
+                <Phone className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                <a href="tel:8884078886" className="hover:text-purple-500 transition-colors">(888) 407-8886</a>
               </div>
               <div className="flex items-center space-x-3 text-sm">
-                <Mail className="h-4 w-4 text-purple-600" />
-                <span>info@merchantsolutions.com</span>
+                <Mail className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                <a href="mailto:info@merchantsolutions.com" className="hover:text-purple-500 transition-colors">info@merchantsolutions.com</a>
               </div>
-              <div className="flex items-center space-x-3 text-sm">
-                <MapPin className="h-4 w-4 text-purple-600" />
-                <span>123 Commerce St, NY 10001</span>
+              <div className="flex items-start space-x-3 text-sm">
+                <MapPin className="h-4 w-4 text-purple-600 flex-shrink-0 mt-0.5" />
+                <span>1801 NE 123rd St #314, North Miami, FL 33181</span>
               </div>
             </div>
           </div>
@@ -132,6 +132,22 @@ const Footer = () => {
           <Link to="/compliance" className="hover:text-purple-500 transition-colors duration-200">
             Compliance
           </Link>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="mt-8 pt-6 border-t border-gray-800 text-xs text-gray-500 space-y-3 leading-relaxed">
+          <p>
+            © {new Date().getFullYear()} Merchant Solutions Corp. All rights reserved. Merchant Solutions Corp is a registered DBA for Electronic Payment Exchange Inc.
+          </p>
+          <p>
+            EPX is a registered ISO of BMO Harris Bank N.A., Chicago, IL; Citizens Bank N.A., Providence, RI; The Bancorp Bank, Philadelphia, PA; and FFB Bank, Fresno, CA.
+          </p>
+          <p>
+            The Clover trademark and logo are owned by Clover Network, Inc., a First Data company. All the other trademarks, service marks, and trade names referenced in this material are the property of their respective owners.
+          </p>
+          <p>
+            The Square trademark and logo are owned by Block, Inc. Merchant Solutions Corp. is a certified reseller and Partner of Square POS.
+          </p>
         </div>
       </div>
     </footer>
