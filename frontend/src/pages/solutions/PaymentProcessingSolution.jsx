@@ -204,11 +204,12 @@ const PaymentProcessingSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="card-present-image-block">
-              <div className="text-center text-gray-400">
-                <CreditCard className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Card-Present Payment Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="card-present-image-block">
+              <img 
+                src="https://images.unsplash.com/photo-1654263937079-f63a3ea4d48b?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800" 
+                alt="Customer inserting chip card into payment terminal at store counter" 
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
@@ -218,11 +219,12 @@ const PaymentProcessingSolution = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="card-not-present-image-block">
-              <div className="text-center text-gray-400">
-                <Phone className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Card-Not-Present Payment Image</p>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3]" data-testid="card-not-present-image-block">
+              <img 
+                src="https://images.pexels.com/photos/8353781/pexels-photo-8353781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                alt="Business professional processing phone order payment at desk" 
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
@@ -270,11 +272,12 @@ const PaymentProcessingSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="ecommerce-image-block">
-              <div className="text-center text-gray-400">
-                <ShoppingCart className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">eCommerce Payment Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="ecommerce-image-block">
+              <img 
+                src="https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                alt="Person holding credit card while shopping online on laptop" 
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
@@ -284,11 +287,12 @@ const PaymentProcessingSolution = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="mobile-payments-image-block">
-              <div className="text-center text-gray-400">
-                <Smartphone className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Mobile Payments Image</p>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3]" data-testid="mobile-payments-image-block">
+              <img 
+                src="https://images.pexels.com/photos/12935076/pexels-photo-12935076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                alt="Smartphone making contactless payment at modern terminal" 
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
@@ -336,11 +340,12 @@ const PaymentProcessingSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="ach-image-block">
-              <div className="text-center text-gray-400">
-                <Banknote className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">ACH Processing Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="ach-image-block">
+              <img 
+                src="https://images.pexels.com/photos/6862457/pexels-photo-6862457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                alt="Business professional processing bank transfer and ACH payment" 
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
