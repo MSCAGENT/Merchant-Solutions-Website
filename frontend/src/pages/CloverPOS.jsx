@@ -165,56 +165,82 @@ const CloverPOS = () => {
             {/* Left Content */}
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Free Clover Flex POS Systems with Zero Processing Fees
+                Get a Clover System for $0 Upfront
               </h1>
-              <p className="text-xl text-gray-600 mb-2">
-                Get approved in <span className="font-semibold">15 minutes or less</span>.
+              <p className="text-lg font-semibold text-purple-700 mb-2">
+                Simple Monthly Subscription. No Large Hardware Investment.
               </p>
-              <p className="text-lg text-gray-600 mb-8">Built for retail and service businesses.</p>
+              <p className="text-lg text-gray-600 mb-2">
+                Start processing immediately with professional equipment powered by Merchant Solutions Corp.
+              </p>
+              <p className="text-lg font-medium text-gray-800 mb-8">
+                Just One Flat Monthly Subscription.
+              </p>
               
               <div className="space-y-3 mb-8">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">No upfront cost</span>
+                  <span className="text-lg text-gray-700">No hardware purchase.</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">Free Clover Flex or Clover Pocket terminal</span>
+                  <span className="text-lg text-gray-700">No large capital expense.</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">Cash discount or flat rate pricing</span>
+                  <span className="text-lg text-gray-700">Just plug in and start accepting payments.</span>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
                     Request a Free Demo
                   </Button>
-                </Link>
-                <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer">
+                </a>
+                <a href="https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=b214d0e2-abc5-45f7-8e87-f328156cae64&env=na2&acct=69b2c1ed-73b3-46d7-b330-9c5f9cd9c8ff&v=2" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
                     Apply Now <ChevronRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
               </div>
-              
-              <div className="mt-6 flex items-center space-x-4 text-sm text-gray-500">
-                <div className="flex items-center space-x-2">
-                  <CreditCard className="h-5 w-5" />
-                  <span>$17.90 <span className="line-through">$49</span></span>
-                </div>
-                <span>•</span>
-                <span>Promotional Offer</span>
+
+              {/* Promotional Offer */}
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-5">
+                <p className="font-semibold text-purple-800 mb-2">Promotional Offer — Free Hardware</p>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full" />New merchants only</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full" />Physical or established businesses</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full" />Subject to approval</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full" />Volume verification required</li>
+                </ul>
               </div>
             </div>
 
-            {/* Right - Device Image */}
+            {/* Right - Image Carousel */}
             <div className="hidden lg:flex justify-center items-center">
-              <div className="relative">
-                <div className="w-96 h-96 bg-gradient-to-br from-purple-100 to-yellow-100 rounded-3xl p-8 flex items-center justify-center shadow-xl">
-                  <CreditCard className="w-64 h-64 text-purple-600" />
+              <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden shadow-xl bg-white">
+                {carouselImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image.src}
+                    alt={image.alt}
+                    className={`absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-1000 ${
+                      index === currentSlide ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
+                {/* Dots */}
+                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                  {carouselImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                        index === currentSlide ? 'bg-purple-600 w-6' : 'bg-gray-300'
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
