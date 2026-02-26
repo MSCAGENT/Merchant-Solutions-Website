@@ -659,6 +659,71 @@ const DejavooTerminals = () => {
           </div>
         </div>
       )}
+
+      {/* Purchase Now Modal */}
+      {purchaseDevice && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setPurchaseDevice(null)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <button
+              data-testid="purchase-modal-close-btn"
+              onClick={() => setPurchaseDevice(null)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+
+            <div className="p-6 pt-8">
+              {/* Terminal Image */}
+              <div className="w-48 h-48 mx-auto mb-6 flex items-center justify-center">
+                <img
+                  src={purchaseDevice.image}
+                  alt={purchaseDevice.name}
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">{purchaseDevice.name}</h2>
+              <p className="text-sm text-gray-500 text-center mb-6">{purchaseDevice.description}</p>
+
+              {/* What's Included */}
+              <div className="bg-purple-50 rounded-xl p-5 mb-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Your Purchase Includes:</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-purple-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">Terminal device</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-purple-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">Power cables &amp; wires</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-purple-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">Charger</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-purple-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">Card cleaner</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-purple-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">Ethernet cable</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-gray-500 mt-3 italic">SIM card not included.</p>
+              </div>
+
+              {/* Buy Now Button - placeholder for payment link */}
+              <Button
+                data-testid="buy-now-btn"
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg py-6 shadow-lg"
+              >
+                Buy Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
