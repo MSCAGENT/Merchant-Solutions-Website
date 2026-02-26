@@ -27,46 +27,52 @@ const DejavooTerminals = () => {
 
   const terminals = [
     {
-      id: 'ipos-go',
-      name: 'iPOS GO',
-      description: 'Android smart terminal with tap-to-pay. Ideal for food trucks and mobile vendors.',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      id: 'tap-iphone',
-      name: 'Tap to Pay on iPhone',
-      description: 'Accept contactless payments using just your iPhone. No hardware required.',
-      image: '/api/placeholder/300/300'
+      id: 'xerocharge-go',
+      name: 'XerochargeGO',
+      description: 'Android and Apple Tap to Pay option on mobile phones.',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/boxo3424_XerochargeGo.jpg'
     },
     {
       id: 'qd4',
-      name: 'QD4 Countertop Terminal',
-      description: 'Full touchscreen Android terminal. Perfect for salons, retail counters, and front desks.',
-      image: '/api/placeholder/300/300'
+      name: 'QD4 Countertop',
+      description: 'Great for retail and restaurant, healthcare or service businesses.',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/m3bya6nt_unnamed%20%283%29.jpg'
+    },
+    {
+      id: 'qd4-dual',
+      name: 'QD4 Dual Pin',
+      description: 'Great for businesses with countertop distance — allows an external pinpad to be moved. Great for Retail and Healthcare.',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/rgyasxqr_QD4%20BUNDLE%20Dual.png'
     },
     {
       id: 'qd2',
-      name: 'QD2 Wireless Terminal',
-      description: 'Lightweight and portable. Built-in printer, ideal for delivery or checkout on the move.',
-      image: '/api/placeholder/300/300'
+      name: 'QD2 Wireless',
+      description: 'Wireless device for businesses on the go. Subscription includes SIM card — a $35/mo value.',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/yo4qp6nh_QD2_flip.png'
     },
     {
       id: 'p1',
-      name: 'P1 Smart Counter Terminal',
-      description: 'Compact all-in-one POS. Great fit for barbershops, coffee stands, and boutiques.',
-      image: '/api/placeholder/300/300'
+      name: 'P1 Terminal',
+      description: 'Compact all-in-one countertop POS terminal.',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/uy9yluhc_P1A_branded_no-background.png'
+    },
+    {
+      id: 'p5',
+      name: 'P5 Wireless Terminal',
+      description: 'Lightweight wireless terminal — no printer.',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/rkw95xvj_unnamed%20%286%29.jpg'
     },
     {
       id: 'p8',
-      name: 'P8 Wireless Terminal',
-      description: 'Sleek Android terminal with larger screen. Optimized for mobile retail and in-field service.',
-      image: '/api/placeholder/300/300'
+      name: 'P8 Smart Wireless Terminal',
+      description: 'Sleek Android wireless terminal with a large touchscreen display.',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/p246p0r5_p8%20terminal.webp'
     },
     {
       id: 'p18',
-      name: 'P18 Compact POS',
-      description: 'Advanced Android POS terminal. Perfect for compact retail spaces with high volume.',
-      image: '/api/placeholder/300/300'
+      name: 'P18 Countertop POS',
+      description: 'Advanced countertop POS with a large flip-screen display.',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/t0scf4fh_p18blk%20bgrn.jfif'
     }
   ];
 
