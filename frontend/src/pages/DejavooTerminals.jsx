@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronRight, CreditCard, Smartphone, Zap } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -6,8 +6,60 @@ import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 
+const heroImages = [
+  'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/jco4fk2s_people%20p18.webp',
+  'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/8f0xq2gd_ipospays_djv.jpg',
+];
+
 const DejavooTerminals = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [showApplyModal, setShowApplyModal] = useState(false);
+  const [heroIndex, setHeroIndex] = useState(0);
+  const maverickRef = useRef(null);
+
+  // Hero image slideshow - 3s interval
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Load Maverick script when apply modal opens
+  const loadMaverick = useCallback(() => {
+    if (!maverickRef.current) return;
+    maverickRef.current.innerHTML = '';
+    const container = maverickRef.current;
+
+    const initMaverick = () => {
+      if (typeof window.MaverickClient !== 'undefined' && container) {
+        new window.MaverickClient({
+          target: container,
+          url: window.webroot + '/js/campaign/client.js',
+          options: { id: '1180', agentId: '132194', referral: '1', title: 'MSC pays Dejavoo', theme: 'light', label: 'true' }
+        });
+      }
+    };
+
+    if (typeof window.MaverickClient === 'undefined') {
+      window.webroot = 'https://merchantsolutionscorpdb.com';
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = window.webroot + '/js/campaign/client.js?v=' + Date.now();
+      s.onload = s.onreadystatechange = initMaverick;
+      document.head.appendChild(s);
+    } else {
+      initMaverick();
+    }
+  }, []);
+
+  useEffect(() => {
+    if (showApplyModal) {
+      const timeout = setTimeout(loadMaverick, 100);
+      return () => clearTimeout(timeout);
+    }
+  }, [showApplyModal, loadMaverick]);
 
   const terminals = [
     {
