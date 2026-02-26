@@ -583,16 +583,23 @@ const DejavooTerminals = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
-                Request a Free Demo
-              </Button>
-            </Link>
-            <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
-                Apply Now <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
-            </a>
+            <Button
+              data-testid="bottom-contact-sales-btn"
+              size="lg"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg"
+              onClick={() => setShowContactModal(true)}
+            >
+              Contact Sales
+            </Button>
+            <Button
+              data-testid="bottom-apply-now-btn"
+              size="lg"
+              variant="outline"
+              className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6"
+              onClick={() => setShowApplyModal(true)}
+            >
+              Apply Now <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>
             <Link to="/pos/clover">
               <Button size="lg" variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 text-lg px-8 py-6">
                 Compare Plans
