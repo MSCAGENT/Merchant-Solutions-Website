@@ -103,7 +103,7 @@ const IngenicoTerminals = () => {
       name: 'AXIUM DX4000 Desktop',
       series: 'AXIUM Android',
       description: 'Android-powered desktop terminal with a large touchscreen and app ecosystem. Accept all payment types and run business apps from one compact device.',
-      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/7a579296091b7cdb86fcfc87233ea4c889c61d102b64e63b7421fb2c50148592.png',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/3dk6lqoe_AXIUM%20DX4000%20D_face.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
@@ -111,7 +111,7 @@ const IngenicoTerminals = () => {
       name: 'AXIUM RX5000 Pin',
       series: 'AXIUM Android',
       description: 'Customer-facing Android PIN pad on a stand. Touchscreen with physical keypad for secure PIN entry — ideal for integrated retail POS environments.',
-      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/85122d7be4c606cab311d9ad70e4036894d85e86b99a7a600b627c3b22dbab91.png',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/36z6xt78_AXIUM-RX5000---Face-with-standpole.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
@@ -119,7 +119,7 @@ const IngenicoTerminals = () => {
       name: 'AXIUM RX7000 Multi Lane',
       series: 'AXIUM Android',
       description: 'Premium widescreen Android multi-lane terminal with a large touchscreen and side keypad. Built for high-volume checkout in supermarkets and department stores.',
-      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/f7e3a5fa312d59a5327882531e4340c6daafdb69f21d44c80d26e331ade391c2.png',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/wa7wfxd1_AXIUM_03_A_Wpole_72dpi.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     }
