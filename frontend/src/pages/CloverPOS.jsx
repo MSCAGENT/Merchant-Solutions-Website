@@ -7,6 +7,22 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 
 const CloverPOS = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const carouselImages = [
+    { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/t830pqrk_clover%203rd%20genwr.jpg', alt: 'Clover 3rd Gen POS' },
+    { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/qxsao0xl_Clover%20GO.jpeg', alt: 'Clover Go Card Reader' },
+    { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/6dza8f0b_Clover%20Station%20Pro.jpg', alt: 'Clover Station Pro' },
+    { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/gsbuv04a_Clover-FlexLRG.jpg', alt: 'Clover Flex Handheld' },
+    { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/gdfbq78u_kds_CLOVER.png', alt: 'Clover Kitchen Display System' }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [carouselImages.length]);
 
   const cloverDevices = [
     {
