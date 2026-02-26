@@ -9,6 +9,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const CloverPOS = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showFormModal, setShowFormModal] = useState(false);
 
   const carouselImages = [
     { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/t830pqrk_clover%203rd%20genwr.jpg', alt: 'Clover 3rd Gen POS' },
