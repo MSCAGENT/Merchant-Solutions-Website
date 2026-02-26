@@ -36,6 +36,7 @@ import Healthcare from "./pages/Healthcare";
 import Chiropractors from "./pages/Chiropractors";
 import SquarePOS from "./pages/SquarePOS";
 import IngenicoTerminals from "./pages/IngenicoTerminals";
+import Careers from "./pages/Careers";
 
 function App() {
   return (
