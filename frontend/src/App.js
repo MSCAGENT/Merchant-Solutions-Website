@@ -63,6 +63,7 @@ function App() {
           
           {/* Industry Routes */}
           <Route path="/industries/restaurants" element={<Restaurants />} />
+          <Route path="/restaurant-payment-processing-florida" element={<Restaurants />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="/industries/chiropractors" element={<Chiropractors />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
