@@ -31,6 +31,19 @@ import {
 } from '../components/ui/accordion';
 
 const IngenicoTerminals = () => {
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [showCalendlyModal, setShowCalendlyModal] = useState(false);
+
+  // Load Calendly widget script when modal opens
+  useEffect(() => {
+    if (!showCalendlyModal) return;
+    if (!document.querySelector('script[src*="calendly.com"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, [showCalendlyModal]);
   const keyBenefits = [
     { title: 'EMV Certified', desc: 'Chip card compliant' },
     { title: 'Contactless Ready', desc: 'Tap-to-pay enabled' },
