@@ -28,15 +28,15 @@ const DejavooTerminals = () => {
 
   // Load Maverick script when apply modal opens
   const loadMaverick = useCallback(() => {
-    if (!maverickRef.current) return;
-    maverickRef.current.innerHTML = '';
-    const container = maverickRef.current;
+    const container = document.getElementById('maverick');
+    if (!container) return;
+    container.innerHTML = '';
 
     const initMaverick = () => {
-      if (typeof window.MaverickClient !== 'undefined' && container) {
+      if (typeof window.MaverickClient !== 'undefined') {
         new window.MaverickClient({
-          target: container,
-          url: window.webroot + '/js/campaign/client.js',
+          target: 'maverick',
+          url: window.webroot + '/js/campaign/client.js?v=' + Date.now(),
           options: { id: '1180', agentId: '132194', referral: '1', title: 'MSC pays Dejavoo', theme: 'light', label: 'true' }
         });
       }
