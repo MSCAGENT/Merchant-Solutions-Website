@@ -618,6 +618,140 @@ const CloverPOS = () => {
         </div>
       </section>
 
+      {/* $0 Upfront Program Accordion */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">$0 Upfront Clover Program</h2>
+            <p className="text-lg text-gray-600 italic">
+              "Our Clover system is available with $0 upfront for qualified businesses using our Dual Pricing program."
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="space-y-3 mt-10">
+            <AccordionItem value="step-1" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Step 1 — Get Started With $0 Down
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>No upfront hardware cost</li>
+                  <li>Equipment is provided under a monthly subscription</li>
+                  <li>Approval based on creditworthiness</li>
+                  <li>Processing runs on Dual Pricing (4%–5% program)</li>
+                </ul>
+                <p className="font-medium text-gray-800">You can begin accepting payments right away.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="step-2" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Step 2 — Performance Qualification (First 30 Days)
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">During your first 30 processing days, you agree to process at least:</p>
+                <p className="font-bold text-purple-600 text-lg mb-2">$10,000 per month in card volume</p>
+                <p>This determines whether your system becomes free.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="step-3" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Step 3 — If You Reach $10,000+ Per Month
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">When you meet the requirement:</p>
+                <ul className="list-disc pl-5 space-y-1.5">
+                  <li>Your equipment lease is fully reimbursed</li>
+                  <li>You receive a <span className="font-semibold text-green-600">$100 Visa reward card</span></li>
+                  <li>Your Clover system becomes free</li>
+                  <li>No ongoing hardware payments</li>
+                  <li>You only keep paying your software fees</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="step-4" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Step 4 — If You Do Not Reach $10,000
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">If volume stays below $10,000:</p>
+                <ul className="list-disc pl-5 space-y-1.5">
+                  <li>Your monthly equipment subscription continues</li>
+                  <li>The subscription covers full hardware cost</li>
+                  <li>No penalties</li>
+                  <li>No surprises</li>
+                </ul>
+                <p className="mt-2 font-medium text-gray-800">You simply continue on the standard plan.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="subscription" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                What the Subscription Covers
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">The monthly subscription includes:</p>
+                <ul className="list-disc pl-5 space-y-1.5">
+                  <li>Clover hardware</li>
+                  <li>System activation</li>
+                  <li>Programming and installation</li>
+                  <li>Ongoing support</li>
+                  <li>Replacement assistance</li>
+                  <li>Account management</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-500">No separate equipment invoice.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="pricing" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Pricing Structure
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">This program runs on our Dual Pricing model:</p>
+                <ul className="list-disc pl-5 space-y-1.5">
+                  <li>Customer pays the processing fee</li>
+                  <li>Business keeps full sale amount</li>
+                  <li>No out-of-pocket processing cost</li>
+                  <li>Flat 4% program</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-500">This allows us to subsidize hardware.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="why" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Why This Program Exists
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">This model rewards active businesses.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <p className="font-semibold text-gray-800 mb-2">If you process consistently:</p>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>You pay nothing for hardware</li>
+                      <li>You get a bonus</li>
+                      <li>You lower operating costs</li>
+                      <li>You keep more profit</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-800 mb-2">If volume is lower:</p>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>You still get professional equipment</li>
+                      <li>At a predictable monthly cost</li>
+                    </ul>
+                  </div>
+                </div>
+                <p className="mt-4 font-medium text-purple-700">Fair for both sides.</p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
       {/* Lead Form Modal */}
       {showFormModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowFormModal(false)}>
