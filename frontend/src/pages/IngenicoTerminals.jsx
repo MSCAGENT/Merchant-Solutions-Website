@@ -239,38 +239,56 @@ Most issues can be fixed without replacing the device.`
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
+      <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-purple-600 font-semibold mb-4">INGENICO TERMINALS</p>
-            
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Ingenico Payment Terminals—Secure, Fast, & Reliable
-            </h1>
-            
-            <div className="text-lg text-gray-700 space-y-4 mb-8">
-              <p>
-                Looking for a secure, efficient, and high-performance payment terminal for your business? <strong>Ingenico payment terminals</strong> offer state-of-the-art EMV, NFC, and contactless payment technology.
-              </p>
-              <p>
-                Whether you run a retail store, restaurant, or service-based business, our Ingenico POS solutions provide speed, security, and versatility.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div>
+              <p className="text-purple-600 font-semibold mb-4">INGENICO TERMINALS</p>
+              
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Ingenico Payment Terminals—Secure, Fast, & Reliable
+              </h1>
+              
+              <div className="text-lg text-gray-700 space-y-4 mb-8">
+                <p>
+                  Looking for a secure, efficient, and high-performance payment terminal for your business? <strong>Ingenico payment terminals</strong> offer state-of-the-art EMV, NFC, and contactless payment technology.
+                </p>
+                <p>
+                  Whether you run a retail store, restaurant, or service-based business, our Ingenico POS solutions provide speed, security, and versatility.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a href="#tetra">
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
+                    Tetra Terminals
+                  </Button>
+                </a>
+                <a href="#axium">
+                  <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
+                    Axium Terminals
+                  </Button>
+                </a>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="#tetra">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
-                  Tetra Terminals
-                </Button>
-              </a>
-              <a href="#axium">
-                <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
-                  Axium Terminals
-                </Button>
-              </a>
+            {/* Right - Video */}
+            <div className="hidden lg:block">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-auto object-cover"
+                  src="https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/c8sp2axu_Ingenico%20Terminals%20%20Secure%20%20Fast%20POS%20Solutions.mp4"
+                />
+              </div>
             </div>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
       {/* Benefits Bar */}
