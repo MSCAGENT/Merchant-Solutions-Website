@@ -341,11 +341,9 @@ const CloverPOS = () => {
           </div>
 
           <div className="text-center">
-            <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-12 py-6 shadow-lg">
-                Start Saving Today
-              </Button>
-            </a>
+            <Button size="lg" onClick={() => setShowFormModal(true)} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-12 py-6 shadow-lg">
+              Start Saving Today
+            </Button>
           </div>
         </div>
       </section>
