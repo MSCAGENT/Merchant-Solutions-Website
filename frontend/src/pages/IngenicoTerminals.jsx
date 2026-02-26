@@ -458,11 +458,15 @@ Most issues can be fixed without replacing the device.`
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <Smartphone className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">AXIUM Terminal Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto object-cover"
+                src="https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/3fcdxcdc_INGENICO-2026-HOMEPAGE-TOPBANNER-VIDEO-.mp4"
+              />
             </div>
           </div>
         </div>
