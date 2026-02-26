@@ -234,25 +234,38 @@ const DejavooTerminals = () => {
               <p className="text-lg text-gray-600 mb-8">Built for Retail, Restaurants, and Service Businesses.</p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
-                    Request a Free Demo
-                  </Button>
-                </Link>
-                <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
-                    Apply Now <ChevronRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </a>
+                <Button
+                  data-testid="hero-contact-sales-btn"
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg"
+                  onClick={() => setShowContactModal(true)}
+                >
+                  Contact Sales
+                </Button>
+                <Button
+                  data-testid="hero-apply-now-btn"
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6"
+                  onClick={() => setShowApplyModal(true)}
+                >
+                  Apply Now <ChevronRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
             </div>
 
-            {/* Right - Device Image */}
+            {/* Right - Hero Image Slideshow */}
             <div className="hidden lg:flex justify-center items-center">
-              <div className="relative">
-                <div className="w-96 h-96 bg-gradient-to-br from-purple-100 to-yellow-100 rounded-3xl p-8 flex items-center justify-center shadow-xl">
-                  <Smartphone className="w-64 h-64 text-purple-600" />
-                </div>
+              <div className="relative w-[480px] h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                {heroImages.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`Dejavoo terminal ${i + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+                    style={{ opacity: heroIndex === i ? 1 : 0 }}
+                  />
+                ))}
               </div>
             </div>
           </div>
