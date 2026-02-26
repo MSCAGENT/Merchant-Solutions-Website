@@ -871,6 +871,14 @@ const CloverPOS = () => {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+
+          {/* Contact Sales CTA */}
+          <div className="mt-12 pt-10 border-t border-gray-200 text-center">
+            <p className="text-xl font-semibold text-gray-900 mb-4">Do you still have more questions?</p>
+            <Button size="lg" onClick={() => setShowFormModal(true)} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
+              Contact Sales
+            </Button>
+          </div>
         </div>
       </section>
 
