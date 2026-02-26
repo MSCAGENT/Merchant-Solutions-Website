@@ -52,7 +52,7 @@ const IngenicoTerminals = () => {
       name: 'Link 2500 Mobile',
       series: 'TETRA',
       description: 'Ultra-compact Bluetooth mobile terminal. Pairs with your smartphone or tablet for on-the-go payments — ideal for pop-ups, delivery, and field services.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/ykxi9ape_Ingenico-Link2500-face-1200px.png',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/a4cb0055db560ef541c4b8bcfee58bbeadb54c6d1b853f0cbdfd734827097c2a.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
@@ -60,7 +60,7 @@ const IngenicoTerminals = () => {
       name: 'Desk 3500 Countertop',
       series: 'TETRA',
       description: 'Reliable countertop terminal with a compact design, keypad, and high-speed printer. Perfect for retail stores and restaurants requiring a stationary checkout.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/qpup27iu_Desk3500-face..png',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/87cd8aa359672b314858c22c76f9fd8f10fd0c65c9a84b37a52b5c6d7be93705.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
@@ -68,7 +68,7 @@ const IngenicoTerminals = () => {
       name: 'Move 5000 Wireless',
       series: 'TETRA',
       description: 'Portable wireless terminal with 4G LTE, Wi-Fi, and long battery life. Built-in printer makes it ideal for tableside payments, delivery, and mobile businesses.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/3jepfq9n_Move5000-face.png',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/65b5ca0c6f9b36d2e443a1b58f5c8cfe38b2522591d8406f71bbea908b2522bb.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
@@ -76,7 +76,7 @@ const IngenicoTerminals = () => {
       name: 'Lane 3XXX',
       series: 'TETRA',
       description: 'Customer-facing PIN pad on a swivel stand. Designed for integrated POS systems in retail environments where the customer completes payment at the counter.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/lst1ahs6_lane3000-touch-3-4-square.png',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/d0576ca27dd0c5a2597a6a5e8ab033bdb6f082c3c33095caae5e009099a25f48.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
@@ -84,7 +84,7 @@ const IngenicoTerminals = () => {
       name: 'Lane 5000',
       series: 'TETRA',
       description: 'Mid-size customer-facing payment device with a larger screen and full keypad. Ideal for grocery, pharmacy, and high-traffic retail checkout lanes.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/n9b66u9x_lane5000-square.png',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/06b4ba72db6fb865c253fc004eef67cd8c26c272f73123f4e98cfee54e877be5.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
@@ -92,7 +92,7 @@ const IngenicoTerminals = () => {
       name: 'Lane 8000',
       series: 'TETRA',
       description: 'Premium widescreen customer-facing terminal with a large touchscreen display. Built for high-volume checkout environments like supermarkets and department stores.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/eggls9i5_laneserie-carrousel-8000.png',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/3b4249d036702b51914bf5e392e94dd82f2fd3ef360904e4b1608e1b3ba1e553.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     }
