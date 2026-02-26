@@ -140,65 +140,24 @@ const IngenicoTerminals = () => {
 
   const faqs = [
     {
-      question: 'What is the difference between Tetra and Axium?',
-      answer: `Tetra runs on Ingenico's secure proprietary system, while Axium runs on Android.
-
-Use Tetra for maximum stability and proven reliability.
-Use Axium for apps, advanced features, and customization.`
+      question: 'What is the difference between Tetra and AXIUM?',
+      answer: 'Tetra uses a proprietary secure OS designed strictly for payments. AXIUM runs on Android and supports payment apps and business applications.'
     },
     {
-      question: 'Do these terminals accept tap, chip, and swipe?',
-      answer: `Yes. Both Tetra and Axium support:
-
-• Tap (NFC / contactless)
-• Chip (EMV)
-• Swipe (magstripe)
-• Apple Pay, Google Pay, Samsung Pay`
+      question: 'Do Ingenico terminals accept tap, chip, and swipe?',
+      answer: 'Yes. All modern Ingenico terminals accept EMV chip cards, contactless tap-to-pay, and magnetic stripe payments.'
     },
     {
       question: 'Do I need internet for the terminal to work?',
-      answer: `Yes. You can connect by:
-
-• Ethernet
-• WiFi
-• Cellular (on supported models)
-
-If the internet goes down, some models can store limited offline transactions.`
+      answer: 'Yes. Terminals connect via Ethernet, Wi-Fi, or 4G LTE to process transactions securely.'
     },
     {
-      question: 'Can I use my terminal anywhere, or is it locked?',
-      answer: `Most terminals are programmed to one processor and account. They are not "plug and play" between providers.
-
-If you change processors, the terminal must be reprogrammed or replaced.`
+      question: 'Are Ingenico terminals PCI compliant?',
+      answer: 'Yes. All Ingenico terminals meet PCI-DSS security standards and support encrypted payment processing.'
     },
     {
-      question: 'Are Tetra and Axium terminals PCI compliant?',
-      answer: `Yes. They meet:
-
-• PCI PTS standards
-• EMV security requirements
-• End-to-end encryption
-
-This protects cardholder data and reduces fraud risk.`
-    },
-    {
-      question: 'Can these terminals run apps and POS software?',
-      answer: `Axium: Yes — Supports Android apps, POS systems, loyalty, ordering, and reporting.
-
-Tetra: Limited — Designed mainly for payments, not third-party apps.
-
-If you need customization, Axium is the better option.`
-    },
-    {
-      question: 'What happens if my terminal stops working?',
-      answer: `We provide support for:
-
-• Remote troubleshooting
-• Software reloads
-• Replacement if needed
-• Warranty processing
-
-Most issues can be fixed without replacing the device.`
+      question: 'Can Ingenico integrate with my POS system?',
+      answer: 'Yes. Ingenico terminals integrate with leading retail, restaurant, and healthcare POS platforms.'
     }
   ];
 
@@ -527,7 +486,7 @@ Most issues can be fixed without replacing the device.`
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Who Should Use Ingenico Payment Terminals?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
