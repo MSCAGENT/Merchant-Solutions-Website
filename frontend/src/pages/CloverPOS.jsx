@@ -208,7 +208,7 @@ const CloverPOS = () => {
                     key={index}
                     src={image.src}
                     alt={image.alt}
-                    className={`absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-1000 ${
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                       index === currentSlide ? 'opacity-100' : 'opacity-0'
                     }`}
                   />
