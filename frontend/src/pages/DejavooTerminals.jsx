@@ -621,6 +621,81 @@ const DejavooTerminals = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-yellow-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-12">
+            Frequently Asked Questions
+          </h2>
+
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem value="faq-1" className="bg-white rounded-lg shadow-sm border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline">
+                What is included in the Dejavoo terminal subscription program?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                The subscription includes the Dejavoo terminal, payment processing setup, programming, remote support, and ongoing service. Pricing options include flat rate or dual pricing depending on your business needs.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-2" className="bg-white rounded-lg shadow-sm border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline">
+                Which Dejavoo terminal models are available under this program?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                We offer countertop, wireless, and Android smart terminals. Models are selected based on your business type such as retail, restaurant, healthcare, or mobile service.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-3" className="bg-white rounded-lg shadow-sm border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline">
+                What's the difference between flat-rate pricing and dual pricing?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                <p className="mb-2">Flat rate means you pay one consistent processing rate per transaction.</p>
+                <p>Dual pricing allows you to offer a cash price and a card price, helping offset processing costs.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-4" className="bg-white rounded-lg shadow-sm border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline">
+                Is there a long-term contract or cancellation fee?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                We offer flexible options. Purchased equipment typically has no long-term contract. Free placement programs may require an agreement.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-5" className="bg-white rounded-lg shadow-sm border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline">
+                Can I integrate the Dejavoo terminal with my existing POS or software?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Yes. Dejavoo terminals integrate with many POS systems and business software platforms.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-6" className="bg-white rounded-lg shadow-sm border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline">
+                How do I get started with the subscription?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Apply online or speak with our team. Once approved, we program your device and ship it ready to process.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-7" className="bg-white rounded-lg shadow-sm border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:no-underline">
+                What kind of support is included with my subscription?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                We provide programming, setup assistance, training, and ongoing customer support to keep your business running smoothly.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
       {/* Contact Sales Modal (Lead Connector) */}
       {showContactModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowContactModal(false)}>
