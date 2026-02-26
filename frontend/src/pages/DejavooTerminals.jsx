@@ -15,6 +15,7 @@ const DejavooTerminals = () => {
   const [showContactModal, setShowContactModal] = useState(false);
   const [showApplyModal, setShowApplyModal] = useState(false);
   const [heroIndex, setHeroIndex] = useState(0);
+  const [purchaseDevice, setPurchaseDevice] = useState(null);
 
   // Hero image slideshow - 3s interval
   useEffect(() => {
