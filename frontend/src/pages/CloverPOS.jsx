@@ -493,7 +493,7 @@ const CloverPOS = () => {
             <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/0hmeybl3_clover%20station%20duo.png" alt="Clover Station Solo" className="w-full h-full object-contain p-2" style={{ mixBlendMode: 'multiply' }} />
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/ip9swahq_clover_station_solo.png" alt="Clover Station Solo" className="w-full h-full object-contain p-2" style={{ mixBlendMode: 'multiply' }} />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Station Solo</h3>
@@ -534,7 +534,7 @@ const CloverPOS = () => {
             <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/ip9swahq_clover_station_solo.png" alt="Clover Station Duo" className="w-full h-full object-contain p-2" style={{ mixBlendMode: 'multiply' }} />
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/0hmeybl3_clover%20station%20duo.png" alt="Clover Station Duo" className="w-full h-full object-contain p-2" style={{ mixBlendMode: 'multiply' }} />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Station Duo</h3>
