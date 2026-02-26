@@ -303,50 +303,67 @@ const DejavooTerminals = () => {
             How It Works
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {/* Step 1 */}
             <div className="relative">
               <Card className="text-center h-full border-0 shadow-lg bg-white">
-                <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-4xl font-bold text-white">1</span>
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <span className="text-3xl font-bold text-white">1</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Choose Your Pricing</h3>
-                  <p className="text-gray-600 mb-4">Dual Price or Flat Rate</p>
-                  <p className="text-sm text-gray-500">Schedule a walkthrough to see which terminal solution is best.</p>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900">Choose Your Device Below</h3>
+                  <p className="text-sm text-gray-600">Browse our full lineup of Dejavoo smart terminals and pick the one that fits your business.</p>
                 </CardContent>
               </Card>
-              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                <ChevronRight className="w-8 h-8 text-purple-600" />
+              <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+                <ChevronRight className="w-6 h-6 text-purple-600" />
               </div>
             </div>
 
             {/* Step 2 */}
             <div className="relative">
               <Card className="text-center h-full border-0 shadow-lg bg-white">
-                <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-4xl font-bold text-white">2</span>
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <span className="text-3xl font-bold text-white">2</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Apply Now & Get Onboarded Fast</h3>
-                  <p className="text-gray-600 mb-4">Quick approval process</p>
-                  <p className="text-sm text-gray-500">No hard credit pull required.</p>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900">Select Your Pricing Model</h3>
+                  <p className="text-sm text-gray-600 mb-3">Dual Pricing or Flat Rate</p>
+                  <div className="text-left space-y-2">
+                    <p className="text-xs text-gray-500"><span className="font-semibold text-gray-700">Dual Pricing:</span> Includes free equipment with a 24-month agreement.</p>
+                    <p className="text-xs text-gray-500"><span className="font-semibold text-gray-700">Flat Rate:</span> Purchase made outright with no contract.</p>
+                  </div>
                 </CardContent>
               </Card>
-              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                <ChevronRight className="w-8 h-8 text-purple-600" />
+              <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+                <ChevronRight className="w-6 h-6 text-purple-600" />
               </div>
             </div>
 
             {/* Step 3 */}
+            <div className="relative">
+              <Card className="text-center h-full border-0 shadow-lg bg-white">
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <span className="text-3xl font-bold text-white">3</span>
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900">Apply & Get Onboarded Fast</h3>
+                  <p className="text-sm text-gray-600">Click the Apply Now button and fill out your information. No hard credit pull required.</p>
+                </CardContent>
+              </Card>
+              <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+                <ChevronRight className="w-6 h-6 text-purple-600" />
+              </div>
+            </div>
+
+            {/* Step 4 */}
             <Card className="text-center h-full border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-4xl font-bold text-white">3</span>
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-5">
+                  <span className="text-3xl font-bold text-white">4</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Choose Your Subscription Plan</h3>
-                <p className="text-gray-600 mb-4">Select your device and pricing</p>
-                <p className="text-sm text-gray-500">Plans start at $49/month and include hardware, SIM service, and full support.</p>
+                <h3 className="text-lg font-bold mb-3 text-gray-900">Receive & Get Trained</h3>
+                <p className="text-sm text-gray-600">Once your equipment arrives, call us and get a quick training session to start accepting payments right away.</p>
               </CardContent>
             </Card>
           </div>
