@@ -476,56 +476,53 @@ const DejavooTerminals = () => {
         </div>
       </section>
 
-      {/* Terminal Carousel */}
+      {/* Choose Your Terminal - 2x4 Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-12">
             Choose Your Terminal
           </h2>
           
-          <Carousel className="w-full max-w-5xl mx-auto">
-            <CarouselContent>
-              {terminals.map((terminal) => (
-                <CarouselItem key={terminal.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
-                      <CardContent className="p-6">
-                        {/* Device Image */}
-                        <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
-                          <Smartphone className="w-32 h-32 text-purple-600" />
-                        </div>
-                        
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">{terminal.name}</h3>
-                        <p className="text-sm text-gray-600 mb-6">{terminal.description}</p>
-                        
-                        <div className="space-y-2">
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Button 
-                                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
-                                onClick={() => setSelectedDevice(terminal)}
-                              >
-                                Pricing
-                              </Button>
-                            </DialogTrigger>
-                            <PricingModal device={selectedDevice} />
-                          </Dialog>
-                          
-                          <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
-                            <Button variant="outline" className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50">
-                              Enroll Now <ChevronRight className="ml-2 h-4 w-4" />
-                            </Button>
-                          </a>
-                        </div>
-                      </CardContent>
-                    </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {terminals.map((terminal) => (
+              <Card key={terminal.id} className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
+                <CardContent className="p-5">
+                  <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={terminal.image}
+                      alt={terminal.name}
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                  
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{terminal.name}</h3>
+                  <p className="text-sm text-gray-600 mb-5 min-h-[3rem]">{terminal.description}</p>
+                  
+                  <div className="space-y-2">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button 
+                          className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                          onClick={() => setSelectedDevice(terminal)}
+                        >
+                          Pricing
+                        </Button>
+                      </DialogTrigger>
+                      <PricingModal device={selectedDevice} />
+                    </Dialog>
+                    
+                    <Button
+                      variant="outline"
+                      className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
+                      onClick={() => setShowApplyModal(true)}
+                    >
+                      Enroll Now <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
