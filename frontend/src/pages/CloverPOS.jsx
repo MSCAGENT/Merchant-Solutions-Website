@@ -386,19 +386,23 @@ const CloverPOS = () => {
               </div>
             </div>
 
-            {/* Right - Device Visual */}
+            {/* Right - Device Slideshow */}
             <div className="hidden lg:flex justify-center">
-              <div className="relative">
-                <div className="w-96 h-96 bg-gradient-to-br from-purple-100 to-blue-100 rounded-3xl p-8 flex items-center justify-center shadow-xl">
-                  <CreditCard className="w-64 h-64 text-purple-600" />
-                </div>
-                <div className="absolute bottom-8 right-8 bg-white rounded-lg shadow-lg p-4">
-                  <div className="text-sm font-semibold">All-in-One POS</div>
-                  <div className="text-xs text-gray-500">Clover Pocket from $350</div>
-                  <div className="text-xs text-gray-500">Clover Flex 2 from $499</div>
-                  <div className="text-xs text-gray-400 mt-1">$19.95/month software subscription per device</div>
-                  <div className="text-xs text-gray-400">Final pricing shown after approval</div>
-                </div>
+              <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden shadow-xl bg-black">
+                {[
+                  { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/4ecinz6a_clover-flex-devices.webp', alt: 'Clover Flex Devices' },
+                  { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/gsbuv04a_Clover-FlexLRG.jpg', alt: 'Clover Flex Handheld' },
+                  { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/qxsao0xl_Clover%20GO.jpeg', alt: 'Clover Go Card Reader' }
+                ].map((image, index) => (
+                  <img
+                    key={index}
+                    src={image.src}
+                    alt={image.alt}
+                    className={`absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-1000 ${
+                      index === currentSlide % 3 ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
