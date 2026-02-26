@@ -20,7 +20,14 @@ import {
   QrCode,
   Banknote,
   Server,
-  Calculator
+  Calculator,
+  HandCoins,
+  ClipboardCheck,
+  TrendingDown,
+  Monitor,
+  FileCheck,
+  BadgeCheck,
+  Store
 } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent } from '../../components/ui/card';
@@ -400,8 +407,128 @@ const PaymentProcessingSolution = () => {
         </div>
       </section>
 
+      {/* Cash Discount & Dual Pricing */}
+      <section className="py-20 bg-gray-50" data-testid="cash-discount-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <HandCoins className="h-7 w-7 text-purple-600" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Cash Discount & Dual Pricing</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Reduce or eliminate credit card processing fees with a compliant cash discount or dual pricing program — configured, installed, and supported by Merchant Solutions Corp.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            {/* Compliance */}
+            <Card className="border-2 border-purple-100 hover:border-purple-600 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-5">
+                  <ClipboardCheck className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Compliance Built In</h3>
+                <p className="text-gray-600 mb-5">
+                  Cash discount and dual pricing programs must meet card brand rules and state regulations. We handle compliance from day one so you avoid fines and disputes.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    'Card brand compliant receipt formatting',
+                    'Required signage provided and placed',
+                    'Proper disclosure at point of sale',
+                    'Staff scripting for customer communication',
+                    'State law review before activation'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                      <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Why Small Businesses Need It */}
+            <Card className="border-2 border-purple-100 hover:border-purple-600 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-5">
+                  <Store className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Why Small Businesses Are Adopting</h3>
+                <p className="text-gray-600 mb-5">
+                  Processing fees eat into thin margins. For restaurants, retail, and service businesses, cash discount programs can save thousands annually while keeping pricing transparent.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    'Eliminate 2-4% in credit card processing fees',
+                    'Protect margins without raising menu or shelf prices',
+                    'Customers choose: pay card price or save with cash',
+                    'Especially impactful for high-volume, low-margin businesses',
+                    'Growing adoption across restaurants, salons, and trades'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                      <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Technology */}
+            <Card className="border-2 border-purple-100 hover:border-purple-600 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-5">
+                  <Monitor className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Our Technology Makes It Easy</h3>
+                <p className="text-gray-600 mb-5">
+                  We pre-configure your terminals and POS systems so dual pricing is automatic — no manual calculations, no staff confusion, and no compliance gaps.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    'Automatic dual pricing on every transaction',
+                    'Customer-facing display shows card and cash prices',
+                    'Compliant receipts generated automatically',
+                    'Works on Clover, Dejavoo, Ingenico, and more',
+                    'Remote or on-site programming by our team'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                      <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Dual pricing visual + CTA */}
+          <div className="bg-white rounded-2xl border-2 border-purple-100 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-shrink-0">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/suvi0y8j_Pseries%20Dual%20Price.png" 
+                alt="Terminal showing dual pricing - cash vs card price" 
+                className="max-h-[280px] w-auto object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">See It in Action</h3>
+              <p className="text-gray-600 mb-6">
+                Our terminals display both prices automatically at the point of sale. Customers see exactly what they pay with card or cash — fully transparent, fully compliant, fully configured before we install.
+              </p>
+              <Link to="/contact">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="cash-discount-cta-btn">
+                  Get a Cash Discount Quote
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Businesses Choose Our Payment Processing</h2>
