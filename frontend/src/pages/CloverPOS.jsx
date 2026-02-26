@@ -487,7 +487,7 @@ const CloverPOS = () => {
             <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img src="https://static.prod-images.emergentagent.com/jobs/c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/images/629a9ca5694de6e61fea259984d6440e3e92c5c3f2af525b5d40491f3c04a6b5.png" alt="Clover Station Solo" className="w-full h-full object-contain p-2" />
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/0hmeybl3_clover%20station%20duo.png" alt="Clover Station Solo" className="w-full h-full object-contain p-2" style={{ mixBlendMode: 'multiply' }} />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Station Solo</h3>
@@ -528,7 +528,7 @@ const CloverPOS = () => {
             <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img src="https://static.prod-images.emergentagent.com/jobs/c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/images/e40b46359314b9218f472d0989b46aac7d83078c0c969efc81ec8621b8b4838b.png" alt="Clover Station Duo" className="w-full h-full object-contain p-2" />
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/ip9swahq_clover_station_solo.png" alt="Clover Station Duo" className="w-full h-full object-contain p-2" style={{ mixBlendMode: 'multiply' }} />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Station Duo</h3>
@@ -569,7 +569,7 @@ const CloverPOS = () => {
             <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img src="https://static.prod-images.emergentagent.com/jobs/c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/images/39a94af506954582a2b73a169a1de32dd462b87686771e7b5ab4b099ce6c9324.png" alt="Clover Kiosk" className="w-full h-full object-contain p-2" />
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/787vimmt_kiosk-qsr-restaurant-image__1_.webp" alt="Clover Kiosk" className="w-full h-full object-contain p-2" style={{ mixBlendMode: 'multiply' }} />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Kiosk</h3>
