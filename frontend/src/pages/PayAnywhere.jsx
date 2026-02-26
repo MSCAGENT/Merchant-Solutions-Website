@@ -325,6 +325,175 @@ const PayAnywhere = () => {
         </div>
       </section>
 
+      {/* Payment Features Tabs */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">More Ways to Get Paid</h2>
+            <p className="text-lg text-gray-600">Flexible payment tools built into every plan</p>
+          </div>
+
+          {/* Tab Switcher */}
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
+              {[
+                { key: 'virtual-terminal', label: 'Virtual Terminal', icon: Monitor },
+                { key: 'invoicing', label: 'Invoicing', icon: FileText },
+                { key: 'recurring', label: 'Recurring Payments', icon: RefreshCw }
+              ].map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.key}
+                    onClick={() => setActiveTab(tab.key)}
+                    className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                      activeTab === tab.key
+                        ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
+                        : 'text-gray-600 hover:text-purple-600'
+                    }`}
+                    data-testid={`tab-${tab.key}`}
+                  >
+                    <Icon className="h-4 w-4" />
+                    {tab.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Tab Content */}
+          <div className="max-w-5xl mx-auto">
+            {activeTab === 'virtual-terminal' && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                      <Monitor className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Virtual Terminal</h3>
+                  </div>
+                  <p className="text-lg text-gray-600 mb-6">
+                    Send secure payment links without requiring customers to create accounts. Accept payments from anywhere using any device with a browser.
+                  </p>
+                  <div className="space-y-3">
+                    {[
+                      'Process keyed-in card payments from any device',
+                      'Send pay-by-link via text or email',
+                      'No customer account required',
+                      'Ideal for phone orders and remote services',
+                      'Real-time transaction reporting'
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-700">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
+                  <CardContent className="p-10 text-center">
+                    <Monitor className="h-20 w-20 text-purple-600 mx-auto mb-6" />
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Accept Payments Anywhere</h4>
+                    <p className="text-gray-600 mb-6">No hardware needed — just a browser and an internet connection.</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Visa</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Mastercard</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Amex</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Discover</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
+            {activeTab === 'invoicing' && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                      <FileText className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Invoicing</h3>
+                  </div>
+                  <p className="text-lg text-gray-600 mb-6">
+                    Save payment methods on file and enable autopay. Create and send professional invoices that get paid faster.
+                  </p>
+                  <div className="space-y-3">
+                    {[
+                      'Create and send invoices in seconds',
+                      'Save cards on file for repeat customers',
+                      'Enable autopay for recurring clients',
+                      'Automatic payment reminders',
+                      'Track invoice status in real time'
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-700">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
+                  <CardContent className="p-10 text-center">
+                    <FileText className="h-20 w-20 text-purple-600 mx-auto mb-6" />
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Get Paid Faster</h4>
+                    <p className="text-gray-600 mb-6">Secure card-on-file storage with PCI-compliant vaulting.</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Card on File</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Autopay</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Reminders</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
+            {activeTab === 'recurring' && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                      <RefreshCw className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Recurring Payments</h3>
+                  </div>
+                  <p className="text-lg text-gray-600 mb-6">
+                    Accept Apple Pay payments and all major digital wallets. Set up automatic billing schedules for memberships, subscriptions, and service plans.
+                  </p>
+                  <div className="space-y-3">
+                    {[
+                      'Accept Apple Pay and contactless payments',
+                      'Set custom billing cycles (weekly, monthly, annual)',
+                      'Automatic retry on failed payments',
+                      'Customer payment portal for self-management',
+                      'Supports memberships, subscriptions, and installments'
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-700">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
+                  <CardContent className="p-10 text-center">
+                    <Smartphone className="h-20 w-20 text-purple-600 mx-auto mb-6" />
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Modern Payment Methods</h4>
+                    <p className="text-gray-600 mb-6">Accept every way your customers want to pay.</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Apple Pay</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Google Pay</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Samsung Pay</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Contactless</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose PayAnywhere */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-yellow-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
