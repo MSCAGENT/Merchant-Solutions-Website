@@ -752,6 +752,128 @@ const CloverPOS = () => {
         </div>
       </section>
 
+      {/* Clover Program FAQ */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions — Clover Program</h2>
+          </div>
+
+          <Accordion type="single" collapsible className="space-y-3">
+            <AccordionItem value="faq-1" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Can I upgrade my old Clover hardware?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Yes. If you currently use older Clover equipment, you may qualify for our upgrade program.</p>
+                <p className="mb-2">We can:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Replace legacy models with newer generation devices</li>
+                  <li>Transition you into our Dual Pricing program</li>
+                  <li>Evaluate you for the $0-Upfront reimbursement offer</li>
+                </ul>
+                <p className="text-sm text-gray-500">Approval depends on processing volume and account status.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-2" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Can I purchase a new Clover if I already own one?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Yes, however, we cannot sync with another Clover from a different vendor. We would need to replace the other equipment and provide you with a full upgrade.</p>
+                <p className="mb-2">If you already own a Clover device, you can:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Add additional terminals</li>
+                  <li>Upgrade to a Station Solo or Duo</li>
+                  <li>Apply for the Free Placement program (volume requirements apply)</li>
+                </ul>
+                <p className="text-sm text-gray-500">Each device is evaluated based on monthly processing per terminal.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-3" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                What if I no longer want to use Clover? What is the return policy?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">We offer a 30-day return window.</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Returns must be requested within 30 days of delivery</li>
+                  <li>A 20% restocking fee applies</li>
+                  <li>An approved RMA (Return Merchandise Authorization) is required</li>
+                  <li>Equipment must be in good condition and original box</li>
+                </ul>
+                <p className="font-medium text-gray-800">Returns without an RMA will not be accepted.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-4" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                I am in Puerto Rico or USVI. Can I qualify for your programs?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Yes. We support merchants in Puerto Rico and US territories.</p>
+                <p className="mb-2">Eligibility depends on:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Business type</li>
+                  <li>Processing volume</li>
+                  <li>Program approval</li>
+                  <li>Credit score</li>
+                </ul>
+                <p className="text-sm text-gray-500">The same qualification standards apply as in the mainland United States.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-5" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Is there a contract required for the $0-Upfront program?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">Yes. The Free Placement program requires:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Enrollment in our Dual Pricing program</li>
+                  <li>A processing agreement for min 36 months</li>
+                  <li>Meeting minimum volume requirements</li>
+                </ul>
+                <p className="text-sm text-gray-500">If volume targets are not met, subscription terms continue as agreed. All terms are disclosed before activation.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-6" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                What happens if I process less than the required monthly volume?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">If you do not meet the required monthly volume:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Your equipment subscription continues</li>
+                  <li>Reimbursement does not apply</li>
+                  <li>Standard program pricing remains in effect</li>
+                </ul>
+                <p className="mb-1">There are no hidden penalties.</p>
+                <p className="text-sm text-gray-500">You simply remain on the active subscription plan.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-7" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                How is my monthly processing volume calculated?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">Monthly processing volume is based on:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Total approved card transactions — Visa, Mastercard, Discover, Amex, and Pin Debit</li>
+                  <li>Processor-generated reporting / Merchant Statement</li>
+                  <li>A standard 30-day cycle</li>
+                </ul>
+                <p className="text-sm text-gray-500">Volume is measured per terminal when multiple devices are installed.</p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
       {/* Lead Form Modal */}
       {showFormModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowFormModal(false)}>
