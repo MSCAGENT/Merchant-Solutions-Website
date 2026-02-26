@@ -59,13 +59,16 @@ const IndustryDetail = () => {
       {videoHero && (
         <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
           <video
+            key={videoSrc}
+            ref={videoRef}
             autoPlay
-            loop
+            loop={!isMultiVideo}
             muted
             playsInline
+            onEnded={isMultiVideo ? handleVideoEnded : undefined}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={videoHero.src} type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-purple-600/50" />
           <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
