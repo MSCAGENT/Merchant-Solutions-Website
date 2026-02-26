@@ -175,3 +175,11 @@ Build a comprehensive, SEO-optimized payment processing website for Merchant Sol
 - **Backend**: Not started (placeholder only)
 - **Data**: All mocked/hardcoded
 - **Testing**: Manual verification via screenshots
+
+### Session: February 2026
+
+#### Dejavoo Terminal Page Updates
+- ✅ Hero section: Added two lifestyle/product images in auto-sliding carousel (3s interval)
+- ✅ "Request a Free Demo" button → "Contact Sales" opening Lead Connector form (Cl4w9PGXt9QGEieIbn9A) in modal
+- ✅ "Apply Now" button → Opens Maverick widget (merchantsolutionscorpdb.com) inline in modal
+- ✅ Bottom CTA section buttons updated to match hero buttons
