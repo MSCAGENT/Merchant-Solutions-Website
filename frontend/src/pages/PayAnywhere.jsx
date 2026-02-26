@@ -4,6 +4,12 @@ import { Check, ChevronRight, CreditCard, Clock, Shield, CheckCircle } from 'luc
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '../components/ui/accordion';
 
 const PayAnywhere = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
@@ -376,7 +382,7 @@ const PayAnywhere = () => {
             Trusted by Thousands of Businesses
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4">
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
               <span className="text-xl font-semibold text-gray-900">No upfront cost</span>
@@ -388,6 +394,16 @@ const PayAnywhere = () => {
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
               <span className="text-xl font-semibold text-gray-900">Fast approval</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-12">
+            <div className="flex items-center justify-center space-x-3">
+              <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
+              <span className="text-xl font-semibold text-gray-900">24/7 Technical Assistance</span>
+            </div>
+            <div className="flex items-center justify-center space-x-3">
+              <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
+              <span className="text-xl font-semibold text-gray-900">Next Day Funding</span>
             </div>
           </div>
 
