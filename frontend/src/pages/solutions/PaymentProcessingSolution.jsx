@@ -509,7 +509,7 @@ const PaymentProcessingSolution = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/suvi0y8j_Pseries%20Dual%20Price.png" 
                 alt="Terminal showing dual pricing - cash vs card price" 
-                className="max-h-[280px] w-auto object-contain"
+                className="max-h-[322px] w-auto object-contain"
               />
             </div>
             <div>
@@ -517,11 +517,11 @@ const PaymentProcessingSolution = () => {
               <p className="text-gray-600 mb-6">
                 Our terminals display both prices automatically at the point of sale. Customers see exactly what they pay with card or cash — fully transparent, fully compliant, fully configured before we install.
               </p>
-              <Link to="/contact">
+              <a href="https://payprotec.formstack.com/forms/edgeproposal_msc" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="cash-discount-cta-btn">
-                  Get a Cash Discount Quote
+                  Prepare a Cash Discount Quote
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
