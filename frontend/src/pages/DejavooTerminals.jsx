@@ -636,7 +636,7 @@ const DejavooTerminals = () => {
       {/* Apply Now Modal (Maverick Widget) */}
       {showApplyModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowApplyModal(false)}>
-          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-6xl mx-4 h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             <button
               data-testid="apply-modal-close-btn"
               onClick={() => setShowApplyModal(false)}
@@ -644,8 +644,7 @@ const DejavooTerminals = () => {
             >
               &#x2715;
             </button>
-            <div className="p-8 pt-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Apply Now</h2>
+            <div className="p-8 pt-12 min-h-[80vh]">
               <div id="maverick" data-testid="maverick-widget-container" />
             </div>
           </div>
