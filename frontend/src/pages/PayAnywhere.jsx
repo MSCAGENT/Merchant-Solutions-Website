@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Check, ChevronRight, CreditCard, Clock, Shield, CheckCircle } from 'lucide-react';
+import { Check, ChevronRight, CreditCard, Clock, Shield, CheckCircle, Monitor, FileText, RefreshCw, Smartphone } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
