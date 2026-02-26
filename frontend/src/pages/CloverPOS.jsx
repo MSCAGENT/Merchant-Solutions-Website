@@ -388,7 +388,7 @@ const CloverPOS = () => {
 
             {/* Right - Device Slideshow */}
             <div className="hidden lg:flex justify-center">
-              <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden shadow-xl bg-black">
+              <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden shadow-xl bg-white">
                 {[
                   { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/4ecinz6a_clover-flex-devices.webp', alt: 'Clover Flex Devices' },
                   { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/gsbuv04a_Clover-FlexLRG.jpg', alt: 'Clover Flex Handheld' },
@@ -398,9 +398,10 @@ const CloverPOS = () => {
                     key={index}
                     src={image.src}
                     alt={image.alt}
-                    className={`absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-1000 ${
+                    className={`absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-1000 ${
                       index === currentSlide % 3 ? 'opacity-100' : 'opacity-0'
                     }`}
+                    style={{ mixBlendMode: 'multiply' }}
                   />
                 ))}
               </div>
