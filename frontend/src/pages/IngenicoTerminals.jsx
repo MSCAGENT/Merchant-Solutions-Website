@@ -554,17 +554,21 @@ const IngenicoTerminals = () => {
             Merchant Solutions Corp provides credit card processing and Ingenico payment solutions across all 50 U.S. states.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6">
-                Contact Sales
-              </Button>
-            </Link>
-            <a href="https://calendly.com/mscpayments" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6">
-                Schedule a Consultation
-                <ExternalLink className="h-4 w-4 ml-2" />
-              </Button>
-            </a>
+            <Button
+              size="lg"
+              className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6"
+              onClick={() => setShowContactModal(true)}
+            >
+              Contact Sales
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6"
+              onClick={() => setShowCalendlyModal(true)}
+            >
+              Schedule a Consultation
+            </Button>
           </div>
         </div>
       </section>
