@@ -57,7 +57,7 @@ const Navigation = () => {
       children: [
         { label: 'Agent & ISO Program', path: '/partnerships' },
         { label: 'Careers', path: '/partnerships/careers' },
-        { label: 'API Integrations', path: 'https://developers.merchantsolutionscorpdb.com/#/', external: true }
+        { label: 'ISV Partnerships', path: '/partnerships/isv', external: false }
       ]
     },
     {

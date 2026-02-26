@@ -37,6 +37,7 @@ import Chiropractors from "./pages/Chiropractors";
 import SquarePOS from "./pages/SquarePOS";
 import IngenicoTerminals from "./pages/IngenicoTerminals";
 import Careers from "./pages/Careers";
+import ISVPartnerships from "./pages/ISVPartnerships";
 
 function App() {
   return (
@@ -85,6 +86,7 @@ function App() {
           {/* Partner Routes */}
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/partnerships/careers" element={<Careers />} />
+          <Route path="/partnerships/isv" element={<ISVPartnerships />} />
           <Route path="/partners/agents" element={<Partnerships />} />
           
           {/* Resources Routes */}
