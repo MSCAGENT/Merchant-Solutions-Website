@@ -514,9 +514,9 @@ const DejavooTerminals = () => {
                     <Button
                       variant="outline"
                       className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
-                      onClick={() => setShowApplyModal(true)}
+                      onClick={() => setPurchaseDevice(terminal)}
                     >
-                      Enroll Now <ChevronRight className="ml-2 h-4 w-4" />
+                      Purchase Now <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
                 </CardContent>
