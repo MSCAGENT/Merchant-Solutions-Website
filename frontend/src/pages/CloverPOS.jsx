@@ -387,54 +387,45 @@ const CloverPOS = () => {
         </div>
       </section>
 
-      {/* Clover Device Carousel */}
+      {/* Clover Device Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-12">
             Choose Your Clover Device
           </h2>
           
-          <Carousel className="w-full max-w-5xl mx-auto">
-            <CarouselContent>
-              {cloverDevices.map((device) => (
-                <CarouselItem key={device.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
-                      <CardContent className="p-6">
-                        {/* Device Image */}
-                        <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
-                          <CreditCard className="w-32 h-32 text-purple-600" />
-                        </div>
-                        
-                        <h3 className="text-lg font-bold text-gray-900 mb-1">{device.name}</h3>
-                        <p className="text-sm text-gray-500 mb-2">{device.subtitle}</p>
-                        <p className="text-xs text-gray-600 mb-4">{device.description}</p>
-                        
-                        <div className="mb-4">
-                          <div className="text-2xl font-bold text-purple-600">{device.price}</div>
-                          <div className="text-xs text-gray-500 mt-1">{device.monthlyFee}</div>
-                        </div>
-
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <Button 
-                              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
-                              onClick={() => setSelectedDevice(device)}
-                            >
-                              Pricing
-                            </Button>
-                          </DialogTrigger>
-                          <PricingModal device={selectedDevice} />
-                        </Dialog>
-                      </CardContent>
-                    </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {cloverDevices.map((device) => (
+              <Card key={device.id} className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
+                <CardContent className="p-6">
+                  <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <img src={device.image} alt={device.name} className="w-full h-full object-contain p-2" style={{ mixBlendMode: 'multiply' }} />
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                  
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{device.name}</h3>
+                  <p className="text-sm text-gray-500 mb-3">{device.subtitle}</p>
+                  
+                  <div className="mb-4 space-y-1">
+                    <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-lg">{device.buyPrice}</span></p>
+                    <p className="text-sm text-gray-500">or Subscribe for <span className="font-bold text-purple-600 text-lg">{device.subPrice}</span></p>
+                    {device.shipping && <p className="text-xs text-green-600 font-medium">{device.shipping}</p>}
+                  </div>
+
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button 
+                        className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                        onClick={() => setSelectedDevice(device)}
+                      >
+                        Pricing
+                      </Button>
+                    </DialogTrigger>
+                    <PricingModal device={selectedDevice} />
+                  </Dialog>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
