@@ -124,11 +124,11 @@ const IngenicoTerminals = () => {
   ];
 
   const industries = [
-    { icon: ShoppingBag, title: 'Retail Stores', desc: 'Faster, secure checkout experience for customers' },
-    { icon: Utensils, title: 'Restaurants & Cafes', desc: 'Table-side and contactless payments with ease' },
-    { icon: Hotel, title: 'Hotels & Hospitality', desc: 'Seamless POS solution for guest services' },
-    { icon: Truck, title: 'Mobile Businesses', desc: 'Take payments on-the-go with wireless terminals' },
-    { icon: Globe, title: 'E-commerce & Omnichannel', desc: 'Integrate with online and in-store sales' }
+    { icon: ShoppingBag, title: 'Retail Stores', desc: 'Fast and secure checkout with integrated customer-facing devices.' },
+    { icon: Utensils, title: 'Restaurants & Cafes', desc: 'Tableside payments, wireless terminals, and POS integration.' },
+    { icon: Hotel, title: 'Hotels & Hospitality', desc: 'Front desk and mobile payment flexibility.' },
+    { icon: Store, title: 'Healthcare', desc: 'Secure and compliant patient payment processing.' },
+    { icon: Truck, title: 'Mobile Businesses', desc: 'Wireless and LTE-enabled payment terminals.' }
   ];
 
   const businessBenefits = [
