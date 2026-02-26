@@ -35,7 +35,7 @@ const DejavooTerminals = () => {
       id: 'qd4',
       name: 'QD4 Countertop',
       description: 'Great for retail and restaurant, healthcare or service businesses.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/m3bya6nt_unnamed%20%283%29.jpg'
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/06a936188661a7a5f5e6825a3ccdd0fe904fcc7fbb88b19f7954a11717f58738.png'
     },
     {
       id: 'qd4-dual',
@@ -59,7 +59,7 @@ const DejavooTerminals = () => {
       id: 'p5',
       name: 'P5 Wireless Terminal',
       description: 'Lightweight wireless terminal — no printer.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/rkw95xvj_unnamed%20%286%29.jpg'
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/16e3b5a72a95c13815f0ed326e59970129131717328bfd0860144174cbab8b60.png'
     },
     {
       id: 'p8',
@@ -71,7 +71,7 @@ const DejavooTerminals = () => {
       id: 'p18',
       name: 'P18 Countertop POS',
       description: 'Advanced countertop POS with a large flip-screen display.',
-      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/t0scf4fh_p18blk%20bgrn.jfif'
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/3879f0e714e451d605d4d87050fcc1af1756b0719ce07b1e319294fee40d418f.png'
     }
   ];
 
