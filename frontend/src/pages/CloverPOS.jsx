@@ -31,64 +31,41 @@ const CloverPOS = () => {
       id: 'clover-go',
       name: 'Clover Go',
       subtitle: 'Mobile Card Reader',
-      price: '$49',
-      monthlyFee: '$9.95/month software',
-      image: '/api/placeholder/300/300',
-      description: 'Compact mobile card reader'
+      buyPrice: '$199 one-time',
+      subPrice: '$9.99/mo',
+      shipping: null,
+      image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/6c9v5py4_Clover%20GO.jpeg',
+      monthlyFee: '$9.95/month software'
     },
     {
       id: 'clover-compact',
       name: 'Clover Compact',
       subtitle: 'Countertop Terminal',
-      price: '$399',
-      monthlyFee: '$14.95/month software',
-      image: '/api/placeholder/300/300',
-      description: 'All-in-one countertop solution'
+      buyPrice: '$279',
+      subPrice: '$30/mo',
+      shipping: '+ Free Shipping',
+      image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/l4wr7o07_Clover%20Stand%20Alone%20%281%29.png',
+      monthlyFee: '$14.95/month software'
     },
     {
       id: 'clover-flex',
       name: 'Clover Flex',
       subtitle: 'Handheld POS',
-      price: '$499',
-      monthlyFee: '$19.95/month software',
-      image: '/api/placeholder/300/300',
-      description: 'Portable handheld device'
+      buyPrice: '$799',
+      subPrice: '$49/mo',
+      shipping: '+ Free Shipping',
+      image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/7wyaqc40_Clover-FlexLRG.jpg',
+      monthlyFee: '$19.95/month software'
     },
     {
-      id: 'clover-pocket',
-      name: 'Clover Flex Pocket',
-      subtitle: 'Compact Mobile',
-      price: '$299',
-      monthlyFee: '$14.95/month software',
-      image: '/api/placeholder/300/300',
-      description: 'Pocket-sized mobile POS'
-    },
-    {
-      id: 'clover-mini-4g',
-      name: 'Clover Mini 4G',
+      id: 'clover-mini',
+      name: 'Clover Mini',
       subtitle: 'Compact POS',
-      price: '$749',
-      monthlyFee: '$19.95/month software',
-      image: '/api/placeholder/300/300',
-      description: 'Compact countertop with 4G'
-    },
-    {
-      id: 'clover-station-solo',
-      name: 'Clover Station Solo',
-      subtitle: 'Full POS System',
-      price: '$1,349',
-      monthlyFee: '$39.95/month software',
-      image: '/api/placeholder/300/300',
-      description: 'Complete POS workstation'
-    },
-    {
-      id: 'clover-station-duo',
-      name: 'Clover Station Duo',
-      subtitle: 'Dual-Screen POS',
-      price: '$1,649',
-      monthlyFee: '$49.95/month software',
-      image: '/api/placeholder/300/300',
-      description: 'Premium dual-screen system'
+      buyPrice: '$899',
+      subPrice: '$69/mo',
+      shipping: '+ Free Shipping',
+      image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/4xf4v4f5_clover%20mini%203%20gen.jfif',
+      monthlyFee: '$19.95/month software'
     }
   ];
 
