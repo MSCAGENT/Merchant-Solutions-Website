@@ -35,7 +35,7 @@ const DejavooTerminals = () => {
       id: 'qd4',
       name: 'QD4 Countertop',
       description: 'Great for retail and restaurant, healthcare or service businesses.',
-      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/06a936188661a7a5f5e6825a3ccdd0fe904fcc7fbb88b19f7954a11717f58738.png'
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/akupw9cp_02.png'
     },
     {
       id: 'qd4-dual',
@@ -56,10 +56,10 @@ const DejavooTerminals = () => {
       image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/uy9yluhc_P1A_branded_no-background.png'
     },
     {
-      id: 'p5',
-      name: 'P5 Wireless Terminal',
+      id: 'p3',
+      name: 'P3 Terminal',
       description: 'Lightweight wireless terminal — no printer.',
-      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/16e3b5a72a95c13815f0ed326e59970129131717328bfd0860144174cbab8b60.png'
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/yercqhb7_P3_face-on-scaled.jpg'
     },
     {
       id: 'p8',
