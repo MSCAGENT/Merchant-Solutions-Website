@@ -26,39 +26,44 @@ const DejavooTerminals = () => {
   }, []);
 
   // Load Maverick script when apply modal opens
-  const loadMaverick = useCallback(() => {
-    const container = document.getElementById('maverick');
-    if (!container) return;
-    container.innerHTML = '';
-
-    const initMaverick = () => {
-      if (typeof window.MaverickClient !== 'undefined') {
-        new window.MaverickClient({
-          target: 'maverick',
-          url: window.webroot + '/js/campaign/client.js?v=' + Date.now(),
-          options: { id: '1180', agentId: '132194', referral: '1', title: 'MSC pays Dejavoo', theme: 'light', label: 'true' }
-        });
-      }
-    };
-
-    if (typeof window.MaverickClient === 'undefined') {
-      window.webroot = 'https://merchantsolutionscorpdb.com';
-      const s = document.createElement('script');
-      s.async = true;
-      s.src = window.webroot + '/js/campaign/client.js?v=' + Date.now();
-      s.onload = s.onreadystatechange = initMaverick;
-      document.head.appendChild(s);
-    } else {
-      initMaverick();
-    }
-  }, []);
-
   useEffect(() => {
-    if (showApplyModal) {
-      const timeout = setTimeout(loadMaverick, 100);
-      return () => clearTimeout(timeout);
-    }
-  }, [showApplyModal, loadMaverick]);
+    if (!showApplyModal) return;
+
+    const timeout = setTimeout(() => {
+      const container = document.getElementById('maverick');
+      if (!container) return;
+      container.innerHTML = '';
+
+      // Inject exactly the user's provided Maverick script
+      const scriptEl = document.createElement('script');
+      scriptEl.textContent = `
+        (function() {
+          var l = function() {
+            new MaverickClient({
+              target: 'maverick',
+              url: e.src,
+              options: {id: '1180', agentId: '132194', referral: '1', title: '', theme: 'dark', label: 'true'}
+            });
+          };
+          if(typeof window.MaverickClient === 'undefined') {
+            window.webroot = "https://merchantsolutionscorpdb.com";
+            var e = document.createElement('script');
+            e.async = true;
+            e.src = window.webroot + "/js/campaign/client.js?v=" + Date.now();
+            document.getElementsByTagName('head')[0].appendChild(e);
+            e.onload = e.onreadystatechange = function() { l(); };
+          } else {
+            var e = document.createElement('script');
+            e.src = window.webroot + "/js/campaign/client.js?v=" + Date.now();
+            l();
+          }
+        }());
+      `;
+      container.appendChild(scriptEl);
+    }, 200);
+
+    return () => clearTimeout(timeout);
+  }, [showApplyModal]);
 
   const terminals = [
     {
