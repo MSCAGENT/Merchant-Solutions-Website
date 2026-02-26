@@ -4,6 +4,7 @@ import { CheckCircle, ChevronRight, CreditCard, Smartphone, Zap } from 'lucide-r
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
 const heroImages = [
   'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/jco4fk2s_people%20p18.webp',
