@@ -596,7 +596,7 @@ const DejavooTerminals = () => {
       {/* Apply Now Modal (Maverick Widget via iframe) */}
       {showApplyModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowApplyModal(false)}>
-          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-6xl mx-4 h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 h-[90vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
             <button
               data-testid="apply-modal-close-btn"
               onClick={() => setShowApplyModal(false)}
@@ -604,9 +604,16 @@ const DejavooTerminals = () => {
             >
               &#x2715;
             </button>
+            <div className="flex justify-center pt-6 pb-4 border-b border-gray-100">
+              <img
+                src="https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/grllatvs_TSYSFH.png"
+                alt="TSYS Merchant Solutions"
+                className="h-16 object-contain"
+              />
+            </div>
             <iframe
               src="/maverick-apply.html"
-              className="w-full h-full border-0 rounded-2xl"
+              className="w-full flex-1 border-0"
               title="Apply Now - Boarding Application"
             />
           </div>
