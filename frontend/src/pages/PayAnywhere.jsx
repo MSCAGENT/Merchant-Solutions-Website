@@ -13,6 +13,7 @@ import {
 
 const PayAnywhere = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
+  const [activeTab, setActiveTab] = useState('virtual-terminal');
 
   const devices = [
     {
