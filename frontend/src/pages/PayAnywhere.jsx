@@ -422,6 +422,130 @@ const PayAnywhere = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600">Common questions about PayAnywhere POS</p>
+          </div>
+
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem value="faq-1" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Is there a contract required?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>No contract when you purchase the equipment outright.</li>
+                  <li>A 1-year agreement applies when you receive free equipment placement.</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-2" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                What are the processing rates?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed space-y-4">
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Flat rate pricing:</p>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>2.60% + $0.10 for swiped, dipped, or tapped cards</li>
+                    <li>3.50% + $0.19 for manually entered cards</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Optional Cash Discount Program:</p>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>4% is applied to the consumer</li>
+                    <li>Merchant only pays the monthly software fee</li>
+                  </ul>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-3" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                What hardware options are available?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">Payanywhere offers:</p>
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Smart terminals</li>
+                  <li>Mobile POS devices</li>
+                  <li>Full countertop POS systems</li>
+                  <li>Tablets with stands and peripherals</li>
+                </ul>
+                <p>Built-in receipt printers available on select models.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-4" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Can I use dual pricing or cash discount?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">Yes.</p>
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Flat rate option available</li>
+                  <li>4% cash discount program available</li>
+                  <li>System automatically calculates pricing at checkout</li>
+                </ul>
+                <p>You choose the structure that fits your business.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-5" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                What businesses is Payanywhere good for?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Retail stores</li>
+                  <li>Restaurants and quick service</li>
+                  <li>Salons and spas</li>
+                  <li>Mobile service businesses</li>
+                  <li>Healthcare and professional services</li>
+                </ul>
+                <p>Works well for low to mid-volume merchants.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-6" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Does the POS include software features?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-2">Yes. Depending on the plan, features may include:</p>
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Inventory management</li>
+                  <li>Employee management</li>
+                  <li>Reporting and analytics</li>
+                  <li>Customer database</li>
+                  <li>Invoicing</li>
+                  <li>Online payments</li>
+                </ul>
+                <p>Software fee varies by business type.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-7" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                What happens if I cancel?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Purchased equipment — no contract obligation</li>
+                  <li>Free placement program — early termination may apply within the 1-year term</li>
+                </ul>
+                <p>After the agreement term, service continues month-to-month.</p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
       {/* Get Started Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-yellow-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
