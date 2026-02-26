@@ -593,10 +593,10 @@ const DejavooTerminals = () => {
         </div>
       )}
 
-      {/* Apply Now Modal (Maverick Widget) */}
+      {/* Apply Now Modal (Maverick Widget via iframe) */}
       {showApplyModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowApplyModal(false)}>
-          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-6xl mx-4 h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-6xl mx-4 h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
             <button
               data-testid="apply-modal-close-btn"
               onClick={() => setShowApplyModal(false)}
@@ -604,9 +604,11 @@ const DejavooTerminals = () => {
             >
               &#x2715;
             </button>
-            <div className="p-8 pt-12 min-h-[80vh]">
-              <div id="maverick" data-testid="maverick-widget-container" />
-            </div>
+            <iframe
+              src="/maverick-apply.html"
+              className="w-full h-full border-0 rounded-2xl"
+              title="Apply Now - Boarding Application"
+            />
           </div>
         </div>
       )}
