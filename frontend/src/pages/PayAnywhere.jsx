@@ -493,6 +493,93 @@ const PayAnywhere = () => {
                 </Card>
               </div>
             )}
+
+            {activeTab === 'payment-links' && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                      <LinkIcon className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Payment Links</h3>
+                  </div>
+                  <p className="text-lg text-gray-600 mb-6">
+                    Generate shareable payment links and send them via text, email, or social media. Customers pay instantly — no app download or account required.
+                  </p>
+                  <div className="space-y-3">
+                    {[
+                      'Create payment links in seconds',
+                      'Share via SMS, email, or social media',
+                      'No customer account or app needed',
+                      'Custom amounts or preset pricing',
+                      'Track link status and payment in real time'
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-700">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
+                  <CardContent className="p-10 text-center">
+                    <LinkIcon className="h-20 w-20 text-purple-600 mx-auto mb-6" />
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Instant Payment Collection</h4>
+                    <p className="text-gray-600 mb-6">One link. Any device. Paid in seconds.</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">SMS</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Email</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Social</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Chat</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
+            {activeTab === 'qr-ecommerce' && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                      <QrCode className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">QR Codes & Hosted eCommerce</h3>
+                  </div>
+                  <p className="text-lg text-gray-600 mb-6">
+                    Create QR codes that link to a hosted checkout page. Turn any surface into a point of sale — menus, flyers, receipts, storefronts, or social media profiles.
+                  </p>
+                  <div className="space-y-3">
+                    {[
+                      'Generate QR codes linked to hosted checkout',
+                      'Accept payments from printed menus, signage, or flyers',
+                      'Hosted eCommerce storefront — no website needed',
+                      'Mobile-optimized checkout experience',
+                      'Inventory and product catalog support',
+                      'Ideal for pop-ups, events, and mobile businesses'
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-700">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
+                  <CardContent className="p-10 text-center">
+                    <ShoppingCart className="h-20 w-20 text-purple-600 mx-auto mb-6" />
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">Sell Anywhere with a QR Code</h4>
+                    <p className="text-gray-600 mb-6">No website required. Hosted checkout handles everything.</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">QR Codes</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Hosted Store</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Product Catalog</span>
+                      <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">Mobile Checkout</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
           </div>
         </div>
       </section>
