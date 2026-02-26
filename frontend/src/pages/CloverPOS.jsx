@@ -265,11 +265,10 @@ const CloverPOS = () => {
                   <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CreditCard className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Request a Free Demo</h3>
-                  <p className="text-gray-600">See how Clover works for your business</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Select Your Hardware</h3>
+                  <p className="text-gray-600">Choose from Clover's full lineup</p>
                 </CardContent>
               </Card>
-              {/* Arrow */}
               <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                 <ChevronRight className="w-8 h-8 text-purple-600" />
               </div>
@@ -282,11 +281,10 @@ const CloverPOS = () => {
                   <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Get Approved in Minutes</h3>
-                  <p className="text-gray-600">Fast approval process</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Choose Your Pricing</h3>
+                  <p className="text-gray-600">Cash discount or flat rate</p>
                 </CardContent>
               </Card>
-              {/* Arrow */}
               <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                 <ChevronRight className="w-8 h-8 text-purple-600" />
               </div>
@@ -298,36 +296,103 @@ const CloverPOS = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">$$$</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Choose Your Pricing Option</h3>
-                <p className="text-gray-600">Dual pricing or flat rate</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Get Approved & Start Getting Paid</h3>
+                <p className="text-gray-600">Fast approval, same-day setup</p>
               </CardContent>
             </Card>
           </div>
 
-          {/* Featured Devices */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-8 bg-gray-50 rounded-2xl p-8 shadow-lg">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl mb-4 flex items-center justify-center mx-auto">
-                  <CreditCard className="w-20 h-20 text-purple-600" />
+          {/* How It Works Steps */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { num: '1', label: 'Request a Free Consultation' },
+                { num: '2', label: 'Select Your Hardware' },
+                { num: '3', label: 'Choose Your Pricing' },
+                { num: '4', label: 'Get Approved & Start Getting Paid' }
+              ].map((step, idx) => (
+                <div key={idx} className="flex items-center gap-4 bg-white rounded-xl p-5 shadow-md border border-gray-100">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">{step.num}</span>
+                  </div>
+                  <span className="font-medium text-gray-800 text-sm leading-snug">{step.label}</span>
                 </div>
-                <div className="font-semibold text-gray-900">All-in-One POS</div>
-                <div className="text-sm text-gray-500">Clover Pocket</div>
-                <div className="text-2xl font-bold text-purple-600 mt-2">$350</div>
-                <div className="text-xs text-gray-500">Clover Flex 2 from $499</div>
-                <div className="text-xs text-gray-500 mt-1">$19.95/month software subscription per device</div>
-                <div className="text-xs text-gray-400">Final pricing shown after approval</div>
-              </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Promotional Devices */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Promotional Offers</h2>
+            <p className="text-lg text-gray-600 mb-12">Buy outright or subscribe monthly — your choice</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Clover Compact */}
+              <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl overflow-hidden">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-6">
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/xv187z8q_Clover%20Stand%20Alone%20%281%29.png" alt="Clover Compact" className="w-full h-full object-contain" />
+                </div>
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Clover Compact</h3>
+                  <div className="space-y-1 mb-4">
+                    <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-lg">$249</span></p>
+                    <p className="text-sm text-gray-500">or Subscribe for <span className="font-bold text-purple-600 text-lg">$30/mo</span></p>
+                  </div>
+                  <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                      Get Started
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+
+              {/* Clover Flex */}
+              <Card className="border-2 border-purple-600 shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold text-center py-1.5 z-10">Most Popular</div>
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-6 mt-6">
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/hm5yf2w0_Clover-FlexLRG.jpg" alt="Clover Flex" className="w-full h-full object-contain" />
+                </div>
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Clover Flex</h3>
+                  <div className="space-y-1 mb-4">
+                    <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-lg">$499</span></p>
+                    <p className="text-sm text-gray-500">or Subscribe for <span className="font-bold text-purple-600 text-lg">$49/mo</span></p>
+                  </div>
+                  <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                      Get Started
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+
+              {/* Clover Mini */}
+              <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl overflow-hidden">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-6">
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/ns43y2j9_clover%203rd%20gen.jfif" alt="Clover Mini" className="w-full h-full object-contain" />
+                </div>
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Clover Mini</h3>
+                  <div className="space-y-1 mb-4">
+                    <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-lg">$699</span></p>
+                    <p className="text-sm text-gray-500">or Subscribe for <span className="font-bold text-purple-600 text-lg">$69/mo</span></p>
+                  </div>
+                  <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                      Get Started
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
           <div className="text-center">
-            <p className="text-gray-600 mb-6">$19.95/month software subscription per device</p>
-            <Link to="/contact">
+            <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-12 py-6 shadow-lg">
                 Start Saving Today
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
