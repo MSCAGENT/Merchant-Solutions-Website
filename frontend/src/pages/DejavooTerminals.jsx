@@ -40,7 +40,7 @@ const DejavooTerminals = () => {
     {
       id: 'qd4-dual',
       name: 'QD4 Dual Pin',
-      description: 'Ideal for businesses with checkout counters that require a separate PIN pad. Perfect for retail and healthcare environments.',
+      description: 'Ideal for businesses with checkout counters that require a separate PIN pad.',
       image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/rgyasxqr_QD4%20BUNDLE%20Dual.png'
     },
     {
