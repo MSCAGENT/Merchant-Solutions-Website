@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronRight, CreditCard, Smartphone, Zap } from 'lucide-react';
 import { Button } from '../components/ui/button';
