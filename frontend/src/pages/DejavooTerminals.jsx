@@ -641,7 +641,7 @@ const DejavooTerminals = () => {
             </button>
             <div className="p-8 pt-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Apply Now</h2>
-              <div ref={maverickRef} id="maverick" data-testid="maverick-widget-container" />
+              <div id="maverick" data-testid="maverick-widget-container" />
             </div>
           </div>
         </div>
