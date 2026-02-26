@@ -365,9 +365,9 @@ Most issues can be fixed without replacing the device.`
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-2 rounded-full">TETRA</span>
-            <h2 className="text-3xl font-bold text-gray-900 mt-4 mb-4">Our TETRA Terminals</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-4 mb-4">Ingenico Tetra Terminals</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Designed for any environment, TETRA terminals enable you to accept any payment method with seamless security and user-friendly interfaces. Powered by a specialized OS that has withstood the test of time.
+              The Ingenico Tetra platform is built on a secure operating system designed specifically for payment processing environments. Best for retail checkout counters, restaurants, hospitality, and service businesses. All Tetra terminals are EMV certified, PCI compliant, and contactless ready.
             </p>
           </div>
           
@@ -410,9 +410,9 @@ Most issues can be fixed without replacing the device.`
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-2 rounded-full">AXIUM Android</span>
-            <h2 className="text-3xl font-bold text-gray-900 mt-4 mb-4">Our AXIUM Android Terminals</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-4 mb-4">Ingenico AXIUM Android Smart Terminals</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Running entirely on Android, the AXIUM platform supplies you with an innovative POS range, extensive payment applications, and global APIs. Whether you are a small merchant or a large retailer, our Android terminals meet all of your needs.
+              AXIUM runs on secure Android architecture, combining payment processing with business applications in one device. Best for businesses needing smart POS functionality and app integration. AXIUM terminals support EMV chip, tap-to-pay, mobile wallets, POS app integration, and cloud-based updates.
             </p>
           </div>
           
