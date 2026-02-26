@@ -401,6 +401,10 @@ const DejavooTerminals = () => {
               <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
               <p className="text-gray-700">100% ownership of hardware after plan completion</p>
             </div>
+            <div className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
+              <p className="text-gray-700">Next Day and Same day funding</p>
+            </div>
           </div>
         </div>
       </section>
