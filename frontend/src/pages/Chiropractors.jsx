@@ -445,6 +445,129 @@ const Chiropractors = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions — Chiropractor Payments</h2>
+          </div>
+
+          <Accordion type="single" collapsible className="space-y-3">
+            <AccordionItem value="faq-1" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                What makes your payment system different for chiropractic offices?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Our system is designed specifically for healthcare environments. Pymt Bridge Gateway:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Integrates with chiropractic practice management software</li>
+                  <li>Automates payment posting</li>
+                  <li>Supports recurring treatment plans</li>
+                  <li>Reduces manual billing errors</li>
+                </ul>
+                <p className="text-sm text-gray-500">It is built to improve cash flow while simplifying front desk operations.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-2" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Can your system integrate with my current chiropractic software?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Yes. We integrate with many chiropractic and healthcare practice management systems. This allows:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Automatic posting of payments</li>
+                  <li>Simplified reconciliation</li>
+                  <li>Cleaner reporting</li>
+                  <li>Fewer manual adjustments</li>
+                </ul>
+                <p className="text-sm text-gray-500">No double entry. No disconnected systems.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-3" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Do you support recurring payments for care plans and memberships?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Yes. Our platform supports:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Auto-debit wellness plans</li>
+                  <li>Monthly membership billing</li>
+                  <li>Installment treatment programs</li>
+                  <li>Secure card-on-file storage</li>
+                </ul>
+                <p className="text-sm text-gray-500">Recurring billing increases collection consistency and reduces accounts receivable.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-4" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Can patients pay online or through text?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Yes. We provide:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Online patient payment portals</li>
+                  <li>Text-to-pay links</li>
+                  <li>Email payment requests</li>
+                  <li>Mobile-friendly checkout</li>
+                </ul>
+                <p className="text-sm text-gray-500">Digital payment options increase convenience and improve payment speed.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-5" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                Is your chiropractic payment system secure and compliant?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Yes. We provide:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>PCI-compliant processing</li>
+                  <li>End-to-end encryption</li>
+                  <li>Secure tokenization</li>
+                  <li>Healthcare-conscious data handling</li>
+                </ul>
+                <p className="text-sm text-gray-500">Patient data protection is built into the system.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-6" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                How quickly can I get started?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Most chiropractic offices can be onboarded within 7 to 10 business days. The process includes:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>System integration</li>
+                  <li>Gateway setup</li>
+                  <li>Terminal configuration</li>
+                  <li>Staff training</li>
+                </ul>
+                <p className="text-sm text-gray-500">We ensure a smooth transition with minimal disruption.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-7" className="bg-white rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
+                How does this improve my practice's cash flow?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                <p className="mb-3">Integrated payment systems help you:</p>
+                <ul className="list-disc pl-5 space-y-1.5 mb-3">
+                  <li>Collect more at time of service</li>
+                  <li>Reduce outstanding balances</li>
+                  <li>Automate recurring payments</li>
+                  <li>Improve reconciliation accuracy</li>
+                </ul>
+                <p className="text-sm text-gray-500">Faster collections mean stronger monthly revenue and less administrative strain.</p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
     </div>
   );
 };
