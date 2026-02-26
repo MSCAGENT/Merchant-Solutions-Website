@@ -436,36 +436,38 @@ const CloverPOS = () => {
             Trusted by Thousands of Businesses Nationwide
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
-              <span className="text-xl font-semibold text-gray-900">No upfront cost</span>
+              <span className="text-lg font-semibold text-gray-900">No upfront cost</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
-              <span className="text-xl font-semibold text-gray-900">No processing fees</span>
+              <span className="text-lg font-semibold text-gray-900">No processing fees</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
-              <span className="text-xl font-semibold text-gray-900">Fast approval</span>
+              <span className="text-lg font-semibold text-gray-900">Same Day Funding Available</span>
+            </div>
+            <div className="flex items-center justify-center space-x-3">
+              <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
+              <span className="text-lg font-semibold text-gray-900">Fast Approval</span>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
+            <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
                 Request a Free Demo
               </Button>
-            </Link>
-            <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
-                Apply Now <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
             </a>
+            <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" onClick={() => setShowFormModal(true)}>
+              Contact Sales <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
           
           <p className="text-center text-sm text-gray-500 mt-8">
-            US based support | Built for retail, restaurants, and service businesses
+            Merchant Solutions Corp serves the US, Canada and Puerto Rico / USVI markets.
           </p>
         </div>
       </section>
