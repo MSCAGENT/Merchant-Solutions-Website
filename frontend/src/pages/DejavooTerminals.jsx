@@ -436,9 +436,10 @@ const DejavooTerminals = () => {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Credit Card Rates</h3>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Flat Rate</h3>
+              <p className="text-sm text-gray-500 mb-4">Credit Card Rates</p>
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Qualified</p>
@@ -447,6 +448,21 @@ const DejavooTerminals = () => {
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Non-Qualified</p>
                   <p className="text-2xl font-bold text-gray-600">3.5% + $0.20</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-purple-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Dual Pricing – Xerocharge</h3>
+              <p className="text-sm text-gray-500 mb-4">Eliminate up to 90% off your processing bill</p>
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">To the Merchant</p>
+                  <p className="text-2xl font-bold text-purple-600">3.89%</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">To the Consumer</p>
+                  <p className="text-2xl font-bold text-purple-600">4%</p>
                 </div>
               </div>
             </div>
