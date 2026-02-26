@@ -25,46 +25,6 @@ const DejavooTerminals = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Load Maverick script when apply modal opens
-  useEffect(() => {
-    if (!showApplyModal) return;
-
-    const timeout = setTimeout(() => {
-      const container = document.getElementById('maverick');
-      if (!container) return;
-      container.innerHTML = '';
-
-      // Inject exactly the user's provided Maverick script
-      const scriptEl = document.createElement('script');
-      scriptEl.textContent = `
-        (function() {
-          var l = function() {
-            new MaverickClient({
-              target: 'maverick',
-              url: e.src,
-              options: {id: '1180', agentId: '132194', referral: '1', title: '', theme: 'dark', label: 'true'}
-            });
-          };
-          if(typeof window.MaverickClient === 'undefined') {
-            window.webroot = "https://merchantsolutionscorpdb.com";
-            var e = document.createElement('script');
-            e.async = true;
-            e.src = window.webroot + "/js/campaign/client.js?v=" + Date.now();
-            document.getElementsByTagName('head')[0].appendChild(e);
-            e.onload = e.onreadystatechange = function() { l(); };
-          } else {
-            var e = document.createElement('script');
-            e.src = window.webroot + "/js/campaign/client.js?v=" + Date.now();
-            l();
-          }
-        }());
-      `;
-      container.appendChild(scriptEl);
-    }, 200);
-
-    return () => clearTimeout(timeout);
-  }, [showApplyModal]);
-
   const terminals = [
     {
       id: 'ipos-go',
