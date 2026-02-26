@@ -40,7 +40,7 @@ const DejavooTerminals = () => {
     {
       id: 'qd4-dual',
       name: 'QD4 Dual Pin',
-      description: 'Great for businesses with countertop distance — allows an external pinpad to be moved. Great for Retail and Healthcare.',
+      description: 'Ideal for businesses with checkout counters that require a separate PIN pad. Perfect for retail and healthcare environments.',
       image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/rgyasxqr_QD4%20BUNDLE%20Dual.png'
     },
     {
