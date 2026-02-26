@@ -207,11 +207,15 @@ Most issues can be fixed without replacing the device.`
   const TerminalCard = ({ terminal }) => (
     <Card className="border-2 hover:border-purple-600 transition-all duration-300 h-full">
       <CardContent className="p-6">
-        <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-xl p-6 mb-6 aspect-square flex items-center justify-center">
-          <div className="text-center text-gray-400">
-            <Monitor className="h-20 w-20 mx-auto mb-2 text-purple-300" />
-            <p className="text-xs">{terminal.name}</p>
-          </div>
+        <div className="bg-gray-900 rounded-xl p-6 mb-6 aspect-square flex items-center justify-center">
+          {terminal.image ? (
+            <img src={terminal.image} alt={terminal.name} className="max-w-full max-h-full object-contain" />
+          ) : (
+            <div className="text-center text-gray-400">
+              <Monitor className="h-20 w-20 mx-auto mb-2 text-purple-300" />
+              <p className="text-xs">{terminal.name}</p>
+            </div>
+          )}
         </div>
         
         <div className="mb-4">
