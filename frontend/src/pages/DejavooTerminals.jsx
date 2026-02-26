@@ -608,6 +608,45 @@ const DejavooTerminals = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact Sales Modal (Lead Connector) */}
+      {showContactModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowContactModal(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <button
+              data-testid="contact-modal-close-btn"
+              onClick={() => setShowContactModal(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A"
+              className="w-full h-[80vh] border-0 rounded-2xl"
+              title="Contact Sales"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Apply Now Modal (Maverick Widget) */}
+      {showApplyModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowApplyModal(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <button
+              data-testid="apply-modal-close-btn"
+              onClick={() => setShowApplyModal(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+            <div className="p-8 pt-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Apply Now</h2>
+              <div ref={maverickRef} id="maverick" data-testid="maverick-widget-container" />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
