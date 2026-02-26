@@ -1,185 +1,55 @@
-# Merchant Solutions Corp - Payment Processing Website PRD
+# PRD - Merchant Solutions Corp Website
 
 ## Original Problem Statement
-Build a comprehensive, SEO-optimized payment processing website for Merchant Solutions Corp with:
-- White background with purple and yellow gradients, emerald/purple gradient buttons
-- Numerous pages organized under navigation dropdowns (Solutions, Industries, POS & Hardware, Gateway & APIs, Partners, Resources, Company)
-- Functional forms for contact, quote requests, and demo booking
-- Professional stock images relevant to the brand
-- Logo integration with matching color scheme
+Build a comprehensive, SEO-optimized payment processing website for Merchant Solutions Corp. Multi-page frontend with white background, purple/yellow gradients design language. Complex navigation, numerous content pages, functional forms, and SEO enhancements.
 
-## User Personas
-1. **Small Business Owners** - Looking for payment processing solutions
-2. **Restaurant/Retail Managers** - Seeking POS systems
-3. **High-Risk Business Operators** - Need specialized merchant accounts
-4. **Partners/Agents** - Interested in ISO/Agent programs
-5. **Developers** - Looking for API integrations
-
-## Core Requirements
-- Multi-page frontend structure with ~50+ pages
-- Complex nested navigation with dropdowns
-- SEO-optimized content structure
-- Responsive design (desktop + mobile)
-- Form functionality with localStorage (mocked)
-- Consistent branding with purple/yellow gradients
-
-## Technology Stack
-- **Frontend**: React.js with react-router-dom
-- **Styling**: TailwindCSS with custom configurations
-- **UI Components**: Shadcn UI library
-- **Backend**: FastAPI with MongoDB (not yet implemented)
-- **Data**: Currently frontend-only with mocked data
-
----
+## Tech Stack
+- **Frontend**: React.js, TailwindCSS, Shadcn UI, react-router-dom
+- **Backend**: Not yet implemented (planned: FastAPI + MongoDB)
+- **Third-Party**: Lead Connector (forms), Calendly (scheduling), Maverick (applications), DocuSign (external)
 
 ## What's Been Implemented
 
-### Session: December 2025
+### Pages Completed
+- Home, About, Contact, Security, Login, Careers
+- Solutions: Payment Processing, Gift Cards, Crypto, Loyalty, Business Loans, ATMs, Payroll, IT Services, TranzAction Gateway
+- Industries: Restaurants (SEO overhaul - Feb 2026), Healthcare, Chiropractors
+- POS: Clover, Square, Dejavoo (full overhaul), Ingenico (full overhaul), PayAnywhere, POS Hardware
+- Gateway: MSC Gateway, Virtual Terminal
+- Partnerships, ISV Partnerships, Resources
 
-#### Navigation Structure (Current)
-- ✅ Home
-- ✅ **Solutions dropdown** (9 items):
-  - Payment Processing
-  - **MSC TranzAction Gateway** (consolidated Payment Gateway + Virtual Terminal)
-  - Crypto Processing
-  - Loyalty & Rewards
-  - Gift Cards
-  - Business Loans & Cash Advances
-  - ATMs
-  - Payroll Services by ADP
-  - IT Services
-- ✅ Industries dropdown (8 industries)
-- ✅ POS & Hardware dropdown (8 options)
-- ✅ **Partnerships dropdown** (simplified):
-  - Agent & ISO Program
-  - Careers
-  - API Integrations (external link)
-- ✅ Resources dropdown (5 resources)
-- ✅ **Company dropdown**:
-  - About Us
-  - Our Mission
-  - Why Choose Us
-  - Security & Compliance
-  - Contact Us
+### Restaurant Page (Feb 2026 - Latest)
+- Full SEO content rewrite with Florida-focused keywords
+- H1: "Restaurant Payment Processing & POS Installation in Florida | Nationwide Dealer Support"
+- Sections: Credit card processing, POS installation, platform comparison, Florida cities, hardware solutions, cash discount, installation process, why choose us, FAQ
+- Lead Connector modal for "Get a Restaurant Quote"
+- Calendly modal for "Book a Demo" / "Schedule a Demo"
+- SEO meta tags (title, description)
+- URL: `/restaurant-payment-processing-florida`
+- Internal links to Payment Processing, Clover, Square, Self Ordering
 
-#### Pages Created
-- ✅ Home.jsx
-- ✅ Contact.jsx (with 3 forms)
-- ✅ SolutionDetail.jsx (template)
-- ✅ IndustryDetail.jsx (template)
-- ✅ POSHardware.jsx
-- ✅ Gateway.jsx
-- ✅ Partners.jsx
-- ✅ Resources.jsx
-- ✅ About.jsx
-- ✅ Security.jsx
-- ✅ Login.jsx
-- ✅ PayAnywhere.jsx
-- ✅ CloverPOS.jsx
-- ✅ DejavooTerminals.jsx
-- ✅ MSCGateway.jsx (legacy - redirect to TranzAction)
-- ✅ Partnerships.jsx (Agent/ISO Program focused)
-- ✅ **solutions/PaymentProcessingSolution.jsx** (UPDATED - full copywriting with image placeholders)
-- ✅ **solutions/GiftCardsSolution.jsx** (NEW - full SEO copywriting for gift card solutions)
-- ✅ **solutions/CryptoProcessingSolution.jsx** (NEW - Bitcoin, Ethereum, stablecoins)
-- ✅ **solutions/LoyaltyRewardsSolution.jsx** (NEW - points, rewards, POS integration)
-- ✅ **solutions/BusinessLoansSolution.jsx** (NEW - MCA, lines of credit, equipment financing)
-- ✅ **solutions/ATMsSolution.jsx** (NEW - free placement, processing, purchase options)
-- ✅ **solutions/PayrollServicesSolution.jsx** (NEW - ADP powered, itab POS integrated)
-- ✅ solutions/ITServices.jsx (Site surveys, installation, training)
-- ✅ solutions/MSCTranzActionGateway.jsx (Consolidated gateway page)
-- ✅ **Restaurants.jsx** (NEW - comprehensive 12-section restaurant industry page)
-- ✅ **SquarePOS.jsx** (NEW - Square POS hardware, software plans, industry features)
+### Dejavoo Page (Previous Session)
+- Hero carousel, terminal 2x4 grid, modals (Purchase Now, Maverick Apply Now via iframe)
+- FAQ accordion, SEO content
 
-#### Latest Changes (This Session)
-1. ✅ Created **IT Services** page under Solutions
-2. ✅ Created **MSC TranzAction Gateway** page - consolidated Payment Gateway + Virtual Terminal
-3. ✅ **Rewrote Payment Processing page** with full SEO-optimized copywriting:
-   - Card-Present Processing (EMV, contactless, retail/restaurant)
-   - Card-Not-Present Processing (phone, keyed, recurring, vault)
-   - eCommerce Payment Processing (checkout, API, carts, subscriptions)
-   - Mobile Payments (tap-to-pay, QR, field service)
-   - ACH Processing (low cost, recurring, same-day)
-   - Payment Integrations (POS, CRM, accounting, custom)
-   - Security & Compliance (PCI, encryption, tokenization, fraud)
-   - Image placeholder blocks for each section
-   - Strong CTA with consultation/apply buttons
-4. ✅ Simplified Partnerships dropdown (removed Developer Friendly submenu)
-5. ✅ Moved "Contact" into Company dropdown
-
----
+### Ingenico Page (Previous Session)
+- Hero video, TETRA/AXIUM terminal grids, SEO content rewrite
+- Lead Connector + Calendly modals
 
 ## Prioritized Backlog
 
-### P0 - Completed
-- ~~IT Services page creation~~ ✅
-- ~~Navigation reorganization~~ ✅
-- ~~MSC TranzAction Gateway consolidation~~ ✅
-- ~~Payment Processing page rewrite~~ ✅
-- ~~Gift Cards page~~ ✅
-- ~~All 5 remaining Solutions pages~~ ✅
-- ~~Restaurants page complete rewrite~~ ✅
+### P0 - Immediate
+- User verification of Restaurant page
 
-### P1 - Completed
-- ✅ All Solutions pages complete:
-  - Payment Processing
-  - MSC TranzAction Gateway
-  - Crypto Processing
-  - Loyalty & Rewards
-  - Gift Cards
-  - Business Loans & Cash Advances
-  - ATMs
-  - Payroll Services by ADP (with itab POS integration)
-  - IT Services
-
-### P0 - Completed (February 2026)
-- ✅ Home page: Added "Learn More" links to all Industry-Specific Solutions cards
-- ✅ Home page: Updated Fast Approvals text (15-25 min low risk / 48-72 hrs high risk)
-- ✅ Home page: "Get Started Today" button linked to /contact form
-- ✅ Home page: "Talk to Sales" button linked to Calendly (calendly.com/mscpayments)
-- ✅ Footer: Updated contact info (888-407-8886, info@merchantsolutions.com, North Miami FL)
-- ✅ Footer: Added full disclaimer (EPX ISO registration, Clover/Square trademarks)
+### P1 - Next
+- Additional page overhauls as requested by user
 
 ### P2 - Future
-- Backend integration:
-  - MongoDB models for form submissions
-  - FastAPI endpoints for CRUD operations
-  - Replace localStorage with API calls
-- Third-party API integrations if needed (Jotform, Calendly)
+- Backend implementation (FastAPI + MongoDB)
+- Component refactoring (split large pages, abstract modal patterns)
+- Replace hardcoded content with API calls
 
----
-
-## Key Files Reference
-
-### Core Components
-- `/app/frontend/src/components/Navigation.jsx` - Main navigation with dropdowns
-- `/app/frontend/src/components/Footer.jsx` - Site footer
-- `/app/frontend/src/App.js` - Route definitions
-
-### Solution Pages
-- `/app/frontend/src/pages/solutions/PaymentProcessingSolution.jsx`
-- `/app/frontend/src/pages/solutions/ITServices.jsx`
-- `/app/frontend/src/pages/solutions/MSCTranzActionGateway.jsx`
-
-### Key Pages
-- `/app/frontend/src/pages/Home.jsx`
-- `/app/frontend/src/pages/Contact.jsx`
-- `/app/frontend/src/pages/Partnerships.jsx`
-- `/app/frontend/src/pages/CloverPOS.jsx`
-- `/app/frontend/src/pages/DejavooTerminals.jsx`
-
----
-
-## Project Status
-- **Frontend**: 95% complete (Home/Footer updates done, all solution pages done)
-- **Backend**: Not started (placeholder only)
-- **Data**: All mocked/hardcoded
-- **Testing**: Manual verification via screenshots
-
-### Session: February 2026
-
-#### Dejavoo Terminal Page Updates
-- ✅ Hero section: Added two lifestyle/product images in auto-sliding carousel (3s interval)
-- ✅ "Request a Free Demo" button → "Contact Sales" opening Lead Connector form (Cl4w9PGXt9QGEieIbn9A) in modal
-- ✅ "Apply Now" button → Opens Maverick widget (merchantsolutionscorpdb.com) inline in modal
-- ✅ Bottom CTA section buttons updated to match hero buttons
+## Key Patterns
+- Modals for forms: Lead Connector via iframe, Calendly via widget script, Maverick via static HTML iframe
+- SEO: document.title + meta description in useEffect
+- Consistent design: purple/blue gradient CTAs, white/gray alternating sections
