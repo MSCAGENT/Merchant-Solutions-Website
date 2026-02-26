@@ -486,21 +486,22 @@ const CloverPOS = () => {
             {/* Clover Solo */}
             <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6">
-                {/* Device Image */}
-                <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
-                  <CreditCard className="w-32 h-32 text-purple-600" />
+                <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  <img src="https://static.prod-images.emergentagent.com/jobs/c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/images/629a9ca5694de6e61fea259984d6440e3e92c5c3f2af525b5d40491f3c04a6b5.png" alt="Clover Station Solo" className="w-full h-full object-contain p-2" />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Station Solo</h3>
                 <p className="text-sm text-gray-500 mb-4">Complete countertop POS system</p>
                 
-                <div className="mb-6">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">$1,349</div>
-                  <div className="space-y-1">
-                    <div className="text-xs text-gray-500">Software:</div>
-                    <div className="text-sm text-gray-600">Retail: $89.95/month</div>
-                    <div className="text-sm text-gray-600">Restaurant: $89.95/month</div>
-                  </div>
+                <div className="mb-4">
+                  <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-xl">$1,999</span></p>
+                  <p className="text-sm text-gray-500">or <span className="font-bold text-purple-600 text-lg">$99/mo</span> for 36 months</p>
+                </div>
+
+                <div className="mb-6 bg-gray-50 rounded-lg p-3 space-y-1">
+                  <p className="text-xs font-semibold text-gray-700">Software:</p>
+                  <p className="text-xs text-gray-600">Retail: $84.95/mo (1st device) + $19.95 add'l</p>
+                  <p className="text-xs text-gray-600">Restaurant: $89.95/mo (1st device) + $19.95 add'l</p>
                 </div>
 
                 <Dialog>
@@ -511,8 +512,8 @@ const CloverPOS = () => {
                         id: 'clover-station-solo',
                         name: 'Clover Station Solo',
                         subtitle: 'Full POS System',
-                        price: '$1,349',
-                        monthlyFee: '$89.95/month software'
+                        price: '$1,999',
+                        monthlyFee: '$84.95/month software'
                       })}
                     >
                       Pricing
@@ -526,21 +527,22 @@ const CloverPOS = () => {
             {/* Clover Duo */}
             <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6">
-                {/* Device Image */}
-                <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
-                  <CreditCard className="w-32 h-32 text-purple-600" />
+                <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  <img src="https://static.prod-images.emergentagent.com/jobs/c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/images/e40b46359314b9218f472d0989b46aac7d83078c0c969efc81ec8621b8b4838b.png" alt="Clover Station Duo" className="w-full h-full object-contain p-2" />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Station Duo</h3>
                 <p className="text-sm text-gray-500 mb-4">Dual-screen POS system</p>
                 
-                <div className="mb-6">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">$1,649</div>
-                  <div className="space-y-1">
-                    <div className="text-xs text-gray-500">Software:</div>
-                    <div className="text-sm text-gray-600">Retail: $89.95/month</div>
-                    <div className="text-sm text-gray-600">Restaurant: $89.95/month</div>
-                  </div>
+                <div className="mb-4">
+                  <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-xl">$2,199</span></p>
+                  <p className="text-sm text-gray-500">or <span className="font-bold text-purple-600 text-lg">$119/mo</span> for 36 months</p>
+                </div>
+
+                <div className="mb-6 bg-gray-50 rounded-lg p-3 space-y-1">
+                  <p className="text-xs font-semibold text-gray-700">Software:</p>
+                  <p className="text-xs text-gray-600">Retail: $84.95/mo (1st device) + $19.95 add'l</p>
+                  <p className="text-xs text-gray-600">Restaurant: $89.95/mo (1st device) + $19.95 add'l</p>
                 </div>
 
                 <Dialog>
@@ -551,8 +553,8 @@ const CloverPOS = () => {
                         id: 'clover-station-duo',
                         name: 'Clover Station Duo',
                         subtitle: 'Dual-Screen POS',
-                        price: '$1,649',
-                        monthlyFee: '$89.95/month software'
+                        price: '$2,199',
+                        monthlyFee: '$84.95/month software'
                       })}
                     >
                       Pricing
@@ -566,21 +568,21 @@ const CloverPOS = () => {
             {/* Clover Kiosk */}
             <Card className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6">
-                {/* Device Image */}
-                <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
-                  <CreditCard className="w-32 h-32 text-purple-600" />
+                <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  <img src="https://static.prod-images.emergentagent.com/jobs/c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/images/39a94af506954582a2b73a169a1de32dd462b87686771e7b5ab4b099ce6c9324.png" alt="Clover Kiosk" className="w-full h-full object-contain p-2" />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Clover Kiosk</h3>
                 <p className="text-sm text-gray-500 mb-4">Self-service kiosk system</p>
                 
-                <div className="mb-6">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">$1,899</div>
-                  <div className="space-y-1">
-                    <div className="text-xs text-gray-500">Software:</div>
-                    <div className="text-sm text-gray-600">Retail: $89.95/month</div>
-                    <div className="text-sm text-gray-600">Restaurant: $89.95/month</div>
-                  </div>
+                <div className="mb-4">
+                  <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-xl">$4,595</span></p>
+                  <p className="text-sm text-gray-500">or <span className="font-bold text-purple-600 text-lg">$199/mo</span> for 36 months</p>
+                </div>
+
+                <div className="mb-6 bg-gray-50 rounded-lg p-3 space-y-1">
+                  <p className="text-xs font-semibold text-gray-700">Software:</p>
+                  <p className="text-xs text-gray-600">Kiosk SaaS fee: $34.95/mo per Kiosk</p>
                 </div>
 
                 <Dialog>
@@ -591,8 +593,8 @@ const CloverPOS = () => {
                         id: 'clover-kiosk',
                         name: 'Clover Kiosk',
                         subtitle: 'Self-Service System',
-                        price: '$1,899',
-                        monthlyFee: '$89.95/month software'
+                        price: '$4,595',
+                        monthlyFee: '$34.95/month software'
                       })}
                     >
                       Pricing
