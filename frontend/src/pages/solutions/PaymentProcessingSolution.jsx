@@ -32,6 +32,67 @@ import {
 import { Button } from '../../components/ui/button';
 import { Card, CardContent } from '../../components/ui/card';
 
+const integrationLogos = [
+  { name: 'Aldelo Pay', src: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/9ose3vrh_ALDELOPAY.jpg' },
+  { name: 'Aloha', src: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/sy75f7d1_ALOHA.jpg' },
+  { name: 'Authorize.Net', src: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/cr1q8y79_authorizenet_logo.gif' },
+  { name: 'Digital Dining', src: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/bdn327kx_DIGITAL%20DININ.png' },
+  { name: 'Rectangle Health', src: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/q0gyba60_rectangle%20health.png' },
+  { name: 'Clover', src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/fga5kaim_Clover%20logo.jpg' },
+  { name: 'Square', src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/6q1f7o7j_Square_Logo_Landscape.png' },
+  { name: 'iTabPOS', src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/saip30kz_itabPOS_logo.png' }
+];
+
+const IntegrationLogoSlideshow = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const logosPerSlide = 4;
+  const totalSlides = Math.ceil(integrationLogos.length / logosPerSlide);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % totalSlides);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [totalSlides]);
+
+  const visibleLogos = integrationLogos.slice(
+    activeIndex * logosPerSlide,
+    activeIndex * logosPerSlide + logosPerSlide
+  );
+
+  return (
+    <div className="bg-white rounded-2xl border-2 border-gray-100 p-8" data-testid="integration-logo-slideshow">
+      <p className="text-sm text-gray-500 text-center mb-6 font-medium uppercase tracking-wide">Platforms We Integrate With</p>
+      <div className="grid grid-cols-2 gap-6 min-h-[200px]">
+        {visibleLogos.map((logo, index) => (
+          <div 
+            key={`${activeIndex}-${index}`} 
+            className="flex items-center justify-center p-4 bg-gray-50 rounded-xl"
+            style={{ animation: 'fadeIn 0.5s ease-in-out' }}
+          >
+            <img 
+              src={logo.src} 
+              alt={logo.name} 
+              className="max-h-[60px] max-w-[140px] object-contain" 
+            />
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center gap-2 mt-6">
+        {Array.from({ length: totalSlides }).map((_, i) => (
+          <button 
+            key={i} 
+            onClick={() => setActiveIndex(i)} 
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === activeIndex ? 'bg-purple-600 w-6' : 'bg-gray-300'}`}
+            aria-label={`Slide ${i + 1}`}
+          />
+        ))}
+      </div>
+      <style>{`@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }`}</style>
+    </div>
+  );
+};
+
 const PaymentProcessingSolution = () => {
   const acceptanceChannels = [
     { icon: Building2, label: 'In-Store', desc: 'Retail & restaurant' },
