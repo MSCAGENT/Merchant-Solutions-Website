@@ -168,7 +168,7 @@ const Restaurants = () => {
     { icon: Receipt, text: 'Chargeback assistance' },
     { icon: CreditCard, text: 'Dealer-level POS configuration' },
     { icon: Headphones, text: 'Live U.S.-based support' },
-    { icon: Zap, text: 'Next day replacements' }
+    { icon: RefreshCw, text: 'Next day replacements' }
   ];
 
   const faqs = [
