@@ -33,6 +33,7 @@ import ATMsSolution from "./pages/solutions/ATMsSolution";
 import PayrollServicesSolution from "./pages/solutions/PayrollServicesSolution";
 import Restaurants from "./pages/Restaurants";
 import Healthcare from "./pages/Healthcare";
+import Chiropractors from "./pages/Chiropractors";
 import SquarePOS from "./pages/SquarePOS";
 import IngenicoTerminals from "./pages/IngenicoTerminals";
 
@@ -61,6 +62,7 @@ function App() {
           {/* Industry Routes */}
           <Route path="/industries/restaurants" element={<Restaurants />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
+          <Route path="/industries/chiropractors" element={<Chiropractors />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           
           {/* POS & Hardware Routes */}
