@@ -181,7 +181,7 @@ const CloverPOS = () => {
                     Request a Free Demo
                   </Button>
                 </a>
-                <a href="https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=b214d0e2-abc5-45f7-8e87-f328156cae64&env=na2&acct=69b2c1ed-73b3-46d7-b330-9c5f9cd9c8ff&v=2" target="_blank" rel="noopener noreferrer">
+                <a href="https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=pos-checkout-dev&env=na2&acct=pos-checkout-dev&v=2" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
                     Apply Now <ChevronRight className="ml-2 h-5 w-5" />
                   </Button>
