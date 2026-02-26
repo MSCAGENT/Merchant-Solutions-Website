@@ -379,29 +379,74 @@ Most issues can be fixed without replacing the device.`
         </div>
       </section>
 
-      {/* Business Benefits */}
+      {/* Tetra vs AXIUM Comparison */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">How Ingenico Terminals Boost Your Business</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Tetra vs AXIUM: What's the Difference?</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {businessBenefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <Card key={index} className="border-0 shadow-lg text-center">
-                  <CardContent className="p-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Icon className="h-7 w-7 text-white" />
-                    </div>
-                    <h3 className="font-bold text-lg text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600 text-sm">{benefit.desc}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="border-2 border-purple-200">
+              <CardContent className="p-8">
+                <span className="bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full">TETRA</span>
+                <h3 className="text-xl font-bold text-gray-900 mt-4 mb-3">Traditional & Reliable</h3>
+                <p className="text-gray-600 mb-4">
+                  Tetra is ideal for traditional payment processing environments where reliability and simplicity are key.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                    Proprietary secure OS for payments
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                    Maximum stability and proven reliability
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                    EMV certified and PCI compliant
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                    Best for high-volume checkout
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-blue-200">
+              <CardContent className="p-8">
+                <span className="bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1 rounded-full">AXIUM Android</span>
+                <h3 className="text-xl font-bold text-gray-900 mt-4 mb-3">Smart & Expandable</h3>
+                <p className="text-gray-600 mb-4">
+                  AXIUM is designed for businesses that want Android-based POS apps, expanded functionality, and smart terminal features.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                    Android OS with app ecosystem
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                    Advanced features and customization
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                    Cloud-based updates and management
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                    POS app integration and loyalty
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
+
+          <p className="text-center text-gray-600 mt-8">
+            Both platforms are PCI compliant, EMV certified, and compatible with modern merchant services solutions.
+          </p>
         </div>
       </section>
 
