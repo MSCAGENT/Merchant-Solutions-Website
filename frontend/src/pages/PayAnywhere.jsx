@@ -340,7 +340,9 @@ const PayAnywhere = () => {
               {[
                 { key: 'virtual-terminal', label: 'Virtual Terminal', icon: Monitor },
                 { key: 'invoicing', label: 'Invoicing', icon: FileText },
-                { key: 'recurring', label: 'Recurring Payments', icon: RefreshCw }
+                { key: 'recurring', label: 'Recurring Payments', icon: RefreshCw },
+                { key: 'payment-links', label: 'Payment Links', icon: LinkIcon },
+                { key: 'qr-ecommerce', label: 'QR Codes & eCommerce', icon: QrCode }
               ].map((tab) => {
                 const Icon = tab.icon;
                 return (
