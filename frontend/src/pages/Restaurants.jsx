@@ -1,36 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
-  Clock,
-  Users,
-  DollarSign,
+  CreditCard, 
+  Smartphone, 
+  Monitor,
   Shield,
   Zap,
   Phone,
-  Mail,
-  Calendar,
-  CreditCard,
-  Smartphone,
-  Monitor,
-  Printer,
-  Utensils,
-  ShoppingBag,
-  Gift,
-  BarChart3,
-  Settings,
-  Wifi,
+  ChefHat,
+  DollarSign,
+  Headphones,
   MapPin,
   Star,
-  MessageSquare,
-  ChefHat,
   Receipt,
   Banknote,
-  Package,
-  Headphones,
   QrCode,
-  Layers,
-  ClipboardList
+  Tablet,
+  HandCoins
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
@@ -42,157 +29,176 @@ import {
 } from '../components/ui/accordion';
 
 const Restaurants = () => {
-  const trustPoints = [
-    { icon: Zap, label: 'Fast Funding' },
-    { icon: Headphones, label: 'U.S. Support' },
-    { icon: MapPin, label: 'Installation Nationwide' },
-    { icon: DollarSign, label: 'Transparent Pricing' }
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [showCalendlyModal, setShowCalendlyModal] = useState(false);
+
+  // SEO meta tags
+  useEffect(() => {
+    document.title = 'Restaurant Payment Processing Florida | POS Installation & Clover Dealer';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Restaurant payment processing and POS installation in Florida and nationwide. Clover, Square, and iTabPOS setup with training, menu build, and dealer support.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Restaurant payment processing and POS installation in Florida and nationwide. Clover, Square, and iTabPOS setup with training, menu build, and dealer support.';
+      document.head.appendChild(meta);
+    }
+  }, []);
+
+  // Load Calendly widget script when modal opens
+  useEffect(() => {
+    if (!showCalendlyModal) return;
+    if (!document.querySelector('script[src*="calendly.com"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, [showCalendlyModal]);
+
+  const restaurantTypes = [
+    'Quick service restaurants',
+    'Full-service dining',
+    'Bars and lounges',
+    'Food trucks',
+    'Multi-location restaurant groups'
   ];
 
-  const painPoints = [
-    'Slow service',
-    'Order mistakes',
-    'Staff turnover',
-    'Payout delays',
-    'Chargebacks'
+  const processingFeatures = [
+    'EMV chip and contactless payments',
+    'Tap-to-pay and mobile wallets',
+    'Fast funding options',
+    'Chargeback management support',
+    'Transparent interchange-plus or flat-rate pricing'
   ];
 
-  const outcomes = [
-    'Faster checkout',
-    'Fewer errors',
-    'Better tips',
-    'Cleaner reporting',
-    'Stable uptime'
+  const installationServices = [
+    'Hardware delivery and configuration',
+    'Complete menu build and modifier setup',
+    'Tax rates, service charges, tips, and coursing setup',
+    'Kitchen routing and printer configuration',
+    'Online ordering integration',
+    'Staff training and go-live supervision',
+    'Ongoing account management'
   ];
 
   const platforms = [
     {
       name: 'Clover for Restaurants',
-      bestFor: 'Quick service, counter service, or small businesses',
+      bestFor: 'Best for quick service restaurants, counter service, and small operations needing speed and simplicity.',
       link: '/pos/clover',
       cta: 'See Clover Setup',
       logo: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/fga5kaim_Clover%20logo.jpg'
     },
     {
       name: 'Square for Restaurants',
-      bestFor: 'Fast setup, simple workflows, modern add-ons, pop-up businesses',
+      bestFor: 'Best for fast setup, modern workflows, pop-ups, and growing brands.',
       link: '/pos/square',
       cta: 'See Square Setup',
       logo: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/6q1f7o7j_Square_Logo_Landscape.png'
     },
     {
       name: 'iTabPOS for Restaurants',
-      bestFor: 'Full-service restaurants, bars, multi-location brands',
+      bestFor: 'Best for full-service restaurants, bars, high-volume dining, and multi-location brands.',
       link: '/contact',
       cta: 'See iTabPOS Setup',
       logo: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/saip30kz_itabPOS_logo.png'
     }
   ];
 
-  const whatYouGet = [
-    'Hardware delivery and configuration',
-    'Menu build and modifier setup',
-    'Taxes, service charges, tips, coursing',
-    'Kitchen routing and printer setup',
-    'Online ordering setup',
-    'Staff training and go-live support',
-    'Ongoing support and account management'
+  const floridaCities = [
+    'Miami', 'Fort Lauderdale', 'West Palm Beach', 'Orlando',
+    'Tampa', 'Jacksonville', 'Naples', 'Sarasota'
   ];
 
-  const capabilities = [
-    { icon: CreditCard, label: 'Counter POS and handheld ordering' },
-    { icon: Utensils, label: 'Tables, tabs, coursing' },
-    { icon: ShoppingBag, label: 'Online ordering and pickup' },
-    { icon: Package, label: 'Delivery integrations' },
-    { icon: Gift, label: 'Gift cards and loyalty' },
-    { icon: Users, label: 'Employee roles and permissions' },
-    { icon: ClipboardList, label: 'Inventory and item costs' },
-    { icon: BarChart3, label: 'Multi-location reporting' },
-    { icon: MessageSquare, label: 'Customer receipts via text or email' },
-    { icon: Receipt, label: 'Payouts and deposit reporting' }
+  const searchTerms = [
+    'Restaurant payment processing near me',
+    'Restaurant POS dealer Florida',
+    'Clover restaurant installer',
+    'Square restaurant setup'
   ];
 
   const hardwareCategories = [
     {
       title: 'Counter & Checkout',
       icon: CreditCard,
-      items: ['Terminal', 'Receipt printer', 'Cash drawer', 'Barcode scanner']
+      items: ['POS terminal', 'Receipt printer', 'Cash drawer', 'Barcode scanner']
     },
     {
-      title: 'Server & Tableside',
-      icon: Smartphone,
-      items: ['Handheld device', 'Pay at table', 'Tap to pay']
+      title: 'Tableside & Handheld',
+      icon: Tablet,
+      items: ['Mobile ordering devices', 'Pay-at-table terminals', 'Tap-to-pay capability']
     },
     {
       title: 'Kitchen',
       icon: ChefHat,
-      items: ['Kitchen display screens', 'Bump bar', 'Printers by station']
+      items: ['Kitchen display systems', 'Bump bars', 'Station printers']
     },
     {
       title: 'Guest Experience',
       icon: Monitor,
-      items: ['Customer display', 'Kiosks', 'QR ordering']
+      items: ['Customer-facing displays', 'Self-order kiosks', 'QR code ordering']
     }
   ];
 
-  const installationSteps = [
-    { step: '1', title: 'Discovery Call & Quote', desc: 'Understand your needs and provide pricing' },
-    { step: '2', title: 'Menu & Workflow Intake', desc: 'Gather your menu, modifiers, and workflows' },
-    { step: '3', title: 'Hardware Prep & Configuration', desc: 'Configure all devices before shipping' },
-    { step: '4', title: 'On-Site or Remote Install', desc: 'Professional installation at your location' },
-    { step: '5', title: 'Staff Training', desc: 'Train your team on the new system' },
-    { step: '6', title: 'Go-Live Support', desc: 'We are there when you flip the switch' },
-    { step: '7', title: 'Post-Launch Check-In', desc: 'Follow up to ensure everything runs smoothly' }
-  ];
-
-  const pricingOptions = [
-    { title: 'Processing Pricing', desc: 'Interchange plus or flat rate options depending on fit', icon: CreditCard },
-    { title: 'Monthly Software Fees', desc: 'Clover or Square plan tiers based on features', icon: Settings },
-    { title: 'Hardware', desc: 'Purchase, lease, or promo options', icon: Monitor },
-    { title: 'Services', desc: 'Installation, menu build, training packages', icon: Users }
-  ];
-
-  const cashDiscountBenefits = [
-    'Receipts configured properly',
-    'Signage guidance provided',
-    'Compliant setup',
+  const cashDiscountConfig = [
+    'Proper receipt wording',
+    'Compliant signage',
+    'Dual pricing display',
     'Staff scripting'
+  ];
+
+  const installationSteps = [
+    { step: '1', title: 'Discovery Call & Quote', desc: 'We assess your restaurant workflow and provide pricing.' },
+    { step: '2', title: 'Menu & Workflow Intake', desc: 'We gather menu items, modifiers, routing, and staff permissions.' },
+    { step: '3', title: 'Hardware Preparation', desc: 'Devices are programmed and tested before arrival.' },
+    { step: '4', title: 'On-Site or Remote Installation', desc: 'Professional installation in Florida or remote nationwide deployment.' },
+    { step: '5', title: 'Staff Training', desc: 'Hands-on training for managers and staff.' },
+    { step: '6', title: 'Go-Live Support', desc: 'We stay connected during your first day live.' },
+    { step: '7', title: 'Post-Launch Follow-Up', desc: 'Ongoing support and account management.' }
+  ];
+
+  const whyChooseUs = [
+    { icon: MapPin, text: 'Local Florida support' },
+    { icon: Shield, text: 'Nationwide installation coverage' },
+    { icon: DollarSign, text: 'Transparent restaurant processing pricing' },
+    { icon: Zap, text: 'Fast funding options' },
+    { icon: Receipt, text: 'Chargeback assistance' },
+    { icon: CreditCard, text: 'Dealer-level POS configuration' },
+    { icon: Headphones, text: 'Live U.S.-based support' }
   ];
 
   const faqs = [
     {
-      question: 'How fast can we go live?',
-      answer: 'Most restaurants are up and running within 1-2 weeks. Timeline depends on menu complexity, hardware availability, and your schedule for training. Simple setups can go live in as few as 3-5 days.'
+      question: 'How fast can my restaurant go live?',
+      answer: 'Most restaurants in Florida can go live within 3-10 days depending on complexity.'
     },
     {
-      question: 'Can you import my menu?',
-      answer: 'Yes, we can import menus from spreadsheets, PDFs, or your current POS system. We\'ll work with you to organize items, modifiers, and pricing before go-live.'
+      question: 'Can you import my existing menu?',
+      answer: 'Yes. We build or import your menu, modifiers, and pricing before installation.'
     },
     {
-      question: 'Can we keep our printers or kitchen screens?',
-      answer: 'In many cases, yes. We\'ll evaluate your existing hardware during the discovery call. Compatible equipment can often be integrated to save costs.'
-    },
-    {
-      question: 'Do you support multiple locations?',
-      answer: 'Absolutely. We provide multi-location reporting, centralized menu management, and consistent setup across all your restaurants.'
+      question: 'Do you support multi-location restaurant groups?',
+      answer: 'Yes. We install and manage reporting across multiple restaurant locations nationwide.'
     },
     {
       question: 'What happens if internet goes down?',
-      answer: 'Our POS systems have offline mode that continues processing payments. Transactions sync automatically when connectivity returns.'
+      answer: 'Most systems offer offline transaction capability to prevent downtime.'
     },
     {
-      question: 'How does cash discount work?',
-      answer: 'Cash discount programs post a slightly higher "card price" and offer a discount for cash payments. This can significantly reduce or eliminate your processing costs while staying fully compliant.'
+      question: 'How does restaurant cash discount work?',
+      answer: 'We configure compliant dual pricing so customers see both card and cash prices. This helps offset processing fees.'
     },
     {
       question: 'Do you help with chargebacks?',
-      answer: 'Yes, we provide chargeback support and guidance. Our systems also help prevent disputes through proper receipt delivery and transaction documentation.'
+      answer: 'Yes. We provide documentation guidance and support for restaurant chargeback disputes.'
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Video Hero Section */}
+      {/* Hero Section with Video */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
         <video
           autoPlay
@@ -205,120 +211,130 @@ const Restaurants = () => {
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-purple-600/50" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl leading-tight drop-shadow-lg">
-            Restaurant Payment Processing
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-5xl leading-tight drop-shadow-lg" data-testid="hero-h1">
+            Restaurant Payment Processing & POS Installation in Florida | Nationwide Dealer Support
           </h1>
-          <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-2xl">
-            iTabPOS, Clover, or Square. Setup, menu build, training, and go live fast.
+          <p className="text-lg md:text-xl text-purple-100 mb-4 max-w-3xl">
+            Clover, Square & iTabPOS Setup with Professional Installation, Training & Ongoing Support
           </p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
+          <p className="text-base text-purple-200 mb-10 max-w-3xl">
+            Merchant Solutions Corp provides restaurant payment processing and POS installation services across Florida and all 50 U.S. states & Puerto Rico.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg"
+              onClick={() => setShowContactModal(true)}
+              data-testid="hero-quote-btn"
+            >
               Get a Restaurant Quote
             </Button>
-          </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6"
+              onClick={() => setShowCalendlyModal(true)}
+              data-testid="hero-demo-btn"
+            >
+              Book a 15 Minute Demo
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
+      {/* Sub-hero context */}
+      <section className="py-12 bg-gradient-to-br from-purple-50 via-white to-yellow-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Whether you operate in Miami, Fort Lauderdale, Orlando, Tampa, Jacksonville, or US territories, even nationwide, we deliver secure credit card processing, full POS setup, menu build, and hands-on support to get you live fast.
+          </p>
+        </div>
+      </section>
+
+      {/* Restaurant Credit Card Processing */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Restaurant Payment Processing, Installed and Supported by a Local Dealer
-            </h1>
-            
-            <p className="text-xl text-gray-700 mb-8">
-              iTabPOS, Clover, or Square. Setup, menu build, training, and go live fast.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-quote-btn">
-                  Get a Restaurant Quote
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" data-testid="hero-demo-btn">
-                  Book a 15 Minute Demo
-                </Button>
-              </Link>
-            </div>
-
-            {/* Trust Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {trustPoints.map((point, index) => {
-                const Icon = point.icon;
-                return (
-                  <div key={index} className="flex items-center justify-center gap-2 text-gray-700">
-                    <Icon className="h-5 w-5 text-purple-600" />
-                    <span className="font-medium">{point.label}</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6" data-testid="credit-card-processing-h2">
+                Restaurant Credit Card Processing Built for Florida Businesses
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                We specialize in restaurant merchant services designed for:
+              </p>
+              <div className="space-y-3 mb-8">
+                {restaurantTypes.map((type, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{type}</span>
                   </div>
-                );
-              })}
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="text-lg text-gray-700 mb-6">
+                Our restaurant payment processing solutions include:
+              </p>
+              <div className="space-y-3 mb-8">
+                {processingFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-600 italic">
+                Florida restaurants trust us because we install, configure, and support everything locally while providing nationwide coverage.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Built for Restaurants - Problem & Outcome */}
+      {/* POS Installation & Dealer Support */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="pos-installation-h2">
+              Restaurant POS Installation & Dealer Support
+            </h2>
+            <div className="mb-8">
+              <p className="text-xl text-purple-600 font-semibold mb-2">We are not just a processor.</p>
+              <p className="text-xl text-purple-600 font-semibold">We are your installer and long-term support partner.</p>
+            </div>
+            <p className="text-lg text-gray-700 mb-6">Our restaurant POS installation services include:</p>
+            <div className="space-y-4 mb-8">
+              {installationServices.map((service, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
+                  <span className="text-gray-700 text-lg">{service}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-600 border-l-4 border-purple-600 pl-4 text-lg">
+              If you are searching for restaurant POS installation in Florida or nationwide restaurant POS support, we handle everything from start to finish.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Choose the Right POS Platform */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Built for Restaurants</h2>
-            <p className="text-lg text-gray-600">We understand your challenges and deliver results</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="choose-platform-h2">
+              Choose the Right Restaurant POS Platform
+            </h2>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Pain Points */}
-            <Card className="border-2 border-red-100 bg-red-50/30">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Common Pain Points</h3>
-                <div className="space-y-3">
-                  {painPoints.map((point, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full" />
-                      <span className="text-gray-700">{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Outcomes */}
-            <Card className="border-2 border-green-100 bg-green-50/30">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">What You Get</h3>
-                <div className="space-y-3">
-                  {outcomes.map((outcome, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                      <span className="text-gray-700">{outcome}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Choose Your Platform */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Platform</h2>
-            <p className="text-lg text-gray-600">Find the right fit for your restaurant</p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {platforms.map((platform, index) => (
-              <Card key={index} className="border-2 hover:border-purple-600 transition-all duration-300">
+              <Card key={index} className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-8 text-center">
                   <div className="h-16 flex items-center justify-center mx-auto mb-6">
                     <img src={platform.logo} alt={platform.name} className="h-full w-auto object-contain max-w-[180px]" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{platform.name}</h3>
-                  <p className="text-gray-600 mb-6">Best for: {platform.bestFor}</p>
+                  <p className="text-gray-600 mb-6">{platform.bestFor}</p>
                   <Link to={platform.link}>
                     <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 w-full">
                       {platform.cta}
@@ -328,72 +344,56 @@ const Restaurants = () => {
               </Card>
             ))}
           </div>
+          <p className="text-center text-gray-600 mt-8">
+            All platforms integrate with secure restaurant credit card processing and merchant services through Merchant Solutions Corp.
+          </p>
         </div>
       </section>
 
-      {/* What You Get With Us */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">What You Get With Us</h2>
-              <p className="text-xl text-purple-600 font-medium mb-6">The Dealer + Installer Advantage</p>
-              <p className="text-lg text-gray-600 mb-8">
-                We're not just selling you a system—we set it up, train your staff, and support you after go-live.
-              </p>
-              <div className="space-y-4">
-                {whatYouGet.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
-                    <span className="text-gray-700 text-lg">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden" data-testid="dealer-advantage-image">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/889xwcgb_IT%20tech_installer.png" 
-                alt="MSC technician installing POS system in restaurant" 
-                className="w-full h-full object-cover rounded-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Capabilities */}
+      {/* Florida Cities */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Core Capabilities</h2>
-            <p className="text-lg text-gray-600">Everything you need to run your restaurant</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center" data-testid="florida-cities-h2">
+            Restaurant Payment Processing in Florida Cities
+          </h2>
+          <p className="text-lg text-gray-700 text-center mb-8">We actively support restaurants in:</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12">
+            {floridaCities.map((city, index) => (
+              <div key={index} className="flex items-center gap-2 justify-center bg-white rounded-xl py-3 px-4 shadow-sm border">
+                <MapPin className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                <span className="font-medium text-gray-800">{city}</span>
+              </div>
+            ))}
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {capabilities.map((capability, index) => {
-              const Icon = capability.icon;
-              return (
-                <Card key={index} className="border hover:border-purple-600 transition-all duration-300">
-                  <CardContent className="p-4 text-center">
-                    <Icon className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-                    <p className="text-sm text-gray-700">{capability.label}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <p className="text-center text-gray-700 mb-8">
+            And we provide nationwide POS installation and merchant services across all 50 U.S. states.
+          </p>
+          <div className="bg-white rounded-2xl p-8 max-w-2xl mx-auto border">
+            <p className="text-gray-700 mb-4 font-medium">If you are searching for:</p>
+            <div className="space-y-2 mb-6">
+              {searchTerms.map((term, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-purple-600 rounded-full" />
+                  <span className="text-gray-600">{term}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-purple-700 font-semibold">
+              We provide local support backed by national infrastructure.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Restaurant Hardware Options */}
+      {/* Hardware Solutions */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Restaurant Hardware Options</h2>
-            <p className="text-lg text-gray-600">The complete stack for your workflow</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="hardware-h2">
+              Restaurant Hardware Solutions
+            </h2>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {hardwareCategories.map((category, index) => {
               const Icon = category.icon;
               return (
@@ -416,18 +416,66 @@ const Restaurants = () => {
               );
             })}
           </div>
+          <p className="text-center text-gray-600">
+            Everything is configured before installation to reduce downtime.
+          </p>
+        </div>
+      </section>
+
+      {/* Cash Discount & Dual Pricing */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                  <HandCoins className="h-6 w-6 text-purple-600" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900" data-testid="cash-discount-h2">
+                  Restaurant Cash Discount & Dual Pricing Program
+                </h2>
+              </div>
+              <p className="text-lg text-gray-600 mb-6">
+                Offset credit card processing fees with a compliant restaurant cash discount program.
+              </p>
+              <p className="text-gray-700 mb-4 font-medium">We configure:</p>
+              <div className="space-y-3 mb-8">
+                {cashDiscountConfig.map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-600 mb-6">
+                This program helps many Florida restaurants reduce or eliminate traditional processing expenses.
+              </p>
+              <Link to="/solutions/payment-processing">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                  Learn About Cash Discount
+                </Button>
+              </Link>
+            </div>
+            <div className="rounded-2xl overflow-hidden flex items-center justify-center">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/suvi0y8j_Pseries%20Dual%20Price.png" 
+                alt="Dejavoo terminal showing dual pricing for restaurant cash vs card" 
+                className="max-h-[500px] w-auto object-contain"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Installation Process */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Installation Process</h2>
-            <p className="text-lg text-gray-600">Clear steps from quote to go-live</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="installation-process-h2">
+              Our Installation Process
+            </h2>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             {installationSteps.slice(0, 4).map((item, index) => (
               <Card key={index} className="border-0 shadow-lg">
                 <CardContent className="p-6 text-center">
@@ -440,7 +488,6 @@ const Restaurants = () => {
               </Card>
             ))}
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {installationSteps.slice(4).map((item, index) => (
               <Card key={index} className="border-0 shadow-lg">
@@ -454,149 +501,49 @@ const Restaurants = () => {
               </Card>
             ))}
           </div>
-          
           <div className="text-center mt-8">
-            <p className="text-gray-600">
-              <strong>Typical timeline:</strong> 1-2 weeks for most restaurants. Simple setups can go live in 3-5 days.
+            <p className="text-gray-700 font-medium">
+              Most Florida restaurant installations go live within 3-10 days.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Pricing Approach */}
-      <section className="py-20 bg-white">
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Approach</h2>
-            <p className="text-lg text-gray-600">Transparent options to fit your business</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="why-choose-h2">
+              Why Restaurants Choose Merchant Solutions Corp
+            </h2>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {pricingOptions.map((option, index) => {
-              const Icon = option.icon;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8">
+            {whyChooseUs.map((item, index) => {
+              const Icon = item.icon;
               return (
-                <Card key={index} className="border-2 hover:border-purple-600 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <Icon className="h-10 w-10 text-purple-600 mb-4" />
-                    <h3 className="font-bold text-lg text-gray-900 mb-2">{option.title}</h3>
-                    <p className="text-gray-600 text-sm">{option.desc}</p>
+                <Card key={index} className="border hover:border-purple-600 transition-all duration-300">
+                  <CardContent className="p-5 flex items-center gap-3">
+                    <Icon className="h-6 w-6 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 font-medium text-sm">{item.text}</span>
                   </CardContent>
                 </Card>
               );
             })}
           </div>
-          
-          <div className="text-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-                Get Exact Restaurant Pricing
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Cash Discount Option */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                  <Banknote className="h-6 w-6 text-purple-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900">Cash Discount Option</h2>
-              </div>
-              <p className="text-lg text-gray-600 mb-6">
-                Offer a posted price and a cash price to reduce or offset your processing costs. Fully compliant setup included.
-              </p>
-              <p className="text-gray-700 mb-6">What we configure:</p>
-              <div className="space-y-3 mb-8">
-                {cashDiscountBenefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                    <span className="text-gray-700">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-              <Link to="/contact">
-                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-                  See Cash Discount Savings
-                </Button>
-              </Link>
-            </div>
-            <div className="rounded-2xl overflow-hidden flex items-center justify-center" data-testid="cash-discount-image">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/suvi0y8j_Pseries%20Dual%20Price.png" 
-                alt="Dejavoo terminal showing dual pricing - cash vs card" 
-                className="max-h-[500px] w-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Proof Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Trusted by Restaurants</h2>
-            <p className="text-lg text-gray-600">See what our customers say about working with us</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6">
-                  "The install was seamless. They had our menu built before they even arrived, and training took less than an hour. Best POS switch we've made."
-                </p>
-                <p className="font-semibold text-gray-900">— Maria S., Taqueria Owner</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6">
-                  "Support actually answers the phone. After years with our old processor, that alone was worth the switch. Processing fees dropped too."
-                </p>
-                <p className="font-semibold text-gray-900">— James R., Bar & Grill Manager</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6">
-                  "We went live in 4 days across 3 locations. Kitchen routing works perfectly now. Orders go to the right station every time."
-                </p>
-                <p className="font-semibold text-gray-900">— David K., Pizza Chain Owner</p>
-              </CardContent>
-            </Card>
-          </div>
+          <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto">
+            We combine restaurant merchant services, POS installation, and payment processing into one streamlined solution.
+          </p>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="faq-h2">
+              Frequently Asked Questions
+            </h2>
           </div>
-          
           <Accordion type="single" collapsible className="w-full" data-testid="faq-accordion">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
@@ -615,51 +562,92 @@ const Restaurants = () => {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Get Installed and Start Taking Payments This Week
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6" data-testid="final-cta-h2">
+            Get Restaurant Payment Processing & POS Installed the Right Way
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Local installation, full menu setup, and ongoing support—all included.
+          <p className="text-xl text-purple-100 mb-4">
+            If you are searching for restaurant payment processing in Florida or nationwide POS installation with dealer support, Merchant Solutions Corp delivers full setup, training, and long-term service.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link to="/contact">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6" data-testid="cta-quote-btn">
-                Get a Quote
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="cta-demo-btn">
-                Book a Demo
-              </Button>
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-2 justify-center text-2xl font-bold mb-8">
+            <span>Secure.</span>
+            <span>Installed.</span>
+            <span>Supported.</span>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center text-purple-100">
-            <a href="tel:+18001234567" className="flex items-center justify-center gap-2 hover:text-white">
-              <Phone className="h-5 w-5" />
-              <span>1-800-123-4567</span>
-            </a>
-            <a href="mailto:restaurants@merchantsolutionscorp.com" className="flex items-center justify-center gap-2 hover:text-white">
-              <Mail className="h-5 w-5" />
-              <span>restaurants@merchantsolutionscorp.com</span>
-            </a>
-            <Link to="/contact" className="flex items-center justify-center gap-2 hover:text-white">
-              <Calendar className="h-5 w-5" />
-              <span>Schedule a Call</span>
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6"
+              onClick={() => setShowContactModal(true)}
+              data-testid="cta-quote-btn"
+            >
+              Get a Restaurant Quote
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6"
+              onClick={() => setShowCalendlyModal(true)}
+              data-testid="cta-demo-btn"
+            >
+              Schedule a Demo
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* SEO Footer */}
+      {/* Internal Links Section */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-4 justify-center mb-6">
+            <Link to="/solutions/payment-processing" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Payment Processing</Link>
+            <Link to="/pos/clover" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Clover POS</Link>
+            <Link to="/pos/square" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Square POS</Link>
+            <Link to="/pos/self-ordering-kiosk" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Self Ordering</Link>
+          </div>
           <p className="text-center text-sm text-gray-600">
-            Merchant Solutions Corp provides restaurant POS systems, payment processing, and merchant services for restaurants across all 50 US states. We install and support Clover, Square, and iTabPOS systems with full menu build, training, and ongoing support. Serving quick service, full service, bars, cafes, and multi-location restaurant brands.
+            Merchant Solutions Corp provides restaurant POS systems, payment processing, and merchant services for restaurants across Florida and all 50 US states. We install and support Clover, Square, and iTabPOS systems with full menu build, training, and ongoing support. Serving quick service, full service, bars, food trucks, and multi-location restaurant brands.
           </p>
         </div>
       </section>
+
+      {/* Contact Sales Modal (Lead Connector) */}
+      {showContactModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowContactModal(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowContactModal(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+              data-testid="contact-modal-close"
+            >
+              &#x2715;
+            </button>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A"
+              className="w-full h-[80vh] border-0 rounded-2xl"
+              title="Get a Restaurant Quote"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Calendly Modal */}
+      {showCalendlyModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowCalendlyModal(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowCalendlyModal(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+              data-testid="calendly-modal-close"
+            >
+              &#x2715;
+            </button>
+            <div
+              className="calendly-inline-widget w-full h-full"
+              data-url="https://calendly.com/mscpayments/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=5c36f5"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
