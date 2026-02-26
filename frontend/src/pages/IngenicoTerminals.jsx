@@ -102,24 +102,24 @@ const IngenicoTerminals = () => {
     {
       name: 'AXIUM DX4000 Desktop',
       series: 'AXIUM Android',
-      description: 'Android-powered desktop terminal with touchscreen interface. Access business apps and accept all payment types from one device.',
-      features: ['Android OS', 'Touchscreen display', 'App store access', 'Built-in printer'],
+      description: 'Android-powered desktop terminal with a large touchscreen and app ecosystem. Accept all payment types and run business apps from one compact device.',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/7a579296091b7cdb86fcfc87233ea4c889c61d102b64e63b7421fb2c50148592.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
     {
-      name: 'AXIUM DX8000 Series',
+      name: 'AXIUM RX5000 Pin',
       series: 'AXIUM Android',
-      description: 'Premium Android smart terminal with large touchscreen. Ideal for businesses needing advanced apps and loyalty programs.',
-      features: ['Large touchscreen', 'Android apps', 'Cloud-based management', 'Multi-payment support'],
+      description: 'Customer-facing Android PIN pad on a stand. Touchscreen with physical keypad for secure PIN entry — ideal for integrated retail POS environments.',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/85122d7be4c606cab311d9ad70e4036894d85e86b99a7a600b627c3b22dbab91.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
     {
-      name: 'AXIUM RX7000',
+      name: 'AXIUM RX7000 Multi Lane',
       series: 'AXIUM Android',
-      description: 'Mobile Android terminal for on-the-go payments. Combines smartphone-like functionality with professional payment processing.',
-      features: ['Mobile Android device', 'Camera for QR codes', 'Wireless connectivity', 'Lightweight design'],
+      description: 'Premium widescreen Android multi-lane terminal with a large touchscreen and side keypad. Built for high-volume checkout in supermarkets and department stores.',
+      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/f7e3a5fa312d59a5327882531e4340c6daafdb69f21d44c80d26e331ade391c2.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     }
