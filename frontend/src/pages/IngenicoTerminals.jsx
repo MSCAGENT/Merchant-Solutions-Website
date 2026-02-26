@@ -68,7 +68,7 @@ const IngenicoTerminals = () => {
       name: 'Move 5000 Wireless',
       series: 'TETRA',
       description: 'Portable wireless terminal with 4G LTE, Wi-Fi, and long battery life. Built-in printer makes it ideal for tableside payments, delivery, and mobile businesses.',
-      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/05c6e0ca2cfa2e452ebde2d5b03ad8b1e4c7aeb73e598a89432aa84a9a940bbd.png',
+      image: 'https://customer-assets.emergentagent.com/job_0e6143ea-cbd5-43ca-901c-b8ab37491cb0/artifacts/3jepfq9n_Move5000-face.png',
       flatRateUrl: 'https://merchantsolutionscorp.com/merchant-application-flat-rate/',
       dualPriceUrl: 'https://merchantsolutionscorp.com/merchant-application-dual-pricing/'
     },
