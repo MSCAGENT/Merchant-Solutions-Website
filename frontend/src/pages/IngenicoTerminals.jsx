@@ -39,12 +39,10 @@ const IngenicoTerminals = () => {
   ];
 
   const whyIngenico = [
-    { icon: CreditCard, title: 'Accept All Major Payments', desc: 'Chip, swipe, and contactless payments including Apple Pay, Google Pay, and Samsung Pay' },
-    { icon: Shield, title: 'Fast, Secure Transactions', desc: 'EMV, PCI-DSS compliance, and encryption for fraud protection' },
-    { icon: Layers, title: 'Versatile Solutions', desc: 'Mobile, countertop, and wireless POS devices for any business' },
-    { icon: Settings, title: 'Easy Integration', desc: 'Works with leading POS software and payment gateways' },
-    { icon: Wifi, title: 'Advanced Connectivity', desc: 'Wi-Fi, 4G LTE, Bluetooth, and Ethernet compatibility' },
-    { icon: Zap, title: 'Compact & Durable', desc: 'Built for high-traffic environments with long-lasting battery life' }
+    { icon: CreditCard, title: 'Accept All Major Payment Types', desc: 'EMV chip cards, magnetic stripe, contactless tap-to-pay, Apple Pay, Google Pay, Samsung Pay, debit and credit cards' },
+    { icon: Shield, title: 'Secure Credit Card Processing', desc: 'PCI-DSS compliant, end-to-end encryption, tokenization support, and fraud protection tools' },
+    { icon: Wifi, title: 'Advanced Connectivity', desc: 'Ethernet, Wi-Fi, 4G LTE, and Bluetooth options for any business environment' },
+    { icon: Settings, title: 'Seamless POS Integration', desc: 'Works with leading retail POS systems, restaurant POS software, healthcare platforms, and payment gateways' }
   ];
 
   const tetraTerminals = [
@@ -266,15 +264,20 @@ Most issues can be fixed without replacing the device.`
               <p className="text-purple-600 font-semibold mb-4">INGENICO TERMINALS</p>
               
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Ingenico Payment Terminals—Secure, Fast, & Reliable
+                Ingenico Payment Terminals | Tetra & AXIUM Android POS Systems
               </h1>
               
+              <p className="text-lg text-purple-600 font-semibold mb-4">Secure, Fast, and PCI-Compliant Credit Card Processing Solutions</p>
+
               <div className="text-lg text-gray-700 space-y-4 mb-8">
                 <p>
-                  Looking for a secure, efficient, and high-performance payment terminal for your business? <strong>Ingenico payment terminals</strong> offer state-of-the-art EMV, NFC, and contactless payment technology.
+                  Looking for <strong>secure and reliable Ingenico payment terminals</strong> for your business?
                 </p>
                 <p>
-                  Whether you run a retail store, restaurant, or service-based business, our Ingenico POS solutions provide speed, security, and versatility.
+                  Merchant Solutions Corp provides Ingenico Tetra and AXIUM Android terminals for retail stores, restaurants, hospitality, healthcare, and mobile businesses across the United States.
+                </p>
+                <p>
+                  Our terminals support full <strong>credit card processing</strong>, EMV chip cards, NFC contactless payments, and seamless POS integration.
                 </p>
               </div>
 
@@ -329,9 +332,12 @@ Most issues can be fixed without replacing the device.`
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Ingenico Payment Terminals?</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Ingenico is a global leader in payment processing hardware. Their terminals are built for speed, security, and long-term durability in high-volume environments.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyIngenico.map((item, index) => {
               const Icon = item.icon;
               return (
