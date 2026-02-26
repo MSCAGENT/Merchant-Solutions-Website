@@ -84,6 +84,7 @@ function App() {
           
           {/* Partner Routes */}
           <Route path="/partnerships" element={<Partnerships />} />
+          <Route path="/partnerships/careers" element={<Careers />} />
           <Route path="/partners/agents" element={<Partnerships />} />
           
           {/* Resources Routes */}
