@@ -275,18 +275,18 @@ const PayAnywhere = () => {
             {devices.map((device) => (
               <Card key={device.id} className="border-2 border-gray-200 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
                 <CardContent className="p-6">
-                  {/* Device Image Placeholder */}
-                  <div className="aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
-                    <CreditCard className="w-24 h-24 text-purple-600" />
+                  {/* Device Image */}
+                  <div className="aspect-square rounded-lg mb-4 flex items-center justify-center overflow-hidden bg-gray-50">
+                    <img src={device.image} alt={device.name} className="w-full h-full object-contain p-2" />
                   </div>
                   
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{device.name}</h3>
                   <p className="text-sm text-gray-500 mb-4">{device.subtitle}</p>
                   
                   <div className="mb-4">
-                    <div className="text-3xl font-bold text-purple-600">{device.price}</div>
-                    {device.monthlyFee && (
-                      <div className="text-xs text-gray-500 mt-1">{device.monthlyFee} software subscription</div>
+                    <div className="text-sm font-bold text-purple-600 leading-snug">{device.price}</div>
+                    {device.priceLabel && (
+                      <div className="text-xs text-gray-500 mt-1">{device.priceLabel}</div>
                     )}
                   </div>
 
