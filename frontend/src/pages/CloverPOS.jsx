@@ -257,68 +257,20 @@ const CloverPOS = () => {
             Three Simple Steps to Save on Processing Fees
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {/* Step 1 */}
-            <div className="relative">
-              <Card className="text-center h-full border-0 shadow-lg bg-white">
-                <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CreditCard className="h-10 w-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Select Your Hardware</h3>
-                  <p className="text-gray-600">Choose from Clover's full lineup</p>
-                </CardContent>
-              </Card>
-              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                <ChevronRight className="w-8 h-8 text-purple-600" />
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="relative">
-              <Card className="text-center h-full border-0 shadow-lg bg-white">
-                <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="h-10 w-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Choose Your Pricing</h3>
-                  <p className="text-gray-600">Cash discount or flat rate</p>
-                </CardContent>
-              </Card>
-              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                <ChevronRight className="w-8 h-8 text-purple-600" />
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <Card className="text-center h-full border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-white">$$$</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            {[
+              { num: '1', label: 'Request a Free Consultation' },
+              { num: '2', label: 'Select Your Hardware' },
+              { num: '3', label: 'Choose Your Pricing' },
+              { num: '4', label: 'Get Approved & Start Getting Paid' }
+            ].map((step, idx) => (
+              <div key={idx} className="flex items-center gap-4 bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">{step.num}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Get Approved & Start Getting Paid</h3>
-                <p className="text-gray-600">Fast approval, same-day setup</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* How It Works Steps */}
-          <div className="max-w-4xl mx-auto mb-20">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { num: '1', label: 'Request a Free Consultation' },
-                { num: '2', label: 'Select Your Hardware' },
-                { num: '3', label: 'Choose Your Pricing' },
-                { num: '4', label: 'Get Approved & Start Getting Paid' }
-              ].map((step, idx) => (
-                <div key={idx} className="flex items-center gap-4 bg-white rounded-xl p-5 shadow-md border border-gray-100">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">{step.num}</span>
-                  </div>
-                  <span className="font-medium text-gray-800 text-sm leading-snug">{step.label}</span>
-                </div>
-              ))}
-            </div>
+                <span className="font-semibold text-gray-800 text-base leading-snug">{step.label}</span>
+              </div>
+            ))}
           </div>
 
           {/* Promotional Devices */}
