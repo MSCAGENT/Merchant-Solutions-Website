@@ -581,6 +581,43 @@ const IngenicoTerminals = () => {
           </p>
         </div>
       </section>
+
+      {/* Contact Sales Modal (Lead Connector) */}
+      {showContactModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowContactModal(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowContactModal(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A"
+              className="w-full h-[80vh] border-0 rounded-2xl"
+              title="Contact Sales"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Calendly Modal */}
+      {showCalendlyModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowCalendlyModal(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowCalendlyModal(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+            <div
+              className="calendly-inline-widget w-full h-full"
+              data-url="https://calendly.com/mscpayments/merchant-services-proposal?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=885de5"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
