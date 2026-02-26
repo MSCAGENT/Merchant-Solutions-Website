@@ -100,7 +100,7 @@ const DejavooTerminals = () => {
   const testimonials = [
     {
       id: 1,
-      quote: 'Switched from Clover and haven\'t looked back. Zero fees, smooth onboarding.',
+      quote: 'Switched from Clover to Bank of America and haven\'t looked back.',
       author: 'Jason D.',
       location: 'Florida'
     },
