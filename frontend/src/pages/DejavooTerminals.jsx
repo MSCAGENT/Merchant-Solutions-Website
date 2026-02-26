@@ -564,7 +564,7 @@ const DejavooTerminals = () => {
             Trusted by Thousands of Businesses Nationwide
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
               <span className="text-lg font-semibold text-gray-900">No upfront hardware cost</span>
@@ -580,6 +580,10 @@ const DejavooTerminals = () => {
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
               <span className="text-lg font-semibold text-gray-900">US-based support</span>
+            </div>
+            <div className="flex items-center justify-center space-x-3">
+              <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
+              <span className="text-lg font-semibold text-gray-900">Lifetime replacement</span>
             </div>
           </div>
 
