@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -8,6 +8,15 @@ import { mockData } from '../mock';
 const IndustryDetail = () => {
   const { industryId } = useParams();
   const industry = mockData.industries.find(i => i.id === industryId);
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const videoRef = useRef(null);
+
+  const handleVideoEnded = useCallback(() => {
+    const hero = videoHeroMap[industryId];
+    if (hero && Array.isArray(hero.src)) {
+      setCurrentVideo((prev) => (prev + 1) % hero.src.length);
+    }
+  }, [industryId]);
 
   if (!industry) {
     return (
@@ -30,10 +39,19 @@ const IndustryDetail = () => {
     healthcare: {
       src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/aqsxqbxm_Healthcare%20Practice%20POS%20%20Management%20Solutions%20%20Clover.mp4',
       title: 'Payment Solutions for Healthcare'
+    },
+    chiropractors: {
+      src: [
+        'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/ic6xpucz_Chiropractor%20office_.mp4',
+        'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/2w9xah99_Healthcare%20Practice%20POS%20%20Management%20Solutions%20%20Clover.mp4'
+      ],
+      title: 'Payment Solutions for Chiropractors'
     }
   };
 
   const videoHero = videoHeroMap[industryId];
+  const videoSrc = videoHero ? (Array.isArray(videoHero.src) ? videoHero.src[currentVideo] : videoHero.src) : null;
+  const isMultiVideo = videoHero && Array.isArray(videoHero.src);
 
   return (
     <div className="min-h-screen">
