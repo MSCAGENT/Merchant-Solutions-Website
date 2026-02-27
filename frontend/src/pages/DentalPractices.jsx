@@ -154,7 +154,8 @@ const DentalPractices = () => {
     { icon: DollarSign, text: 'Transparent processing pricing' },
     { icon: Zap, text: 'Fast funding options' },
     { icon: Receipt, text: 'Chargeback assistance' },
-    { icon: Building2, text: 'Dealer-level installation and configuration' }
+    { icon: Building2, text: 'Dealer-level installation and configuration' },
+    { icon: Megaphone, text: 'Digital Marketing, Ads and Voice AI services' }
   ];
 
   const whoWeServe = [
