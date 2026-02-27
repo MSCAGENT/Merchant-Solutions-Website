@@ -607,6 +607,13 @@ const SquarePOS = () => {
                 45% { transform: scale(1.05); }
                 60% { transform: scale(1); }
               }
+              @keyframes highlighter {
+                0%, 100% { transform: scaleX(0); opacity: 0; }
+                10% { transform: scaleX(0); opacity: 0.8; }
+                40% { transform: scaleX(1); opacity: 0.8; }
+                60% { transform: scaleX(1); opacity: 0.8; }
+                80% { transform: scaleX(0); opacity: 0; }
+              }
             `}</style>
           </div>
           
