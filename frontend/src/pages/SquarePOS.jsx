@@ -422,11 +422,12 @@ const SquarePOS = () => {
                 Square combines payment processing, POS software, and business management tools in one unified system.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 flex items-center justify-center min-h-[360px]" data-testid="core-features-image">
-              <div className="text-center text-gray-400">
-                <CreditCard className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Square POS Interface</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/60y9ut95_images.jfif"
+                alt="Customer paying with Square POS Register at checkout counter"
+                className="w-full h-[400px] object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
