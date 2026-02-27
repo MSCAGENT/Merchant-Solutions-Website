@@ -42,16 +42,16 @@ const emrLogos = [
 
 const FloatingLogos = () => (
   <div className="relative overflow-hidden py-4" data-testid="emr-floating-logos">
-    <div className="flex animate-scroll gap-8">
+    <div className="flex animate-scroll gap-10">
       {[...emrLogos, ...emrLogos].map((logo, i) => (
-        <div key={i} className="flex-shrink-0 bg-white rounded-xl shadow-sm border border-gray-100 px-6 py-4 flex items-center justify-center min-w-[160px] h-[80px]">
-          <img src={logo.src} alt={logo.name} className="max-h-[50px] max-w-[130px] object-contain" />
+        <div key={i} className="flex-shrink-0 bg-white rounded-xl shadow-sm border border-gray-100 px-8 py-5 flex items-center justify-center min-w-[220px] h-[110px]">
+          <img src={logo.src} alt={logo.name} className="max-h-[75px] max-w-[180px] object-contain" />
         </div>
       ))}
     </div>
     <style>{`
       @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-      .animate-scroll { animation: scroll 25s linear infinite; display: flex; width: max-content; }
+      .animate-scroll { animation: scroll 14s linear infinite; display: flex; width: max-content; }
       .animate-scroll:hover { animation-play-state: paused; }
     `}</style>
   </div>
