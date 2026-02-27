@@ -128,7 +128,7 @@ const ATMsSolution = () => {
     { question: 'How much can I earn from an ATM?', answer: 'Revenue varies based on location traffic and transaction volume. High-traffic locations like convenience stores and bars can generate significant monthly income from surcharge fees.' },
     { question: 'What brands of ATMs do you offer?', answer: 'Through our partnership with Cardtronics, we distribute GenMega and Hyosung ATMs — two of the most reliable and widely deployed brands in North America.' },
     { question: 'How fast can an ATM be installed?', answer: 'Most ATM installations are completed within 5-10 business days from approval, depending on location requirements and configuration.' },
-    { question: 'Are there contracts or monthly minimums?', answer: 'No. There are no hidden costs, contracts, or monthly minimums. Our programs are designed to be straightforward and transparent.' },
+    { question: 'Are there contracts or monthly minimums?', answer: 'It depends on the program. ATM placement and partnership programs require a contract to protect both parties and ensure service commitments. However, when you purchase an ATM outright, there are no contracts, no monthly minimums, and no commitments — you own it and keep 100% of the surcharge revenue.' },
     { question: 'Do I need to load the cash myself?', answer: 'It depends on your program. With our free placement program, we handle everything including cash loading. With partnership or purchase programs, you manage and vault the terminal.' },
     { question: 'How do I get a quote or learn about the reseller program?', answer: 'For updated prices, quotes, or questions about our Referral or Reseller program, call 1-800-407-8886 or contact us through our chat.' }
   ];
