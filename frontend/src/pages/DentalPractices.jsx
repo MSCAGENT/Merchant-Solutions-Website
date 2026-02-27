@@ -60,6 +60,26 @@ const FloatingLogos = () => (
 const DentalPractices = () => {
   const [showContactModal, setShowContactModal] = useState(false);
   const [showCalendlyModal, setShowCalendlyModal] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(0);
+  const video1Ref = React.useRef(null);
+  const video2Ref = React.useRef(null);
+
+  const heroVideos = [
+    'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/bpqzr73d_Dental.mp4',
+    'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/pkf9e46y_Dental2.mp4'
+  ];
+
+  useEffect(() => {
+    const refs = [video1Ref, video2Ref];
+    const currentRef = refs[activeVideo]?.current;
+    if (currentRef) {
+      currentRef.play().catch(() => {});
+    }
+  }, [activeVideo]);
+
+  const handleVideoEnded = () => {
+    setActiveVideo((prev) => (prev + 1) % heroVideos.length);
+  };
 
   useEffect(() => {
     document.title = 'Dental Payment Processing & EMR Integration | Merchant Services for Dental Offices';
