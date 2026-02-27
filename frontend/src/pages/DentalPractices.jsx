@@ -162,48 +162,49 @@ const DentalPractices = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight" data-testid="hero-h1">
-                Dental Payment Processing & EMR Integration
-              </h1>
-              <p className="text-xl text-purple-600 font-semibold mb-4">
-                Secure Credit Card Processing Integrated with Your Dental EMR or PMS
-              </p>
-              <p className="text-lg text-gray-600 mb-4">
-                Merchant Solutions Corp provides dental payment processing and merchant services fully integrated with leading dental EMR and practice management systems.
-              </p>
-              <p className="text-base text-gray-500 mb-8">
-                Through HealthcarePMB.com, we combine secure credit card processing, electronic health record integrations, and dental marketing services into one streamlined platform for modern dental offices across Florida and all 50 U.S. states.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg"
-                  onClick={() => setShowCalendlyModal(true)}
-                  data-testid="hero-demo-btn"
-                >
-                  Book a Discovery Call
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6"
-                  onClick={() => setShowContactModal(true)}
-                  data-testid="hero-sales-btn"
-                >
-                  Talk to Sales
-                </Button>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src="https://images.pexels.com/photos/305567/pexels-photo-305567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="Modern dental clinic with advanced equipment"
-                className="w-full h-full object-cover"
-              />
+      <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/bpqzr73d_Dental.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-blue-900/50" />
+        <div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg" data-testid="hero-h1">
+              Dental Payment Processing & EMR Integration
+            </h1>
+            <p className="text-xl text-purple-200 font-semibold mb-4">
+              Secure Credit Card Processing Integrated with Your Dental EMR or PMS
+            </p>
+            <p className="text-lg text-purple-100 mb-4">
+              Merchant Solutions Corp provides dental payment processing and merchant services fully integrated with leading dental EMR and practice management systems.
+            </p>
+            <p className="text-base text-purple-200/80 mb-8">
+              Through HealthcarePMB.com, we combine secure credit card processing, electronic health record integrations, and dental marketing services into one streamlined platform for modern dental offices across Florida and all 50 U.S. states.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg"
+                onClick={() => setShowCalendlyModal(true)}
+                data-testid="hero-demo-btn"
+              >
+                Book a Discovery Call
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6"
+                onClick={() => setShowContactModal(true)}
+                data-testid="hero-sales-btn"
+              >
+                Talk to Sales
+              </Button>
             </div>
           </div>
         </div>
