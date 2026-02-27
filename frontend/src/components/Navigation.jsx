@@ -36,7 +36,7 @@ const Navigation = () => {
         { label: 'Medical Clinics', path: '/industries/medical-clinics' },
         { label: 'High-Risk Businesses', path: '/high-risk-merchant-services' },
         { label: 'Salon & Spa', path: '/salon-spa-payment-processing' },
-        { label: 'Specialty Merchants', path: '/industries/specialty-merchants' }
+        { label: 'Specialty Merchants', path: '/specialty-merchant-payment-solutions' }
       ]
     },
     {
