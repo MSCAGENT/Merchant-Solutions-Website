@@ -896,20 +896,35 @@ const SquarePOS = () => {
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <div className="space-y-4">
-              {setupSteps.map((step, index) => {
+            <Accordion type="single" collapsible className="w-full space-y-3" data-testid="setup-accordion">
+              {[
+                { num: 1, icon: ClipboardCheck, title: 'Account creation assistance', desc: 'We guide you through merchant account setup, verify details, and ensure approvals are completed correctly to avoid delays.' },
+                { num: 2, icon: Search, title: 'Hardware selection consultation', desc: 'We help you choose the right terminals, printers, scanners, and accessories based on your workflow and business type.' },
+                { num: 3, icon: Package, title: 'Inventory and menu build', desc: 'We configure your products, services, modifiers, pricing, and categories so your system is ready to sell from day one.' },
+                { num: 4, icon: Settings, title: 'Tax configuration', desc: 'We set up accurate sales tax rates, service charges, and custom tax rules to match your state and local requirements.' },
+                { num: 5, icon: CreditCard, title: 'Payment testing', desc: 'We run live transaction tests to confirm terminals, connectivity, deposits, and reporting are working properly.' },
+                { num: 6, icon: GraduationCap, title: 'Staff training', desc: 'We train your team on daily operations, checkout, refunds, reporting, and best practices to ensure smooth adoption.' },
+                { num: 7, icon: Rocket, title: 'Live launch support', desc: 'We stay with you during go-live to resolve issues quickly and ensure your first day runs without disruption.' }
+              ].map((step) => {
                 const Icon = step.icon;
                 return (
-                  <div key={index} className="flex items-center gap-4 bg-white border-2 border-gray-200 hover:border-purple-600 rounded-xl p-5 transition-all duration-300 hover:shadow-md">
-                    <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
-                      {index + 1}
-                    </div>
-                    <Icon className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                    <span className="text-gray-800 font-medium">{step.label}</span>
-                  </div>
+                  <AccordionItem key={step.num} value={`step-${step.num}`} className="bg-white border-2 border-gray-200 rounded-xl px-5 hover:border-purple-500 transition-colors duration-300 data-[state=open]:border-purple-600 data-[state=open]:shadow-md">
+                    <AccordionTrigger className="py-4 hover:no-underline">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                          {step.num}
+                        </div>
+                        <Icon className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold text-left">{step.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4 pl-[4.5rem] text-gray-600 leading-relaxed">
+                      {step.desc}
+                    </AccordionContent>
+                  </AccordionItem>
                 );
               })}
-            </div>
+            </Accordion>
             <p className="text-center text-lg text-purple-700 font-semibold mt-8">
               You open your doors with confidence.
             </p>
