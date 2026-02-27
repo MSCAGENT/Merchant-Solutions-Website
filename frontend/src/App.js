@@ -68,6 +68,7 @@ function App() {
           <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="/industries/chiropractors" element={<Chiropractors />} />
           <Route path="/dental-payment-processing-emr-integration" element={<DentalPractices />} />
+          <Route path="/industries/dental" element={<DentalPractices />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           
           {/* POS & Hardware Routes */}

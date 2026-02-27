@@ -32,7 +32,7 @@ const Navigation = () => {
         { label: 'Retail', path: '/industries/retail' },
         { label: 'Healthcare', path: '/industries/healthcare' },
         { label: 'Chiropractors', path: '/industries/chiropractors' },
-        { label: 'Dental Practices', path: '/industries/dental' },
+        { label: 'Dental Practices', path: '/dental-payment-processing-emr-integration' },
         { label: 'Medical Clinics', path: '/industries/medical-clinics' },
         { label: 'High-Risk Businesses', path: '/industries/high-risk-businesses' },
         { label: 'Specialty Merchants', path: '/industries/specialty-merchants' }
