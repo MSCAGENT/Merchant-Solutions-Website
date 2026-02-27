@@ -262,16 +262,12 @@ const SalonSpa = () => {
                 We partner with <strong>DaySmart Salon</strong> for enterprise booking and management, and <strong>Clover</strong> and <strong>Square</strong> POS for small-to-midsize beauty businesses. From hair salons and nail salons to skin clinics and independent stylists.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-quote-btn">
-                    Get a Salon Quote
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" data-testid="hero-demo-btn">
-                    Book a Demo
-                  </Button>
-                </Link>
+                <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-quote-btn">
+                  Get a Salon Quote
+                </Button>
+                <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" data-testid="hero-demo-btn">
+                  Book a Demo
+                </Button>
               </div>
             </div>
             <div className="relative">
