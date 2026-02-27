@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -38,6 +38,26 @@ import {
 } from '../components/ui/accordion';
 
 const SquarePOS = () => {
+  const [activeVideo, setActiveVideo] = useState(0);
+  const video1Ref = useRef(null);
+  const video2Ref = useRef(null);
+
+  const heroVideos = [
+    'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/lmdvozpf_Power%20your%20entire%20business%20%20Square2.mp4',
+    'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/dy8bhpgj_Square%20for%20Beauty.mp4'
+  ];
+
+  useEffect(() => {
+    const refs = [video1Ref, video2Ref];
+    const currentRef = refs[activeVideo]?.current;
+    if (currentRef) {
+      currentRef.play().catch(() => {});
+    }
+  }, [activeVideo]);
+
+  const handleVideoEnded = () => {
+    setActiveVideo((prev) => (prev + 1) % heroVideos.length);
+  };
   const keyBenefits = [
     { title: 'Free Software', desc: 'No monthly fees to start' },
     { title: 'Fast Setup', desc: 'Start selling in minutes' },
