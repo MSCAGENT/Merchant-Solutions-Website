@@ -392,8 +392,8 @@ const DaySmartSalon = () => {
           </div>
 
           {/* Contact Sales Button */}
-          <div className="mt-10">
-            <Button onClick={() => setShowDemoModal(true)} className="w-full max-w-3xl mx-auto block bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-lg py-6 shadow-lg" data-testid="pricing-contact-btn">
+          <div className="mt-10 text-center">
+            <Button onClick={() => setShowDemoModal(true)} className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-sm px-10 py-5 rounded-lg shadow-md" data-testid="pricing-contact-btn">
               Contact Sales to Schedule a Demo
             </Button>
           </div>
