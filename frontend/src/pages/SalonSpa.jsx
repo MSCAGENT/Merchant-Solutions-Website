@@ -49,6 +49,16 @@ const SalonSpa = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (!showDemoModal) return;
+    if (!document.querySelector('script[src*="calendly.com"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, [showDemoModal]);
+
   const heroStats = [
     { value: '50+', label: 'States Covered' },
     { value: '24/7', label: 'Support Available' },
