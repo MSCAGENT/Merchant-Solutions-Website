@@ -526,7 +526,7 @@ const SquarePOS = () => {
             {/* Visual */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/889xwcgb_IT%20tech_installer.png"
+                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/i8vxg45b_MSC%20technician.png"
                 alt="Technician installing Square POS terminal on-site"
                 className="w-full h-[380px] object-cover rounded-2xl"
               />
