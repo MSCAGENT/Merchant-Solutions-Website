@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -37,6 +37,20 @@ import {
 const HighRiskMerchant = () => {
   const [showContactModal, setShowContactModal] = useState(false);
   const [showCalendlyModal, setShowCalendlyModal] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const heroImages = [
+    'https://static.prod-images.emergentagent.com/jobs/4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/images/bab5ec57779a12f57a1080f73584ae62714b91f154fd1fc9a1aecf243014f48b.png',
+    'https://static.prod-images.emergentagent.com/jobs/4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/images/780eed5f7d7ffb0c626ac0b7070c7e03ca90ddc288de90e546422482f14e1d67.png',
+    'https://static.prod-images.emergentagent.com/jobs/4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/images/a4786b54ced0131295af787976e4a4afc33a783d1d3a1cd782b60a5a37946144.png'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   useEffect(() => {
     document.title = 'High Risk Merchant Services | Online Gambling, Peptides, Prop Firms & CBD Processing';
