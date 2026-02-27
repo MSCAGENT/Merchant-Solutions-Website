@@ -25,6 +25,7 @@ import {
   Building2,
   ArrowRight
 } from 'lucide-react';
+import { Heart, ShoppingBag, Gift, Pill } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import {
