@@ -568,7 +568,7 @@ const SquarePOS = () => {
           {/* Product Lineup Strip */}
           <div className="mb-16" data-testid="hardware-lineup">
             <img 
-              src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/zm0klhnn_image.png" 
+              src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/gc4o69ds_PD07013_USEN_Image-need_help_choosing.png" 
               alt="Square Hardware Lineup - Handheld, Terminal, Register, Stand, Kiosk, Reader, Accessories, Hardware Kits" 
               className="w-full max-w-5xl mx-auto object-contain"
             />
