@@ -416,15 +416,15 @@ const SquarePOS = () => {
       </section>
 
       {/* 5-Step Square Launch Plan */}
-      <section className="py-20 bg-[#0a1628] text-white overflow-hidden" data-testid="steps-save-money-section">
+      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50 overflow-hidden" data-testid="steps-save-money-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight text-gray-900">
               How to Get Square Installed the Right Way<br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400"> — and Save Thousands</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600"> — and Save Thousands</span>
             </h2>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
               From account setup to on-site installation. We handle everything nationwide.
             </p>
           </div>
@@ -433,8 +433,8 @@ const SquarePOS = () => {
           <div className="hidden lg:block mb-16">
             {/* Progress bar */}
             <div className="relative mx-auto max-w-5xl mb-8">
-              <div className="absolute top-7 left-[10%] right-[10%] h-1 bg-slate-700 rounded-full" />
-              <div className="absolute top-7 left-[10%] right-[10%] h-1 bg-gradient-to-r from-red-500 via-orange-500 to-red-500 rounded-full opacity-40" />
+              <div className="absolute top-7 left-[10%] right-[10%] h-1 bg-purple-200 rounded-full" />
+              <div className="absolute top-7 left-[10%] right-[10%] h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 rounded-full opacity-50" />
               <div className="flex justify-between relative">
                 {[
                   { icon: UserPlus, title: 'Create Account', desc: 'Get your Square merchant account started with guided onboarding.' },
@@ -447,14 +447,14 @@ const SquarePOS = () => {
                   const isFeatured = step.featured;
                   return (
                     <div key={i} className="flex flex-col items-center group" style={{ width: '18%' }}>
-                      <div className={`relative z-10 w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl ${isFeatured ? 'bg-gradient-to-br from-red-500 to-orange-500 shadow-lg shadow-red-500/30 ring-2 ring-red-400/30' : 'bg-slate-800 border-2 border-slate-600 group-hover:border-red-400 group-hover:bg-slate-700'}`}>
-                        <Icon className={`h-6 w-6 ${isFeatured ? 'text-white' : 'text-slate-300 group-hover:text-red-400'}`} />
+                      <div className={`relative z-10 w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl ${isFeatured ? 'bg-gradient-to-br from-purple-600 to-blue-600 shadow-lg shadow-purple-500/30 ring-2 ring-purple-400/30' : 'bg-white border-2 border-purple-200 group-hover:border-purple-500 group-hover:shadow-purple-200/50'}`}>
+                        <Icon className={`h-6 w-6 ${isFeatured ? 'text-white' : 'text-purple-600 group-hover:text-purple-700'}`} />
                       </div>
-                      <div className={`text-center rounded-xl p-4 transition-all duration-300 group-hover:-translate-y-1 ${isFeatured ? 'bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20' : 'group-hover:bg-slate-800/50'}`}>
-                        <h3 className={`font-bold text-sm mb-1.5 ${isFeatured ? 'text-red-300' : 'text-white'}`}>{step.title}</h3>
-                        <p className="text-slate-400 text-xs leading-relaxed">{step.desc}</p>
+                      <div className={`text-center rounded-xl p-4 transition-all duration-300 group-hover:-translate-y-1 ${isFeatured ? 'bg-gradient-to-br from-purple-600 to-blue-600 shadow-lg shadow-purple-500/20' : 'bg-white border border-gray-200 shadow-sm group-hover:shadow-md group-hover:border-purple-300'}`}>
+                        <h3 className={`font-bold text-sm mb-1.5 ${isFeatured ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
+                        <p className={`text-xs leading-relaxed ${isFeatured ? 'text-purple-100' : 'text-gray-500'}`}>{step.desc}</p>
                         {isFeatured && (
-                          <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider bg-red-500 text-white px-2.5 py-0.5 rounded-full">
+                          <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider bg-white text-purple-600 px-2.5 py-0.5 rounded-full">
                             Live in Days
                           </span>
                         )}
@@ -478,18 +478,18 @@ const SquarePOS = () => {
               const Icon = step.icon;
               const isFeatured = step.featured;
               return (
-                <div key={i} className={`flex items-start gap-4 rounded-xl p-4 border transition-all ${isFeatured ? 'bg-gradient-to-r from-red-500/10 to-orange-500/10 border-red-500/30' : 'bg-slate-800/40 border-slate-700/50'}`}>
-                  <div className={`w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 ${isFeatured ? 'bg-gradient-to-br from-red-500 to-orange-500' : 'bg-slate-700 border border-slate-600'}`}>
-                    <Icon className={`h-5 w-5 ${isFeatured ? 'text-white' : 'text-slate-300'}`} />
+                <div key={i} className={`flex items-start gap-4 rounded-xl p-4 border transition-all ${isFeatured ? 'bg-gradient-to-r from-purple-600 to-blue-600 border-purple-500' : 'bg-white border-gray-200 shadow-sm'}`}>
+                  <div className={`w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 ${isFeatured ? 'bg-white/20' : 'bg-purple-100'}`}>
+                    <Icon className={`h-5 w-5 ${isFeatured ? 'text-white' : 'text-purple-600'}`} />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-slate-500 text-xs font-mono">0{i + 1}</span>
-                      <h3 className={`font-bold text-sm ${isFeatured ? 'text-red-300' : 'text-white'}`}>{step.title}</h3>
+                      <span className={`text-xs font-mono ${isFeatured ? 'text-purple-200' : 'text-gray-400'}`}>0{i + 1}</span>
+                      <h3 className={`font-bold text-sm ${isFeatured ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
                     </div>
-                    <p className="text-slate-400 text-xs mt-1">{step.desc}</p>
+                    <p className={`text-xs mt-1 ${isFeatured ? 'text-purple-100' : 'text-gray-500'}`}>{step.desc}</p>
                     {isFeatured && (
-                      <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider bg-red-500 text-white px-2.5 py-0.5 rounded-full">
+                      <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider bg-white text-purple-600 px-2.5 py-0.5 rounded-full">
                         Live in Days
                       </span>
                     )}
@@ -503,8 +503,8 @@ const SquarePOS = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Results: What Happens After Install */}
             <div data-testid="after-install-results">
-              <h3 className="text-2xl font-bold text-white mb-2">What Happens After Install?</h3>
-              <p className="text-slate-400 mb-6 text-sm">You're live and optimized from day one.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">What Happens After Install?</h3>
+              <p className="text-gray-500 mb-6 text-sm">You're live and optimized from day one.</p>
               <div className="space-y-3">
                 {[
                   { icon: Zap, text: 'Faster checkout — no delays or setup errors' },
@@ -515,31 +515,31 @@ const SquarePOS = () => {
                 ].map((item, i) => {
                   const Icon = item.icon;
                   return (
-                    <div key={i} className="flex items-center gap-3 bg-slate-800/50 border border-slate-700/40 rounded-lg px-4 py-3 hover:border-red-500/30 transition-colors duration-300">
-                      <Icon className="h-5 w-5 text-red-400 flex-shrink-0" />
-                      <span className="text-slate-300 text-sm">{item.text}</span>
+                    <div key={i} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm hover:border-purple-400 hover:shadow-md transition-all duration-300">
+                      <Icon className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">{item.text}</span>
                     </div>
                   );
                 })}
               </div>
             </div>
             {/* Visual */}
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/889xwcgb_IT%20tech_installer.png"
                 alt="Technician installing Square POS terminal on-site"
                 className="w-full h-[380px] object-cover rounded-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 bg-[#0a1628]/80 backdrop-blur-sm border border-slate-700/50 rounded-xl px-4 py-3">
-                <p className="text-white text-sm font-semibold">On-Site Installation by MSC Technicians</p>
-                <p className="text-slate-400 text-xs">Professional setup. Nationwide coverage.</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-xl px-4 py-3">
+                <p className="text-gray-900 text-sm font-semibold">On-Site Installation by MSC Technicians</p>
+                <p className="text-gray-500 text-xs">Professional setup. Nationwide coverage.</p>
               </div>
             </div>
           </div>
 
           {/* Micro-Trust Strip */}
-          <div className="mt-14 pt-8 border-t border-slate-700/40" data-testid="micro-trust-strip">
+          <div className="mt-14 pt-8 border-t border-purple-200/60" data-testid="micro-trust-strip">
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
               {[
                 'Authorized Square Dealer',
@@ -548,8 +548,8 @@ const SquarePOS = () => {
                 'No DIY Setup Required'
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-red-400" />
-                  <span className="text-slate-400 text-sm font-medium">{item}</span>
+                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <span className="text-gray-600 text-sm font-medium">{item}</span>
                 </div>
               ))}
             </div>
