@@ -989,7 +989,7 @@ const SquarePOS = () => {
             </div>
             <div className="flex justify-center">
               <img
-                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/g78enios_ZERO%20DOWN.jpg"
+                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/fpryzdco_PD07446_USEN_Image_3.avif"
                 alt="Zero Down Square Hardware Subscription Placement Program"
                 className="w-full max-w-lg rounded-2xl shadow-xl"
               />
