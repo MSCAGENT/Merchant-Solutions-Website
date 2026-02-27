@@ -1,55 +1,49 @@
-# PRD - Merchant Solutions Corp Website
+# Payment Processing Website - PRD
 
 ## Original Problem Statement
-Build a comprehensive, SEO-optimized payment processing website for Merchant Solutions Corp. Multi-page frontend with white background, purple/yellow gradients design language. Complex navigation, numerous content pages, functional forms, and SEO enhancements.
+Build a comprehensive, SEO-optimized payment processing website for Merchant Solutions Corp. Multi-page frontend with specific design language, complex navigation, numerous content pages with specific layouts, functional forms, and granular UI/UX and SEO enhancements.
 
 ## Tech Stack
-- **Frontend**: React.js, TailwindCSS, Shadcn UI, react-router-dom
-- **Backend**: Not yet implemented (planned: FastAPI + MongoDB)
-- **Third-Party**: Lead Connector (forms), Calendly (scheduling), Maverick (applications), DocuSign (external)
+- **Frontend**: React.js + TailwindCSS + Shadcn/UI
+- **Routing**: react-router-dom
+- **Backend**: Not yet implemented (all content hardcoded)
+- **External Services**: Lead Connector (iframes), Calendly (iframes), Formstack
 
-## What's Been Implemented
+## Architecture
+- Frontend-only React app with 70+ pages
+- All content hardcoded in React components
+- Forms handled via external services (Lead Connector, Calendly, Formstack) embedded in modals/iframes
 
-### Pages Completed
-- Home, About, Contact, Security, Login, Careers
-- Solutions: Payment Processing, Gift Cards, Crypto, Loyalty, Business Loans, ATMs, Payroll, IT Services, TranzAction Gateway
-- Industries: Restaurants (SEO overhaul - Feb 2026), Healthcare, Chiropractors
-- POS: Clover, Square, Dejavoo (full overhaul), Ingenico (full overhaul), PayAnywhere, POS Hardware
-- Gateway: MSC Gateway, Virtual Terminal
-- Partnerships, ISV Partnerships, Resources
+## Implemented Pages (Key)
+- Home, About, Contact, Careers, Resources, Security
+- Payment Processing, Gateway, MSC Gateway
+- CloverPOS, SquarePOS (with video hero), PayAnywhere, Dejavoo Terminals, Ingenico Terminals
+- POS Hardware, Industry Detail, Solution Detail
+- Restaurant Payment Processing (video hero)
+- Dental Payment Processing (dual-video hero, EMR carousel)
+- Medical Clinics Payment Processing (dual-video hero, EMR carousel)
+- High Risk Merchant Services (dark theme, image slideshow hero)
+- ATM Solutions
+- IT Services / Tech & Installation
+- Agents & ISO Partnerships
+- ISV Partnerships
+- Partners, Partnerships
+- Solutions sub-pages
 
-### Restaurant Page (Feb 2026 - Latest)
-- Full SEO content rewrite with Florida-focused keywords
-- H1: "Restaurant Payment Processing & POS Installation in Florida | Nationwide Dealer Support"
-- Sections: Credit card processing, POS installation, platform comparison, Florida cities, hardware solutions, cash discount, installation process, why choose us, FAQ
-- Lead Connector modal for "Get a Restaurant Quote"
-- Calendly modal for "Book a Demo" / "Schedule a Demo"
-- SEO meta tags (title, description)
-- URL: `/restaurant-payment-processing-florida`
-- Internal links to Payment Processing, Clover, Square, Self Ordering
+## Latest Changes (Feb 2026)
+- **Square POS page**: Added dual-video cycling hero section with two provided Square videos
 
-### Dejavoo Page (Previous Session)
-- Hero carousel, terminal 2x4 grid, modals (Purchase Now, Maverick Apply Now via iframe)
-- FAQ accordion, SEO content
+## Pending Tasks
+- P0: Add images to Agents & ISO Partnership page
+- User will likely continue with incremental page updates
 
-### Ingenico Page (Previous Session)
-- Hero video, TETRA/AXIUM terminal grids, SEO content rewrite
-- Lead Connector + Calendly modals
-
-## Prioritized Backlog
-
-### P0 - Immediate
-- User verification of Restaurant page
-
-### P1 - Next
-- Additional page overhauls as requested by user
-
-### P2 - Future
-- Backend implementation (FastAPI + MongoDB)
-- Component refactoring (split large pages, abstract modal patterns)
-- Replace hardcoded content with API calls
+## Backlog
+- P1: Backend Integration (MongoDB + FastAPI for dynamic content)
+- P2: Component Refactoring (break down large page files >800 lines)
+- P3: Abstract reusable components (modals, hero sections, carousels)
 
 ## Key Patterns
-- Modals for forms: Lead Connector via iframe, Calendly via widget script, Maverick via static HTML iframe
-- SEO: document.title + meta description in useEffect
-- Consistent design: purple/blue gradient CTAs, white/gray alternating sections
+- Hero sections: video backgrounds (single or cycling) or image slideshows with gradient overlay
+- Modals: Shadcn Dialog with iframe content (Lead Connector for quotes, Calendly for demos)
+- Logo Carousels: CSS animation for infinitely scrolling logos
+- New page pattern: create component → add SEO route in App.js → update Header.jsx nav → alias old route
