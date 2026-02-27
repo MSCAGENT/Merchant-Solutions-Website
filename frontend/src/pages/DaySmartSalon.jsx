@@ -254,25 +254,12 @@ const DaySmartSalon = () => {
                 This all-in-one solution lets you manage your salon, spa, or beauty business with one powerful platform.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-10 border border-purple-100">
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { icon: Calendar, label: 'Scheduling' },
-                  { icon: CreditCard, label: 'Payments' },
-                  { icon: Package, label: 'Inventory' },
-                  { icon: Users, label: 'CRM' },
-                  { icon: Mail, label: 'Marketing' },
-                  { icon: BarChart3, label: 'Analytics' }
-                ].map((item, i) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={i} className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                      <Icon className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                      <span className="text-sm font-semibold text-gray-700">{item.label}</span>
-                    </div>
-                  );
-                })}
-              </div>
+            <div className="flex justify-center">
+              <img
+                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/xw7od8io_Unified-Website_Feature-Icons_Salon_500x281_Barber.png"
+                alt="DaySmart Salon barber and salon management tools"
+                className="w-full max-w-md object-contain"
+              />
             </div>
           </div>
         </div>
