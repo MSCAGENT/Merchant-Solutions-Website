@@ -628,8 +628,8 @@ const SquarePOS = () => {
             ].map((product, i) => (
               <Card key={i} className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl group" data-testid={`hardware-card-${i}`}>
                 <CardContent className="p-5">
-                  <div className={`aspect-square rounded-xl mb-4 flex items-center justify-center overflow-hidden border border-gray-100 ${product.name === 'Square Reader' ? 'bg-white' : 'bg-white'}`}>
-                    <img src={product.img} alt={product.name} className={`w-full h-full object-contain p-3 transition-transform duration-300 group-hover:scale-105 ${product.name === 'Square Reader' || product.name === 'Square Terminal' ? 'bg-white' : ''}`} style={{ mixBlendMode: 'multiply' }} />
+                  <div className="aspect-square bg-white rounded-xl mb-4 flex items-center justify-center overflow-hidden border border-gray-100">
+                    <img src={product.img} alt={product.name} className="w-full h-full object-contain p-3 transition-transform duration-300 group-hover:scale-105" style={{ mixBlendMode: 'multiply', backgroundColor: 'white' }} />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{product.name}</h3>
                   <p className="text-sm text-gray-600 mb-3 leading-relaxed">{product.desc}</p>
