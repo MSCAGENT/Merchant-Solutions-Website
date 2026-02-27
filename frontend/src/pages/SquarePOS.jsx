@@ -415,51 +415,141 @@ const SquarePOS = () => {
         </div>
       </section>
 
-      {/* Steps to Save Money */}
-      <section className="py-20 bg-gray-900 text-white" data-testid="steps-save-money-section">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">How to Save Money with Square + Merchant Solutions Corp</h2>
-            <p className="text-lg text-gray-400">Five simple steps from sign-up to processing payments.</p>
+      {/* 5-Step Square Launch Plan */}
+      <section className="py-20 bg-[#0a1628] text-white overflow-hidden" data-testid="steps-save-money-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+              How to Get Square Installed the Right Way<br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400"> — and Save Thousands</span>
+            </h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              From account setup to on-site installation. We handle everything nationwide.
+            </p>
           </div>
-          <div className="relative">
-            {/* Vertical connector line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-purple-700/40 -translate-x-1/2" />
-            <div className="space-y-8 md:space-y-0 md:grid md:grid-cols-1 md:gap-0">
-              {[
-                { num: 1, title: 'Create an Account', desc: 'Sign up and get your Square merchant account started with our guided onboarding.' },
-                { num: 2, title: 'Book a Call with a Specialist', desc: 'Your dedicated specialist will walk you through our different install and hardware programs to find the best fit.' },
-                { num: 3, title: 'Choose Your Pricing Method', desc: 'Select the plan that maximizes your savings — Cash Discount or Flat Rate processing.' },
-                { num: 4, title: 'Place Your Order & Wait for Arrival', desc: 'We pre-configure your hardware before shipping so it\'s ready to go out of the box.' },
-                { num: 5, title: 'We Arrive, Install & Get You Processing', desc: 'Our team arrives on-site to install everything and get you processing payments ASAP.' }
-              ].map((step, i) => (
-                <div key={i} className={`flex items-center gap-6 md:gap-10 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:text-${i % 2 === 0 ? 'right' : 'left'}`}>
-                  <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'} hidden md:block`}>
-                    {i % 2 === 0 && (
-                      <div className="bg-gray-800/60 border border-gray-700/50 rounded-xl p-5 inline-block max-w-md ml-auto">
-                        <h3 className="font-bold text-lg text-white mb-1">{step.title}</h3>
-                        <p className="text-gray-400 text-sm">{step.desc}</p>
+
+          {/* Horizontal Steps (Desktop) */}
+          <div className="hidden lg:block mb-16">
+            {/* Progress bar */}
+            <div className="relative mx-auto max-w-5xl mb-8">
+              <div className="absolute top-7 left-[10%] right-[10%] h-1 bg-slate-700 rounded-full" />
+              <div className="absolute top-7 left-[10%] right-[10%] h-1 bg-gradient-to-r from-red-500 via-orange-500 to-red-500 rounded-full opacity-40" />
+              <div className="flex justify-between relative">
+                {[
+                  { icon: UserPlus, title: 'Create Account', desc: 'Get your Square merchant account started with guided onboarding.' },
+                  { icon: Phone, title: 'Strategy Call', desc: 'A specialist reviews install programs and hardware options with you.' },
+                  { icon: Tag, title: 'Choose Pricing', desc: 'Pick what saves you most — Cash Discount or Flat Rate.' },
+                  { icon: Package, title: 'Pre-Configured Hardware', desc: 'We set up your hardware before shipping — ready out of the box.' },
+                  { icon: Wrench, title: 'Install & Go Live', desc: 'Our team arrives on-site and gets you processing ASAP.', featured: true }
+                ].map((step, i) => {
+                  const Icon = step.icon;
+                  const isFeatured = step.featured;
+                  return (
+                    <div key={i} className="flex flex-col items-center group" style={{ width: '18%' }}>
+                      <div className={`relative z-10 w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl ${isFeatured ? 'bg-gradient-to-br from-red-500 to-orange-500 shadow-lg shadow-red-500/30 ring-2 ring-red-400/30' : 'bg-slate-800 border-2 border-slate-600 group-hover:border-red-400 group-hover:bg-slate-700'}`}>
+                        <Icon className={`h-6 w-6 ${isFeatured ? 'text-white' : 'text-slate-300 group-hover:text-red-400'}`} />
                       </div>
-                    )}
-                  </div>
-                  <div className="relative z-10 flex-shrink-0">
-                    <div className="w-14 h-14 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-purple-600/30 border-2 border-purple-400/30">
-                      {step.num}
+                      <div className={`text-center rounded-xl p-4 transition-all duration-300 group-hover:-translate-y-1 ${isFeatured ? 'bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20' : 'group-hover:bg-slate-800/50'}`}>
+                        <h3 className={`font-bold text-sm mb-1.5 ${isFeatured ? 'text-red-300' : 'text-white'}`}>{step.title}</h3>
+                        <p className="text-slate-400 text-xs leading-relaxed">{step.desc}</p>
+                        {isFeatured && (
+                          <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider bg-red-500 text-white px-2.5 py-0.5 rounded-full">
+                            Live in Days
+                          </span>
+                        )}
+                      </div>
                     </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Steps (Stacked) */}
+          <div className="lg:hidden space-y-4 mb-12">
+            {[
+              { icon: UserPlus, title: 'Create Account', desc: 'Get your Square merchant account started with guided onboarding.' },
+              { icon: Phone, title: 'Strategy Call', desc: 'A specialist reviews install programs and hardware options with you.' },
+              { icon: Tag, title: 'Choose Pricing', desc: 'Pick what saves you most — Cash Discount or Flat Rate.' },
+              { icon: Package, title: 'Pre-Configured Hardware', desc: 'We set up your hardware before shipping — ready out of the box.' },
+              { icon: Wrench, title: 'Install & Go Live', desc: 'Our team arrives on-site and gets you processing ASAP.', featured: true }
+            ].map((step, i) => {
+              const Icon = step.icon;
+              const isFeatured = step.featured;
+              return (
+                <div key={i} className={`flex items-start gap-4 rounded-xl p-4 border transition-all ${isFeatured ? 'bg-gradient-to-r from-red-500/10 to-orange-500/10 border-red-500/30' : 'bg-slate-800/40 border-slate-700/50'}`}>
+                  <div className={`w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 ${isFeatured ? 'bg-gradient-to-br from-red-500 to-orange-500' : 'bg-slate-700 border border-slate-600'}`}>
+                    <Icon className={`h-5 w-5 ${isFeatured ? 'text-white' : 'text-slate-300'}`} />
                   </div>
-                  <div className={`flex-1 ${i % 2 !== 0 ? 'md:text-left' : 'md:text-left'}`}>
-                    {i % 2 !== 0 ? (
-                      <div className="bg-gray-800/60 border border-gray-700/50 rounded-xl p-5 inline-block max-w-md">
-                        <h3 className="font-bold text-lg text-white mb-1">{step.title}</h3>
-                        <p className="text-gray-400 text-sm">{step.desc}</p>
-                      </div>
-                    ) : (
-                      <div className="md:hidden bg-gray-800/60 border border-gray-700/50 rounded-xl p-5">
-                        <h3 className="font-bold text-lg text-white mb-1">{step.title}</h3>
-                        <p className="text-gray-400 text-sm">{step.desc}</p>
-                      </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-slate-500 text-xs font-mono">0{i + 1}</span>
+                      <h3 className={`font-bold text-sm ${isFeatured ? 'text-red-300' : 'text-white'}`}>{step.title}</h3>
+                    </div>
+                    <p className="text-slate-400 text-xs mt-1">{step.desc}</p>
+                    {isFeatured && (
+                      <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider bg-red-500 text-white px-2.5 py-0.5 rounded-full">
+                        Live in Days
+                      </span>
                     )}
                   </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Right-side visual + Results (desktop: side by side) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Results: What Happens After Install */}
+            <div data-testid="after-install-results">
+              <h3 className="text-2xl font-bold text-white mb-2">What Happens After Install?</h3>
+              <p className="text-slate-400 mb-6 text-sm">You're live and optimized from day one.</p>
+              <div className="space-y-3">
+                {[
+                  { icon: Zap, text: 'Faster checkout — no delays or setup errors' },
+                  { icon: Shield, text: 'Fewer mistakes — everything configured correctly' },
+                  { icon: BarChart3, text: 'Cleaner reporting — data you can actually use' },
+                  { icon: HeartHandshake, text: 'Same-day dealer support when you need it' },
+                  { icon: FileCheck, text: 'Predictable processing — no hidden fees' }
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i} className="flex items-center gap-3 bg-slate-800/50 border border-slate-700/40 rounded-lg px-4 py-3 hover:border-red-500/30 transition-colors duration-300">
+                      <Icon className="h-5 w-5 text-red-400 flex-shrink-0" />
+                      <span className="text-slate-300 text-sm">{item.text}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            {/* Visual */}
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/889xwcgb_IT%20tech_installer.png"
+                alt="Technician installing Square POS terminal on-site"
+                className="w-full h-[380px] object-cover rounded-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 bg-[#0a1628]/80 backdrop-blur-sm border border-slate-700/50 rounded-xl px-4 py-3">
+                <p className="text-white text-sm font-semibold">On-Site Installation by MSC Technicians</p>
+                <p className="text-slate-400 text-xs">Professional setup. Nationwide coverage.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Micro-Trust Strip */}
+          <div className="mt-14 pt-8 border-t border-slate-700/40" data-testid="micro-trust-strip">
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+              {[
+                'Authorized Square Dealer',
+                'Installation in All 50 States',
+                '24/7 U.S. Support',
+                'No DIY Setup Required'
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-red-400" />
+                  <span className="text-slate-400 text-sm font-medium">{item}</span>
                 </div>
               ))}
             </div>
