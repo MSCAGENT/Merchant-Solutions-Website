@@ -185,7 +185,7 @@ const DentalPractices = () => {
                   onClick={() => setShowCalendlyModal(true)}
                   data-testid="hero-demo-btn"
                 >
-                  Book a Dental Demo
+                  Book a Discovery Call
                 </Button>
                 <Button
                   size="lg"
@@ -562,7 +562,7 @@ const DentalPractices = () => {
             </button>
             <div
               className="calendly-inline-widget w-full h-full"
-              data-url="https://calendly.com/mscpayments/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=5c36f5"
+              data-url="https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=7048fc"
             />
           </div>
         </div>
