@@ -306,19 +306,12 @@ const DaySmartSalon = () => {
       <section className="py-20 bg-white" data-testid="reporting-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-10 border border-purple-100">
-              <div className="text-center mb-6">
-                <BarChart3 className="h-16 w-16 text-purple-600 mx-auto mb-3" />
-                <h3 className="text-lg font-bold text-gray-900">Live Reporting Dashboard</h3>
-              </div>
-              <div className="space-y-3">
-                {['Sales performance', 'Retail product trends', 'Client behaviors', 'Staff productivity'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 bg-white rounded-lg p-3 shadow-sm">
-                    <TrendingUp className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="flex justify-center">
+              <img
+                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/79g5grju_Unified-Website_Feature-Icons_Salon_500x281_Salon.png"
+                alt="DaySmart Salon reporting and analytics tools"
+                className="w-full max-w-md object-contain"
+              />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Integrated Reporting & Business Insights</h2>
