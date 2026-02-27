@@ -137,6 +137,66 @@ const HighRiskMerchant = () => {
         'State-by-state compliance guidance'
       ],
       challenges: 'CBD and kratom businesses are classified as high risk due to shifting regulations and banking restrictions. We partner with acquiring banks experienced in hemp-derived products to deliver stable, long-term processing.'
+    },
+    {
+      icon: Heart,
+      title: 'Dating & Matchmaking Platforms',
+      desc: 'Card-not-present payment processing for online dating sites, matchmaking services, subscription-based relationship platforms, and social discovery apps.',
+      image: 'https://images.unsplash.com/photo-1671013018958-9ed33c537c68?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800',
+      features: [
+        'Recurring subscription billing management',
+        'In-app purchase and premium feature processing',
+        'Chargeback prevention for digital memberships',
+        'Global payment acceptance in multiple currencies',
+        'Fraud screening for card-not-present transactions',
+        'Automated renewal and cancellation workflows'
+      ],
+      challenges: 'Dating platforms experience high chargeback rates from disputed subscriptions, buyer\'s remorse, and unauthorized purchases. We implement robust prevention tools and work with acquiring banks that specialize in digital subscription models.'
+    },
+    {
+      icon: ShoppingBag,
+      title: 'Online Marketplaces',
+      desc: 'Card-not-present merchant accounts for multi-vendor marketplaces, peer-to-peer selling platforms, dropshipping stores, and aggregated commerce sites.',
+      image: 'https://images.unsplash.com/photo-1705234384435-e06172b6d2f9?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800',
+      features: [
+        'Split payment and multi-vendor payout processing',
+        'Escrow and hold-release payment workflows',
+        'Seller onboarding and KYC compliance',
+        'Multi-currency and cross-border transactions',
+        'Dispute resolution and buyer protection tools',
+        'High-volume transaction processing at scale'
+      ],
+      challenges: 'Marketplaces face compounded risk from multiple sellers, inconsistent product quality, and high dispute rates. We provide payment infrastructure designed for aggregated commerce with proper risk segmentation and seller-level monitoring.'
+    },
+    {
+      icon: Gift,
+      title: 'Negative Option / Free Trial',
+      desc: 'Card-not-present processing for free trial offers, continuity programs, subscription boxes, and negative option billing models across all product categories.',
+      image: 'https://images.pexels.com/photos/8939570/pexels-photo-8939570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      features: [
+        'Compliant free-to-paid conversion billing',
+        'Clear disclosure and consent capture workflows',
+        'Chargeback prevention with Verifi and Ethoca alerts',
+        'Subscription lifecycle management',
+        'Transparent cancellation and refund processing',
+        'Real-time chargeback ratio monitoring'
+      ],
+      challenges: 'Negative option and free trial businesses face the highest chargeback rates in eCommerce due to billing disputes and consumer confusion. We structure compliant billing flows, implement pre-chargeback alerts, and partner with banks that accept this model when done correctly.'
+    },
+    {
+      icon: Pill,
+      title: 'Pharmacy & Prescription Products',
+      desc: 'Card-not-present payment processing for online pharmacies, telemedicine prescription services, compounding pharmacies, and direct-to-patient medication delivery.',
+      image: 'https://images.pexels.com/photos/7195190/pexels-photo-7195190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      features: [
+        'HIPAA-aware payment workflow design',
+        'Recurring prescription billing and auto-refill processing',
+        'Telemedicine consultation fee processing',
+        'Secure card-on-file tokenization for patients',
+        'Insurance co-pay and out-of-pocket collection',
+        'Compliance with state and federal pharmacy regulations'
+      ],
+      challenges: 'Online pharmacies and telemedicine platforms face strict regulatory oversight, product classification scrutiny, and elevated chargeback risk. We work with acquiring banks experienced in healthcare commerce and ensure payment workflows support pharmacy licensing requirements.'
     }
   ];
 
