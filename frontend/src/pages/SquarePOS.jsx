@@ -437,7 +437,7 @@ const SquarePOS = () => {
               <div className="absolute top-7 left-[10%] right-[10%] h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 rounded-full opacity-50" />
               <div className="flex justify-between relative">
                 {[
-                  { icon: UserPlus, title: 'Create Account', desc: 'Get your Square merchant account started with guided onboarding.' },
+                  { icon: UserPlus, title: 'Create Account', desc: 'Get your Square merchant account started with guided onboarding.', link: 'https://app.squareup.com/signup/en-us?signup_token=8765F2232B' },
                   { icon: Phone, title: 'Strategy Call', desc: 'A specialist reviews install programs and hardware options with you.' },
                   { icon: Tag, title: 'Choose Pricing', desc: 'Pick what saves you most — Cash Discount or Flat Rate.' },
                   { icon: Package, title: 'Pre-Configured Hardware', desc: 'We set up your hardware before shipping — ready out of the box.' },
