@@ -22,7 +22,7 @@ const Navigation = () => {
         { label: 'Business Loans & Cash Advances', path: '/solutions/business-loans' },
         { label: 'ATM Solutions', path: '/solutions/atms' },
         { label: 'Payroll Services by ADP', path: '/solutions/payroll-services' },
-        { label: 'IT Services', path: '/solutions/it-services' }
+        { label: 'Tech & Installation', path: '/solutions/it-services' }
       ]
     },
     {
