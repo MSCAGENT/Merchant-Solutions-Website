@@ -276,7 +276,7 @@ const HighRiskMerchant = () => {
               High Risk Payment Processing for Businesses Banks Say No To
             </h1>
             <p className="text-xl text-purple-200 font-semibold mb-4">
-              Online Gambling | Peptides | Prop Trading Firms | CBD & Kratom
+              Online Gambling | Peptides | Prop Trading Firms | CBD & Kratom | Dating | Marketplaces | Free Trial | Pharmacy
             </p>
             <p className="text-lg text-gray-300 mb-4">
               Merchant Solutions Corp provides stable, long-term high risk merchant accounts for industries that mainstream processors decline.
