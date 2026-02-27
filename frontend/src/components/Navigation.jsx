@@ -34,7 +34,7 @@ const Navigation = () => {
         { label: 'Chiropractors', path: '/industries/chiropractors' },
         { label: 'Dental Practices', path: '/dental-payment-processing-emr-integration' },
         { label: 'Medical Clinics', path: '/industries/medical-clinics' },
-        { label: 'High-Risk Businesses', path: '/industries/high-risk-businesses' },
+        { label: 'High-Risk Businesses', path: '/high-risk-merchant-services' },
         { label: 'Specialty Merchants', path: '/industries/specialty-merchants' }
       ]
     },
