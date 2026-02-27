@@ -31,7 +31,7 @@ Build a comprehensive, SEO-optimized payment processing website for Merchant Sol
 - Solutions sub-pages
 
 ## Latest Changes (Feb 2026)
-- **Square POS page**: Added dual-video cycling hero section with two provided Square videos
+- **Square POS page**: Full SEO content overhaul — 13 sections including dealer value prop, hardware, software plans, industry solutions, integrations, nationwide installation, setup process. Dual-video cycling hero with 2 Square videos.
 
 ## Pending Tasks
 - P0: Add images to Agents & ISO Partnership page
