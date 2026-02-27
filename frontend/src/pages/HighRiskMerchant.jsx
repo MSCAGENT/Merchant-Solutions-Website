@@ -246,7 +246,12 @@ const HighRiskMerchant = () => {
     'Prop firm payment processing',
     'CBD merchant account',
     'Kratom payment processing',
-    'High risk credit card processing'
+    'High risk credit card processing',
+    'Dating site payment processing',
+    'Online marketplace merchant account',
+    'Free trial billing merchant services',
+    'Online pharmacy payment processing',
+    'Telemedicine merchant account'
   ];
 
   return (
