@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -32,6 +32,9 @@ import {
 } from '../components/ui/accordion';
 
 const SalonSpa = () => {
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
+  const [showDemoModal, setShowDemoModal] = useState(false);
+
   useEffect(() => {
     document.title = 'Salon & Spa Payment Processing | Booking Software + POS Installation | DaySmart, Clover & Square';
     const metaDesc = document.querySelector('meta[name="description"]');
