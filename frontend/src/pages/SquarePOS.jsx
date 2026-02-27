@@ -451,7 +451,16 @@ const SquarePOS = () => {
                         <Icon className={`h-6 w-6 ${isFeatured ? 'text-white' : 'text-purple-600 group-hover:text-purple-700'}`} />
                       </div>
                       <div className={`text-center rounded-xl p-4 transition-all duration-300 group-hover:-translate-y-1 ${isFeatured ? 'bg-gradient-to-br from-purple-600 to-blue-600 shadow-lg shadow-purple-500/20' : 'bg-white border border-gray-200 shadow-sm group-hover:shadow-md group-hover:border-purple-300'}`}>
-                        <h3 className={`font-bold text-sm mb-1.5 ${isFeatured ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
+                        {step.link ? (
+                          <a href={step.link} target="_blank" rel="noopener">
+                            <h3 className="font-bold text-sm mb-1.5 text-gray-900 relative inline-block">
+                              <span className="relative z-10">{step.title}</span>
+                              <span className="absolute bottom-0 left-0 h-[45%] w-full bg-yellow-300 animate-[highlighter_3s_ease-in-out_infinite] origin-left" />
+                            </h3>
+                          </a>
+                        ) : (
+                          <h3 className={`font-bold text-sm mb-1.5 ${isFeatured ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
+                        )}
                         <p className={`text-xs leading-relaxed ${isFeatured ? 'text-purple-100' : 'text-gray-500'}`}>{step.desc}</p>
                         {isFeatured && (
                           <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider bg-white text-purple-600 px-2.5 py-0.5 rounded-full">
