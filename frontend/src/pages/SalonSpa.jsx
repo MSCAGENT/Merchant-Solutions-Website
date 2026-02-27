@@ -513,6 +513,138 @@ const SalonSpa = () => {
         </div>
       </section>
 
+      {/* Square POS Deep Dive */}
+      <section className="py-20 bg-white" data-testid="square-deepdive-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <img
+                src="https://images.unsplash.com/photo-1761931403667-a6753db21f32?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxoYWlyJTIwc2Fsb24lMjBwcm9mZXNzaW9uYWwlMjBzdHlsaW5nfGVufDB8fHx8MTc3MjIxNDkwN3ww&ixlib=rb-4.1.0&q=85"
+                alt="Salon professional styling client hair with Square POS in background"
+                className="w-full h-[420px] object-cover rounded-2xl shadow-xl"
+              />
+              <div className="flex items-center gap-4 mt-6">
+                <div className="bg-green-50 border border-green-200 rounded-xl px-4 py-2.5 flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span className="text-sm font-semibold text-green-700">Free to Start</span>
+                </div>
+                <div className="bg-purple-50 border border-purple-200 rounded-xl px-4 py-2.5 flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-purple-600" />
+                  <span className="text-sm font-semibold text-purple-700">No Contracts</span>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <p className="text-sm uppercase tracking-widest text-purple-600 font-semibold mb-3">Perfect for Independent Professionals</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Square POS — Launch Your Salon Without the Overhead
+              </h2>
+              <p className="text-lg text-gray-600 mb-3">
+                Square gives independent stylists, booth renters, and small salons everything they need to accept payments and manage their business — with zero monthly fees to start.
+              </p>
+              <p className="text-base text-gray-500 mb-6">
+                From a simple card reader at your station to a full Square Register at your front desk, Square scales with your business. Accept tap-to-pay, chip, and mobile wallets. Track sales, manage your team, and sell gift cards — all from one platform.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                {[
+                  'Free POS software — $0/month',
+                  'Accept all cards & mobile wallets',
+                  'Online booking integration',
+                  'Client profiles & service notes',
+                  'Digital receipts & invoicing',
+                  'Team management & permissions',
+                  'Sales analytics & daily reports',
+                  'Gift cards & loyalty tools',
+                  'E-commerce & online store',
+                  'Hardware: Reader, Stand, Terminal, Register'
+                ].map((f, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                    <span className="text-sm text-gray-700">{f}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100 rounded-xl px-5 py-4 mb-6">
+                <p className="text-sm text-gray-700">
+                  <strong className="text-purple-700">How far can Square take you?</strong> Start as a solo booth renter with just a Square Reader and your phone. As your client list grows, upgrade to a Square Terminal for receipts or a full Square Register with a customer-facing display. Open a second location — Square supports multi-site management with no long-term contracts. You grow, Square grows with you.
+                </p>
+              </div>
+              <Link to="/pos/square">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-5">
+                  Explore Square POS for Salons
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clover POS Deep Dive */}
+      <section className="py-20 bg-gray-50" data-testid="clover-deepdive-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-sm uppercase tracking-widest text-purple-600 font-semibold mb-3">Built for Growing Salons & Spas</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Clover POS — The Powerhouse for Multi-Chair Salons
+              </h2>
+              <p className="text-lg text-gray-600 mb-3">
+                Clover gives established salons and day spas a full hardware and software ecosystem designed for high-volume, multi-staff operations. From countertop stations to handheld flex devices, Clover handles the busiest days with ease.
+              </p>
+              <p className="text-base text-gray-500 mb-6">
+                With built-in appointment scheduling, employee management, customer engagement tools, and a deep third-party app marketplace, Clover transforms your front desk into a command center for your entire beauty business.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                {[
+                  'Accept all payment types including NFC',
+                  'Built-in appointment scheduling',
+                  'Employee shifts & time tracking',
+                  'Customer engagement & profiles',
+                  'Inventory & product management',
+                  'Real-time sales reporting',
+                  'Gift card programs',
+                  'Third-party app marketplace (500+ apps)',
+                  'Hardware: Flex, Mini, Station Duo',
+                  'Online ordering & payments'
+                ].map((f, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                    <span className="text-sm text-gray-700">{f}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100 rounded-xl px-5 py-4 mb-6">
+                <p className="text-sm text-gray-700">
+                  <strong className="text-purple-700">How far can Clover take you?</strong> Start with a Clover Mini at checkout and a Clover Flex for stylists to check out clients at the chair. Add the Clover Station Duo with a customer-facing screen for a premium checkout experience. Expand with loyalty programs, gift cards, and automated marketing through the app marketplace. Open new locations — Clover scales effortlessly across multi-site operations, all managed from a single dashboard.
+                </p>
+              </div>
+              <Link to="/pos/clover">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-5">
+                  Explore Clover POS for Salons
+                </Button>
+              </Link>
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1764194790147-8a1e47a91a3f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbiUyMHJlY2VwdGlvbiUyMGNvdW50ZXIlMjBwYXltZW50JTIwc3lzdGVtJTIwcmV0YWlsfGVufDB8fHx8MTc3MjIxNDg4Nnww&ixlib=rb-4.1.0&q=85"
+                alt="Salon reception counter with Clover POS system for checkout"
+                className="w-full h-[420px] object-cover rounded-2xl shadow-xl"
+              />
+              <div className="flex items-center gap-4 mt-6">
+                <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-2.5 flex items-center gap-2">
+                  <Store className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm font-semibold text-blue-700">Multi-Location Ready</span>
+                </div>
+                <div className="bg-purple-50 border border-purple-200 rounded-xl px-4 py-2.5 flex items-center gap-2">
+                  <Zap className="h-4 w-4 text-purple-600" />
+                  <span className="text-sm font-semibold text-purple-700">500+ Apps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 bg-white" data-testid="faq-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
