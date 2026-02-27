@@ -11,19 +11,19 @@ import {
   MapPin,
   Star,
   Receipt,
-  Smartphone,
   MessageSquare,
   FileText,
   RefreshCw,
-  Heart,
   Users,
-  BarChart3,
   Megaphone,
   CalendarCheck,
   Building2,
   Stethoscope,
   Activity,
-  ClipboardList
+  Clock,
+  UserCheck,
+  ClipboardCheck,
+  Wallet
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
@@ -73,9 +73,9 @@ const MedicalClinics = () => {
   ];
 
   useEffect(() => {
-    document.title = 'Medical Clinic Payment Processing & EHR Integration | Healthcare Merchant Services';
+    document.title = 'Medical Payment Processing & EMR Integration | Merchant Services for Clinics';
     const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Medical clinic payment processing integrated with athenahealth, eClinicalWorks, NextGen and more. Healthcare merchant services, EHR integration, and patient billing solutions in Florida and nationwide.';
+    const content = 'Secure medical payment processing integrated with leading EMR systems. Merchant services for medical offices and urgent care clinics nationwide.';
     if (metaDesc) {
       metaDesc.setAttribute('content', content);
     } else {
@@ -89,14 +89,10 @@ const MedicalClinics = () => {
   useEffect(() => {
     const refs = [video1Ref, video2Ref];
     const currentRef = refs[activeVideo]?.current;
-    if (currentRef) {
-      currentRef.play().catch(() => {});
-    }
+    if (currentRef) currentRef.play().catch(() => {});
   }, [activeVideo]);
 
-  const handleVideoEnded = () => {
-    setActiveVideo((prev) => (prev + 1) % heroVideos.length);
-  };
+  const handleVideoEnded = () => setActiveVideo((prev) => (prev + 1) % heroVideos.length);
 
   useEffect(() => {
     if (!showCalendlyModal) return;
@@ -108,81 +104,87 @@ const MedicalClinics = () => {
     }
   }, [showCalendlyModal]);
 
+  const clinicTypes = [
+    'Family medicine clinics',
+    'Urgent care centers',
+    'Specialty practices',
+    'Multi-provider medical groups',
+    'Outpatient facilities'
+  ];
+
   const merchantServices = [
-    'Credit card processing for medical clinics',
-    'ACH and recurring patient billing',
-    'Co-pay and deductible collection at check-in',
-    'Contactless and EMV chip payments',
-    'Text-to-pay and online patient payment portals',
-    'Insurance balance and statement processing'
+    'Credit card processing for medical offices',
+    'ACH and recurring billing',
+    'Contactless and EMV payments',
+    'Card-on-file tokenization',
+    'Text-to-pay and online bill pay',
+    'Fast funding options'
+  ];
+
+  const industryChallenges = [
+    { icon: Clock, title: 'Patient Flow', desc: 'Fast, secure checkout reduces wait times and improves front desk efficiency.' },
+    { icon: Users, title: 'Multiple Providers', desc: 'Centralized reporting and provider-level tracking ensure accurate reconciliation.' },
+    { icon: ClipboardCheck, title: 'Insurance Verification', desc: 'Payment tools integrate seamlessly with insurance billing workflows.' },
+    { icon: Wallet, title: 'Copay Collection', desc: 'Automated copay prompts and pre-authorization tools during check-in.' }
   ];
 
   const ehrBenefits = [
-    'Automatic payment posting to patient accounts',
-    'Reduced front-desk billing errors',
-    'Faster end-of-day reconciliation',
-    'Secure tokenized card-on-file storage',
-    'Recurring billing for ongoing treatments',
-    'Real-time payment reporting and analytics'
+    'Automatic payment posting',
+    'Reduced billing errors',
+    'Real-time reconciliation',
+    'Secure tokenized card storage',
+    'Recurring billing for treatment plans',
+    'Faster end-of-day reporting'
+  ];
+
+  const copayFeatures = [
+    'Collect copays at check-in',
+    'Store cards on file securely',
+    'Send text-to-pay reminders',
+    'Offer payment plans',
+    'Accept HSA and FSA payments',
+    'Process balances after insurance'
+  ];
+
+  const urgentCareFeatures = [
+    'Fast EMV and contactless checkout',
+    'Multi-terminal setups',
+    'Provider-based reporting',
+    'Offline processing capability',
+    'Insurance-friendly workflows'
   ];
 
   const securityFeatures = [
-    { icon: Shield, title: 'PCI-DSS Compliant', desc: 'Level 1 certified payment infrastructure' },
-    { icon: Lock, title: 'End-to-End Encryption', desc: 'Patient payment data protected at every step' },
+    { icon: Shield, title: 'PCI-DSS Compliant', desc: 'Meets the highest payment data security standards' },
+    { icon: Lock, title: 'Encrypted End-to-End', desc: 'Patient payment data protected at every step' },
     { icon: CreditCard, title: 'Tokenized Card Storage', desc: 'Secure card-on-file without exposing card numbers' },
-    { icon: FileText, title: 'HIPAA-Aware Workflows', desc: 'Payment processes designed for healthcare privacy requirements' }
-  ];
-
-  const collectionFeatures = [
-    'Text-to-pay after visits and procedures',
-    'Email statements with secure payment links',
-    'Automated patient balance reminders',
-    'Flexible payment plan configuration',
-    'Online patient payment portals',
-    'In-office contactless tap-to-pay'
+    { icon: FileText, title: 'HIPAA-Aware Workflows', desc: 'Designed with healthcare privacy considerations' }
   ];
 
   const marketingFeatures = [
-    { icon: Star, text: 'Online reputation management' },
-    { icon: MessageSquare, text: 'Automated patient review requests' },
-    { icon: Users, text: 'Patient communication and messaging' },
-    { icon: CalendarCheck, text: 'Appointment reminders and recall' },
-    { icon: RefreshCw, text: 'Patient retention campaigns' },
-    { icon: Megaphone, text: 'SEO and digital marketing for clinics' }
+    { icon: MessageSquare, text: 'Patient communication automation' },
+    { icon: Star, text: 'Review generation' },
+    { icon: CalendarCheck, text: 'Appointment reminders' },
+    { icon: RefreshCw, text: 'Recall campaigns' },
+    { icon: MapPin, text: 'Local SEO for medical practices' },
+    { icon: Megaphone, text: 'Online reputation management' }
   ];
 
   const whyChooseUs = [
-    { icon: Headphones, text: 'Dedicated healthcare account manager' },
-    { icon: MapPin, text: 'Nationwide medical merchant services' },
-    { icon: Activity, text: 'Medical EHR payment integrations' },
-    { icon: DollarSign, text: 'Transparent healthcare processing pricing' },
-    { icon: Zap, text: 'Next-day funding options' },
-    { icon: Receipt, text: 'Chargeback and dispute assistance' },
-    { icon: Building2, text: 'On-site installation and configuration' },
-    { icon: Megaphone, text: 'Digital Marketing, Ads and Voice AI services' }
-  ];
-
-  const whoWeServe = [
-    'Primary Care Clinics', 'Urgent Care Centers', 'Specialty Practices', 'Surgical Centers',
-    'OB/GYN Offices', 'Pediatric Clinics', 'Multi-location Medical Groups', 'Telehealth Providers'
-  ];
-
-  const faqs = [
-    { question: 'Can you integrate payment processing with my medical EHR?', answer: 'Yes. We integrate with leading medical EHR and practice management systems including athenahealth, eClinicalWorks, NextGen, DrChrono, AdvancedMD, and more to automate payment posting and reconciliation.' },
-    { question: 'Do you support recurring patient billing and payment plans?', answer: 'Yes. We configure recurring billing, card-on-file storage, and flexible payment plans for patient balances, co-pays, and ongoing treatment costs.' },
-    { question: 'Is medical payment processing different from standard merchant services?', answer: 'Yes. Medical clinics require EHR integration, HIPAA-aware workflows, insurance co-pay collection, and recurring billing tools that standard processing does not provide.' },
-    { question: 'How fast do medical clinics receive funding?', answer: 'Most medical practices receive funding within 1-2 business days. Next-day funding is available depending on account configuration.' },
-    { question: 'Can you help reduce patient payment chargebacks?', answer: 'Yes. We provide chargeback documentation tools, dispute support, and receipt delivery systems to prevent and manage disputes.' },
-    { question: 'Do you support telehealth and virtual visit payments?', answer: 'Yes. Our payment solutions support online payment links, virtual terminal processing, and text-to-pay for telehealth and remote consultations.' },
-    { question: 'Can you process CareCredit and third-party financing cards?', answer: 'Yes. We have the ability to process CareCredit cards and other third-party healthcare financing cards within our system.' }
+    { icon: MapPin, text: 'Florida-based support with nationwide coverage' },
+    { icon: Activity, text: 'Integrated EMR payment solutions' },
+    { icon: DollarSign, text: 'Transparent medical processing pricing' },
+    { icon: Zap, text: 'Fast funding' },
+    { icon: Receipt, text: 'Chargeback support' },
+    { icon: Building2, text: 'Professional installation and onboarding' }
   ];
 
   const searchTerms = [
-    'Medical clinic payment processing Florida',
-    'Healthcare merchant services near me',
-    'Medical EHR payment integration',
-    'Credit card processing for medical offices',
-    'HIPAA compliant payment processing'
+    'Medical payment processing Florida',
+    'Merchant services for medical clinics',
+    'Urgent care payment solutions',
+    'EMR-integrated payment processing',
+    'Healthcare credit card processing near me'
   ];
 
   return (
@@ -206,34 +208,34 @@ const MedicalClinics = () => {
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg" data-testid="hero-h1">
-              Medical Clinic Payment Processing & EHR Integration
+              Medical Payment Processing & EMR Integration
             </h1>
             <p className="text-xl text-purple-200 font-semibold mb-4">
-              Secure Credit Card Processing Integrated with Your Medical EHR or Practice Management System
+              Secure Merchant Services for Medical Offices, Urgent Care & Multi-Provider Clinics
             </p>
             <p className="text-lg text-purple-100 mb-4">
-              Merchant Solutions Corp provides medical clinic payment processing and healthcare merchant services fully integrated with leading EHR and practice management platforms.
+              Merchant Solutions Corp provides comprehensive payment solutions for medical clinics and urgent care centers across Florida and all 50 U.S. states.
             </p>
             <p className="text-base text-purple-200/80 mb-8">
-              Through HealthcarePMB.com, we combine secure credit card processing, electronic health record integrations, and clinic marketing services into one platform for modern medical practices across Florida and all 50 U.S. states.
+              Through HealthcarePMB.com, we deliver secure medical payment processing, EMR integration, automated copay collection, and insurance billing support designed specifically for healthcare providers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg"
-                onClick={() => setShowCalendlyModal(true)}
-                data-testid="hero-demo-btn"
+                onClick={() => setShowContactModal(true)}
+                data-testid="hero-quote-btn"
               >
-                Book a Clinic Demo
+                Get Custom Solution
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6"
-                onClick={() => setShowContactModal(true)}
-                data-testid="hero-sales-btn"
+                onClick={() => setShowCalendlyModal(true)}
+                data-testid="hero-demo-btn"
               >
-                Talk to Sales
+                Schedule a Consultation
               </Button>
             </div>
           </div>
@@ -243,16 +245,24 @@ const MedicalClinics = () => {
       {/* Medical Merchant Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="merchant-services-h2">
-                Healthcare Merchant Services Built for Medical Clinics
+                Medical Merchant Services Built for Modern Clinics
               </h2>
-              <div className="mb-6">
-                <p className="text-lg text-gray-700">Medical clinics need more than a card terminal.</p>
-                <p className="text-lg text-purple-600 font-semibold">They need secure, HIPAA-aware, and EHR-integrated payment processing.</p>
+              <p className="text-lg text-gray-700 mb-2">Medical offices face unique operational and compliance challenges.</p>
+              <p className="text-lg text-purple-600 font-semibold mb-6">Our healthcare merchant services are designed to support:</p>
+              <div className="space-y-3 mb-8">
+                {clinicTypes.map((type, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{type}</span>
+                  </div>
+                ))}
               </div>
-              <p className="text-gray-700 mb-4 font-medium">Our medical merchant services include:</p>
+            </div>
+            <div>
+              <p className="text-gray-700 mb-4 font-medium">We provide:</p>
               <div className="space-y-3 mb-6">
                 {merchantServices.map((service, index) => (
                   <div key={index} className="flex items-center gap-3">
@@ -262,41 +272,65 @@ const MedicalClinics = () => {
                 ))}
               </div>
               <p className="text-gray-600 italic border-l-4 border-purple-600 pl-4">
-                We help medical clinics reduce billing errors, accelerate funding, and improve the patient payment experience from check-in to balance collection.
+                Our systems improve front desk efficiency and reduce billing delays.
               </p>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src="https://images.pexels.com/photos/7108329/pexels-photo-7108329.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="Patients at medical clinic reception desk checking in"
-                className="w-full h-full object-cover"
-              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* EHR/PMS Integration */}
+      {/* Industry Challenges We Solve */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="ehr-integration-h2">
-              Integrated Payment Processing for Medical EHR & Practice Management Systems
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="challenges-h2">
+              Industry Challenges We Solve
             </h2>
-            <p className="text-xl text-purple-600 font-semibold mb-4">Stop double-entering patient payments.</p>
+            <p className="text-lg text-gray-600">We understand the payment challenges facing medical clinics.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {industryChallenges.map((challenge, index) => {
+              const Icon = challenge.icon;
+              return (
+                <Card key={index} className="border-2 hover:border-purple-600 transition-all duration-300">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Icon className="h-7 w-7 text-purple-600" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2 text-gray-900">{challenge.title}</h3>
+                    <p className="text-gray-600 text-sm">{challenge.desc}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+          <p className="text-center text-gray-600 italic">
+            Our goal is to streamline payments while maintaining compliance and accuracy.
+          </p>
+        </div>
+      </section>
+
+      {/* EMR/PMS Integration */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="emr-integration-h2">
+              Integrated Payment Processing for Medical EMR & PMS Systems
+            </h2>
+            <p className="text-xl text-purple-600 font-semibold mb-4">Stop manually posting transactions.</p>
             <p className="text-lg text-gray-600">
-              HealthcarePMB.com connects your payment processing directly to your electronic health record (EHR) or practice management software (PMS), eliminating manual reconciliation.
+              HealthcarePMB.com integrates payment processing directly into your electronic medical record (EMR) or practice management system (PMS).
             </p>
           </div>
 
           <div className="mb-10">
-            <p className="text-center text-sm text-gray-500 font-medium uppercase tracking-wide mb-4">Supported integrations include leading medical platforms</p>
+            <p className="text-center text-sm text-gray-500 font-medium uppercase tracking-wide mb-4">Supported integrations include major medical systems</p>
             <FloatingLogos />
-            <p className="text-center text-sm text-gray-400 mt-3">+ Other cloud-based medical EHR and PMS systems</p>
+            <p className="text-center text-sm text-gray-400 mt-3">+ Kareo + Other cloud-based medical platforms</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg font-semibold text-gray-900 mb-6 text-center">Benefits of EHR/PMS Payment Integration:</p>
+            <p className="text-lg font-semibold text-gray-900 mb-6 text-center">Benefits of EMR payment integration:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
               {ehrBenefits.map((benefit, index) => (
                 <Card key={index} className="border hover:border-purple-600 transition-all duration-300">
@@ -308,21 +342,87 @@ const MedicalClinics = () => {
               ))}
             </div>
             <p className="text-center text-gray-600 italic">
-              Integrated medical payment processing reduces administrative overhead and improves revenue cycle management.
+              Integrated medical payment solutions reduce administrative burden and increase collection rates.
             </p>
           </div>
         </div>
       </section>
 
-      {/* PCI & HIPAA Security */}
+      {/* Automated Copay & Balance Collection */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="https://images.pexels.com/photos/9413559/pexels-photo-9413559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="Patient at medical office reception discussing copay and payment"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="copay-h2">
+                Automated Copay & Balance Collection
+              </h2>
+              <p className="text-xl text-purple-600 font-semibold mb-6">Missed copays hurt revenue.</p>
+              <p className="text-gray-700 mb-4 font-medium">Our medical payment systems allow clinics to:</p>
+              <div className="space-y-3 mb-6">
+                {copayFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-600 italic border-l-4 border-purple-600 pl-4">
+                Automated copay collection increases upfront revenue and reduces outstanding receivables.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Urgent Care & High-Volume Clinic Solutions */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="urgent-care-h2">
+                Urgent Care & High-Volume Clinic Solutions
+              </h2>
+              <p className="text-xl text-purple-600 font-semibold mb-6">Urgent care centers require speed and stability.</p>
+              <p className="text-gray-700 mb-4 font-medium">Our payment processing solutions for urgent care provide:</p>
+              <div className="space-y-3 mb-6">
+                {urgentCareFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-600 italic border-l-4 border-purple-600 pl-4">
+                Specifically designed to accommodate high patient volume and ensure rapid patient turnover.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1758691461888-b74515208d7a?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800"
+                alt="Doctor using computer in modern urgent care clinic"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HIPAA & PCI Security */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="security-h2">
-              Medical Credit Card Processing with PCI & HIPAA Compliance
+              HIPAA-Aware & PCI-Compliant Security
             </h2>
-            <p className="text-xl text-purple-600 font-semibold mb-2">Patient data security is non-negotiable.</p>
-            <p className="text-lg text-gray-600">Our healthcare payment solutions are built with compliance at every layer:</p>
+            <p className="text-xl text-purple-600 font-semibold mb-2">Healthcare requires strict data protection.</p>
+            <p className="text-lg text-gray-600">Our medical payment processing systems are:</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {securityFeatures.map((feature, index) => {
@@ -341,54 +441,19 @@ const MedicalClinics = () => {
             })}
           </div>
           <p className="text-center text-gray-600">
-            We configure your medical clinic payment system to protect patient data while maintaining full compliance with PCI-DSS and HIPAA standards.
+            We protect patient payment data while supporting regulatory standards.
           </p>
         </div>
       </section>
 
-      {/* Improve Collections */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src="https://images.unsplash.com/photo-1758691461888-b74515208d7a?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800"
-                alt="Doctor at modern medical office using computer for patient management"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="collections-h2">
-                Improve Patient Collections & Reduce Billing Friction
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                HealthcarePMB.com helps medical clinics increase collections without adding friction to the patient experience.
-              </p>
-              <p className="text-gray-700 mb-4 font-medium">Features include:</p>
-              <div className="space-y-3 mb-6">
-                {collectionFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-600 italic border-l-4 border-purple-600 pl-4">
-                Medical clinics see improved collection rates, faster insurance balance recovery, and fewer outstanding patient balances.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Marketing + Payments */}
+      {/* Healthcare Marketing + Payments */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="marketing-h2">
-              Medical Clinic Marketing + Payments in One Platform
+              Healthcare Marketing and Payments in One Platform
             </h2>
-            <p className="text-xl text-purple-600 font-semibold mb-2">HealthcarePMB.com goes beyond merchant services.</p>
+            <p className="text-xl text-purple-600 font-semibold mb-2">HealthcarePMB.com combines payment solutions with medical marketing services.</p>
             <p className="text-lg text-gray-600">We provide:</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
@@ -405,7 +470,7 @@ const MedicalClinics = () => {
             })}
           </div>
           <p className="text-center text-gray-600 max-w-3xl mx-auto">
-            By combining medical clinic marketing with integrated payment processing, your practice improves both revenue and patient retention.
+            Payment processing integrated with marketing tools improves revenue and patient retention.
           </p>
         </div>
       </section>
@@ -418,7 +483,7 @@ const MedicalClinics = () => {
               Why Medical Clinics Choose Merchant Solutions Corp
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
             {whyChooseUs.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -432,61 +497,16 @@ const MedicalClinics = () => {
             })}
           </div>
           <p className="text-center text-lg text-gray-700">
-            We specialize in merchant services for healthcare providers and medical clinics.
+            We specialize in merchant services for healthcare providers.
           </p>
         </div>
       </section>
 
-      {/* Who We Serve */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="who-we-serve-h2">
-              Medical Specialties We Serve
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
-            {whoWeServe.map((specialty, index) => (
-              <div key={index} className="flex items-center gap-2 justify-center bg-gray-50 rounded-xl py-4 px-4 border hover:border-purple-600 transition-all duration-300">
-                <Stethoscope className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                <span className="font-medium text-gray-800 text-sm">{specialty}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto">
-            Whether you operate a single-location primary care clinic in Florida or manage a multi-state medical group, we design scalable healthcare payment processing systems.
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4" data-testid="faq-h2">
-              Frequently Asked Questions
-            </h2>
-          </div>
-          <Accordion type="single" collapsible className="w-full" data-testid="faq-accordion">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left font-semibold text-gray-900">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-600">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      {/* Florida & Nationwide */}
+      {/* Florida & Nationwide + Final CTA */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center" data-testid="nationwide-h2">
-            Medical Clinic Payment Processing in Florida & Nationwide
+            Medical Payment Processing in Florida & Nationwide
           </h2>
           <div className="bg-gray-50 rounded-2xl p-8 border mb-8">
             <p className="text-gray-700 mb-4 font-medium">If you are searching for:</p>
@@ -499,11 +519,11 @@ const MedicalClinics = () => {
               ))}
             </div>
             <p className="text-purple-700 font-semibold">
-              Merchant Solutions Corp delivers secure, integrated, and scalable healthcare payment solutions for medical clinics of all sizes.
+              Merchant Solutions Corp delivers secure, scalable, and integrated healthcare payment solutions.
             </p>
           </div>
           <p className="text-center text-gray-600 mb-8">
-            Through HealthcarePMB.com, we combine payments, EHR integration, and marketing services into one system built specifically for medical practices.
+            Through HealthcarePMB.com, we connect medical payment processing, EMR integration, insurance workflows, and marketing services into one unified system.
           </p>
         </div>
       </section>
@@ -512,7 +532,7 @@ const MedicalClinics = () => {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6" data-testid="final-cta-h2">
-            Get Medical Clinic Payment Processing & EHR Integration Done Right
+            Get Medical Payment Processing & EMR Integration Done Right
           </h2>
           <p className="text-xl text-purple-100 mb-4">
             Secure. Integrated. HIPAA-Aware. Supported.
@@ -524,19 +544,19 @@ const MedicalClinics = () => {
             <Button
               size="lg"
               className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6"
-              onClick={() => setShowCalendlyModal(true)}
-              data-testid="cta-demo-btn"
+              onClick={() => setShowContactModal(true)}
+              data-testid="cta-quote-btn"
             >
-              Schedule a Demo
+              Get Custom Solution
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6"
-              onClick={() => setShowContactModal(true)}
-              data-testid="cta-quote-btn"
+              onClick={() => setShowCalendlyModal(true)}
+              data-testid="cta-demo-btn"
             >
-              Request a Quote
+              Book a Demo
             </Button>
           </div>
         </div>
@@ -553,7 +573,7 @@ const MedicalClinics = () => {
             <Link to="/restaurant-payment-processing-florida" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Restaurants</Link>
           </div>
           <p className="text-center text-sm text-gray-600">
-            Merchant Solutions Corp provides medical clinic payment processing, EHR integration, and healthcare merchant services across Florida and all 50 U.S. states. We integrate with athenahealth, eClinicalWorks, NextGen Healthcare, DrChrono, AdvancedMD, Rectangle Health, and other leading medical practice management systems. Serving primary care, urgent care, specialty practices, surgical centers, OB/GYN, pediatrics, multi-location medical groups, and telehealth providers.
+            Merchant Solutions Corp provides medical payment processing, EMR integration, and healthcare merchant services across Florida and all 50 U.S. states. We integrate with athenahealth, eClinicalWorks, NextGen Healthcare, DrChrono, AdvancedMD, Kareo, Rectangle Health, and other leading medical practice management systems. Serving family medicine, urgent care, specialty practices, multi-provider groups, outpatient facilities, and telehealth providers.
           </p>
         </div>
       </section>
@@ -572,7 +592,7 @@ const MedicalClinics = () => {
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A"
               className="w-full h-[80vh] border-0 rounded-2xl"
-              title="Talk to Sales"
+              title="Get Custom Solution"
             />
           </div>
         </div>
