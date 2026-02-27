@@ -408,6 +408,58 @@ const SquarePOS = () => {
         </div>
       </section>
 
+      {/* Steps to Save Money */}
+      <section className="py-20 bg-gray-900 text-white" data-testid="steps-save-money-section">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">How to Save Money with Square + Merchant Solutions Corp</h2>
+            <p className="text-lg text-gray-400">Five simple steps from sign-up to processing payments.</p>
+          </div>
+          <div className="relative">
+            {/* Vertical connector line */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-purple-700/40 -translate-x-1/2" />
+            <div className="space-y-8 md:space-y-0 md:grid md:grid-cols-1 md:gap-0">
+              {[
+                { num: 1, title: 'Create an Account', desc: 'Sign up and get your Square merchant account started with our guided onboarding.' },
+                { num: 2, title: 'Book a Call with a Specialist', desc: 'Your dedicated specialist will walk you through our different install and hardware programs to find the best fit.' },
+                { num: 3, title: 'Choose Your Pricing Method', desc: 'Select the plan that maximizes your savings — Cash Discount or Flat Rate processing.' },
+                { num: 4, title: 'Place Your Order & Wait for Arrival', desc: 'We pre-configure your hardware before shipping so it\'s ready to go out of the box.' },
+                { num: 5, title: 'We Arrive, Install & Get You Processing', desc: 'Our team arrives on-site to install everything and get you processing payments ASAP.' }
+              ].map((step, i) => (
+                <div key={i} className={`flex items-center gap-6 md:gap-10 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:text-${i % 2 === 0 ? 'right' : 'left'}`}>
+                  <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'} hidden md:block`}>
+                    {i % 2 === 0 && (
+                      <div className="bg-gray-800/60 border border-gray-700/50 rounded-xl p-5 inline-block max-w-md ml-auto">
+                        <h3 className="font-bold text-lg text-white mb-1">{step.title}</h3>
+                        <p className="text-gray-400 text-sm">{step.desc}</p>
+                      </div>
+                    )}
+                  </div>
+                  <div className="relative z-10 flex-shrink-0">
+                    <div className="w-14 h-14 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-purple-600/30 border-2 border-purple-400/30">
+                      {step.num}
+                    </div>
+                  </div>
+                  <div className={`flex-1 ${i % 2 !== 0 ? 'md:text-left' : 'md:text-left'}`}>
+                    {i % 2 !== 0 ? (
+                      <div className="bg-gray-800/60 border border-gray-700/50 rounded-xl p-5 inline-block max-w-md">
+                        <h3 className="font-bold text-lg text-white mb-1">{step.title}</h3>
+                        <p className="text-gray-400 text-sm">{step.desc}</p>
+                      </div>
+                    ) : (
+                      <div className="md:hidden bg-gray-800/60 border border-gray-700/50 rounded-xl p-5">
+                        <h3 className="font-bold text-lg text-white mb-1">{step.title}</h3>
+                        <p className="text-gray-400 text-sm">{step.desc}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hardware Options */}
       <section className="py-20 bg-gray-50" data-testid="hardware-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
