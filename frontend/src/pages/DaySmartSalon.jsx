@@ -111,22 +111,51 @@ const DaySmartSalon = () => {
   const pricingPlans = [
     {
       name: 'Basic',
-      desc: 'Affordable starter plan with essential features',
-      features: ['Online booking', 'Appointment scheduling', 'Payment processing', 'Client management', 'Basic reporting'],
+      price: '$29',
+      users: '1 User',
+      desc: 'Essential features to get your salon running',
+      features: ['Online Booking', 'Appointment Confirmations', 'Instagram & Facebook Booking', 'Payment Processing', 'Online Deposits', 'Kiosk Walk-In Manager', 'Mobile App', 'Reports', '500 Texts / 1,000 Emails per month'],
       badge: null
     },
     {
       name: 'Deluxe',
-      desc: 'Enhanced tools for growing salons',
-      features: ['Everything in Basic', 'Marketing automation', 'Inventory management', 'Advanced scheduling', 'Two-way texting', 'Loyalty programs'],
+      price: '$69',
+      users: '3 Users',
+      desc: 'Everything in Basic, plus tools to grow',
+      features: ['Everything in Basic', 'Online Gift Cards', 'Digital Forms', 'Client Loyalty System', 'Basic Payroll', 'Email Marketing', 'Productivity Dashboard', 'Multi-Ticket Checkout', 'Resource Management', '1,000 Texts / 5,000 Emails per month'],
+      badge: null
+    },
+    {
+      name: 'Deluxe Growth',
+      price: '$149',
+      users: '3 Users',
+      desc: 'Everything in Deluxe, plus marketing power',
+      features: ['Everything in Deluxe', 'Text Marketing', 'Two-Way Texting', 'Reputation Management', '1,000 Texts / 10,000 Emails per month'],
       badge: 'MOST POPULAR'
     },
     {
       name: 'Premium',
-      desc: 'Advanced capabilities and unlimited users',
-      features: ['Everything in Deluxe', 'Unlimited users', 'Multi-location dashboard', 'Advanced analytics', 'Priority support', 'Custom integrations'],
+      price: '$199',
+      users: '6 Users',
+      desc: 'Great for advancing growth',
+      features: ['Everything in Deluxe Growth', 'QuickBooks Connect', 'Client Loyalty System', '2,500 Texts / 10,000 Emails per month'],
       badge: null
+    },
+    {
+      name: 'Premium Growth',
+      price: 'Custom',
+      users: 'Unlimited Users',
+      desc: 'Full power for large salons & multi-location',
+      features: ['Everything in Premium', 'Expense Tracking', 'Advanced Payroll', 'Sliding Scale Commission', 'Commission Exceptions', 'Overtime Rules', '5,000 Texts / 20,000 Emails per month'],
+      badge: 'ENTERPRISE'
     }
+  ];
+
+  const addOns = [
+    { title: 'Website Builder', desc: 'Attract new clients with a custom website that highlights your services — no coding skills needed.' },
+    { title: 'Reputation Management', desc: 'Collect and display honest client feedback to polish your image and increase credibility.' },
+    { title: 'Text Marketing', desc: 'Boost visits, fill last-minute openings, and share promos with automated targeted messages.' },
+    { title: 'Two-Way Texting', desc: 'Send and receive messages instantly to handle client requests and keep your schedule on track.' }
   ];
 
   const whyChoose = [
