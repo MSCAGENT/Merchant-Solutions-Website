@@ -238,27 +238,36 @@ const SquarePOS = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+      {/* Hero Section with Video */}
+      <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden" data-testid="hero-video-section">
+        {heroVideos.map((src, i) => (
+          <video
+            key={i}
+            ref={i === 0 ? video1Ref : video2Ref}
+            autoPlay={i === 0}
+            muted
+            playsInline
+            onEnded={handleVideoEnded}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === activeVideo ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <source src={src} type="video/mp4" />
+          </video>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-blue-900/50" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg" data-testid="hero-h1">
               Square Point of Sale Systems
             </h1>
-            
-            <p className="text-xl text-purple-600 font-semibold mb-4">
+            <p className="text-xl text-purple-200 font-semibold mb-4">
               Simple, Powerful POS for Every Business
             </p>
-            
-            <div className="text-lg text-gray-700 space-y-4 mb-8">
-              <p>
-                Accept payments, manage inventory, and grow your business with Square's all-in-one point of sale platform.
-              </p>
-              <p>
-                Start free with no monthly fees, or upgrade for advanced features. Hardware options for every setup.
-              </p>
-            </div>
-
+            <p className="text-lg text-purple-100 mb-4">
+              Accept payments, manage inventory, and grow your business with Square's all-in-one point of sale platform.
+            </p>
+            <p className="text-base text-purple-200/80 mb-8">
+              Start free with no monthly fees, or upgrade for advanced features. Hardware options for every setup.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-get-started-btn">
@@ -266,7 +275,7 @@ const SquarePOS = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" data-testid="hero-demo-btn">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-demo-btn">
                   Request a Demo
                 </Button>
               </Link>
