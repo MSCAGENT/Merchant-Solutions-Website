@@ -71,6 +71,7 @@ function App() {
           <Route path="/dental-payment-processing-emr-integration" element={<DentalPractices />} />
           <Route path="/industries/dental" element={<DentalPractices />} />
           <Route path="/medical-clinic-payment-processing" element={<MedicalClinics />} />
+          <Route path="/medical-payment-processing-emr-integration" element={<MedicalClinics />} />
           <Route path="/industries/medical-clinics" element={<MedicalClinics />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           
