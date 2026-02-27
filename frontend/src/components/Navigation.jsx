@@ -35,6 +35,7 @@ const Navigation = () => {
         { label: 'Dental Practices', path: '/dental-payment-processing-emr-integration' },
         { label: 'Medical Clinics', path: '/industries/medical-clinics' },
         { label: 'High-Risk Businesses', path: '/high-risk-merchant-services' },
+        { label: 'Salon & Spa', path: '/salon-spa-payment-processing' },
         { label: 'Specialty Merchants', path: '/industries/specialty-merchants' }
       ]
     },
