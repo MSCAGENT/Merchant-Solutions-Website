@@ -118,7 +118,7 @@ const ATMsSolution = () => {
     'Pre-programmed and ready to use',
     'Free transaction processing',
     'Surcharge passed to cardholder',
-    'No hidden costs or contracts',
+    'No hidden costs (purchase program)',
     'No monthly minimums',
     '100% surcharge revenue (if owned outright)'
   ];
