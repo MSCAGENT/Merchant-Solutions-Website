@@ -65,7 +65,7 @@ const ATMsSolution = () => {
       desc: 'If you have a high-traffic establishment, we\'ll put one of our ATMs in your location for free, take care of everything, and pay you for it. The full-service ATM placement is a completely hands-off, hassle-free program with no financial commitment, making it our most popular option.',
       features: ['No equipment cost', 'Free installation & setup', 'We handle cash loading', 'We handle all maintenance', 'You earn passive revenue', 'No contracts or commitments'],
       highlight: 'Most Popular',
-      image: 'https://images.unsplash.com/photo-1748772698380-967678204925?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800'
+      image: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/qd0z1nkf_ATM%20advert.jpg'
     },
     {
       icon: Handshake,
@@ -74,7 +74,7 @@ const ATMsSolution = () => {
       desc: 'If you purchase 50% and manage the ATM, you\'ll keep 50% of surcharge revenue after processing fees. Our merchant-partnership ATM program is ideal for business owners with sufficient capital and time to manage and vault the terminal, offering a great opportunity to increase revenue at your location.',
       features: ['50% equipment investment', '50% surcharge revenue share', 'You manage and vault', 'Processing included', 'Higher revenue per transaction', 'Ideal for hands-on owners'],
       highlight: 'Best ROI',
-      image: 'https://images.unsplash.com/photo-1771527253774-34c5c2860fee?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800'
+      image: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/cbm156z1_ATMW-NH-Halo-2-2.jpg'
     },
     {
       icon: DollarSign,
@@ -83,7 +83,7 @@ const ATMsSolution = () => {
       desc: 'If you purchase, load, and manage the ATM, you\'ll keep 100% of surcharge revenue after processing fees. Our merchant-owned ATM program is ideal for business owners with sufficient capital, offering a great opportunity to increase revenue at your location.',
       features: ['Full ATM ownership', '100% surcharge revenue', 'You load and manage cash', 'Free transaction processing', 'No hidden fees or minimums', 'Maximum revenue potential'],
       highlight: 'Full Ownership',
-      image: 'https://images.unsplash.com/photo-1575052967428-8eec55bc7f13?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800'
+      image: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/tk3s9pxa_download.jpg'
     }
   ];
 
@@ -259,8 +259,8 @@ const ATMsSolution = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="https://images.pexels.com/photos/34055713/pexels-photo-34055713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="ATM machine installed at retail business location"
+                src="https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/x51rj05d_GettyImages-1218865703_3593FC_A_ADOBERGB-1024x704.jpg"
+                alt="Two friends using ATM machine on city street"
                 className="w-full h-[420px] object-cover"
               />
             </div>
