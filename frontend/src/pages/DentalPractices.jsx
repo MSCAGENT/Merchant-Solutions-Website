@@ -183,15 +183,19 @@ const DentalPractices = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/bpqzr73d_Dental.mp4" type="video/mp4" />
-        </video>
+        {heroVideos.map((src, i) => (
+          <video
+            key={i}
+            ref={i === 0 ? video1Ref : video2Ref}
+            autoPlay={i === 0}
+            muted
+            playsInline
+            onEnded={handleVideoEnded}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === activeVideo ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <source src={src} type="video/mp4" />
+          </video>
+        ))}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-blue-900/50" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl">
