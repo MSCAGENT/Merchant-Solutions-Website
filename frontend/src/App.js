@@ -42,6 +42,7 @@ import DentalPractices from "./pages/DentalPractices";
 import MedicalClinics from "./pages/MedicalClinics";
 import HighRiskMerchant from "./pages/HighRiskMerchant";
 import SalonSpa from "./pages/SalonSpa";
+import DaySmartSalon from "./pages/DaySmartSalon";
 
 function App() {
   return (
