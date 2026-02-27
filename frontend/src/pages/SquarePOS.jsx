@@ -914,6 +914,90 @@ const SquarePOS = () => {
         </div>
       </section>
 
+      {/* Zero Down Hardware Program */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50" data-testid="zero-down-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Want to Get Your Square System <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Free of Charge?</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Through our <strong>Square Subscription Placement Program</strong>, you may qualify to receive your hardware at no upfront cost.
+              </p>
+              <p className="text-lg text-gray-700 font-semibold mb-6">Here's how it works:</p>
+
+              <div className="space-y-5 mb-8">
+                <div className="flex items-start gap-4 bg-white border-2 border-gray-200 rounded-xl p-5 shadow-sm">
+                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">1</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">Create Your Account</h3>
+                    <p className="text-sm text-gray-600">
+                      <a href="https://app.squareup.com/signup/en-us?signup_token=8765F2232B" target="_blank" rel="noopener" className="text-purple-600 underline font-medium">Create an account on our Square page</a>, then speak to an associate requesting to enter the Subscription Reimbursement Offer and sign the required document.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-white border-2 border-gray-200 rounded-xl p-5 shadow-sm">
+                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">2</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">Choose Your Hardware</h3>
+                    <p className="text-sm text-gray-600">Select a Square Terminal or Square Station with iPad setup.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-white border-2 border-gray-200 rounded-xl p-5 shadow-sm">
+                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">3</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">Meet Volume Requirement</h3>
+                    <p className="text-sm text-gray-600">Process <strong>$10,000</strong> within 60 days for a Square Terminal.</p>
+                    <p className="text-sm text-gray-600">Process <strong>$30,000</strong> within 60 days for a Square Station or Stand with iPad.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-white border-2 border-gray-200 rounded-xl p-5 shadow-sm">
+                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">4</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">Get Reimbursed</h3>
+                    <p className="text-sm text-gray-600">Once volume requirements are met and 30 days of processing history is completed, we reimburse your hardware cost.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-white border-2 border-gray-200 rounded-xl p-5 shadow-sm">
+                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">5</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">Stay on the Subscription Plan</h3>
+                    <p className="text-sm text-gray-600">Continue processing under the agreed-upon subscription program with Merchant Solutions Corp & Square.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-sm text-gray-500 italic mb-6">
+                This program is designed for active businesses that are confident in their monthly processing volume and want to reduce upfront costs to switch.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="https://app.squareup.com/signup/en-us?signup_token=8765F2232B" target="_blank" rel="noopener">
+                  <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-5" data-testid="zero-down-create-btn">
+                    Create an Account
+                  </Button>
+                </a>
+                <Button onClick={() => setShowCalendly(true)} variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-6 py-5" data-testid="zero-down-call-btn">
+                  Book a Call
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/g78enios_ZERO%20DOWN.jpg"
+                alt="Zero Down Square Hardware Subscription Placement Program"
+                className="w-full max-w-lg rounded-2xl shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* We Handle the Setup */}
       <section className="py-20 bg-gray-50" data-testid="setup-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
