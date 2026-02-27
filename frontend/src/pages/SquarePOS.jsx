@@ -566,12 +566,30 @@ const SquarePOS = () => {
           </div>
 
           {/* Product Lineup Strip */}
-          <div className="mb-16" data-testid="hardware-lineup">
+          <div className="mb-8" data-testid="hardware-lineup">
             <img 
               src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/gc4o69ds_PD07013_USEN_Image-need_help_choosing.png" 
               alt="Square Hardware Lineup - Handheld, Terminal, Register, Stand, Kiosk, Reader, Accessories, Hardware Kits" 
               className="w-full max-w-5xl mx-auto object-contain"
             />
+          </div>
+
+          {/* Heartbeat CTA */}
+          <div className="text-center mb-16">
+            <a href="https://app.squareup.com/signup/en-us?signup_token=8765F2232B" target="_blank" rel="noopener">
+              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-10 py-6 shadow-lg animate-[heartbeat_1.5s_ease-in-out_infinite]" data-testid="lineup-create-account-btn">
+                Create an Account
+              </Button>
+            </a>
+            <style>{`
+              @keyframes heartbeat {
+                0%, 100% { transform: scale(1); }
+                15% { transform: scale(1.08); }
+                30% { transform: scale(1); }
+                45% { transform: scale(1.05); }
+                60% { transform: scale(1); }
+              }
+            `}</style>
           </div>
           
           {/* Product Cards Grid - 2 rows of 4 */}
