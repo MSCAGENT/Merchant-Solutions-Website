@@ -65,7 +65,7 @@ const ATMsSolution = () => {
       desc: 'If you have a high-traffic establishment, we\'ll put one of our ATMs in your location for free, take care of everything, and pay you for it. The full-service ATM placement is a completely hands-off, hassle-free program with no financial commitment, making it our most popular option.',
       features: ['No equipment cost', 'Free installation & setup', 'We handle cash loading', 'We handle all maintenance', 'You earn passive revenue', 'No contracts or commitments'],
       highlight: 'Most Popular',
-      image: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/qd0z1nkf_ATM%20advert.jpg'
+      image: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/zuhq9l74_Sixt%20ATM.jpg'
     },
     {
       icon: Handshake,
@@ -74,7 +74,7 @@ const ATMsSolution = () => {
       desc: 'If you purchase 50% and manage the ATM, you\'ll keep 50% of surcharge revenue after processing fees. Our merchant-partnership ATM program is ideal for business owners with sufficient capital and time to manage and vault the terminal, offering a great opportunity to increase revenue at your location.',
       features: ['50% equipment investment', '50% surcharge revenue share', 'You manage and vault', 'Processing included', 'Higher revenue per transaction', 'Ideal for hands-on owners'],
       highlight: 'Best ROI',
-      image: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/cbm156z1_ATMW-NH-Halo-2-2.jpg'
+      image: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/qxrh7knn_unnamed.jpg'
     },
     {
       icon: DollarSign,
