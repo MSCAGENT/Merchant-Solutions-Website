@@ -646,7 +646,7 @@ const SquarePOS = () => {
                   <div className="bg-purple-50 border border-purple-100 rounded-lg px-3 py-2 mb-4">
                     <p className="text-xs text-purple-700"><span className="font-semibold">Great for:</span> {product.greatFor}</p>
                   </div>
-                  <a href="https://app.squareup.com/signup/en-us?signup_token=8765F2232B" target="_blank" rel="noopener noreferrer">
+                  <a href="https://app.squareup.com/signup/en-us?signup_token=8765F2232B" target="_blank" rel="noopener">
                     <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm" data-testid={`hardware-cta-${i}`}>
                       Create an Account
                     </Button>
