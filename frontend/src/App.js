@@ -93,6 +93,8 @@ function App() {
           <Route path="/pos/retail-pos" element={<POSHardware />} />
           <Route path="/pos/qsr-pos" element={<POSHardware />} />
           <Route path="/pos/self-ordering-kiosk" element={<POSHardware />} />
+          <Route path="/retail-software/daysmart-salon" element={<DaySmartSalon />} />
+          <Route path="/pos/daysmart-salon" element={<DaySmartSalon />} />
           
           {/* Gateway Routes */}
           <Route path="/gateway/payments-gateway" element={<MSCGateway />} />
