@@ -490,7 +490,7 @@ const HighRiskMerchant = () => {
             Stop Getting Declined. Start Processing.
           </h2>
           <p className="text-xl text-purple-200 mb-4">
-            Online Gambling. Peptides. Prop Firms. CBD & Kratom.
+            Online Gambling. Peptides. Prop Firms. CBD & Kratom. Dating. Marketplaces. Free Trial. Pharmacy.
           </p>
           <p className="text-lg text-gray-400 mb-8">
             Merchant Solutions Corp provides the banking relationships, technology, and support to keep your high risk business processing.
