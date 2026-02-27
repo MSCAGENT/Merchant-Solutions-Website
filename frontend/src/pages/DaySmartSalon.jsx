@@ -200,24 +200,35 @@ const DaySmartSalon = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(168,85,247,0.4) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(236,72,153,0.3) 0%, transparent 50%)' }} />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm md:text-base uppercase tracking-widest text-purple-400 font-semibold mb-4">Salon Management Software & POS</p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="hero-h1">
-            All-in-One Salon Business Software for Appointments, Payments & Growth
-          </h1>
-          <p className="text-lg text-purple-200 mb-4 max-w-3xl mx-auto">
-            DaySmart Salon is a cloud-based salon management platform designed to help salon owners streamline operations, automate scheduling, accept payments, and grow revenue — all from one system.
-          </p>
-          <p className="text-base text-purple-300/70 mb-8">
-            Trusted by hair salons, barbershops, spas, and beauty studios of every size.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-trial-btn">
-              Start Your Free Trial
-            </Button>
-            <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-demo-btn">
-              Request a Demo
-            </Button>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <p className="text-sm md:text-base uppercase tracking-widest text-purple-400 font-semibold mb-4">Salon Management Software & POS</p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="hero-h1">
+                All-in-One Salon Business Software for Appointments, Payments & Growth
+              </h1>
+              <p className="text-lg text-purple-200 mb-4 max-w-3xl mx-auto lg:mx-0">
+                DaySmart Salon is a cloud-based salon management platform designed to help salon owners streamline operations, automate scheduling, accept payments, and grow revenue — all from one system.
+              </p>
+              <p className="text-base text-purple-300/70 mb-8">
+                Trusted by hair salons, barbershops, spas, and beauty studios of every size.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-trial-btn">
+                  Start Your Free Trial
+                </Button>
+                <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-demo-btn">
+                  Request a Demo
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/1wft6s2h_Salon_Homepage-Heros_1466x928_Tech.f1690820328.webp"
+                alt="DaySmart Salon management software with scheduling, payments, and business tools"
+                className="w-full max-w-lg object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
