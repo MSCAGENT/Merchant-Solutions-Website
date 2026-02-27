@@ -579,25 +579,25 @@ const SquarePOS = () => {
             {[
               {
                 name: 'Square Handheld',
-                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/7a7e6d4a371b2724f9367a7c3a713ea21a1ee0ac9f917dade7a32e86f5706dca.png',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/37ym419s_PD07019_USEN_Image-v2-mar-2025.webp',
                 desc: 'Compact mobile POS with built-in touchscreen and card reader. Accept payments anywhere on the floor or on the go.',
                 greatFor: 'Tableside ordering, mobile vendors, pop-up shops'
               },
               {
                 name: 'Square Terminal',
-                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/07212342b17b90c470d3fa3427308297346961a67f9e257b86e2b051aff39927.png',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/ec90y43v_PD07056_-_USEN_terminal.png',
                 desc: 'Portable all-in-one device with touchscreen, card reader, and built-in receipt printer. No phone or tablet needed.',
                 greatFor: 'Small retail, salons, delivery, service providers'
               },
               {
                 name: 'Square Register',
-                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/154b83f9005b0063e458b4fa62ad6f07e07473522499eb4f6309db7401464c6d.png',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/mwus5xr7_Square_Register__2nd_generation__undocked.png',
                 desc: 'Powerful dual-screen POS system with a large merchant display and customer-facing screen for seamless checkout.',
                 greatFor: 'Full-service retail, restaurants, multi-location brands'
               },
               {
                 name: 'Square Stand',
-                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/bc26708ccce43e1bfe50a2f1fbd798883b4fda497287a1775527b7aa9e59d952.png',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/t7to78ee_PD07012_Square_Stand_Fallback-edited.webp',
                 desc: 'Transform your iPad into a complete countertop POS with an integrated contactless and chip card reader.',
                 greatFor: 'Retail counters, cafes, quick-service restaurants'
               },
@@ -609,7 +609,7 @@ const SquarePOS = () => {
               },
               {
                 name: 'Square Reader',
-                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/ed46876cb141b255af84dd1fba62fdaa2a51297c61b1638d0795a53f5d16cbbb.png',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/41zu2cr9_images.png',
                 desc: 'Compact wireless reader for contactless, chip, and magstripe payments. Connects via Bluetooth to your phone or tablet.',
                 greatFor: 'Markets, food trucks, mobile sellers, pop-ups'
               },
