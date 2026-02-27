@@ -38,6 +38,7 @@ import SquarePOS from "./pages/SquarePOS";
 import IngenicoTerminals from "./pages/IngenicoTerminals";
 import Careers from "./pages/Careers";
 import ISVPartnerships from "./pages/ISVPartnerships";
+import DentalPractices from "./pages/DentalPractices";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
           <Route path="/restaurant-payment-processing-florida" element={<Restaurants />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="/industries/chiropractors" element={<Chiropractors />} />
+          <Route path="/dental-payment-processing-emr-integration" element={<DentalPractices />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           
           {/* POS & Hardware Routes */}
