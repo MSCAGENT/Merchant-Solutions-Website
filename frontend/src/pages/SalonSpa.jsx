@@ -233,6 +233,10 @@ const SalonSpa = () => {
     {
       question: 'Can I manage multiple salon locations from one system?',
       answer: 'Yes. DaySmart Salon supports multi-location management from a single dashboard, allowing you to oversee scheduling, staff, reporting, and client data across all your locations. Clover and Square also offer multi-location tools in their premium plans.'
+    },
+    {
+      question: 'If I already use DaySmart or Clover, can I switch just my processing to Merchant Solutions Corp?',
+      answer: 'No. We require merchants to start with us from the beginning. This allows us to build the right pricing plan, understand your full business model, configure hardware and software correctly, plan installation properly, train your staff the right way, and provide long-term support. We do not step in halfway. We onboard your merchant account from the start so everything is structured correctly. If you are currently with another provider and not receiving the support you expected, call us at (888) 407-8886. To move forward, we do require full merchant account boarding with Merchant Solutions Corp so we can deliver proper installation, training, and ongoing service.'
     }
   ];
 
