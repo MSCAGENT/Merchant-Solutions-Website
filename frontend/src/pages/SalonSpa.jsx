@@ -690,16 +690,12 @@ const SalonSpa = () => {
             Merchant Solutions Corp provides nationwide salon POS deployment with hands-on onboarding, staff training, and long-term support for hair salons, nail salons, skin clinics, and independent beauty professionals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6" data-testid="cta-quote-btn">
-                Get a Salon Quote
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="cta-demo-btn">
-                Book a Demo
-              </Button>
-            </Link>
+            <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6" data-testid="cta-quote-btn">
+              Get a Salon Quote
+            </Button>
+            <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="cta-demo-btn">
+              Book a Demo
+            </Button>
           </div>
         </div>
       </section>
