@@ -798,11 +798,24 @@ const SquarePOS = () => {
 
           {/* Integrations */}
           <div className="mt-16" data-testid="integrations-section">
-            <h3 className="text-xl font-bold text-gray-900 text-center mb-6">Integrations Include:</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {integrations.map((integration, index) => (
-                <div key={index} className="bg-gray-50 border-2 border-gray-200 hover:border-purple-600 rounded-lg px-5 py-2.5 text-gray-700 font-medium transition-all duration-300 text-sm">
-                  {integration}
+            <h3 className="text-xl font-bold text-gray-900 text-center mb-8">Integrations Include:</h3>
+            <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+              {[
+                { name: 'QuickBooks', logo: 'https://cdn.simpleicons.org/quickbooks/999999' },
+                { name: 'Xero', logo: 'https://cdn.simpleicons.org/xero/999999' },
+                { name: 'WooCommerce', logo: 'https://cdn.simpleicons.org/woocommerce/999999' },
+                { name: 'Wix', logo: 'https://cdn.simpleicons.org/wix/999999' },
+                { name: 'DoorDash', logo: 'https://cdn.simpleicons.org/doordash/999999' },
+                { name: 'Uber Eats', logo: 'https://cdn.simpleicons.org/ubereats/999999' },
+                { name: 'Mailchimp', logo: 'https://cdn.simpleicons.org/mailchimp/999999' },
+                { name: 'Homebase', logo: 'https://cdn.simpleicons.org/homebase/999999' },
+                { name: 'TSheets', logo: 'https://cdn.simpleicons.org/clockify/999999' }
+              ].map((item, index) => (
+                <div key={index} className="flex flex-col items-center gap-2 group">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 group-hover:border-purple-400 transition-colors duration-300 p-2.5">
+                    <img src={item.logo} alt={item.name} className="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <span className="text-xs text-gray-500 font-medium group-hover:text-purple-600 transition-colors duration-300">{item.name}</span>
                 </div>
               ))}
             </div>
