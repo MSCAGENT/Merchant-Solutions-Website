@@ -494,7 +494,16 @@ const SquarePOS = () => {
                   <div>
                     <div className="flex items-center gap-2">
                       <span className={`text-xs font-mono ${isFeatured ? 'text-purple-200' : 'text-gray-400'}`}>0{i + 1}</span>
-                      <h3 className={`font-bold text-sm ${isFeatured ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
+                      {step.link ? (
+                        <a href={step.link} target="_blank" rel="noopener">
+                          <h3 className="font-bold text-sm text-gray-900 relative inline-block">
+                            <span className="relative z-10">{step.title}</span>
+                            <span className="absolute bottom-0 left-0 h-[45%] w-full bg-yellow-300 animate-[highlighter_3s_ease-in-out_infinite] origin-left" />
+                          </h3>
+                        </a>
+                      ) : (
+                        <h3 className={`font-bold text-sm ${isFeatured ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
+                      )}
                     </div>
                     <p className={`text-xs mt-1 ${isFeatured ? 'text-purple-100' : 'text-gray-500'}`}>{step.desc}</p>
                     {isFeatured && (
