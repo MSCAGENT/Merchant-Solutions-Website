@@ -26,7 +26,14 @@ import {
   GraduationCap,
   Rocket,
   ChevronRight,
-  Search
+  Search,
+  UserPlus,
+  Phone,
+  Tag,
+  Zap,
+  Timer,
+  HeartHandshake,
+  FileCheck
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
