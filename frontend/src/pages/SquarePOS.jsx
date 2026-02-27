@@ -1086,6 +1086,17 @@ const SquarePOS = () => {
           </div>
         </div>
       </section>
+      </section>
+
+      {/* Calendly Modal */}
+      {showCalendly && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowCalendly(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setShowCalendly(false)} className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors" data-testid="calendly-modal-close">&#x2715;</button>
+            <div className="calendly-inline-widget w-full h-full" data-url="https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=5700ff" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
