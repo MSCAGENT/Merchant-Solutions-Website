@@ -243,8 +243,8 @@ const ATMsSolution = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
-                  <div className="rounded-2xl overflow-hidden shadow-lg">
-                    <img src={program.image} alt={program.title} className="w-full h-[380px] object-cover" />
+                  <div className="rounded-2xl overflow-hidden shadow-lg bg-gray-50 flex items-center justify-center">
+                    <img src={program.image} alt={program.title} className="w-full h-[380px] object-contain p-4" />
                   </div>
                 </div>
               </div>
