@@ -369,29 +369,54 @@ const DaySmartSalon = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Flexible Pricing Options</h2>
-            <p className="text-lg text-gray-500">DaySmart offers tiered plans to fit salons of all sizes.</p>
+            <p className="text-lg text-gray-500">DaySmart offers tiered plans to fit salons of all sizes. All plans include a 14-day free trial.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+          {/* Plan Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
             {pricingPlans.map((plan, i) => (
-              <Card key={i} className={`border-2 transition-all duration-300 relative ${plan.badge ? 'border-purple-600 shadow-xl scale-[1.03]' : 'hover:border-purple-500 hover:shadow-lg'}`}>
-                <CardContent className="p-7">
+              <Card key={i} className={`border-2 transition-all duration-300 relative ${plan.badge === 'MOST POPULAR' ? 'border-purple-600 shadow-xl lg:scale-[1.04] z-10' : plan.badge === 'ENTERPRISE' ? 'border-gray-800 bg-gray-900 text-white' : 'hover:border-purple-500 hover:shadow-lg'}`}>
+                <CardContent className="p-5">
                   {plan.badge && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-bold px-4 py-1 rounded-full">{plan.badge}</span>
+                    <span className={`absolute -top-3 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold px-3 py-0.5 rounded-full ${plan.badge === 'ENTERPRISE' ? 'bg-gray-700' : 'bg-gradient-to-r from-purple-600 to-pink-500'}`}>{plan.badge}</span>
                   )}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-sm text-gray-500 mb-5">{plan.desc}</p>
-                  <ul className="space-y-2.5 mb-6">
+                  <h3 className={`text-lg font-bold mb-1 ${plan.badge === 'ENTERPRISE' ? 'text-white' : 'text-gray-900'}`}>{plan.name}</h3>
+                  <div className="mb-2">
+                    <span className={`text-3xl font-bold ${plan.badge === 'ENTERPRISE' ? 'text-purple-400' : 'text-purple-600'}`}>{plan.price}</span>
+                    {plan.price !== 'Custom' && <span className={`text-sm ${plan.badge === 'ENTERPRISE' ? 'text-gray-400' : 'text-gray-500'}`}>/month</span>}
+                  </div>
+                  <p className={`text-xs font-semibold mb-1 ${plan.badge === 'ENTERPRISE' ? 'text-purple-300' : 'text-purple-600'}`}>{plan.users}</p>
+                  <p className={`text-xs mb-4 ${plan.badge === 'ENTERPRISE' ? 'text-gray-400' : 'text-gray-500'}`}>{plan.desc}</p>
+                  <ul className="space-y-2 mb-4">
                     {plan.features.map((f, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                        <span className="text-gray-700">{f}</span>
+                      <li key={idx} className="flex items-start gap-1.5 text-xs">
+                        <CheckCircle className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${plan.badge === 'ENTERPRISE' ? 'text-purple-400' : 'text-purple-600'}`} />
+                        <span className={plan.badge === 'ENTERPRISE' ? 'text-gray-300' : 'text-gray-700'}>{f}</span>
                       </li>
                     ))}
                   </ul>
-                  <p className="text-xs text-gray-400 border-t pt-3">All plans include online booking, scheduling, and payment processing.</p>
+                  <Button onClick={() => setShowQuoteModal(true)} className={`w-full text-xs ${plan.badge === 'ENTERPRISE' ? 'bg-purple-600 hover:bg-purple-700 text-white' : plan.badge === 'MOST POPULAR' ? 'bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white' : 'bg-purple-600 hover:bg-purple-700 text-white'}`}>
+                    {plan.price === 'Custom' ? 'Contact Us' : 'Start Free Trial'}
+                  </Button>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Additional user pricing note */}
+          <p className="text-center text-xs text-gray-400 mt-4">Additional users available at $9/month each on eligible plans.</p>
+
+          {/* Add-Ons */}
+          <div className="mt-14">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Plan Add-Ons</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {addOns.map((addon, i) => (
+                <div key={i} className="bg-purple-50 border border-purple-100 rounded-xl p-5 hover:border-purple-300 transition-colors duration-300">
+                  <h4 className="font-bold text-gray-900 mb-2 text-sm">{addon.title}</h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">{addon.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
