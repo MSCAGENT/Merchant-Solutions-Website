@@ -566,22 +566,12 @@ const SquarePOS = () => {
           </div>
 
           {/* Product Lineup Strip */}
-          <div className="flex justify-center gap-6 md:gap-10 mb-16 overflow-x-auto pb-4 px-4" data-testid="hardware-lineup">
-            {[
-              { name: 'Handheld', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/7a7e6d4a371b2724f9367a7c3a713ea21a1ee0ac9f917dade7a32e86f5706dca.png' },
-              { name: 'Terminal', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/07212342b17b90c470d3fa3427308297346961a67f9e257b86e2b051aff39927.png' },
-              { name: 'Register', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/154b83f9005b0063e458b4fa62ad6f07e07473522499eb4f6309db7401464c6d.png' },
-              { name: 'Stand', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/bc26708ccce43e1bfe50a2f1fbd798883b4fda497287a1775527b7aa9e59d952.png' },
-              { name: 'Kiosk', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/f5d7e7cd15bed63198c1bbe32f64ea04743b448ac4dd5e1d3ff7b3404fe3aa55.png' },
-              { name: 'Reader', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/ed46876cb141b255af84dd1fba62fdaa2a51297c61b1638d0795a53f5d16cbbb.png' }
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center flex-shrink-0 group cursor-pointer">
-                <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
-                  <img src={item.img} alt={`Square ${item.name}`} className="max-w-full max-h-full object-contain" />
-                </div>
-                <span className="text-xs md:text-sm text-gray-600 font-medium group-hover:text-purple-600 transition-colors">{item.name}</span>
-              </div>
-            ))}
+          <div className="mb-16" data-testid="hardware-lineup">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/zm0klhnn_image.png" 
+              alt="Square Hardware Lineup - Handheld, Terminal, Register, Stand, Kiosk, Reader, Accessories, Hardware Kits" 
+              className="w-full max-w-5xl mx-auto object-contain"
+            />
           </div>
           
           {/* Product Cards Grid - 2 rows of 4 */}
