@@ -246,53 +246,48 @@ const SalonSpa = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative w-full overflow-hidden bg-gradient-to-br from-pink-50 via-purple-50 to-white py-20 lg:py-28" data-testid="salon-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-sm uppercase tracking-widest text-purple-600 font-semibold mb-4">Salon & Spa Payment Processing</p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight" data-testid="hero-h1">
-                Booking, Payments & POS — <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">All in One Place</span>
-              </h1>
-              <p className="text-lg text-gray-600 mb-4">
-                Merchant Solutions Corp provides salon and spa businesses with fully integrated booking software, payment processing, and POS hardware — installed and supported nationwide.
-              </p>
-              <p className="text-base text-gray-500 mb-8">
-                We partner with <strong>DaySmart Salon</strong> for enterprise booking and management, and <strong>Clover</strong> and <strong>Square</strong> POS for small-to-midsize beauty businesses. From hair salons and nail salons to skin clinics and independent stylists.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-quote-btn">
-                  Get a Salon Quote
-                </Button>
-                <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" data-testid="hero-demo-btn">
-                  Book a Demo
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1764194790147-8a1e47a91a3f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbiUyMHJlY2VwdGlvbiUyMGNvdW50ZXIlMjBwYXltZW50JTIwc3lzdGVtJTIwcmV0YWlsfGVufDB8fHx8MTc3MjIxNDg4Nnww&ixlib=rb-4.1.0&q=85"
-                alt="Salon reception counter with POS payment system"
-                className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-xl"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100 hidden lg:block">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-gray-900">Authorized Dealer</p>
-                    <p className="text-xs text-gray-500">DaySmart + Clover + Square</p>
-                  </div>
-                </div>
-              </div>
+      {/* Hero Section with Video */}
+      <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden" data-testid="salon-hero">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/5kgs4h0v_Salon%20spa.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/75 via-purple-900/60 to-pink-900/50" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl">
+            <p className="text-sm md:text-base uppercase tracking-widest text-purple-300 font-semibold mb-4">Salon & Spa Payment Processing</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg" data-testid="hero-h1">
+              Booking, Payments & POS — <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">All in One Place</span>
+            </h1>
+            <p className="text-lg text-purple-100 mb-3 max-w-3xl mx-auto">
+              Merchant Solutions Corp provides salon and spa businesses with fully integrated booking software, payment processing, and POS hardware — installed and supported nationwide.
+            </p>
+            <p className="text-base text-purple-200/80 mb-8 max-w-2xl mx-auto">
+              DaySmart Salon for enterprise booking. Clover & Square POS for SMBs. From hair salons and nail salons to skin clinics and independent stylists.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-quote-btn">
+                Get a Salon Quote
+              </Button>
+              <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-demo-btn">
+                Book a Demo
+              </Button>
             </div>
           </div>
-          {/* Stats Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="py-10 bg-white" data-testid="stats-bar">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {heroStats.map((stat, i) => (
-              <div key={i} className="text-center bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+              <div key={i} className="text-center bg-gray-50 rounded-xl p-5 border border-gray-100">
                 <p className="text-2xl font-bold text-purple-600">{stat.value}</p>
                 <p className="text-sm text-gray-500">{stat.label}</p>
               </div>
