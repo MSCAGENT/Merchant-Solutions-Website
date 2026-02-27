@@ -68,6 +68,16 @@ const SquarePOS = () => {
   };
 
   useEffect(() => {
+    if (!showCalendly) return;
+    if (!document.querySelector('script[src*="calendly.com"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, [showCalendly]);
+
+  useEffect(() => {
     document.title = 'Square Point of Sale Systems | Authorized Square Dealer | Installation & Training Nationwide';
     const metaDesc = document.querySelector('meta[name="description"]');
     const content = 'Authorized Square dealer providing complete Square POS setup, installation, training, and ongoing support across all 50 U.S. states. Square Register, Terminal, Stand & Reader hardware with professional onboarding.';
