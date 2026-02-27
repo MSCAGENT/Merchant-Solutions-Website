@@ -405,9 +405,9 @@ const SalonSpa = () => {
                   <div className="bg-purple-50 border border-purple-100 rounded-lg px-4 py-3 mb-5">
                     <p className="text-xs text-purple-700"><span className="font-semibold">Best for:</span> {option.bestFor}</p>
                   </div>
-                  <Link to="/contact">
+                  <Link to={i === 0 ? '/contact' : i === 1 ? '/pos/clover' : '/pos/square'}>
                     <Button className={`w-full ${i === 0 ? 'bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600' : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700'} text-white`}>
-                      Get {option.name}
+                      {i === 0 ? 'Get' : 'Explore'} {option.name}
                     </Button>
                   </Link>
                 </CardContent>
