@@ -43,6 +43,7 @@ import MedicalClinics from "./pages/MedicalClinics";
 import HighRiskMerchant from "./pages/HighRiskMerchant";
 import SalonSpa from "./pages/SalonSpa";
 import DaySmartSalon from "./pages/DaySmartSalon";
+import SpecialtyMerchant from "./pages/SpecialtyMerchant";
 
 function App() {
   return (
