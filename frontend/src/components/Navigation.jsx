@@ -20,7 +20,7 @@ const Navigation = () => {
         { label: 'Loyalty & Rewards', path: '/solutions/loyalty-rewards' },
         { label: 'Gift Cards', path: '/solutions/gift-cards' },
         { label: 'Business Loans & Cash Advances', path: '/solutions/business-loans' },
-        { label: 'ATMs', path: '/solutions/atms' },
+        { label: 'ATM Solutions', path: '/solutions/atms' },
         { label: 'Payroll Services by ADP', path: '/solutions/payroll-services' },
         { label: 'IT Services', path: '/solutions/it-services' }
       ]
