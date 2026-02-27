@@ -40,6 +40,7 @@ import Careers from "./pages/Careers";
 import ISVPartnerships from "./pages/ISVPartnerships";
 import DentalPractices from "./pages/DentalPractices";
 import MedicalClinics from "./pages/MedicalClinics";
+import HighRiskMerchant from "./pages/HighRiskMerchant";
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function App() {
           <Route path="/medical-clinic-payment-processing" element={<MedicalClinics />} />
           <Route path="/medical-payment-processing-emr-integration" element={<MedicalClinics />} />
           <Route path="/industries/medical-clinics" element={<MedicalClinics />} />
+          <Route path="/high-risk-merchant-services" element={<HighRiskMerchant />} />
+          <Route path="/industries/high-risk" element={<HighRiskMerchant />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           
           {/* POS & Hardware Routes */}
