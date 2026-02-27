@@ -386,12 +386,16 @@ const DaySmartSalon = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button onClick={() => setShowQuoteModal(true)} className={`w-full text-xs ${plan.badge === 'ENTERPRISE' ? 'bg-purple-600 hover:bg-purple-700 text-white' : plan.badge === 'MOST POPULAR' ? 'bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white' : 'bg-purple-600 hover:bg-purple-700 text-white'}`}>
-                    {plan.price === 'Custom' ? 'Contact Us' : 'Start Free Trial'}
-                  </Button>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Contact Sales Button */}
+          <div className="mt-10">
+            <Button onClick={() => setShowDemoModal(true)} className="w-full max-w-3xl mx-auto block bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-lg py-6 shadow-lg" data-testid="pricing-contact-btn">
+              Contact Sales to Schedule a Demo
+            </Button>
           </div>
 
           {/* Additional user pricing note */}
