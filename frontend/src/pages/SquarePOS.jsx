@@ -46,6 +46,7 @@ import {
 
 const SquarePOS = () => {
   const [activeVideo, setActiveVideo] = useState(0);
+  const [showCalendly, setShowCalendly] = useState(false);
   const video1Ref = useRef(null);
   const video2Ref = useRef(null);
 
