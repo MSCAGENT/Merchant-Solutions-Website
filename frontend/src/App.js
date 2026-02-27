@@ -81,6 +81,8 @@ function App() {
           <Route path="/industries/high-risk" element={<HighRiskMerchant />} />
           <Route path="/salon-spa-payment-processing" element={<SalonSpa />} />
           <Route path="/industries/salon-spa" element={<SalonSpa />} />
+          <Route path="/specialty-merchant-payment-solutions" element={<SpecialtyMerchant />} />
+          <Route path="/industries/specialty-merchants" element={<SpecialtyMerchant />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           
           {/* POS & Hardware Routes */}
