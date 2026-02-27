@@ -1086,7 +1086,6 @@ const SquarePOS = () => {
           </div>
         </div>
       </section>
-      </section>
 
       {/* Calendly Modal */}
       {showCalendly && (
