@@ -557,37 +557,105 @@ const SquarePOS = () => {
         </div>
       </section>
 
-      {/* Hardware Options */}
+      {/* Hardware Options - Product Grid */}
       <section className="py-20 bg-gray-50" data-testid="hardware-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">Square Hardware Options</h2>
             <p className="text-lg text-gray-600">Choose the right Square POS hardware for your setup.</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {hardwareOptions.map((hardware, index) => {
-              const Icon = hardware.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-lg">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-7 w-7 text-purple-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-xl text-gray-900">{hardware.name}</h3>
-                        <p className="text-purple-600 font-medium mb-2">{hardware.type}</p>
-                        <p className="text-gray-600 mb-3">{hardware.desc}</p>
-                        <p className="text-sm text-gray-500"><strong>Best for:</strong> {hardware.bestFor}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+
+          {/* Product Lineup Strip */}
+          <div className="flex justify-center gap-6 md:gap-10 mb-16 overflow-x-auto pb-4 px-4" data-testid="hardware-lineup">
+            {[
+              { name: 'Handheld', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/7a7e6d4a371b2724f9367a7c3a713ea21a1ee0ac9f917dade7a32e86f5706dca.png' },
+              { name: 'Terminal', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/07212342b17b90c470d3fa3427308297346961a67f9e257b86e2b051aff39927.png' },
+              { name: 'Register', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/154b83f9005b0063e458b4fa62ad6f07e07473522499eb4f6309db7401464c6d.png' },
+              { name: 'Stand', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/bc26708ccce43e1bfe50a2f1fbd798883b4fda497287a1775527b7aa9e59d952.png' },
+              { name: 'Kiosk', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/f5d7e7cd15bed63198c1bbe32f64ea04743b448ac4dd5e1d3ff7b3404fe3aa55.png' },
+              { name: 'Reader', img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/ed46876cb141b255af84dd1fba62fdaa2a51297c61b1638d0795a53f5d16cbbb.png' }
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center flex-shrink-0 group cursor-pointer">
+                <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
+                  <img src={item.img} alt={`Square ${item.name}`} className="max-w-full max-h-full object-contain" />
+                </div>
+                <span className="text-xs md:text-sm text-gray-600 font-medium group-hover:text-purple-600 transition-colors">{item.name}</span>
+              </div>
+            ))}
           </div>
           
+          {/* Product Cards Grid - 2 rows of 4 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-testid="hardware-product-grid">
+            {[
+              {
+                name: 'Square Handheld',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/7a7e6d4a371b2724f9367a7c3a713ea21a1ee0ac9f917dade7a32e86f5706dca.png',
+                desc: 'Compact mobile POS with built-in touchscreen and card reader. Accept payments anywhere on the floor or on the go.',
+                greatFor: 'Tableside ordering, mobile vendors, pop-up shops'
+              },
+              {
+                name: 'Square Terminal',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/07212342b17b90c470d3fa3427308297346961a67f9e257b86e2b051aff39927.png',
+                desc: 'Portable all-in-one device with touchscreen, card reader, and built-in receipt printer. No phone or tablet needed.',
+                greatFor: 'Small retail, salons, delivery, service providers'
+              },
+              {
+                name: 'Square Register',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/154b83f9005b0063e458b4fa62ad6f07e07473522499eb4f6309db7401464c6d.png',
+                desc: 'Powerful dual-screen POS system with a large merchant display and customer-facing screen for seamless checkout.',
+                greatFor: 'Full-service retail, restaurants, multi-location brands'
+              },
+              {
+                name: 'Square Stand',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/bc26708ccce43e1bfe50a2f1fbd798883b4fda497287a1775527b7aa9e59d952.png',
+                desc: 'Transform your iPad into a complete countertop POS with an integrated contactless and chip card reader.',
+                greatFor: 'Retail counters, cafes, quick-service restaurants'
+              },
+              {
+                name: 'Square Kiosk',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/f5d7e7cd15bed63198c1bbe32f64ea04743b448ac4dd5e1d3ff7b3404fe3aa55.png',
+                desc: 'Self-service ordering station with a large vertical touchscreen. Customers browse, order, and pay independently.',
+                greatFor: 'QSR restaurants, food courts, high-traffic venues'
+              },
+              {
+                name: 'Square Reader',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/ed46876cb141b255af84dd1fba62fdaa2a51297c61b1638d0795a53f5d16cbbb.png',
+                desc: 'Compact wireless reader for contactless, chip, and magstripe payments. Connects via Bluetooth to your phone or tablet.',
+                greatFor: 'Markets, food trucks, mobile sellers, pop-ups'
+              },
+              {
+                name: 'Square Accessories',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/e15cc97d76714d3c2ab7cc6153910a0ab1426e68d60ee7176cdcedf3b7fb4ee0.png',
+                desc: 'Cash drawers, receipt printers, barcode scanners, kitchen display mounts, and more to complete your setup.',
+                greatFor: 'Any business needing peripheral hardware'
+              },
+              {
+                name: 'Square Bundles',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/i8vxg45b_MSC%20technician.png',
+                desc: 'Pre-configured hardware kits with terminal, printer, cash drawer, and accessories — shipped ready to use.',
+                greatFor: 'New businesses, full-store deployments, multi-location rollouts'
+              }
+            ].map((product, i) => (
+              <Card key={i} className="border-2 hover:border-purple-600 transition-all duration-300 hover:shadow-xl group" data-testid={`hardware-card-${i}`}>
+                <CardContent className="p-5">
+                  <div className="aspect-square bg-white rounded-xl mb-4 flex items-center justify-center overflow-hidden border border-gray-100">
+                    <img src={product.img} alt={product.name} className="w-full h-full object-contain p-3 transition-transform duration-300 group-hover:scale-105" style={{ mixBlendMode: 'multiply' }} />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{product.name}</h3>
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">{product.desc}</p>
+                  <div className="bg-purple-50 border border-purple-100 rounded-lg px-3 py-2 mb-4">
+                    <p className="text-xs text-purple-700"><span className="font-semibold">Great for:</span> {product.greatFor}</p>
+                  </div>
+                  <Link to="/contact">
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm" data-testid={`hardware-cta-${i}`}>
+                      Create an Account
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
           <div className="text-center mt-10">
             <Link to="/contact">
               <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-5 text-base" data-testid="hardware-pricing-btn">
