@@ -192,13 +192,18 @@ const HighRiskMerchant = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-gray-900">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1551822737-0a4066884606?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920"
-            alt="High risk merchant services"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
+        {heroImages.map((src, i) => (
+          <div
+            key={i}
+            className={`absolute inset-0 transition-opacity duration-[2000ms] ${i === activeSlide ? 'opacity-40' : 'opacity-0'}`}
+          >
+            <img
+              src={src}
+              alt={['Online gambling and casino', 'Proprietary trading firm', 'CBD dispensary'][i]}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-purple-900/70 to-gray-900/80" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl">
