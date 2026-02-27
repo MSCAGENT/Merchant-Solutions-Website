@@ -561,15 +561,10 @@ const SquarePOS = () => {
             {/* Visual */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/i8vxg45b_MSC%20technician.png"
-                alt="Technician installing Square POS terminal on-site"
-                className="w-full h-[380px] object-cover rounded-2xl"
+                src="https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/zpbb7xdh_square%20IT.png"
+                alt="MSC Square technician performing on-site network and POS installation"
+                className="w-full h-[400px] object-cover rounded-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-xl px-4 py-3">
-                <p className="text-gray-900 text-sm font-semibold">On-Site Installation by MSC Technicians</p>
-                <p className="text-gray-500 text-xs">Professional setup. Nationwide coverage.</p>
-              </div>
             </div>
           </div>
 
