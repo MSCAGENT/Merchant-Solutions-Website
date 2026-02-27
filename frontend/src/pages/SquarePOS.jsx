@@ -609,7 +609,7 @@ const SquarePOS = () => {
               },
               {
                 name: 'Square Reader',
-                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/41zu2cr9_images.png',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/86c3dd4fab05f7b9c0c6a6d60baa91b20e9c70a652ee85e9ae106722b53fccd1.png',
                 desc: 'Compact wireless reader for contactless, chip, and magstripe payments. Connects via Bluetooth to your phone or tablet.',
                 greatFor: 'Markets, food trucks, mobile sellers, pop-ups'
               },
