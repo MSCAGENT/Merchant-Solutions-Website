@@ -521,7 +521,7 @@ const DaySmartSalon = () => {
             </button>
             <div
               className="calendly-inline-widget w-full h-full"
-              data-url="https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=5700ff"
+              data-url="https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=a200ff"
             />
           </div>
         </div>
