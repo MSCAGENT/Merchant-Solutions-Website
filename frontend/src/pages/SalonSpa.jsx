@@ -626,8 +626,8 @@ const SalonSpa = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1764194790147-8a1e47a91a3f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbiUyMHJlY2VwdGlvbiUyMGNvdW50ZXIlMjBwYXltZW50JTIwc3lzdGVtJTIwcmV0YWlsfGVufDB8fHx8MTc3MjIxNDg4Nnww&ixlib=rb-4.1.0&q=85"
-                alt="Salon reception counter with Clover POS system for checkout"
+                src="https://images.unsplash.com/photo-1695527081848-1e46c06e6458?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwzfHxzYWxvbiUyMHNwYSUyMGludGVyaW9yJTIwbW9kZXJuJTIwYmVhdXR5JTIwdHJlYXRtZW50fGVufDB8fHx8MTc3MjIxNDQ4M3ww&ixlib=rb-4.1.0&q=85"
+                alt="Modern salon interior with stylist and client"
                 className="w-full h-[420px] object-cover rounded-2xl shadow-xl"
               />
               <div className="flex items-center gap-4 mt-6">
