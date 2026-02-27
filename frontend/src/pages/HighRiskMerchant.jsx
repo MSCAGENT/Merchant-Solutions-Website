@@ -533,7 +533,7 @@ const HighRiskMerchant = () => {
             <Link to="/restaurant-payment-processing-florida" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Restaurants</Link>
           </div>
           <p className="text-center text-sm text-gray-600">
-            Merchant Solutions Corp provides high risk merchant accounts and payment processing for online gambling, iGaming, sports betting, peptide suppliers, research chemicals, proprietary trading firms, funded trader programs, CBD retailers, kratom vendors, hemp-derived products, and other high risk verticals. We deliver chargeback prevention, multi-currency processing, gateway redundancy, and dedicated account management nationwide.
+            Merchant Solutions Corp provides high risk merchant accounts and payment processing for online gambling, iGaming, sports betting, peptide suppliers, research chemicals, proprietary trading firms, funded trader programs, CBD retailers, kratom vendors, hemp-derived products, online dating platforms, matchmaking services, multi-vendor marketplaces, negative option and free trial businesses, online pharmacies, telemedicine providers, and other high risk verticals. We deliver chargeback prevention, multi-currency processing, gateway redundancy, and dedicated account management nationwide.
           </p>
         </div>
       </section>
