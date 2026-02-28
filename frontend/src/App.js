@@ -44,6 +44,7 @@ import HighRiskMerchant from "./pages/HighRiskMerchant";
 import SalonSpa from "./pages/SalonSpa";
 import DaySmartSalon from "./pages/DaySmartSalon";
 import SpecialtyMerchant from "./pages/SpecialtyMerchant";
+import Exatouch from "./pages/Exatouch";
 
 function App() {
   return (
