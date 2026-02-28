@@ -47,6 +47,7 @@ const Navigation = () => {
         { label: 'Square POS', path: '/pos/square' },
         { label: 'DaySmart Salon', path: '/retail-software/daysmart-salon' },
         { label: 'Dejavoo Terminals', path: '/pos/dejavoo-terminals' },
+        { label: 'Exatouch POS', path: '/pos/exatouch' },
         { label: 'Ingenico Terminals', path: '/pos/ingenico-terminals' },
         { label: 'Restaurant POS', path: '/pos/restaurant-pos' },
         { label: 'Retail POS', path: '/pos/retail-pos' },
