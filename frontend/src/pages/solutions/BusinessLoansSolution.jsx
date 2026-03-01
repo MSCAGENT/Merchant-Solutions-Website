@@ -182,10 +182,15 @@ const BusinessLoansSolution = () => {
                       <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
                         <Icon className="h-7 w-7 text-purple-600" />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <h3 className="font-bold text-xl mb-2 text-gray-900">{option.title}</h3>
                         <p className="text-gray-600 mb-3">{option.desc}</p>
-                        <p className="text-purple-600 font-semibold">{option.amount}</p>
+                        <p className="text-purple-600 font-semibold mb-4">{option.amount}</p>
+                        <a href={option.applyUrl} target="_blank" rel="noopener noreferrer">
+                          <Button size="sm" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={`apply-btn-${index}`}>
+                            Apply Now
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </CardContent>
