@@ -436,7 +436,7 @@ const RetailSolutions = () => {
                 ))}
               </div>
               <div className="bg-blue-600/10 border border-blue-500/20 rounded-xl p-6 mt-6">
-                <p className="text-2xl font-bold text-indigo-300 mb-1">One system. One deposit.</p>
+                <p className="text-2xl font-bold text-blue-300 mb-1">One system. One deposit.</p>
                 <p className="text-slate-400">Clean reporting.</p>
               </div>
             </div>
