@@ -556,7 +556,7 @@ const Pricing = () => {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 bg-white" data-testid="info-section">
+      <section className="py-16 bg-purple-50" data-testid="info-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">How It Works</h2>
@@ -569,7 +569,7 @@ const Pricing = () => {
               { step: '3', title: 'Select Business Type', desc: 'Retail, Restaurant, Lodging, Ecomm, or B2B' },
               { step: '4', title: 'Payment Platform', desc: 'Matched to your software for seamless processing' }
             ].map((item, i) => (
-              <div key={i} className="text-center">
+              <div key={i} className="text-center bg-white rounded-xl p-5 shadow-sm border border-purple-100">
                 <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-purple-600 font-bold text-sm">{item.step}</span>
                 </div>
