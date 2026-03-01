@@ -358,6 +358,114 @@ const MSCTranzActionGateway = () => {
         </div>
       </section>
 
+      {/* Developer Docs Access */}
+      <section className="py-20 bg-white" data-testid="dev-docs-section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-10 text-center shadow-xl">
+            <div className="w-16 h-16 bg-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <Code className="h-8 w-8 text-purple-400" />
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-3">Developer Integration Portal</h2>
+            <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
+              Access our full API documentation, SDKs, and integration resources. Fill out the form below to request access to the development portal.
+            </p>
+
+            {devDocsGranted ? (
+              <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6" data-testid="dev-docs-access-granted">
+                <p className="text-emerald-400 font-semibold mb-3">Access Granted</p>
+                <a
+                  href="https://mscpayments.transactiongateway.com/merchants/resources/integration/integration_portal.php?tid=db3875e88814078b00473d03128ee2d9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-6 text-lg" data-testid="dev-docs-portal-btn">
+                    Open Integration Portal
+                  </Button>
+                </a>
+              </div>
+            ) : !showDevDocsForm ? (
+              <Button
+                size="lg"
+                onClick={() => setShowDevDocsForm(true)}
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-6 text-lg"
+                data-testid="dev-docs-request-btn"
+              >
+                Request Development Docs
+              </Button>
+            ) : (
+              <div className="bg-slate-800/60 border border-slate-700 rounded-xl p-6 max-w-lg mx-auto text-left" data-testid="dev-docs-form">
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-1">Full Name *</label>
+                    <input
+                      type="text"
+                      value={devFormData.name}
+                      onChange={(e) => setDevFormData({ ...devFormData, name: e.target.value })}
+                      className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="John Doe"
+                      data-testid="dev-docs-name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-1">Email Address *</label>
+                    <input
+                      type="email"
+                      value={devFormData.email}
+                      onChange={(e) => setDevFormData({ ...devFormData, email: e.target.value })}
+                      className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="john@company.com"
+                      data-testid="dev-docs-email"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-1">Company Name</label>
+                    <input
+                      type="text"
+                      value={devFormData.company}
+                      onChange={(e) => setDevFormData({ ...devFormData, company: e.target.value })}
+                      className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Company Inc."
+                      data-testid="dev-docs-company"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-1">Reason for Access</label>
+                    <textarea
+                      value={devFormData.reason}
+                      onChange={(e) => setDevFormData({ ...devFormData, reason: e.target.value })}
+                      className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2.5 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 h-20 resize-none"
+                      placeholder="Briefly describe your integration needs..."
+                      data-testid="dev-docs-reason"
+                    />
+                  </div>
+                  <div className="flex gap-3 pt-2">
+                    <Button
+                      onClick={() => {
+                        if (devFormData.name && devFormData.email) {
+                          setDevDocsGranted(true);
+                          setShowDevDocsForm(false);
+                        }
+                      }}
+                      className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                      data-testid="dev-docs-submit-btn"
+                    >
+                      Submit & Get Access
+                    </Button>
+                    <Button
+                      variant="outline"
+                      onClick={() => setShowDevDocsForm(false)}
+                      className="border-slate-600 text-slate-300 hover:bg-slate-700"
+                    >
+                      Cancel
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-yellow-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
