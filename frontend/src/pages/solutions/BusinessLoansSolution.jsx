@@ -34,25 +34,36 @@ const BusinessLoansSolution = () => {
       icon: DollarSign, 
       title: 'Merchant Cash Advance', 
       desc: 'Get a lump sum based on future sales. Repay automatically as a percentage of daily transactions.',
-      amount: '$5,000 - $500,000'
+      amount: '$5,000 - $500,000',
+      applyUrl: 'https://cashbuoy.biz/client/merchantsolutionscorporation/4352/'
     },
     { 
       icon: Building2, 
       title: 'Business Line of Credit', 
       desc: 'Access funds when you need them. Only pay interest on what you use.',
-      amount: '$10,000 - $250,000'
+      amount: '$10,000 - $250,000',
+      applyUrl: 'https://lp.lendio.com/partners-low-lf?source=MerchantSolutionsCorp&affiliate=3808303628&medium=SRP'
     },
     { 
       icon: FileText, 
       title: 'Working Capital Loans', 
       desc: 'Short-term financing for inventory, payroll, or expansion.',
-      amount: '$5,000 - $500,000'
+      amount: '$5,000 - $500,000',
+      applyUrl: 'https://lp.lendio.com/partners-low-lf?source=MerchantSolutionsCorp&affiliate=3808303628&medium=SRP'
     },
     { 
       icon: CreditCard, 
       title: 'Equipment Financing', 
       desc: 'Finance POS systems, kitchen equipment, or business tools.',
-      amount: '$5,000 - $150,000'
+      amount: '$5,000 - $150,000',
+      applyUrl: 'https://lp.lendio.com/partners-low-lf?source=MerchantSolutionsCorp&affiliate=3808303628&medium=SRP'
+    },
+    { 
+      icon: Briefcase, 
+      title: 'SBA Loans', 
+      desc: 'Government-backed loans with competitive rates and longer terms for qualified businesses.',
+      amount: '$25,000 - $5,000,000',
+      applyUrl: 'https://lp.lendio.com/partners-low-lf?source=MerchantSolutionsCorp&affiliate=3808303628&medium=SRP'
     }
   ];
 
