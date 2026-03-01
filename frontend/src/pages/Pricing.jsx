@@ -339,7 +339,7 @@ const Pricing = () => {
             {/* FISERV */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-fiserv">
               <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
-                <img src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bjpsdttr_CardConnect.png" alt="Fiserv" className="h-10 object-contain" />
+                <img src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bjpsdttr_CardConnect.png" alt="Fiserv" className="h-10 object-contain" style={{ mixBlendMode: 'screen' }} />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
