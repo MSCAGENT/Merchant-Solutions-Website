@@ -121,6 +121,7 @@ function App() {
           <Route path="/resources/pos-systems" element={<Resources />} />
           <Route path="/resources/high-risk-merchants" element={<Resources />} />
           <Route path="/resources/industry-guides" element={<Resources />} />
+          <Route path="/resources/pricing" element={<Pricing />} />
           
           {/* Company Routes */}
           <Route path="/company/about" element={<About />} />
