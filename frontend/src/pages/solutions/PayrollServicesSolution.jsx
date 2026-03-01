@@ -259,7 +259,7 @@ const PayrollServicesSolution = () => {
               </div>
               <p className="text-xl text-purple-600 font-medium mb-4">Seamless Time & Attendance</p>
               <p className="text-lg text-gray-600 mb-6">
-                Employees clock in and out directly from your itab POS system. Hours, tips, and breaks sync automatically to payroll—no double entry required.
+                Employees clock in and out directly from your itab POS system. Hours, tips, and breaks sync automatically to ADP payroll—no double entry required.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {itabIntegration.map((feature, index) => (
@@ -270,6 +270,79 @@ const PayrollServicesSolution = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clover Integration */}
+      <section className="py-20 bg-white" data-testid="clover-integration-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <Smartphone className="h-6 w-6 text-blue-600" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">Clover POS Integration</h2>
+              </div>
+              <p className="text-xl text-blue-600 font-medium mb-4">ADP Payroll Synced with Clover</p>
+              <p className="text-lg text-gray-600 mb-6">
+                Clover merchants benefit from built-in time clock features that sync directly with ADP payroll processing. Manage your workforce from the same system you process payments on.
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {cloverIntegration.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="clover-payroll-image">
+              <div className="text-center text-gray-400">
+                <Smartphone className="h-24 w-24 mx-auto mb-4 text-blue-300" />
+                <p className="text-sm">Clover Payroll Integration Image</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Square Native Payroll */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white" data-testid="square-payroll-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <Globe className="h-7 w-7 text-blue-400" />
+            </div>
+            <h2 className="text-3xl font-bold mb-3">Square Native Payroll</h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              Square offers payroll services natively through their application portal. For Square merchants, payroll is built right in—no third-party integration needed.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-slate-800/60 border border-slate-700/40 rounded-xl p-6 text-center">
+              <DollarSign className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+              <h3 className="font-bold text-white mb-1">Automated Payroll</h3>
+              <p className="text-slate-400 text-sm">Run payroll directly from the Square Dashboard with automatic tax calculations.</p>
+            </div>
+            <div className="bg-slate-800/60 border border-slate-700/40 rounded-xl p-6 text-center">
+              <Clock className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+              <h3 className="font-bold text-white mb-1">Built-In Time Cards</h3>
+              <p className="text-slate-400 text-sm">Employees clock in/out from Square POS. Hours flow to payroll automatically.</p>
+            </div>
+            <div className="bg-slate-800/60 border border-slate-700/40 rounded-xl p-6 text-center">
+              <FileText className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+              <h3 className="font-bold text-white mb-1">Tax Filing Included</h3>
+              <p className="text-slate-400 text-sm">Federal and state tax filings, W-2s, and 1099s handled by Square.</p>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/pos/square">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8" data-testid="square-payroll-link">
+                Learn More About Square
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
