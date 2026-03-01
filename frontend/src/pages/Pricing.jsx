@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { ArrowRight, CreditCard } from 'lucide-react';
+import { ArrowRight, CreditCard, Phone } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 const Pricing = () => {
@@ -113,9 +113,12 @@ const Pricing = () => {
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 40%, rgba(139,92,246,0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(168,85,247,0.2) 0%, transparent 50%)' }} />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" data-testid="hero-h1">
-            Transparent Pricing. <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">Your Choice.</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4" data-testid="hero-h1">
+            Transparent Pricing
           </h1>
+          <p className="text-2xl sm:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400 mb-6">
+            Fast Funding
+          </p>
           <p className="text-lg text-gray-600 mb-3 max-w-3xl mx-auto">
             Choose your rate structure, POS software, business type, and payment platform. We'll match you with the right merchant processing solution.
           </p>
@@ -336,7 +339,7 @@ const Pricing = () => {
             {/* FISERV */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-fiserv">
               <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
-                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/tuet7vuf_fiserve.png" alt="Fiserv" className="h-8 object-contain" />
+                <img src="https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/1868acbfd7623d5e2c70ec230702a9c29f1b7b941227a4b4f6fe5a67c9995fec.png" alt="Fiserv" className="h-8 object-contain brightness-200" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
@@ -369,7 +372,7 @@ const Pricing = () => {
             {/* EPX */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-epx">
               <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
-                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/9dw9w9xc_epx_logo_grey.jpg" alt="EPX" className="h-8 object-contain brightness-200" />
+                <img src="https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/7e74fe22022a6620c8f615b2c5f2f883fab2f7adfde2f50e704f28c87a0ce64d.png" alt="EPX" className="h-8 object-contain brightness-200" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
@@ -577,6 +580,22 @@ const Pricing = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Do You Have Questions? */}
+      <section className="py-16 bg-white" data-testid="questions-section">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Do You Have Questions?</h2>
+          <p className="text-gray-500 mb-8">Our sales team is ready to help you find the right processing solution for your business.</p>
+          <Button
+            size="lg"
+            onClick={() => setShowAppModal(true)}
+            className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white text-lg px-10 py-6 shadow-xl shadow-purple-600/20"
+            data-testid="contact-sales-btn"
+          >
+            <Phone className="h-5 w-5 mr-2" /> Contact Sales
+          </Button>
         </div>
       </section>
 
