@@ -254,41 +254,66 @@ const Restaurants = () => {
         </div>
       </section>
 
-      {/* Restaurant Credit Card Processing */}
+      {/* Restaurant Payment Processing Services That Actually Work */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6" data-testid="credit-card-processing-h2">
-                Restaurant Credit Card Processing Built for Florida Businesses
+                Restaurant Payment Processing Services That Actually Work
               </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                We specialize in restaurant merchant services designed for:
+              <p className="text-lg text-gray-700 mb-8">
+                Choosing the right restaurant POS and payment processing system can feel overwhelming.
               </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+                {['Rates', 'Hardware', 'Online ordering', 'Inventory', 'Reporting', 'Compliance'].map((item, i) => (
+                  <div key={i} className="bg-purple-50 border border-purple-100 rounded-lg px-4 py-3 text-center">
+                    <span className="text-gray-800 font-medium text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xl font-semibold text-purple-700 mb-6">Merchant Solutions Corp removes the stress.</p>
+              <div className="space-y-3 mb-6">
+                {['We consult', 'We design', 'We install', 'We support'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-lg font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-lg text-gray-600 italic border-l-4 border-purple-500 pl-4">
+                You focus on running your restaurant.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Restaurant Payment Processing Services Built for Growth
+              </h3>
+              <p className="text-lg text-gray-700 mb-6">We help:</p>
               <div className="space-y-3 mb-8">
-                {restaurantTypes.map((type, index) => (
+                {[
+                  'Quick service restaurants',
+                  'Full service restaurants',
+                  'Bars and lounges',
+                  'Food trucks',
+                  'Cafés and bakeries',
+                  'Multi-location restaurant groups'
+                ].map((type, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
                     <span className="text-gray-700">{type}</span>
                   </div>
                 ))}
               </div>
-            </div>
-            <div>
-              <p className="text-lg text-gray-700 mb-6">
-                Our restaurant payment processing solutions include:
-              </p>
-              <div className="space-y-3 mb-8">
-                {processingFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
+              <p className="text-lg text-gray-700 font-semibold mb-4">Our mission is simple.</p>
+              <div className="space-y-3">
+                {['Lower costs', 'Increase efficiency', 'Build infrastructure that scales'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <Zap className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-800 font-medium text-lg">{item}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-gray-600 italic">
-                Florida restaurants trust us because we install, configure, and support everything locally while providing nationwide coverage.
-              </p>
             </div>
           </div>
         </div>
