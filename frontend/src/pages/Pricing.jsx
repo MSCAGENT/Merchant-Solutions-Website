@@ -84,15 +84,15 @@ const Pricing = () => {
       data-testid={testId}
       className={`relative text-left rounded-xl border-2 transition-all duration-200 ${
         disabled
-          ? 'opacity-30 cursor-not-allowed border-slate-700/40 bg-slate-800/30'
+          ? 'opacity-30 cursor-not-allowed border-gray-200 bg-gray-50'
           : selected
-            ? 'border-blue-500 bg-blue-600 shadow-lg shadow-blue-600/20'
-            : 'border-slate-700/60 bg-slate-800/60 hover:border-slate-500 hover:bg-slate-800 cursor-pointer'
+            ? 'border-purple-500 bg-purple-600 shadow-lg shadow-purple-600/20'
+            : 'border-gray-200 bg-white hover:border-purple-300 hover:shadow-md cursor-pointer'
       }`}
     >
       <div className="flex items-start gap-3 p-4">
         <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 ${
-          selected ? 'border-white bg-white/20' : 'border-slate-500'
+          selected ? 'border-white bg-white/20' : 'border-gray-300'
         }`}>
           {selected && (
             <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
