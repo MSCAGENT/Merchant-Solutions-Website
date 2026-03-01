@@ -493,6 +493,38 @@ const Restaurants = () => {
         </div>
       </section>
 
+      {/* Restaurant Merchant Services Pricing Options */}
+      <section className="py-20 bg-gray-50" data-testid="pricing-options-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bu1fbe3x_20190204Promotions-blake-wisz-tE6th1h6Bfk-unsplash.jpg"
+                alt="Customer making a payment at a restaurant POS terminal"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6" data-testid="pricing-options-h2">
+                Restaurant Merchant Services Pricing Options
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">We structure payment processing around your margins.</p>
+              <p className="text-lg text-gray-700 mb-4">Options include:</p>
+              <div className="space-y-3 mb-8">
+                {['Flat rate pricing', 'Interchange plus pricing', 'Dual pricing or cash discount programs'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-lg">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-700 mb-4">Many restaurants offset most credit card processing costs using compliant dual pricing.</p>
+              <p className="text-lg text-purple-700 font-semibold">We design the structure around profitability.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Cash Discount & Dual Pricing */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
