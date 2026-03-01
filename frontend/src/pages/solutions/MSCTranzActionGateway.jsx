@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, CreditCard, Globe, RefreshCw, Shield, FileText, Users, Zap, BarChart3, Lock, Smartphone, Building2 } from 'lucide-react';
+import { CheckCircle, CreditCard, Globe, RefreshCw, Shield, FileText, Users, Zap, BarChart3, Lock, Smartphone, Building2, Code } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent } from '../../components/ui/card';
 import {
@@ -11,6 +11,9 @@ import {
 } from '../../components/ui/accordion';
 
 const MSCTranzActionGateway = () => {
+  const [showDevDocsForm, setShowDevDocsForm] = useState(false);
+  const [devFormData, setDevFormData] = useState({ name: '', email: '', company: '', reason: '' });
+  const [devDocsGranted, setDevDocsGranted] = useState(false);
   const paymentMethods = [
     { icon: CreditCard, label: 'Credit Cards', desc: 'Visa, Mastercard, Amex, Discover' },
     { icon: CreditCard, label: 'Debit Cards', desc: 'All major debit networks' },
