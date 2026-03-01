@@ -17,6 +17,14 @@ Build a comprehensive, SEO-optimized payment processing website. Multi-page fron
 - Resources: Blog, Payment Processing Articles, POS Systems Guide, Industry Guides
 
 ## What's Been Implemented
+### Mar 1, 2026 — Pricing Page
+- Created `/app/frontend/src/pages/Pricing.jsx` — interactive merchant processing configuration at `/resources/pricing`
+- Dark-themed 4-step selection UI: Pricing Options → Software Program → Business Type → Payment Platform
+- Full compatibility logic: Clover→FISERV, Square→Square, Payanywhere→EPX, Dejavoo/Ingenico→TSYS/Cygma/EPX
+- Auto-selects single-platform software, disables incompatible platforms with visual dimming
+- Summary badges + "Start Your Merchant Application" button → opens Lead Connector modal
+- **Testing**: 16/16 tests passed (100% success rate)
+
 ### Mar 1, 2026 — Solutions Pages Updates (4 changes)
 1. **Transaction Gateway Integration**: Renamed from "MSC TranzAction Gateway" in nav + page title + all references. Added Developer Integration Portal section with form → grants access to NMI integration portal URL.
 2. **Business Loans & Cash Advances**: Added "Apply Now" buttons with specific links — Cash Advance → cashbuoy.biz, Business Loans/LOC/SBA → Lendio. Added SBA Loans as 5th funding option.
