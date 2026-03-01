@@ -294,7 +294,7 @@ const Pricing = () => {
             {/* TSYS */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-tsys">
               <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
-                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/i9guktnn_TSYS%20merchant%20solutions.png" alt="TSYS Merchant Solutions" className="h-8 object-contain" />
+                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/i9guktnn_TSYS%20merchant%20solutions.png" alt="TSYS Merchant Solutions" className="h-10 object-contain" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
@@ -372,7 +372,7 @@ const Pricing = () => {
             {/* EPX */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-epx">
               <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
-                <img src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/whqo186z_artwork%40Mr_vector_Artboard%202.png" alt="EPX - Electronic Payment Exchange" className="h-10 object-contain" />
+                <img src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/whqo186z_artwork%40Mr_vector_Artboard%202.png" alt="EPX - Electronic Payment Exchange" className="object-contain" style={{ height: '50px' }} />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
@@ -405,7 +405,7 @@ const Pricing = () => {
             {/* Square */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow md:col-span-2" data-testid="funding-square">
               <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
-                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/pc8vmlv3_Square_Logo_Landscape.png" alt="Square" className="h-8 object-contain brightness-200" />
+                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/pc8vmlv3_Square_Logo_Landscape.png" alt="Square" className="h-10 object-contain brightness-200" />
               </div>
               <div className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
