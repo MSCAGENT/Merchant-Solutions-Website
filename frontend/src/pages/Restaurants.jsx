@@ -525,35 +525,6 @@ const Restaurants = () => {
         </div>
       </section>
 
-      {/* Card Present Processing */}
-      <section className="py-20 bg-white" data-testid="card-present-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="card-present-h3">Card Present Processing</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                Accept payments anywhere with mobile, countertop, and tableside terminals built for restaurant environments.
-              </p>
-              <div className="space-y-3">
-                {['EMV chip and contactless payments', 'Tap-to-pay and mobile wallets', 'Apple Pay, Google Wallet, Samsung Pay', 'Fast and secure in-person transactions'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden">
-              <img
-                src="https://dejavoo.io/wp-content/uploads/2025/09/Imperfect-Circle_Images_1000x1000_website_P12_Lifestyle.webp"
-                alt="Dejavoo P12 mobile payment terminal for card present processing"
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Cash Discount & Dual Pricing */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
