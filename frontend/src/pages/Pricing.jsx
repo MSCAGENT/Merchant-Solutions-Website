@@ -281,6 +281,294 @@ const Pricing = () => {
         </div>
       </section>
 
+      {/* Funding Schedule Section */}
+      <section className="py-20 bg-slate-950" data-testid="funding-schedule-section">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">Next-Day & Same-Day Funding Schedule</h2>
+            <p className="text-slate-400 text-lg max-w-3xl mx-auto">Cutoff times and funding windows listed per processor. Batch out by the cutoff to receive funds on the timeline shown.</p>
+          </div>
+
+          {/* Processor Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            {/* TSYS */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden" data-testid="funding-tsys">
+              <div className="bg-gradient-to-r from-blue-600/20 to-blue-800/20 border-b border-slate-800 px-6 py-4">
+                <h3 className="text-xl font-bold text-white">TSYS</h3>
+                <p className="text-slate-400 text-xs mt-1">Accounts with 5309 or 4765 MID prefix</p>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Batch Cutoff</span>
+                  <span className="text-white font-bold">11:00 PM EST</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Next-Day Funds</span>
+                  <span className="text-emerald-400 font-bold">By 5:00 AM EST</span>
+                </div>
+                <div className="border-t border-slate-800 pt-3 mt-3">
+                  <div className="bg-slate-800/60 rounded-lg px-4 py-2.5">
+                    <p className="text-xs text-slate-500">Additional Cutoffs (Omaha Backend)</p>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1 mt-2 text-xs">
+                      <span className="text-slate-400">Omaha:</span><span className="text-slate-300">7:00 PM EST</span>
+                      <span className="text-slate-400">Nashville:</span><span className="text-slate-300">5:00 PM EST</span>
+                      <span className="text-slate-400">Buypass:</span><span className="text-slate-300">2:00 PM EST</span>
+                      <span className="text-slate-400">North:</span><span className="text-slate-300">4:00 PM EST</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Cygma */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden" data-testid="funding-cygma">
+              <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border-b border-slate-800 px-6 py-4">
+                <h3 className="text-xl font-bold text-white">Cygma</h3>
+                <p className="underline text-blue-400 text-xs mt-1 font-semibold">Commerce Bank of California</p>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Batch Cutoff</span>
+                  <span className="text-white font-bold">10:30 PM EST</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Next-Day Funds</span>
+                  <span className="text-emerald-400 font-bold">By 4:00 AM EST</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Same-Day Available</span>
+                  <span className="text-yellow-400 font-semibold text-sm">Batch by 8 AM EST</span>
+                </div>
+                <div className="border-t border-slate-800 pt-3 mt-3">
+                  <div className="bg-slate-800/60 rounded-lg px-4 py-2.5">
+                    <p className="text-xs text-slate-500">Same-Day Window</p>
+                    <p className="text-xs text-slate-300 mt-1">Batch out by 5 AM PST / 8 AM EST → Deposit by 10 AM PST / 1 PM EST</p>
+                    <p className="text-xs text-yellow-400/70 mt-1">Same-day funding dependent on merchant's bank</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* FISERV */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden" data-testid="funding-fiserv">
+              <div className="bg-gradient-to-r from-emerald-600/20 to-emerald-800/20 border-b border-slate-800 px-6 py-4">
+                <h3 className="text-xl font-bold text-white">FISERV</h3>
+                <p className="text-slate-400 text-xs mt-1">Clover &amp; FISERV-integrated merchants</p>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Batch Cutoff</span>
+                  <span className="text-white font-bold">9:30 PM EST</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Next-Day Funds</span>
+                  <span className="text-emerald-400 font-bold">Next Business Day</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Instant Deposit</span>
+                  <span className="text-yellow-400 font-semibold text-sm">Available (1.5% fee)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* EPX */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden" data-testid="funding-epx">
+              <div className="bg-gradient-to-r from-orange-600/20 to-orange-800/20 border-b border-slate-800 px-6 py-4">
+                <h3 className="text-xl font-bold text-white">EPX</h3>
+                <p className="underline text-blue-400 text-xs mt-1 font-semibold">Bancorp / Citizens Bank / Fresno First Bank</p>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Batch Cutoff (Next Day)</span>
+                  <span className="text-white font-bold">10:00 PM EST</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Next-Day Funds</span>
+                  <span className="text-emerald-400 font-bold">By 6:00 AM EST</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400 text-sm">Same-Day Cutoff</span>
+                  <span className="text-yellow-400 font-semibold text-sm">10:30 AM EST</span>
+                </div>
+                <div className="border-t border-slate-800 pt-3 mt-3 space-y-2">
+                  <div className="bg-slate-800/60 rounded-lg px-4 py-2.5">
+                    <p className="text-xs text-slate-500">Same-Day Funding (BMO Harris)</p>
+                    <p className="text-xs text-slate-300 mt-1">Batch by 10:30 AM EST → Deposit by 5 PM EST same day</p>
+                    <p className="text-xs text-slate-400 mt-0.5">Limit: $50,000/day</p>
+                  </div>
+                  <div className="bg-slate-800/60 rounded-lg px-4 py-2.5">
+                    <p className="text-xs text-slate-500">Next Day (Bancorp/Citizens/Fresno First)</p>
+                    <p className="text-xs text-slate-300 mt-1">Settlement by 12:00 AM EST → Next business day deposit</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Square */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden md:col-span-2" data-testid="funding-square">
+              <div className="bg-gradient-to-r from-blue-600/20 to-indigo-800/20 border-b border-slate-800 px-6 py-4">
+                <h3 className="text-xl font-bold text-white">Square</h3>
+                <p className="text-slate-400 text-xs mt-1">Square Financial Services</p>
+              </div>
+              <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="flex justify-between items-center md:flex-col md:items-start md:gap-1">
+                    <span className="text-slate-400 text-sm">Batch Cutoff</span>
+                    <span className="text-white font-bold">9:00 PM EST</span>
+                  </div>
+                  <div className="flex justify-between items-center md:flex-col md:items-start md:gap-1">
+                    <span className="text-slate-400 text-sm">Next-Day Funds</span>
+                    <span className="text-emerald-400 font-bold">Next Business Day</span>
+                  </div>
+                  <div className="flex justify-between items-center md:flex-col md:items-start md:gap-1">
+                    <span className="text-slate-400 text-sm">Instant Transfer</span>
+                    <span className="text-yellow-400 font-semibold text-sm">Available (1.5% fee)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Funding Timeline Pictograph */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-white text-center mb-10">How Funding Works — Standard vs. Next-Day vs. Same-Day</h3>
+
+            <div className="space-y-6 max-w-4xl mx-auto">
+              {/* Standard Funding */}
+              <div className="bg-slate-900 border border-slate-800 rounded-xl p-6" data-testid="timeline-standard">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-3 h-3 bg-slate-500 rounded-full" />
+                  <h4 className="text-lg font-bold text-white">Standard Funding</h4>
+                  <span className="bg-slate-700 text-slate-300 text-xs px-2.5 py-0.5 rounded-full ml-auto">2 Business Days</span>
+                </div>
+                <div className="relative">
+                  {/* Timeline bar */}
+                  <div className="flex items-center">
+                    {/* Day 1 */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-2 border-slate-600 z-10">
+                        <CreditCard className="h-4 w-4 text-slate-400" />
+                      </div>
+                      <p className="text-xs text-slate-400 mt-2 font-semibold">Day 1</p>
+                      <p className="text-xs text-slate-500 text-center">Transaction<br />Processed</p>
+                    </div>
+                    <div className="flex-1 h-0.5 bg-slate-700 -mx-2" />
+                    {/* Day 2 */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center border-2 border-slate-600 z-10">
+                        <svg className="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      </div>
+                      <p className="text-xs text-slate-400 mt-2 font-semibold">Day 2</p>
+                      <p className="text-xs text-slate-500 text-center">Batch Settles<br />with Processor</p>
+                    </div>
+                    <div className="flex-1 h-0.5 bg-slate-700 -mx-2" />
+                    {/* Day 3 */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center border-2 border-slate-500 z-10">
+                        <svg className="h-4 w-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+                      </div>
+                      <p className="text-xs text-slate-400 mt-2 font-semibold">Day 3</p>
+                      <p className="text-xs text-slate-500 text-center">Funds Deposited<br />in Your Bank</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Next Day Funding */}
+              <div className="bg-slate-900 border border-emerald-800/40 rounded-xl p-6" data-testid="timeline-nextday">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-3 h-3 bg-emerald-500 rounded-full" />
+                  <h4 className="text-lg font-bold text-white">Next-Day Funding</h4>
+                  <span className="bg-emerald-900/40 text-emerald-400 text-xs px-2.5 py-0.5 rounded-full border border-emerald-700/40 ml-auto">1 Business Day</span>
+                </div>
+                <div className="relative">
+                  <div className="flex items-center">
+                    {/* Day 1 - Transaction */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-emerald-900/40 rounded-full flex items-center justify-center border-2 border-emerald-700/50 z-10">
+                        <CreditCard className="h-4 w-4 text-emerald-400" />
+                      </div>
+                      <p className="text-xs text-emerald-400 mt-2 font-semibold">Day 1</p>
+                      <p className="text-xs text-slate-400 text-center">Transaction<br />Processed</p>
+                    </div>
+                    <div className="flex-1 h-0.5 bg-emerald-800/50 -mx-2" />
+                    {/* Day 1 - Batch */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-emerald-900/40 rounded-full flex items-center justify-center border-2 border-emerald-700/50 z-10">
+                        <svg className="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      </div>
+                      <p className="text-xs text-emerald-400 mt-2 font-semibold">Day 1 Evening</p>
+                      <p className="text-xs text-slate-400 text-center">Batch Out<br />by Cutoff Time</p>
+                    </div>
+                    <div className="flex-1 h-0.5 bg-emerald-800/50 -mx-2" />
+                    {/* Day 2 - Deposit */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center border-2 border-emerald-500 z-10">
+                        <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+                      </div>
+                      <p className="text-xs text-emerald-400 mt-2 font-semibold">Day 2 Morning</p>
+                      <p className="text-xs text-slate-400 text-center">Funds Deposited<br />in Your Bank</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Same Day Funding */}
+              <div className="bg-slate-900 border border-yellow-700/40 rounded-xl p-6" data-testid="timeline-sameday">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full" />
+                  <h4 className="text-lg font-bold text-white">Same-Day Funding</h4>
+                  <span className="bg-yellow-900/40 text-yellow-400 text-xs px-2.5 py-0.5 rounded-full border border-yellow-700/40 ml-auto">Same Business Day</span>
+                </div>
+                <div className="relative">
+                  <div className="flex items-center">
+                    {/* Morning - Transaction */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-yellow-900/40 rounded-full flex items-center justify-center border-2 border-yellow-700/50 z-10">
+                        <CreditCard className="h-4 w-4 text-yellow-400" />
+                      </div>
+                      <p className="text-xs text-yellow-400 mt-2 font-semibold">Morning</p>
+                      <p className="text-xs text-slate-400 text-center">Transaction<br />Processed</p>
+                    </div>
+                    <div className="flex-1 h-0.5 bg-yellow-800/50 -mx-2" />
+                    {/* Mid-Morning - Batch */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-yellow-900/40 rounded-full flex items-center justify-center border-2 border-yellow-700/50 z-10">
+                        <svg className="h-4 w-4 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      </div>
+                      <p className="text-xs text-yellow-400 mt-2 font-semibold">10:30 AM EST</p>
+                      <p className="text-xs text-slate-400 text-center">Early Batch<br />Cutoff</p>
+                    </div>
+                    <div className="flex-1 h-0.5 bg-yellow-800/50 -mx-2" />
+                    {/* Afternoon - Deposit */}
+                    <div className="flex flex-col items-center flex-1">
+                      <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center border-2 border-yellow-400 z-10">
+                        <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+                      </div>
+                      <p className="text-xs text-yellow-400 mt-2 font-semibold">By 5:00 PM EST</p>
+                      <p className="text-xs text-slate-400 text-center">Funds Deposited<br />Same Day</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-xs text-yellow-500/70 mt-4 text-center">Available on EPX (via BMO Harris, limit $50K/day) and Cygma (batch by 8 AM EST). Dependent on merchant's bank.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Important Notes */}
+          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 max-w-4xl mx-auto mt-10" data-testid="funding-notes">
+            <p className="text-xs text-slate-500 uppercase tracking-wider mb-3 font-semibold">Important Notes</p>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li className="flex gap-2"><span className="text-slate-600">•</span>All cutoff times are in Eastern Standard Time (EST)</li>
+              <li className="flex gap-2"><span className="text-slate-600">•</span>Funding is not guaranteed for batches flagged by Risk Management</li>
+              <li className="flex gap-2"><span className="text-slate-600">•</span>Same-day funding availability depends on merchant's bank capabilities</li>
+              <li className="flex gap-2"><span className="text-slate-600">•</span>Weekend batches are typically deposited on the next business day (Monday)</li>
+              <li className="flex gap-2"><span className="text-slate-600">•</span>Amex &amp; Discover Retained transactions may have extended deposit timelines</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Info Section */}
       <section className="py-16 bg-white" data-testid="info-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
