@@ -319,6 +319,49 @@ const Restaurants = () => {
         </div>
       </section>
 
+      {/* Full Service ISO & PayFac Partner */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6" data-testid="iso-payfac-h2">
+                Full Service ISO & PayFac Partner for Restaurants
+              </h2>
+              <p className="text-lg text-gray-700 mb-2">Most restaurant owners sign up online and hope it works.</p>
+              <p className="text-lg text-purple-700 font-semibold mb-6">We take a structured approach.</p>
+              <p className="text-lg text-gray-700 mb-4">Merchant Solutions Corp provides:</p>
+              <div className="space-y-3 mb-8">
+                {[
+                  'Restaurant payment processing consulting',
+                  'POS hardware selection',
+                  'Menu and inventory configuration',
+                  'Tax and modifier setup',
+                  'Online ordering configuration',
+                  'Staff training',
+                  'Onsite or remote installation',
+                  'Ongoing technical support'
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-lg text-gray-600 italic border-l-4 border-purple-500 pl-4">
+                You are not left configuring printers or building menus alone.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/1tlfkyh7_MSC%20technician.png"
+                alt="MSC technician installing Square POS terminal at a restaurant"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* POS Installation & Dealer Support */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
