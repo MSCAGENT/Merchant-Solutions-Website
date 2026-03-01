@@ -126,13 +126,13 @@ const Pricing = () => {
       </section>
 
       {/* Merchant Processing Selection */}
-      <section className="bg-[#0f1219] py-20" data-testid="pricing-selection">
+      <section className="bg-gradient-to-b from-purple-50 to-white py-20" data-testid="pricing-selection">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white text-center mb-16">Merchant Processing</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-16">Merchant Processing</h2>
 
           {/* Step 1: Pricing Options */}
           <div className="mb-14">
-            <h3 className="text-lg font-semibold text-white mb-5">Pricing Options</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-5">Pricing Options</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {pricingOptions.map(opt => (
                 <SelectionCard
@@ -141,19 +141,18 @@ const Pricing = () => {
                   onClick={() => setSelectedRate(opt.id)}
                   testId={`rate-${opt.id}`}
                 >
-                  <p className="font-semibold text-white text-sm leading-tight">{opt.label}</p>
-                  <p className="text-slate-400 text-xs mt-1.5">{opt.sub}</p>
+                  <p className={`font-semibold text-sm leading-tight ${selectedRate === opt.id ? 'text-white' : 'text-gray-900'}`}>{opt.label}</p>
+                  <p className={`text-xs mt-1.5 ${selectedRate === opt.id ? 'text-purple-200' : 'text-gray-500'}`}>{opt.sub}</p>
                 </SelectionCard>
               ))}
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="border-t border-slate-800 mb-14" />
+          <div className="border-t border-purple-100 mb-14" />
 
           {/* Step 2: Software Program */}
           <div className="mb-14">
-            <h3 className="text-lg font-semibold text-white mb-5">Software Program</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-5">Software Program</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {softwarePrograms.map(sw => (
                 <SelectionCard
@@ -162,11 +161,11 @@ const Pricing = () => {
                   onClick={() => setSelectedSoftware(sw.id)}
                   testId={`software-${sw.id}`}
                 >
-                  <p className="font-semibold text-white text-sm">{sw.label}</p>
+                  <p className={`font-semibold text-sm ${selectedSoftware === sw.id ? 'text-white' : 'text-gray-900'}`}>{sw.label}</p>
                   <ul className="mt-2 space-y-0.5">
                     {sw.types.map((t, i) => (
-                      <li key={i} className="text-slate-400 text-xs flex items-start gap-1.5">
-                        <span className="text-slate-500 mt-px">•</span>{t}
+                      <li key={i} className={`text-xs flex items-start gap-1.5 ${selectedSoftware === sw.id ? 'text-purple-200' : 'text-gray-500'}`}>
+                        <span className={selectedSoftware === sw.id ? 'text-purple-300' : 'text-gray-400'}>•</span>{t}
                       </li>
                     ))}
                   </ul>
@@ -175,12 +174,11 @@ const Pricing = () => {
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="border-t border-slate-800 mb-14" />
+          <div className="border-t border-purple-100 mb-14" />
 
           {/* Step 3: Business Type */}
           <div className="mb-14">
-            <h3 className="text-lg font-semibold text-white mb-5">Business Type</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-5">Business Type</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {businessTypes.map(bt => (
                 <SelectionCard
@@ -189,24 +187,23 @@ const Pricing = () => {
                   onClick={() => setSelectedBusiness(bt.id)}
                   testId={`business-${bt.id}`}
                 >
-                  <p className="font-semibold text-white text-sm">{bt.label}</p>
+                  <p className={`font-semibold text-sm ${selectedBusiness === bt.id ? 'text-white' : 'text-gray-900'}`}>{bt.label}</p>
                 </SelectionCard>
               ))}
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="border-t border-slate-800 mb-14" />
+          <div className="border-t border-purple-100 mb-14" />
 
           {/* Step 4: Payment Platform */}
           <div className="mb-14">
-            <h3 className="text-lg font-semibold text-white mb-2">Payment Platform</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">Payment Platform</h3>
             {selectedSoftware && (
-              <p className="text-xs text-blue-400 mb-5">
+              <p className="text-xs text-purple-600 mb-5">
                 Showing platforms compatible with <span className="font-semibold">{softwarePrograms.find(s => s.id === selectedSoftware)?.label}</span>
               </p>
             )}
-            {!selectedSoftware && <p className="text-xs text-slate-500 mb-5">Select a software program above to see compatible platforms</p>}
+            {!selectedSoftware && <p className="text-xs text-gray-400 mb-5">Select a software program above to see compatible platforms</p>}
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {paymentPlatforms.map(pp => {
                 const isAvailable = availablePlatforms.includes(pp.id);
@@ -218,11 +215,11 @@ const Pricing = () => {
                     disabled={!isAvailable}
                     testId={`platform-${pp.id}`}
                   >
-                    <p className="font-semibold text-white text-sm">{pp.label}</p>
+                    <p className={`font-semibold text-sm ${selectedPlatform === pp.id ? 'text-white' : 'text-gray-900'}`}>{pp.label}</p>
                     <div className="mt-2 space-y-0.5">
-                      <p className="text-slate-400 text-xs">{pp.cutoff}</p>
-                      <p className="text-slate-400 text-xs">{pp.funds}</p>
-                      {pp.extra && <p className="text-slate-400 text-xs">{pp.extra}</p>}
+                      <p className={`text-xs ${selectedPlatform === pp.id ? 'text-purple-200' : 'text-gray-500'}`}>{pp.cutoff}</p>
+                      <p className={`text-xs ${selectedPlatform === pp.id ? 'text-purple-200' : 'text-gray-500'}`}>{pp.funds}</p>
+                      {pp.extra && <p className={`text-xs ${selectedPlatform === pp.id ? 'text-purple-200' : 'text-gray-500'}`}>{pp.extra}</p>}
                     </div>
                   </SelectionCard>
                 );
@@ -234,19 +231,19 @@ const Pricing = () => {
           <div className="text-center pt-4">
             {allSelected ? (
               <div className="space-y-4" data-testid="selection-summary">
-                <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 inline-block text-left">
-                  <p className="text-xs text-slate-500 uppercase tracking-wider mb-3">Your Selection</p>
+                <div className="bg-purple-50 border border-purple-200 rounded-xl p-5 inline-block text-left">
+                  <p className="text-xs text-purple-400 uppercase tracking-wider mb-3">Your Selection</p>
                   <div className="flex flex-wrap gap-3">
-                    <span className="bg-blue-600/20 text-blue-300 text-xs font-medium px-3 py-1.5 rounded-full border border-blue-500/30">
+                    <span className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1.5 rounded-full border border-purple-300">
                       {pricingOptions.find(r => r.id === selectedRate)?.label}
                     </span>
-                    <span className="bg-blue-600/20 text-blue-300 text-xs font-medium px-3 py-1.5 rounded-full border border-blue-500/30">
+                    <span className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1.5 rounded-full border border-purple-300">
                       {softwarePrograms.find(s => s.id === selectedSoftware)?.label}
                     </span>
-                    <span className="bg-blue-600/20 text-blue-300 text-xs font-medium px-3 py-1.5 rounded-full border border-blue-500/30">
+                    <span className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1.5 rounded-full border border-purple-300">
                       {businessTypes.find(b => b.id === selectedBusiness)?.label}
                     </span>
-                    <span className="bg-blue-600/20 text-blue-300 text-xs font-medium px-3 py-1.5 rounded-full border border-blue-500/30">
+                    <span className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1.5 rounded-full border border-purple-300">
                       {paymentPlatforms.find(p => p.id === selectedPlatform)?.label}
                     </span>
                   </div>
@@ -255,7 +252,7 @@ const Pricing = () => {
                   <Button
                     size="lg"
                     onClick={() => setShowAppModal(true)}
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-10 py-6 shadow-xl shadow-blue-600/20"
+                    className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white text-lg px-10 py-6 shadow-xl shadow-purple-600/20"
                     data-testid="start-application-btn"
                   >
                     Start Your Merchant Application <ArrowRight className="h-5 w-5 ml-2" />
@@ -264,7 +261,7 @@ const Pricing = () => {
               </div>
             ) : (
               <div className="space-y-3" data-testid="incomplete-selection">
-                <p className="text-slate-500 text-sm">
+                <p className="text-gray-400 text-sm">
                   {!selectedRate && 'Select a pricing option to get started'}
                   {selectedRate && !selectedSoftware && 'Now choose your software program'}
                   {selectedRate && selectedSoftware && !selectedBusiness && 'Select your business type'}
@@ -272,7 +269,7 @@ const Pricing = () => {
                 </p>
                 <div className="flex justify-center gap-2">
                   {[selectedRate, selectedSoftware, selectedBusiness, selectedPlatform].map((sel, i) => (
-                    <div key={i} className={`w-3 h-3 rounded-full ${sel ? 'bg-blue-500' : 'bg-slate-700'}`} />
+                    <div key={i} className={`w-3 h-3 rounded-full ${sel ? 'bg-purple-500' : 'bg-gray-200'}`} />
                   ))}
                 </div>
               </div>
