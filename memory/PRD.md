@@ -17,6 +17,11 @@ Build a comprehensive, SEO-optimized payment processing website. Multi-page fron
 - Resources: Blog, Payment Processing Articles, POS Systems Guide, Industry Guides
 
 ## What's Been Implemented
+### Mar 2, 2026 — Pricing Page Refinements
+- Hero section updated: "Transparent Pricing" (top) + "Fast Funding" (below, purple gradient)
+- FISERV & EPX processor cards: Replaced purple headers with clean light grey headers + dark grey text logos
+- Added "Do You Have Questions?" section below "How It Works" with Contact Sales button → opens Lead Connector modal
+
 ### Mar 1, 2026 — Pricing Page
 - Created `/app/frontend/src/pages/Pricing.jsx` — interactive merchant processing configuration at `/resources/pricing`
 - Dark-themed 4-step selection UI: Pricing Options → Software Program → Business Type → Payment Platform
