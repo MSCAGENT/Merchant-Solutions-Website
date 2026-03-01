@@ -24,9 +24,9 @@ import { Card, CardContent } from '../../components/ui/card';
 const PayrollServicesSolution = () => {
   const keyBenefits = [
     { title: 'ADP Powered', desc: 'Industry-leading platform' },
-    { title: 'POS Integrated', desc: 'Syncs with itab POS' },
-    { title: 'Full Compliance', desc: 'Tax filing included' },
-    { title: 'Time Savings', desc: 'Automated processing' }
+    { title: 'POS Integrated', desc: 'Syncs with itab POS & Clover' },
+    { title: 'Square Payroll', desc: 'Native payroll via Square' },
+    { title: 'Full Compliance', desc: 'Tax filing included' }
   ];
 
   const payrollFeatures = [
