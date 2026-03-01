@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { CheckCircle, ChevronRight, ArrowRight, CreditCard, Monitor, ShoppingCart, Utensils, Building2, Globe, Briefcase } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 const Pricing = () => {
