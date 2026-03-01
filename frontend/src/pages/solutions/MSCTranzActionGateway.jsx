@@ -282,7 +282,7 @@ const MSCTranzActionGateway = () => {
       <section className="py-20 bg-gradient-to-br from-purple-50 to-yellow-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Why Choose MSC TranzAction Gateway
+            Why Choose Transaction Gateway Integration
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border-0 shadow-lg text-center">
