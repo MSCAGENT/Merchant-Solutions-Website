@@ -305,7 +305,17 @@ const Pricing = () => {
                   <span className="text-gray-500 text-sm">Next-Day Funds</span>
                   <span className="text-purple-600 font-bold">By 5:00 AM EST</span>
                 </div>
-                <p className="text-xs text-gray-400 pt-2">Accounts with 5309 or 4765 MID prefix</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-500 text-sm">Same-Day Available</span>
+                  <span className="text-amber-600 font-semibold text-sm">Same-Day Window</span>
+                </div>
+                <div className="bg-purple-50 rounded-lg px-4 py-2.5 mt-2">
+                  <p className="text-xs text-purple-400">Same-Day Window</p>
+                  <p className="text-xs text-gray-600 mt-1">Batch by 6 AM PST / 9 AM EST → Deposit by 10 AM PST / 1 PM EST</p>
+                  <p className="text-xs text-amber-600/80 mt-1">Same-day funding dependent on merchant's bank</p>
+                </div>
+                <p className="text-xs text-gray-500 pt-1">Acquiring Banks: <span className="underline font-semibold text-gray-700">Avidia Bank / Fresno First Bank / Axiom Bank / NABC</span></p>
+                <p className="text-xs text-gray-400">Accounts with 5309 or 4765 MID prefix</p>
               </div>
             </div>
 
