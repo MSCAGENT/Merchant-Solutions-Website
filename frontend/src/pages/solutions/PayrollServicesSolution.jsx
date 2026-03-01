@@ -102,15 +102,15 @@ const PayrollServicesSolution = () => {
             </h1>
             
             <p className="text-xl text-purple-600 font-semibold mb-4">
-              ADP Payroll Fully Integrated with itab POS
+              ADP Payroll Integrated with itab POS & Clover | Square Native Payroll
             </p>
             
             <div className="text-lg text-gray-700 space-y-4 mb-8">
               <p>
-                Simplify payroll with ADP's powerful platform, seamlessly connected to your itab Point of Sale system. Hours tracked at the register flow directly to payroll.
+                Simplify payroll with ADP's powerful platform, seamlessly connected to your itab POS and Clover systems. Hours tracked at the register flow directly to payroll.
               </p>
               <p>
-                Full-service payroll processing, tax filing, and compliance—designed for restaurants and retail businesses.
+                Square merchants can leverage Square's native payroll services directly through the Square application portal. Full-service payroll processing, tax filing, and compliance—designed for restaurants and retail businesses.
               </p>
             </div>
 
