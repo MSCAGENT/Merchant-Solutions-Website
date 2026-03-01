@@ -529,13 +529,6 @@ const Restaurants = () => {
       <section className="py-20 bg-white" data-testid="card-present-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="rounded-2xl overflow-hidden">
-              <img
-                src="https://dejavoo.io/wp-content/uploads/2025/09/Imperfect-Circle_Images_1000x1000_website_P12_Lifestyle.webp"
-                alt="Dejavoo P12 mobile payment terminal for card present processing"
-                className="w-full h-auto object-contain"
-              />
-            </div>
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="card-present-h3">Card Present Processing</h3>
               <p className="text-lg text-gray-700 mb-4">
@@ -549,6 +542,13 @@ const Restaurants = () => {
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden">
+              <img
+                src="https://dejavoo.io/wp-content/uploads/2025/09/Imperfect-Circle_Images_1000x1000_website_P12_Lifestyle.webp"
+                alt="Dejavoo P12 mobile payment terminal for card present processing"
+                className="w-full h-auto object-contain"
+              />
             </div>
           </div>
         </div>
