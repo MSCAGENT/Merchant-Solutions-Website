@@ -29,7 +29,7 @@ const Navigation = () => {
       label: 'Industries',
       children: [
         { label: 'Restaurants', path: '/industries/restaurants' },
-        { label: 'Retail', path: '/industries/retail' },
+        { label: 'Retail', path: '/retail-payment-solutions' },
         { label: 'Healthcare', path: '/industries/healthcare' },
         { label: 'Chiropractors', path: '/industries/chiropractors' },
         { label: 'Dental Practices', path: '/dental-payment-processing-emr-integration' },
