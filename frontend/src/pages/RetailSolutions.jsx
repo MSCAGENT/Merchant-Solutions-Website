@@ -489,7 +489,7 @@ const RetailSolutions = () => {
                   );
                 })}
               </div>
-              <p className="text-gray-600 mt-8 border-l-4 border-indigo-500 pl-4">
+              <p className="text-gray-600 mt-8 border-l-4 border-purple-500 pl-4">
                 We combine retail POS installation and payment processing into one managed solution.
               </p>
             </div>
