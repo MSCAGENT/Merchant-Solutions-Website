@@ -395,7 +395,7 @@ const RetailSolutions = () => {
                   const Icon = item.icon;
                   return (
                     <div key={i} className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon className="h-5 w-5 text-indigo-600" />
                       </div>
                       <span className="text-gray-700 font-medium">{item.text}</span>
@@ -456,7 +456,7 @@ const RetailSolutions = () => {
               const Icon = niche.icon;
               return (
                 <div key={i} className="bg-gray-50 border-2 border-gray-100 hover:border-indigo-400 rounded-xl p-5 text-center transition-all duration-300 hover:shadow-lg group" data-testid={`niche-${i}`}>
-                  <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-indigo-600 transition-colors duration-300">
+                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-indigo-600 transition-colors duration-300">
                     <Icon className="h-6 w-6 text-indigo-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <p className="text-sm font-semibold text-gray-800">{niche.name}</p>
@@ -481,7 +481,7 @@ const RetailSolutions = () => {
                   const Icon = item.icon;
                   return (
                     <div key={i} className="flex items-center gap-4 bg-white border-2 border-gray-200 hover:border-indigo-400 rounded-xl px-5 py-4 transition-all duration-300 hover:shadow-md">
-                      <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon className="h-5 w-5 text-indigo-600" />
                       </div>
                       <span className="text-gray-700 font-medium">{item.text}</span>
