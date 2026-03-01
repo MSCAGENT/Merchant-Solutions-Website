@@ -87,6 +87,7 @@ function App() {
           <Route path="/industries/specialty-merchants" element={<SpecialtyMerchant />} />
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           <Route path="/retail-payment-solutions" element={<RetailSolutions />} />
+          <Route path="/industries/retail" element={<RetailSolutions />} />
           
           {/* POS & Hardware Routes */}
           <Route path="/pos/clover" element={<CloverPOS />} />
