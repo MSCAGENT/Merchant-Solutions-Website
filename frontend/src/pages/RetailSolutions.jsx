@@ -210,7 +210,7 @@ const RetailSolutions = () => {
                   </div>
                 ))}
               </div>
-              <p className="text-indigo-600 font-bold mt-8 text-lg">Everything syncs in one system.</p>
+              <p className="text-purple-600 font-bold mt-8 text-lg">Everything syncs in one system.</p>
             </div>
             <div>
               <img
