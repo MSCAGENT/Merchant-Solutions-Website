@@ -338,8 +338,8 @@ const Pricing = () => {
 
             {/* FISERV */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-fiserv">
-              <div className="bg-gray-50 border-b border-gray-200 px-6 py-5 flex items-center">
-                <span className="text-2xl font-bold tracking-tight text-gray-600">FISERV</span>
+              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
+                <img src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bjpsdttr_CardConnect.png" alt="Fiserv" className="h-10 object-contain" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
@@ -371,8 +371,8 @@ const Pricing = () => {
 
             {/* EPX */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-epx">
-              <div className="bg-gray-50 border-b border-gray-200 px-6 py-5 flex items-center">
-                <span className="text-2xl font-bold tracking-wider text-gray-600">EPX</span>
+              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
+                <img src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/whqo186z_artwork%40Mr_vector_Artboard%202.png" alt="EPX - Electronic Payment Exchange" className="h-10 object-contain" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
