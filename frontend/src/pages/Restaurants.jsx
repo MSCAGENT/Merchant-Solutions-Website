@@ -639,6 +639,87 @@ const Restaurants = () => {
         </div>
       </section>
 
+      {/* Digital Advertising & Growth Services */}
+      <section className="py-20 bg-white" data-testid="digital-advertising-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="rounded-2xl overflow-hidden shadow-lg sticky top-24">
+              <img
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/0udasiem_img_101.jpg"
+                alt="Restaurant digital marketing and growth strategy consultant"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6" data-testid="digital-advertising-h2">
+                Digital Advertising & Growth Services for Restaurants
+              </h2>
+              <p className="text-lg text-gray-700 mb-2">Payment processing is only half the solution.</p>
+              <p className="text-xl text-purple-700 font-semibold mb-6">Traffic drives revenue.</p>
+              <p className="text-lg text-gray-700 mb-4">
+                Through our partner <span className="font-semibold text-gray-900">LeadJourney.agency</span>, we provide full scale digital advertising services designed specifically for restaurants.
+              </p>
+              <p className="text-lg text-gray-700 mb-4">Services include:</p>
+              <div className="space-y-3 mb-8">
+                {[
+                  'Paid ads on Google and Meta',
+                  'Social media content creation',
+                  'Creative design and branding',
+                  'AI powered voice follow up systems',
+                  'Voice3 AI receptionist solutions',
+                  'Automated SMS and email campaigns'
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="border-t border-gray-100 pt-8 mb-8">
+                <p className="text-lg text-gray-700 mb-2">We pair this with your own branded online ordering system.</p>
+                <p className="text-gray-700 mb-6">
+                  Instead of sending customers to third party marketplaces with high commission fees, we drive traffic directly to your own ordering page.
+                </p>
+                <p className="text-lg text-gray-700 mb-4">Benefits include:</p>
+                <div className="space-y-3 mb-6">
+                  {[
+                    'Higher profit margins per order',
+                    'Customer data ownership',
+                    'Increased repeat business',
+                    'Reduced dependency on delivery apps'
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-purple-50 border border-purple-100 rounded-xl p-6 mb-8">
+                <p className="text-gray-800 font-medium mb-3">
+                  Restaurants using this model can see <span className="text-purple-700 font-bold">20–30 percent increase</span> in direct online sales when campaigns are executed correctly.
+                </p>
+                <p className="text-gray-700">
+                  We build systems comparable to platforms like owner.com, but integrated directly with your payment processing and POS infrastructure.
+                </p>
+              </div>
+
+              <p className="text-lg text-gray-700 mb-4">This creates one unified growth engine:</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+                {['Payments', 'POS', 'Online ordering', 'Digital advertising', 'AI automation'].map((item, i) => (
+                  <div key={i} className="bg-purple-50 border border-purple-100 rounded-lg px-4 py-3 text-center">
+                    <span className="text-gray-800 font-medium text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xl text-purple-700 font-semibold">All under one strategy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
