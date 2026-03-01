@@ -230,11 +230,12 @@ const PayrollServicesSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="adp-image">
-              <div className="text-center text-gray-400">
-                <Shield className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">ADP Payroll Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden" data-testid="adp-image">
+              <img
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/iyk2w5f8_18ij6og-img-automate-your-billing-and-invoicing.png"
+                alt="Business professional managing ADP payroll services"
+                className="w-full h-auto object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
@@ -244,11 +245,12 @@ const PayrollServicesSolution = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="itab-image">
-              <div className="text-center text-gray-400">
-                <CreditCard className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">itab POS Integration Image</p>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden" data-testid="itab-image">
+              <img
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/qctoulk7_secreen%201.png"
+                alt="iTabPOS restaurant point of sale system"
+                className="w-full h-auto object-cover rounded-2xl"
+              />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
@@ -298,11 +300,12 @@ const PayrollServicesSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="clover-payroll-image">
-              <div className="text-center text-gray-400">
-                <Smartphone className="h-24 w-24 mx-auto mb-4 text-blue-300" />
-                <p className="text-sm">Clover Payroll Integration Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden" data-testid="clover-payroll-image">
+              <img
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/wr7mpdrg_DASHBOARD.jpg"
+                alt="Clover POS dashboard with sales reporting"
+                className="w-full h-auto object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
