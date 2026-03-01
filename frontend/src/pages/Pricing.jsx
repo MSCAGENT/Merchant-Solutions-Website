@@ -585,7 +585,7 @@ const Pricing = () => {
       {showAppModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowAppModal(false)} data-testid="app-modal">
           <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-hidden" onClick={e => e.stopPropagation()}>
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-purple-600 to-purple-500 px-6 py-4 flex items-center justify-between">
               <div>
                 <h3 className="text-white font-bold text-lg">Merchant Application</h3>
                 <p className="text-blue-100 text-xs">
