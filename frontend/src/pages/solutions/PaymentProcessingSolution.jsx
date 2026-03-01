@@ -267,8 +267,8 @@ const PaymentProcessingSolution = () => {
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="card-present-image-block">
               <img 
-                src="https://images.unsplash.com/photo-1654263937079-f63a3ea4d48b?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800" 
-                alt="Customer inserting chip card into payment terminal at store counter" 
+                src="https://dejavoo.io/wp-content/uploads/2025/09/Imperfect-Circle_Images_1000x1000_website_P12_Lifestyle.webp" 
+                alt="Dejavoo P12 mobile payment terminal for card present processing" 
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
