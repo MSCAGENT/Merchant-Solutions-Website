@@ -386,7 +386,7 @@ const MSCTranzActionGateway = () => {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-gray-600">
-            MSC TranzAction Gateway is available for businesses across all 50 US states, Canada, and the Caribbean. Contact us for integration support.
+            Transaction Gateway Integration is available for businesses across all 50 US states, Canada, and the Caribbean. Contact us for integration support.
           </p>
         </div>
       </section>
