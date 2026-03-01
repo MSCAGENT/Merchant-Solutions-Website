@@ -338,8 +338,8 @@ const Pricing = () => {
 
             {/* FISERV */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-fiserv">
-              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
-                <img src="https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/1868acbfd7623d5e2c70ec230702a9c29f1b7b941227a4b4f6fe5a67c9995fec.png" alt="Fiserv" className="h-8 object-contain brightness-200" />
+              <div className="bg-gray-50 border-b border-gray-200 px-6 py-5 flex items-center">
+                <span className="text-2xl font-bold tracking-tight text-gray-600">FISERV</span>
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
@@ -371,8 +371,8 @@ const Pricing = () => {
 
             {/* EPX */}
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-epx">
-              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
-                <img src="https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/7e74fe22022a6620c8f615b2c5f2f883fab2f7adfde2f50e704f28c87a0ce64d.png" alt="EPX" className="h-8 object-contain brightness-200" />
+              <div className="bg-gray-50 border-b border-gray-200 px-6 py-5 flex items-center">
+                <span className="text-2xl font-bold tracking-wider text-gray-600">EPX</span>
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
