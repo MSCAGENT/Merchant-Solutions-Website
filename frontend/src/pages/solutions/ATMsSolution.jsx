@@ -491,7 +491,7 @@ const ATMsSolution = () => {
             <Link to="/high-risk-merchant-services" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">High Risk</Link>
           </div>
           <p className="text-center text-sm text-gray-600">
-            Merchant Solutions Corp provides ATM placement, ATM partnership, ATM purchase, and ATM processing services for businesses across all 50 US states. In partnership with Cardtronics, we distribute GenMega and Hyosung ATMs at wholesale prices with free transaction processing. Free ATM placement available for qualified high-traffic locations. Full-service ATM management including installation, cash loading, maintenance, and 24/7 support.
+            Merchant Solutions Corp provides ATM placement, ATM partnership, ATM purchase, and ATM processing services for businesses across all 50 US states, Canada and Puerto Rico. In partnership with Cardtronics, we distribute GenMega and Hyosung ATMs at wholesale prices with free transaction processing through our network. Free ATM placement is available for qualified high-traffic locations. Full-service ATM management, including installation, cash loading, maintenance, and 24/7 support, is available.
           </p>
         </div>
       </section>
