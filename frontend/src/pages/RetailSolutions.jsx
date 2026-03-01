@@ -456,7 +456,7 @@ const RetailSolutions = () => {
               const Icon = niche.icon;
               return (
                 <div key={i} className="bg-gray-50 border-2 border-gray-100 hover:border-purple-500 rounded-xl p-5 text-center transition-all duration-300 hover:shadow-lg group" data-testid={`niche-${i}`}>
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-indigo-600 transition-colors duration-300">
+                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-600 transition-colors duration-300">
                     <Icon className="h-6 w-6 text-purple-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <p className="text-sm font-semibold text-gray-800">{niche.name}</p>
