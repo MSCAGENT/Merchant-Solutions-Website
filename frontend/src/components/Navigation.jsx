@@ -15,7 +15,7 @@ const Navigation = () => {
       label: 'Solutions',
       children: [
         { label: 'Payment Processing', path: '/solutions/payment-processing' },
-        { label: 'MSC TranzAction Gateway', path: '/solutions/tranzaction-gateway' },
+        { label: 'Transaction Gateway Integration', path: '/solutions/tranzaction-gateway' },
         { label: 'Crypto Processing', path: '/solutions/crypto-processing' },
         { label: 'Loyalty & Rewards', path: '/solutions/loyalty-rewards' },
         { label: 'Gift Cards', path: '/solutions/gift-cards' },
