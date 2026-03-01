@@ -471,7 +471,7 @@ const RetailSolutions = () => {
       </section>
 
       {/* Why MSC */}
-      <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-violet-50" data-testid="why-msc-section">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50" data-testid="why-msc-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
