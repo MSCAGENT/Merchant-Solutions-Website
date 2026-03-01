@@ -443,43 +443,128 @@ const Contact = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="mt-16 max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-2 hover:border-purple-400 transition-all duration-300">
+        <div className="mt-16 max-w-6xl mx-auto">
+          {/* Phone & Email Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <Card className="border-2 hover:border-purple-400 transition-all duration-300" data-testid="phone-card">
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2 text-gray-900">Call Us</h3>
+                    <div className="space-y-1">
+                      <a href="tel:8884078886" className="block text-purple-600 font-semibold hover:text-purple-800 transition-colors" data-testid="phone-toll-free">(888) 407-8886</a>
+                      <p className="text-xs text-gray-500 uppercase tracking-wider">Toll-Free</p>
+                    </div>
+                    <div className="space-y-1 mt-3">
+                      <a href="tel:9549199688" className="block text-gray-700 font-medium hover:text-purple-600 transition-colors" data-testid="phone-direct">(954) 919-9688</a>
+                      <p className="text-xs text-gray-500 uppercase tracking-wider">Direct Line</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Call Us</h3>
-                <p className="text-gray-600">1-800-MERCHANT</p>
-                <p className="text-sm text-gray-500 mt-1">Mon-Fri 8am-8pm EST</p>
               </CardContent>
             </Card>
-            <Card className="text-center border-2 hover:border-purple-400 transition-all duration-300">
+
+            <Card className="border-2 hover:border-purple-400 transition-all duration-300" data-testid="email-card">
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2 text-gray-900">Email Us</h3>
+                    <div className="space-y-2">
+                      <div>
+                        <a href="mailto:info@merchantsolutionscorp.com" className="text-purple-600 font-medium hover:text-purple-800 transition-colors text-sm" data-testid="email-info">info@merchantsolutionscorp.com</a>
+                        <p className="text-xs text-gray-500">General Inquiries</p>
+                      </div>
+                      <div>
+                        <a href="mailto:sales@merchantsolutionscorp.com" className="text-purple-600 font-medium hover:text-purple-800 transition-colors text-sm" data-testid="email-sales">sales@merchantsolutionscorp.com</a>
+                        <p className="text-xs text-gray-500">Sales & Partnerships</p>
+                      </div>
+                      <div>
+                        <a href="mailto:Support@merchantsolutionscorp.com" className="text-purple-600 font-medium hover:text-purple-800 transition-colors text-sm" data-testid="email-support">Support@merchantsolutionscorp.com</a>
+                        <p className="text-xs text-gray-500">Technical Support</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Email Us</h3>
-                <p className="text-gray-600">info@merchantsolutions.com</p>
-                <p className="text-sm text-gray-500 mt-1">24/7 response time</p>
               </CardContent>
             </Card>
-            <Card className="text-center border-2 hover:border-purple-400 transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+          </div>
+
+          {/* 3 Office Locations */}
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">Our Offices</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="border-2 hover:border-purple-400 transition-all duration-300" data-testid="location-orlando">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Visit Us</h3>
-                <p className="text-gray-600">123 Commerce Street</p>
-                <p className="text-sm text-gray-500 mt-1">New York, NY 10001</p>
+                <h3 className="font-bold text-lg text-gray-900 mb-1">Orlando</h3>
+                <p className="text-gray-600 text-sm">618 E South St</p>
+                <p className="text-gray-600 text-sm">Orlando, FL 32801</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=618+E+South+St+Orlando+FL+32801"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-purple-600 text-sm font-semibold hover:text-purple-800 transition-colors"
+                >
+                  Get Directions &rarr;
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-purple-400 transition-all duration-300" data-testid="location-ftlauderdale">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-gray-900 mb-1">Fort Lauderdale</h3>
+                <p className="text-gray-600 text-sm">501 E Las Olas Blvd</p>
+                <p className="text-gray-600 text-sm">Ft Lauderdale, FL 33301</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=501+E+Las+Olas+Blvd+Ft+Lauderdale+FL+33301"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-purple-600 text-sm font-semibold hover:text-purple-800 transition-colors"
+                >
+                  Get Directions &rarr;
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-purple-400 transition-all duration-300" data-testid="location-northmiami">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-gray-900 mb-1">North Miami</h3>
+                <p className="text-gray-600 text-sm">1801 NE 123rd St</p>
+                <p className="text-gray-600 text-sm">North Miami, FL 33181</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=1801+NE+123rd+St+North+Miami+FL+33181"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-purple-600 text-sm font-semibold hover:text-purple-800 transition-colors"
+                >
+                  Get Directions &rarr;
+                </a>
               </CardContent>
             </Card>
           </div>
