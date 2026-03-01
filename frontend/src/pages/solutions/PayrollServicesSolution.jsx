@@ -438,7 +438,7 @@ const PayrollServicesSolution = () => {
             Ready to Simplify Payroll?
           </h2>
           <p className="text-xl text-purple-100 mb-4">
-            Get ADP payroll fully integrated with your itab POS system.
+            Get ADP payroll fully integrated with your itab POS or Clover system. Square merchants can activate payroll natively.
           </p>
           <p className="text-lg text-purple-100 mb-8">
             Automate time tracking, tax filing, and compliance—all in one platform.
