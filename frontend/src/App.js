@@ -46,6 +46,7 @@ import DaySmartSalon from "./pages/DaySmartSalon";
 import SpecialtyMerchant from "./pages/SpecialtyMerchant";
 import Exatouch from "./pages/Exatouch";
 import RetailSolutions from "./pages/RetailSolutions";
+import Pricing from "./pages/Pricing";
 
 function App() {
   return (
