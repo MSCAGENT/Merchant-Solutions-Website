@@ -28,7 +28,7 @@ const Navigation = () => {
     {
       label: 'Industries',
       children: [
-        { label: 'Restaurants', path: '/industries/restaurants' },
+        { label: 'Restaurants', path: '/restaurant-payment-processing-services' },
         { label: 'Retail', path: '/retail-payment-solutions' },
         { label: 'Healthcare', path: '/industries/healthcare' },
         { label: 'Chiropractors', path: '/industries/chiropractors' },

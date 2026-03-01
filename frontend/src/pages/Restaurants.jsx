@@ -35,14 +35,15 @@ const Restaurants = () => {
 
   // SEO meta tags
   useEffect(() => {
-    document.title = 'Restaurant Payment Processing Florida | POS Installation & Clover Dealer';
+    document.title = 'Restaurant Payment Processing Services | Clover, Square & iTabPOS | Merchant Solutions Corp';
     const metaDesc = document.querySelector('meta[name="description"]');
+    const content = 'Restaurant payment processing and POS installation services. Clover, Square and iTabPOS with consulting, deployment and digital advertising to grow restaurant sales 20–30 percent.';
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Restaurant payment processing and POS installation in Florida and nationwide. Clover, Square, and iTabPOS setup with training, menu build, and dealer support.');
+      metaDesc.setAttribute('content', content);
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Restaurant payment processing and POS installation in Florida and nationwide. Clover, Square, and iTabPOS setup with training, menu build, and dealer support.';
+      meta.content = content;
       document.head.appendChild(meta);
     }
   }, []);
@@ -214,13 +215,13 @@ const Restaurants = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-purple-600/50" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-5xl leading-tight drop-shadow-lg" data-testid="hero-h1">
-            Restaurant Payment Processing & POS Installation in Florida | Nationwide Dealer Support
+            Restaurant Payment Processing Services
           </h1>
           <p className="text-lg md:text-xl text-purple-100 mb-4 max-w-3xl">
-            Clover, Square & iTabPOS Setup with Professional Installation, Training & Ongoing Support
+            Merchant Solutions Corp – Full Service ISO & PayFac Partner
           </p>
           <p className="text-base text-purple-200 mb-10 max-w-3xl">
-            Merchant Solutions Corp provides restaurant payment processing and POS installation services across Florida and all 50 U.S. states & Puerto Rico.
+            Clover, Square & iTabPOS with consulting, deployment, and digital advertising to grow restaurant sales 20–30%.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
