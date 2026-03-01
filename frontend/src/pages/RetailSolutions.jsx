@@ -526,16 +526,16 @@ const RetailSolutions = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-indigo-700 to-violet-700 text-white" data-testid="cta-section">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white" data-testid="cta-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Upgrade Your Retail Store</h2>
-          <p className="text-xl text-indigo-100 mb-2">Get a fully installed POS with integrated payment processing.</p>
-          <p className="text-lg text-indigo-200 mb-10">Clover. Exatouch. Square. Installed the right way.</p>
+          <p className="text-xl text-blue-100 mb-2">Get a fully installed POS with integrated payment processing.</p>
+          <p className="text-lg text-blue-200 mb-10">Clover. Exatouch. Square. Installed the right way.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-white text-indigo-700 hover:bg-gray-100 text-lg px-8 py-6 shadow-lg" data-testid="cta-quote-btn">
+            <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-white text-purple-700 hover:bg-gray-100 text-lg px-8 py-6 shadow-lg" data-testid="cta-quote-btn">
               Get a Retail Quote
             </Button>
-            <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 text-lg px-8 py-6" data-testid="cta-demo-btn">
+            <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="cta-demo-btn">
               Schedule Your Demo
             </Button>
           </div>
