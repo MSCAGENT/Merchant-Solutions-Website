@@ -109,7 +109,7 @@ const MSCTranzActionGateway = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              MSC TranzAction Gateway
+              Transaction Gateway Integration
             </h1>
             
             <p className="text-xl text-purple-600 font-semibold mb-4">
