@@ -288,37 +288,37 @@ const Pricing = () => {
 
           {/* Processor Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {/* TSYS - Blue */}
-            <div className="bg-white border-2 border-[#1B5FAA]/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-testid="funding-tsys">
-              <div className="bg-[#1B5FAA] px-6 py-5 flex items-center gap-4">
-                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/i9guktnn_TSYS%20merchant%20solutions.png" alt="TSYS Merchant Solutions" className="h-10 object-contain brightness-200" />
+            {/* TSYS */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-tsys">
+              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
+                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/i9guktnn_TSYS%20merchant%20solutions.png" alt="TSYS Merchant Solutions" className="h-8 object-contain" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Batch Cutoff</span>
-                  <span className="text-gray-900 font-bold">11:00 PM EST</span>
+                  <span className="text-gray-800 font-bold">11:00 PM EST</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Next-Day Funds</span>
-                  <span className="text-[#1B5FAA] font-bold">By 5:00 AM EST</span>
+                  <span className="text-purple-600 font-bold">By 5:00 AM EST</span>
                 </div>
                 <p className="text-xs text-gray-400 pt-2">Accounts with 5309 or 4765 MID prefix</p>
               </div>
             </div>
 
-            {/* Cygma - Purple */}
-            <div className="bg-white border-2 border-purple-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-testid="funding-cygma">
-              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center gap-4">
-                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/dzyiqi56_cygma-brand.svg" alt="Cygma" className="h-10 object-contain brightness-200" />
+            {/* Cygma */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-cygma">
+              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
+                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/dzyiqi56_cygma-brand.svg" alt="Cygma" className="h-8 object-contain brightness-200" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Batch Cutoff</span>
-                  <span className="text-gray-900 font-bold">10:30 PM EST</span>
+                  <span className="text-gray-800 font-bold">10:30 PM EST</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Next-Day Funds</span>
-                  <span className="text-purple-700 font-bold">By 4:00 AM EST</span>
+                  <span className="text-purple-600 font-bold">By 4:00 AM EST</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Same-Day Available</span>
@@ -329,31 +329,31 @@ const Pricing = () => {
                   <p className="text-xs text-gray-600 mt-1">Batch by 5 AM PST / 8 AM EST → Deposit by 10 AM PST / 1 PM EST</p>
                   <p className="text-xs text-amber-600/80 mt-1">Same-day funding dependent on merchant's bank</p>
                 </div>
-                <p className="text-xs text-gray-500 pt-1">Acquiring Bank: <span className="underline font-semibold text-purple-700">Commerce Bank of California</span></p>
+                <p className="text-xs text-gray-500 pt-1">Acquiring Bank: <span className="underline font-semibold text-gray-700">Commerce Bank of California</span></p>
               </div>
             </div>
 
-            {/* FISERV - Orange */}
-            <div className="bg-white border-2 border-[#FF6600]/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-testid="funding-fiserv">
-              <div className="bg-[#FF6600] px-6 py-5 flex items-center gap-4">
-                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/tuet7vuf_fiserve.png" alt="Fiserv" className="h-10 object-contain brightness-200" />
+            {/* FISERV */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-fiserv">
+              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
+                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/tuet7vuf_fiserve.png" alt="Fiserv" className="h-8 object-contain" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Batch Cutoff</span>
-                  <span className="text-gray-900 font-bold">9:30 PM EST</span>
+                  <span className="text-gray-800 font-bold">9:30 PM EST</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Next-Day Funds</span>
-                  <span className="text-[#FF6600] font-bold">Next Business Day</span>
+                  <span className="text-purple-600 font-bold">Next Business Day</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Instant Deposit</span>
                   <span className="text-amber-600 font-semibold text-sm">Available (1.5% fee)</span>
                 </div>
                 <div className="border-t border-gray-100 pt-3 mt-3">
-                  <div className="bg-orange-50 rounded-lg px-4 py-2.5">
-                    <p className="text-xs text-orange-400 font-semibold">Additional Cutoffs (Omaha Backend)</p>
+                  <div className="bg-purple-50 rounded-lg px-4 py-2.5">
+                    <p className="text-xs text-purple-500 font-semibold">Additional Cutoffs (Omaha Backend)</p>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-1 mt-2 text-xs">
                       <span className="text-gray-500">Omaha:</span><span className="text-gray-700">7:00 PM EST</span>
                       <span className="text-gray-500">Nashville:</span><span className="text-gray-700">5:00 PM EST</span>
@@ -366,54 +366,53 @@ const Pricing = () => {
               </div>
             </div>
 
-            {/* EPX - Sage Green */}
-            <div className="bg-white border-2 border-[#6B8E7B]/20 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-testid="funding-epx">
-              <div className="bg-[#6B8E7B] px-6 py-5 flex items-center gap-4">
-                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/9dw9w9xc_epx_logo_grey.jpg" alt="EPX Electronic Payment Exchange" className="h-10 object-contain brightness-200" />
+            {/* EPX */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-testid="funding-epx">
+              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
+                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/9dw9w9xc_epx_logo_grey.jpg" alt="EPX" className="h-8 object-contain brightness-200" />
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Batch Cutoff (Next Day)</span>
-                  <span className="text-gray-900 font-bold">10:00 PM EST</span>
+                  <span className="text-gray-800 font-bold">10:00 PM EST</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Next-Day Funds</span>
-                  <span className="text-[#6B8E7B] font-bold">By 6:00 AM EST</span>
+                  <span className="text-purple-600 font-bold">By 6:00 AM EST</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-500 text-sm">Same-Day Cutoff</span>
                   <span className="text-amber-600 font-semibold text-sm">10:30 AM EST</span>
                 </div>
                 <div className="border-t border-gray-100 pt-3 mt-3 space-y-2">
-                  <div className="bg-emerald-50 rounded-lg px-4 py-2.5">
-                    <p className="text-xs text-emerald-500">Same-Day Funding (BMO Harris)</p>
+                  <div className="bg-purple-50 rounded-lg px-4 py-2.5">
+                    <p className="text-xs text-purple-500">Same-Day Funding (BMO Harris)</p>
                     <p className="text-xs text-gray-600 mt-1">Batch by 10:30 AM EST → Deposit by 5 PM EST same day</p>
                     <p className="text-xs text-gray-400 mt-0.5">Limit: $50,000/day</p>
                   </div>
-                  <div className="bg-emerald-50 rounded-lg px-4 py-2.5">
-                    <p className="text-xs text-emerald-500">Next Day (Bancorp/Citizens/Fresno First)</p>
+                  <div className="bg-purple-50 rounded-lg px-4 py-2.5">
+                    <p className="text-xs text-purple-500">Next Day (Bancorp/Citizens/Fresno First)</p>
                     <p className="text-xs text-gray-600 mt-1">Settlement by 12:00 AM EST → Next business day deposit</p>
                   </div>
                 </div>
-                <p className="text-xs text-gray-500 pt-1">Acquiring Banks: <span className="underline font-semibold text-[#6B8E7B]">Bancorp / Citizens Bank / Fresno First Bank</span></p>
+                <p className="text-xs text-gray-500 pt-1">Acquiring Banks: <span className="underline font-semibold text-gray-700">Bancorp / Citizens Bank / Fresno First Bank</span></p>
               </div>
             </div>
 
-            {/* Square - Black */}
-            <div className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow md:col-span-2" data-testid="funding-square">
-              <div className="bg-black px-6 py-5 flex items-center gap-3">
-                <svg viewBox="0 0 24 24" className="h-8 w-8 text-white" fill="currentColor"><path d="M4.01 0A4.008 4.008 0 0 0 0 4.01v15.98A4.008 4.008 0 0 0 4.01 24h15.98A4.008 4.008 0 0 0 24 19.99V4.01A4.008 4.008 0 0 0 19.99 0H4.01zm11.108 7.293a.858.858 0 0 1 .859.86v7.694a.858.858 0 0 1-.86.86H8.883a.858.858 0 0 1-.86-.86V8.153a.858.858 0 0 1 .86-.86h6.235zM9.594 9.13a.349.349 0 0 0-.348.348v5.044c0 .192.156.348.348.348h4.812a.349.349 0 0 0 .348-.348V9.478a.349.349 0 0 0-.348-.348H9.594z"/></svg>
-                <span className="text-white font-bold text-xl">Square</span>
+            {/* Square */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow md:col-span-2" data-testid="funding-square">
+              <div className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-5 flex items-center">
+                <img src="https://customer-assets.emergentagent.com/job_893b4da5-be8a-4e25-802b-413b5ad94636/artifacts/pc8vmlv3_Square_Logo_Landscape.png" alt="Square" className="h-8 object-contain brightness-200" />
               </div>
               <div className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="flex justify-between items-center md:flex-col md:items-start md:gap-1">
                     <span className="text-gray-500 text-sm">Batch Cutoff</span>
-                    <span className="text-gray-900 font-bold">9:00 PM EST</span>
+                    <span className="text-gray-800 font-bold">9:00 PM EST</span>
                   </div>
                   <div className="flex justify-between items-center md:flex-col md:items-start md:gap-1">
                     <span className="text-gray-500 text-sm">Next-Day Funds</span>
-                    <span className="text-gray-900 font-bold">Next Business Day</span>
+                    <span className="text-purple-600 font-bold">Next Business Day</span>
                   </div>
                   <div className="flex justify-between items-center md:flex-col md:items-start md:gap-1">
                     <span className="text-gray-500 text-sm">Instant Transfer</span>
