@@ -56,6 +56,17 @@ const PayrollServicesSolution = () => {
     'Real-time data sync'
   ];
 
+  const cloverIntegration = [
+    'Time clock built into Clover POS',
+    'Employee scheduling from dashboard',
+    'Tip pooling and reporting',
+    'Shift management and swaps',
+    'Payroll export to ADP',
+    'Role-based access controls',
+    'Overtime tracking and alerts',
+    'Multi-location workforce sync'
+  ];
+
   const complianceFeatures = [
     { icon: Shield, title: 'Tax Compliance', desc: 'Automatic federal, state, and local tax calculations and filings' },
     { icon: FileText, title: 'Wage & Hour', desc: 'Overtime, minimum wage, and break compliance tools' },
