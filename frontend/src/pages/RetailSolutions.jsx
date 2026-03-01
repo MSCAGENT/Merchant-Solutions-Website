@@ -419,7 +419,7 @@ const RetailSolutions = () => {
               <div className="space-y-3 mb-8">
                 {paymentTypes.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 bg-slate-800/60 border border-slate-700/40 rounded-lg px-4 py-3">
-                    <CreditCard className="h-4 w-4 text-indigo-400 flex-shrink-0" />
+                    <CreditCard className="h-4 w-4 text-blue-400 flex-shrink-0" />
                     <span className="text-slate-300 text-sm">{item}</span>
                   </div>
                 ))}
