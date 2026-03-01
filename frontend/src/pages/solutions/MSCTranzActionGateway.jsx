@@ -77,8 +77,8 @@ const MSCTranzActionGateway = () => {
 
   const faqs = [
     {
-      question: 'What is MSC TranzAction Gateway?',
-      answer: 'MSC TranzAction Gateway is a secure, cloud-based payment gateway powered by NMI. It enables businesses to accept credit cards, debit cards, ACH, and recurring payments through multiple channels including online, in-store, and phone.'
+      question: 'What is Transaction Gateway Integration?',
+      answer: 'Transaction Gateway Integration is a secure, cloud-based payment gateway powered by NMI. It enables businesses to accept credit cards, debit cards, ACH, and recurring payments through multiple channels including online, in-store, and phone.'
     },
     {
       question: 'Do I need special hardware?',
