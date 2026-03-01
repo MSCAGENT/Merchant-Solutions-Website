@@ -155,37 +155,41 @@ const RetailSolutions = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative w-full bg-gradient-to-br from-gray-950 via-slate-900 to-indigo-950 py-24 lg:py-32 overflow-hidden" data-testid="retail-hero">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 20% 40%, rgba(99,102,241,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 60%, rgba(244,63,94,0.3) 0%, transparent 50%)' }} />
-        </div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-3xl" />
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-1.5 mb-6">
-            <Store className="h-3.5 w-3.5 text-indigo-400" />
-            <span className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">For Busy Entrepreneurs</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="hero-h1">
-            Retail Payment Processing Solutions
-          </h1>
-          <p className="text-xl text-indigo-200 font-medium mb-3">
-            Clover, Exatouch & Square for Grocery, Convenience, Apparel & Specialty Stores
-          </p>
-          <p className="text-lg text-slate-300 mb-3 max-w-3xl mx-auto">
-            Merchant Solutions Corp delivers complete retail payment solutions with integrated POS systems, barcode scanning, and real-time inventory management.
-          </p>
-          <p className="text-base text-slate-400 mb-8 max-w-2xl mx-auto">
-            Designed for inventory-driven businesses that require speed, accuracy, and reporting.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white text-lg px-8 py-6 shadow-lg shadow-indigo-900/30" data-testid="hero-quote-btn">
-              Get a Retail Quote
-            </Button>
-            <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 text-lg px-8 py-6" data-testid="hero-demo-btn">
-              Schedule a Live Demo
-            </Button>
+      {/* Hero Section with Video */}
+      <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden" data-testid="retail-hero">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/p0m4hwu3_Square%20for%20Retail.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/65 to-blue-900/55" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-5xl">
+            <p className="text-sm md:text-base uppercase tracking-widest text-purple-300 font-semibold mb-4">For Busy Entrepreneurs</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg" data-testid="hero-h1">
+              Retail Payment Processing Solutions
+            </h1>
+            <p className="text-xl text-purple-200 font-medium mb-3">
+              Clover, Exatouch & Square for Grocery, Convenience, Apparel & Specialty Stores
+            </p>
+            <p className="text-lg text-purple-100 mb-3 max-w-3xl mx-auto">
+              Merchant Solutions Corp delivers complete retail payment solutions with integrated POS systems, barcode scanning, and real-time inventory management.
+            </p>
+            <p className="text-base text-purple-200/80 mb-8 max-w-2xl mx-auto">
+              Designed for inventory-driven businesses that require speed, accuracy, and reporting.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" onClick={() => setShowQuoteModal(true)} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-quote-btn">
+                Get a Retail Quote
+              </Button>
+              <Button size="lg" onClick={() => setShowDemoModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-demo-btn">
+                Schedule a Live Demo
+              </Button>
+            </div>
           </div>
         </div>
       </section>
