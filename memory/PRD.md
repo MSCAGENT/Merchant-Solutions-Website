@@ -17,6 +17,12 @@ Build a comprehensive, SEO-optimized payment processing website. Multi-page fron
 - Resources: Blog, Payment Processing Articles, POS Systems Guide, Industry Guides
 
 ## What's Been Implemented
+### Mar 1, 2026 — Solutions Pages Updates (4 changes)
+1. **Transaction Gateway Integration**: Renamed from "MSC TranzAction Gateway" in nav + page title + all references. Added Developer Integration Portal section with form → grants access to NMI integration portal URL.
+2. **Business Loans & Cash Advances**: Added "Apply Now" buttons with specific links — Cash Advance → cashbuoy.biz, Business Loans/LOC/SBA → Lendio. Added SBA Loans as 5th funding option.
+3. **ATM Solutions**: Updated footer text to include Canada, Puerto Rico, and "through our network" language.
+4. **Payroll Services**: Renamed from "Payroll Services by ADP" to "Payroll Services". Added Clover as ADP integration partner. Added Square Native Payroll section (Square offers payroll natively). Updated hero badges, benefits bar, CTA, and SEO footer.
+
 ### Feb 28, 2026 — Retail Payment Solutions Page
 - Created `/app/frontend/src/pages/RetailSolutions.jsx` — comprehensive Retail industry page at `/retail-payment-solutions`
 - Sections: Hero, High-Volume Retail Features, 3 POS Platform deep-dives (Clover/Exatouch/Square with "Best for" tags, features, internal links), Inventory Management, Payment Processing, 10 Retail Niches grid, Why MSC, FAQ (5 Qs), Final CTA, SEO Footer
