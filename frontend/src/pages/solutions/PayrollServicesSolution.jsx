@@ -92,9 +92,11 @@ const PayrollServicesSolution = () => {
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6 flex-wrap">
               <span className="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-semibold">Powered by ADP</span>
-              <span className="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-sm font-semibold">itab POS Integrated</span>
+              <span className="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-semibold">itab POS Integrated</span>
+              <span className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold">Clover Integrated</span>
+              <span className="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-sm font-semibold">Square Native Payroll</span>
             </div>
             
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
