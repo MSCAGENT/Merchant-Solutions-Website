@@ -462,7 +462,7 @@ const PayrollServicesSolution = () => {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-gray-600">
-            Merchant Solutions Corp provides ADP payroll services, restaurant payroll solutions, and POS-integrated time and attendance for businesses across all 50 US states. Our payroll software integrates with itab POS for seamless employee time tracking, tip management, and automated payroll processing. Full tax filing, compliance support, and HR tools included.
+            Merchant Solutions Corp provides ADP payroll services, restaurant payroll solutions, and POS-integrated time and attendance for businesses across all 50 US states. Our payroll software integrates with itab POS and Clover for seamless employee time tracking, tip management, and automated payroll processing. Square merchants can access native payroll services directly through the Square application portal. Full tax filing, compliance support, and HR tools included.
           </p>
         </div>
       </section>
