@@ -531,7 +531,7 @@ const Restaurants = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/P12%20Mobile%20Payment%20Terminal%20-%20Dejavoo.io_files/Imperfect-Circle_Images_1000x1000_website_P12_Lifestyle.webp"
+                src="https://dejavoo.io/wp-content/uploads/2025/09/Imperfect-Circle_Images_1000x1000_website_P12_Lifestyle.webp"
                 alt="Dejavoo P12 mobile payment terminal for card present processing"
                 className="w-full h-auto object-contain"
               />
