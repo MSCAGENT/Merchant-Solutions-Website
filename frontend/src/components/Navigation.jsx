@@ -21,7 +21,7 @@ const Navigation = () => {
         { label: 'Gift Cards', path: '/solutions/gift-cards' },
         { label: 'Business Loans & Cash Advances', path: '/solutions/business-loans' },
         { label: 'ATM Solutions', path: '/solutions/atms' },
-        { label: 'Payroll Services by ADP', path: '/solutions/payroll-services' },
+        { label: 'Payroll Services', path: '/solutions/payroll-services' },
         { label: 'Tech & Installation', path: '/solutions/it-services' }
       ]
     },
