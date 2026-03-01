@@ -108,18 +108,18 @@ const Pricing = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative w-full bg-gradient-to-br from-gray-950 via-slate-900 to-purple-950 py-20 lg:py-28 overflow-hidden" data-testid="pricing-hero">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 40%, rgba(139,92,246,0.4) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(59,130,246,0.3) 0%, transparent 50%)' }} />
+      <section className="relative w-full bg-gradient-to-br from-purple-100 via-white to-purple-50 py-20 lg:py-28 overflow-hidden" data-testid="pricing-hero">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 40%, rgba(139,92,246,0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(168,85,247,0.2) 0%, transparent 50%)' }} />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" data-testid="hero-h1">
-            Transparent Pricing. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Your Choice.</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" data-testid="hero-h1">
+            Transparent Pricing. <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">Your Choice.</span>
           </h1>
-          <p className="text-lg text-slate-300 mb-3 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 mb-3 max-w-3xl mx-auto">
             Choose your rate structure, POS software, business type, and payment platform. We'll match you with the right merchant processing solution.
           </p>
-          <p className="text-base text-slate-400 max-w-2xl mx-auto">
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
             All rates can be paired with all software programs. Software availability depends on payment platform compatibility.
           </p>
         </div>
