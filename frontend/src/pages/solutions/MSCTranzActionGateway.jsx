@@ -365,7 +365,7 @@ const MSCTranzActionGateway = () => {
             Ready to Simplify Your Payments?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Get started with MSC TranzAction Gateway today and experience the power of unified payment processing.
+            Get started with Transaction Gateway Integration today and experience the power of unified payment processing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
