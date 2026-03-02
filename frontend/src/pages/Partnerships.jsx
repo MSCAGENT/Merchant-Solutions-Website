@@ -340,7 +340,7 @@ const Partnerships = () => {
                 <React.Fragment key={setIdx}>
                   {[
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e2um42io_axiom.png', alt: 'Axiom Bank', filter: 'grayscale(1) invert(1) contrast(3) brightness(1.5)' },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e5iqoh9m_BMO.png', alt: 'BMO Harris Bank', filter: 'grayscale(1) invert(1) contrast(5) brightness(2)' },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e5iqoh9m_BMO.png', alt: 'BMO Harris Bank', filter: 'grayscale(1) invert(1) contrast(5) brightness(2)', useText: 'BMO Harris Bank' },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bhqajy5o_Citizens_Bank_logo.png', alt: 'Citizens Bank', filter: 'grayscale(1)' },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/iwo0z8xq_fresno%20bank.png', alt: 'Fresno First Bank', filter: 'grayscale(1)' },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/2tban0j0_Elavon_usbank_logo.png', alt: 'Elavon US Bank', filter: 'grayscale(1)' },
@@ -349,12 +349,16 @@ const Partnerships = () => {
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/56bifjzm_paymentshub.png', alt: 'Payments Hub', filter: 'grayscale(1) invert(1) contrast(3) brightness(1.5)' }
                   ].map((logo, i) => (
                     <div key={`${setIdx}-${i}`} className="flex-shrink-0 h-14 w-44 flex items-center justify-center">
-                      <img
-                        src={logo.src}
-                        alt={logo.alt}
-                        className="h-full w-full object-contain"
-                        style={{ filter: logo.filter, mixBlendMode: 'multiply' }}
-                      />
+                      {logo.useText ? (
+                        <span className="text-xl font-bold text-gray-500 tracking-tight whitespace-nowrap">{logo.useText}</span>
+                      ) : (
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="h-full w-full object-contain"
+                          style={{ filter: logo.filter, mixBlendMode: 'multiply' }}
+                        />
+                      )}
                     </div>
                   ))}
                 </React.Fragment>
