@@ -22,9 +22,9 @@ const Partnerships = () => {
   const whyChooseUs = [
     {
       icon: Users,
-      title: 'Built for US Sales Partners',
+      title: 'Built for US/CAD Sales Partners',
       features: [
-        'US underwriting and banking partners',
+        'US and Canadian underwriting and banking partners',
         'Domestic support team',
         'US-based compliance standards',
         'Fast funding options'
@@ -32,20 +32,29 @@ const Partnerships = () => {
     },
     {
       icon: TrendingUp,
-      title: 'Residuals That Last',
+      title: 'Vested Residuals for Life of the Account',
       features: [
         'Competitive splits',
-        'Long-term residual ownership',
+        'Lifetime residual ownership',
         'Portfolio growth support'
       ]
     },
     {
       icon: Shield,
-      title: 'High-Risk Friendly',
+      title: 'High-Risk Friendly Banks',
       features: [
         'CBD, supplements, telehealth',
         'Medical and healthcare billing',
         'Specialty retail and online merchants'
+      ]
+    },
+    {
+      icon: DollarSign,
+      title: 'Upfront Commissions Paid Weekly',
+      features: [
+        'Fast upfront bonuses on new accounts',
+        'Weekly commission payouts',
+        'Transparent reporting and tracking'
       ]
     }
   ];
