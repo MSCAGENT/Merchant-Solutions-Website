@@ -219,9 +219,9 @@ const Partnerships = () => {
             {/* Left - Image */}
             <div>
               <img 
-                src="/api/placeholder/600/400" 
-                alt="payment processing residual income usa"
-                className="rounded-2xl shadow-xl w-full"
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/vwz24uvi_services_card_issue_virtual_cards%20%281%29.jpg" 
+                alt="Payment processing cloud banking and virtual card services"
+                className="rounded-2xl w-full"
               />
             </div>
 
