@@ -658,15 +658,11 @@ const SalonSpa = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="rounded-2xl overflow-hidden shadow-xl sticky top-24">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-auto object-cover rounded-2xl"
-              >
-                <source src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/4iz7xbi2_pos4830.mp4" type="video/mp4" />
-              </video>
+              <img
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/6jwdsa76_08.png"
+                alt="Dejavoo Xerocharge payment terminal with loyalty rewards screen"
+                className="w-full h-auto object-contain rounded-2xl"
+              />
             </div>
             <div>
               <p className="text-sm uppercase tracking-widest text-purple-600 font-semibold mb-3">Booth Renters & Multi-Chair Operations</p>
