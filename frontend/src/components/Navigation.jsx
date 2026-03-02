@@ -67,6 +67,7 @@ const Navigation = () => {
       label: 'Resources',
       children: [
         { label: 'Blog', path: '/resources/blog' },
+        { label: 'Documents', path: '/resources/documents' },
         { label: 'Payment Processing Articles', path: '/resources/payment-processing' },
         { label: 'POS Systems Guide', path: '/resources/pos-systems' },
         { label: 'High-Risk Merchant Info', path: '/resources/high-risk-merchants' },

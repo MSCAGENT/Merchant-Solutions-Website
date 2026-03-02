@@ -47,6 +47,9 @@ import SpecialtyMerchant from "./pages/SpecialtyMerchant";
 import Exatouch from "./pages/Exatouch";
 import RetailSolutions from "./pages/RetailSolutions";
 import Pricing from "./pages/Pricing";
+import BlogAdmin from "./pages/BlogAdmin";
+import { BlogList, BlogPost } from "./pages/Blog";
+import Documents from "./pages/Documents";
 
 function App() {
   return (
@@ -117,7 +120,10 @@ function App() {
           <Route path="/partners/agents" element={<Partnerships />} />
           
           {/* Resources Routes */}
-          <Route path="/resources/blog" element={<Resources />} />
+          <Route path="/resources/blog" element={<BlogList />} />
+          <Route path="/resources/blog/admin" element={<BlogAdmin />} />
+          <Route path="/resources/blog/:slug" element={<BlogPost />} />
+          <Route path="/resources/documents" element={<Documents />} />
           <Route path="/resources/payment-processing" element={<Resources />} />
           <Route path="/resources/pos-systems" element={<Resources />} />
           <Route path="/resources/high-risk-merchants" element={<Resources />} />
