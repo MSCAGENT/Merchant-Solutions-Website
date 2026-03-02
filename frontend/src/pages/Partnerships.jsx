@@ -370,7 +370,7 @@ const Partnerships = () => {
         <style>{`
           @keyframes scrollLogos {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-256px * 8)); }
+            100% { transform: translateX(calc(-256px * 10)); }
           }
           .animate-scroll-logos {
             animation: scrollLogos 25s linear infinite;
