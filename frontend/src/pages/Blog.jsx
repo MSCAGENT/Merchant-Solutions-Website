@@ -148,6 +148,20 @@ const BlogPost = () => {
             ))}
           </div>
         )}
+        {post.attachments?.length > 0 && (
+          <div className="mt-8 pt-6 border-t border-gray-100">
+            <p className="text-sm font-semibold text-gray-700 mb-3">Attached Documents:</p>
+            <div className="space-y-2">
+              {post.attachments.map((att, i) => (
+                <a key={i} href={att.download_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-gray-50 px-4 py-3 rounded-lg hover:bg-purple-50 transition-colors border border-gray-200">
+                  <FileText className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                  <span className="text-gray-700 font-medium">{att.filename}</span>
+                  <span className="text-xs text-gray-400 ml-auto">{att.content_type}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
         {/* Social Share */}
         <div className="mt-8 pt-6 border-t border-gray-100">
           <p className="text-sm text-gray-500 mb-3">Share this article:</p>
