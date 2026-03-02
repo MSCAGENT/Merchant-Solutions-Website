@@ -339,24 +339,21 @@ const Partnerships = () => {
               {[...Array(3)].map((_, setIdx) => (
                 <React.Fragment key={setIdx}>
                   {[
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e2um42io_axiom.png', alt: 'Axiom Bank', invert: true },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e5iqoh9m_BMO.png', alt: 'BMO Harris Bank', invert: true },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bhqajy5o_Citizens_Bank_logo.png', alt: 'Citizens Bank', invert: false },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/iwo0z8xq_fresno%20bank.png', alt: 'Fresno First Bank', invert: false },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/2tban0j0_Elavon_usbank_logo.png', alt: 'Elavon US Bank', invert: false },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/l4akzr4j_NACHA.jpg', alt: 'NACHA', invert: false },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/q4m10faw_OnePointLogo.png', alt: 'OnePoint AmEx', invert: false },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/56bifjzm_paymentshub.png', alt: 'Payments Hub', invert: true }
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e2um42io_axiom.png', alt: 'Axiom Bank', filter: 'grayscale(1) invert(1) contrast(3) brightness(1.5)' },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e5iqoh9m_BMO.png', alt: 'BMO Harris Bank', filter: 'grayscale(1) invert(1) contrast(5) brightness(2)' },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bhqajy5o_Citizens_Bank_logo.png', alt: 'Citizens Bank', filter: 'grayscale(1)' },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/iwo0z8xq_fresno%20bank.png', alt: 'Fresno First Bank', filter: 'grayscale(1)' },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/2tban0j0_Elavon_usbank_logo.png', alt: 'Elavon US Bank', filter: 'grayscale(1)' },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/l4akzr4j_NACHA.jpg', alt: 'NACHA', filter: 'grayscale(1)' },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/q4m10faw_OnePointLogo.png', alt: 'OnePoint AmEx', filter: 'grayscale(1)' },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/56bifjzm_paymentshub.png', alt: 'Payments Hub', filter: 'grayscale(1) invert(1) contrast(3) brightness(1.5)' }
                   ].map((logo, i) => (
                     <div key={`${setIdx}-${i}`} className="flex-shrink-0 h-14 w-44 flex items-center justify-center">
                       <img
                         src={logo.src}
                         alt={logo.alt}
                         className="h-full w-full object-contain"
-                        style={{
-                          filter: logo.invert ? 'grayscale(1) invert(1) contrast(2) brightness(1.3)' : 'grayscale(1)',
-                          mixBlendMode: 'multiply'
-                        }}
+                        style={{ filter: logo.filter, mixBlendMode: 'multiply' }}
                       />
                     </div>
                   ))}
