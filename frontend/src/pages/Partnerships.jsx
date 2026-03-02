@@ -477,6 +477,42 @@ const Partnerships = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-white" data-testid="faq-section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[
+              { q: 'What kind of commission splits can I expect as a partner?', a: 'We offer competitive revenue splits tailored to your volume and business model. Whether you are an independent agent, sub-ISO, or referral partner, we structure commissions to reward performance. Upfront bonuses and lifetime residuals are standard across all partner tiers.' },
+              { q: 'Are there any per-transaction or hidden costs?', a: 'No. We believe in transparent pricing. All fees are disclosed upfront during onboarding. There are no hidden per-transaction surcharges, monthly minimums you were not told about, or surprise deductions from your residuals.' },
+              { q: 'What platforms and gateways do you support?', a: 'We support Clover, Square, Dejavoo, Ingenico, iTabPOS, NMI, Authorize.Net, and custom gateway integrations. Our platform flexibility means you can match the right solution to each merchant\'s needs.' },
+              { q: 'What kind of support will I receive as an agent or sub-ISO?', a: 'You get a dedicated Business Development Manager, access to our partner portal, marketing materials, and direct technical support. We handle underwriting, compliance, and merchant onboarding so you can focus on selling.' },
+              { q: 'Can I resell your hardware or software solutions?', a: 'Yes. Partners can resell POS terminals, payment hardware, and software solutions. We provide dealer pricing on Clover, Dejavoo, and Ingenico devices, and support white-label configurations for qualified partners.' },
+              { q: 'How fast can I start boarding merchants?', a: 'Most partners are fully onboarded within 48 hours. Once approved, you can begin submitting merchant applications immediately through our partner portal. Underwriting turnaround is typically 24 to 48 hours for standard accounts.' },
+              { q: 'Can I white-label Merchant Solutions Corp\'s services?', a: 'Yes. We offer white-label payment processing, branded merchant statements, and custom gateway portals for ISOs and ISVs who want to present services under their own brand.' },
+              { q: 'Are your payment solutions secure?', a: 'Absolutely. All transactions are PCI DSS compliant. We support EMV chip, contactless NFC, point-to-point encryption, and tokenization across all supported terminals and gateways.' },
+              { q: 'Can I track my residuals and referrals?', a: 'Yes. Our partner portal provides real-time reporting on residuals, commissions, merchant activity, and referral status. You have full visibility into your portfolio performance at all times.' },
+              { q: 'What kind of technical support is provided?', a: 'We provide US-based technical support for all hardware and software issues. This includes POS installation assistance, gateway troubleshooting, and ongoing maintenance support for your merchants.' }
+            ].map((item, i) => (
+              <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden" data-testid={`faq-item-${i}`}>
+                <summary className="flex items-center justify-between cursor-pointer px-6 py-5 bg-white hover:bg-gray-50 transition-colors">
+                  <span className="font-semibold text-gray-900 pr-4">{item.q}</span>
+                  <ChevronRight className="h-5 w-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-90" />
+                </summary>
+                <div className="px-6 pb-5 text-gray-600 leading-relaxed">{item.a}</div>
+              </details>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <a href="https://calendly.com/mscpayments/new-agent-opportunity-one-on-one?back=1&month=2026-01" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white text-lg px-10 py-6 shadow-xl shadow-purple-600/20">
+                Book a Call <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Local SEO Footer */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
