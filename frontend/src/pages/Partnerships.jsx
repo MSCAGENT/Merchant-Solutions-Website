@@ -340,7 +340,7 @@ const Partnerships = () => {
                 <React.Fragment key={setIdx}>
                   {[
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e2um42io_axiom.png', alt: 'Axiom Bank', invert: true },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e5iqoh9m_BMO.png', alt: 'BMO Harris Bank', invert: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e5iqoh9m_BMO.png', alt: 'BMO Harris Bank', invert: true },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bhqajy5o_Citizens_Bank_logo.png', alt: 'Citizens Bank', invert: false },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/iwo0z8xq_fresno%20bank.png', alt: 'Fresno First Bank', invert: false },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/2tban0j0_Elavon_usbank_logo.png', alt: 'Elavon US Bank', invert: false },
@@ -354,7 +354,7 @@ const Partnerships = () => {
                         alt={logo.alt}
                         className="h-full w-full object-contain"
                         style={{
-                          filter: logo.invert ? 'grayscale(1) invert(1) brightness(0.4)' : 'grayscale(1) brightness(0.4) contrast(1.2)',
+                          filter: logo.invert ? 'grayscale(1) invert(1)' : 'grayscale(1)',
                           mixBlendMode: 'multiply'
                         }}
                       />
