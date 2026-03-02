@@ -50,6 +50,7 @@ import Pricing from "./pages/Pricing";
 import BlogAdmin from "./pages/BlogAdmin";
 import { BlogList, BlogPost } from "./pages/Blog";
 import Documents from "./pages/Documents";
+import SelfOrderingKiosk from "./pages/SelfOrderingKiosk";
 
 function App() {
   return (
