@@ -653,8 +653,77 @@ const SalonSpa = () => {
         </div>
       </section>
 
+      {/* Xerocharge / Dejavoo & Ingenico for Salons */}
+      <section className="py-20 bg-white" data-testid="xerocharge-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="rounded-2xl overflow-hidden shadow-xl sticky top-24">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto object-cover rounded-2xl"
+              >
+                <source src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/4iz7xbi2_pos4830.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div>
+              <p className="text-sm uppercase tracking-widest text-purple-600 font-semibold mb-3">Booth Renters & Multi-Chair Operations</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-testid="xerocharge-h2">
+                Xerocharge Payment Terminals by Dejavoo
+              </h2>
+              <p className="text-lg text-gray-700 mb-3">
+                For salons and spas with booth renters or multi-chair setups, Xerocharge terminals from Dejavoo offer a unique advantage: <strong>user login and Multi-MID operation</strong>.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Each stylist or booth renter can log into the same terminal with their own credentials and process payments under their own merchant account. No need for multiple terminals — one device handles it all, keeping costs low and operations simple.
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-4">6 Benefits of Dejavoo & Ingenico Terminals for Salons</h3>
+              <div className="space-y-4 mb-8">
+                {[
+                  { title: 'Multi-MID Support', desc: 'Each booth renter processes under their own merchant ID on a single shared terminal. Clean accounting, separate deposits, zero confusion.' },
+                  { title: 'User Login & Permissions', desc: 'Individual stylist logins with role-based access. Track sales per operator and maintain accountability across shifts.' },
+                  { title: 'Compact & Countertop Ready', desc: 'Dejavoo and Ingenico terminals are small-footprint devices that fit any front desk or styling station without clutter.' },
+                  { title: 'EMV, NFC & Contactless', desc: 'Accept chip cards, tap-to-pay, Apple Pay, Google Wallet, and Samsung Pay. Fast, secure checkout every time.' },
+                  { title: 'Dual Pricing & Cash Discount', desc: 'Offset processing fees with compliant dual pricing programs. Display both cash and card prices automatically on the terminal.' },
+                  { title: 'Reliable & Low Maintenance', desc: 'Enterprise-grade hardware built for high-volume daily use. No tablets to charge, no apps to update — just plug in and process.' }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-gray-900">{item.title}</span>
+                      <p className="text-sm text-gray-600 mt-0.5">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100 rounded-xl px-5 py-4 mb-6">
+                <p className="text-sm text-gray-700">
+                  <strong className="text-purple-700">Perfect for booth rental salons:</strong> Each renter gets their own MID, their own deposits, and their own reporting — all from one shared Dejavoo or Ingenico terminal at the front desk. No extra hardware costs, no complicated setups.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <Link to="/pos/dejavoo">
+                  <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-5">
+                    Explore Dejavoo Terminals
+                  </Button>
+                </Link>
+                <Link to="/pos/ingenico">
+                  <Button variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-6 py-5">
+                    Explore Ingenico Terminals
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
-      <section className="py-20 bg-white" data-testid="faq-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
