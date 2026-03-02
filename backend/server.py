@@ -127,6 +127,29 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     return status_checks
 
+BLOG_USERNAME = "marketing@merchantsolutionscorp.com"
+BLOG_PASSWORD = "Mscpay$1"
+
+@api_router.post("/blog/login")
+async def blog_login(creds: DocLoginRequest):
+    if creds.username == BLOG_USERNAME and creds.password == BLOG_PASSWORD:
+        token = secrets.token_hex(32)
+        await db.blog_sessions.insert_one({
+            "token": token,
+            "created_at": datetime.now(timezone.utc).isoformat()
+        })
+        return {"token": token, "message": "Login successful"}
+    raise HTTPException(status_code=401, detail="Invalid credentials")
+
+@api_router.get("/blog/verify")
+async def verify_blog_token(token: str = ""):
+    if not token:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    session = await db.blog_sessions.find_one({"token": token})
+    if not session:
+        raise HTTPException(status_code=401, detail="Invalid session")
+    return {"valid": True}
+
 # ─── Blog Routes ───
 
 @api_router.get("/blog")
