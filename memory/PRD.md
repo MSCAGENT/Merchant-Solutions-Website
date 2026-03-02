@@ -17,6 +17,14 @@ Build a comprehensive, SEO-optimized payment processing website. Multi-page fron
 - Resources: Blog, Payment Processing Articles, POS Systems Guide, Industry Guides
 
 ## What's Been Implemented
+### Mar 2, 2026 — Blog CMS & Document Portal
+- Built Blog CMS with FastAPI + MongoDB backend: full CRUD, topics, subjects, hashtags, keyword banks, cover images, social media sharing (X, Facebook, LinkedIn)
+- Blog Admin panel at `/resources/blog/admin` for creating/editing/publishing posts
+- Blog listing at `/resources/blog` renders published posts from API with individual post pages
+- Password-protected Document Portal at `/resources/documents` (user: admin1 / pass: 12345)
+- Documents organized by processor: CYGMA/Wells Fargo (6 docs), EPX/BMO Harris (10 docs), TSYS/Avidia (9 docs)
+- Document URLs are "pending" — ready for user to provide DocuSign links later
+
 ### Mar 2, 2026 — Pricing Page Refinements
 - Hero section updated: "Transparent Pricing" (top) + "Fast Funding" (below, purple gradient)
 - FISERV & EPX processor cards: Replaced purple headers with clean light grey headers + dark grey text logos
