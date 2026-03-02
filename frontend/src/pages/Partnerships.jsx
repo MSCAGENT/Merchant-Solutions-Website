@@ -354,7 +354,7 @@ const Partnerships = () => {
                         alt={logo.alt}
                         className="h-full w-full object-contain"
                         style={{
-                          filter: logo.invert ? 'grayscale(1) invert(1)' : 'grayscale(1)',
+                          filter: logo.invert ? 'grayscale(1) invert(1) contrast(2) brightness(1.3)' : 'grayscale(1)',
                           mixBlendMode: 'multiply'
                         }}
                       />
