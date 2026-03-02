@@ -1,11 +1,12 @@
-from fastapi import FastAPI, APIRouter, HTTPException, Depends, UploadFile, File
-from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from fastapi import FastAPI, APIRouter, HTTPException, UploadFile, File, Query
+from fastapi.responses import Response
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 import secrets
+import requests
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Optional
@@ -15,14 +16,47 @@ from datetime import datetime, timezone
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-# MongoDB connection
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
-security = HTTPBasic()
+
+# ─── Object Storage ───
+
+STORAGE_URL = "https://integrations.emergentagent.com/objstore/api/v1/storage"
+EMERGENT_KEY = os.environ.get("EMERGENT_LLM_KEY")
+APP_NAME = "msc-payments"
+storage_key = None
+
+def init_storage():
+    global storage_key
+    if storage_key:
+        return storage_key
+    resp = requests.post(f"{STORAGE_URL}/init", json={"emergent_key": EMERGENT_KEY}, timeout=30)
+    resp.raise_for_status()
+    storage_key = resp.json()["storage_key"]
+    return storage_key
+
+def put_object(path: str, data: bytes, content_type: str) -> dict:
+    key = init_storage()
+    resp = requests.put(
+        f"{STORAGE_URL}/objects/{path}",
+        headers={"X-Storage-Key": key, "Content-Type": content_type},
+        data=data, timeout=120
+    )
+    resp.raise_for_status()
+    return resp.json()
+
+def get_object(path: str):
+    key = init_storage()
+    resp = requests.get(
+        f"{STORAGE_URL}/objects/{path}",
+        headers={"X-Storage-Key": key}, timeout=60
+    )
+    resp.raise_for_status()
+    return resp.content, resp.headers.get("Content-Type", "application/octet-stream")
 
 # ─── Models ───
 
@@ -35,9 +69,10 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
-class BlogPost(BaseModel):
+class ContentPost(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    content_type: str = "blog"
     title: str
     slug: str = ""
     topic: str = ""
@@ -48,12 +83,15 @@ class BlogPost(BaseModel):
     excerpt: str = ""
     cover_image: str = ""
     images: List[str] = []
+    attachments: List[dict] = []
     author: str = "Merchant Solutions Corp"
     published: bool = False
+    visible_on_site: bool = True
     created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     updated_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
-class BlogPostCreate(BaseModel):
+class ContentPostCreate(BaseModel):
+    content_type: str = "blog"
     title: str
     topic: str = ""
     subject: str = ""
@@ -63,10 +101,13 @@ class BlogPostCreate(BaseModel):
     excerpt: str = ""
     cover_image: str = ""
     images: List[str] = []
+    attachments: List[dict] = []
     author: str = "Merchant Solutions Corp"
     published: bool = False
+    visible_on_site: bool = True
 
-class BlogPostUpdate(BaseModel):
+class ContentPostUpdate(BaseModel):
+    content_type: Optional[str] = None
     title: Optional[str] = None
     topic: Optional[str] = None
     subject: Optional[str] = None
@@ -76,23 +117,18 @@ class BlogPostUpdate(BaseModel):
     excerpt: Optional[str] = None
     cover_image: Optional[str] = None
     images: Optional[List[str]] = None
+    attachments: Optional[List[dict]] = None
     author: Optional[str] = None
     published: Optional[bool] = None
-
-class DocumentItem(BaseModel):
-    name: str
-    url: str = ""
-
-class DocumentCategory(BaseModel):
-    model_config = ConfigDict(extra="ignore")
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    processor: str
-    subtitle: str = ""
-    documents: List[DocumentItem] = []
+    visible_on_site: Optional[bool] = None
 
 class DocLoginRequest(BaseModel):
     username: str
     password: str
+
+class DocumentItem(BaseModel):
+    name: str
+    url: str = ""
 
 # ─── Helpers ───
 
@@ -127,17 +163,18 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     return status_checks
 
+# ─── Auth ───
+
 BLOG_USERNAME = "marketing@merchantsolutionscorp.com"
 BLOG_PASSWORD = "Mscpay$1"
+DOC_USERNAME = "admin1"
+DOC_PASSWORD = "12345"
 
 @api_router.post("/blog/login")
 async def blog_login(creds: DocLoginRequest):
     if creds.username == BLOG_USERNAME and creds.password == BLOG_PASSWORD:
         token = secrets.token_hex(32)
-        await db.blog_sessions.insert_one({
-            "token": token,
-            "created_at": datetime.now(timezone.utc).isoformat()
-        })
+        await db.blog_sessions.insert_one({"token": token, "created_at": datetime.now(timezone.utc).isoformat()})
         return {"token": token, "message": "Login successful"}
     raise HTTPException(status_code=401, detail="Invalid credentials")
 
@@ -150,16 +187,51 @@ async def verify_blog_token(token: str = ""):
         raise HTTPException(status_code=401, detail="Invalid session")
     return {"valid": True}
 
-# ─── Blog Routes ───
+# ─── File Upload ───
+
+@api_router.post("/upload")
+async def upload_file(file: UploadFile = File(...)):
+    ext = file.filename.split(".")[-1] if "." in file.filename else "bin"
+    path = f"{APP_NAME}/uploads/{uuid.uuid4()}.{ext}"
+    data = await file.read()
+    result = put_object(path, data, file.content_type or "application/octet-stream")
+    file_record = {
+        "id": str(uuid.uuid4()),
+        "storage_path": result["path"],
+        "original_filename": file.filename,
+        "content_type": file.content_type,
+        "size": result.get("size", len(data)),
+        "is_deleted": False,
+        "created_at": datetime.now(timezone.utc).isoformat()
+    }
+    await db.files.insert_one(file_record)
+    file_record.pop("_id", None)
+    return file_record
+
+@api_router.get("/files/{path:path}")
+async def download_file(path: str):
+    record = await db.files.find_one({"storage_path": path, "is_deleted": False})
+    if not record:
+        raise HTTPException(status_code=404, detail="File not found")
+    data, content_type = get_object(path)
+    return Response(content=data, media_type=record.get("content_type", content_type))
+
+# ─── Content (Blog/Articles/Guides) Routes ───
 
 @api_router.get("/blog")
-async def get_blog_posts(published_only: bool = True):
-    query = {"published": True} if published_only else {}
+async def get_content(published_only: bool = True, content_type: str = "", visible_only: bool = False):
+    query = {}
+    if published_only:
+        query["published"] = True
+    if visible_only:
+        query["visible_on_site"] = True
+    if content_type:
+        query["content_type"] = content_type
     posts = await db.blog_posts.find(query, {"_id": 0}).sort("created_at", -1).to_list(100)
     return posts
 
 @api_router.get("/blog/{post_id}")
-async def get_blog_post(post_id: str):
+async def get_content_post(post_id: str):
     post = await db.blog_posts.find_one({"id": post_id}, {"_id": 0})
     if not post:
         post = await db.blog_posts.find_one({"slug": post_id}, {"_id": 0})
@@ -168,8 +240,8 @@ async def get_blog_post(post_id: str):
     return post
 
 @api_router.post("/blog")
-async def create_blog_post(post_data: BlogPostCreate):
-    post = BlogPost(**post_data.model_dump())
+async def create_content_post(post_data: ContentPostCreate):
+    post = ContentPost(**post_data.model_dump())
     post.slug = make_slug(post.title)
     doc = post.model_dump()
     await db.blog_posts.insert_one(doc)
@@ -177,7 +249,7 @@ async def create_blog_post(post_data: BlogPostCreate):
     return doc
 
 @api_router.put("/blog/{post_id}")
-async def update_blog_post(post_id: str, update_data: BlogPostUpdate):
+async def update_content_post(post_id: str, update_data: ContentPostUpdate):
     updates = {k: v for k, v in update_data.model_dump().items() if v is not None}
     if not updates:
         raise HTTPException(status_code=400, detail="No fields to update")
@@ -191,7 +263,7 @@ async def update_blog_post(post_id: str, update_data: BlogPostUpdate):
     return post
 
 @api_router.delete("/blog/{post_id}")
-async def delete_blog_post(post_id: str):
+async def delete_content_post(post_id: str):
     result = await db.blog_posts.delete_one({"id": post_id})
     if result.deleted_count == 0:
         raise HTTPException(status_code=404, detail="Post not found")
@@ -199,17 +271,11 @@ async def delete_blog_post(post_id: str):
 
 # ─── Document Portal Routes ───
 
-DOC_USERNAME = "admin1"
-DOC_PASSWORD = "12345"
-
 @api_router.post("/documents/login")
 async def documents_login(creds: DocLoginRequest):
     if creds.username == DOC_USERNAME and creds.password == DOC_PASSWORD:
         token = secrets.token_hex(32)
-        await db.doc_sessions.insert_one({
-            "token": token,
-            "created_at": datetime.now(timezone.utc).isoformat()
-        })
+        await db.doc_sessions.insert_one({"token": token, "created_at": datetime.now(timezone.utc).isoformat()})
         return {"token": token, "message": "Login successful"}
     raise HTTPException(status_code=401, detail="Invalid credentials")
 
@@ -281,7 +347,6 @@ async def seed_documents():
 # ─── App Setup ───
 
 app.include_router(api_router)
-
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
@@ -290,11 +355,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+@app.on_event("startup")
+async def startup():
+    try:
+        init_storage()
+        logger.info("Object storage initialized")
+    except Exception as e:
+        logger.error(f"Storage init failed: {e}")
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
