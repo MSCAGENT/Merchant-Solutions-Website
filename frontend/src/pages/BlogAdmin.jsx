@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Plus, Edit2, Trash2, Eye, EyeOff, ArrowLeft, Save, X, Hash, Tag, Image } from 'lucide-react';
+import { Plus, Edit2, Trash2, Eye, EyeOff, ArrowLeft, Save, X, Hash, Tag, Image, Lock, LogOut } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 
 const API = process.env.REACT_APP_BACKEND_URL;
 
 const BlogAdmin = () => {
+  const [token, setToken] = useState(sessionStorage.getItem('blog_token') || '');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
+  const [loginLoading, setLoginLoading] = useState(false);
+  const [verifying, setVerifying] = useState(true);
+
   const [posts, setPosts] = useState([]);
   const [editing, setEditing] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -20,8 +27,58 @@ const BlogAdmin = () => {
 
   useEffect(() => {
     document.title = 'Blog Admin | Merchant Solutions Corp';
-    fetchPosts();
+    if (token) {
+      verifyToken();
+    } else {
+      setVerifying(false);
+    }
   }, []);
+
+  const verifyToken = async () => {
+    try {
+      const res = await fetch(`${API}/api/blog/verify?token=${token}`);
+      if (res.ok) {
+        fetchPosts();
+      } else {
+        setToken('');
+        sessionStorage.removeItem('blog_token');
+      }
+    } catch {
+      setToken('');
+      sessionStorage.removeItem('blog_token');
+    }
+    setVerifying(false);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoginError('');
+    setLoginLoading(true);
+    try {
+      const res = await fetch(`${API}/api/blog/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: email, password })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setToken(data.token);
+        sessionStorage.setItem('blog_token', data.token);
+        fetchPosts();
+      } else {
+        setLoginError('Invalid email or password.');
+      }
+    } catch {
+      setLoginError('Connection error. Please try again.');
+    }
+    setLoginLoading(false);
+  };
+
+  const handleLogout = () => {
+    setToken('');
+    sessionStorage.removeItem('blog_token');
+    setPosts([]);
+  };
 
   const fetchPosts = async () => {
     try {
@@ -81,24 +138,65 @@ const BlogAdmin = () => {
     fetchPosts();
   };
 
-  const shareUrl = (post) => {
-    const url = `${window.location.origin}/resources/blog/${post.slug}`;
-    return url;
-  };
+  const shareUrl = (post) => `${window.location.origin}/resources/blog/${post.slug}`;
 
   const shareOnTwitter = (post) => {
     const text = `${post.title} ${post.hashtags?.map(h => '#' + h.replace(/\s/g, '')).join(' ') || ''}`;
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl(post))}`, '_blank');
   };
+  const shareOnFacebook = (post) => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl(post))}`, '_blank');
+  const shareOnLinkedIn = (post) => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl(post))}`, '_blank');
 
-  const shareOnFacebook = (post) => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl(post))}`, '_blank');
-  };
+  if (verifying) return <div className="min-h-screen flex items-center justify-center"><p className="text-gray-500">Verifying session...</p></div>;
 
-  const shareOnLinkedIn = (post) => {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl(post))}`, '_blank');
-  };
+  // Login Screen
+  if (!token) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center px-4">
+        <div className="w-full max-w-md">
+          <div className="text-center mb-8">
+            <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Lock className="h-8 w-8 text-purple-600" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2" data-testid="blog-login-h1">Blog Admin</h1>
+            <p className="text-gray-500">Sign in with your marketing credentials.</p>
+          </div>
+          <Card className="border border-gray-200 shadow-lg">
+            <CardContent className="p-8">
+              <form onSubmit={handleLogin} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input
+                    type="email" value={email} onChange={e => setEmail(e.target.value)}
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="marketing@merchantsolutionscorp.com" required data-testid="blog-email-input"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                  <input
+                    type="password" value={password} onChange={e => setPassword(e.target.value)}
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Enter password" required data-testid="blog-password-input"
+                  />
+                </div>
+                {loginError && <p className="text-red-500 text-sm" data-testid="blog-login-error">{loginError}</p>}
+                <Button
+                  type="submit" disabled={loginLoading}
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white py-6 text-lg"
+                  data-testid="blog-login-btn"
+                >
+                  {loginLoading ? 'Signing in...' : 'Sign In'}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  }
 
+  // Admin Dashboard
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-r from-purple-700 to-purple-600 text-white py-8">
@@ -110,13 +208,18 @@ const BlogAdmin = () => {
             <h1 className="text-3xl font-bold" data-testid="blog-admin-h1">Blog Admin</h1>
             <p className="text-purple-200 mt-1">Create, edit, and manage blog posts</p>
           </div>
-          <Button
-            onClick={() => { setEditing(null); setForm(emptyPost); }}
-            className="bg-white text-purple-700 hover:bg-purple-50"
-            data-testid="new-post-btn"
-          >
-            <Plus className="h-4 w-4 mr-2" /> New Post
-          </Button>
+          <div className="flex items-center gap-3">
+            <Button
+              onClick={() => { setEditing(null); setForm(emptyPost); }}
+              className="bg-white text-purple-700 hover:bg-purple-50"
+              data-testid="new-post-btn"
+            >
+              <Plus className="h-4 w-4 mr-2" /> New Post
+            </Button>
+            <Button onClick={handleLogout} variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="blog-logout-btn">
+              <LogOut className="h-4 w-4 mr-2" /> Logout
+            </Button>
+          </div>
         </div>
       </div>
 
