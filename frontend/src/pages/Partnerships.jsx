@@ -83,6 +83,24 @@ const Partnerships = () => {
         'Software and EMR integrations',
         'White-label gateway access'
       ]
+    },
+    {
+      title: 'Marketing Services & AI',
+      items: [
+        'Digital advertising for merchants (Google, Meta)',
+        'AI-powered voice follow-up systems',
+        'Automated SMS and email campaigns',
+        'Social media content creation'
+      ]
+    },
+    {
+      title: 'Credit Repair & Business Lending',
+      items: [
+        'Merchant cash advances',
+        'Business lines of credit',
+        'Credit repair referral programs',
+        'Working capital solutions'
+      ]
     }
   ];
 
@@ -169,8 +187,8 @@ const Partnerships = () => {
             {/* Right - Image */}
             <div className="hidden lg:block">
               <img 
-                src="/api/placeholder/600/400" 
-                alt="US merchant services agent iso partner"
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/6qa2fg84_img-87-1170x600.jpg" 
+                alt="Successful merchant services agent partner"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -289,9 +307,14 @@ const Partnerships = () => {
             {/* Right - Image */}
             <div>
               <img 
-                src="/api/placeholder/600/400" 
-                alt="white label payment processing iso usa"
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/9x4cqgkc_img-payroll-plus.jpg" 
+                alt="Agent managing merchant account processing"
                 className="rounded-2xl shadow-xl w-full"
+              />
+              <img 
+                src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/rt8lqjor_video-bg-2400-60.webp" 
+                alt="Team collaborating on merchant solutions"
+                className="rounded-2xl shadow-xl w-full mt-6"
               />
             </div>
           </div>

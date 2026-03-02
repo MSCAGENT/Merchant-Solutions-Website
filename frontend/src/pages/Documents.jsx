@@ -95,26 +95,26 @@ const Documents = () => {
             <h1 className="text-3xl font-bold text-white mb-2" data-testid="doc-login-h1">Document Portal</h1>
             <p className="text-purple-300">Enter your credentials to access merchant documents.</p>
           </div>
-          <Card className="border-0 shadow-2xl bg-white/10 backdrop-blur-xl">
+          <Card className="border-0 shadow-2xl bg-white">
             <CardContent className="p-8">
               <form onSubmit={handleLogin} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-purple-200 mb-1">Username</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
                   <input
                     type="text" value={username} onChange={e => setUsername(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300/50 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="Enter username" required data-testid="doc-username-input"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-purple-200 mb-1">Password</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
                   <input
                     type="password" value={password} onChange={e => setPassword(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300/50 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="Enter password" required data-testid="doc-password-input"
                   />
                 </div>
-                {error && <p className="text-red-400 text-sm" data-testid="doc-login-error">{error}</p>}
+                {error && <p className="text-red-500 text-sm" data-testid="doc-login-error">{error}</p>}
                 <Button
                   type="submit" disabled={loading}
                   className="w-full bg-purple-600 hover:bg-purple-700 text-white py-6 text-lg"
@@ -125,7 +125,7 @@ const Documents = () => {
               </form>
             </CardContent>
           </Card>
-          <p className="text-center text-purple-400/60 text-xs mt-6">
+          <p className="text-center text-gray-400 text-xs mt-6">
             Contact your account representative for login credentials.
           </p>
         </div>
