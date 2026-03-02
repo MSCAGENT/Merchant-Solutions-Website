@@ -17,7 +17,7 @@ const BlogList = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await fetch(`${API}/api/blog?published_only=true`);
+      const res = await fetch(`${API}/api/blog?published_only=true&visible_only=true`);
       const data = await res.json();
       setPosts(data);
     } catch (err) { console.error(err); }
