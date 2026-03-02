@@ -340,10 +340,10 @@ const Partnerships = () => {
                 <React.Fragment key={setIdx}>
                   {[
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/vouaysa7_20190926pnc-e1739723769563.jpg', alt: 'PNC Bank', darkBg: false },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/owe3xc69_axiom.png', alt: 'Axiom Bank', darkBg: true },
+                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/499336c781aecd1cc543f12369d8b39f022aee02bfd45b1bbc77ef9a55159e9d.png', alt: 'Axiom Bank', darkBg: false },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/l3ci5xow_bmo-harris.png', alt: 'BMO Harris Bank', darkBg: false },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/k779dpcw_Citizens_Bank_logo.png', alt: 'Citizens Bank', darkBg: false },
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/yuc83yv4_elec-pay-cbc.png', alt: 'Commercial Bank of California', darkBg: true },
+                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/410205a811b0078b8cb5df4cb000e70274f842af3b9f0b17badda7da1247ade1.png', alt: 'Commercial Bank of California', darkBg: false },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/iwo0z8xq_fresno%20bank.png', alt: 'Fresno First Bank', darkBg: false },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/2tban0j0_Elavon_usbank_logo.png', alt: 'Elavon US Bank', darkBg: false },
                     { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/l4akzr4j_NACHA.jpg', alt: 'NACHA', darkBg: false },
