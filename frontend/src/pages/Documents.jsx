@@ -86,14 +86,17 @@ const Documents = () => {
   // Login Screen
   if (!token) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-white flex items-center justify-center px-4">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-purple-600/20 border border-purple-500/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Lock className="h-8 w-8 text-purple-400" />
-            </div>
-            <h1 className="text-3xl font-bold text-white mb-2" data-testid="doc-login-h1">Document Portal</h1>
-            <p className="text-purple-300">Enter your credentials to access merchant documents.</p>
+            <img
+              src="https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/m5yh6iet_PNG.png"
+              alt="Merchant Solutions Corp"
+              className="h-24 mx-auto mb-4 object-contain"
+              style={{ mixBlendMode: 'multiply' }}
+            />
+            <h1 className="text-3xl font-bold text-gray-900 mb-2" data-testid="doc-login-h1">Document Portal</h1>
+            <p className="text-gray-500">Enter your credentials to access merchant documents.</p>
           </div>
           <Card className="border-0 shadow-2xl bg-white">
             <CardContent className="p-8">
