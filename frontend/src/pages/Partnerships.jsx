@@ -330,6 +330,44 @@ const Partnerships = () => {
         </div>
       </section>
 
+      {/* Banking Partners Carousel */}
+      <section className="py-12 bg-gray-50 overflow-hidden" data-testid="bank-carousel">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm uppercase tracking-widest text-gray-500 font-semibold mb-8">Our Banking Partners</p>
+          <div className="relative">
+            <div className="flex animate-scroll-logos gap-16 items-center">
+              {[...Array(3)].map((_, setIdx) => (
+                <React.Fragment key={setIdx}>
+                  {[
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e2um42io_axiom.png', alt: 'Axiom Bank', dark: true },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/e5iqoh9m_BMO.png', alt: 'BMO Harris Bank', dark: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/bhqajy5o_Citizens_Bank_logo.png', alt: 'Citizens Bank', dark: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/iwo0z8xq_fresno%20bank.png', alt: 'Fresno First Bank', dark: false }
+                  ].map((logo, i) => (
+                    <div key={`${setIdx}-${i}`} className="flex-shrink-0 h-16 w-48 flex items-center justify-center">
+                      <img src={logo.src} alt={logo.alt} className={`h-full w-full object-contain ${logo.dark ? 'mix-blend-screen bg-gray-900 rounded-lg p-2' : ''}`} />
+                    </div>
+                  ))}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-256px * 4 - 64px * 4)); }
+          }
+          .animate-scroll-logos {
+            animation: scrollLogos 15s linear infinite;
+            width: max-content;
+          }
+          .animate-scroll-logos:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+      </section>
+
       {/* Comparison Table */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
