@@ -49,9 +49,7 @@ const Navigation = () => {
         { label: 'Dejavoo Terminals', path: '/pos/dejavoo-terminals' },
         { label: 'Exatouch POS', path: '/pos/exatouch' },
         { label: 'Ingenico Terminals', path: '/pos/ingenico-terminals' },
-        { label: 'Restaurant POS', path: '/pos/restaurant-pos' },
-        { label: 'Retail POS', path: '/pos/retail-pos' },
-        { label: 'QSR POS', path: '/pos/qsr-pos' },
+        { label: 'Self Ordering Kiosks', path: '/best-self-ordering-kiosk-for-restaurants' },
         { label: 'Self-Ordering Kiosks', path: '/pos/self-ordering-kiosk' }
       ]
     },

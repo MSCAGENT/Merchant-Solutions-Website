@@ -102,9 +102,7 @@ function App() {
           <Route path="/pos/dejavoo-terminals" element={<DejavooTerminals />} />
           <Route path="/pos/exatouch" element={<Exatouch />} />
           <Route path="/pos/ingenico-terminals" element={<POSHardware />} />
-          <Route path="/pos/restaurant-pos" element={<POSHardware />} />
-          <Route path="/pos/retail-pos" element={<POSHardware />} />
-          <Route path="/pos/qsr-pos" element={<POSHardware />} />
+          <Route path="/best-self-ordering-kiosk-for-restaurants" element={<SelfOrderingKiosk />} />
           <Route path="/pos/self-ordering-kiosk" element={<POSHardware />} />
           <Route path="/retail-software/daysmart-salon" element={<DaySmartSalon />} />
           <Route path="/pos/daysmart-salon" element={<DaySmartSalon />} />
