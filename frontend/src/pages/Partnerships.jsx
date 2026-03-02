@@ -339,17 +339,27 @@ const Partnerships = () => {
               {[...Array(3)].map((_, setIdx) => (
                 <React.Fragment key={setIdx}>
                   {[
-                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/qli96elk_image.png', alt: 'Axiom Bank' },
-                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/2413bebb86421308860c02da1fd628a241438f4813b6272f01f9b42a74898fb3.png', alt: 'BMO Harris Bank' },
-                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/c9dac61b3f65b3a5158a06fc85112236a9d0bc5e0120d96d155995fd409b4f61.png', alt: 'Citizens Bank' },
-                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/d93a0686c970282fd5246fa4ef6c2cc44ca4b79ba10b6dfd8c404e209f3d2d80.png', alt: 'Fresno First Bank' },
-                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/c441efe11e4514711f355d9adad5698cfe9767e0035834c35a832dca7c771324.png', alt: 'Elavon US Bank' },
-                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/61a86adbcd73cb0b62b50dbf44891f1685cd1d775e7ee4227c31ebdad2cd7b7d.png', alt: 'NACHA' },
-                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/486d1280d5c733086cc295b40f94b91c8b4272f8712a092b233d3e85d2610d18.png', alt: 'OnePoint' },
-                    { src: 'https://static.prod-images.emergentagent.com/jobs/4a81af7b-38a3-4377-ab4c-9466c710fd1a/images/3541d85b3dcd17798e6ae712f803213309e8abc32a576faf54a71a2a206ab182.png', alt: 'Payments Hub' }
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/vouaysa7_20190926pnc-e1739723769563.jpg', alt: 'PNC Bank', darkBg: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/owe3xc69_axiom.png', alt: 'Axiom Bank', darkBg: true },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/l3ci5xow_bmo-harris.png', alt: 'BMO Harris Bank', darkBg: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/k779dpcw_Citizens_Bank_logo.png', alt: 'Citizens Bank', darkBg: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/yuc83yv4_elec-pay-cbc.png', alt: 'Commercial Bank of California', darkBg: true },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/iwo0z8xq_fresno%20bank.png', alt: 'Fresno First Bank', darkBg: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/2tban0j0_Elavon_usbank_logo.png', alt: 'Elavon US Bank', darkBg: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/l4akzr4j_NACHA.jpg', alt: 'NACHA', darkBg: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/q4m10faw_OnePointLogo.png', alt: 'OnePoint', darkBg: false },
+                    { src: 'https://customer-assets.emergentagent.com/job_4a81af7b-38a3-4377-ab4c-9466c710fd1a/artifacts/56bifjzm_paymentshub.png', alt: 'Payments Hub', darkBg: true }
                   ].map((logo, i) => (
-                    <div key={`${setIdx}-${i}`} className="flex-shrink-0 h-14 w-44 flex items-center justify-center bg-white">
-                      <img src={logo.src} alt={logo.alt} className="h-full w-full object-contain" />
+                    <div key={`${setIdx}-${i}`} className="flex-shrink-0 h-14 w-44 flex items-center justify-center">
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        className="h-full w-full object-contain"
+                        style={{
+                          filter: logo.darkBg ? 'grayscale(1) invert(1) contrast(3) brightness(1.5)' : 'grayscale(1)',
+                          mixBlendMode: 'multiply'
+                        }}
+                      />
                     </div>
                   ))}
                 </React.Fragment>
