@@ -331,7 +331,7 @@ const Partnerships = () => {
       </section>
 
       {/* Banking Partners Carousel */}
-      <section className="py-12 bg-gray-50 overflow-hidden" data-testid="bank-carousel">
+      <section className="py-12 bg-white overflow-hidden" data-testid="bank-carousel">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm uppercase tracking-widest text-gray-500 font-semibold mb-8">Our Banking & Processing Partners</p>
           <div className="relative">
