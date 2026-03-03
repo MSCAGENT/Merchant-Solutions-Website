@@ -51,6 +51,7 @@ import BlogAdmin from "./pages/BlogAdmin";
 import { BlogList, BlogPost } from "./pages/Blog";
 import Documents from "./pages/Documents";
 import SelfOrderingKiosk from "./pages/SelfOrderingKiosk";
+import ProfessionalServices from "./pages/ProfessionalServices";
 
 function App() {
   return (
@@ -94,6 +95,8 @@ function App() {
           <Route path="/industries/:industryId" element={<IndustryDetail />} />
           <Route path="/retail-payment-solutions" element={<RetailSolutions />} />
           <Route path="/industries/retail" element={<RetailSolutions />} />
+          <Route path="/professional-services-payment-processing-clover-pos" element={<ProfessionalServices />} />
+          <Route path="/industries/professional-services" element={<ProfessionalServices />} />
           
           {/* POS & Hardware Routes */}
           <Route path="/pos/clover" element={<CloverPOS />} />
