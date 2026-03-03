@@ -49,7 +49,7 @@ const BusinessLoansSolution = () => {
       title: 'Working Capital Loans', 
       desc: 'Short-term financing for inventory, payroll, or expansion.',
       amount: '$5,000 - $500,000',
-      applyUrl: 'https://lp.lendio.com/partners-low-lf?source=MerchantSolutionsCorp&affiliate=3808303628&medium=SRP'
+      applyUrl: 'https://onboarding.fundomate.com/merchant-sign-up?partner=midwaycapitalusa'
     },
     { 
       icon: CreditCard, 
@@ -247,11 +247,8 @@ const BusinessLoansSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="requirements-image">
-              <div className="text-center text-gray-400">
-                <FileText className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Business Funding Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="requirements-image">
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/f16e76bf9c3dc5228fa08b536193717f82bc01305323ad06ad79cbdcc454f245.png" alt="Simple business loan application process" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -261,11 +258,8 @@ const BusinessLoansSolution = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="use-cases-image">
-              <div className="text-center text-gray-400">
-                <TrendingUp className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Business Growth Image</p>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3]" data-testid="use-cases-image">
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/b31b457a65b879dbe5e464bed0e7d38bacd4216035e3314f0440befe22129daa.png" alt="Business funding use cases - inventory, equipment, marketing, expansion" className="w-full h-full object-cover" />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
