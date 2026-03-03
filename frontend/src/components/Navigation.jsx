@@ -51,9 +51,7 @@ const Navigation = () => {
         { label: 'DaySmart Salon', path: '/retail-software/daysmart-salon' },
         { label: 'Dejavoo Terminals', path: '/pos/dejavoo-terminals' },
         { label: 'Exatouch POS', path: '/pos/exatouch' },
-        { label: 'Ingenico Terminals', path: '/pos/ingenico-terminals' },
-        { label: 'Self Ordering Kiosks', path: '/best-self-ordering-kiosk-for-restaurants' },
-        { label: 'Self-Ordering Kiosks', path: '/pos/self-ordering-kiosk' }
+        { label: 'Ingenico Terminals', path: '/pos/ingenico-terminals' }
       ]
     },
     {

@@ -293,12 +293,12 @@ const DualPricing = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full filter blur-3xl" />
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+          <source src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/mkbcuh94_Payments%20Video%20run.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/60 z-10" />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white/10 backdrop-blur-sm text-purple-200 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Compliant Since 2015</div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="hero-h1">

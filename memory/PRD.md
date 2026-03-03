@@ -1,86 +1,45 @@
-# PRD — Merchant Solutions Corp Payment Processing Website
+# Merchant Solutions Corp - Payment Processing Website
 
 ## Original Problem Statement
-Build a comprehensive, SEO-optimized payment processing website. Multi-page frontend with specific design language, complex navigation, numerous content pages with specific layouts, functional forms (Lead Connector, Calendly, Formstack), and granular UI/UX and SEO enhancements.
+Build a comprehensive, SEO-optimized payment processing website with a blog CMS, secure document portal, interactive tools, and extensive industry/solution pages.
 
-## Tech Stack
-- **Frontend**: React.js, TailwindCSS, Shadcn/UI
-- **Backend**: None (frontend-only, all content hardcoded)
-- **Third-Party**: Lead Connector (forms), Calendly (scheduling), Formstack, SimpleIcons CDN
-
-## Pages Built (75+)
-- Home, Contact, About, Security, Login, Careers
-- Solutions: Payment Processing, MSC TranzAction Gateway, Crypto, Loyalty, Gift Cards, Business Loans, ATMs, Payroll, IT Services
-- Industries: Restaurants, Healthcare, Chiropractors, Dental, Medical Clinics, High-Risk, Salon & Spa, Specialty Merchants
-- POS & Hardware: PayAnywhere, Clover, Square, DaySmart Salon, Dejavoo, Ingenico, **Exatouch**, Restaurant POS, Retail POS, QSR POS, Self-Ordering Kiosks
-- Partnerships: Agent & ISO, ISV, Careers
-- Resources: Blog, Payment Processing Articles, POS Systems Guide, Industry Guides
+## Architecture
+- **Frontend**: React + TailwindCSS + Shadcn UI
+- **Backend**: FastAPI + MongoDB
+- **Integrations**: Calendly popups, Lead Connector iframes, Emergent Object Storage
 
 ## What's Been Implemented
-### Mar 3, 2026 — Home Page Hero & Stats Update
-- Updated hero headline to "Payment Processing, POS (Point of Sale) Systems, Lending, and Merchant Solutions Built for Growth."
-- Updated subheadline with new marketing copy about free Clover hardware and zero-fee processing
-- Updated stats section from 4 to 5 items: Merchants Served (15k+), Transaction Volume (250M+), Uptime Guarantee (99.8%), Payment Platforms (6), Territories Covered (8)
+- Full-stack blog CMS with admin panel
+- Secure document portal (login-protected)
+- Interactive savings calculator (Dual Pricing page)
+- Numerous SEO-optimized industry/solution pages
+- Calendly popup standardization across all pages
+- Video hero backgrounds on Gas Station and Dual Pricing pages
+- Self Ordering Kiosk page removed per user request (2026-03-03)
 
-### Mar 2, 2026 — Blog CMS & Document Portal
-- Built Blog CMS with FastAPI + MongoDB backend: full CRUD, topics, subjects, hashtags, keyword banks, cover images, social media sharing (X, Facebook, LinkedIn)
-- Blog Admin panel at `/resources/blog/admin` for creating/editing/publishing posts
-- Blog listing at `/resources/blog` renders published posts from API with individual post pages
-- Password-protected Document Portal at `/resources/documents` (user: admin1 / pass: 12345)
-- Documents organized by processor: CYGMA/Wells Fargo (6 docs), EPX/BMO Harris (10 docs), TSYS/Avidia (9 docs)
-- Document URLs are "pending" — ready for user to provide DocuSign links later
+## Key Pages
+- Home, Contact, About, Security, Pricing, Careers
+- Solutions: Payment Processing, Dual Pricing, Gift Cards, Crypto, Loyalty, Business Loans, ATMs, Payroll, IT Services, Gateway
+- Industries: Restaurants, Healthcare, Chiropractors, Dental, Medical, Salon/Spa, Gas Station, Professional Services, Retail, High Risk, Specialty
+- POS/Hardware: Clover, Square, Exatouch, PayAnywhere, Dejavoo, Ingenico, DaySmart Salon
+- Blog: /resources/blog (public), /resources/blog/admin (admin)
+- Documents: /resources/documents (login-protected)
 
-### Mar 2, 2026 — Pricing Page Refinements
-- Hero section updated: "Transparent Pricing" (top) + "Fast Funding" (below, purple gradient)
-- FISERV & EPX processor cards: Replaced purple headers with clean light grey headers + dark grey text logos
-- Added "Do You Have Questions?" section below "How It Works" with Contact Sales button → opens Lead Connector modal
+## Completed (2026-03-03)
+- P0: Added video background to Dual Pricing hero section
+- Deleted Self Ordering Kiosk page and cleaned up routes/navigation
 
-### Mar 1, 2026 — Pricing Page
-- Created `/app/frontend/src/pages/Pricing.jsx` — interactive merchant processing configuration at `/resources/pricing`
-- Dark-themed 4-step selection UI: Pricing Options → Software Program → Business Type → Payment Platform
-- Full compatibility logic: Clover→FISERV, Square→Square, Payanywhere→EPX, Dejavoo/Ingenico→TSYS/Cygma/EPX
-- Auto-selects single-platform software, disables incompatible platforms with visual dimming
-- Summary badges + "Start Your Merchant Application" button → opens Lead Connector modal
-- **Testing**: 16/16 tests passed (100% success rate)
+## Known Issues
+- Hero section videos may be broken on some pages (user will address later with custom forms)
 
-### Mar 1, 2026 — Solutions Pages Updates (4 changes)
-1. **Transaction Gateway Integration**: Renamed from "MSC TranzAction Gateway" in nav + page title + all references. Added Developer Integration Portal section with form → grants access to NMI integration portal URL.
-2. **Business Loans & Cash Advances**: Added "Apply Now" buttons with specific links — Cash Advance → cashbuoy.biz, Business Loans/LOC/SBA → Lendio. Added SBA Loans as 5th funding option.
-3. **ATM Solutions**: Updated footer text to include Canada, Puerto Rico, and "through our network" language.
-4. **Payroll Services**: Renamed from "Payroll Services by ADP" to "Payroll Services". Added Clover as ADP integration partner. Added Square Native Payroll section (Square offers payroll natively). Updated hero badges, benefits bar, CTA, and SEO footer.
+## Upcoming Tasks
+- P1: DocuSign integration for document portal
+- P2: Full backend content migration (hardcoded to DB)
 
-### Feb 28, 2026 — Retail Payment Solutions Page
-- Created `/app/frontend/src/pages/RetailSolutions.jsx` — comprehensive Retail industry page at `/retail-payment-solutions`
-- Sections: Hero, High-Volume Retail Features, 3 POS Platform deep-dives (Clover/Exatouch/Square with "Best for" tags, features, internal links), Inventory Management, Payment Processing, 10 Retail Niches grid, Why MSC, FAQ (5 Qs), Final CTA, SEO Footer
-- Internal links to `/pos/clover`, `/pos/exatouch`, `/pos/square`
-- Route aliases: `/retail-payment-solutions` and `/industries/retail`
-- Updated Navigation "Retail" link under Industries
-- **Testing**: 17/17 tests passed (100% success rate)
+## Backlog
+- P3: Component refactoring (break large pages into smaller components)
+- P4: Abstract common hero/content grid patterns
 
-### Feb 28, 2026 — Exatouch POS Page
-- Created `/app/frontend/src/pages/Exatouch.jsx` — comprehensive Exatouch POS product page at `/pos/exatouch`
-- Sections: Hero, Industry Vertical Tabs (Grocery, Liquor, Retail, Smoke/Tobacco), Core Features Grid, Hardware Bundle, Scan Data Integration, Free Offers, Payment Types, FAQ (8 Qs), Final CTA, SEO Footer
-- **Testing**: 14/14 tests passed (100% success rate)
-
-### Previous Sessions
-- Square POS page overhaul (dual-video hero, 5-step launch plan, accordion, hardware grid, integrations, Calendly)
-- Salon & Spa page (video hero, Square/Clover deep dives, Lead Connector/Calendly)
-- DaySmart Salon page (SEO, 5-tier pricing, Calendly)
-- Specialty Merchant B2B page (B2B solutions, compliance, modals)
-
-## Prioritized Backlog
-
-### P1 — Outstanding Tasks
-- Add images to Agents & ISO Partnership page (skipped from earlier sessions)
-
-### P1 — Backend Integration (Future)
-- Database schema, FastAPI endpoints, refactor frontend to fetch dynamic content
-
-### P2 — Component Refactoring
-- Break down monolithic page files (ITServices, SquarePOS, SalonSpa, Exatouch are 300-500+ lines)
-- Abstract common elements (modals, hero sections, content grids) into reusable components
-
-### P3 — SEO & Performance
-- Structured data (JSON-LD) for product pages
-- Image optimization, lazy loading
-- Sitemap generation
+## Credentials
+- Document Portal: admin1 / 12345
+- Blog Admin: marketing@merchantsolutionscorp.com / Mscpay$1
