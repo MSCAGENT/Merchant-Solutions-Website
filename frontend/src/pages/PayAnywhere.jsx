@@ -246,10 +246,10 @@ const PayAnywhere = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-16">
-            Three Simple Steps to Save on Processing Fees
+            Four Simple Steps to Start Accepting Payments
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
             {/* Step 1 */}
             <div className="relative">
               <Card className="text-center h-full border-0 shadow-lg bg-white">
@@ -257,11 +257,10 @@ const PayAnywhere = () => {
                   <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-4xl font-bold text-white">1</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Request a Free Demo</h3>
-                  <p className="text-gray-600">See how PayAnywhere works for your business</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Select Your Equipment</h3>
+                  <p className="text-gray-600">Choose the right terminal or POS for your business</p>
                 </CardContent>
               </Card>
-              {/* Arrow */}
               <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                 <ChevronRight className="w-8 h-8 text-purple-600" />
               </div>
@@ -274,24 +273,39 @@ const PayAnywhere = () => {
                   <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-4xl font-bold text-white">2</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Get Approved in Minutes</h3>
-                  <p className="text-gray-600">Fast approval process, typically under 15 minutes</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Choose Your Pricing</h3>
+                  <p className="text-gray-600">Select dual pricing or flat rate program</p>
                 </CardContent>
               </Card>
-              {/* Arrow */}
               <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                 <ChevronRight className="w-8 h-8 text-purple-600" />
               </div>
             </div>
 
             {/* Step 3 */}
+            <div className="relative">
+              <Card className="text-center h-full border-0 shadow-lg bg-white">
+                <CardContent className="p-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-4xl font-bold text-white">3</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Apply and Get Approved in Minutes</h3>
+                  <p className="text-gray-600">Fast approval process, typically under 15 minutes</p>
+                </CardContent>
+              </Card>
+              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                <ChevronRight className="w-8 h-8 text-purple-600" />
+              </div>
+            </div>
+
+            {/* Step 4 */}
             <Card className="text-center h-full border-0 shadow-lg bg-white">
               <CardContent className="p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-4xl font-bold text-white">3</span>
+                  <span className="text-4xl font-bold text-white">4</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Choose Your Pricing Option</h3>
-                <p className="text-gray-600">Select dual pricing or flat rate program</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Start Accepting Payments</h3>
+                <p className="text-gray-600">You're live and ready to process transactions</p>
               </CardContent>
             </Card>
           </div>
