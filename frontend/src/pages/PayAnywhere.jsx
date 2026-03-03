@@ -13,6 +13,7 @@ import {
 
 const PayAnywhere = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
+  const [purchaseDevice, setPurchaseDevice] = useState(null);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
@@ -45,12 +46,16 @@ const PayAnywhere = () => {
       priceLabel: 'Pay as you Go',
       monthlyFee: null,
       image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/r0iknwf4_taptopay_iphone.png',
+      description: 'Perfect for mobile businesses, pop-up shops, and service providers who need to accept contactless payments on the go.',
+      bestFor: ['Mobile businesses', 'Pop-up shops', 'Service providers', 'Freelancers'],
       features: [
         'No hardware needed',
         'Accept contactless payments',
         'Works with iPhone & Android',
         'Instant setup'
       ],
+      purchaseIncludes: ['Tap to Pay app activation', 'Payment processing setup', 'Merchant portal access'],
+      wirelessDevice: false,
       dualPricing: {
         merchantFee: '$0',
         cardholderFee: '4%'
@@ -67,12 +72,16 @@ const PayAnywhere = () => {
       priceLabel: '$19.95/mo/device software fee',
       monthlyFee: null,
       image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/x3tpxvi3_A77_Slider3.png',
+      description: 'Compact countertop terminal great for retail, restaurants, healthcare, and service businesses with limited counter space.',
+      bestFor: ['Retail stores', 'Small restaurants', 'Healthcare offices', 'Service businesses'],
       features: [
         '4" touchscreen',
         'EMV chip & NFC',
         'WiFi & 4G enabled',
         'Built-in printer'
       ],
+      purchaseIncludes: ['Terminal device', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
+      wirelessDevice: false,
       dualPricing: {
         merchantFee: '$0',
         cardholderFee: '4%'
@@ -89,12 +98,16 @@ const PayAnywhere = () => {
       priceLabel: '$19.95/mo/device software fee',
       monthlyFee: null,
       image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/dmkrtxpl_hardware-smartTerminal-hero3.png',
+      description: 'Portable wireless terminal ideal for restaurants with tableside ordering, food trucks, and mobile service providers.',
+      bestFor: ['Full-service restaurants', 'Food trucks', 'Mobile services', 'Events & catering'],
       features: [
         '5.5" touchscreen',
         'Android OS',
         'Long battery life',
         '4G/WiFi connectivity'
       ],
+      purchaseIncludes: ['Terminal device', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
+      wirelessDevice: true,
       dualPricing: {
         merchantFee: '$0',
         cardholderFee: '4%'
@@ -111,12 +124,16 @@ const PayAnywhere = () => {
       priceLabel: '$99.95 one-time setup fee. $49.95/mo/device software fee',
       monthlyFee: null,
       image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/4s4phyyv_hardware-smartpos-hero3.png',
+      description: 'Full-featured POS system with customer display, built for high-volume retail, restaurants, and healthcare practices.',
+      bestFor: ['High-volume retail', 'Restaurants & QSR', 'Healthcare practices', 'Multi-location businesses'],
       features: [
         'Full POS capabilities',
         'Inventory management',
         'Customer display',
         'Receipt printer'
       ],
+      purchaseIncludes: ['POS terminal & customer display', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
+      wirelessDevice: false,
       dualPricing: {
         merchantFee: '$0',
         cardholderFee: '4%'
@@ -169,12 +186,19 @@ const PayAnywhere = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Flat Rate Program</h3>
               <p className="text-sm text-gray-600 mb-6">Simple, straightforward pricing</p>
               
-              <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{device.flatRate.rate}</div>
-                <div className="text-sm text-gray-600">Per Transaction</div>
+              <div className="bg-blue-50 p-6 rounded-lg mb-4">
+                <div className="text-3xl font-bold text-blue-600 mb-2">2.6% + $0.15</div>
+                <div className="text-sm text-gray-600 mb-3">Qualified Transactions</div>
+                <div className="text-xs text-gray-500 border-t border-gray-300 pt-2">
+                  Non-qualified: 3.5% + $0.20
+                </div>
+              </div>
+
+              <div className="text-sm text-gray-600 mb-4 font-medium">
+                Plans start at $19.99/month
               </div>
               
-              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block mt-20">
+              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
                   Apply Now <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -341,6 +365,15 @@ const PayAnywhere = () => {
                     </DialogTrigger>
                     <PricingModal device={selectedDevice} />
                   </Dialog>
+
+                  <Button 
+                    variant="outline"
+                    className="w-full mt-2 border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
+                    onClick={() => setPurchaseDevice(device)}
+                    data-testid={`purchase-btn-${device.id}`}
+                  >
+                    Purchase Now
+                  </Button>
                   
                   <p className="text-xs text-gray-500 text-center mt-3">Final pricing shown after approval</p>
                 </CardContent>
@@ -859,6 +892,67 @@ const PayAnywhere = () => {
           </div>
         </div>
       </section>
+
+      {/* Purchase Now Modal */}
+      {purchaseDevice && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setPurchaseDevice(null)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <button
+              data-testid="purchase-modal-close-btn"
+              onClick={() => setPurchaseDevice(null)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+
+            <div className="p-6 pt-8">
+              <div className="w-48 h-48 mx-auto mb-6 flex items-center justify-center">
+                <img src={purchaseDevice.image} alt={purchaseDevice.name} className="max-w-full max-h-full object-contain" />
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">{purchaseDevice.name}</h2>
+              <p className="text-sm text-gray-500 text-center mb-4">{purchaseDevice.description}</p>
+
+              {purchaseDevice.bestFor && (
+                <div className="mb-4">
+                  <p className="text-sm font-semibold text-gray-700 mb-2">Great for:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {purchaseDevice.bestFor.map((item, i) => (
+                      <span key={i} className="bg-purple-50 text-purple-700 text-xs font-medium px-3 py-1 rounded-full">{item}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="bg-purple-50 rounded-xl p-5 mb-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Your Purchase Includes:</h3>
+                <ul className="space-y-2">
+                  {(purchaseDevice.purchaseIncludes || ['Terminal device', 'Power cables & charger', 'Card cleaner', 'Ethernet cable']).map((item, i) => (
+                    <li key={i} className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-purple-600 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                {purchaseDevice.wirelessDevice ? (
+                  <p className="text-xs text-gray-500 mt-3 italic">SIM card is not included unless a wireless device.</p>
+                ) : (
+                  <p className="text-xs text-gray-500 mt-3 italic">SIM card not included.</p>
+                )}
+              </div>
+
+              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
+                <Button
+                  data-testid="buy-now-btn"
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg py-6 shadow-lg"
+                >
+                  Buy Now
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

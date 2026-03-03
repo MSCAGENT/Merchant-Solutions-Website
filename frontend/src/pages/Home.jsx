@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CreditCard, Globe, Store, Shield, TrendingUp, Award, Clock, DollarSign, CheckCircle, ArrowRight } from 'lucide-react';
+import { CreditCard, Globe, Store, Shield, TrendingUp, Award, Clock, DollarSign, CheckCircle, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { mockData } from '../mock';
 
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+
 const Home = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [blogScroll, setBlogScroll] = useState(0);
+
+  useEffect(() => {
+    fetch(`${API_URL}/api/blog`)
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          setBlogs(data.filter(p => p.published));
+        }
+      })
+      .catch(() => {});
+  }, []);
   const iconMap = {
     CreditCard, Globe, Store, Shield
   };
@@ -195,6 +210,81 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Blog Section */}
+      {blogs.length > 0 && (
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between mb-12">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">From Our Blog</h2>
+                <p className="text-lg text-gray-600">Industry insights, guides, and resources</p>
+              </div>
+              <Link to="/resources/blog">
+                <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
+                  View All <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="overflow-hidden">
+                <div
+                  className="flex gap-6 transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${blogScroll * 340}px)` }}
+                >
+                  {blogs.map((post) => (
+                    <Link
+                      key={post.id}
+                      to={`/resources/blog/${post.slug}`}
+                      className="flex-shrink-0 w-[320px] group"
+                      data-testid={`blog-card-${post.slug}`}
+                    >
+                      <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                        {post.featured_image ? (
+                          <div className="h-48 overflow-hidden">
+                            <img src={post.featured_image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                          </div>
+                        ) : (
+                          <div className="h-48 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
+                            <span className="text-white text-4xl font-bold opacity-30">{post.title?.charAt(0)}</span>
+                          </div>
+                        )}
+                        <CardContent className="p-5">
+                          {post.topic && (
+                            <span className="text-xs font-semibold text-purple-600 uppercase tracking-wider">{post.topic}</span>
+                          )}
+                          <h3 className="text-lg font-bold text-gray-900 mt-1 mb-2 line-clamp-2 group-hover:text-purple-600 transition-colors">{post.title}</h3>
+                          <p className="text-sm text-gray-500">{post.content_type || 'Article'}</p>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              {blogs.length > 3 && (
+                <div className="flex justify-center gap-3 mt-8">
+                  <button
+                    onClick={() => setBlogScroll(Math.max(0, blogScroll - 1))}
+                    disabled={blogScroll === 0}
+                    className="w-10 h-10 rounded-full bg-gray-100 hover:bg-purple-100 disabled:opacity-30 flex items-center justify-center transition-colors"
+                    data-testid="blog-carousel-prev"
+                  >
+                    <ChevronLeft className="h-5 w-5 text-gray-700" />
+                  </button>
+                  <button
+                    onClick={() => setBlogScroll(Math.min(blogs.length - 3, blogScroll + 1))}
+                    disabled={blogScroll >= blogs.length - 3}
+                    className="w-10 h-10 rounded-full bg-gray-100 hover:bg-purple-100 disabled:opacity-30 flex items-center justify-center transition-colors"
+                    data-testid="blog-carousel-next"
+                  >
+                    <ChevronRight className="h-5 w-5 text-gray-700" />
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-yellow-500 text-white">
