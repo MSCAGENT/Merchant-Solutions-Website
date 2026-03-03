@@ -36,7 +36,7 @@ const GasStationProcessing = () => {
 
   const openCalendly = () => {
     if (window.Calendly) {
-      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/30min?hide_event_type_details=1&primary_color=4b23f1' });
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/petroconsultation?hide_event_type_details=1&primary_color=5922e2' });
     }
   };
 
