@@ -52,6 +52,7 @@ import { BlogList, BlogPost } from "./pages/Blog";
 import Documents from "./pages/Documents";
 import SelfOrderingKiosk from "./pages/SelfOrderingKiosk";
 import ProfessionalServices from "./pages/ProfessionalServices";
+import DualPricing from "./pages/solutions/DualPricing";
 
 function App() {
   return (
@@ -112,6 +113,8 @@ function App() {
           <Route path="/pos/daysmart-salon" element={<DaySmartSalon />} />
           
           {/* Gateway Routes */}
+          <Route path="/dual-pricing-cash-discount-payment-processing" element={<DualPricing />} />
+          <Route path="/solutions/dual-pricing" element={<DualPricing />} />
           <Route path="/gateway/payments-gateway" element={<MSCGateway />} />
           <Route path="/gateway/virtual-terminal" element={<Gateway />} />
           

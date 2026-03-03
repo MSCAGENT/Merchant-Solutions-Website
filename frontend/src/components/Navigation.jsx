@@ -22,7 +22,8 @@ const Navigation = () => {
         { label: 'Business Loans & Cash Advances', path: '/solutions/business-loans' },
         { label: 'ATM Solutions', path: '/solutions/atms' },
         { label: 'Payroll Services', path: '/solutions/payroll-services' },
-        { label: 'Tech & Installation', path: '/solutions/it-services' }
+        { label: 'Tech & Installation', path: '/solutions/it-services' },
+        { label: 'Dual Pricing & Cash Discount', path: '/dual-pricing-cash-discount-payment-processing' }
       ]
     },
     {
