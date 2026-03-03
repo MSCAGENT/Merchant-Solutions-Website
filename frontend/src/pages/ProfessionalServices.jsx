@@ -41,9 +41,9 @@ const ProfessionalServices = () => {
   const [showLeadModal, setShowLeadModal] = useState(false);
 
   useEffect(() => {
-    document.title = 'Professional Services Payment Processing & Clover POS Systems';
+    document.title = 'Contractor Payment Processing & Field Service Invoicing | Clover & PYMT360 POS';
     const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'All-in-one payment processing for professional services. Clover POS with estimates, invoicing, ACH bill pay, cash flow reporting. Free 90-day trial available.';
+    const content = 'Contractor payment processing and field service invoicing with Clover and PYMT360 POS. Estimates, e-signatures, ACH payments, and job-based reporting for service businesses.';
     if (metaDesc) metaDesc.setAttribute('content', content);
     else { const meta = document.createElement('meta'); meta.name = 'description'; meta.content = content; document.head.appendChild(meta); }
     // Canonical
@@ -174,22 +174,22 @@ const ProfessionalServices = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full filter blur-3xl" />
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+          <source src="https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/75t88239_Professional%20svc%201.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/60 z-10" />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm uppercase tracking-widest text-purple-300 font-semibold mb-4">Powered by Merchant Solutions Corp + Clover</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="hero-h1">
-              Professional Services Payment Processing & Business Management with Clover POS
+              Contractor Payment Processing & Field Service Invoicing with Clover and PYMT360 POS
             </h1>
-            <h2 className="text-lg text-purple-200 mb-6 max-w-3xl mx-auto" data-testid="hero-h2">
-              Built for Consultants, Law Firms, Accountants, Agencies & Service Providers
+            <h2 className="text-lg text-gray-200 mb-6 max-w-3xl mx-auto" data-testid="hero-h2">
+              Estimates, E-Signatures, ACH Payments & Job-Based Reporting for Service Businesses
             </h2>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              {['Appointment booking', 'Estimates & e-signatures', 'Professional invoicing', 'ACH & vendor payments', 'Cash flow reporting', 'Settlement visibility'].map((item, i) => (
+              {['Appointment scheduling', 'Itemized estimates with e-signature', 'Professional invoicing & automated reminders', 'ACH & vendor payments', 'Cash flow and job profitability reporting', 'Settlement and payout visibility'].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                   <CheckCircle className="h-4 w-4 text-purple-300" />
                   <span className="text-white text-sm">{item}</span>
