@@ -55,22 +55,15 @@ const SavingsCalculator = ({ openCalendly }) => {
     const currentFees = (volume * rate / 100) + (txCount * effectiveTxFee);
     const advancedFees = monthlyMin + (batchFee * 30) + gatewayFee + statementFee;
     const totalCurrent = currentFees + advancedFees;
-    const cardVolumeAfter = volume * (1 - adoption / 100);
-    const txCountAfter = avgTicket > 0 ? cardVolumeAfter / avgTicket : 0;
-    const feesAfter = (cardVolumeAfter * rate / 100) + (txCountAfter * effectiveTxFee) + advancedFees;
-    const achVolume = volume - cardVolumeAfter;
-    const achCost = achFee > 0 ? (achVolume / avgTicket) * achFee : 0;
-    const totalAfter = feesAfter + achCost;
-    const savings = totalCurrent - totalAfter;
     return {
       currentFees: totalCurrent,
-      feesAfter: totalAfter,
-      monthlySavings: Math.max(savings, 0),
-      annualSavings: Math.max(savings * 12, 0),
+      feesAfter: 0,
+      monthlySavings: totalCurrent,
+      annualSavings: totalCurrent * 12,
       cardVolumeBefore: volume,
-      cardVolumeAfter
+      cardVolumeAfter: volume * (1 - adoption / 100)
     };
-  }, [volume, rate, txFee, txFeeKnown, adoption, avgTicket, achFee, monthlyMin, batchFee, gatewayFee, statementFee]);
+  }, [volume, rate, txFee, txFeeKnown, adoption, avgTicket, monthlyMin, batchFee, gatewayFee, statementFee]);
 
   const reset = useCallback(() => {
     setVolume(50000); setRate(3.25); setTxFee(0.10); setTxFeeKnown(true);
