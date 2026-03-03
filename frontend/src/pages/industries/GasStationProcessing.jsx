@@ -144,17 +144,6 @@ const GasStationProcessing = () => {
         </div>
       </section>
 
-      {/* AI-Optimized Definition Block */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-xl">
-            <p className="text-gray-800 text-lg leading-relaxed">
-              <strong>Fuel payment processing</strong> encompasses the complete technology and merchant services infrastructure required to accept card, mobile, and alternative payments at fuel dispensers and convenience store registers. Unlike standard retail payment processing, petroleum payment solutions must account for pre-authorization holds, fleet card routing protocols, outdoor EMV terminal certification, fuel dispenser controller integration, and card brand compliance specific to the petroleum vertical.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Core Services Grid */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,7 +195,7 @@ const GasStationProcessing = () => {
               </div>
             </div>
             <div className="sticky top-24">
-              <div className="rounded-2xl overflow-hidden shadow-lg bg-black">
+              <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
                 <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/jor60uge_IM-Series-petro.png" alt="PAX IM Series outdoor EMV fuel pump card reader with chip and contactless NFC" className="w-full h-auto object-contain" />
               </div>
               <Card className="border-2 border-red-200 bg-red-50 shadow-lg mt-6">
@@ -246,6 +235,14 @@ const GasStationProcessing = () => {
                 </div>
               );
             })}
+            {/* POS for Gas Stations & C-Stores */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" data-testid="retrofit-pos">
+              <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
+                <Monitor className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-white mb-2">POS Systems for Gas Stations & C-Stores</h3>
+              <p className="text-sm text-purple-200">Integrated petroleum POS that connects fuel controllers, indoor registers, lottery, tobacco compliance, EBT, and fleet card routing into a single unified platform with consolidated reporting.</p>
+            </div>
           </div>
           <div className="text-center mt-12">
             <Button size="lg" onClick={openCalendly} className="bg-white text-purple-700 hover:bg-purple-50 text-lg px-8 py-6" data-testid="retrofit-cta">
@@ -287,11 +284,7 @@ const GasStationProcessing = () => {
                 {idx === 0 ? (
                   <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/54ivdp1l_Q25-in-convenience.jpg" alt="Convenience store POS payment terminal" className="w-full h-full object-cover" />
                 ) : (
-                  <div className="p-10 flex flex-col items-center justify-center text-center aspect-[4/3]">
-                    <Truck className="h-16 w-16 text-purple-400 mb-4" />
-                    <p className="text-2xl font-bold text-gray-900 mb-2">Fleet-Ready</p>
-                    <p className="text-gray-600">WEX, Voyager, FleetCor — configured and routed</p>
-                  </div>
+                  <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/zued0pym_credit%20card%20lock.JPG" alt="Fleet card security - credit card with lock" className="w-full h-full object-cover" />
                 )}
               </div>
             </div>
