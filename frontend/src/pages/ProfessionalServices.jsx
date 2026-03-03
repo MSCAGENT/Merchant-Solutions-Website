@@ -41,11 +41,15 @@ const ProfessionalServices = () => {
   const [showLeadModal, setShowLeadModal] = useState(false);
 
   useEffect(() => {
-    document.title = 'Professional Services Payment Processing & Clover POS | Estimates, Invoicing & ACH';
+    document.title = 'Professional Services Payment Processing & Clover POS Systems';
     const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'All-in-one payment processing and business management for professional services. Clover POS with estimates, invoicing, ACH bill pay, reporting, and cash flow insights. Free 90-day trial available.';
+    const content = 'All-in-one payment processing for professional services. Clover POS with estimates, invoicing, ACH bill pay, cash flow reporting. Free 90-day trial available.';
     if (metaDesc) metaDesc.setAttribute('content', content);
     else { const meta = document.createElement('meta'); meta.name = 'description'; meta.content = content; document.head.appendChild(meta); }
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+    canonical.href = 'https://www.merchantsolutionscorp.com/professional-services-payment-processing-clover-pos';
     // Load Calendly
     if (!document.querySelector('link[href*="calendly.com"]')) {
       const link = document.createElement('link');
@@ -64,7 +68,7 @@ const ProfessionalServices = () => {
 
   const openCalendly = () => {
     if (window.Calendly) {
-      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1' });
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=1400ff' });
     }
   };
 

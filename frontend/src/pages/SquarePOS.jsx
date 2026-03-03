@@ -68,14 +68,25 @@ const SquarePOS = () => {
   };
 
   useEffect(() => {
-    if (!showCalendly) return;
+    if (!document.querySelector('link[href*="calendly.com"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
     if (!document.querySelector('script[src*="calendly.com"]')) {
       const s = document.createElement('script');
       s.src = 'https://assets.calendly.com/assets/external/widget.js';
       s.async = true;
       document.head.appendChild(s);
     }
-  }, [showCalendly]);
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=1400ff' });
+    }
+  };
 
   useEffect(() => {
     document.title = 'Square Point of Sale Systems | Authorized Square Dealer | Installation & Training Nationwide';
@@ -319,11 +330,9 @@ const SquarePOS = () => {
                   Get Square POS
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-demo-btn">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-demo-btn" onClick={openCalendly}>
                   Request a Dealer Demo
                 </Button>
-              </Link>
             </div>
           </div>
         </div>
@@ -978,7 +987,7 @@ const SquarePOS = () => {
                     Create an Account
                   </Button>
                 </a>
-                <Button onClick={() => setShowCalendly(true)} variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-6 py-5" data-testid="zero-down-call-btn">
+                <Button onClick={openCalendly} variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-6 py-5" data-testid="zero-down-call-btn">
                   Book a Call
                 </Button>
               </div>
@@ -1060,11 +1069,9 @@ const SquarePOS = () => {
                 Get Square POS
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="cta-demo-btn">
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="cta-demo-btn" onClick={openCalendly}>
                 Request a Dealer Demo
               </Button>
-            </Link>
           </div>
         </div>
       </section>
@@ -1083,15 +1090,6 @@ const SquarePOS = () => {
         </div>
       </section>
 
-      {/* Calendly Modal */}
-      {showCalendly && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowCalendly(false)}>
-          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setShowCalendly(false)} className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors" data-testid="calendly-modal-close">&#x2715;</button>
-            <div className="calendly-inline-widget w-full h-full" data-url="https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=5700ff" />
-          </div>
-        </div>
-      )}
     </div>
   );
 };

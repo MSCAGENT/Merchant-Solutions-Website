@@ -17,6 +17,27 @@ const CloverPOS = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showFormModal, setShowFormModal] = useState(false);
 
+  useEffect(() => {
+    if (!document.querySelector('link[href*="calendly.com"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
+    if (!document.querySelector('script[src*="calendly.com"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=1400ff' });
+    }
+  };
+
   const carouselImages = [
     { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/9cuaw0s3_as234.jpg', alt: 'Retail checkout with Clover POS' },
     { src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/t767mlcn_kds-built-for-restaurant-image-desktop.webp', alt: 'Clover KDS restaurant orders' },
@@ -176,11 +197,9 @@ const CloverPOS = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
+                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" onClick={openCalendly}>
                     Request a Free Demo
                   </Button>
-                </a>
                 <a href="https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=pos-checkout-dev&env=na2&acct=pos-checkout-dev&v=2" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
                     Apply Now <ChevronRight className="ml-2 h-5 w-5" />
@@ -272,11 +291,9 @@ const CloverPOS = () => {
                     <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-lg">$249</span></p>
                     <p className="text-sm text-gray-500">or Subscribe for <span className="font-bold text-purple-600 text-lg">$30/mo</span></p>
                   </div>
-                  <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={openCalendly}>
                       Get Started
                     </Button>
-                  </a>
                 </CardContent>
               </Card>
 
@@ -292,11 +309,9 @@ const CloverPOS = () => {
                     <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-lg">$499</span></p>
                     <p className="text-sm text-gray-500">or Subscribe for <span className="font-bold text-purple-600 text-lg">$49/mo</span></p>
                   </div>
-                  <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={openCalendly}>
                       Get Started
                     </Button>
-                  </a>
                 </CardContent>
               </Card>
 
@@ -311,11 +326,9 @@ const CloverPOS = () => {
                     <p className="text-sm text-gray-600">Buy for <span className="font-bold text-purple-600 text-lg">$699</span></p>
                     <p className="text-sm text-gray-500">or Subscribe for <span className="font-bold text-purple-600 text-lg">$69/mo</span></p>
                   </div>
-                  <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={openCalendly}>
                       Get Started
                     </Button>
-                  </a>
                 </CardContent>
               </Card>
             </div>
@@ -460,11 +473,9 @@ const CloverPOS = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://calendly.com/mscpayments/posdemo?back=1&month=2026-02" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" onClick={openCalendly}>
                 Request a Free Demo
               </Button>
-            </a>
             <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" onClick={() => setShowFormModal(true)}>
               Contact Sales <ChevronRight className="ml-2 h-5 w-5" />
             </Button>

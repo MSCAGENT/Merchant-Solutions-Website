@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, ChevronRight, CreditCard, Clock, Shield, CheckCircle, Monitor, FileText, RefreshCw, Smartphone, LinkIcon, QrCode, ShoppingCart } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -13,6 +13,27 @@ import {
 
 const PayAnywhere = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
+
+  useEffect(() => {
+    if (!document.querySelector('link[href*="calendly.com"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
+    if (!document.querySelector('script[src*="calendly.com"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=1400ff' });
+    }
+  };
   const [activeTab, setActiveTab] = useState('virtual-terminal');
 
   const devices = [
@@ -197,11 +218,9 @@ const PayAnywhere = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
+                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" onClick={openCalendly}>
                     Request a Free Demo
                   </Button>
-                </Link>
                 <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
                     Apply Now <ChevronRight className="ml-2 h-5 w-5" />
@@ -667,11 +686,9 @@ const PayAnywhere = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" onClick={openCalendly}>
                 Request a Free Demo
               </Button>
-            </Link>
             <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
                 Apply Now <ChevronRight className="ml-2 h-5 w-5" />

@@ -39,14 +39,25 @@ const Exatouch = () => {
   }, []);
 
   useEffect(() => {
-    if (!showDemoModal) return;
+    if (!document.querySelector('link[href*="calendly.com"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
     if (!document.querySelector('script[src*="calendly.com"]')) {
       const s = document.createElement('script');
       s.src = 'https://assets.calendly.com/assets/external/widget.js';
       s.async = true;
       document.head.appendChild(s);
     }
-  }, [showDemoModal]);
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=1400ff' });
+    }
+  };
 
   const verticals = {
     grocery: {
@@ -188,7 +199,7 @@ const Exatouch = () => {
             Free installation. Free training. Free gift card processing. 24/7 U.S.-based support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => setShowDemoModal(true)} className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-lg px-8 py-6 shadow-lg shadow-emerald-900/30" data-testid="hero-demo-btn">
+            <Button size="lg" onClick={openCalendly} className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-lg px-8 py-6 shadow-lg shadow-emerald-900/30" data-testid="hero-demo-btn">
               Schedule a Free Demo
             </Button>
             <Button size="lg" onClick={() => setShowQuoteModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 text-lg px-8 py-6" data-testid="hero-quote-btn">
@@ -256,7 +267,7 @@ const Exatouch = () => {
               />
               <div className="mt-6 bg-slate-900 rounded-xl p-6 text-center">
                 <p className="text-emerald-400 font-semibold text-sm mb-2">Ready to transform your {activeData.label.toLowerCase()} business?</p>
-                <Button onClick={() => setShowDemoModal(true)} className="bg-emerald-600 hover:bg-emerald-700 text-white px-6" data-testid={`vertical-cta-${activeVertical}`}>
+                <Button onClick={openCalendly} className="bg-emerald-600 hover:bg-emerald-700 text-white px-6" data-testid={`vertical-cta-${activeVertical}`}>
                   Schedule Your Free Demo <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </div>
@@ -465,7 +476,7 @@ const Exatouch = () => {
           <p className="text-xl text-emerald-100 mb-2">Get Exatouch installed in your store — free installation, free training, 24/7 support.</p>
           <p className="text-base text-emerald-200 mb-10">Grocery. Liquor. Convenience. Tobacco. Retail. We've got you covered.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => setShowDemoModal(true)} className="bg-white text-emerald-700 hover:bg-gray-100 text-lg px-8 py-6 shadow-lg" data-testid="cta-demo-btn">
+            <Button size="lg" onClick={openCalendly} className="bg-white text-emerald-700 hover:bg-gray-100 text-lg px-8 py-6 shadow-lg" data-testid="cta-demo-btn">
               Schedule Your Free Demo
             </Button>
             <Button size="lg" onClick={() => setShowQuoteModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-emerald-700 text-lg px-8 py-6" data-testid="cta-quote-btn">
@@ -499,15 +510,6 @@ const Exatouch = () => {
         </div>
       )}
 
-      {/* Demo Modal */}
-      {showDemoModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowDemoModal(false)} data-testid="demo-modal">
-          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setShowDemoModal(false)} className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors" data-testid="demo-modal-close">&#x2715;</button>
-            <div className="calendly-inline-widget w-full h-full" data-url="https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=059669" />
-          </div>
-        </div>
-      )}
     </div>
   );
 };
