@@ -248,7 +248,7 @@ const BusinessLoansSolution = () => {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="requirements-image">
-              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/f16e76bf9c3dc5228fa08b536193717f82bc01305323ad06ad79cbdcc454f245.png" alt="Simple business loan application process" className="w-full h-full object-cover" />
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/da4ad4d18a82d4deaf78dbba930476e40c387fad917b14e7912394395a765769.png" alt="Business owner reviewing loan application at desk" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -259,7 +259,7 @@ const BusinessLoansSolution = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3]" data-testid="use-cases-image">
-              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/b31b457a65b879dbe5e464bed0e7d38bacd4216035e3314f0440befe22129daa.png" alt="Business funding use cases - inventory, equipment, marketing, expansion" className="w-full h-full object-cover" />
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/03bbf86154b2dea6cc2b667a4436f272e20b386c938676d949ecaff261b66d51.png" alt="Small business warehouse with inventory and POS system" className="w-full h-full object-cover" />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
