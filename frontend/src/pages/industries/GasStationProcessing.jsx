@@ -101,26 +101,26 @@ const GasStationProcessing = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full filter blur-3xl" />
           <div className="absolute bottom-10 right-20 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-white/10 backdrop-blur-sm text-blue-200 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Petroleum Payment Specialists</div>
+              <div className="inline-block bg-white/10 backdrop-blur-sm text-purple-200 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Petroleum Payment Specialists</div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="hero-h1">
                 Gas Station Payment Processing, EMV Upgrades & Petroleum POS Solutions
               </h1>
-              <p className="text-lg text-blue-200 mb-8 max-w-xl">
+              <p className="text-lg text-purple-200 mb-8 max-w-xl">
                 Gas station payment processing requires specialized petroleum merchant services that integrate fuel dispensers, POS systems, fleet card routing, and EMV-compliant outdoor payment terminals. We handle every layer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" onClick={openCalendly} className="bg-white text-blue-700 hover:bg-blue-50 text-lg px-8 py-6 shadow-xl" data-testid="hero-strategy-btn">
+                <Button size="lg" onClick={openCalendly} className="bg-white text-purple-700 hover:bg-purple-50 text-lg px-8 py-6 shadow-xl" data-testid="hero-strategy-btn">
                   Book a Strategy Call <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button size="lg" onClick={() => setShowLeadModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-700 text-lg px-8 py-6" data-testid="hero-quote-btn">
+                <Button size="lg" onClick={() => setShowLeadModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-quote-btn">
                   Get a Quote
                 </Button>
               </div>
@@ -143,7 +143,7 @@ const GasStationProcessing = () => {
               { value: '10+', label: 'Years in Petroleum' }
             ].map((s, i) => (
               <div key={i}>
-                <p className="text-2xl font-bold text-blue-400">{s.value}</p>
+                <p className="text-2xl font-bold text-purple-400">{s.value}</p>
                 <p className="text-sm text-gray-400">{s.label}</p>
               </div>
             ))}
@@ -154,7 +154,7 @@ const GasStationProcessing = () => {
       {/* AI-Optimized Definition Block */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl">
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-xl">
             <p className="text-gray-800 text-lg leading-relaxed">
               <strong>Fuel payment processing</strong> encompasses the complete technology and merchant services infrastructure required to accept card, mobile, and alternative payments at fuel dispensers and convenience store registers. Unlike standard retail payment processing, petroleum payment solutions must account for pre-authorization holds, fleet card routing protocols, outdoor EMV terminal certification, fuel dispenser controller integration, and card brand compliance specific to the petroleum vertical.
             </p>
@@ -173,10 +173,10 @@ const GasStationProcessing = () => {
             {coreServices.map((svc, i) => {
               const Icon = svc.icon;
               return (
-                <Card key={i} className="border-2 hover:border-blue-400 transition-all duration-300 hover:shadow-lg" data-testid={`service-${i}`}>
+                <Card key={i} className="border-2 hover:border-purple-400 transition-all duration-300 hover:shadow-lg" data-testid={`service-${i}`}>
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                      <Icon className="h-6 w-6 text-purple-600" />
                     </div>
                     <h3 className="font-bold text-gray-900 mb-2">{svc.title}</h3>
                     <p className="text-sm text-gray-600">{svc.desc}</p>
@@ -205,7 +205,7 @@ const GasStationProcessing = () => {
                 {emvLiabilityPoints.map((pt, i) => (
                   <div key={i} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
                     <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                      <CircleDot className="h-4 w-4 text-blue-600" /> {pt.label}
+                      <CircleDot className="h-4 w-4 text-purple-600" /> {pt.label}
                     </h3>
                     <p className="text-sm text-gray-600 leading-relaxed">{pt.detail}</p>
                   </div>
@@ -213,12 +213,15 @@ const GasStationProcessing = () => {
               </div>
             </div>
             <div className="sticky top-24">
-              <Card className="border-2 border-red-200 bg-red-50 shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <AlertCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-                  <p className="text-2xl font-bold text-gray-900 mb-2">Is Your Station Exposed?</p>
-                  <p className="text-gray-600 mb-6">Every month without EMV-compliant pump readers is a month your business absorbs preventable fraud losses and chargeback liability.</p>
-                  <Button onClick={openCalendly} className="w-full bg-red-600 hover:bg-red-700 text-white py-5 text-base" data-testid="emv-cta">
+              <div className="rounded-2xl overflow-hidden shadow-lg bg-black">
+                <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/jor60uge_IM-Series-petro.png" alt="PAX IM Series outdoor EMV fuel pump card reader with chip and contactless NFC" className="w-full h-auto object-contain" />
+              </div>
+              <Card className="border-2 border-red-200 bg-red-50 shadow-lg mt-6">
+                <CardContent className="p-6 text-center">
+                  <AlertCircle className="h-10 w-10 text-red-500 mx-auto mb-3" />
+                  <p className="text-lg font-bold text-gray-900 mb-2">Is Your Station Exposed?</p>
+                  <p className="text-sm text-gray-600 mb-4">Every month without EMV-compliant pump readers is a month your business absorbs preventable fraud losses.</p>
+                  <Button onClick={openCalendly} className="w-full bg-red-600 hover:bg-red-700 text-white py-4" data-testid="emv-cta">
                     Get a Free Liability Assessment <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
@@ -229,11 +232,11 @@ const GasStationProcessing = () => {
       </section>
 
       {/* Retrofit Services */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Fuel Pump Card Reader Replacement & Retrofit Services</h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
+            <p className="text-purple-200 text-lg max-w-2xl mx-auto">
               Whether you need a full gas pump card reader upgrade or a targeted retrofit of existing dispensers, we deliver certified installations that meet card brand requirements.
             </p>
           </div>
@@ -242,17 +245,17 @@ const GasStationProcessing = () => {
               const Icon = svc.icon;
               return (
                 <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" data-testid={`retrofit-${i}`}>
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-bold text-white mb-2">{svc.title}</h3>
-                  <p className="text-sm text-blue-200">{svc.desc}</p>
+                  <p className="text-sm text-purple-200">{svc.desc}</p>
                 </div>
               );
             })}
           </div>
           <div className="text-center mt-12">
-            <Button size="lg" onClick={openCalendly} className="bg-white text-blue-700 hover:bg-blue-50 text-lg px-8 py-6" data-testid="retrofit-cta">
+            <Button size="lg" onClick={openCalendly} className="bg-white text-purple-700 hover:bg-purple-50 text-lg px-8 py-6" data-testid="retrofit-cta">
               Schedule a Site Assessment <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -262,7 +265,7 @@ const GasStationProcessing = () => {
       {/* AI-Optimized Definition Block 2 */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl">
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-xl">
             <p className="text-gray-800 text-lg leading-relaxed">
               <strong>Convenience store payment processing</strong> and <strong>c-store merchant services</strong> require tight integration between indoor point-of-sale systems and outdoor fuel controllers. A properly configured petroleum POS handles fuel transactions, in-store sales, lottery, tobacco age verification, EBT, fleet cards, and dual pricing — all from a unified platform with consolidated reporting and next-day funding.
             </p>
@@ -280,17 +283,23 @@ const GasStationProcessing = () => {
                 <div className="space-y-3 mb-6">
                   {section.items.map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
                       <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
                 </div>
                 <p className="text-gray-600 italic text-sm bg-gray-100 p-4 rounded-xl">{section.keyword}</p>
               </div>
-              <div className={`bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 flex flex-col items-center justify-center text-center ${idx % 2 !== 0 ? 'order-1' : ''}`}>
-                {idx === 0 ? <ShoppingCart className="h-16 w-16 text-blue-400 mb-4" /> : <Truck className="h-16 w-16 text-blue-400 mb-4" />}
-                <p className="text-2xl font-bold text-gray-900 mb-2">{idx === 0 ? 'Indoor + Outdoor' : 'Fleet-Ready'}</p>
-                <p className="text-gray-600">{idx === 0 ? 'Unified POS for fuel and c-store operations' : 'WEX, Voyager, FleetCor — configured and routed'}</p>
+              <div className={`bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl overflow-hidden ${idx % 2 !== 0 ? 'order-1' : ''}`}>
+                {idx === 0 ? (
+                  <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/54ivdp1l_Q25-in-convenience.jpg" alt="Convenience store POS payment terminal" className="w-full h-full object-cover" />
+                ) : (
+                  <div className="p-10 flex flex-col items-center justify-center text-center aspect-[4/3]">
+                    <Truck className="h-16 w-16 text-purple-400 mb-4" />
+                    <p className="text-2xl font-bold text-gray-900 mb-2">Fleet-Ready</p>
+                    <p className="text-gray-600">WEX, Voyager, FleetCor — configured and routed</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -301,23 +310,23 @@ const GasStationProcessing = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/72eoma47_gAS%20STATION.jpeg" alt="Gas station cash and credit dual pricing display" className="w-full h-full object-cover" />
-            </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Dual Pricing & Cash Discount for Fuel Retailers</h2>
               <p className="text-gray-700 mb-6">Fuel retailers operate on razor-thin margins. A compliant dual pricing structure can recover 3-4% in processing fees across every gallon sold.</p>
               <div className="space-y-3 mb-6">
                 {['Forecourt cash/credit price configuration', 'Pump display pricing adjustments', 'In-store POS dual pricing setup', 'Compliant signage and disclosure', 'Chargeback optimization within our portal'].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
               </div>
-              <Link to="/dual-pricing-cash-discount-payment-processing" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
+              <Link to="/dual-pricing-cash-discount-payment-processing" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 font-semibold">
                 Learn more about our Dual Pricing Compliance Program <ArrowRight className="h-4 w-4" />
               </Link>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/72eoma47_gAS%20STATION.jpeg" alt="Gas station cash and credit dual pricing display" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -326,7 +335,7 @@ const GasStationProcessing = () => {
       {/* AI-Optimized Definition Block 3 */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl">
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-xl">
             <p className="text-gray-800 text-lg leading-relaxed">
               <strong>Fuel dispenser compliance</strong> and <strong>forecourt EMV liability</strong> are not optional considerations — they are operational requirements. Stations that have not completed the gas pump card reader upgrade face direct financial exposure from counterfeit card fraud, card brand monitoring programs, and potential merchant account termination. A certified outdoor EMV terminal installation is the single most impactful investment a fuel retailer can make to protect margin and reduce chargeback volume.
             </p>
@@ -346,7 +355,7 @@ const GasStationProcessing = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {locations.map((loc, i) => (
               <div key={i} className="flex items-center gap-3 bg-white rounded-xl px-5 py-4 border border-gray-200 shadow-sm">
-                <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-purple-600 flex-shrink-0" />
                 <span className="text-gray-800 font-medium text-sm">{loc}</span>
               </div>
             ))}
@@ -360,8 +369,8 @@ const GasStationProcessing = () => {
             ].map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={i} className="text-center bg-blue-50 rounded-xl p-4 border border-blue-100">
-                  <Icon className="h-6 w-6 text-blue-600 mx-auto mb-2" />
+                <div key={i} className="text-center bg-purple-50 rounded-xl p-4 border border-purple-100">
+                  <Icon className="h-6 w-6 text-purple-600 mx-auto mb-2" />
                   <p className="text-sm font-semibold text-gray-800">{item.label}</p>
                 </div>
               );
@@ -386,7 +395,7 @@ const GasStationProcessing = () => {
                   { title: 'Chargeback defense', desc: 'Proactive fraud rules, dispute management, and monitoring within our portal' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">{i + 1}</div>
+                    <div className="w-8 h-8 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">{i + 1}</div>
                     <div>
                       <h4 className="font-bold text-gray-900">{item.title}</h4>
                       <p className="text-sm text-gray-600">{item.desc}</p>
@@ -396,6 +405,11 @@ const GasStationProcessing = () => {
               </div>
             </div>
             <div className="space-y-6">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <video autoPlay muted loop playsInline className="w-full h-auto">
+                  <source src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/wwww37zp_ripl_video_1596997183384.mp4" type="video/mp4" />
+                </video>
+              </div>
               {[
                 { icon: Zap, title: 'Fast Deployment', desc: 'Most single-site installs completed in 1-3 business days' },
                 { icon: Shield, title: 'Compliance First', desc: 'Every installation meets current card brand and PCI requirements' },
@@ -404,7 +418,7 @@ const GasStationProcessing = () => {
                 const Icon = item.icon;
                 return (
                   <div key={i} className="flex items-start gap-4 bg-gray-50 rounded-xl p-6 border border-gray-200">
-                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -426,7 +440,7 @@ const GasStationProcessing = () => {
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, i) => (
               <AccordionItem key={i} value={`faq-${i}`} className="bg-white rounded-xl border px-6">
-                <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-blue-600">{faq.q}</AccordionTrigger>
+                <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">{faq.q}</AccordionTrigger>
                 <AccordionContent className="text-gray-600 leading-relaxed">{faq.a}</AccordionContent>
               </AccordionItem>
             ))}
@@ -435,20 +449,20 @@ const GasStationProcessing = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Modernize Your Forecourt. Protect Your Revenue.</h2>
-          <p className="text-lg text-blue-200 mb-4">
+          <p className="text-lg text-purple-200 mb-4">
             Whether you need a full EMV upgrade, fleet card integration, or a compliant dual pricing program — Merchant Solutions Corp is the petroleum payment partner built for your business.
           </p>
-          <p className="text-lg text-blue-200 mb-8">
+          <p className="text-lg text-purple-200 mb-8">
             Schedule a strategy call and get a customized plan for your station.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={openCalendly} className="bg-white text-blue-700 hover:bg-blue-50 text-lg px-8 py-6 shadow-xl" data-testid="cta-strategy-btn">
+            <Button size="lg" onClick={openCalendly} className="bg-white text-purple-700 hover:bg-purple-50 text-lg px-8 py-6 shadow-xl" data-testid="cta-strategy-btn">
               Book a Strategy Call <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" onClick={() => setShowLeadModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-700 text-lg px-8 py-6" data-testid="cta-quote-btn">
+            <Button size="lg" onClick={() => setShowLeadModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="cta-quote-btn">
               <Phone className="h-5 w-5 mr-2" /> Get a Quote
             </Button>
           </div>
@@ -459,11 +473,11 @@ const GasStationProcessing = () => {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center mb-6">
-            <Link to="/retail-payment-solutions" className="text-blue-600 hover:text-blue-800 underline text-sm font-medium">Retail Payment Processing</Link>
-            <Link to="/dual-pricing-cash-discount-payment-processing" className="text-blue-600 hover:text-blue-800 underline text-sm font-medium">Dual Pricing & Compliance</Link>
-            <Link to="/pos/clover" className="text-blue-600 hover:text-blue-800 underline text-sm font-medium">Clover POS</Link>
-            <Link to="/solutions/payment-processing" className="text-blue-600 hover:text-blue-800 underline text-sm font-medium">Payment Processing</Link>
-            <Link to="/professional-services-payment-processing-clover-pos" className="text-blue-600 hover:text-blue-800 underline text-sm font-medium">Professional Services</Link>
+            <Link to="/retail-payment-solutions" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Retail Payment Processing</Link>
+            <Link to="/dual-pricing-cash-discount-payment-processing" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Dual Pricing & Compliance</Link>
+            <Link to="/pos/clover" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Clover POS</Link>
+            <Link to="/solutions/payment-processing" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Payment Processing</Link>
+            <Link to="/professional-services-payment-processing-clover-pos" className="text-purple-600 hover:text-purple-800 underline text-sm font-medium">Professional Services</Link>
           </div>
           <p className="text-center text-sm text-gray-600">
             Merchant Solutions Corp provides fuel payment processing, convenience store payment processing, c-store merchant services, petroleum credit card processing, gas pump card reader upgrades, outdoor EMV terminal installation, fuel dispenser compliance, petroleum payment solutions, forecourt EMV liability shift protection, and chargeback optimization for gas stations, truck stops, and petroleum retailers across all 50 U.S. states and territories.
