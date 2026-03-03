@@ -220,11 +220,8 @@ const GiftCardsSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="how-it-works-image-block">
-              <div className="text-center text-gray-400">
-                <Gift className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Gift Card System Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center bg-black" data-testid="how-it-works-image-block">
+              <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/yltoeviu_giftcards2010PNG.png" alt="Custom branded gift cards for businesses" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
@@ -234,11 +231,8 @@ const GiftCardsSolution = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="pos-integration-image-block">
-              <div className="text-center text-gray-400">
-                <Store className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">POS Integration Image</p>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center bg-white" data-testid="pos-integration-image-block">
+              <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/y6c4u33a_gift-cards_Clover-200x200_200x200.png" alt="Clover POS gift card processing" className="w-full h-full object-contain" />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
@@ -295,11 +289,8 @@ const GiftCardsSolution = () => {
                 })}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="egift-image-block">
-              <div className="text-center text-gray-400">
-                <Mail className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">e-Gift Card Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="egift-image-block">
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/2dba86b2475ce476df25a72fabe2714d6fb7020de9360fc07a7d307a6aa8904b.png" alt="Digital e-gift card delivery via mobile phone" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -335,11 +326,8 @@ const GiftCardsSolution = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="instore-sales-image-block">
-              <div className="text-center text-gray-400">
-                <CreditCard className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">In-Store Sales Image</p>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3]" data-testid="instore-sales-image-block">
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/9a7e8d0b8959fa305926b01c7d0c8d997af156905890fe3d932fc79db9f95194.png" alt="In-store gift card sales at checkout" className="w-full h-full object-cover" />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
@@ -391,11 +379,8 @@ const GiftCardsSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="online-sales-image-block">
-              <div className="text-center text-gray-400">
-                <Globe className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Online Sales Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="online-sales-image-block">
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/4ba03c3f36a4ceb6e2f00d2b8870ffde8be70c0416327b96444215368fbe9fb6.png" alt="Online gift card sales on laptop and mobile" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -405,11 +390,8 @@ const GiftCardsSolution = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="multi-location-image-block">
-              <div className="text-center text-gray-400">
-                <MapPin className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Multi-Location Image</p>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3]" data-testid="multi-location-image-block">
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/165a41c6732cc21d9b28d6c9f1ac4bded812d1ce0ce549485a2cefc5a9905c0c.png" alt="Multi-location franchise gift card management" className="w-full h-full object-cover" />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
@@ -461,11 +443,8 @@ const GiftCardsSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="reporting-image-block">
-              <div className="text-center text-gray-400">
-                <BarChart3 className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Reporting Dashboard Image</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]" data-testid="reporting-image-block">
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/96813c135a77b687df228d3f355e01d4a3552d44128daee3f5961404fead66ef.png" alt="Gift card reporting and analytics dashboard" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -504,11 +483,8 @@ const GiftCardsSolution = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="marketing-image-block">
-              <div className="text-center text-gray-400">
-                <TrendingUp className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Marketing Tools Image</p>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3]" data-testid="marketing-image-block">
+              <img src="https://static.prod-images.emergentagent.com/jobs/ac3711b8-9a11-453d-a74b-57edf2c8d851/images/cbb692a14321464145c3b8981a1ee8f4e136f73a76f28239ce3c13208413403d.png" alt="Gift card marketing and promotional campaigns" className="w-full h-full object-cover" />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
