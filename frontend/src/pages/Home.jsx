@@ -29,7 +29,10 @@ const Home = () => {
             Payment Processing, POS (Point of Sale) Systems, Lending, and Merchant Solutions Built for Growth.
           </h1>
           <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-3xl">
-            From free Clover hardware to zero-fee processing, we handle setup, installation, and marketing so you can focus on customers. Book a Call today to see if you qualify for Free equipment.
+            From free Clover, Square, Ingenico, and PAX POS systems to zero-fee payment processing, we install, program, and support everything, including your marketing, so you can focus on serving customers.
+          </p>
+          <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-3xl -mt-6">
+            Book a call to see the Merchant Solutions difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
