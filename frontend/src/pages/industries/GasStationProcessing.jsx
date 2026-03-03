@@ -101,33 +101,26 @@ const GasStationProcessing = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full filter blur-3xl" />
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block bg-white/10 backdrop-blur-sm text-purple-200 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Petroleum Payment Specialists</div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="hero-h1">
-                Gas Station Payment Processing, EMV Upgrades & Petroleum POS Solutions
-              </h1>
-              <p className="text-lg text-purple-200 mb-8 max-w-xl">
-                Gas station payment processing requires specialized petroleum merchant services that integrate fuel dispensers, POS systems, fleet card routing, and EMV-compliant outdoor payment terminals. We handle every layer.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" onClick={openCalendly} className="bg-white text-purple-700 hover:bg-purple-50 text-lg px-8 py-6 shadow-xl" data-testid="hero-strategy-btn">
-                  Book a Strategy Call <ChevronRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button size="lg" onClick={() => setShowLeadModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-quote-btn">
-                  Get a Quote
-                </Button>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/72eoma47_gAS%20STATION.jpeg" alt="Gas station dual pricing - credit and cash fuel pump display" className="w-full h-full object-cover" />
-            </div>
+      <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+          <source src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/ydur2xy4_gas%20station.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/60 z-10" />
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block bg-white/10 backdrop-blur-sm text-purple-200 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Petroleum Payment Specialists</div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="hero-h1">
+            Gas Station Payment Processing, EMV Upgrades & Petroleum POS Solutions
+          </h1>
+          <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+            Gas station payment processing requires specialized petroleum merchant services that integrate fuel dispensers, POS systems, fleet card routing, and EMV-compliant outdoor payment terminals. We handle every layer.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" onClick={openCalendly} className="bg-white text-purple-700 hover:bg-purple-50 text-lg px-8 py-6 shadow-xl" data-testid="hero-strategy-btn">
+              Book a Strategy Call <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" onClick={() => setShowLeadModal(true)} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-quote-btn">
+              Get a Quote
+            </Button>
           </div>
         </div>
       </section>
