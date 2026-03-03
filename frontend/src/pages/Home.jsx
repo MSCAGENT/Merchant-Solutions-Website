@@ -26,7 +26,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-purple-600/50" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-5xl leading-tight drop-shadow-lg">
-            Payment Processing, POS (Point of Sale) Systems, Lending, and Merchant Solutions Built for Growth.
+            Full-Service Payment Processing & POS Installation for Restaurants, Retail, Healthcare & more..
           </h1>
           <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-3xl">
             From free Clover, Square, Ingenico, and PAX POS systems to zero-fee payment processing, we install, program, and support everything, including your marketing, so you can focus on serving customers.
