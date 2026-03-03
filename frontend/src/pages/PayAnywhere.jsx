@@ -45,7 +45,7 @@ const PayAnywhere = () => {
       price: '$0',
       priceLabel: 'Pay as you Go',
       monthlyFee: null,
-      image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/r0iknwf4_taptopay_iphone.png',
+      image: 'https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/wq1awhtt_taptopay.png',
       description: 'Perfect for mobile businesses, pop-up shops, and service providers who need to accept contactless payments on the go.',
       bestFor: ['Mobile businesses', 'Pop-up shops', 'Service providers', 'Freelancers'],
       features: [
@@ -458,6 +458,11 @@ const PayAnywhere = () => {
                       </div>
                     ))}
                   </div>
+                  <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg px-8 py-3" data-testid="vt-apply-btn">
+                      Get Approved in Minutes <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
                 </div>
                 <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
                   <CardContent className="p-10 text-center">
@@ -501,6 +506,11 @@ const PayAnywhere = () => {
                       </div>
                     ))}
                   </div>
+                  <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg px-8 py-3" data-testid="invoicing-apply-btn">
+                      Get Approved in Minutes <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
                 </div>
                 <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
                   <CardContent className="p-10 text-center">
@@ -543,6 +553,11 @@ const PayAnywhere = () => {
                       </div>
                     ))}
                   </div>
+                  <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg px-8 py-3" data-testid="recurring-apply-btn">
+                      Get Approved in Minutes <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
                 </div>
                 <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
                   <CardContent className="p-10 text-center">
@@ -586,6 +601,11 @@ const PayAnywhere = () => {
                       </div>
                     ))}
                   </div>
+                  <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg px-8 py-3" data-testid="payment-links-apply-btn">
+                      Get Approved in Minutes <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
                 </div>
                 <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
                   <CardContent className="p-10 text-center">
@@ -630,6 +650,11 @@ const PayAnywhere = () => {
                       </div>
                     ))}
                   </div>
+                  <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg px-8 py-3" data-testid="qr-apply-btn">
+                      Get Approved in Minutes <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
                 </div>
                 <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-blue-50">
                   <CardContent className="p-10 text-center">
