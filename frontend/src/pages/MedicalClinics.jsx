@@ -66,6 +66,7 @@ const MedicalClinics = () => {
   const [activeVideo, setActiveVideo] = useState(0);
   const video1Ref = useRef(null);
   const video2Ref = useRef(null);
+  const calendlyRef = useRef(null);
 
   const heroVideos = [
     'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/8hutwwfs_Medical.mp4',
@@ -102,6 +103,7 @@ const MedicalClinics = () => {
       s.async = true;
       document.head.appendChild(s);
     }
+    setTimeout(() => calendlyRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
   }, [showCalendlyModal]);
 
   const clinicTypes = [
@@ -598,23 +600,18 @@ const MedicalClinics = () => {
         </div>
       )}
 
-      {/* Calendly Modal */}
+      {/* Calendly Inline Widget */}
       {showCalendlyModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowCalendlyModal(false)}>
-          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => setShowCalendlyModal(false)}
-              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
-              data-testid="calendly-modal-close"
-            >
-              &#x2715;
-            </button>
+        <section ref={calendlyRef} className="py-16 bg-white" data-testid="calendly-section">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Schedule Your Demo</h2>
             <div
-              className="calendly-inline-widget w-full h-full"
-              data-url="https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=7048fc"
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1"
+              style={{ minWidth: '320px', height: '700px' }}
             />
           </div>
-        </div>
+        </section>
       )}
     </div>
   );

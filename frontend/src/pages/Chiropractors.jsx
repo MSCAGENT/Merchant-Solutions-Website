@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -29,7 +29,20 @@ import {
 
 const Chiropractors = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
+  const [showCalendly, setShowCalendly] = useState(false);
   const videoRef = useRef(null);
+  const calendlyRef = useRef(null);
+
+  useEffect(() => {
+    if (!showCalendly) return;
+    if (!document.querySelector('script[src*="calendly.com"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+    setTimeout(() => calendlyRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
+  }, [showCalendly]);
 
   const videos = [
     'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/ic6xpucz_Chiropractor%20office_.mp4',
@@ -67,11 +80,9 @@ const Chiropractors = () => {
             Optimize collections. Automate billing. Improve cash flow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://www.calendly.com/mscpayments" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="chiro-hero-cta">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="chiro-hero-cta" onClick={() => setShowCalendly(true)}>
                 Schedule a Free Demo
               </Button>
-            </a>
             <a href="#how-it-works">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6">
                 See How It Works
@@ -192,11 +203,9 @@ const Chiropractors = () => {
                   </div>
                 ))}
               </div>
-              <a href="https://www.calendly.com/mscpayments" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={() => setShowCalendly(true)}>
                   Optimize My Payments <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-              </a>
             </div>
           </div>
         </div>
@@ -372,11 +381,9 @@ const Chiropractors = () => {
           <div className="text-center">
             <p className="text-gray-700 mb-2">Payment optimization is not just convenience.</p>
             <p className="text-lg font-bold text-gray-900 mb-6">It is revenue strategy.</p>
-            <a href="https://www.calendly.com/mscpayments" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+            <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={() => setShowCalendly(true)}>
                 Request a Revenue Assessment <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </a>
           </div>
         </div>
       </section>
@@ -432,11 +439,9 @@ const Chiropractors = () => {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://www.calendly.com/mscpayments" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6">
+              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6" onClick={() => setShowCalendly(true)}>
                 Book My Free Demo
               </Button>
-            </a>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6">
                 Speak With a Healthcare Payments Specialist
@@ -568,6 +573,20 @@ const Chiropractors = () => {
           </Accordion>
         </div>
       </section>
+
+      {/* Calendly Inline Widget */}
+      {showCalendly && (
+        <section ref={calendlyRef} className="py-16 bg-white" data-testid="calendly-section">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Schedule Your Demo</h2>
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1"
+              style={{ minWidth: '320px', height: '700px' }}
+            />
+          </div>
+        </section>
+      )}
     </div>
   );
 };
