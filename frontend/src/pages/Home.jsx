@@ -25,11 +25,11 @@ const Home = () => {
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/75 via-purple-800/60 to-purple-600/50" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl leading-tight drop-shadow-lg">
-            Merchant Payment Solutions for Growing Businesses
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-5xl leading-tight drop-shadow-lg">
+            Payment Processing, POS (Point of Sale) Systems, Lending, and Merchant Solutions Built for Growth.
           </h1>
-          <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-2xl">
-            Comprehensive payment processing, POS systems, and gateway solutions designed to help your business thrive
+          <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-3xl">
+            From free Clover hardware to zero-fee processing, we handle setup, installation, and marketing so you can focus on customers. Book a Call today to see if you qualify for Free equipment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
@@ -50,9 +50,9 @@ const Home = () => {
       <section className="py-12 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-500 mb-8 text-sm uppercase tracking-wider">Trusted by Industry Leaders</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {mockData.stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center" data-testid={`stat-${index}`}>
                 <div className="text-3xl font-bold text-purple-600 mb-2">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </div>

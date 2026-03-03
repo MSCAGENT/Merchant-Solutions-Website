@@ -207,10 +207,11 @@ export const mockData = {
   ],
   
   stats: [
-    { label: 'Merchants Served', value: '50,000+' },
-    { label: 'Transaction Volume', value: '$5B+' },
-    { label: 'Uptime Guarantee', value: '99.99%' },
-    { label: 'Customer Satisfaction', value: '4.9/5' }
+    { label: 'Merchants Served', value: '15k+' },
+    { label: 'Transaction Volume', value: '250M+' },
+    { label: 'Uptime Guarantee', value: '99.8%' },
+    { label: 'Payment Platforms', value: '6' },
+    { label: 'Territories Covered', value: '8' }
   ]
 };
 
