@@ -50,6 +50,7 @@ import Pricing from "./pages/Pricing";
 import BlogAdmin from "./pages/BlogAdmin";
 import { BlogList, BlogPost } from "./pages/Blog";
 import Documents from "./pages/Documents";
+import SelfOrderingKiosk from "./pages/SelfOrderingKiosk";
 import ProfessionalServices from "./pages/ProfessionalServices";
 import DualPricing from "./pages/solutions/DualPricing";
 import GasStationProcessing from "./pages/industries/GasStationProcessing";
@@ -109,7 +110,8 @@ function App() {
           <Route path="/pos/dejavoo-terminals" element={<DejavooTerminals />} />
           <Route path="/pos/exatouch" element={<Exatouch />} />
           <Route path="/pos/ingenico-terminals" element={<POSHardware />} />
-          <Route path="/pos/self-ordering-kiosk" element={<POSHardware />} />
+          <Route path="/best-self-ordering-kiosk-for-restaurants" element={<SelfOrderingKiosk />} />
+          <Route path="/pos/self-ordering-kiosk" element={<SelfOrderingKiosk />} />
           <Route path="/retail-software/daysmart-salon" element={<DaySmartSalon />} />
           <Route path="/pos/daysmart-salon" element={<DaySmartSalon />} />
           
