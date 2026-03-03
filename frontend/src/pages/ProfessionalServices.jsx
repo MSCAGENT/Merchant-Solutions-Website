@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -39,6 +39,29 @@ import {
 
 const ProfessionalServices = () => {
   const [showLeadModal, setShowLeadModal] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(0);
+  const video1Ref = useRef(null);
+  const video2Ref = useRef(null);
+
+  const heroVideos = [
+    'https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/75t88239_Professional%20svc%201.mp4',
+    'https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/1uxmzbvt_Professional%20Svc%202.mp4'
+  ];
+
+  const handleVideoEnd = useCallback(() => {
+    setActiveVideo(prev => {
+      const next = (prev + 1) % 2;
+      const nextRef = next === 0 ? video1Ref : video2Ref;
+      const currRef = prev === 0 ? video1Ref : video2Ref;
+      if (nextRef.current) {
+        nextRef.current.style.opacity = '1';
+        nextRef.current.currentTime = 0;
+        nextRef.current.play();
+      }
+      if (currRef.current) currRef.current.style.opacity = '0';
+      return next;
+    });
+  }, []);
 
   useEffect(() => {
     document.title = 'Contractor Payment Processing & Field Service Invoicing | Clover & PYMT360 POS';
@@ -175,8 +198,11 @@ const ProfessionalServices = () => {
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-          <source src="https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/75t88239_Professional%20svc%201.mp4" type="video/mp4" />
+        <video ref={video1Ref} autoPlay muted playsInline onEnded={handleVideoEnd} className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700" style={{ opacity: 1 }}>
+          <source src={heroVideos[0]} type="video/mp4" />
+        </video>
+        <video ref={video2Ref} muted playsInline onEnded={handleVideoEnd} className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700" style={{ opacity: 0 }}>
+          <source src={heroVideos[1]} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,7 +225,7 @@ const ProfessionalServices = () => {
             <p className="text-purple-200 mb-8 text-lg">We install, configure, and support everything. You focus on clients.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={() => setShowLeadModal(true)} className="bg-white text-purple-700 hover:bg-purple-50 text-lg px-8 py-6 shadow-xl" data-testid="hero-quote-btn">
-                Get a Professional Services Quote <ChevronRight className="ml-2 h-5 w-5" />
+                Get a Quote <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" onClick={openCalendly} variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" data-testid="hero-demo-btn">
                 Book a Demo
