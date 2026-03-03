@@ -53,6 +53,7 @@ import Documents from "./pages/Documents";
 import SelfOrderingKiosk from "./pages/SelfOrderingKiosk";
 import ProfessionalServices from "./pages/ProfessionalServices";
 import DualPricing from "./pages/solutions/DualPricing";
+import GasStationProcessing from "./pages/industries/GasStationProcessing";
 
 function App() {
   return (
@@ -98,6 +99,8 @@ function App() {
           <Route path="/industries/retail" element={<RetailSolutions />} />
           <Route path="/professional-services-payment-processing-clover-pos" element={<ProfessionalServices />} />
           <Route path="/industries/professional-services" element={<ProfessionalServices />} />
+          <Route path="/emv-gas-station-payment-processing" element={<GasStationProcessing />} />
+          <Route path="/industries/gas-station" element={<GasStationProcessing />} />
           
           {/* POS & Hardware Routes */}
           <Route path="/pos/clover" element={<CloverPOS />} />

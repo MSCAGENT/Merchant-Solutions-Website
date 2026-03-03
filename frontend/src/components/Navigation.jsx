@@ -38,7 +38,8 @@ const Navigation = () => {
         { label: 'High-Risk Businesses', path: '/high-risk-merchant-services' },
         { label: 'Salon & Spa', path: '/salon-spa-payment-processing' },
         { label: 'Specialty Merchants', path: '/specialty-merchant-payment-solutions' },
-        { label: 'Professional Services', path: '/professional-services-payment-processing-clover-pos' }
+        { label: 'Professional Services', path: '/professional-services-payment-processing-clover-pos' },
+        { label: 'Gas Station & EMV', path: '/emv-gas-station-payment-processing' }
       ]
     },
     {
