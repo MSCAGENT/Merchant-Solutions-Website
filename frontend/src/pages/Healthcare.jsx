@@ -34,19 +34,27 @@ import {
 } from '../components/ui/accordion';
 
 const Healthcare = () => {
-  const [showCalendly, setShowCalendly] = useState(false);
-  const calendlyRef = useRef(null);
-
   useEffect(() => {
-    if (!showCalendly) return;
+    // Load Calendly popup widget CSS + JS once
+    if (!document.querySelector('link[href*="calendly.com"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
     if (!document.querySelector('script[src*="calendly.com"]')) {
       const s = document.createElement('script');
       s.src = 'https://assets.calendly.com/assets/external/widget.js';
       s.async = true;
       document.head.appendChild(s);
     }
-    setTimeout(() => calendlyRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
-  }, [showCalendly]);
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1' });
+    }
+  };
 
   const coreSolutions = [
     {
@@ -196,10 +204,10 @@ const Healthcare = () => {
             A comprehensive platform that helps you modernize, protect, and grow your healthcare organization
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="healthcare-hero-cta" onClick={() => setShowCalendly(true)}>
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="healthcare-hero-cta" onClick={openCalendly}>
                 Book a Demo
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" onClick={() => setShowCalendly(true)}>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" onClick={openCalendly}>
                 Talk to Sales
               </Button>
           </div>
@@ -456,7 +464,7 @@ const Healthcare = () => {
             <p className="text-lg text-gray-600 mb-10">
               Practice Management Bridge enables connectivity to thousands of technology platforms and practice management systems to unlock massive efficiencies for healthcare organizations.
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6" onClick={() => setShowCalendly(true)}>
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6" onClick={openCalendly}>
                 Get a Demo
               </Button>
           </div>
@@ -525,29 +533,15 @@ const Healthcare = () => {
             Amplify revenue, enhance the patient experience, and transform operations. Schedule a demo and see how simple it can be to keep your practice thriving.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6" onClick={() => setShowCalendly(true)}>
+              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6" onClick={openCalendly}>
                 Book a Demo
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" onClick={() => setShowCalendly(true)}>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" onClick={openCalendly}>
                 Talk to Sales
               </Button>
           </div>
         </div>
       </section>
-
-      {/* Calendly Inline Widget */}
-      {showCalendly && (
-        <section ref={calendlyRef} className="py-16 bg-white" data-testid="calendly-section">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Schedule Your Demo</h2>
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1"
-              style={{ minWidth: '320px', height: '700px' }}
-            />
-          </div>
-        </section>
-      )}
     </div>
   );
 };

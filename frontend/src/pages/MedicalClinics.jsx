@@ -96,15 +96,25 @@ const MedicalClinics = () => {
   const handleVideoEnded = () => setActiveVideo((prev) => (prev + 1) % heroVideos.length);
 
   useEffect(() => {
-    if (!showCalendlyModal) return;
+    if (!document.querySelector('link[href*="calendly.com"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
     if (!document.querySelector('script[src*="calendly.com"]')) {
       const s = document.createElement('script');
       s.src = 'https://assets.calendly.com/assets/external/widget.js';
       s.async = true;
       document.head.appendChild(s);
     }
-    setTimeout(() => calendlyRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
-  }, [showCalendlyModal]);
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1' });
+    }
+  };
 
   const clinicTypes = [
     'Family medicine clinics',
@@ -234,7 +244,7 @@ const MedicalClinics = () => {
                 size="lg"
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6"
-                onClick={() => setShowCalendlyModal(true)}
+                onClick={openCalendly}
                 data-testid="hero-demo-btn"
               >
                 Schedule a Consultation
@@ -555,7 +565,7 @@ const MedicalClinics = () => {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6"
-              onClick={() => setShowCalendlyModal(true)}
+              onClick={openCalendly}
               data-testid="cta-demo-btn"
             >
               Book a Demo
@@ -598,20 +608,6 @@ const MedicalClinics = () => {
             />
           </div>
         </div>
-      )}
-
-      {/* Calendly Inline Widget */}
-      {showCalendlyModal && (
-        <section ref={calendlyRef} className="py-16 bg-white" data-testid="calendly-section">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Schedule Your Demo</h2>
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1"
-              style={{ minWidth: '320px', height: '700px' }}
-            />
-          </div>
-        </section>
       )}
     </div>
   );

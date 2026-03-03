@@ -96,15 +96,25 @@ const DentalPractices = () => {
   }, []);
 
   useEffect(() => {
-    if (!showCalendlyModal) return;
+    if (!document.querySelector('link[href*="calendly.com"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
     if (!document.querySelector('script[src*="calendly.com"]')) {
       const s = document.createElement('script');
       s.src = 'https://assets.calendly.com/assets/external/widget.js';
       s.async = true;
       document.head.appendChild(s);
     }
-    setTimeout(() => calendlyRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
-  }, [showCalendlyModal]);
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1' });
+    }
+  };
 
   const merchantServices = [
     'Credit card processing for dental offices',
@@ -218,7 +228,7 @@ const DentalPractices = () => {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg"
-                onClick={() => setShowCalendlyModal(true)}
+                onClick={openCalendly}
                 data-testid="hero-demo-btn"
               >
                 Book a Discovery Call
@@ -523,7 +533,7 @@ const DentalPractices = () => {
             <Button
               size="lg"
               className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6"
-              onClick={() => setShowCalendlyModal(true)}
+              onClick={openCalendly}
               data-testid="cta-demo-btn"
             >
               Schedule a Demo
@@ -575,20 +585,6 @@ const DentalPractices = () => {
             />
           </div>
         </div>
-      )}
-
-      {/* Calendly Inline Widget */}
-      {showCalendlyModal && (
-        <section ref={calendlyRef} className="py-16 bg-white" data-testid="calendly-section">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Schedule Your Demo</h2>
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/mscpayments/paynet-health-integration?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6c2cf1"
-              style={{ minWidth: '320px', height: '700px' }}
-            />
-          </div>
-        </section>
       )}
     </div>
   );
