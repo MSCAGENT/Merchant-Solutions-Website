@@ -393,9 +393,11 @@ const DaySmartSalon = () => {
 
           {/* Contact Sales Button */}
           <div className="mt-10 text-center">
-            <Button onClick={() => setShowDemoModal(true)} className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-sm px-10 py-5 rounded-lg shadow-md" data-testid="pricing-contact-btn">
-              Contact Sales to Schedule a Demo
-            </Button>
+            <a href="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white text-sm px-10 py-5 rounded-lg shadow-md" data-testid="pricing-contact-btn">
+                Contact Sales
+              </Button>
+            </a>
           </div>
 
           {/* Additional user pricing note */}

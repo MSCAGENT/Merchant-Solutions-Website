@@ -207,7 +207,7 @@ const Healthcare = () => {
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="healthcare-hero-cta" onClick={openCalendly}>
                 Book a Demo
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" onClick={openCalendly}>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-700 text-lg px-8 py-6" onClick={() => window.open('https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A', '_blank')}>
                 Talk to Sales
               </Button>
           </div>
@@ -536,7 +536,7 @@ const Healthcare = () => {
               <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6" onClick={openCalendly}>
                 Book a Demo
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" onClick={openCalendly}>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" onClick={() => window.open('https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A', '_blank')}>
                 Talk to Sales
               </Button>
           </div>

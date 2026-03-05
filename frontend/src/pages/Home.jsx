@@ -297,7 +297,7 @@ const Home = () => {
                 Get Started Today
               </Button>
             </Link>
-            <a href="https://www.calendly.com/mscpayments" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6">
                 Talk to Sales
               </Button>

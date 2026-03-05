@@ -307,11 +307,11 @@ const CryptoProcessingSolution = () => {
                 Get Started
               </Button>
             </Link>
-            <Link to="/contact">
+            <a href="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="cta-contact-btn">
                 Contact Sales
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

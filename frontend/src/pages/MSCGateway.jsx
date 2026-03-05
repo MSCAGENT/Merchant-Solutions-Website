@@ -108,11 +108,11 @@ const MSCGateway = () => {
               Accept payments anywhere with our all-in-one payment gateway, designed for retail, service, healthcare, SaaS, and billing platforms. Whether you're sending invoices, setting up recurring billing, or integrating with custom software, our tools give you full control.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <a href="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg">
                   Contact Sales
                 </Button>
-              </Link>
+              </a>
               <a href="https://developers.merchantsolutionscorpdb.com" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
                   Explore Developer Docs <ChevronRight className="ml-2 h-5 w-5" />
@@ -400,11 +400,11 @@ console.log(payment.status); // 'approved'`}</code>
             Start accepting payments today with our powerful gateway platform
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
+            <a href="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6 shadow-lg">
                 Contact Sales
               </Button>
-            </Link>
+            </a>
             <a href="https://developers.merchantsolutionscorpdb.com" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6">
                 Explore Developer Docs <ChevronRight className="ml-2 h-5 w-5" />
