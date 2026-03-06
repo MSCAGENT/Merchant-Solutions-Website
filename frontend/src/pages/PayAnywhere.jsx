@@ -14,6 +14,7 @@ import {
 const PayAnywhere = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
   const [purchaseDevice, setPurchaseDevice] = useState(null);
+  const [showActivation, setShowActivation] = useState(false);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
@@ -189,11 +190,9 @@ const PayAnywhere = () => {
                 </div>
               </div>
               
-              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
+              <Button onClick={() => setShowActivation(true)} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
                   Apply Now <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
-              </a>
             </CardContent>
           </Card>
 
@@ -215,11 +214,9 @@ const PayAnywhere = () => {
                 Plans start at $19.99/month
               </div>
               
-              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
+              <Button onClick={() => setShowActivation(true)} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
                   Apply Now <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
-              </a>
             </CardContent>
           </Card>
         </div>
@@ -1115,6 +1112,72 @@ const PayAnywhere = () => {
           </div>
         </div>
       </section>
+
+      {/* Activation & Shipping Deposit Popup */}
+      {showActivation && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowActivation(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <button
+              data-testid="activation-modal-close-btn"
+              onClick={() => setShowActivation(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+
+            <div className="p-8 pt-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">Activation & Shipping Deposit</h2>
+
+              <p className="text-gray-600 text-center mb-6">
+                To reserve your POS/Terminal system and begin the onboarding process, a small <span className="font-bold text-gray-900">$35 activation</span> and <span className="font-bold text-gray-900">$10 shipping deposit</span> are required.
+              </p>
+
+              <p className="text-sm text-gray-500 text-center mb-6">
+                This step helps us verify legitimate applications and prepare your equipment for shipment.
+              </p>
+
+              <div className="bg-purple-50 rounded-xl p-5 mb-6">
+                <h3 className="text-sm font-bold text-gray-900 mb-3">Your deposit covers:</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">Free Equipment reservation</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">Processing account setup</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">Terminal Configuring / SIM Card setup</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">Shipping and handling</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-xs text-gray-500 text-center mb-6">
+                Once you have completed this step, you will proceed to the secure business application to create and activate your merchant account. This will take roughly 5-10 min.
+              </p>
+
+              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
+                <Button
+                  data-testid="continue-setup-btn"
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg py-6 shadow-lg"
+                >
+                  Continue Setup <ChevronRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Purchase Now Modal */}
       {purchaseDevice && (
