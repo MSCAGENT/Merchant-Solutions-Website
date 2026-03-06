@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Check, ChevronRight, CreditCard, Clock, Shield, CheckCircle, Monitor, FileText, RefreshCw, Smartphone, LinkIcon, QrCode, ShoppingCart } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
 import {
   Accordion,
   AccordionContent,
@@ -15,6 +14,7 @@ const PayAnywhere = () => {
   const [selectedDevice, setSelectedDevice] = useState(null);
   const [purchaseDevice, setPurchaseDevice] = useState(null);
   const [showActivation, setShowActivation] = useState(false);
+  const [pricingDevice, setPricingDevice] = useState(null);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
@@ -162,80 +162,6 @@ const PayAnywhere = () => {
     }
   ];
 
-  const PricingModal = ({ device }) => {
-    if (!device) return null;
-
-    return (
-      <DialogContent className="max-w-3xl">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center mb-6">
-            {device.name} - Choose Your Pricing Plan
-          </DialogTitle>
-        </DialogHeader>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
-          {/* Dual Pricing */}
-          <Card className="border-2 border-purple-600">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Dual Pricing Program</h3>
-              <p className="text-sm text-gray-600 mb-6">Zero cost to merchant</p>
-              
-              <div className="space-y-4 mb-6">
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-purple-600 mb-1">{device.dualPricing.merchantFee}</div>
-                  <div className="text-sm text-gray-600">Fee to Merchant</div>
-                </div>
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-purple-600 mb-1">{device.dualPricing.cardholderFee}</div>
-                  <div className="text-sm text-gray-600">to the Cardholder</div>
-                </div>
-              </div>
-              
-              <Button onClick={() => setShowActivation(true)} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
-                  Apply Now <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-            </CardContent>
-          </Card>
-
-          {/* Flat Rate */}
-          <Card className="border-2 border-blue-600">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Flat Rate Program</h3>
-              <p className="text-sm text-gray-600 mb-6">Simple, straightforward pricing</p>
-              
-              <div className="bg-blue-50 p-6 rounded-lg mb-4">
-                <div className="text-3xl font-bold text-blue-600 mb-2">2.6% + $0.15</div>
-                <div className="text-sm text-gray-600 mb-3">Qualified Transactions</div>
-                <div className="text-xs text-gray-500 border-t border-gray-300 pt-2">
-                  Non-qualified: 3.5% + $0.20
-                </div>
-              </div>
-
-              <div className="text-sm text-gray-600 mb-4 font-medium">
-                Plans start at $19.99/month
-              </div>
-              
-              <Button onClick={() => setShowActivation(true)} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
-                  Apply Now <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Free Placement Terms */}
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4">
-          <p className="text-xs font-semibold text-gray-700 mb-2">All Free Placement terminals are provided under the Advantage Program and are subject to the following terms.</p>
-          <ul className="space-y-1 text-xs text-gray-600">
-            <li>&#8226; 36-month service agreement required</li>
-            <li>&#8226; $595 early termination fee (ETF) if the agreement is cancelled before the end of the term</li>
-            <li>&#8226; $99 annual Advantage Program fee</li>
-          </ul>
-          <p className="text-xs text-gray-600 mt-2 font-medium">30-day trial period from the date the account is activated</p>
-          <p className="text-xs text-gray-500 mt-1">During the 30-day trial period, merchants may cancel the program without the early termination fee. After the trial period, the standard agreement terms apply.</p>
-        </div>
-      </DialogContent>
-    );
-  };
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -380,24 +306,20 @@ const PayAnywhere = () => {
                   </div>
 
                   {device.tapToPay ? (
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-                          Apply Now
-                        </Button>
-                      </DialogTrigger>
-                      <PricingModal device={device} />
-                    </Dialog>
+                    <Button
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                      onClick={() => setPricingDevice(device)}
+                    >
+                      Apply Now
+                    </Button>
                   ) : (
                     <>
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-                            Free Placement
-                          </Button>
-                        </DialogTrigger>
-                        <PricingModal device={device} />
-                      </Dialog>
+                      <Button
+                        className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                        onClick={() => setPricingDevice(device)}
+                      >
+                        Free Placement
+                      </Button>
 
                       <Button 
                         variant="outline"
@@ -1112,6 +1034,69 @@ const PayAnywhere = () => {
           </div>
         </div>
       </section>
+
+      {/* Pricing Modal (Controlled) */}
+      {pricingDevice && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setPricingDevice(null)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setPricingDevice(null)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+            <div className="p-6 pt-8">
+              <h2 className="text-2xl font-bold text-center mb-6">{pricingDevice.name} - Choose Your Pricing Plan</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="border-2 border-purple-600">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Dual Pricing Program</h3>
+                    <p className="text-sm text-gray-600 mb-6">Zero cost to merchant</p>
+                    <div className="space-y-4 mb-6">
+                      <div className="bg-purple-50 p-4 rounded-lg">
+                        <div className="text-3xl font-bold text-purple-600 mb-1">{pricingDevice.dualPricing.merchantFee}</div>
+                        <div className="text-sm text-gray-600">Fee to Merchant</div>
+                      </div>
+                      <div className="bg-purple-50 p-4 rounded-lg">
+                        <div className="text-3xl font-bold text-purple-600 mb-1">{pricingDevice.dualPricing.cardholderFee}</div>
+                        <div className="text-sm text-gray-600">to the Cardholder</div>
+                      </div>
+                    </div>
+                    <Button onClick={() => { setPricingDevice(null); setShowActivation(true); }} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
+                      Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+                <Card className="border-2 border-blue-600">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Flat Rate Program</h3>
+                    <p className="text-sm text-gray-600 mb-6">Simple, straightforward pricing</p>
+                    <div className="bg-blue-50 p-6 rounded-lg mb-4">
+                      <div className="text-3xl font-bold text-blue-600 mb-2">2.6% + $0.15</div>
+                      <div className="text-sm text-gray-600 mb-3">Qualified Transactions</div>
+                      <div className="text-xs text-gray-500 border-t border-gray-300 pt-2">Non-qualified: 3.5% + $0.20</div>
+                    </div>
+                    <div className="text-sm text-gray-600 mb-4 font-medium">Plans start at $19.99/month</div>
+                    <Button onClick={() => { setPricingDevice(null); setShowActivation(true); }} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
+                      Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4">
+                <p className="text-xs font-semibold text-gray-700 mb-2">All Free Placement terminals are provided under the Advantage Program and are subject to the following terms.</p>
+                <ul className="space-y-1 text-xs text-gray-600">
+                  <li>&#8226; 36-month service agreement required</li>
+                  <li>&#8226; $595 early termination fee (ETF) if the agreement is cancelled before the end of the term</li>
+                  <li>&#8226; $99 annual Advantage Program fee</li>
+                </ul>
+                <p className="text-xs text-gray-600 mt-2 font-medium">30-day trial period from the date the account is activated</p>
+                <p className="text-xs text-gray-500 mt-1">During the 30-day trial period, merchants may cancel the program without the early termination fee. After the trial period, the standard agreement terms apply.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Activation & Shipping Deposit Popup */}
       {showActivation && (
