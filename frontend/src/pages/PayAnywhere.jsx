@@ -39,108 +39,125 @@ const PayAnywhere = () => {
 
   const devices = [
     {
-      id: 'phone-tap',
-      name: 'Phone Tap to Pay',
-      subtitle: 'No hardware needed for iPhone',
-      price: '$0',
+      id: '3in1-reader',
+      name: '3-in-1 Reader',
+      subtitle: 'Compact Card Reader',
+      price: 'Purchase for $99',
       priceLabel: 'Pay as you Go',
-      monthlyFee: null,
+      image: 'https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/eq5c5u30_D135-3.webp',
+      description: 'Portable 3-in-1 card reader that accepts chip, swipe, and contactless payments.',
+      bestFor: ['Mobile businesses', 'Pop-up shops', 'Market vendors', 'Service providers'],
+      features: ['EMV chip reader', 'Magnetic stripe', 'NFC contactless', 'Bluetooth connectivity'],
+      purchaseIncludes: ['3-in-1 card reader', 'USB charging cable', 'Quick start guide'],
+      wirelessDevice: true,
+      dualPricing: { merchantFee: '$0', cardholderFee: '4%' },
+      flatRate: { rate: '2.60% + $0.15' }
+    },
+    {
+      id: 'phone-tap',
+      name: 'iPhone Tap to Pay',
+      subtitle: 'No hardware needed',
+      price: '$0',
+      priceLabel: 'No hardware needed',
       image: 'https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/wq1awhtt_taptopay.png',
-      description: 'Perfect for mobile businesses, pop-up shops, and service providers who need to accept contactless payments on the go.',
+      description: 'Accept contactless payments directly on your iPhone. No extra hardware required.',
       bestFor: ['Mobile businesses', 'Pop-up shops', 'Service providers', 'Freelancers'],
-      features: [
-        'No hardware needed',
-        'Accept contactless payments',
-        'Works with iPhone & Android',
-        'Instant setup'
-      ],
+      features: ['No hardware needed', 'Accept contactless payments', 'Works with iPhone & Android', 'Instant setup'],
       purchaseIncludes: ['Tap to Pay app activation', 'Payment processing setup', 'Merchant portal access'],
       wirelessDevice: false,
-      dualPricing: {
-        merchantFee: '$0',
-        cardholderFee: '4%'
-      },
-      flatRate: {
-        rate: '2.60% + $0.15'
-      }
+      tapToPay: true,
+      dualPricing: { merchantFee: '$0', cardholderFee: '4%' },
+      flatRate: { rate: '2.60% + $0.15' }
     },
     {
       id: 'pax-a77',
-      name: 'PAX A77',
-      subtitle: 'From Mini',
-      price: 'Free placement or purchase for $150.95',
+      name: 'PAX A77 Mini',
+      subtitle: 'Compact Terminal',
+      price: 'Free placement or purchase for $199.95',
       priceLabel: '$19.95/mo/device software fee',
-      monthlyFee: null,
       image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/x3tpxvi3_A77_Slider3.png',
-      description: 'Compact countertop terminal great for retail, restaurants, healthcare, and service businesses with limited counter space.',
+      description: 'Compact countertop terminal great for retail, restaurants, healthcare, and service businesses.',
       bestFor: ['Retail stores', 'Small restaurants', 'Healthcare offices', 'Service businesses'],
-      features: [
-        '4" touchscreen',
-        'EMV chip & NFC',
-        'WiFi & 4G enabled',
-        'Built-in printer'
-      ],
+      features: ['4" touchscreen', 'EMV chip & NFC', 'WiFi & 4G enabled', 'Built-in printer'],
       purchaseIncludes: ['Terminal device', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
       wirelessDevice: false,
-      dualPricing: {
-        merchantFee: '$0',
-        cardholderFee: '4%'
-      },
-      flatRate: {
-        rate: '2.60% + $0.15'
-      }
+      dualPricing: { merchantFee: '$0', cardholderFee: '4%' },
+      flatRate: { rate: '2.60% + $0.15' }
+    },
+    {
+      id: 'pax-a80-keypad',
+      name: 'A80 Smart Keypad',
+      subtitle: 'Single Terminal',
+      price: 'Free placement or purchase for $299.95',
+      priceLabel: '$19.95/mo/device software fee',
+      image: 'https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/yhnor83x_solo%20a80.png',
+      description: 'Reliable smart keypad terminal for businesses that need a dedicated countertop card payment device.',
+      bestFor: ['Retail stores', 'Quick-service restaurants', 'Healthcare offices', 'Service businesses'],
+      features: ['Smart keypad entry', 'EMV chip & NFC', 'WiFi & Ethernet', 'Built-in printer'],
+      purchaseIncludes: ['Terminal device', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
+      wirelessDevice: false,
+      dualPricing: { merchantFee: '$0', cardholderFee: '4%' },
+      flatRate: { rate: '2.60% + $0.15' }
+    },
+    {
+      id: 'pax-a80-pinpad',
+      name: 'A80 Smart Pinpad',
+      subtitle: 'Pinpad Hardware',
+      price: 'Free placement or purchase for $499.95',
+      priceLabel: '$49.95 one-time setup fee. $29.95/mo/device software fee',
+      image: 'https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/cumhow1n_newhardware-smartPinPad.png',
+      description: 'Smart pinpad hardware with full PIN entry, ideal for retail and service businesses requiring secure customer-facing payment.',
+      bestFor: ['Retail chains', 'Grocery stores', 'Healthcare practices', 'Service businesses'],
+      features: ['PIN entry keypad', 'EMV chip & NFC', 'Customer-facing display', 'WiFi & Ethernet'],
+      purchaseIncludes: ['Pinpad device', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
+      wirelessDevice: false,
+      dualPricing: { merchantFee: '$0', cardholderFee: '4%' },
+      flatRate: { rate: '2.60% + $0.15' }
     },
     {
       id: 'pax-a920',
       name: 'PAX A920 Pro',
       subtitle: 'Pro Mobile',
-      price: 'Free placement or purchase for $349.95',
+      price: 'Free placement or purchase for $499.95',
       priceLabel: '$19.95/mo/device software fee',
-      monthlyFee: null,
       image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/dmkrtxpl_hardware-smartTerminal-hero3.png',
       description: 'Portable wireless terminal ideal for restaurants with tableside ordering, food trucks, and mobile service providers.',
       bestFor: ['Full-service restaurants', 'Food trucks', 'Mobile services', 'Events & catering'],
-      features: [
-        '5.5" touchscreen',
-        'Android OS',
-        'Long battery life',
-        '4G/WiFi connectivity'
-      ],
+      features: ['5.5" touchscreen', 'Android OS', 'Long battery life', '4G/WiFi connectivity'],
       purchaseIncludes: ['Terminal device', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
       wirelessDevice: true,
-      dualPricing: {
-        merchantFee: '$0',
-        cardholderFee: '4%'
-      },
-      flatRate: {
-        rate: '2.60% + $0.15'
-      }
+      dualPricing: { merchantFee: '$0', cardholderFee: '4%' },
+      flatRate: { rate: '2.60% + $0.15' }
     },
     {
-      id: 'smart-pos',
-      name: 'E600 & E700 Smart POS',
+      id: 'e600-smart-flex',
+      name: 'E600 Smart Flex',
+      subtitle: 'Smart Flex POS',
+      price: 'Free placement or purchase for $649.95',
+      priceLabel: '$49.95 one-time setup fee. $29.95/mo/device software fee',
+      image: 'https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/omn4cfq8_hardware-smartFlex-hero2.png',
+      description: 'Versatile smart flex POS with touchscreen and customer display, built for retail and hospitality.',
+      bestFor: ['Retail stores', 'Restaurants', 'Hospitality', 'Service businesses'],
+      features: ['Touchscreen display', 'Customer-facing screen', 'EMV chip & NFC', 'Built-in printer'],
+      purchaseIncludes: ['POS terminal & customer display', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
+      wirelessDevice: false,
+      dualPricing: { merchantFee: '$0', cardholderFee: '4%' },
+      flatRate: { rate: '2.60% + $0.15' }
+    },
+    {
+      id: 'e700-smart-pos',
+      name: 'E700 Smart POS',
       subtitle: 'Full POS System',
       price: 'Free placement or purchase for $949.95',
       priceLabel: '$99.95 one-time setup fee. $49.95/mo/device software fee',
-      monthlyFee: null,
       image: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/4s4phyyv_hardware-smartpos-hero3.png',
       description: 'Full-featured POS system with customer display, built for high-volume retail, restaurants, and healthcare practices.',
       bestFor: ['High-volume retail', 'Restaurants & QSR', 'Healthcare practices', 'Multi-location businesses'],
-      features: [
-        'Full POS capabilities',
-        'Inventory management',
-        'Customer display',
-        'Receipt printer'
-      ],
+      features: ['Full POS capabilities', 'Inventory management', 'Customer display', 'Receipt printer'],
       purchaseIncludes: ['POS terminal & customer display', 'Power cables & charger', 'Card cleaner', 'Ethernet cable'],
       wirelessDevice: false,
-      dualPricing: {
-        merchantFee: '$0',
-        cardholderFee: '4%'
-      },
-      flatRate: {
-        rate: '2.60% + $0.15'
-      }
+      dualPricing: { merchantFee: '$0', cardholderFee: '4%' },
+      flatRate: { rate: '2.60% + $0.15' }
     }
   ];
 
@@ -339,9 +356,8 @@ const PayAnywhere = () => {
             {devices.map((device) => (
               <Card key={device.id} className="border-2 border-gray-200 hover:border-purple-600 transition-all duration-300 hover:shadow-xl">
                 <CardContent className="p-6">
-                  {/* Device Image */}
-                  <div className="aspect-square rounded-lg mb-4 flex items-center justify-center overflow-hidden bg-gray-50">
-                    <img src={device.image} alt={device.name} className="w-full h-full object-contain p-2" />
+                  <div className="aspect-square rounded-lg mb-4 flex items-center justify-center overflow-hidden bg-white">
+                    <img src={device.image} alt={device.name} className="max-w-full max-h-full object-contain" style={{ mixBlendMode: 'multiply' }} />
                   </div>
                   
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{device.name}</h3>
@@ -354,26 +370,36 @@ const PayAnywhere = () => {
                     )}
                   </div>
 
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button 
-                        className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
-                        onClick={() => setSelectedDevice(device)}
-                      >
-                        Pricing
-                      </Button>
-                    </DialogTrigger>
-                    <PricingModal device={selectedDevice} />
-                  </Dialog>
+                  {device.tapToPay ? (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                          Apply Now
+                        </Button>
+                      </DialogTrigger>
+                      <PricingModal device={device} />
+                    </Dialog>
+                  ) : (
+                    <>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                            Free Placement
+                          </Button>
+                        </DialogTrigger>
+                        <PricingModal device={device} />
+                      </Dialog>
 
-                  <Button 
-                    variant="outline"
-                    className="w-full mt-2 border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
-                    onClick={() => setPurchaseDevice(device)}
-                    data-testid={`purchase-btn-${device.id}`}
-                  >
-                    Purchase Now
-                  </Button>
+                      <Button 
+                        variant="outline"
+                        className="w-full mt-2 border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
+                        onClick={() => setPurchaseDevice(device)}
+                        data-testid={`purchase-btn-${device.id}`}
+                      >
+                        Purchase Now
+                      </Button>
+                    </>
+                  )}
                   
                   <p className="text-xs text-gray-500 text-center mt-3">Final pricing shown after approval</p>
                 </CardContent>
@@ -381,13 +407,31 @@ const PayAnywhere = () => {
             ))}
           </div>
 
+          {/* Terms & Conditions */}
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+            <h4 className="text-sm font-bold text-gray-700 mb-3 uppercase tracking-wider">Terms & Conditions</h4>
+            <div className="space-y-2 text-sm text-gray-600">
+              <div className="flex items-start gap-2">
+                <span className="font-semibold text-gray-700">1.</span>
+                <span>$99 Annual Fee Insurance (Free replacements)</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="font-semibold text-gray-700">2.</span>
+                <span>3-year Agreement or ETF</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="font-semibold text-gray-700">3.</span>
+                <span>We reserve the right to a minimum of $5,000 in volume for terminals.</span>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
-            <p className="text-gray-600 mb-6">$19.95/month software subscription per device</p>
-            <Link to="/contact">
+            <a href="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-12 py-6 shadow-lg">
                 Start Saving Today
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -405,6 +449,7 @@ const PayAnywhere = () => {
             <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
               {[
                 { key: 'virtual-terminal', label: 'Virtual Terminal', icon: Monitor },
+                { key: 'card-present-vt', label: 'Card Present VT', icon: CreditCard },
                 { key: 'invoicing', label: 'Invoicing', icon: FileText },
                 { key: 'recurring', label: 'Recurring Payments', icon: RefreshCw },
                 { key: 'payment-links', label: 'Payment Links', icon: LinkIcon },
@@ -477,6 +522,138 @@ const PayAnywhere = () => {
                     </div>
                   </CardContent>
                 </Card>
+              </div>
+            )}
+
+            {activeTab === 'card-present-vt' && (
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-10">
+                  <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <CreditCard className="h-8 w-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Card Present Virtual Terminal</h3>
+                  <p className="text-lg text-gray-600">
+                    Process payments from your computer while your team completes the transaction on a POS device.
+                  </p>
+                  <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 inline-block">
+                    <p className="text-sm text-blue-800 font-medium">
+                      Use the same login credentials for both Payanywhere and Payments Hub to ensure transactions process correctly.
+                    </p>
+                  </div>
+                </div>
+
+                <h4 className="text-xl font-bold text-gray-900 mb-8 text-center">How It Works</h4>
+
+                <div className="space-y-8 mb-12">
+                  {/* Step 1 */}
+                  <div className="flex gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                        <span className="text-xl font-bold text-white">1</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 className="text-lg font-bold text-gray-900 mb-2">Enter the Transaction Amount</h5>
+                      <p className="text-gray-600 mb-3">Open the Virtual Terminal and enter the payment details.</p>
+                      <p className="text-sm font-semibold text-gray-700 mb-2">Fields include:</p>
+                      <ul className="space-y-1">
+                        <li className="flex items-center gap-2 text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Customer email address
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Transaction amount
+                        </li>
+                      </ul>
+                      <p className="text-sm text-gray-500 mt-2 italic">This allows you to prepare the payment before it is completed on the device.</p>
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="flex gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                        <span className="text-xl font-bold text-white">2</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 className="text-lg font-bold text-gray-900 mb-2">Select POS Device as Payment Method</h5>
+                      <p className="text-gray-600 mb-3">Under Payment Method, choose:</p>
+                      <div className="bg-purple-50 border border-purple-200 rounded-lg px-4 py-2 inline-block mb-2">
+                        <span className="font-semibold text-purple-700">Use POS Device</span>
+                      </div>
+                      <p className="text-sm text-gray-500">This sends the transaction request directly to your connected terminal instead of manually entering the card.</p>
+                    </div>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="flex gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                        <span className="text-xl font-bold text-white">3</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 className="text-lg font-bold text-gray-900 mb-2">Click Process Payment</h5>
+                      <p className="text-gray-600 mb-3">Once the payment details are entered, click:</p>
+                      <div className="bg-purple-50 border border-purple-200 rounded-lg px-4 py-2 inline-block mb-2">
+                        <span className="font-semibold text-purple-700">Process Payment</span>
+                      </div>
+                      <p className="text-sm text-gray-500">The transaction will immediately appear on your POS device.</p>
+                    </div>
+                  </div>
+
+                  {/* Step 4 */}
+                  <div className="flex gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                        <span className="text-xl font-bold text-white">4</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 className="text-lg font-bold text-gray-900 mb-2">Customer Completes Payment on the Terminal</h5>
+                      <p className="text-gray-600 mb-3">The customer finishes the payment directly on the device.</p>
+                      <p className="text-sm font-semibold text-gray-700 mb-2">Accepted payment methods include:</p>
+                      <ul className="space-y-1">
+                        <li className="flex items-center gap-2 text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Tap (contactless)
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Dip (chip card)
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Swipe (magnetic stripe)
+                        </li>
+                      </ul>
+                      <p className="text-sm text-gray-500 mt-2 italic">The terminal will display the total and guide the customer through the payment process.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Built for Mobile */}
+                <Card className="border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50">
+                  <CardContent className="p-8">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Built for Mobile and Field Businesses</h4>
+                    <p className="text-gray-600 mb-4">This feature allows your team to accept payments anywhere. Your POS device does not need to be physically connected to the computer where the Virtual Terminal transaction was created.</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-3">Ideal for businesses such as:</p>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+                      {['Field service companies', 'Contractors and installers', 'Mobile service providers', 'Delivery teams', 'Remote sales staff'].map((item, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-gray-600 text-sm">Your team can process payments in the field while your office manages transactions from the dashboard.</p>
+                  </CardContent>
+                </Card>
+
+                <div className="text-center mt-8">
+                  <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg px-8 py-3" data-testid="card-present-vt-apply-btn">
+                      Get Approved in Minutes <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
+                </div>
               </div>
             )}
 
