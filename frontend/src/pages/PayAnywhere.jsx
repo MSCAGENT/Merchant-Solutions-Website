@@ -223,6 +223,18 @@ const PayAnywhere = () => {
             </CardContent>
           </Card>
         </div>
+
+        {/* Free Placement Terms */}
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4">
+          <p className="text-xs font-semibold text-gray-700 mb-2">All Free Placement terminals are provided under the Advantage Program and are subject to the following terms.</p>
+          <ul className="space-y-1 text-xs text-gray-600">
+            <li>&#8226; 36-month service agreement required</li>
+            <li>&#8226; $595 early termination fee (ETF) if the agreement is cancelled before the end of the term</li>
+            <li>&#8226; $99 annual Advantage Program fee</li>
+          </ul>
+          <p className="text-xs text-gray-600 mt-2 font-medium">30-day trial period from the date the account is activated</p>
+          <p className="text-xs text-gray-500 mt-1">During the 30-day trial period, merchants may cancel the program without the early termination fee. After the trial period, the standard agreement terms apply.</p>
+        </div>
       </DialogContent>
     );
   };
@@ -407,24 +419,7 @@ const PayAnywhere = () => {
             ))}
           </div>
 
-          {/* Terms & Conditions */}
-          <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
-            <h4 className="text-sm font-bold text-gray-700 mb-3 uppercase tracking-wider">Terms & Conditions</h4>
-            <div className="space-y-2 text-sm text-gray-600">
-              <div className="flex items-start gap-2">
-                <span className="font-semibold text-gray-700">1.</span>
-                <span>$99 Annual Fee Insurance (Free replacements)</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="font-semibold text-gray-700">2.</span>
-                <span>3-year Agreement or ETF</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="font-semibold text-gray-700">3.</span>
-                <span>We reserve the right to a minimum of $5,000 in volume for terminals.</span>
-              </div>
-            </div>
-          </div>
+          {/* Old standalone terms removed - now inside Free Placement popup */}
 
           <div className="text-center">
             <a href="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A" target="_blank" rel="noopener noreferrer">
