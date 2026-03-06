@@ -15,7 +15,6 @@ const Navigation = () => {
       label: 'Solutions',
       children: [
         { label: 'Payment Processing', path: '/solutions/payment-processing' },
-        { label: 'Transaction Gateway Integration', path: '/solutions/tranzaction-gateway' },
         { label: 'Crypto Processing', path: '/solutions/crypto-processing' },
         { label: 'Loyalty & Rewards', path: '/solutions/loyalty-rewards' },
         { label: 'Gift Cards', path: '/solutions/gift-cards' },
@@ -48,6 +47,7 @@ const Navigation = () => {
         { label: 'PayAnywhere POS', path: '/payanywhere' },
         { label: 'Clover POS', path: '/pos/clover' },
         { label: 'Square POS', path: '/pos/square' },
+        { label: 'Transaction Gateway', path: '/gateway/payments-gateway' },
         { label: 'DaySmart Salon', path: '/retail-software/daysmart-salon' },
         { label: 'Dejavoo Terminals', path: '/pos/dejavoo-terminals' },
         { label: 'Exatouch POS', path: '/pos/exatouch' },

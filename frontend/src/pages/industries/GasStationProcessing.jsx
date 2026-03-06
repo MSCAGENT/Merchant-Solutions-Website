@@ -476,7 +476,7 @@ const GasStationProcessing = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowLeadModal(false)}>
           <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setShowLeadModal(false)} className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors" data-testid="lead-modal-close">&#x2715;</button>
-            <iframe src="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A" className="w-full h-[80vh] border-0 rounded-2xl" title="Get a Quote" />
+            <iframe src="https://api.leadconnectorhq.com/widget/form/uogAqfC9gsxSCkaKRCLw" className="w-full h-[80vh] border-0 rounded-2xl" title="Get a Quote" />
           </div>
         </div>
       )}
