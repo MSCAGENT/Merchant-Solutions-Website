@@ -444,7 +444,6 @@ const PayAnywhere = () => {
             <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
               {[
                 { key: 'virtual-terminal', label: 'Virtual Terminal', icon: Monitor },
-                { key: 'card-present-vt', label: 'Card Present VT', icon: CreditCard },
                 { key: 'invoicing', label: 'Invoicing', icon: FileText },
                 { key: 'recurring', label: 'Recurring Payments', icon: RefreshCw },
                 { key: 'payment-links', label: 'Payment Links', icon: LinkIcon },
@@ -517,138 +516,6 @@ const PayAnywhere = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
-            )}
-
-            {activeTab === 'card-present-vt' && (
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-10">
-                  <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <CreditCard className="h-8 w-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Card Present Virtual Terminal</h3>
-                  <p className="text-lg text-gray-600">
-                    Process payments from your computer while your team completes the transaction on a POS device.
-                  </p>
-                  <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 inline-block">
-                    <p className="text-sm text-blue-800 font-medium">
-                      Use the same login credentials for both Payanywhere and Payments Hub to ensure transactions process correctly.
-                    </p>
-                  </div>
-                </div>
-
-                <h4 className="text-xl font-bold text-gray-900 mb-8 text-center">How It Works</h4>
-
-                <div className="space-y-8 mb-12">
-                  {/* Step 1 */}
-                  <div className="flex gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
-                        <span className="text-xl font-bold text-white">1</span>
-                      </div>
-                    </div>
-                    <div>
-                      <h5 className="text-lg font-bold text-gray-900 mb-2">Enter the Transaction Amount</h5>
-                      <p className="text-gray-600 mb-3">Open the Virtual Terminal and enter the payment details.</p>
-                      <p className="text-sm font-semibold text-gray-700 mb-2">Fields include:</p>
-                      <ul className="space-y-1">
-                        <li className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Customer email address
-                        </li>
-                        <li className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Transaction amount
-                        </li>
-                      </ul>
-                      <p className="text-sm text-gray-500 mt-2 italic">This allows you to prepare the payment before it is completed on the device.</p>
-                    </div>
-                  </div>
-
-                  {/* Step 2 */}
-                  <div className="flex gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
-                        <span className="text-xl font-bold text-white">2</span>
-                      </div>
-                    </div>
-                    <div>
-                      <h5 className="text-lg font-bold text-gray-900 mb-2">Select POS Device as Payment Method</h5>
-                      <p className="text-gray-600 mb-3">Under Payment Method, choose:</p>
-                      <div className="bg-purple-50 border border-purple-200 rounded-lg px-4 py-2 inline-block mb-2">
-                        <span className="font-semibold text-purple-700">Use POS Device</span>
-                      </div>
-                      <p className="text-sm text-gray-500">This sends the transaction request directly to your connected terminal instead of manually entering the card.</p>
-                    </div>
-                  </div>
-
-                  {/* Step 3 */}
-                  <div className="flex gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
-                        <span className="text-xl font-bold text-white">3</span>
-                      </div>
-                    </div>
-                    <div>
-                      <h5 className="text-lg font-bold text-gray-900 mb-2">Click Process Payment</h5>
-                      <p className="text-gray-600 mb-3">Once the payment details are entered, click:</p>
-                      <div className="bg-purple-50 border border-purple-200 rounded-lg px-4 py-2 inline-block mb-2">
-                        <span className="font-semibold text-purple-700">Process Payment</span>
-                      </div>
-                      <p className="text-sm text-gray-500">The transaction will immediately appear on your POS device.</p>
-                    </div>
-                  </div>
-
-                  {/* Step 4 */}
-                  <div className="flex gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
-                        <span className="text-xl font-bold text-white">4</span>
-                      </div>
-                    </div>
-                    <div>
-                      <h5 className="text-lg font-bold text-gray-900 mb-2">Customer Completes Payment on the Terminal</h5>
-                      <p className="text-gray-600 mb-3">The customer finishes the payment directly on the device.</p>
-                      <p className="text-sm font-semibold text-gray-700 mb-2">Accepted payment methods include:</p>
-                      <ul className="space-y-1">
-                        <li className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Tap (contactless)
-                        </li>
-                        <li className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Dip (chip card)
-                        </li>
-                        <li className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> Swipe (magnetic stripe)
-                        </li>
-                      </ul>
-                      <p className="text-sm text-gray-500 mt-2 italic">The terminal will display the total and guide the customer through the payment process.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Built for Mobile */}
-                <Card className="border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50">
-                  <CardContent className="p-8">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Built for Mobile and Field Businesses</h4>
-                    <p className="text-gray-600 mb-4">This feature allows your team to accept payments anywhere. Your POS device does not need to be physically connected to the computer where the Virtual Terminal transaction was created.</p>
-                    <p className="text-sm font-semibold text-gray-700 mb-3">Ideal for businesses such as:</p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-                      {['Field service companies', 'Contractors and installers', 'Mobile service providers', 'Delivery teams', 'Remote sales staff'].map((item, i) => (
-                        <div key={i} className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-gray-600 text-sm">Your team can process payments in the field while your office manages transactions from the dashboard.</p>
-                  </CardContent>
-                </Card>
-
-                <div className="text-center mt-8">
-                  <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg px-8 py-3" data-testid="card-present-vt-apply-btn">
-                      Get Approved in Minutes <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </a>
-                </div>
               </div>
             )}
 
@@ -843,6 +710,165 @@ const PayAnywhere = () => {
                 </Card>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Card Present Virtual Terminal Section */}
+      <section className="py-20 bg-white" data-testid="card-present-vt-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero / Intro */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <div className="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                Featured Function
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Card Present Virtual Terminal</h2>
+              <h3 className="text-xl text-gray-700 font-medium mb-4">How It Works</h3>
+              <p className="text-lg text-gray-600 mb-6">
+                Process payments from your computer while your team completes the transaction on a POS device.
+              </p>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <p className="text-sm text-blue-800 font-medium">
+                  <span className="font-bold">Note:</span> Use the same login credentials for both Payanywhere and Payments Hub to ensure transactions process correctly.
+                </p>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img src="https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/mkag8x0u_step1.png" alt="Card Present Virtual Terminal" className="w-full h-auto" />
+            </div>
+          </div>
+
+          {/* Steps */}
+          <div className="space-y-16">
+            {/* Step 1 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-white">1</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Enter the Transaction Amount</h4>
+                </div>
+                <p className="text-gray-600 mb-4 text-lg">Open the Virtual Terminal and enter the payment details.</p>
+                <p className="text-sm font-semibold text-gray-700 mb-3">Fields include:</p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">Customer email address</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">Transaction amount</span>
+                  </li>
+                </ul>
+                <p className="text-sm text-gray-500 italic">This allows you to prepare the payment before it is completed on the device.</p>
+              </div>
+              <div className="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <img src="https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/tgu60x6m_step2.png" alt="Step 1 - Enter Transaction Amount" className="w-full h-auto" />
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <img src="https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/dhvv8kv2_step%203.png" alt="Step 2 - Select POS Device" className="w-full h-auto" />
+              </div>
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-white">2</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Select POS Device as Payment Method</h4>
+                </div>
+                <p className="text-gray-600 mb-4 text-lg">Under Payment Method, choose:</p>
+                <div className="bg-purple-50 border border-purple-200 rounded-lg px-5 py-3 inline-block mb-4">
+                  <span className="font-bold text-purple-700 text-lg">Use POS Device</span>
+                </div>
+                <p className="text-gray-500">This sends the transaction request directly to your connected terminal instead of manually entering the card.</p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-white">3</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Click Process Payment</h4>
+                </div>
+                <p className="text-gray-600 mb-4 text-lg">Once the payment details are entered, click:</p>
+                <div className="bg-purple-50 border border-purple-200 rounded-lg px-5 py-3 inline-block mb-4">
+                  <span className="font-bold text-purple-700 text-lg">Process Payment</span>
+                </div>
+                <p className="text-gray-500">The transaction will immediately appear on your POS device.</p>
+              </div>
+              <div className="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <img src="https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/w7v3rquu_step%204.png" alt="Step 3 - Process Payment" className="w-full h-auto" />
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <img src="https://customer-assets.emergentagent.com/job_e0de31d0-c8f6-44f8-af93-bc2fb5cc9b2f/artifacts/9ec5r4qs_step%205.png" alt="Step 4 - Customer Completes Payment" className="w-full h-auto" />
+              </div>
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-white">4</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Customer Completes Payment on the Terminal</h4>
+                </div>
+                <p className="text-gray-600 mb-4 text-lg">The customer finishes the payment directly on the device.</p>
+                <p className="text-sm font-semibold text-gray-700 mb-3">Accepted payment methods include:</p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">Tap (contactless)</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">Dip (chip card)</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">Swipe (magnetic stripe)</span>
+                  </li>
+                </ul>
+                <p className="text-sm text-gray-500 italic">The terminal will display the total and guide the customer through the payment process.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Built for Mobile */}
+          <Card className="border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 mt-16">
+            <CardContent className="p-10">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Built for Mobile and Field Businesses</h3>
+              <p className="text-lg text-gray-600 mb-4">
+                This feature allows your team to accept payments anywhere. Your POS device does not need to be physically connected to the computer where the Virtual Terminal transaction was created.
+              </p>
+              <p className="font-semibold text-gray-700 mb-4">Ideal for businesses such as:</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                {['Field service companies', 'Contractors and installers', 'Mobile service providers', 'Delivery teams', 'Remote sales staff'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-600">Your team can process payments in the field while your office manages transactions from the dashboard.</p>
+            </CardContent>
+          </Card>
+
+          {/* Apply Now CTA */}
+          <div className="text-center mt-12">
+            <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-12 py-6 shadow-lg" data-testid="card-present-vt-apply-btn">
+                Apply Now <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
