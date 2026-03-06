@@ -1046,43 +1046,74 @@ const PayAnywhere = () => {
               &#x2715;
             </button>
             <div className="p-6 pt-8">
-              <h2 className="text-2xl font-bold text-center mb-6">{pricingDevice.name} - Choose Your Pricing Plan</h2>
+              <h2 className="text-2xl font-bold text-center mb-2">{pricingDevice.name}</h2>
+              <p className="text-center text-gray-500 mb-6">Choose the plan that works best for your business</p>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="border-2 border-purple-600">
+                {/* Dual Pricing - Benefits First */}
+                <Card className="border-2 border-purple-600 relative overflow-hidden">
+                  <div className="bg-purple-600 text-white text-center py-1.5 text-xs font-bold uppercase tracking-wider">Most Popular</div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Dual Pricing Program</h3>
-                    <p className="text-sm text-gray-600 mb-6">Zero cost to merchant</p>
-                    <div className="space-y-4 mb-6">
-                      <div className="bg-purple-50 p-4 rounded-lg">
-                        <div className="text-3xl font-bold text-purple-600 mb-1">{pricingDevice.dualPricing.merchantFee}</div>
-                        <div className="text-sm text-gray-600">Fee to Merchant</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">Dual Pricing Program</h3>
+                    <p className="text-sm text-purple-600 font-medium mb-5">Zero cost processing to merchant</p>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">$0 Processing Fees</span>
                       </div>
-                      <div className="bg-purple-50 p-4 rounded-lg">
-                        <div className="text-3xl font-bold text-purple-600 mb-1">{pricingDevice.dualPricing.cardholderFee}</div>
-                        <div className="text-sm text-gray-600">to the Cardholder</div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">Free Terminal/POS Included</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">4% to the Cardholder</span>
                       </div>
                     </div>
-                    <Button onClick={() => { setPricingDevice(null); setShowActivation(true); }} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
+
+                    <p className="text-xs text-gray-400 mb-6">Dual pricing compliant program</p>
+
+                    <Button onClick={() => { setPricingDevice(null); setShowActivation(true); }} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg py-5">
                       Apply Now <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>
                 </Card>
-                <Card className="border-2 border-blue-600">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Flat Rate Program</h3>
-                    <p className="text-sm text-gray-600 mb-6">Simple, straightforward pricing</p>
-                    <div className="bg-blue-50 p-6 rounded-lg mb-4">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">2.6% + $0.15</div>
-                      <div className="text-sm text-gray-600 mb-3">Qualified Transactions</div>
-                      <div className="text-xs text-gray-500 border-t border-gray-300 pt-2">Non-qualified: 3.5% + $0.20</div>
+
+                {/* Flat Rate - Benefits First */}
+                <Card className="border-2 border-gray-200">
+                  <CardContent className="p-6 pt-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">Flat Rate Program</h3>
+                    <p className="text-sm text-blue-600 font-medium mb-5">Traditional Pricing</p>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">Simple predictable processing</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">No surcharge to customers</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">Free Terminal/POS Included</span>
+                      </div>
                     </div>
-                    <div className="text-sm text-gray-600 mb-4 font-medium">Plans start at $19.99/month</div>
-                    <Button onClick={() => { setPricingDevice(null); setShowActivation(true); }} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
+
+                    <div className="bg-gray-50 rounded-lg p-3 mb-6">
+                      <p className="text-xs text-gray-500">2.6% + $0.15</p>
+                      <p className="text-xs text-gray-500">3.5% + $0.20 keyed</p>
+                      <p className="text-xs text-gray-400 mt-1">Software fee applies</p>
+                    </div>
+
+                    <Button onClick={() => { setPricingDevice(null); setShowActivation(true); }} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg py-5">
                       Apply Now <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>
                 </Card>
               </div>
+
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4">
                 <p className="text-xs font-semibold text-gray-700 mb-2">All Free Placement terminals are provided under the Advantage Program and are subject to the following terms.</p>
                 <ul className="space-y-1 text-xs text-gray-600">
