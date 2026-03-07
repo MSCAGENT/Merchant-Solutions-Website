@@ -6,6 +6,7 @@ import { Card, CardContent } from '../components/ui/card';
 
 const MSCGateway = () => {
   const [showContactForm, setShowContactForm] = useState(false);
+  const [showPricing, setShowPricing] = useState(false);
   const features = [
     {
       icon: CreditCard,
@@ -353,109 +354,27 @@ console.log(payment.status); // 'approved'`}</code>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="border-2">
-              <CardContent className="p-6 text-center">
-                <CreditCard className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Payment Processing</h3>
-                <p className="text-sm text-gray-600 mb-4">Cards, ACH, digital wallets</p>
-                <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="signup-payment-processing">
+            {[
+              { icon: CreditCard, title: 'Payment Processing', desc: 'Cards, ACH, digital wallets', tid: 'signup-payment-processing' },
+              { icon: Globe, title: 'Virtual Terminal', desc: 'Accept payments anywhere', tid: 'signup-virtual-terminal' },
+              { icon: Calendar, title: 'Recurring Billing', desc: 'Automated subscriptions', tid: 'signup-recurring' },
+              { icon: Code, title: 'Developer API', desc: 'Full REST API access', tid: 'signup-api' },
+              { icon: QrCode, title: 'QR Code Payments', desc: 'Contactless scan-to-pay', tid: 'signup-qr' },
+              { icon: Users, title: 'Customer Portal', desc: 'Self-service payments', tid: 'signup-portal' },
+              { icon: Shield, title: 'Fraud Protection', desc: 'Advanced security tools', tid: 'signup-fraud' },
+              { icon: Zap, title: 'Real-time Reporting', desc: 'Instant transaction data', tid: 'signup-reporting' }
+            ].map((item) => (
+              <Card key={item.tid} className="border-2">
+                <CardContent className="p-6 text-center">
+                  <item.icon className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{item.desc}</p>
+                  <Button onClick={() => setShowPricing(true)} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={item.tid}>
                     Sign Up Now
                   </Button>
-                </a>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2">
-              <CardContent className="p-6 text-center">
-                <Globe className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Virtual Terminal</h3>
-                <p className="text-sm text-gray-600 mb-4">Accept payments anywhere</p>
-                <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="signup-virtual-terminal">
-                    Sign Up Now
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2">
-              <CardContent className="p-6 text-center">
-                <Calendar className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Recurring Billing</h3>
-                <p className="text-sm text-gray-600 mb-4">Automated subscriptions</p>
-                <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="signup-recurring">
-                    Sign Up Now
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2">
-              <CardContent className="p-6 text-center">
-                <Code className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Developer API</h3>
-                <p className="text-sm text-gray-600 mb-4">Full REST API access</p>
-                <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="signup-api">
-                    Sign Up Now
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2">
-              <CardContent className="p-6 text-center">
-                <QrCode className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">QR Code Payments</h3>
-                <p className="text-sm text-gray-600 mb-4">Contactless scan-to-pay</p>
-                <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="signup-qr">
-                    Sign Up Now
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2">
-              <CardContent className="p-6 text-center">
-                <Users className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Customer Portal</h3>
-                <p className="text-sm text-gray-600 mb-4">Self-service payments</p>
-                <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="signup-portal">
-                    Sign Up Now
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2">
-              <CardContent className="p-6 text-center">
-                <Shield className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Fraud Protection</h3>
-                <p className="text-sm text-gray-600 mb-4">Advanced security tools</p>
-                <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="signup-fraud">
-                    Sign Up Now
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2">
-              <CardContent className="p-6 text-center">
-                <Zap className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Real-time Reporting</h3>
-                <p className="text-sm text-gray-600 mb-4">Instant transaction data</p>
-                <a href="https://apply.paymentshub.com/?source=50926.9" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid="signup-reporting">
-                    Sign Up Now
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -488,6 +407,98 @@ console.log(payment.status); // 'approved'`}</code>
           </div>
         </div>
       </section>
+
+      {/* Gateway Pricing Modal */}
+      {showPricing && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowPricing(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowPricing(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+              data-testid="gateway-pricing-close"
+            >
+              &#x2715;
+            </button>
+            <div className="p-6 pt-8">
+              <h2 className="text-2xl font-bold text-center mb-2">Transaction Gateway Pricing</h2>
+              <p className="text-center text-gray-500 mb-6">Choose the plan that works best for your business</p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Dual Price with ACH */}
+                <Card className="border-2 border-purple-600 relative overflow-hidden">
+                  <div className="bg-purple-600 text-white text-center py-1.5 text-xs font-bold uppercase tracking-wider">Most Popular</div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">Dual Price with ACH</h3>
+                    <p className="text-sm text-purple-600 font-medium mb-5">Zero cost processing to merchant</p>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">$0 Processing Fees</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">4% to the Consumer</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">ACH Payments Included</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">$0 Fee Next Day Funding</span>
+                      </div>
+                    </div>
+
+                    <p className="text-xs text-gray-400 mb-6">Dual pricing compliant program</p>
+
+                    <a href="https://apply.paymentshub.com/?source=50925.16" target="_blank" rel="noopener noreferrer" className="block">
+                      <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg py-5" data-testid="gateway-dual-apply">
+                        Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
+                  </CardContent>
+                </Card>
+
+                {/* Flat Rate */}
+                <Card className="border-2 border-gray-200">
+                  <CardContent className="p-6 pt-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">Flat Rate Program</h3>
+                    <p className="text-sm text-blue-600 font-medium mb-5">Traditional Pricing</p>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">Simple predictable processing</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">No fees to consumer</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">$0 Fee Next Day Funding</span>
+                      </div>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-lg p-3 mb-6">
+                      <p className="text-xs text-gray-500">2.79% + $0.15 per qualified transaction</p>
+                      <p className="text-xs text-gray-500">3.59% + $0.15 per trans Non-Qualified</p>
+                      <p className="text-xs text-gray-400 mt-1">Software fee applies</p>
+                    </div>
+
+                    <a href="https://apply.paymentshub.com/?source=50925.16" target="_blank" rel="noopener noreferrer" className="block">
+                      <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg py-5" data-testid="gateway-flat-apply">
+                        Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
