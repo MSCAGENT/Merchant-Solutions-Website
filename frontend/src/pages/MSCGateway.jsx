@@ -358,7 +358,7 @@ console.log(payment.status); // 'approved'`}</code>
               { icon: CreditCard, title: 'Payment Processing', desc: 'Cards, ACH, digital wallets', tid: 'signup-payment-processing' },
               { icon: Globe, title: 'Virtual Terminal', desc: 'Accept payments anywhere', tid: 'signup-virtual-terminal' },
               { icon: Calendar, title: 'Recurring Billing', desc: 'Automated subscriptions', tid: 'signup-recurring' },
-              { icon: Code, title: 'Developer API', desc: 'Full REST API access', tid: 'signup-api' },
+              { icon: Code, title: 'Developer API', desc: 'Full REST API access', tid: 'signup-api', scrollTo: 'dev-api-section' },
               { icon: QrCode, title: 'QR Code Payments', desc: 'Contactless scan-to-pay', tid: 'signup-qr' },
               { icon: Users, title: 'Customer Portal', desc: 'Self-service payments', tid: 'signup-portal' },
               { icon: Shield, title: 'Fraud Protection', desc: 'Advanced security tools', tid: 'signup-fraud' },
@@ -369,7 +369,7 @@ console.log(payment.status); // 'approved'`}</code>
                   <item.icon className="h-12 w-12 text-purple-600 mx-auto mb-4" />
                   <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 mb-4">{item.desc}</p>
-                  <Button onClick={() => setShowPricing(true)} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={item.tid}>
+                  <Button onClick={() => item.scrollTo ? document.getElementById(item.scrollTo)?.scrollIntoView({ behavior: 'smooth' }) : setShowPricing(true)} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={item.tid}>
                     Sign Up Now
                   </Button>
                 </CardContent>
@@ -395,7 +395,7 @@ console.log(payment.status); // 'approved'`}</code>
               </Button>
             </a>
             <a href="https://developers.merchantsolutionscorpdb.com" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg animate-heartbeat">
                 Explore Developer Docs <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
             </a>
@@ -404,6 +404,39 @@ console.log(payment.status); // 'approved'`}</code>
                 Request a Demo
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Developer API Section */}
+      <section id="dev-api-section" className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Developer API
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Get API Access</h2>
+            <p className="text-lg text-gray-600 mb-2">Complete the form below to get started with our Transaction Gateway API.</p>
+            <p className="text-sm text-gray-500">Once submitted, you'll be directed to the Developer Integration Portal.</p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8" data-testid="dev-api-form">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/Cl4w9PGXt9QGEieIbn9A"
+              className="w-full border-0 rounded-2xl"
+              style={{ height: '70vh', minHeight: '500px' }}
+              title="Developer API Access"
+              scrolling="auto"
+            />
+          </div>
+
+          <div className="text-center">
+            <p className="text-gray-600 mb-4">After completing the form, access the Integration Portal:</p>
+            <a href="https://mscpayments.transactiongateway.com/merchants/resources/integration/integration_portal.php?tid=db3875e88814078b00473d03128ee2d9" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-10 py-6 shadow-lg animate-heartbeat" data-testid="dev-portal-btn">
+                <Code className="mr-2 h-5 w-5" /> Open Integration Portal <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
