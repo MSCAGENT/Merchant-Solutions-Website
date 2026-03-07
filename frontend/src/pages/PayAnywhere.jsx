@@ -1070,9 +1070,14 @@ const PayAnywhere = () => {
                         <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
                         <span className="text-gray-900 font-semibold">4% to the Cardholder</span>
                       </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">$0 Fee Next Day Funding / Same-Day Funding</span>
+                      </div>
                     </div>
 
-                    <p className="text-xs text-gray-400 mb-6">Dual pricing compliant program</p>
+                    <p className="text-xs text-gray-400 mb-1">Dual pricing compliant program</p>
+                    <p className="text-xs text-gray-400 mb-6">Software fee applies - New or Established Business</p>
 
                     <Button onClick={() => { setPricingDevice(null); setShowActivation(true); }} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg py-5">
                       Apply Now <ChevronRight className="ml-2 h-4 w-4" />
@@ -1093,11 +1098,15 @@ const PayAnywhere = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                        <span className="text-gray-900 font-semibold">No surcharge to customers</span>
+                        <span className="text-gray-900 font-semibold">No fees to consumer</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
                         <span className="text-gray-900 font-semibold">Free Terminal/POS Included</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-gray-900 font-semibold">$0 Fee Next Day Funding / Same-Day Funding</span>
                       </div>
                     </div>
 
