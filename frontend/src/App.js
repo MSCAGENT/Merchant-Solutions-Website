@@ -72,6 +72,7 @@ import CloverKiosk from "./pages/pos/CloverKiosk";
 import QRCodeOrdering from "./pages/pos/QRCodeOrdering";
 import VirtualTerminal from "./pages/pos/VirtualTerminal";
 import PaymentLinks from "./pages/pos/PaymentLinks";
+import UnionPOS from "./pages/pos/UnionPOS";
 import PricingOverview from "./pages/PricingOverview";
 import POSSubscription from "./pages/POSSubscription";
 import FreePOS from "./pages/FreePOS";
@@ -149,6 +150,7 @@ function App() {
           <Route path="/pos/qr-ordering" element={<QRCodeOrdering />} />
           <Route path="/pos/virtual-terminal" element={<VirtualTerminal />} />
           <Route path="/pos/payment-links" element={<PaymentLinks />} />
+          <Route path="/pos/union" element={<UnionPOS />} />
           <Route path="/best-self-ordering-kiosk-for-restaurants" element={<SelfOrderingKiosk />} />
           <Route path="/pos/self-ordering-kiosk" element={<SelfOrderingKiosk />} />
           <Route path="/retail-software/daysmart-salon" element={<DaySmartSalon />} />

@@ -227,7 +227,7 @@ const POSOverview = () => {
             ))}
           </div>
           <p className="text-center text-gray-600 mt-8 max-w-3xl mx-auto">
-            Platforms like <Link to="/pos/square" className="text-purple-600 font-semibold hover:underline">Square</Link> combine payment processing with inventory, loyalty and reporting tools to simplify business management.
+            Platforms like <Link to="/pos/square" className="text-purple-600 font-semibold hover:underline">Square</Link>, <Link to="/pos/clover" className="text-purple-600 font-semibold hover:underline">Clover</Link>, <Link to="/pos/itab" className="text-purple-600 font-semibold hover:underline">itabPOS</Link>, and <Link to="/pos/union" className="text-purple-600 font-semibold hover:underline">Union POS</Link> combine payment processing with inventory, loyalty and reporting tools to simplify business management.
           </p>
         </div>
       </section>
@@ -284,49 +284,78 @@ const POSOverview = () => {
         </div>
       </section>
 
-      {/* 7. CLOVER VS SQUARE */}
+      {/* 7. 4-WAY POS COMPARISON */}
       <section id="compare" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">Clover POS vs Square POS</h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Both Clover and Square are among the most widely used POS platforms for small businesses.
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-4">Compare POS Systems Side by Side</h2>
+          <p className="text-lg text-gray-600 text-center mb-8 max-w-3xl mx-auto">
+            Clover, Square, itabPOS, and Union POS are among the most widely used POS platforms. Here is how they compare.
           </p>
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-            <table className="w-full" data-testid="clover-vs-square-table">
+          {/* Logos */}
+          <div className="flex flex-wrap items-center justify-center gap-8 mb-10">
+            <Link to="/pos/clover" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/fga5kaim_Clover%20logo.jpg" alt="Clover POS" className="h-10 w-auto" />
+            </Link>
+            <Link to="/pos/square" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/6q1f7o7j_Square_Logo_Landscape.png" alt="Square POS" className="h-10 w-auto" />
+            </Link>
+            <Link to="/pos/itab" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/saip30kz_itabPOS_logo.png" alt="itabPOS" className="h-10 w-auto" />
+            </Link>
+            <Link to="/pos/union" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <img src="https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/p2h56xlk_union%20app%20icon.png" alt="Union POS" className="h-10 w-auto rounded-lg" />
+              <span className="font-bold text-gray-900">Union</span>
+            </Link>
+          </div>
+          {/* Comparison Table */}
+          <div className="bg-white rounded-2xl shadow-lg overflow-x-auto border border-gray-200" data-testid="pos-comparison-table">
+            <table className="w-full min-w-[700px]">
               <thead>
                 <tr className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-                  <th className="text-left py-4 px-6 font-semibold">Feature</th>
-                  <th className="text-left py-4 px-6 font-semibold">Clover</th>
-                  <th className="text-left py-4 px-6 font-semibold">Square</th>
+                  <th className="text-left py-4 px-5 font-semibold w-[18%]">Feature</th>
+                  <th className="text-left py-4 px-5 font-semibold w-[20.5%]">Clover</th>
+                  <th className="text-left py-4 px-5 font-semibold w-[20.5%]">Square</th>
+                  <th className="text-left py-4 px-5 font-semibold w-[20.5%]">itabPOS</th>
+                  <th className="text-left py-4 px-5 font-semibold w-[20.5%]">Union POS</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="text-sm">
                 {[
-                  ['Hardware', 'Professional POS terminals', 'Modern smart terminals'],
-                  ['Best For', 'Restaurants and retail', 'Small businesses and startups'],
-                  ['App Marketplace', 'Large app ecosystem', 'Built-in tools'],
-                  ['Payment Processing', 'Multiple processor options', 'Square processing only'],
-                  ['Pricing', 'Custom pricing available', 'Flat-rate pricing'],
-                  ['Setup', 'Professional installation', 'Self-setup or professional'],
-                ].map(([feature, clover, square], i) => (
+                  ['Best For', 'Restaurants & retail', 'Small businesses & startups', 'Restaurants, bars & QSR', 'High-volume bars & nightlife'],
+                  ['Hardware', 'Clover Station, Mini, Flex, Kiosk', 'Register, Terminal, Reader', 'Sunmi-based touchscreen workstations', 'iPad & iPhone based, BYO device'],
+                  ['Operating System', 'Android (Clover OS)', 'Proprietary (Square OS)', 'Android (Sunmi)', 'iOS (iPad & iPhone)'],
+                  ['Connection', 'Wi-Fi, Ethernet, LTE', 'Wi-Fi, Ethernet', 'Wi-Fi, Ethernet', 'Wi-Fi, Cellular'],
+                  ['Offline / Redundancy', 'Offline payments supported', 'Offline payments supported', 'Local server redundancy', 'Offline resilience mode'],
+                  ['Payment Processing', 'Multiple processors available', 'Square processing only', 'Multiple processors available', 'EMV processing built-in'],
+                  ['SaaS Pricing', 'From $14.95/mo per device', 'Free plan, Plus from $29/mo', 'Custom pricing per location', 'Custom pricing, contact for quote'],
+                  ['Setup', 'Professional installation available', 'Self-setup or professional', 'Professional installation included', 'Quick zero-friction setup'],
+                  ['Rewards / Loyalty', 'Built-in loyalty programs', 'Square Loyalty add-on', 'Native iTab loyalty program', 'Built-in loyalty, up to 75% repeat revenue'],
+                  ['App Marketplace', 'Large third-party app ecosystem', 'Built-in tools, limited apps', 'Integrated suite, no third-party apps', 'All-in-one, no third-party needed'],
+                  ['Unique Strength', 'Most versatile ecosystem', 'Easiest to start, fintech platform', 'Deep restaurant customization', 'Handles 1,000+ simultaneous tabs'],
+                ].map(([feature, clover, square, itab, union], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="py-4 px-6 font-semibold text-gray-900">{feature}</td>
-                    <td className="py-4 px-6 text-gray-700">{clover}</td>
-                    <td className="py-4 px-6 text-gray-700">{square}</td>
+                    <td className="py-3.5 px-5 font-semibold text-gray-900">{feature}</td>
+                    <td className="py-3.5 px-5 text-gray-700">{clover}</td>
+                    <td className="py-3.5 px-5 text-gray-700">{square}</td>
+                    <td className="py-3.5 px-5 text-gray-700">{itab}</td>
+                    <td className="py-3.5 px-5 text-gray-700">{union}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-center text-gray-600 mt-6">
-            <Link to="/pos/square" className="text-purple-600 font-semibold hover:underline">Square</Link> is widely used by millions of businesses due to its integrated payments and software fintech ecosystem.
-          </p>
-          <div className="flex gap-4 justify-center mt-8">
+          <div className="flex flex-wrap gap-4 justify-center mt-8">
             <Link to="/pos/clover">
               <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">Explore Clover POS</Button>
             </Link>
             <Link to="/pos/square">
               <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">Explore Square POS</Button>
+            </Link>
+            <Link to="/pos/itab" className="hidden">
+              <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">Explore itabPOS</Button>
+            </Link>
+            <Link to="/pos/union">
+              <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">Explore Union POS</Button>
             </Link>
           </div>
         </div>
@@ -339,13 +368,15 @@ const POSOverview = () => {
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
             Each device is designed for different environments, including restaurants, retail counters and mobile businesses.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
               { name: 'Clover Station', desc: 'Full countertop POS', link: '/pos/clover' },
               { name: 'Clover Mini', desc: 'Compact countertop POS', link: '/pos/clover' },
               { name: 'Clover Flex', desc: 'Handheld mobile POS', link: '/pos/clover' },
               { name: 'Square Register', desc: 'Dual-screen POS', link: '/pos/square' },
               { name: 'Square Terminal', desc: 'Portable smart terminal', link: '/pos/square' },
+              { name: 'itabPOS Workstation', desc: 'Sunmi-based restaurant POS', link: '/pos/itab' },
+              { name: 'Union POS Station', desc: 'iPad-based bar POS', link: '/pos/union' },
             ].map((hw, i) => (
               <Link key={i} to={hw.link} className="group">
                 <div className="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 hover:border-purple-400 hover:shadow-lg transition-all h-full">

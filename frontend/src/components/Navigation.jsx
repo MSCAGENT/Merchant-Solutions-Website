@@ -95,6 +95,7 @@ const megaMenus = {
           { label: 'Exatouch POS', desc: 'Retail & C-store POS with barcode scanning, inventory, and reporting.', path: '/pos/exatouch' },
           { label: 'DaySmart Salon POS', desc: 'POS and appointment scheduling for salons and spas.', path: '/retail-software/daysmart-salon' },
           { label: 'PayAnywhere POS', desc: 'Mobile POS terminals with zero processing fees and free placement.', path: '/payanywhere' },
+          { label: 'Union POS', desc: 'High-volume venue operating system for bars and restaurants.', path: '/pos/union' },
         ],
       },
       {
