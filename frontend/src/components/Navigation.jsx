@@ -50,6 +50,9 @@ const megaMenus = {
         heading: 'Food & Hospitality',
         items: [
           { label: 'Restaurants', desc: 'POS systems and payment processing for restaurants and food service businesses.', path: '/restaurant-payment-processing-services' },
+          { label: 'Food Trucks', desc: 'Mobile payment processing for food trucks and mobile vendors.', path: '/industries/food-trucks' },
+          { label: 'Cloud Kitchens', desc: 'Payment solutions for ghost kitchens and virtual restaurant brands.', path: '/industries/cloud-kitchens' },
+          { label: 'Delivery Only', desc: 'Payment processing for delivery-only restaurant operations.', path: '/industries/delivery-only' },
         ],
       },
       {
@@ -75,6 +78,7 @@ const megaMenus = {
         items: [
           { label: 'Professional Services', desc: 'Payment solutions for consultants, contractors, and service providers.', path: '/professional-services-payment-processing-clover-pos' },
           { label: 'High-Risk Businesses', desc: 'Payment processing solutions for high-risk industries.', path: '/high-risk-merchant-services' },
+          { label: 'B2B Payment Processing', desc: 'Payment processing for complex and custom business models.', path: '/industries/b2b-processing' },
         ],
       },
     ],
@@ -97,9 +101,9 @@ const megaMenus = {
         heading: 'Payment Terminals',
         items: [
           { label: 'Payment Terminals Overview', desc: 'Compare countertop, wireless, and smart terminals.', path: '/pos/payment-terminals-overview' },
+          { label: 'PayAnywhere POS', desc: 'Mobile POS terminals with zero processing fees and free placement.', path: '/payanywhere' },
           { label: 'Dejavoo Terminals', desc: 'Reliable countertop and wireless credit card terminals.', path: '/pos/dejavoo-terminals' },
           { label: 'Ingenico Terminals', desc: 'Enterprise-grade EMV and NFC payment devices.', path: '/pos/ingenico-terminals' },
-          { label: 'PAX Terminals', desc: 'Secure Android-based smart payment terminals.', path: '/pos/pax-terminals' },
         ],
       },
       {
@@ -371,7 +375,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0" data-testid="nav-logo">
             <img
-              src="https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/z6dyvf6s_MSC%20logo.jpg"
+              src="https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/7tytj5bz_MSC_1080x560.png"
               alt="Merchant Solutions Corp"
               className="h-10 w-auto"
             />

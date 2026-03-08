@@ -54,6 +54,10 @@ import SelfOrderingKiosk from "./pages/SelfOrderingKiosk";
 import ProfessionalServices from "./pages/ProfessionalServices";
 import DualPricing from "./pages/solutions/DualPricing";
 import GasStationProcessing from "./pages/industries/GasStationProcessing";
+import B2BProcessing from "./pages/industries/B2BProcessing";
+import FoodTrucks from "./pages/industries/FoodTrucks";
+import CloudKitchens from "./pages/industries/CloudKitchens";
+import DeliveryOnly from "./pages/industries/DeliveryOnly";
 
 // New placeholder pages
 import MerchantRewards from "./pages/solutions/MerchantRewards";
@@ -125,6 +129,10 @@ function App() {
           <Route path="/industries/professional-services" element={<ProfessionalServices />} />
           <Route path="/emv-gas-station-payment-processing" element={<GasStationProcessing />} />
           <Route path="/industries/gas-station" element={<GasStationProcessing />} />
+          <Route path="/industries/b2b-processing" element={<B2BProcessing />} />
+          <Route path="/industries/food-trucks" element={<FoodTrucks />} />
+          <Route path="/industries/cloud-kitchens" element={<CloudKitchens />} />
+          <Route path="/industries/delivery-only" element={<DeliveryOnly />} />
           
           {/* POS & Hardware Routes */}
           <Route path="/pos/overview" element={<POSOverview />} />
