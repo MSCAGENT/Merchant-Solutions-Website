@@ -80,37 +80,46 @@ const LoyaltyRewardsSolution = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Loyalty & Rewards Programs for Business
-            </h1>
-            
-            <p className="text-xl text-purple-600 font-semibold mb-4">
-              Build Customer Loyalty and Drive Repeat Business
-            </p>
-            
-            <div className="text-lg text-gray-700 space-y-4 mb-8">
-              <p>
-                Turn one-time buyers into loyal customers with integrated loyalty and rewards programs. Track points, offer rewards, and build lasting relationships.
+      {/* Hero Section */}
+      <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
+        <img
+          src="https://images.unsplash.com/photo-1758520387575-9d72f7a3e4c5?auto=format&fit=crop&w=1920&q=80"
+          alt="Happy customers with shopping bags in a retail store"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/60 to-gray-900/70" />
+        <div className="relative z-10 w-full py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Loyalty & Rewards Programs for Business
+              </h1>
+              
+              <p className="text-xl text-purple-200 font-semibold mb-4">
+                Build Customer Loyalty and Drive Repeat Business
               </p>
-              <p>
-                Fully integrated with your POS system for seamless operation.
-              </p>
-            </div>
+              
+              <div className="text-lg text-gray-300 space-y-4 mb-8">
+                <p>
+                  Turn one-time buyers into loyal customers with integrated loyalty and rewards programs. Track points, offer rewards, and build lasting relationships.
+                </p>
+                <p className="text-gray-400">
+                  Fully integrated with your POS system for seamless operation.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-get-started-btn">
-                  Get Started
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" data-testid="hero-demo-btn">
-                  Request Demo
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact">
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-get-started-btn">
+                    Get Started
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="hero-demo-btn">
+                    Request Demo
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

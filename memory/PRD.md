@@ -34,6 +34,9 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Crypto Processing: Added scrolling coin logo carousel (16 cryptocurrencies) above CTA section
 - Loyalty & Rewards: Refocused POS integration to Clover, Square, and iTab only; removed Toast, Lightspeed, Shopify
 - Gift Cards: Replaced black-background gift card image with clean white-background AI-generated version
+- **Hero Background Images**: Added full-bleed stock photo hero backgrounds to ALL solution pages:
+  - Payment Processing (credit card transaction), Crypto Processing (bitcoin coins), Loyalty & Rewards (shoppers), Gift Cards (gift boxes), Business Loans (handshake), Payroll Services (finance workspace), MSC TranzAction Gateway (server tech)
+  - Pattern: dark overlay with purple gradient, white text, matching IT Services/ATMs/Dual Pricing style
 
 ## Completed (2026-03-03)
 - P0: Added video background to Dual Pricing hero section

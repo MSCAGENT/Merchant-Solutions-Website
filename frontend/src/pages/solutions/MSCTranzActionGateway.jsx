@@ -105,37 +105,45 @@ const MSCTranzActionGateway = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Transaction Gateway Integration
-            </h1>
-            
-            <p className="text-xl text-purple-600 font-semibold mb-4">
-              Secure, Cloud-Based Payment Gateway Powered by NMI
-            </p>
-            
-            <div className="text-lg text-gray-700 space-y-4 mb-8">
-              <p>
-                Accept credit cards, debit cards, ACH, and recurring payments online, in-store, and by phone.
+      <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
+        <img
+          src="https://images.unsplash.com/photo-1614508569207-3295ac89d75f?auto=format&fit=crop&w=1920&q=80"
+          alt="Server technology powering secure payment gateway"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/60 to-gray-900/70" />
+        <div className="relative z-10 w-full py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Transaction Gateway Integration
+              </h1>
+              
+              <p className="text-xl text-purple-200 font-semibold mb-4">
+                Secure, Cloud-Based Payment Gateway Powered by NMI
               </p>
-              <p>
-                Process transactions through a virtual terminal, integrate with websites and POS systems, and manage billing from one dashboard.
-              </p>
-            </div>
+              
+              <div className="text-lg text-gray-300 space-y-4 mb-8">
+                <p>
+                  Accept credit cards, debit cards, ACH, and recurring payments online, in-store, and by phone.
+                </p>
+                <p className="text-gray-400">
+                  Process transactions through a virtual terminal, integrate with websites and POS systems, and manage billing from one dashboard.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-get-started-btn">
-                  Get Started
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" data-testid="hero-request-demo-btn">
-                  Request Demo
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact">
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-get-started-btn">
+                    Get Started
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="hero-request-demo-btn">
+                    Request Demo
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

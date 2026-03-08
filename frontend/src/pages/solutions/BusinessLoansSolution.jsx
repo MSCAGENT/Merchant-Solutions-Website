@@ -115,37 +115,45 @@ const BusinessLoansSolution = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Business Loans & Merchant Cash Advances
-            </h1>
-            
-            <p className="text-xl text-purple-600 font-semibold mb-4">
-              Fast Funding for Growing Businesses
-            </p>
-            
-            <div className="text-lg text-gray-700 space-y-4 mb-8">
-              <p>
-                Get the working capital you need to grow your business. Fast approvals, flexible repayment, and funding based on your sales—not just your credit score.
+      <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
+        <img
+          src="https://images.unsplash.com/photo-1681505526188-b05e68c77582?auto=format&fit=crop&w=1920&q=80"
+          alt="Business professionals shaking hands on funding deal"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/60 to-gray-900/70" />
+        <div className="relative z-10 w-full py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Business Loans & Merchant Cash Advances
+              </h1>
+              
+              <p className="text-xl text-purple-200 font-semibold mb-4">
+                Fast Funding for Growing Businesses
               </p>
-              <p>
-                From $5,000 to $500,000 with funds available in as little as 24 hours.
-              </p>
-            </div>
+              
+              <div className="text-lg text-gray-300 space-y-4 mb-8">
+                <p>
+                  Get the working capital you need to grow your business. Fast approvals, flexible repayment, and funding based on your sales—not just your credit score.
+                </p>
+                <p className="text-gray-400">
+                  From $5,000 to $500,000 with funds available in as little as 24 hours.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-apply-btn">
-                  Apply Now
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6" data-testid="hero-learn-more-btn">
-                  Check Your Options
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact">
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="hero-apply-btn">
+                    Apply Now
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="hero-learn-more-btn">
+                    Check Your Options
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
