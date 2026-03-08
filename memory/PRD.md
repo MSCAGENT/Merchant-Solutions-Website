@@ -26,16 +26,20 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Documents: /resources/documents (login-protected)
 
 ## Completed (2026-03-09)
-- **Clover POS Page SEO Optimization** (`/clover-pos-system`):
-  - Added react-helmet-async with SEO meta title, description, keywords, and canonical URL
-  - Added FAQ JSON-LD structured data (FAQPage schema) with all 6 FAQ questions
+- **Clover POS Page SEO + Restoration**:
+  - Restored original product cards with pricing popup modals (Dual Pricing vs Flat Rate with Apply Now)
+  - Restored promotional offers section (Compact, Flex, Mini with $0 placement)
+  - Restored Clover Station Systems section (Solo $1,999, Duo $2,199, Kiosk $4,595)
+  - Restored $0 Upfront Clover Program accordion
+  - Restored Clover Program FAQ (7 questions)
+  - Restored Lead Connector form modal
+  - Fixed clear background images with mixBlendMode: 'multiply' on all product photos
+  - Added react-helmet-async with SEO meta title, description, keywords, canonical URL
+  - Added FAQ JSON-LD structured data (FAQPage schema) with 6 SEO FAQ questions
   - Added new route `/clover-pos-system` in App.js (backward compatible with `/pos/clover`)
-  - Updated internal links section per spec: POS Systems Overview, Payment Terminals, Restaurant POS, Retail POS, Self Ordering Kiosk
-  - Updated trust line from "Internal Support" to "Ongoing Support"
-  - Updated site-level defaults: meta description and title in `index.html`
-  - Installed `react-helmet-async` and wrapped app with `HelmetProvider` in `index.js`
-  - All 22 tests passed (100% frontend success rate)
-- **Page Content (already built previously)**: All 11 sections present — Hero, What is Clover POS, Benefits (5 cards), Hardware Options (6 devices), Device Comparison Table, Industry Solutions (4 blocks), Why Merchant Solutions (5 bullets), Installation (4 steps), Pricing (3 components), FAQ (6 items with expand/collapse), Final CTA
+  - Updated internal links: POS Systems Overview, Payment Terminals, Restaurant POS, Retail POS, Self Ordering Kiosk
+  - Updated site-level defaults in index.html (title + meta description)
+  - Installed react-helmet-async, wrapped app with HelmetProvider in index.js
 
 ## Completed (2026-03-08)
 - **Stripe-Style Mega Menu Navigation** (complete rewrite):
