@@ -74,6 +74,7 @@ import VirtualTerminal from "./pages/pos/VirtualTerminal";
 import PaymentLinks from "./pages/pos/PaymentLinks";
 import UnionPOS from "./pages/pos/UnionPOS";
 import PricingOverview from "./pages/PricingOverview";
+import PaymentProcessingPricing from "./pages/pricing/PaymentProcessingPricing";
 import POSSubscription from "./pages/POSSubscription";
 import FreePOS from "./pages/FreePOS";
 import WhiteLabelPartner from "./pages/WhiteLabelPartner";
@@ -151,6 +152,7 @@ function App() {
           <Route path="/pos/clover-kiosk" element={<CloverKiosk />} />
           <Route path="/clover-kiosk" element={<CloverKiosk />} />
           <Route path="/pos/qr-ordering" element={<QRCodeOrdering />} />
+          <Route path="/qr-code-mobile-ordering" element={<QRCodeOrdering />} />
           <Route path="/pos/virtual-terminal" element={<VirtualTerminal />} />
           <Route path="/pos/payment-links" element={<PaymentLinks />} />
           <Route path="/pos/union" element={<UnionPOS />} />
@@ -167,6 +169,7 @@ function App() {
           <Route path="/gateway/virtual-terminal" element={<Gateway />} />
           
           {/* Pricing Routes */}
+          <Route path="/payment-processing-pricing" element={<PaymentProcessingPricing />} />
           <Route path="/pricing" element={<PricingOverview />} />
           <Route path="/pricing/pos-subscription" element={<POSSubscription />} />
           <Route path="/pricing/free-pos" element={<FreePOS />} />
