@@ -55,6 +55,26 @@ import ProfessionalServices from "./pages/ProfessionalServices";
 import DualPricing from "./pages/solutions/DualPricing";
 import GasStationProcessing from "./pages/industries/GasStationProcessing";
 
+// New placeholder pages
+import MerchantRewards from "./pages/solutions/MerchantRewards";
+import LinesOfCredit from "./pages/solutions/LinesOfCredit";
+import ACHProcessing from "./pages/solutions/ACHProcessing";
+import ATMDeployer from "./pages/solutions/ATMDeployer";
+import POSOverview from "./pages/pos/POSOverview";
+import SmartTerminals from "./pages/pos/SmartTerminals";
+import PaymentTerminalsOverview from "./pages/pos/PaymentTerminalsOverview";
+import PAXTerminals from "./pages/pos/PAXTerminals";
+import CloverKiosk from "./pages/pos/CloverKiosk";
+import QRCodeOrdering from "./pages/pos/QRCodeOrdering";
+import VirtualTerminal from "./pages/pos/VirtualTerminal";
+import PaymentLinks from "./pages/pos/PaymentLinks";
+import PricingOverview from "./pages/PricingOverview";
+import POSSubscription from "./pages/POSSubscription";
+import FreePOS from "./pages/FreePOS";
+import WhiteLabelPartner from "./pages/WhiteLabelPartner";
+import Support from "./pages/Support";
+import ServiceAreas from "./pages/ServiceAreas";
+
 function App() {
   return (
     <div className="App">
@@ -75,6 +95,10 @@ function App() {
           <Route path="/solutions/payroll-services" element={<PayrollServicesSolution />} />
           <Route path="/solutions/it-services" element={<ITServices />} />
           <Route path="/solutions/tranzaction-gateway" element={<MSCTranzActionGateway />} />
+          <Route path="/solutions/merchant-rewards" element={<MerchantRewards />} />
+          <Route path="/solutions/lines-of-credit" element={<LinesOfCredit />} />
+          <Route path="/solutions/ach-processing" element={<ACHProcessing />} />
+          <Route path="/solutions/atm-deployer" element={<ATMDeployer />} />
           <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
           
           {/* Industry Routes */}
@@ -103,13 +127,19 @@ function App() {
           <Route path="/industries/gas-station" element={<GasStationProcessing />} />
           
           {/* POS & Hardware Routes */}
+          <Route path="/pos/overview" element={<POSOverview />} />
           <Route path="/pos/clover" element={<CloverPOS />} />
           <Route path="/pos/square" element={<SquarePOS />} />
           <Route path="/pos/ingenico-terminals" element={<IngenicoTerminals />} />
-          <Route path="/pos/pax-terminals" element={<POSHardware />} />
+          <Route path="/pos/pax-terminals" element={<PAXTerminals />} />
           <Route path="/pos/dejavoo-terminals" element={<DejavooTerminals />} />
           <Route path="/pos/exatouch" element={<Exatouch />} />
-          <Route path="/pos/ingenico-terminals" element={<POSHardware />} />
+          <Route path="/pos/smart-terminals" element={<SmartTerminals />} />
+          <Route path="/pos/payment-terminals-overview" element={<PaymentTerminalsOverview />} />
+          <Route path="/pos/clover-kiosk" element={<CloverKiosk />} />
+          <Route path="/pos/qr-ordering" element={<QRCodeOrdering />} />
+          <Route path="/pos/virtual-terminal" element={<VirtualTerminal />} />
+          <Route path="/pos/payment-links" element={<PaymentLinks />} />
           <Route path="/best-self-ordering-kiosk-for-restaurants" element={<SelfOrderingKiosk />} />
           <Route path="/pos/self-ordering-kiosk" element={<SelfOrderingKiosk />} />
           <Route path="/retail-software/daysmart-salon" element={<DaySmartSalon />} />
@@ -121,10 +151,17 @@ function App() {
           <Route path="/gateway/payments-gateway" element={<MSCGateway />} />
           <Route path="/gateway/virtual-terminal" element={<Gateway />} />
           
+          {/* Pricing Routes */}
+          <Route path="/pricing" element={<PricingOverview />} />
+          <Route path="/pricing/pos-subscription" element={<POSSubscription />} />
+          <Route path="/pricing/free-pos" element={<FreePOS />} />
+          <Route path="/resources/pricing" element={<Pricing />} />
+          
           {/* Partner Routes */}
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/partnerships/careers" element={<Careers />} />
           <Route path="/partnerships/isv" element={<ISVPartnerships />} />
+          <Route path="/partnerships/white-label" element={<WhiteLabelPartner />} />
           <Route path="/partners/agents" element={<Partnerships />} />
           
           {/* Resources Routes */}
@@ -136,7 +173,6 @@ function App() {
           <Route path="/resources/pos-systems" element={<Resources />} />
           <Route path="/resources/high-risk-merchants" element={<Resources />} />
           <Route path="/resources/industry-guides" element={<Resources />} />
-          <Route path="/resources/pricing" element={<Pricing />} />
           
           {/* Company Routes */}
           <Route path="/company/about" element={<About />} />
@@ -144,13 +180,15 @@ function App() {
           <Route path="/company/why-us" element={<About />} />
           <Route path="/company/security-compliance" element={<Security />} />
           <Route path="/company/contact" element={<Contact />} />
+          <Route path="/company/support" element={<Support />} />
+          <Route path="/company/service-areas" element={<ServiceAreas />} />
           
           {/* Login Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/agent-login" element={<Login />} />
           <Route path="/developer-login" element={<Login />} />
           
-          {/* Legal Pages (placeholder routes) */}
+          {/* Legal Pages */}
           <Route path="/privacy-policy" element={<About />} />
           <Route path="/terms-of-service" element={<About />} />
           <Route path="/security" element={<Security />} />
