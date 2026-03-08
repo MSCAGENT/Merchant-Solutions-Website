@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
-  CheckCircle, ChevronDown, DollarSign, BarChart3,
+  CheckCircle, ChevronDown, ChevronLeft, ChevronRight, DollarSign, BarChart3,
   Shield, TrendingUp, Building2, Users, CreditCard,
   ArrowRight, Zap, Globe, Briefcase, Server,
   Award, Lock, FileText, Layers, Target,
-  UserCheck, Handshake, Network
+  UserCheck
 } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent } from '../../components/ui/card';
@@ -28,8 +28,23 @@ const FAQItem = ({ question, answer }) => {
   );
 };
 
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+
 export default function WhiteLabelMerchantServices() {
   const [showFormModal, setShowFormModal] = useState(false);
+  const [blogs, setBlogs] = useState([]);
+  const [blogScroll, setBlogScroll] = useState(0);
+
+  useEffect(() => {
+    fetch(`${API_URL}/api/blog`)
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          setBlogs(data.filter(p => p.published));
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
@@ -48,7 +63,7 @@ export default function WhiteLabelMerchantServices() {
 
   const openCalendly = () => {
     if (window.Calendly) {
-      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/30min?hide_event_type_details=1&primary_color=1400ff' });
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/new-agent-opportunity-one-on-one?primary_color=7b31e5' });
     }
   };
 
@@ -75,7 +90,7 @@ export default function WhiteLabelMerchantServices() {
       </Helmet>
 
       {/* 1. HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-white py-24 md:py-32" data-testid="wl-hero-section">
+      <section className="relative bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-white py-24 md:py-32" data-testid="wl-hero-section">
         <div className="absolute inset-0 opacity-15">
           <img src="https://images.unsplash.com/photo-1758518729263-e26fb50db6bc?w=1600&q=80" alt="white-label-payment-processing" className="w-full h-full object-cover" />
         </div>
@@ -87,7 +102,7 @@ export default function WhiteLabelMerchantServices() {
             Build your own payment processing brand and control the customer relationship while we provide the infrastructure behind the scenes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-lg px-8 py-6 shadow-lg" onClick={() => setShowFormModal(true)} data-testid="hero-apply-btn">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" onClick={() => setShowFormModal(true)} data-testid="hero-apply-btn">
               Apply for Partnership
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6" onClick={openCalendly} data-testid="hero-book-btn">
@@ -95,9 +110,9 @@ export default function WhiteLabelMerchantServices() {
             </Button>
           </div>
           <div className="flex flex-wrap gap-6 text-sm text-gray-400" data-testid="wl-trust-line">
-            <span className="flex items-center gap-1.5"><Server className="h-4 w-4 text-blue-400" /> White Label Payment Infrastructure</span>
-            <span className="flex items-center gap-1.5"><Users className="h-4 w-4 text-blue-400" /> Built for ISO Agents & Agencies</span>
-            <span className="flex items-center gap-1.5"><TrendingUp className="h-4 w-4 text-blue-400" /> Scale Your Own Brand</span>
+            <span className="flex items-center gap-1.5"><Server className="h-4 w-4 text-purple-400" /> White Label Payment Infrastructure</span>
+            <span className="flex items-center gap-1.5"><Users className="h-4 w-4 text-purple-400" /> Built for ISO Agents & Agencies</span>
+            <span className="flex items-center gap-1.5"><TrendingUp className="h-4 w-4 text-purple-400" /> Scale Your Own Brand</span>
           </div>
         </div>
       </section>
@@ -129,8 +144,8 @@ export default function WhiteLabelMerchantServices() {
                   </div>
                 ))}
               </div>
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
-                <p className="text-blue-800 font-medium text-sm">
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-5">
+                <p className="text-purple-800 font-medium text-sm">
                   Merchant Solutions provides the backend infrastructure, underwriting support, and payment rails so you can focus on building your merchant network.
                 </p>
               </div>
@@ -213,10 +228,10 @@ export default function WhiteLabelMerchantServices() {
               { icon: DollarSign, title: 'Lending Brokers' },
               { icon: Shield, title: 'Financial Service Providers' },
             ].map((item, i) => (
-              <Card key={i} className="border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
+              <Card key={i} className="border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="h-6 w-6 text-purple-600" />
                   </div>
                   <p className="text-gray-900 font-semibold text-sm">{item.title}</p>
                 </CardContent>
@@ -239,13 +254,13 @@ export default function WhiteLabelMerchantServices() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Starter */}
-            <Card className="border-2 border-gray-200 hover:border-blue-400 transition-colors shadow-lg">
+            <Card className="border-2 border-gray-200 hover:border-purple-400 transition-colors shadow-lg">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mx-auto mb-4">
-                    <Zap className="h-7 w-7 text-blue-600" />
+                  <div className="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                    <Zap className="h-7 w-7 text-purple-600" />
                   </div>
-                  <p className="text-sm font-bold uppercase tracking-wider text-blue-600 mb-1">Starter Program</p>
+                  <p className="text-sm font-bold uppercase tracking-wider text-purple-600 mb-1">Starter Program</p>
                   <p className="text-gray-600 text-sm">Individual agents and small teams</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 mb-6">
@@ -291,16 +306,16 @@ export default function WhiteLabelMerchantServices() {
             </Card>
 
             {/* Pro */}
-            <Card className="border-2 border-indigo-400 shadow-xl relative">
+            <Card className="border-2 border-purple-400 shadow-xl relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="bg-indigo-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">Most Popular</span>
+                <span className="bg-purple-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">Most Popular</span>
               </div>
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-indigo-100 flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="h-7 w-7 text-indigo-600" />
+                  <div className="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="h-7 w-7 text-purple-600" />
                   </div>
-                  <p className="text-sm font-bold uppercase tracking-wider text-indigo-600 mb-1">Pro Program</p>
+                  <p className="text-sm font-bold uppercase tracking-wider text-purple-600 mb-1">Pro Program</p>
                   <p className="text-gray-600 text-sm">Growing ISO teams and marketing agencies</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 mb-6">
@@ -349,7 +364,7 @@ export default function WhiteLabelMerchantServices() {
             </Card>
 
             {/* Enterprise */}
-            <Card className="border-2 border-gray-200 hover:border-blue-400 transition-colors shadow-lg">
+            <Card className="border-2 border-gray-200 hover:border-purple-400 transition-colors shadow-lg">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <div className="w-14 h-14 rounded-xl bg-amber-100 flex items-center justify-center mx-auto mb-4">
@@ -417,8 +432,8 @@ export default function WhiteLabelMerchantServices() {
               <p className="text-gray-700 mb-6">
                 Many ISO owners eventually scale their portfolio to thousands of merchants generating long-term residual income.
               </p>
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
-                <p className="text-blue-800 font-medium text-sm">
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-5">
+                <p className="text-purple-800 font-medium text-sm">
                   By building your own brand from the beginning, you are building a long-term asset instead of simply working under another company.
                 </p>
               </div>
@@ -431,8 +446,8 @@ export default function WhiteLabelMerchantServices() {
                 { icon: BarChart3, value: 'Scale', label: 'Grow to thousands of merchants' },
               ].map((item, i) => (
                 <div key={i} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-                  <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-3">
-                    <item.icon className="h-5 w-5 text-blue-600" />
+                  <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mb-3">
+                    <item.icon className="h-5 w-5 text-purple-600" />
                   </div>
                   <p className="font-bold text-gray-900 text-sm mb-1">{item.value}</p>
                   <p className="text-xs text-gray-600">{item.label}</p>
@@ -465,8 +480,8 @@ export default function WhiteLabelMerchantServices() {
             ].map((item, i) => (
               <Card key={i} className="border border-gray-200">
                 <CardContent className="p-6 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="h-5 w-5 text-blue-600" />
+                  <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">{item.title}</p>
@@ -486,9 +501,9 @@ export default function WhiteLabelMerchantServices() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200 rounded-2xl p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center">
                     <FileText className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -504,7 +519,7 @@ export default function WhiteLabelMerchantServices() {
                     'Acquiring bank registration',
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 text-gray-700 text-sm">
-                      <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" /> {item}
+                      <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" /> {item}
                     </div>
                   ))}
                 </div>
@@ -529,7 +544,7 @@ export default function WhiteLabelMerchantServices() {
       </section>
 
       {/* 9. STOP BUILDING SOMEONE ELSE'S BRAND */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-white" data-testid="wl-stop-building-section">
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-white" data-testid="wl-stop-building-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6" data-testid="wl-stop-building-h2">
@@ -563,24 +578,99 @@ export default function WhiteLabelMerchantServices() {
       </section>
 
       {/* 11. FINAL CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white" data-testid="wl-final-cta-section">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white" data-testid="wl-final-cta-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4" data-testid="wl-final-cta-h2">
             Start Your Own Merchant Services Brand
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8">
             If you are ready to build your own merchant services company instead of promoting someone else's brand, our white label program can help you launch quickly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-6 shadow-lg" onClick={() => setShowFormModal(true)} data-testid="cta-apply-btn">
+            <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6 shadow-lg" onClick={() => setShowFormModal(true)} data-testid="cta-apply-btn">
               Apply for White Label Partnership
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6" onClick={openCalendly} data-testid="cta-book-btn">
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" onClick={openCalendly} data-testid="cta-book-btn">
               Schedule a Strategy Call
             </Button>
           </div>
         </div>
       </section>
+
+      {/* BLOG SECTION */}
+      {blogs.length > 0 && (
+        <section className="py-20 bg-white" data-testid="wl-blog-section">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between mb-12">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">From Our Blog</h2>
+                <p className="text-lg text-gray-600">Industry insights, guides, and resources</p>
+              </div>
+              <Link to="/resources/blog">
+                <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
+                  View All <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="overflow-hidden">
+                <div
+                  className="flex gap-6 transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${blogScroll * 340}px)` }}
+                >
+                  {blogs.map((post) => (
+                    <Link
+                      key={post.id}
+                      to={`/resources/blog/${post.slug}`}
+                      className="flex-shrink-0 w-[320px] group"
+                      data-testid={`wl-blog-card-${post.slug}`}
+                    >
+                      <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                        {post.featured_image ? (
+                          <div className="h-48 overflow-hidden">
+                            <img src={post.featured_image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                          </div>
+                        ) : (
+                          <div className="h-48 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
+                            <span className="text-white text-4xl font-bold opacity-30">{post.title?.charAt(0)}</span>
+                          </div>
+                        )}
+                        <CardContent className="p-5">
+                          {post.topic && (
+                            <span className="text-xs font-semibold text-purple-600 uppercase tracking-wider">{post.topic}</span>
+                          )}
+                          <h3 className="text-lg font-bold text-gray-900 mt-1 mb-2 line-clamp-2 group-hover:text-purple-600 transition-colors">{post.title}</h3>
+                          <p className="text-sm text-gray-500">{post.content_type || 'Article'}</p>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              {blogs.length > 3 && (
+                <div className="flex justify-center gap-3 mt-8">
+                  <button
+                    onClick={() => setBlogScroll(Math.max(0, blogScroll - 1))}
+                    disabled={blogScroll === 0}
+                    className="w-10 h-10 rounded-full bg-gray-100 hover:bg-purple-100 disabled:opacity-30 flex items-center justify-center transition-colors"
+                    data-testid="wl-blog-carousel-prev"
+                  >
+                    <ChevronLeft className="h-5 w-5 text-gray-700" />
+                  </button>
+                  <button
+                    onClick={() => setBlogScroll(Math.min(blogs.length - 3, blogScroll + 1))}
+                    disabled={blogScroll >= blogs.length - 3}
+                    className="w-10 h-10 rounded-full bg-gray-100 hover:bg-purple-100 disabled:opacity-30 flex items-center justify-center transition-colors"
+                    data-testid="wl-blog-carousel-next"
+                  >
+                    <ChevronRight className="h-5 w-5 text-gray-700" />
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* INTERNAL LINKS */}
       <section className="py-12 bg-gray-50 border-t border-gray-200" data-testid="wl-internal-links">
@@ -594,7 +684,7 @@ export default function WhiteLabelMerchantServices() {
               { label: 'Merchant Lending', path: '/merchant-lending' },
               { label: 'Payment Terminals', path: '/payment-terminals' },
             ].map((link, i) => (
-              <Link key={i} to={link.path} className="text-sm text-blue-600 bg-blue-50 px-4 py-2 rounded-full hover:bg-blue-100 transition-colors">
+              <Link key={i} to={link.path} className="text-sm text-purple-600 bg-purple-50 px-4 py-2 rounded-full hover:bg-purple-100 transition-colors">
                 {link.label}
               </Link>
             ))}

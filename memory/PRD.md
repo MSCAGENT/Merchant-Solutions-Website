@@ -32,6 +32,9 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
   - Full SEO: meta title, description, keywords, canonical URL, FAQ JSON-LD schema
   - Navigation updated: Partnerships > "White Label Merchant Services" (renamed from "White Label Partner Program")
   - Fixed meta description override in index.html (added data-rh attribute for react-helmet-async)
+  - Updated Calendly to agent-specific booking: new-agent-opportunity-one-on-one with purple branding
+  - Color scheme changed from blue/indigo to purple gradient (matching site-wide theme)
+  - Added blog section pulling from /api/blog with carousel and "View All" link
   - All tests passed (22/23, 96% - remaining issue is site-wide meta desc override now fixed)
 
 ## Completed (2026-03-10)
