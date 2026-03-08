@@ -89,7 +89,7 @@ const megaMenus = {
       {
         heading: 'POS Systems',
         items: [
-          { label: 'POS Systems Overview', desc: 'Compare the best POS systems for your business.', path: '/pos/overview' },
+          { label: 'POS Systems Overview', desc: 'Compare the best POS systems for your business.', path: '/pos-systems' },
           { label: 'Clover POS System', desc: 'All-in-one POS for restaurants, retail, and service businesses.', path: '/pos/clover' },
           { label: 'Square POS System', desc: 'Cloud POS and payment processing for growing small businesses.', path: '/pos/square' },
           { label: 'Exatouch POS', desc: 'Retail & C-store POS with barcode scanning, inventory, and reporting.', path: '/pos/exatouch' },

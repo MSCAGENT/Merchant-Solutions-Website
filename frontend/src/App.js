@@ -136,6 +136,7 @@ function App() {
           
           {/* POS & Hardware Routes */}
           <Route path="/pos/overview" element={<POSOverview />} />
+          <Route path="/pos-systems" element={<POSOverview />} />
           <Route path="/pos/clover" element={<CloverPOS />} />
           <Route path="/pos/square" element={<SquarePOS />} />
           <Route path="/pos/ingenico-terminals" element={<IngenicoTerminals />} />
