@@ -182,6 +182,7 @@ const SquarePOS = () => {
       price: '$49',
       period: '/month',
       features: [
+        'Everything in Free +',
         'Advanced inventory',
         'Team management',
         'Customer profiles',
@@ -196,6 +197,7 @@ const SquarePOS = () => {
       price: '$149',
       period: '/month',
       features: [
+        'Everything in Plus +',
         'Custom processing rates',
         'Dedicated support',
         'Multi-location tools',
@@ -791,8 +793,8 @@ const SquarePOS = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {softwarePlans.map((plan, index) => (
-              <Card key={index} className={`border-2 transition-all duration-300 relative ${plan.badge ? 'border-purple-600 shadow-xl scale-[1.02]' : 'hover:border-purple-600 hover:shadow-lg'}`}>
-                <CardContent className="p-8">
+              <Card key={index} className={`border-2 transition-all duration-300 relative flex flex-col ${plan.badge ? 'border-purple-600 shadow-xl scale-[1.02]' : 'hover:border-purple-600 hover:shadow-lg'}`}>
+                <CardContent className="p-8 flex flex-col flex-1">
                   {plan.badge && (
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full">{plan.badge}</span>
                   )}
@@ -803,22 +805,28 @@ const SquarePOS = () => {
                   </div>
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                      <li key={idx} className={`flex items-center gap-2 text-sm ${feature.startsWith('Everything in') ? 'font-semibold text-purple-700' : ''}`}>
+                        {feature.startsWith('Everything in') ? (
+                          <ChevronRight className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                        ) : (
+                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                        )}
+                        <span className={feature.startsWith('Everything in') ? 'text-purple-700' : 'text-gray-700'}>{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="text-sm border-t pt-4 mb-6 space-y-1">
-                    <p className="font-semibold text-gray-900">Processing:</p>
-                    <p className="text-gray-700">Traditional: 2.6% + 10¢ in-person</p>
-                    <p className="text-gray-700">Cash Discount: 0% to merchant / 4% to cardholder</p>
+                  <div className="mt-auto">
+                    <div className="text-sm border-t pt-4 mb-6 space-y-1">
+                      <p className="font-semibold text-gray-900">Processing:</p>
+                      <p className="text-gray-700">Traditional: 2.6% + 10¢ in-person</p>
+                      <p className="text-gray-700">Cash Discount: 0% to merchant / 4% to cardholder</p>
+                    </div>
+                    <a href="https://app.squareup.com/signup/en-us?signup_token=8765F2232B" target="_blank" rel="noopener" className="block">
+                      <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={`plan-create-account-${plan.name.toLowerCase()}`}>
+                        Create an Account
+                      </Button>
+                    </a>
                   </div>
-                  <a href="https://app.squareup.com/signup/en-us?signup_token=8765F2232B" target="_blank" rel="noopener" className="block">
-                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={`plan-create-account-${plan.name.toLowerCase()}`}>
-                      Create an Account
-                    </Button>
-                  </a>
                 </CardContent>
               </Card>
             ))}
