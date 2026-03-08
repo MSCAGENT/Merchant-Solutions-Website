@@ -141,7 +141,7 @@ const megaMenus = {
     items: [
       { label: 'Agent & ISO Program', path: '/partnerships' },
       { label: 'ISV Partnerships', path: '/partnerships/isv' },
-      { label: 'White Label Partner Program', path: '/partnerships/white-label' },
+      { label: 'White Label Merchant Services', path: '/white-label-merchant-services' },
       { label: 'Careers', path: '/partnerships/careers' },
     ],
   },

@@ -80,6 +80,7 @@ import FreePOSProgram from "./pages/pricing/FreePOSProgram";
 import POSSubscription from "./pages/POSSubscription";
 import FreePOS from "./pages/FreePOS";
 import WhiteLabelPartner from "./pages/WhiteLabelPartner";
+import WhiteLabelMerchantServices from "./pages/pricing/WhiteLabelMerchantServices";
 import Support from "./pages/Support";
 import ServiceAreas from "./pages/ServiceAreas";
 
@@ -184,6 +185,7 @@ function App() {
           <Route path="/partnerships/careers" element={<Careers />} />
           <Route path="/partnerships/isv" element={<ISVPartnerships />} />
           <Route path="/partnerships/white-label" element={<WhiteLabelPartner />} />
+          <Route path="/white-label-merchant-services" element={<WhiteLabelMerchantServices />} />
           <Route path="/partners/agents" element={<Partnerships />} />
           
           {/* Resources Routes */}
