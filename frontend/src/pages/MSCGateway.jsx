@@ -1,8 +1,110 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ChevronRight, CreditCard, Code, Globe, Calendar, QrCode, Users, DollarSign, Zap, Shield, TrendingUp } from 'lucide-react';
+import { CheckCircle, ChevronRight, CreditCard, Code, Globe, Calendar, QrCode, Users, DollarSign, Zap, Shield, TrendingUp, Smartphone, FileText, RefreshCw, Monitor, Building2, Stethoscope, UtensilsCrossed, ShoppingBag, Briefcase, Car, Dumbbell, GraduationCap, Home, Scissors, Landmark, Wrench, Truck, Heart } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+
+const industryCarouselData = [
+  { name: 'Restaurants & QSR', icon: UtensilsCrossed, features: ['Payment Links', 'Invoicing', 'Card-Present VTerminal', 'Mobile Processing'] },
+  { name: 'Retail & E-Commerce', icon: ShoppingBag, features: ['Hosted Checkout', 'Recurring Billing', 'Payment Links', 'Gateway API'] },
+  { name: 'Healthcare & Clinics', icon: Stethoscope, features: ['Recurring Billing', 'Invoicing', 'Card-Present VTerminal', 'Payment Links'] },
+  { name: 'Professional Services', icon: Briefcase, features: ['Invoicing', 'Recurring Billing', 'Payment Links', 'Mobile Processing'] },
+  { name: 'SaaS & Software', icon: Monitor, features: ['Gateway API', 'Recurring Billing', 'Hosted Checkout', 'Payment Links'] },
+  { name: 'Home Services', icon: Home, features: ['Mobile Processing', 'Payment Links', 'Invoicing', 'Card-Present VTerminal'] },
+  { name: 'Auto & Repair Shops', icon: Car, features: ['Invoicing', 'Card-Present VTerminal', 'Payment Links', 'Recurring Billing'] },
+  { name: 'Fitness & Gyms', icon: Dumbbell, features: ['Recurring Billing', 'Mobile Processing', 'Payment Links', 'Hosted Checkout'] },
+  { name: 'Education & Tutoring', icon: GraduationCap, features: ['Recurring Billing', 'Invoicing', 'Payment Links', 'Hosted Checkout'] },
+  { name: 'Salons & Spas', icon: Scissors, features: ['Mobile Processing', 'Payment Links', 'Card-Present VTerminal', 'Recurring Billing'] },
+  { name: 'Nonprofits', icon: Heart, features: ['Payment Links', 'Hosted Checkout', 'Recurring Billing', 'Invoicing'] },
+  { name: 'Legal & Accounting', icon: Landmark, features: ['Invoicing', 'Recurring Billing', 'Payment Links', 'Gateway API'] },
+  { name: 'Field Services', icon: Wrench, features: ['Mobile Processing', 'Invoicing', 'Payment Links', 'Card-Present VTerminal'] },
+  { name: 'Delivery & Logistics', icon: Truck, features: ['Mobile Processing', 'Payment Links', 'Hosted Checkout', 'Invoicing'] },
+  { name: 'Memberships & Subscriptions', icon: RefreshCw, features: ['Recurring Billing', 'Hosted Checkout', 'Payment Links', 'Gateway API'] },
+  { name: 'Property Management', icon: Building2, features: ['Recurring Billing', 'Invoicing', 'Payment Links', 'ACH Payments'] },
+];
+
+const featureTagColors = {
+  'Payment Links': 'bg-blue-100 text-blue-700',
+  'Invoicing': 'bg-amber-100 text-amber-700',
+  'Card-Present VTerminal': 'bg-green-100 text-green-700',
+  'Mobile Processing': 'bg-pink-100 text-pink-700',
+  'Hosted Checkout': 'bg-purple-100 text-purple-700',
+  'Recurring Billing': 'bg-teal-100 text-teal-700',
+  'Gateway API': 'bg-indigo-100 text-indigo-700',
+  'ACH Payments': 'bg-orange-100 text-orange-700',
+};
+
+const IndustryCarousel = () => {
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+    let animationId;
+    let scrollPos = 0;
+    const speed = 0.6;
+    const totalWidth = container.scrollWidth / 2;
+
+    const animate = () => {
+      if (!isPaused) {
+        scrollPos += speed;
+        if (scrollPos >= totalWidth) scrollPos = 0;
+        container.scrollLeft = scrollPos;
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+    animationId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationId);
+  }, [isPaused]);
+
+  const doubled = [...industryCarouselData, ...industryCarouselData];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50" data-testid="industry-carousel-section">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-3">
+          Powering Payments Across Every Industry
+        </h2>
+        <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
+          Gateway, payment links, hosted checkout, invoicing, recurring billing, card-present virtual terminals, and mobile processing on iPhone or Android.
+        </p>
+      </div>
+      <div
+        ref={scrollRef}
+        className="flex gap-5 overflow-x-hidden cursor-pointer px-4"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        data-testid="industry-carousel-track"
+      >
+        {doubled.map((industry, idx) => {
+          const Icon = industry.icon;
+          return (
+            <div
+              key={`${industry.name}-${idx}`}
+              className="flex-shrink-0 w-72 bg-white rounded-xl border border-gray-200 shadow-md hover:shadow-xl hover:border-purple-400 transition-all duration-300 p-6"
+              data-testid={`industry-card-${idx}`}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-base leading-tight">{industry.name}</h3>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {industry.features.map((f) => (
+                  <span key={f} className={`text-xs font-medium px-2 py-1 rounded-full ${featureTagColors[f] || 'bg-gray-100 text-gray-600'}`}>
+                    {f}
+                  </span>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
 const MSCGateway = () => {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -115,11 +217,15 @@ const MSCGateway = () => {
                   Contact Sales
                 </Button>
               </a>
-              <a href="https://developers.merchantsolutionscorpdb.com" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
-                  Explore Developer Docs <ChevronRight className="ml-2 h-5 w-5" />
-                </Button>
-              </a>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 text-lg px-8 py-6"
+                onClick={() => document.getElementById('dev-api-section')?.scrollIntoView({ behavior: 'smooth' })}
+                data-testid="hero-explore-dev-docs"
+              >
+                Explore Developer Docs <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </div>
         </div>
@@ -304,6 +410,9 @@ console.log(payment.status); // 'approved'`}</code>
           )}
         </div>
       </section>
+
+      {/* Industry Carousel */}
+      <IndustryCarousel />
 
       {/* Why Choose Our Gateway */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-yellow-50">
