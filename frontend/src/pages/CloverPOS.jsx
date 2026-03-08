@@ -5,12 +5,6 @@ import { CheckCircle, ChevronDown, ChevronRight, CreditCard, Shield, Zap, BarCha
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '../components/ui/accordion';
 
 const FAQItem = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
@@ -140,7 +134,10 @@ const CloverPOS = () => {
       { "@type": "Question", "name": "Is Clover good for restaurants?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Clover is one of the most popular restaurant POS systems available. It includes table management, kitchen display system (KDS) integration, tip management, online ordering, and menu modifier support. The Clover Station Duo with its customer-facing screen is especially popular for full-service restaurants." } },
       { "@type": "Question", "name": "Does Clover accept tap to pay?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every Clover device accepts contactless NFC payments including Apple Pay, Google Pay, Samsung Pay, and contactless credit and debit cards. Tap to pay is supported on the Station, Mini, Flex, Compact, and Go devices." } },
       { "@type": "Question", "name": "Which Clover device is best for small businesses?", "acceptedAnswer": { "@type": "Answer", "text": "The Clover Mini is the most popular choice for small businesses. It offers full POS functionality including a touchscreen, built-in printer, and complete software access in a compact form factor. For mobile businesses, the Clover Go paired with a smartphone is the most affordable starting point." } },
-      { "@type": "Question", "name": "Can Clover track inventory?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Clover includes built-in inventory management across all plans. You can track stock levels, set low-stock alerts, manage product variants (size, color), view inventory reports, and sync inventory across multiple locations. Advanced inventory features are available through Clover's app marketplace." } }
+      { "@type": "Question", "name": "Can Clover track inventory?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Clover includes built-in inventory management across all plans. You can track stock levels, set low-stock alerts, manage product variants (size, color), view inventory reports, and sync inventory across multiple locations. Advanced inventory features are available through Clover's app marketplace." } },
+      { "@type": "Question", "name": "Can I upgrade my old Clover hardware?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If you currently use older Clover equipment, you may qualify for our upgrade program. We can replace legacy models with newer generation devices, transition you into our Dual Pricing program, and evaluate you for the $0-Upfront reimbursement offer." } },
+      { "@type": "Question", "name": "Is there a contract required for the $0-Upfront program?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Free Placement program requires enrollment in our Dual Pricing program, a processing agreement for min 36 months, and meeting minimum volume requirements. If volume targets are not met, subscription terms continue as agreed." } },
+      { "@type": "Question", "name": "What is the return policy?", "acceptedAnswer": { "@type": "Answer", "text": "We offer a 30-day return window. Returns must be requested within 30 days of delivery. A 20% restocking fee applies. An approved RMA (Return Merchandise Authorization) is required and equipment must be in good condition and original box." } }
     ]
   };
 
@@ -600,212 +597,91 @@ const CloverPOS = () => {
             </Card>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-3 mt-10">
-            <AccordionItem value="step-1" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
-                Step 1 — Get Started With $0 Down
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <ul className="list-disc pl-5 space-y-1.5 mb-3">
-                  <li>No upfront hardware cost</li>
-                  <li>Equipment is provided under a monthly subscription</li>
-                  <li>Approval based on creditworthiness</li>
-                  <li>Processing runs on Dual Pricing (4%–5% program)</li>
-                </ul>
-                <p className="font-medium text-gray-800">You can begin accepting payments right away.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="step-2" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
-                Step 2 — Performance Qualification (First 30 Days)
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">During your first 30 processing days, you agree to process at least:</p>
-                <p className="font-bold text-purple-600 text-lg mb-2">$10,000 per month in card volume</p>
-                <p>This determines whether your system becomes free.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="step-3" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
-                Step 3 — If You Reach $10,000+ Per Month
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">When you meet the requirement:</p>
-                <ul className="list-disc pl-5 space-y-1.5">
-                  <li>Your equipment lease is fully reimbursed</li>
-                  <li>You receive a <span className="font-semibold text-green-600">$100 Visa reward card</span></li>
-                  <li>Your Clover system becomes free</li>
-                  <li>No ongoing hardware payments</li>
-                  <li>You only keep paying your software fees</li>
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="step-4" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
-                Step 4 — If You Do Not Reach $10,000
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">If volume stays below $10,000:</p>
-                <ul className="list-disc pl-5 space-y-1.5">
-                  <li>Your monthly equipment subscription continues</li>
-                  <li>The subscription covers full hardware cost</li>
-                  <li>No penalties</li>
-                  <li>No surprises</li>
-                </ul>
-                <p className="mt-2 font-medium text-gray-800">You simply continue on the standard plan.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="subscription" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
-                What the Subscription Covers
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">The monthly subscription includes:</p>
-                <ul className="list-disc pl-5 space-y-1.5">
-                  <li>Clover hardware</li>
-                  <li>System activation</li>
-                  <li>Programming and installation</li>
-                  <li>Ongoing support</li>
-                  <li>Replacement assistance</li>
-                  <li>Account management</li>
-                </ul>
-                <p className="mt-2 text-sm text-gray-500">No separate equipment invoice.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="pricing" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">
-                Pricing Structure
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">This program runs on our Dual Pricing model:</p>
-                <ul className="list-disc pl-5 space-y-1.5">
-                  <li>Customer pays the processing fee</li>
-                  <li>Business keeps full sale amount</li>
-                  <li>No out-of-pocket processing cost</li>
-                  <li>Flat 4% program</li>
-                </ul>
-                <p className="mt-2 text-sm text-gray-500">This allows us to subsidize hardware.</p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-
           <p className="text-gray-600 text-center mt-6">
             Contact us for a custom quote based on your business. <Link to="/contact" className="text-purple-600 font-semibold hover:underline">Get a free pricing consultation</Link>.
           </p>
         </div>
       </section>
 
-      {/* 11. FAQ */}
-      <section className="py-20 bg-white" itemScope itemType="https://schema.org/FAQPage">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Clover POS FAQ</h2>
-          <FAQItem question="What is Clover POS?" answer="Clover POS is a cloud-based point of sale system that combines payment processing, inventory management, employee tracking, and business reporting into a single platform. It runs on Clover's proprietary Android-based hardware devices including Station, Mini, Flex, Compact, and Go." />
-          <FAQItem question="How much does Clover POS cost?" answer="Clover POS costs vary depending on your hardware choice and software plan. Hardware ranges from compact readers to full station systems. Monthly software plans start at $14.95/month. Processing rates are customized based on your business type and volume. Qualified businesses may receive hardware at no upfront cost through Merchant Solutions' placement program." />
-          <FAQItem question="Is Clover good for restaurants?" answer="Yes. Clover is one of the most popular restaurant POS systems available. It includes table management, kitchen display system (KDS) integration, tip management, online ordering, and menu modifier support. The Clover Station Duo with its customer-facing screen is especially popular for full-service restaurants." />
-          <FAQItem question="Does Clover accept tap to pay?" answer="Yes. Every Clover device accepts contactless NFC payments including Apple Pay, Google Pay, Samsung Pay, and contactless credit and debit cards. Tap to pay is supported on the Station, Mini, Flex, Compact, and Go devices." />
-          <FAQItem question="Which Clover device is best for small businesses?" answer="The Clover Mini is the most popular choice for small businesses. It offers full POS functionality including a touchscreen, built-in printer, and complete software access in a compact form factor. For mobile businesses, the Clover Go paired with a smartphone is the most affordable starting point." />
-          <FAQItem question="Can Clover track inventory?" answer="Yes. Clover includes built-in inventory management across all plans. You can track stock levels, set low-stock alerts, manage product variants (size, color), view inventory reports, and sync inventory across multiple locations. Advanced inventory features are available through Clover's app marketplace." />
+      {/* WANT TO GET YOUR CLOVER FREE OF CHARGE? */}
+      <section className="py-20 bg-white" data-testid="free-placement-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                Want to Get Your Clover System<br />
+                <span className="text-purple-600">Free of Charge?</span>
+              </h2>
+              <p className="text-lg text-gray-700 mt-4 mb-2">
+                Through our <strong>Clover Subscription Placement Program</strong>, you may qualify to receive your hardware at no upfront cost.
+              </p>
+              <p className="text-lg text-gray-700 mb-8">Here's how it works:</p>
+
+              <div className="space-y-5">
+                {[
+                  { step: '1', title: 'Create Your Account', desc: 'Contact our team to start your Clover application, then speak to an associate requesting to enter the Subscription Reimbursement Offer and sign the required document.' },
+                  { step: '2', title: 'Choose Your Hardware', desc: 'Select a Clover Flex, Clover Mini, or Clover Station setup based on your business needs.' },
+                  { step: '3', title: 'Meet Volume Requirement', desc: 'Process $10,000 within 30 days for a Clover Flex or Mini. Process $30,000 within 30 days for a Clover Station Solo or Duo.' },
+                  { step: '4', title: 'Get Reimbursed', desc: 'Once volume requirements are met and 30 days of processing history is completed, we reimburse your hardware cost.' },
+                  { step: '5', title: 'Stay on the Subscription Plan', desc: 'Continue processing under the agreed-upon subscription program with Merchant Solutions Corp & Clover.' },
+                ].map((item, i) => (
+                  <div key={i} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                        {item.step}
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                        <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-sm text-gray-500 italic mt-6">
+                This program is designed for active businesses that are confident in their monthly processing volume. Terms, volume thresholds, and reimbursement timelines are disclosed before activation.
+              </p>
+            </div>
+
+            <div className="hidden lg:block sticky top-24">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/9cuaw0s3_as234.jpg"
+                  alt="Customer using Clover POS system for contactless payment"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CLOVER PROGRAM FAQ */}
-      <section className="py-20 bg-gray-50">
+      {/* UNIFIED FAQ */}
+      <section className="py-20 bg-gray-50" itemScope itemType="https://schema.org/FAQPage">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions — Clover Program</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Clover POS — Frequently Asked Questions</h2>
+
+          {/* General Clover FAQ */}
+          <div className="mb-8">
+            <FAQItem question="What is Clover POS?" answer="Clover POS is a cloud-based point of sale system that combines payment processing, inventory management, employee tracking, and business reporting into a single platform. It runs on Clover's proprietary Android-based hardware devices including Station, Mini, Flex, Compact, and Go." />
+            <FAQItem question="How much does Clover POS cost?" answer="Clover POS costs vary depending on your hardware choice and software plan. Hardware ranges from compact readers to full station systems. Monthly software plans start at $14.95/month. Processing rates are customized based on your business type and volume. Qualified businesses may receive hardware at no upfront cost through Merchant Solutions' placement program." />
+            <FAQItem question="Is Clover good for restaurants?" answer="Yes. Clover is one of the most popular restaurant POS systems available. It includes table management, kitchen display system (KDS) integration, tip management, online ordering, and menu modifier support. The Clover Station Duo with its customer-facing screen is especially popular for full-service restaurants." />
+            <FAQItem question="Does Clover accept tap to pay?" answer="Yes. Every Clover device accepts contactless NFC payments including Apple Pay, Google Pay, Samsung Pay, and contactless credit and debit cards. Tap to pay is supported on the Station, Mini, Flex, Compact, and Go devices." />
+            <FAQItem question="Which Clover device is best for small businesses?" answer="The Clover Mini is the most popular choice for small businesses. It offers full POS functionality including a touchscreen, built-in printer, and complete software access in a compact form factor. For mobile businesses, the Clover Go paired with a smartphone is the most affordable starting point." />
+            <FAQItem question="Can Clover track inventory?" answer="Yes. Clover includes built-in inventory management across all plans. You can track stock levels, set low-stock alerts, manage product variants (size, color), view inventory reports, and sync inventory across multiple locations. Advanced inventory features are available through Clover's app marketplace." />
           </div>
-          <Accordion type="single" collapsible className="space-y-3">
-            <AccordionItem value="faq-1" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">Can I upgrade my old Clover hardware?</AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-3">Yes. If you currently use older Clover equipment, you may qualify for our upgrade program.</p>
-                <p className="mb-2">We can:</p>
-                <ul className="list-disc pl-5 space-y-1.5 mb-3">
-                  <li>Replace legacy models with newer generation devices</li>
-                  <li>Transition you into our Dual Pricing program</li>
-                  <li>Evaluate you for the $0-Upfront reimbursement offer</li>
-                </ul>
-                <p className="text-sm text-gray-500">Approval depends on processing volume and account status.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq-2" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">Can I purchase a new Clover if I already own one?</AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-3">Yes, however, we cannot sync with another Clover from a different vendor. We would need to replace the other equipment and provide you with a full upgrade.</p>
-                <p className="mb-2">If you already own a Clover device, you can:</p>
-                <ul className="list-disc pl-5 space-y-1.5 mb-3">
-                  <li>Add additional terminals</li>
-                  <li>Upgrade to a Station Solo or Duo</li>
-                  <li>Apply for the Free Placement program (volume requirements apply)</li>
-                </ul>
-                <p className="text-sm text-gray-500">Each device is evaluated based on monthly processing per terminal.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq-3" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">What if I no longer want to use Clover? What is the return policy?</AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">We offer a 30-day return window.</p>
-                <ul className="list-disc pl-5 space-y-1.5 mb-3">
-                  <li>Returns must be requested within 30 days of delivery</li>
-                  <li>A 20% restocking fee applies</li>
-                  <li>An approved RMA (Return Merchandise Authorization) is required</li>
-                  <li>Equipment must be in good condition and original box</li>
-                </ul>
-                <p className="font-medium text-gray-800">Returns without an RMA will not be accepted.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq-4" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">I am in Puerto Rico or USVI. Can I qualify for your programs?</AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-3">Yes. We support merchants in Puerto Rico and US territories.</p>
-                <p className="mb-2">Eligibility depends on:</p>
-                <ul className="list-disc pl-5 space-y-1.5 mb-3">
-                  <li>Business type</li>
-                  <li>Processing volume</li>
-                  <li>Program approval</li>
-                  <li>Credit score</li>
-                </ul>
-                <p className="text-sm text-gray-500">The same qualification standards apply as in the mainland United States.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq-5" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">Is there a contract required for the $0-Upfront program?</AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">Yes. The Free Placement program requires:</p>
-                <ul className="list-disc pl-5 space-y-1.5 mb-3">
-                  <li>Enrollment in our Dual Pricing program</li>
-                  <li>A processing agreement for min 36 months</li>
-                  <li>Meeting minimum volume requirements</li>
-                </ul>
-                <p className="text-sm text-gray-500">If volume targets are not met, subscription terms continue as agreed. All terms are disclosed before activation.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq-6" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">What happens if I process less than the required monthly volume?</AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">If you do not meet the required monthly volume:</p>
-                <ul className="list-disc pl-5 space-y-1.5 mb-3">
-                  <li>Your equipment subscription continues</li>
-                  <li>Reimbursement does not apply</li>
-                  <li>Standard program pricing remains in effect</li>
-                </ul>
-                <p className="mb-1">There are no hidden penalties.</p>
-                <p className="text-sm text-gray-500">You simply remain on the active subscription plan.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq-7" className="bg-white rounded-lg border px-6">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-purple-600">How is my monthly processing volume calculated?</AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                <p className="mb-2">Monthly processing volume is based on:</p>
-                <ul className="list-disc pl-5 space-y-1.5 mb-3">
-                  <li>Total approved card transactions — Visa, Mastercard, Discover, Amex, and Pin Debit</li>
-                  <li>Processor-generated reporting / Merchant Statement</li>
-                  <li>A standard 30-day cycle</li>
-                </ul>
-                <p className="text-sm text-gray-500">Volume is measured per terminal when multiple devices are installed.</p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+
+          {/* Program FAQ */}
+          <div>
+            <FAQItem question="Can I upgrade my old Clover hardware?" answer="Yes. If you currently use older Clover equipment, you may qualify for our upgrade program. We can replace legacy models with newer generation devices, transition you into our Dual Pricing program, and evaluate you for the $0-Upfront reimbursement offer. Approval depends on processing volume and account status." />
+            <FAQItem question="Can I purchase a new Clover if I already own one?" answer="Yes, however, we cannot sync with another Clover from a different vendor. We would need to replace the other equipment and provide you with a full upgrade. You can add additional terminals, upgrade to a Station Solo or Duo, or apply for the Free Placement program (volume requirements apply). Each device is evaluated based on monthly processing per terminal." />
+            <FAQItem question="What if I no longer want to use Clover? What is the return policy?" answer="We offer a 30-day return window. Returns must be requested within 30 days of delivery. A 20% restocking fee applies. An approved RMA (Return Merchandise Authorization) is required and equipment must be in good condition and original box. Returns without an RMA will not be accepted." />
+            <FAQItem question="I am in Puerto Rico or USVI. Can I qualify for your programs?" answer="Yes. We support merchants in Puerto Rico and US territories. Eligibility depends on business type, processing volume, program approval, and credit score. The same qualification standards apply as in the mainland United States." />
+            <FAQItem question="Is there a contract required for the $0-Upfront program?" answer="Yes. The Free Placement program requires enrollment in our Dual Pricing program, a processing agreement for min 36 months, and meeting minimum volume requirements. If volume targets are not met, subscription terms continue as agreed. All terms are disclosed before activation." />
+            <FAQItem question="What happens if I process less than the required monthly volume?" answer="If you do not meet the required monthly volume, your equipment subscription continues, reimbursement does not apply, and standard program pricing remains in effect. There are no hidden penalties. You simply remain on the active subscription plan." />
+            <FAQItem question="How is my monthly processing volume calculated?" answer="Monthly processing volume is based on total approved card transactions (Visa, Mastercard, Discover, Amex, and Pin Debit), processor-generated reporting / Merchant Statement, and a standard 30-day cycle. Volume is measured per terminal when multiple devices are installed." />
+          </div>
 
           <div className="mt-12 pt-10 border-t border-gray-200 text-center">
             <p className="text-xl font-semibold text-gray-900 mb-4">Do you still have more questions?</p>
