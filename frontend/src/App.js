@@ -75,6 +75,7 @@ import PaymentLinks from "./pages/pos/PaymentLinks";
 import UnionPOS from "./pages/pos/UnionPOS";
 import PricingOverview from "./pages/PricingOverview";
 import PaymentProcessingPricing from "./pages/pricing/PaymentProcessingPricing";
+import SubscriptionPaymentProcessing from "./pages/pricing/SubscriptionPaymentProcessing";
 import POSSubscription from "./pages/POSSubscription";
 import FreePOS from "./pages/FreePOS";
 import WhiteLabelPartner from "./pages/WhiteLabelPartner";
@@ -170,6 +171,7 @@ function App() {
           
           {/* Pricing Routes */}
           <Route path="/payment-processing-pricing" element={<PaymentProcessingPricing />} />
+          <Route path="/subscription-payment-processing" element={<SubscriptionPaymentProcessing />} />
           <Route path="/pricing" element={<PricingOverview />} />
           <Route path="/pricing/pos-subscription" element={<POSSubscription />} />
           <Route path="/pricing/free-pos" element={<FreePOS />} />
