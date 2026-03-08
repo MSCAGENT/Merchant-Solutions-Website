@@ -371,8 +371,8 @@ const CloverPOS = () => {
       {/* 5. CLOVER HARDWARE OPTIONS — Promotional Offers & Pricing */}
       <section className="py-20 bg-gray-50" id="pricing-cards">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-4">Clover POS Hardware Options</h2>
-          <p className="text-lg text-gray-600 text-center mb-12">Get a Free Placement with $0 out of pocket.</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-4">Free Placement Equipment — Qualify and Pay $0</h2>
+          <p className="text-lg text-gray-600 text-center mb-12">These three devices are available at no upfront cost for qualified businesses through our Subscription Placement Program.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Clover Compact */}
@@ -387,7 +387,7 @@ const CloverPOS = () => {
                   <p className="text-sm text-gray-500">or Subscribe and get it <span className="font-bold text-green-600 text-lg">Free</span></p>
                   <p className="text-xs text-gray-400">36-month agreement required</p>
                 </div>
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={openCalendly}>
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={() => document.getElementById('free-placement').scrollIntoView({ behavior: 'smooth' })}>
                   Get Started
                 </Button>
               </CardContent>
@@ -406,7 +406,7 @@ const CloverPOS = () => {
                   <p className="text-sm text-gray-500">or Subscribe and get it <span className="font-bold text-green-600 text-lg">Free</span></p>
                   <p className="text-xs text-gray-400">36-month agreement required</p>
                 </div>
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={openCalendly}>
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={() => document.getElementById('free-placement').scrollIntoView({ behavior: 'smooth' })}>
                   Get Started
                 </Button>
               </CardContent>
@@ -424,7 +424,7 @@ const CloverPOS = () => {
                   <p className="text-sm text-gray-500">or Subscribe and get it <span className="font-bold text-green-600 text-lg">Free</span></p>
                   <p className="text-xs text-gray-400">36-month agreement required</p>
                 </div>
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={openCalendly}>
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={() => document.getElementById('free-placement').scrollIntoView({ behavior: 'smooth' })}>
                   Get Started
                 </Button>
               </CardContent>
@@ -730,7 +730,7 @@ const CloverPOS = () => {
       </section>
 
       {/* WANT TO GET YOUR CLOVER FREE OF CHARGE? */}
-      <section className="py-20 bg-white" data-testid="free-placement-section">
+      <section className="py-20 bg-white" data-testid="free-placement-section" id="free-placement">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -745,7 +745,7 @@ const CloverPOS = () => {
 
               <div className="space-y-5">
                 {[
-                  { step: '1', title: 'Create Your Account', desc: 'Contact our team to start your Clover application, then speak to an associate requesting to enter the Subscription Reimbursement Offer and sign the required document.' },
+                  { step: '1', title: 'Create Your Account', desc: <><button onClick={() => setShowFormModal(true)} className="text-purple-600 font-semibold hover:underline cursor-pointer">Contact our team</button> to start your Clover application, then speak to an associate requesting to enter the Subscription Reimbursement Offer and sign the required document.</> },
                   { step: '2', title: 'Choose Your Hardware', desc: 'Select a Clover Flex, Clover Mini, or Clover Station setup based on your business needs.' },
                   { step: '3', title: 'Meet Volume Requirement', desc: 'Process $10,000 within 30 days for a Clover Flex or Mini. Process $30,000 within 30 days for a Clover Station Solo or Duo.' },
                   { step: '4', title: 'Get Reimbursed', desc: 'Once volume requirements are met and 30 days of processing history is completed, we reimburse your hardware cost.' },
