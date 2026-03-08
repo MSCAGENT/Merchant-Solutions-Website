@@ -26,6 +26,13 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Documents: /resources/documents (login-protected)
 
 ## Completed (2026-03-10)
+- **Subscription Payment Processing Page** (`/subscription-payment-processing`):
+  - 11-section enterprise page for high-volume merchants ($10M+ annually, multi-location)
+  - Pricing tiers: $499 (1-10 locations), $299 (11-30), $99 (30+) with BEST VALUE badge
+  - POS subscription programs (Starter/Standard/Premium), long-term term options (24-60 months)
+  - Full SEO: meta tags, FAQ JSON-LD schema (5 questions), canonical URL
+  - Navigation updated: Pricing > "Subscription Payment Processing" links here
+  - All tests passed (19/19, 100% frontend)
 - **Payment Processing Pricing Page** (`/payment-processing-pricing`):
   - 13-section SEO page explaining interchange plus, flat rate, and dual pricing models
   - Full SEO: meta title, description, keywords, canonical URL, FAQ JSON-LD schema (5 questions)
