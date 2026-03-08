@@ -138,8 +138,8 @@ const POSOverview = () => {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1602665742701-389671bc40c0?auto=format&fit=crop&w=800&q=80"
-                alt="Modern POS system on a restaurant counter"
+                src="https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/a2chl5d2_5a68b1ee309330000198381e_revel.jpg"
+                alt="POS system tablet on a countertop stand displaying a restaurant ordering interface"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -392,11 +392,11 @@ const POSOverview = () => {
                 Learn about our tech services <ChevronRight className="h-4 w-4" />
               </Link>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl">
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-white">
               <img
-                src="https://images.unsplash.com/photo-1740150884358-5a254d7ae5de?auto=format&fit=crop&w=800&q=80"
-                alt="POS system being set up at a business"
-                className="w-full h-full object-cover"
+                src="https://static.prod-images.emergentagent.com/jobs/98ba5cc9-5a8c-49ab-a17a-dde6797f516c/images/8cdfee7af5810270bfbd348274dd04d5698ce45f970caae703a5b496323fe25a.png"
+                alt="Sunmi hospitality POS system base package with touchscreen, cash drawer, receipt printer, and payment terminal"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
