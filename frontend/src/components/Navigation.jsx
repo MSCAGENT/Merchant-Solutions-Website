@@ -133,7 +133,7 @@ const megaMenus = {
       { label: 'Interchange Plus Pricing', path: '/payment-processing-pricing', hash: '#interchange-plus' },
       { label: 'Dual Pricing Program', path: '/dual-pricing-cash-discount-payment-processing' },
       { label: 'Subscription Payment Processing', path: '/subscription-payment-processing' },
-      { label: 'Free POS Program', path: '/pricing/free-pos' },
+      { label: 'Free POS Program', path: '/free-pos-system' },
     ],
   },
   Partnerships: {
