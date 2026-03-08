@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ChevronDown, ChevronRight, CreditCard, Shield, Zap, BarChart3, Package, Users, Heart, UtensilsCrossed, ShoppingBag, Scissors, Briefcase, Settings, GraduationCap, Smartphone, MapPin, Headphones } from 'lucide-react';
+import { CheckCircle, ChevronDown, ChevronRight, CreditCard, Shield, Zap, BarChart3, Package, Users, Heart, UtensilsCrossed, ShoppingBag, Scissors, Briefcase, Settings, GraduationCap, Smartphone, MapPin, Headphones, LayoutGrid } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
@@ -220,13 +220,14 @@ const CloverPOS = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Benefits of Clover POS</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Zap, title: 'Fast Checkout', desc: 'Process transactions in seconds with tap-to-pay, chip, swipe, and mobile wallet acceptance on every Clover device.' },
               { icon: Package, title: 'Inventory Management', desc: 'Track stock automatically, set low-stock alerts, and manage product variants across all sales channels.' },
               { icon: Users, title: 'Employee Tracking', desc: 'Manage shifts, track hours, set permissions, and monitor employee sales performance from one dashboard.' },
               { icon: BarChart3, title: 'Sales Reporting', desc: 'Access real-time sales data, daily reports, top-selling items, and trends from your Clover dashboard or phone.' },
               { icon: Heart, title: 'Customer Loyalty', desc: 'Build repeat business with built-in loyalty programs, points tracking, digital receipts, and customer profiles.' },
+              { icon: LayoutGrid, title: 'App Marketplace', desc: 'Extend your Clover with hundreds of third-party apps for accounting, marketing, online ordering, scheduling, and more from the Clover App Market.' },
             ].map((b, i) => (
               <Card key={i} className="border hover:border-purple-300 hover:shadow-lg transition-all">
                 <CardContent className="p-6 text-center">
@@ -242,8 +243,133 @@ const CloverPOS = () => {
         </div>
       </section>
 
-      {/* 4. CLOVER HARDWARE OPTIONS — Promotional Offers */}
+      {/* 4. CLOVER DEVICE SHOWCASE — Alternating Layout */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-4">Explore the Clover Device Lineup</h2>
+          <p className="text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto">From full countertop stations to portable handheld terminals, find the Clover device that fits your business.</p>
+
+          <div className="space-y-20">
+            {/* Station Solo — Copy > Picture */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="showcase-station-solo">
+              <div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Clover Station Solo</h3>
+                <p className="text-lg text-gray-700 mb-4">
+                  The Clover Station Solo is a full countertop POS system built for restaurants and retail stores that need a large touchscreen, high-speed printer, and cash drawer in one setup. With a 14-inch HD display, it gives your staff room to manage orders, check inventory, and process payments without switching screens.
+                </p>
+                <p className="text-gray-600 mb-6">
+                  Ideal for full-service restaurants, busy retail counters, and any business that processes high volumes of transactions daily.
+                </p>
+                <a href="#pricing-cards">
+                  <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6" data-testid="learn-more-station-solo">
+                    Learn More About Clover Station Solo <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
+              <div className="flex justify-center">
+                <div className="bg-gray-50 rounded-2xl p-8 w-full max-w-md">
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/ip9swahq_clover_station_solo.png" alt="clover-station-solo-pos-system" className="w-full object-contain" style={{ mixBlendMode: 'multiply' }} />
+                </div>
+              </div>
+            </div>
+
+            {/* Station Duo — Picture > Copy */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="showcase-station-duo">
+              <div className="flex justify-center order-2 lg:order-1">
+                <div className="bg-gray-50 rounded-2xl p-8 w-full max-w-md">
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/0hmeybl3_clover%20station%20duo.png" alt="clover-station-duo-pos-system" className="w-full object-contain" style={{ mixBlendMode: 'multiply' }} />
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Clover Station Duo</h3>
+                <p className="text-lg text-gray-700 mb-4">
+                  The Clover Station Duo adds a customer-facing 8-inch screen to the full Station setup. Customers can view their order, add a tip, sign, and select their receipt preference — all without involving your staff. This speeds up checkout and improves accuracy.
+                </p>
+                <p className="text-gray-600 mb-6">
+                  Perfect for restaurants with tipping workflows, retail stores that want customer-facing displays, and any business looking to streamline the checkout experience.
+                </p>
+                <a href="#pricing-cards">
+                  <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6" data-testid="learn-more-station-duo">
+                    Learn More About Clover Station Duo <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
+            </div>
+
+            {/* Mini — Copy > Picture */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="showcase-mini">
+              <div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Clover Mini</h3>
+                <p className="text-lg text-gray-700 mb-4">
+                  The Clover Mini packs full POS functionality into a compact 8-inch touchscreen device with a built-in printer. It accepts all payment types — swipe, chip, tap, and mobile wallets — while taking up minimal counter space.
+                </p>
+                <p className="text-gray-600 mb-6">
+                  Best for small businesses, quick-service restaurants, coffee shops, and any countertop where space is limited but full POS features are still needed.
+                </p>
+                <a href="#pricing-cards">
+                  <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6" data-testid="learn-more-mini">
+                    Learn More About Clover Mini <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
+              <div className="flex justify-center">
+                <div className="bg-gray-50 rounded-2xl p-8 w-full max-w-md">
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/ns43y2j9_clover%203rd%20gen.jfif" alt="clover-mini-pos-terminal" className="w-full object-contain" style={{ mixBlendMode: 'multiply' }} />
+                </div>
+              </div>
+            </div>
+
+            {/* Flex — Picture > Copy */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="showcase-flex">
+              <div className="flex justify-center order-2 lg:order-1">
+                <div className="bg-gray-50 rounded-2xl p-8 w-full max-w-md">
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/hm5yf2w0_Clover-FlexLRG.jpg" alt="clover-flex-handheld-pos" className="w-full object-contain" style={{ mixBlendMode: 'multiply' }} />
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Clover Flex</h3>
+                <p className="text-lg text-gray-700 mb-4">
+                  The Clover Flex is a handheld POS device with a 6-inch touchscreen, built-in receipt printer, barcode scanner, and camera. It accepts every payment method and runs the full Clover software — all in a device you can carry to the table, the curb, or the field.
+                </p>
+                <p className="text-gray-600 mb-6">
+                  Ideal for tableside ordering in restaurants, line-busting at retail, food trucks, delivery services, and any business that needs to take payments on the move.
+                </p>
+                <a href="#pricing-cards">
+                  <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6" data-testid="learn-more-flex">
+                    Learn More About Clover Flex <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
+            </div>
+
+            {/* Compact — Copy > Picture */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid="showcase-compact">
+              <div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Clover Compact</h3>
+                <p className="text-lg text-gray-700 mb-4">
+                  The Clover Compact is a sleek, payment-focused countertop terminal with a 4-inch touchscreen and built-in receipt printer. It handles chip, swipe, tap, and mobile wallet payments with fast processing and a small footprint.
+                </p>
+                <p className="text-gray-600 mb-6">
+                  Great for businesses that primarily need a payment terminal — such as service counters, kiosks, and smaller storefronts that don't require a full POS dashboard at the register.
+                </p>
+                <a href="#pricing-cards">
+                  <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6" data-testid="learn-more-compact">
+                    Learn More About Clover Compact <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
+              <div className="flex justify-center">
+                <div className="bg-gray-50 rounded-2xl p-8 w-full max-w-md">
+                  <img src="https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/xv187z8q_Clover%20Stand%20Alone%20%281%29.png" alt="clover-compact-pos-terminal" className="w-full object-contain" style={{ mixBlendMode: 'multiply' }} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CLOVER HARDWARE OPTIONS — Promotional Offers & Pricing */}
+      <section className="py-20 bg-gray-50" id="pricing-cards">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-4">Clover POS Hardware Options</h2>
           <p className="text-lg text-gray-600 text-center mb-12">Get a Free Placement with $0 out of pocket.</p>
