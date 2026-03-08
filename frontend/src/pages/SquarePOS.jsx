@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import { 
   CheckCircle, 
   CreditCard, 
@@ -19,7 +20,6 @@ import {
   Scissors,
   Store,
   MapPin,
-  Truck,
   Headphones,
   ClipboardCheck,
   Wrench,
@@ -638,9 +638,69 @@ const SquarePOS = () => {
               }
             `}</style>
           </div>
+
+          {/* Device Showcase — Alternating Layout */}
+          <div className="space-y-20 mb-20">
+            {[
+              {
+                name: 'Square Handheld',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/37ym419s_PD07019_USEN_Image-v2-mar-2025.webp',
+                alt: 'square-handheld-mobile-pos',
+                desc: 'The Square Handheld is a compact mobile POS with a built-in touchscreen and card reader. Accept tap, chip, and swipe payments anywhere on the floor, at the curb, or on the go — no phone or tablet required.',
+                bestFor: 'Ideal for tableside ordering in restaurants, line-busting at retail, food trucks, and mobile vendors who need a complete POS in their hand.'
+              },
+              {
+                name: 'Square Terminal',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/ec90y43v_PD07056_-_USEN_terminal.png',
+                alt: 'square-terminal-all-in-one-pos',
+                desc: 'The Square Terminal is a portable all-in-one device with a touchscreen, integrated card reader, and built-in receipt printer. Process payments, send invoices, and manage your business without needing any additional hardware.',
+                bestFor: 'Perfect for small retail shops, salons, delivery services, and service providers who want a standalone payment device.'
+              },
+              {
+                name: 'Square Register',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/mwus5xr7_Square_Register__2nd_generation__undocked.png',
+                alt: 'square-register-dual-screen-pos',
+                desc: 'The Square Register is a powerful dual-screen POS system with a large merchant display and a customer-facing screen for seamless checkout. It processes every payment type and runs the full Square software suite.',
+                bestFor: 'Built for full-service retail stores, busy restaurants, and multi-location brands that need a complete countertop POS solution.'
+              },
+              {
+                name: 'Square Stand',
+                img: 'https://customer-assets.emergentagent.com/job_6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/artifacts/t7to78ee_PD07012_Square_Stand_Fallback-edited.webp',
+                alt: 'square-stand-ipad-pos',
+                desc: 'The Square Stand transforms your iPad into a complete countertop POS terminal with an integrated contactless and chip card reader. Sleek, compact, and ready for high-volume checkout.',
+                bestFor: 'Great for retail counters, cafes, quick-service restaurants, and any business that wants a clean, modern checkout experience.'
+              },
+              {
+                name: 'Square Kiosk',
+                img: 'https://static.prod-images.emergentagent.com/jobs/6e98ffa5-31c4-476f-bd08-8daa7de6f4fd/images/f5d7e7cd15bed63198c1bbe32f64ea04743b448ac4dd5e1d3ff7b3404fe3aa55.png',
+                alt: 'square-kiosk-self-ordering',
+                desc: 'The Square Kiosk is a self-service ordering station with a large vertical touchscreen. Customers browse the menu, customize their order, and pay independently — reducing wait times and freeing up your staff.',
+                bestFor: 'Ideal for QSR restaurants, food courts, high-traffic venues, and any business looking to offer self-service ordering.'
+              }
+            ].map((device, i) => {
+              const isReversed = i % 2 !== 0;
+              return (
+                <div key={i} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-testid={`showcase-${device.name.toLowerCase().replace(/\s/g, '-')}`}>
+                  <div className={isReversed ? 'order-2 lg:order-2' : ''}>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{device.name}</h3>
+                    <p className="text-lg text-gray-700 mb-4">{device.desc}</p>
+                    <p className="text-gray-600 mb-6">{device.bestFor}</p>
+                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6" onClick={() => document.getElementById('square-product-cards').scrollIntoView({ behavior: 'smooth' })} data-testid={`learn-more-${device.name.toLowerCase().replace(/\s/g, '-')}`}>
+                      Learn More About {device.name} <ChevronRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  </div>
+                  <div className={`flex justify-center ${isReversed ? 'order-1 lg:order-1' : ''}`}>
+                    <div className="bg-white rounded-2xl p-8 w-full max-w-md border border-gray-100 shadow-sm">
+                      <img src={device.img} alt={device.alt} className="w-full object-contain" style={{ mixBlendMode: 'multiply' }} />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
           
           {/* Product Cards Grid - 2 rows of 4 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-testid="hardware-product-grid">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="square-product-cards" data-testid="hardware-product-grid">
             {[
               {
                 name: 'Square Handheld',
@@ -749,9 +809,16 @@ const SquarePOS = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="text-sm text-gray-500 border-t pt-4">
-                    <strong>Processing:</strong> {plan.processing}
+                  <div className="text-sm border-t pt-4 mb-6 space-y-1">
+                    <p className="font-semibold text-gray-900">Processing:</p>
+                    <p className="text-gray-700">Traditional: 2.6% + 10¢ in-person</p>
+                    <p className="text-gray-700">Cash Discount: 0% to merchant / 4% to cardholder</p>
                   </div>
+                  <a href="https://app.squareup.com/signup/en-us?signup_token=8765F2232B" target="_blank" rel="noopener" className="block">
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={`plan-create-account-${plan.name.toLowerCase()}`}>
+                      Create an Account
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -909,10 +976,54 @@ const SquarePOS = () => {
                 You are not left to figure it out alone.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 flex items-center justify-center min-h-[360px]" data-testid="nationwide-image">
-              <div className="text-center">
-                <Truck className="h-20 w-20 mx-auto mb-4 text-purple-300" />
-                <p className="text-gray-400 text-sm">Nationwide Coverage</p>
+            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-50 to-blue-50 border border-purple-200/50 min-h-[420px]" data-testid="nationwide-map">
+              <div className="absolute top-3 left-4 z-10">
+                <span className="text-xs font-bold uppercase tracking-wider text-purple-600 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">Coverage Area</span>
+              </div>
+              <ComposableMap
+                projection="geoAlbersUsa"
+                projectionConfig={{ scale: 1000 }}
+                style={{ width: '100%', height: '100%' }}
+              >
+                <defs>
+                  <linearGradient id="purpleGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#9333ea" />
+                    <stop offset="100%" stopColor="#3b82f6" />
+                  </linearGradient>
+                </defs>
+                <Geographies geography="https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json">
+                  {({ geographies }) =>
+                    geographies.map((geo) => (
+                      <Geography
+                        key={geo.rpiKey || geo.properties.name}
+                        geography={geo}
+                        fill="url(#purpleGrad)"
+                        stroke="#ffffff"
+                        strokeWidth={0.75}
+                        style={{
+                          default: { outline: 'none' },
+                          hover: { fill: '#7c3aed', outline: 'none', cursor: 'pointer' },
+                          pressed: { outline: 'none' }
+                        }}
+                      />
+                    ))
+                  }
+                </Geographies>
+              </ComposableMap>
+              {/* Canada label */}
+              <div className="absolute top-10 left-1/2 -translate-x-1/2 text-center">
+                <span className="text-sm font-bold text-purple-700 bg-white/70 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-sm">+ Canada Coverage</span>
+              </div>
+              {/* PR & USVI labels */}
+              <div className="absolute bottom-6 right-6 flex flex-col gap-2 items-end">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600"></div>
+                  <span className="text-xs font-bold text-purple-700 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">Puerto Rico</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600"></div>
+                  <span className="text-xs font-bold text-purple-700 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">US Virgin Islands</span>
+                </div>
               </div>
             </div>
           </div>
