@@ -139,6 +139,7 @@ function App() {
           <Route path="/pos/overview" element={<POSOverview />} />
           <Route path="/pos-systems" element={<POSOverview />} />
           <Route path="/pos/clover" element={<CloverPOS />} />
+          <Route path="/clover-pos-system" element={<CloverPOS />} />
           <Route path="/pos/square" element={<SquarePOS />} />
           <Route path="/pos/ingenico-terminals" element={<IngenicoTerminals />} />
           <Route path="/pos/pax-terminals" element={<PAXTerminals />} />
