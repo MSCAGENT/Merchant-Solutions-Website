@@ -220,8 +220,8 @@ const GiftCardsSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center bg-black" data-testid="how-it-works-image-block">
-              <img src="https://customer-assets.emergentagent.com/job_ac3711b8-9a11-453d-a74b-57edf2c8d851/artifacts/yltoeviu_giftcards2010PNG.png" alt="Custom branded gift cards for businesses" className="w-full h-full object-contain" />
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center bg-white shadow-lg" data-testid="how-it-works-image-block">
+              <img src="https://static.prod-images.emergentagent.com/jobs/98ba5cc9-5a8c-49ab-a17a-dde6797f516c/images/ffc18d381ebd4491aee1b0c342c3d3e678bbcf432a03555fc1427dbcd1a95ff9.png" alt="Custom branded gift cards for businesses" className="w-full h-full object-contain p-6" />
             </div>
           </div>
         </div>

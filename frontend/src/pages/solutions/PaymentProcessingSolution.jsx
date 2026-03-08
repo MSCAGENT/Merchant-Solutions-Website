@@ -40,7 +40,11 @@ const integrationLogos = [
   { name: 'Rectangle Health', src: 'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/q0gyba60_rectangle%20health.png' },
   { name: 'Clover', src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/fga5kaim_Clover%20logo.jpg' },
   { name: 'Square', src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/6q1f7o7j_Square_Logo_Landscape.png' },
-  { name: 'iTabPOS', src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/saip30kz_itabPOS_logo.png' }
+  { name: 'iTabPOS', src: 'https://customer-assets.emergentagent.com/job_c7719ac2-f74d-4b83-96c8-30fb9bb9e1a2/artifacts/saip30kz_itabPOS_logo.png' },
+  { name: 'ADP', src: 'https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/z771qhtb_adp%20logo.png' },
+  { name: 'Epicor', src: 'https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/9xa748jo_EPICOR.png' },
+  { name: 'IRIS CRM', src: 'https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/5ue1gddq_IRIS-CRM-blue-horizontal-1.png' },
+  { name: 'Oracle', src: 'https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/rqvugn66_MERCHAORACLE%20RED.png' }
 ];
 
 const IntegrationLogoSlideshow = () => {
@@ -67,7 +71,7 @@ const IntegrationLogoSlideshow = () => {
         {visibleLogos.map((logo, index) => (
           <div 
             key={`${activeIndex}-${index}`} 
-            className="flex items-center justify-center p-4 bg-gray-50 rounded-xl"
+            className="flex items-center justify-center p-4 bg-white rounded-xl"
             style={{ animation: 'fadeIn 0.5s ease-in-out' }}
           >
             <img 
@@ -648,11 +652,11 @@ const PaymentProcessingSolution = () => {
                 Schedule a Consultation
               </Button>
             </Link>
-            <Link to="/contact">
+            <a href="https://www.signuplink.ai/register/merchant-solutions-corp" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg px-8 py-6" data-testid="cta-apply-btn">
                 Apply Now
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

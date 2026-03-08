@@ -25,6 +25,16 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Blog: /resources/blog (public), /resources/blog/admin (admin)
 - Documents: /resources/documents (login-protected)
 
+## Completed (2026-03-08)
+- MSC Gateway: "Explore Developer Docs" hero button now scrolls to #dev-api-section instead of external link
+- MSC Gateway: Added auto-scrolling industry carousel (16 industries) below "Ideal for Your Industry"
+- Payment Processing: Added 4 new integration logos (ADP, Epicor, IRIS CRM, Oracle) with clear backgrounds
+- Payment Processing: "Apply Now" CTA now links to https://www.signuplink.ai/register/merchant-solutions-corp
+- Crypto Processing: Added AI-generated images for Merchant Benefits and Integration Options sections
+- Crypto Processing: Added scrolling coin logo carousel (16 cryptocurrencies) above CTA section
+- Loyalty & Rewards: Refocused POS integration to Clover, Square, and iTab only; removed Toast, Lightspeed, Shopify
+- Gift Cards: Replaced black-background gift card image with clean white-background AI-generated version
+
 ## Completed (2026-03-03)
 - P0: Added video background to Dual Pricing hero section
 - Deleted Self Ordering Kiosk page and cleaned up routes/navigation

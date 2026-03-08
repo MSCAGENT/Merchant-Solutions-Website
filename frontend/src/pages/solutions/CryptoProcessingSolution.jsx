@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -20,6 +20,80 @@ import {
 } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent } from '../../components/ui/card';
+
+const cryptoLogos = [
+  { name: 'Bitcoin', symbol: 'BTC', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/btc.png' },
+  { name: 'Ethereum', symbol: 'ETH', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/eth.png' },
+  { name: 'USD Coin', symbol: 'USDC', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/usdc.png' },
+  { name: 'Tether', symbol: 'USDT', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/usdt.png' },
+  { name: 'Litecoin', symbol: 'LTC', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/ltc.png' },
+  { name: 'Bitcoin Cash', symbol: 'BCH', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/bch.png' },
+  { name: 'Ripple', symbol: 'XRP', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/xrp.png' },
+  { name: 'Cardano', symbol: 'ADA', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/ada.png' },
+  { name: 'Solana', symbol: 'SOL', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/sol.png' },
+  { name: 'Polygon', symbol: 'MATIC', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/matic.png' },
+  { name: 'Dogecoin', symbol: 'DOGE', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/doge.png' },
+  { name: 'Polkadot', symbol: 'DOT', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/dot.png' },
+  { name: 'Chainlink', symbol: 'LINK', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/link.png' },
+  { name: 'Stellar', symbol: 'XLM', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/xlm.png' },
+  { name: 'Avalanche', symbol: 'AVAX', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/avax.png' },
+  { name: 'Dai', symbol: 'DAI', svg: 'https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a63530be6e374711a8554f31b17e4cb92c25fa5/128/color/dai.png' },
+];
+
+const CryptoLogoCarousel = () => {
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+    let animationId;
+    let scrollPos = 0;
+    const speed = 0.5;
+    const totalWidth = container.scrollWidth / 2;
+
+    const animate = () => {
+      if (!isPaused) {
+        scrollPos += speed;
+        if (scrollPos >= totalWidth) scrollPos = 0;
+        container.scrollLeft = scrollPos;
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+    animationId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationId);
+  }, [isPaused]);
+
+  const doubled = [...cryptoLogos, ...cryptoLogos];
+
+  return (
+    <section className="py-16 bg-gray-900" data-testid="crypto-logo-carousel">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <h2 className="text-2xl font-bold text-center text-white mb-2">Digital Currencies We Support</h2>
+        <p className="text-gray-400 text-center">Accept all major cryptocurrencies and stablecoins</p>
+      </div>
+      <div
+        ref={scrollRef}
+        className="flex gap-6 overflow-x-hidden cursor-pointer px-4"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        {doubled.map((coin, idx) => (
+          <div
+            key={`${coin.symbol}-${idx}`}
+            className="flex-shrink-0 flex flex-col items-center gap-2 w-24"
+          >
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <img src={coin.svg} alt={coin.name} className="w-10 h-10 object-contain" />
+            </div>
+            <span className="text-white text-xs font-semibold">{coin.symbol}</span>
+            <span className="text-gray-500 text-[10px]">{coin.name}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 const CryptoProcessingSolution = () => {
   const keyBenefits = [
@@ -197,11 +271,8 @@ const CryptoProcessingSolution = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="merchant-benefits-image">
-              <div className="text-center text-gray-400">
-                <ArrowRightLeft className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Crypto to USD Conversion Image</p>
-              </div>
+            <div className="bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-4 aspect-[4/3] flex items-center justify-center" data-testid="merchant-benefits-image">
+              <img src="https://static.prod-images.emergentagent.com/jobs/98ba5cc9-5a8c-49ab-a17a-dde6797f516c/images/1e67c07027169a0dc1e575fce391dd5d146b8724283718a9d52c47f571ce1f58.png" alt="Cryptocurrency to USD conversion for merchants" className="w-full h-full object-contain rounded-xl" />
             </div>
           </div>
         </div>
@@ -237,11 +308,8 @@ const CryptoProcessingSolution = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="integration-image">
-              <div className="text-center text-gray-400">
-                <Globe className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">Integration Options Image</p>
-              </div>
+            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-4 aspect-[4/3] flex items-center justify-center" data-testid="integration-image">
+              <img src="https://static.prod-images.emergentagent.com/jobs/98ba5cc9-5a8c-49ab-a17a-dde6797f516c/images/f3066b6e51ad7909276e7db38e7bc07c4ac02b8b02d977d52482c0c05ea6a1f2.png" alt="Crypto payment integration across POS, ecommerce and mobile" className="w-full h-full object-contain rounded-xl" />
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
@@ -291,6 +359,9 @@ const CryptoProcessingSolution = () => {
           </div>
         </div>
       </section>
+
+      {/* Crypto Logo Carousel */}
+      <CryptoLogoCarousel />
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">

@@ -48,12 +48,9 @@ const LoyaltyRewardsSolution = () => {
   ];
 
   const posIntegration = [
-    'Clover POS',
-    'Square POS',
-    'Toast POS',
-    'Lightspeed',
-    'Shopify POS',
-    'Custom integrations'
+    { name: 'Clover POS', desc: 'Built-in loyalty programs with points tracking, customer profiles, and automatic rewards at checkout.' },
+    { name: 'Square POS', desc: 'Integrated rewards program with digital punch cards, customer directory, and visit tracking.' },
+    { name: 'iTab POS', desc: 'Native loyalty program built directly into the iTab platform with custom rewards, points tracking, and customer engagement tools.' }
   ];
 
   const analytics = [
@@ -195,33 +192,30 @@ const LoyaltyRewardsSolution = () => {
       {/* POS Integration */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-yellow-50 rounded-2xl p-8 aspect-[4/3] flex items-center justify-center" data-testid="pos-integration-image">
-              <div className="text-center text-gray-400">
-                <CreditCard className="h-24 w-24 mx-auto mb-4 text-purple-300" />
-                <p className="text-sm">POS Integration Image</p>
+          <div className="text-center mb-12">
+            <div className="flex items-center gap-3 justify-center mb-4">
+              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                <CreditCard className="h-6 w-6 text-purple-600" />
               </div>
+              <h2 className="text-3xl font-bold text-gray-900">POS-Integrated Loyalty Programs</h2>
             </div>
-            <div className="order-1 lg:order-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                  <CreditCard className="h-6 w-6 text-purple-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900">POS Integration</h2>
-              </div>
-              <p className="text-xl text-purple-600 font-medium mb-4">Works with Your Existing System</p>
-              <p className="text-lg text-gray-600 mb-6">
-                Our loyalty programs integrate seamlessly with leading POS systems. Points are tracked automatically at checkout.
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                {posIntegration.map((pos, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                    <span className="text-gray-700">{pos}</span>
+            <p className="text-xl text-purple-600 font-medium mb-2">Works with Your Existing System</p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our loyalty programs run natively through your POS system. Points are tracked automatically at checkout with no extra hardware or third-party apps required.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {posIntegration.map((pos, index) => (
+              <Card key={index} className="border-2 hover:border-purple-600 transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl flex items-center justify-center mb-5">
+                    <CreditCard className="h-7 w-7 text-purple-600" />
                   </div>
-                ))}
-              </div>
-            </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{pos.name}</h3>
+                  <p className="text-gray-600">{pos.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
