@@ -149,6 +149,7 @@ function App() {
           <Route path="/pos/payment-terminals-overview" element={<PaymentTerminalsOverview />} />
           <Route path="/payment-terminals" element={<PaymentTerminalsOverview />} />
           <Route path="/pos/clover-kiosk" element={<CloverKiosk />} />
+          <Route path="/clover-kiosk" element={<CloverKiosk />} />
           <Route path="/pos/qr-ordering" element={<QRCodeOrdering />} />
           <Route path="/pos/virtual-terminal" element={<VirtualTerminal />} />
           <Route path="/pos/payment-links" element={<PaymentLinks />} />
