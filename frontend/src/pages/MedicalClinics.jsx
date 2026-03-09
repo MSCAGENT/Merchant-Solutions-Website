@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -72,20 +73,6 @@ const MedicalClinics = () => {
     'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/8hutwwfs_Medical.mp4',
     'https://customer-assets.emergentagent.com/job_4154a9b1-b888-447f-bffc-8ab7e2fc6cdc/artifacts/4c9275jq_Medical2.mp4'
   ];
-
-  useEffect(() => {
-    document.title = 'Medical Payment Processing & EMR Integration | Merchant Services for Clinics';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Secure medical payment processing integrated with leading EMR systems. Merchant services for medical offices and urgent care clinics nationwide.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     const refs = [video1Ref, video2Ref];
@@ -201,6 +188,12 @@ const MedicalClinics = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Medical Payment Processing & EMR Integration | Merchant Services for Clinics</title>
+        <meta name="description" content="Secure medical payment processing integrated with leading EMR systems including athenahealth, eClinicalWorks, and NextGen. Merchant services, patient payment plans, and compliance solutions for medical offices and urgent care clinics nationwide." />
+        <meta name="keywords" content="medical payment processing, medical EMR integration, medical clinic merchant services, medical credit card processing, patient payment plans, HIPAA compliant payments, medical billing solutions, urgent care payment processing, medical office POS" />
+        <link rel="canonical" href="/medical-payment-processing-emr-integration" />
+      </Helmet>
       {/* Hero Section - Dual Video */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
         {heroVideos.map((src, i) => (

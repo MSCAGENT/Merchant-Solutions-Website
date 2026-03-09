@@ -26,6 +26,18 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Documents: /resources/documents (login-protected)
 
 ## Completed (2026-03-11)
+- **SEO Batch 1 — 9 Pages Optimized with react-helmet-async**:
+  - Home (`/`): meta title, description, keywords, canonical
+  - Contact (`/contact`): meta title, description, keywords, canonical
+  - About (`/company/about`): meta title, description, keywords, canonical
+  - Restaurants (`/restaurant-payment-processing-services`): + FAQ JSON-LD schema (6 questions)
+  - Retail Solutions (`/retail-payment-solutions`): + FAQ JSON-LD schema (5 questions)
+  - Salon & Spa (`/salon-spa-payment-processing`): + FAQ JSON-LD schema (8 questions)
+  - Healthcare (`/industries/healthcare`): + FAQ JSON-LD schema (7 questions)
+  - Medical Clinics (`/medical-payment-processing-emr-integration`): meta title, description, keywords, canonical
+  - Dental Practices (`/dental-payment-processing-emr-integration`): + FAQ JSON-LD schema (7 questions)
+  - Removed default meta description from index.html to prevent duplicate tags
+  - Replaced old document.title/DOM-based meta manipulation on 5 pages with Helmet
 - **White Label Merchant Services Page** (`/white-label-merchant-services`):
   - 12-section page: Hero, What is White Label, Why Build Your Own Brand, Ideal Partners (7 types), Program Options (Starter/Pro/Enterprise comparison), Build Merchant Portfolio, Infrastructure (6 items), Card Brand Registration, Stop Building Someone Else's Brand, FAQ (5 questions), Final CTA, Internal Links
   - Pricing tiers: Starter ($499-$999/mo), Pro ($5,999+$7,500 upfront + $999/mo), Enterprise ($25,000 upfront, 100% revenue ownership)
@@ -106,11 +118,12 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Hero section videos may be broken on some pages (user will address later with custom forms)
 
 ## Upcoming Tasks
+- P1: SEO Batch 2 — Solutions pages (Payment Processing, Dual Pricing, Gateway, Crypto, Gift Cards, etc.)
+- P1: SEO Batch 3 — POS/Hardware pages + remaining industries
 - P1: Create "How to Get a Free POS System for Your Business" page (feeds traffic to Free POS Program)
 - P1: Embed Payment Link after "Continue Activation" button in PayAnywhere flow
 - P2: Fix broken hero section videos on multiple pages (recurring)
 - P2: DocuSign integration for document portal
-- P2: SEO meta tags for other key pages (extend react-helmet-async pattern from Clover)
 - P2: Full backend content migration (hardcoded to DB)
 
 ## Backlog
