@@ -517,15 +517,11 @@ export default function WhiteLabelMerchantServices() {
           </p>
 
           {/* Partner Logos */}
-          <div className="mt-14 flex items-center justify-center gap-16 flex-wrap" data-testid="wl-logo-carousel">
-            {[
-              { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/6xp1ix02_Pament%20technology.PNG', alt: 'Payment Technology' },
-              { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/5bt95zy7_6.jpg', alt: 'Enova Gateway Payments' },
-              { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/576uv1kj_High-Resulation-2.png', alt: 'PaymentLynk' },
-              { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/ehgdejwz_Lrg.png', alt: 'Ideal Payments' },
-            ].map((logo, i) => (
-              <img key={i} src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain" style={{ filter: 'grayscale(100%) brightness(0.3)' }} />
-            ))}
+          <div className="mt-14 flex items-center justify-center gap-20 flex-wrap" data-testid="wl-logo-carousel">
+            <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/6xp1ix02_Pament%20technology.PNG" alt="Payment Technology" className="h-24 w-auto object-contain" style={{ filter: 'grayscale(100%)' }} />
+            <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/5bt95zy7_6.jpg" alt="Enova Gateway Payments" className="h-24 w-auto object-contain" style={{ filter: 'grayscale(100%)' }} />
+            <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/576uv1kj_High-Resulation-2.png" alt="PaymentLynk" className="h-24 w-auto object-contain" style={{ filter: 'grayscale(100%) invert(1) brightness(0.4)' }} />
+            <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/ehgdejwz_Lrg.png" alt="Ideal Payments" className="h-24 w-auto object-contain" style={{ filter: 'grayscale(100%) invert(1) brightness(0.4)' }} />
           </div>
         </div>
       </section>
