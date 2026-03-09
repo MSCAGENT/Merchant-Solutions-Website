@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle, Shield, AlertTriangle, ChevronRight, ArrowRight,
@@ -239,14 +240,6 @@ const DualPricing = () => {
   const [showLeadModal, setShowLeadModal] = useState(false);
 
   useEffect(() => {
-    document.title = 'Dual Pricing & Cash Discount Payment Processing | Compliant Zero Fee Program';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Compliant dual pricing and cash discount payment processing for restaurants, retail, healthcare, gas stations & e-commerce. Reduce 3-4% in fees with zero-fee processing.';
-    if (metaDesc) metaDesc.setAttribute('content', content);
-    else { const m = document.createElement('meta'); m.name = 'description'; m.content = content; document.head.appendChild(m); }
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
-    canonical.href = 'https://www.merchantsolutionscorp.com/dual-pricing-cash-discount-payment-processing';
     if (!document.querySelector('link[href*="calendly.com"]')) {
       const link = document.createElement('link'); link.href = 'https://assets.calendly.com/assets/external/widget.css'; link.rel = 'stylesheet'; document.head.appendChild(link);
     }
@@ -290,8 +283,25 @@ const DualPricing = () => {
     { q: 'Will customers be upset about dual pricing?', a: 'When implemented correctly with clear signage and proper disclosure, customer adoption is smooth. Studies show 15-25% of customers willingly switch to cash or ACH. The key is transparency, professional signage, and trained staff.' }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Dual Pricing & Cash Discount Payment Processing | Compliant Zero Fee Program</title>
+        <meta name="description" content="Compliant dual pricing and cash discount payment processing for restaurants, retail, healthcare, gas stations & e-commerce. Reduce 3-4% in fees with zero-fee processing." />
+        <meta name="keywords" content="dual pricing payment processing, cash discount program, zero fee processing, compliant dual pricing, restaurant dual pricing, retail cash discount, surcharge alternative, payment processing savings" />
+        <link rel="canonical" href="/dual-pricing-cash-discount-payment-processing" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero */}
       <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">

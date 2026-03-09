@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -39,20 +40,6 @@ import {
 const SpecialtyMerchant = () => {
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
-
-  useEffect(() => {
-    document.title = 'B2B Specialty Merchant Payment Solutions | Virtual Terminal, Invoicing & Crypto Payments';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'We provide customized B2B payment solutions tailored to the needs of specialty merchants. Virtual terminals, invoicing, recurring billing, API integrations, and crypto payment processing.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!showDemoModal) return;
@@ -154,6 +141,12 @@ const SpecialtyMerchant = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>B2B Specialty Merchant Payment Solutions | Virtual Terminal, Invoicing & Crypto Payments</title>
+        <meta name="description" content="Customized B2B payment solutions for specialty merchants. Virtual terminals, invoicing, recurring billing, API integrations, and crypto payment processing for wholesale, manufacturing, and service providers." />
+        <meta name="keywords" content="B2B payment solutions, specialty merchant services, virtual terminal, B2B invoicing, recurring billing, crypto payment processing, wholesale payment processing, B2B credit card processing" />
+        <link rel="canonical" href="/specialty-merchant-payment-solutions" />
+      </Helmet>
       {/* Hero */}
       <section className="relative w-full bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-24 lg:py-32 overflow-hidden" data-testid="specialty-hero">
         <div className="absolute inset-0 opacity-10">

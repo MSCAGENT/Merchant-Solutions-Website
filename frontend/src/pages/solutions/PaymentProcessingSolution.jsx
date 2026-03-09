@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -187,6 +188,12 @@ const PaymentProcessingSolution = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Payment Processing Solutions | Credit Card, Debit & ACH | Merchant Solutions Corp</title>
+        <meta name="description" content="Full-service payment processing for businesses of all sizes. Accept credit cards, debit cards, ACH, and contactless payments with next-day funding, transparent pricing, and 24/7 support." />
+        <meta name="keywords" content="payment processing, credit card processing, debit card processing, ACH payments, merchant services, contactless payments, next day funding, payment processing solutions, business payment solutions" />
+        <link rel="canonical" href="/solutions/payment-processing" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
         <img

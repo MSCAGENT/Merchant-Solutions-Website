@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronRight, CreditCard, Code, Globe, Calendar, QrCode, Users, DollarSign, Zap, Shield, TrendingUp, Smartphone, FileText, RefreshCw, Monitor, Building2, Stethoscope, UtensilsCrossed, ShoppingBag, Briefcase, Car, Dumbbell, GraduationCap, Home, Scissors, Landmark, Wrench, Truck, Heart } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -198,6 +199,12 @@ const MSCGateway = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>MSC Payments Gateway | All-in-One Payment Processing Platform</title>
+        <meta name="description" content="MSC Payments Gateway provides an all-in-one payment processing platform. Accept payments online, in-store, and on mobile with integrated invoicing, recurring billing, and multi-industry support." />
+        <meta name="keywords" content="MSC payments gateway, payment processing platform, all-in-one payment gateway, merchant payment gateway, online payments, mobile payments, invoice payments, multi-industry payment processing" />
+        <link rel="canonical" href="/gateway/payments-gateway" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

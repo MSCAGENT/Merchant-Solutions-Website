@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -99,6 +100,12 @@ const PayrollServicesSolution = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Payroll Services for Small Business | Payroll Processing & Tax Filing</title>
+        <meta name="description" content="Full-service payroll processing for small businesses. Automated payroll, tax filing, direct deposit, employee self-service, and HR tools integrated with your business operations." />
+        <meta name="keywords" content="payroll services, small business payroll, payroll processing, payroll tax filing, direct deposit, employee payroll, automated payroll, HR payroll solutions" />
+        <link rel="canonical" href="/solutions/payroll-services" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
         <img

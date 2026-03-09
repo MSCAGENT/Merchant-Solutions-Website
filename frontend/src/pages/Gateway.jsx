@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Code, Shield, Zap } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -8,6 +9,12 @@ import { mockData } from '../mock';
 const Gateway = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Payment Gateway Solutions | Online & In-Store Payment Processing</title>
+        <meta name="description" content="Secure payment gateway solutions for online and in-store businesses. API integration, hosted payment pages, virtual terminals, and recurring billing with PCI DSS compliance." />
+        <meta name="keywords" content="payment gateway, online payment processing, payment API, virtual terminal, hosted payment page, payment gateway integration, secure payments, PCI compliant gateway" />
+        <link rel="canonical" href="/gateway/payments-gateway" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

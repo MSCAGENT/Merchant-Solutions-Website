@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -52,20 +53,6 @@ const HighRiskMerchant = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [heroImages.length]);
-
-  useEffect(() => {
-    document.title = 'High Risk Merchant Services | Online Gambling, Peptides, Prop Firms & CBD Processing';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'High risk merchant services for online gambling, peptides, prop trading firms, CBD, and kratom businesses. Secure payment processing with chargeback protection and multi-currency support.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!showCalendlyModal) return;
@@ -254,8 +241,25 @@ const HighRiskMerchant = () => {
     'Telemedicine merchant account'
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>High Risk Merchant Services | Online Gambling, Peptides, Prop Firms & CBD Processing</title>
+        <meta name="description" content="High risk merchant services for online gambling, peptides, prop trading firms, CBD, and kratom businesses. Secure payment processing with chargeback protection and multi-currency support." />
+        <meta name="keywords" content="high risk merchant services, high risk payment processing, online gambling merchant account, CBD payment processing, peptides merchant account, prop firm payments, kratom payment processing, chargeback protection, high risk credit card processing" />
+        <link rel="canonical" href="/high-risk-merchant-services" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-gray-900">
         {heroImages.map((src, i) => (

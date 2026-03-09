@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -33,20 +34,6 @@ import {
 const ITServices = () => {
   const [showContactModal, setShowContactModal] = useState(false);
   const [showCalendlyModal, setShowCalendlyModal] = useState(false);
-
-  useEffect(() => {
-    document.title = 'POS Installation Services Florida | On-Site Tech & Payment Device Setup Nationwide';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Professional POS installation services in Florida and all 50 states. On-site survey, infrastructure mapping, Clover, Square, and iTabPOS setup, training, and support for restaurants, retail, and healthcare.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!showCalendlyModal) return;
@@ -134,8 +121,25 @@ const ITServices = () => {
     'POS technician on-site service'
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>POS Installation Services Florida | On-Site Tech & Payment Device Setup Nationwide</title>
+        <meta name="description" content="Professional POS installation services in Florida and all 50 states. On-site survey, infrastructure mapping, Clover, Square, and iTabPOS setup, training, and support for restaurants, retail, and healthcare." />
+        <meta name="keywords" content="POS installation services, POS setup Florida, on-site POS installation, Clover installation, Square POS setup, restaurant POS installation, retail POS installation, payment device setup, POS technician" />
+        <link rel="canonical" href="/solutions/it-services" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-gray-900">
         <img

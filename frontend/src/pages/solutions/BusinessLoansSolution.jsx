@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -114,6 +115,12 @@ const BusinessLoansSolution = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Business Loans & Merchant Cash Advance | Small Business Funding Solutions</title>
+        <meta name="description" content="Business loans and merchant cash advances for small businesses. Fast funding, flexible terms, and working capital solutions through Merchant Solutions Corp and Lendio partnership." />
+        <meta name="keywords" content="business loans, merchant cash advance, small business loans, business funding, working capital, SBA loans, business line of credit, merchant lending, fast business funding" />
+        <link rel="canonical" href="/solutions/business-loans" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
         <img

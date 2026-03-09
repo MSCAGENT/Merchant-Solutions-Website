@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -152,6 +153,12 @@ const CryptoProcessingSolution = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Cryptocurrency Payment Processing | Accept Bitcoin, Ethereum & Stablecoins</title>
+        <meta name="description" content="Accept cryptocurrency payments for your business. Bitcoin, Ethereum, USDC, and stablecoin processing with instant conversion to USD. Secure blockchain payment solutions for merchants." />
+        <meta name="keywords" content="cryptocurrency payment processing, accept Bitcoin payments, Ethereum merchant services, stablecoin processing, crypto payment gateway, blockchain payments, USDC payments, crypto merchant account" />
+        <link rel="canonical" href="/solutions/crypto-processing" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
         <img

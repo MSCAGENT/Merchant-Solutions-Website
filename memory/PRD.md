@@ -26,6 +26,24 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Documents: /resources/documents (login-protected)
 
 ## Completed (2026-03-11)
+- **SEO Batch 2 — 14 Solution/Gateway Pages Optimized with react-helmet-async**:
+  - PaymentProcessingSolution (`/solutions/payment-processing`)
+  - DualPricing (`/dual-pricing-cash-discount-payment-processing`) + FAQ JSON-LD (6Q)
+  - CryptoProcessingSolution (`/solutions/crypto-processing`)
+  - GiftCardsSolution (`/solutions/gift-cards`)
+  - LoyaltyRewardsSolution (`/solutions/loyalty-rewards`)
+  - BusinessLoansSolution (`/solutions/business-loans`)
+  - ATMsSolution (`/solutions/atms`) + FAQ JSON-LD (7Q)
+  - PayrollServicesSolution (`/solutions/payroll-services`)
+  - ITServices (`/solutions/it-services`) + FAQ JSON-LD (8Q)
+  - MSCTranzActionGateway (`/solutions/tranzaction-gateway`) + FAQ JSON-LD (6Q)
+  - HighRiskMerchant (`/high-risk-merchant-services`) + FAQ JSON-LD (7Q)
+  - SpecialtyMerchant (`/specialty-merchant-payment-solutions`)
+  - Gateway (`/gateway/payments-gateway`)
+  - MSCGateway (`/gateway/payments-gateway`)
+  - Also added Helmet to MedicalClinics.jsx (`/medical-payment-processing-emr-integration`) — missed in Batch 1
+  - Removed old document.title/DOM-based meta from: DualPricing, ATMs, ITServices, HighRisk, SpecialtyMerchant
+  - Skipped placeholder pages: ACHProcessing, LinesOfCredit, MerchantRewards, ATMDeployer, B2BProcessing
 - **SEO Batch 1 — 9 Pages Optimized with react-helmet-async**:
   - Home (`/`): meta title, description, keywords, canonical
   - Contact (`/contact`): meta title, description, keywords, canonical
@@ -118,8 +136,7 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Hero section videos may be broken on some pages (user will address later with custom forms)
 
 ## Upcoming Tasks
-- P1: SEO Batch 2 — Solutions pages (Payment Processing, Dual Pricing, Gateway, Crypto, Gift Cards, etc.)
-- P1: SEO Batch 3 — POS/Hardware pages + remaining industries
+- P1: SEO Batch 3 — POS/Hardware pages + remaining industry pages (Chiropractors, Gas Station, Food Trucks, etc.)
 - P1: Create "How to Get a Free POS System for Your Business" page (feeds traffic to Free POS Program)
 - P1: Embed Payment Link after "Continue Activation" button in PayAnywhere flow
 - P2: Fix broken hero section videos on multiple pages (recurring)

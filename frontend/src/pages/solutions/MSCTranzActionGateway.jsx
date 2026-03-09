@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, CreditCard, Globe, RefreshCw, Shield, FileText, Users, Zap, BarChart3, Lock, Smartphone, Building2, Code } from 'lucide-react';
 import { Button } from '../../components/ui/button';
@@ -102,8 +103,25 @@ const MSCTranzActionGateway = () => {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>MSC TranzAction Gateway | Secure Payment Gateway by NMI | Merchant Solutions Corp</title>
+        <meta name="description" content="MSC TranzAction Gateway powered by NMI. Accept credit cards, debit cards, ACH, and recurring payments through a secure cloud-based payment gateway with virtual terminal, API integration, and PCI compliance." />
+        <meta name="keywords" content="payment gateway, NMI payment gateway, TranzAction gateway, virtual terminal, online payment processing, recurring billing gateway, API payment integration, PCI compliant gateway, credit card gateway" />
+        <link rel="canonical" href="/solutions/tranzaction-gateway" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
         <img

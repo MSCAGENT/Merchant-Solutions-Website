@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -32,20 +33,6 @@ import {
 const ATMsSolution = () => {
   const [showContactModal, setShowContactModal] = useState(false);
   const [showCalendlyModal, setShowCalendlyModal] = useState(false);
-
-  useEffect(() => {
-    document.title = 'ATM Solutions | Placement, Partnership & Purchase Programs | ATM Merchant Solutions';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'ATM placement, partnership, and purchase programs for businesses. Free ATM placement, 50/50 partnership, or full ownership. GenMega and Hyosung ATMs at wholesale prices with free processing.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!showCalendlyModal) return;
@@ -133,8 +120,25 @@ const ATMsSolution = () => {
     { question: 'How do I get a quote or learn about the reseller program?', answer: 'For updated prices, quotes, or questions about our Referral or Reseller program, call 1-800-407-8886 or contact us through our chat.' }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>ATM Solutions | Placement, Partnership & Purchase Programs | ATM Merchant Solutions</title>
+        <meta name="description" content="ATM placement, partnership, and purchase programs for businesses. Free ATM placement, 50/50 partnership, or full ownership. GenMega and Hyosung ATMs at wholesale prices with free processing." />
+        <meta name="keywords" content="ATM placement program, ATM partnership, buy ATM machine, ATM solutions business, free ATM placement, GenMega ATM, Hyosung ATM, ATM processing, ATM surcharge revenue, Cardtronics ATM" />
+        <link rel="canonical" href="/solutions/atms" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-gray-900">
         <img

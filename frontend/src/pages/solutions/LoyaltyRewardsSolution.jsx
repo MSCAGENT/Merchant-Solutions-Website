@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -79,7 +80,12 @@ const LoyaltyRewardsSolution = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      <Helmet>
+        <title>Loyalty & Rewards Programs | Customer Retention Solutions for Businesses</title>
+        <meta name="description" content="Build customer loyalty with custom rewards programs. Points-based systems, tiered rewards, and digital loyalty cards integrated with your POS for restaurants, retail, and service businesses." />
+        <meta name="keywords" content="loyalty program, rewards program, customer loyalty, loyalty cards, points program, customer retention, restaurant loyalty program, retail rewards, POS loyalty integration" />
+        <link rel="canonical" href="/solutions/loyalty-rewards" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
         <img
