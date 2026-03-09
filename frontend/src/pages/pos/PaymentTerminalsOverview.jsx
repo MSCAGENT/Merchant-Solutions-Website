@@ -244,13 +244,7 @@ export default function PaymentTerminalsOverview() {
                 </Link>
               </div>
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm flex items-center justify-center min-h-[260px]">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-10 w-10 text-purple-600" />
-                  </div>
-                  <p className="text-xl font-bold text-gray-900">Ingenico</p>
-                  <p className="text-sm text-gray-500">Global Payment Solutions</p>
-                </div>
+                <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/aa9xkgf1_Move5000-face.png.webp" alt="ingenico-move-5000-terminal" className="max-h-[280px] w-auto object-contain" />
               </div>
             </div>
 
@@ -286,26 +280,14 @@ export default function PaymentTerminalsOverview() {
                 </Link>
               </div>
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm flex items-center justify-center min-h-[260px]">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Smartphone className="h-10 w-10 text-purple-600" />
-                  </div>
-                  <p className="text-xl font-bold text-gray-900">PAX</p>
-                  <p className="text-sm text-gray-500">Smart Android Terminals</p>
-                </div>
+                <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/i4gkdzfe_A77_Slider1.png" alt="pax-a77-smart-terminal" className="max-h-[280px] w-auto object-contain" />
               </div>
             </div>
 
             {/* Dejavoo */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 bg-white rounded-2xl p-8 border border-gray-100 shadow-sm flex items-center justify-center min-h-[260px]">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <CreditCard className="h-10 w-10 text-purple-600" />
-                  </div>
-                  <p className="text-xl font-bold text-gray-900">Dejavoo</p>
-                  <p className="text-sm text-gray-500">Reliable Payment Hardware</p>
-                </div>
+                <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/l37dohxe_03.png" alt="dejavoo-smart-terminal" className="max-h-[280px] w-auto object-contain" />
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Dejavoo Payment Terminals</h3>
@@ -356,21 +338,21 @@ export default function PaymentTerminalsOverview() {
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">Each industry may require different terminal capabilities depending on mobility and transaction volume.</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
             {[
-              { icon: UtensilsCrossed, label: 'Restaurants' },
-              { icon: ShoppingBag, label: 'Retail Stores' },
-              { icon: Store, label: 'Smoke Shops' },
-              { icon: Scissors, label: 'Salons' },
-              { icon: ShoppingBag, label: 'Grocery' },
-              { icon: Building2, label: 'Services' },
-              { icon: Truck, label: 'Food Trucks' },
-              { icon: Fuel, label: 'Auto Repair' },
+              { icon: UtensilsCrossed, label: 'Restaurants', path: '/clover-pos-system' },
+              { icon: ShoppingBag, label: 'Retail Stores', path: '/pax-payment-terminals' },
+              { icon: Store, label: 'Smoke Shops', path: '/pos/dejavoo-terminals' },
+              { icon: Scissors, label: 'Salons', path: '/pos/square' },
+              { icon: ShoppingBag, label: 'Grocery', path: '/clover-pos-system' },
+              { icon: Building2, label: 'Services', path: '/payanywhere' },
+              { icon: Truck, label: 'Food Trucks', path: '/clover-pos-system' },
+              { icon: Fuel, label: 'Auto Repair', path: '/payanywhere' },
             ].map((ind, i) => (
-              <div key={i} className="bg-white rounded-xl p-4 text-center border border-gray-100 hover:border-purple-300 hover:shadow-md transition-all">
+              <Link key={i} to={ind.path} className="bg-white rounded-xl p-4 text-center border border-gray-100 hover:border-purple-300 hover:shadow-md transition-all cursor-pointer block">
                 <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <ind.icon className="h-5 w-5 text-purple-600" />
                 </div>
                 <p className="font-semibold text-gray-900 text-xs">{ind.label}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -403,7 +385,7 @@ export default function PaymentTerminalsOverview() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1746723372913-5bd18f616e3a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxyZXRhaWwlMjBzdG9yZSUyMGNoZWNrb3V0JTIwY291bnRlciUyMGNhcmQlMjByZWFkZXJ8ZW58MHx8fHwxNzcyOTkyNjExfDA&ixlib=rb-4.1.0&q=85" alt="business-owner-at-checkout-counter" className="w-full h-[400px] object-cover" />
+              <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/dr1y25ks_p7-2.jpg" alt="restaurant-tableside-payment-terminal" className="w-full h-[400px] object-cover" />
             </div>
           </div>
         </div>
