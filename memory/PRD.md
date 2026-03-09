@@ -26,6 +26,15 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Documents: /resources/documents (login-protected)
 
 ## Completed (2026-03-11)
+- **AutoSEO Webhook Integration** (`POST /api/autoseo/webhook`):
+  - Accepts AutoSEO article.published events with full field mapping
+  - Bearer token auth (`aseo_wh_...`) + optional HMAC-SHA256 signature verification
+  - Downloads and stores hero/infographic images via Emergent Object Storage
+  - Dedup: stores AutoSEO article `id` — duplicate deliveries update existing posts
+  - Test event support: returns 200 with test URL without creating a post
+  - Returns `{"url": "https://site/resources/blog/slug"}` as required
+  - Settings endpoints: GET/PUT `/api/autoseo/settings` for admin config
+  - Env vars: AUTOSEO_WEBHOOK_SECRET, SITE_URL
 - **SEO Batch 3 — 21 POS/Hardware, Industry & Company Pages Optimized**:
   - POS: POSOverview, POSHardware, DejavooTerminals, IngenicoTerminals, PayAnywhere, Exatouch, DaySmartSalon, SquarePOS
   - Industry: Chiropractors, GasStationProcessing, ProfessionalServices, SelfOrderingKiosk

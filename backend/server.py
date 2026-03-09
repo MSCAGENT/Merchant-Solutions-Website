@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException, UploadFile, File, Query
+from fastapi import FastAPI, APIRouter, HTTPException, UploadFile, File, Query, Header, Request
 from fastapi.responses import Response
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
@@ -343,6 +343,193 @@ async def seed_documents():
     for cat in categories:
         await db.document_categories.insert_one(cat)
     return categories
+
+# ─── AutoSEO Webhook Integration ───
+
+AUTOSEO_WEBHOOK_SECRET = os.environ.get('AUTOSEO_WEBHOOK_SECRET', '')
+SITE_URL = os.environ.get('SITE_URL', 'https://subscription-content.preview.emergentagent.com')
+
+class WebhookSettings(BaseModel):
+    auto_publish: bool = True
+    default_author: str = "Merchant Solutions Corp"
+    default_topic: str = "Industry Insights"
+
+@api_router.post("/autoseo/webhook")
+async def autoseo_webhook(request: Request):
+    import hmac, hashlib
+
+    # 1. Verify Authorization Bearer token
+    auth_header = request.headers.get("authorization", "")
+    token = auth_header.replace("Bearer ", "") if auth_header.startswith("Bearer ") else ""
+    if token != AUTOSEO_WEBHOOK_SECRET:
+        raise HTTPException(status_code=401, detail="Invalid or missing Bearer token")
+
+    # 2. Read raw body for HMAC verification
+    raw_body = await request.body()
+
+    # 3. Optionally verify HMAC-SHA256 signature
+    signature = request.headers.get("x-autoseo-signature", "")
+    if signature:
+        expected = hmac.new(AUTOSEO_WEBHOOK_SECRET.encode(), raw_body, hashlib.sha256).hexdigest()
+        if not hmac.compare_digest(signature, expected):
+            raise HTTPException(status_code=401, detail="Invalid HMAC signature")
+
+    # 4. Parse JSON body
+    try:
+        payload = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid JSON body")
+
+    # 5. Handle test events
+    event = payload.get("event", "")
+    if event == "test":
+        return {"url": f"{SITE_URL}/test"}
+
+    # 6. Extract fields
+    title = payload.get("title", "")
+    if not title:
+        raise HTTPException(status_code=400, detail="title is required")
+
+    autoseo_id = payload.get("id")
+    slug = payload.get("slug", "") or make_slug(title)
+    meta_description = payload.get("metaDescription", "")
+    content_html = payload.get("content_html", "")
+    content_markdown = payload.get("content_markdown", "")
+    hero_image_url = payload.get("heroImageUrl") or ""
+    hero_image_alt = payload.get("heroImageAlt") or ""
+    infographic_url = payload.get("infographicImageUrl") or ""
+    keywords_list = payload.get("keywords", [])
+    meta_keywords = payload.get("metaKeywords", "")
+    faq_schema = payload.get("faqSchema") or []
+    language_code = payload.get("languageCode", "en")
+    status = payload.get("status", "published")
+    published_at = payload.get("publishedAt", "")
+    created_at_val = payload.get("createdAt", "")
+    updated_at_val = payload.get("updatedAt", "")
+
+    # Merge keywords
+    all_keywords = list(keywords_list) if isinstance(keywords_list, list) else []
+    if meta_keywords and isinstance(meta_keywords, str):
+        all_keywords.extend([k.strip() for k in meta_keywords.split(",") if k.strip()])
+    all_keywords = list(dict.fromkeys(all_keywords))
+
+    # 7. Download and store images via object storage
+    stored_hero = ""
+    stored_infographic = ""
+    images_list = []
+
+    if hero_image_url:
+        try:
+            img_resp = requests.get(hero_image_url, timeout=30)
+            img_resp.raise_for_status()
+            content_type = img_resp.headers.get("Content-Type", "image/jpeg")
+            ext = content_type.split("/")[-1].split(";")[0]
+            if ext not in ("jpeg", "jpg", "png", "webp", "gif"):
+                ext = "jpg"
+            img_path = f"autoseo/{slug}-hero.{ext}"
+            result = put_object(img_path, img_resp.content, content_type)
+            stored_hero = result.get("url", hero_image_url)
+        except Exception as e:
+            logger.warning(f"Failed to download hero image: {e}")
+            stored_hero = hero_image_url
+
+    if infographic_url:
+        try:
+            img_resp = requests.get(infographic_url, timeout=30)
+            img_resp.raise_for_status()
+            content_type = img_resp.headers.get("Content-Type", "image/jpeg")
+            ext = content_type.split("/")[-1].split(";")[0]
+            if ext not in ("jpeg", "jpg", "png", "webp", "gif"):
+                ext = "jpg"
+            img_path = f"autoseo/{slug}-infographic.{ext}"
+            result = put_object(img_path, img_resp.content, content_type)
+            stored_infographic = result.get("url", infographic_url)
+            images_list.append(stored_infographic)
+        except Exception as e:
+            logger.warning(f"Failed to download infographic: {e}")
+            stored_infographic = infographic_url
+            images_list.append(infographic_url)
+
+    # Use HTML content for rendering, store markdown as well
+    content = content_html or content_markdown or ""
+
+    # 8. Check for existing post by autoseo_id (dedup / update)
+    now_iso = datetime.now(timezone.utc).isoformat()
+    is_published = status.lower() in ("published", "publish", "live")
+
+    if autoseo_id:
+        existing = await db.blog_posts.find_one({"autoseo_id": autoseo_id}, {"_id": 0})
+        if existing:
+            # Update existing post
+            updates = {
+                "title": title,
+                "slug": slug,
+                "content": content,
+                "excerpt": meta_description,
+                "cover_image": stored_hero,
+                "cover_image_alt": hero_image_alt,
+                "keywords": all_keywords,
+                "published": is_published,
+                "updated_at": updated_at_val or now_iso,
+                "faq_schema": faq_schema,
+                "language_code": language_code,
+            }
+            if stored_infographic:
+                updates["infographic_image"] = stored_infographic
+                updates["images"] = images_list
+            await db.blog_posts.update_one({"autoseo_id": autoseo_id}, {"$set": updates})
+            return {"url": f"{SITE_URL}/resources/blog/{slug}"}
+
+    # 9. Create new blog post
+    post_id = str(uuid.uuid4())
+    doc = {
+        "id": post_id,
+        "autoseo_id": autoseo_id,
+        "content_type": "blog",
+        "title": title,
+        "slug": slug,
+        "topic": "",
+        "subject": "",
+        "hashtags": [],
+        "keywords": all_keywords,
+        "content": content,
+        "excerpt": meta_description,
+        "cover_image": stored_hero,
+        "cover_image_alt": hero_image_alt,
+        "infographic_image": stored_infographic,
+        "images": images_list,
+        "attachments": [],
+        "author": "Merchant Solutions Corp",
+        "published": is_published,
+        "visible_on_site": True,
+        "faq_schema": faq_schema,
+        "language_code": language_code,
+        "created_at": created_at_val or now_iso,
+        "updated_at": updated_at_val or now_iso,
+    }
+    await db.blog_posts.insert_one(doc)
+    doc.pop("_id", None)
+
+    return {"url": f"{SITE_URL}/resources/blog/{slug}"}
+
+@api_router.get("/autoseo/settings")
+async def get_autoseo_settings(token: str = ""):
+    session = await db.blog_sessions.find_one({"token": token})
+    if not session:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+    settings = await db.webhook_settings.find_one({"type": "autoseo"}, {"_id": 0})
+    if not settings:
+        settings = {"type": "autoseo", "auto_publish": True, "default_author": "Merchant Solutions Corp", "default_topic": "Industry Insights"}
+    return {**settings, "webhook_url": "/api/autoseo/webhook"}
+
+@api_router.put("/autoseo/settings")
+async def update_autoseo_settings(data: WebhookSettings, token: str = ""):
+    session = await db.blog_sessions.find_one({"token": token})
+    if not session:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+    doc = {"type": "autoseo", **data.model_dump()}
+    await db.webhook_settings.update_one({"type": "autoseo"}, {"$set": doc}, upsert=True)
+    return {"success": True, **doc}
 
 # ─── App Setup ───
 
