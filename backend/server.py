@@ -75,6 +75,9 @@ class ContentPost(BaseModel):
     content_type: str = "blog"
     title: str
     slug: str = ""
+    meta_title: str = ""
+    meta_description: str = ""
+    schema_markup: str = ""
     topic: str = ""
     subject: str = ""
     hashtags: List[str] = []
@@ -93,6 +96,10 @@ class ContentPost(BaseModel):
 class ContentPostCreate(BaseModel):
     content_type: str = "blog"
     title: str
+    slug: str = ""
+    meta_title: str = ""
+    meta_description: str = ""
+    schema_markup: str = ""
     topic: str = ""
     subject: str = ""
     hashtags: List[str] = []
@@ -109,6 +116,10 @@ class ContentPostCreate(BaseModel):
 class ContentPostUpdate(BaseModel):
     content_type: Optional[str] = None
     title: Optional[str] = None
+    slug: Optional[str] = None
+    meta_title: Optional[str] = None
+    meta_description: Optional[str] = None
+    schema_markup: Optional[str] = None
     topic: Optional[str] = None
     subject: Optional[str] = None
     hashtags: Optional[List[str]] = None
@@ -242,7 +253,8 @@ async def get_content_post(post_id: str):
 @api_router.post("/blog")
 async def create_content_post(post_data: ContentPostCreate):
     post = ContentPost(**post_data.model_dump())
-    post.slug = make_slug(post.title)
+    if not post.slug:
+        post.slug = make_slug(post.title)
     doc = post.model_dump()
     await db.blog_posts.insert_one(doc)
     doc.pop("_id", None)
@@ -254,7 +266,7 @@ async def update_content_post(post_id: str, update_data: ContentPostUpdate):
     if not updates:
         raise HTTPException(status_code=400, detail="No fields to update")
     updates["updated_at"] = datetime.now(timezone.utc).isoformat()
-    if "title" in updates:
+    if "title" in updates and "slug" not in updates:
         updates["slug"] = make_slug(updates["title"])
     result = await db.blog_posts.update_one({"id": post_id}, {"$set": updates})
     if result.matched_count == 0:
@@ -347,7 +359,7 @@ async def seed_documents():
 # ─── AutoSEO Webhook Integration ───
 
 AUTOSEO_WEBHOOK_SECRET = os.environ.get('AUTOSEO_WEBHOOK_SECRET', '')
-SITE_URL = os.environ.get('SITE_URL', 'https://subscription-content.preview.emergentagent.com')
+SITE_URL = os.environ.get('SITE_URL', 'https://autoseo-blog-hub.preview.emergentagent.com')
 
 class WebhookSettings(BaseModel):
     auto_publish: bool = True
@@ -358,9 +370,10 @@ class WebhookSettings(BaseModel):
 async def autoseo_webhook(request: Request):
     import hmac, hashlib, json as json_lib
 
-    # 1. Verify Authorization Bearer token
+    # 1. Verify Authorization Bearer token (handles "Bearer Bearer ..." double prefix from AutoSEO)
     auth_header = request.headers.get("authorization", "")
-    token = auth_header.replace("Bearer ", "") if auth_header.startswith("Bearer ") else ""
+    parts = auth_header.split()
+    token = parts[-1] if parts else ""
     if token != AUTOSEO_WEBHOOK_SECRET:
         raise HTTPException(status_code=401, detail="Invalid or missing Bearer token")
 

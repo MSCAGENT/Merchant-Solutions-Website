@@ -102,7 +102,7 @@ const BlogPost = () => {
         if (res.ok) {
           const data = await res.json();
           setPost(data);
-          document.title = `${data.title} | Merchant Solutions Corp`;
+          document.title = `${data.meta_title || data.title} | Merchant Solutions Corp`;
         }
       } catch (err) { console.error(err); }
       setLoading(false);
@@ -111,6 +111,7 @@ const BlogPost = () => {
   }, [slug]);
 
   const shareUrl = window.location.href;
+  const isHtml = (str) => /<[a-z][\s\S]*>/i.test(str);
 
   if (loading) return <div className="min-h-screen flex items-center justify-center"><p className="text-gray-500">Loading...</p></div>;
   if (!post) return (
@@ -122,9 +123,22 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>{post.meta_title || post.title} | Merchant Solutions Corp</title>
+        <meta name="description" content={post.meta_description || post.excerpt || ''} />
+        {post.keywords?.length > 0 && <meta name="keywords" content={post.keywords.join(', ')} />}
+        <link rel="canonical" href={`/resources/blog/${post.slug}`} />
+        <meta property="og:title" content={post.meta_title || post.title} />
+        <meta property="og:description" content={post.meta_description || post.excerpt || ''} />
+        <meta property="og:type" content="article" />
+        {post.cover_image && <meta property="og:image" content={post.cover_image} />}
+        {post.schema_markup && (
+          <script type="application/ld+json">{post.schema_markup}</script>
+        )}
+      </Helmet>
       {post.cover_image && (
         <div className="h-[400px] w-full overflow-hidden relative">
-          <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover" />
+          <img src={post.cover_image} alt={post.cover_image_alt || post.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
       )}
@@ -138,9 +152,13 @@ const BlogPost = () => {
           <span className="flex items-center gap-1"><User className="h-4 w-4" />{post.author}</span>
           <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{new Date(post.created_at).toLocaleDateString()}</span>
         </div>
-        <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
-          {post.content}
-        </div>
+        {isHtml(post.content) ? (
+          <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: post.content }} />
+        ) : (
+          <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
+            {post.content}
+          </div>
+        )}
         {post.hashtags?.length > 0 && (
           <div className="flex gap-2 mt-8 pt-8 border-t border-gray-100 flex-wrap">
             {post.hashtags.map((h, i) => (

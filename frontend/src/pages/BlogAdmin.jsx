@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Plus, Edit2, Trash2, Eye, EyeOff, ArrowLeft, Save, X, Hash, Tag, Image, Lock, LogOut, Upload, FileText, Paperclip, Globe, GlobeIcon } from 'lucide-react';
+import { Plus, Edit2, Trash2, Eye, EyeOff, ArrowLeft, Save, X, Hash, Tag, Image, Lock, LogOut, Upload, FileText, Paperclip, Globe, GlobeIcon, Search, Code } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 
@@ -28,7 +28,8 @@ const BlogAdmin = () => {
   const fileInputRef = useRef(null);
 
   const emptyPost = {
-    content_type: 'blog', title: '', topic: '', subject: '', content: '', excerpt: '',
+    content_type: 'blog', title: '', slug: '', meta_title: '', meta_description: '', schema_markup: '',
+    topic: '', subject: '', content: '', excerpt: '',
     hashtags: '', keywords: '', cover_image: '', author: 'Merchant Solutions Corp',
     published: false, visible_on_site: true, attachments: []
   };
@@ -99,7 +100,11 @@ const BlogAdmin = () => {
       ...form,
       hashtags: typeof form.hashtags === 'string' ? form.hashtags.split(',').map(t => t.trim()).filter(Boolean) : form.hashtags,
       keywords: typeof form.keywords === 'string' ? form.keywords.split(',').map(t => t.trim()).filter(Boolean) : form.keywords,
-      images: form.cover_image ? [form.cover_image] : []
+      images: form.cover_image ? [form.cover_image] : [],
+      slug: form.slug || '',
+      meta_title: form.meta_title || '',
+      meta_description: form.meta_description || '',
+      schema_markup: form.schema_markup || '',
     };
     try {
       if (editing) {
@@ -115,6 +120,10 @@ const BlogAdmin = () => {
     setEditing(post.id);
     setForm({
       ...post,
+      slug: post.slug || '',
+      meta_title: post.meta_title || '',
+      meta_description: post.meta_description || '',
+      schema_markup: post.schema_markup || '',
       hashtags: Array.isArray(post.hashtags) ? post.hashtags.join(', ') : post.hashtags || '',
       keywords: Array.isArray(post.keywords) ? post.keywords.join(', ') : post.keywords || '',
       attachments: post.attachments || []
@@ -240,6 +249,36 @@ const BlogAdmin = () => {
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-1"><Image className="h-3 w-3 inline mr-1" />Cover Image URL</label>
               <input type="text" value={form.cover_image} onChange={e => setForm({ ...form, cover_image: e.target.value })} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="https://example.com/image.jpg" />
+            </div>
+
+            {/* SEO Fields */}
+            <div className="mb-4 p-4 bg-purple-50 rounded-lg border border-purple-200">
+              <p className="text-sm font-semibold text-purple-700 mb-3 flex items-center gap-1.5"><Search className="h-4 w-4" /> SEO Settings</p>
+              <div className="grid grid-cols-1 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">URL Slug</label>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-gray-400 flex-shrink-0">/resources/blog/</span>
+                    <input type="text" value={form.slug} onChange={e => setForm({ ...form, slug: e.target.value })} className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm" placeholder="auto-generated-from-title" data-testid="post-slug-input" />
+                  </div>
+                  <p className="text-xs text-gray-400 mt-1">Leave blank to auto-generate from title</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Meta Title</label>
+                  <input type="text" value={form.meta_title} onChange={e => setForm({ ...form, meta_title: e.target.value })} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm" placeholder="Custom SEO title (defaults to post title)" data-testid="post-meta-title-input" />
+                  <p className="text-xs text-gray-400 mt-1">{(form.meta_title || form.title || '').length}/60 characters</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Meta Description</label>
+                  <textarea rows={2} value={form.meta_description} onChange={e => setForm({ ...form, meta_description: e.target.value })} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm" placeholder="SEO description for search engines (150-160 chars)" data-testid="post-meta-desc-input" />
+                  <p className="text-xs text-gray-400 mt-1">{(form.meta_description || '').length}/160 characters</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-1.5"><Code className="h-3 w-3" /> Schema Markup (JSON-LD)</label>
+                  <textarea rows={4} value={form.schema_markup} onChange={e => setForm({ ...form, schema_markup: e.target.value })} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent font-mono text-xs" placeholder='{"@context":"https://schema.org","@type":"Article","headline":"..."}' data-testid="post-schema-input" />
+                  <p className="text-xs text-gray-400 mt-1">Optional JSON-LD structured data for this post</p>
+                </div>
+              </div>
             </div>
 
             <div className="mb-4">
