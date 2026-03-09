@@ -40,7 +40,11 @@ export default function WhiteLabelMerchantServices() {
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
-          setBlogs(data.filter(p => p.published));
+          setBlogs(data.filter(p => p.published && (
+            (p.topic && p.topic.toLowerCase().includes('payment')) ||
+            (p.keywords && p.keywords.some(k => k.toLowerCase().includes('payment'))) ||
+            (p.title && p.title.toLowerCase().includes('payment'))
+          )));
         }
       })
       .catch(() => {});
@@ -292,6 +296,9 @@ export default function WhiteLabelMerchantServices() {
                       'Co-branded marketing materials',
                       'Merchant e-statements',
                       'Basic onboarding tools',
+                      'Marketing Assistance',
+                      'ISO Sales Engine',
+                      'Meta Google ads Consulting',
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-2 text-sm text-gray-700">
                         <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" /> {item}
@@ -375,14 +382,26 @@ export default function WhiteLabelMerchantServices() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-500 mb-1">Team Size</p>
-                  <p className="text-gray-900 font-bold">40+ employees</p>
+                  <p className="text-gray-900 font-bold">40M+ in processing volume</p>
                 </div>
                 <div className="mb-6">
                   <p className="text-sm font-semibold text-gray-900 mb-3">Pricing</p>
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Setup Fee</span>
-                      <span className="font-bold text-gray-900">$25,000 upfront</span>
+                      <span className="text-gray-600">Visa MC Registration</span>
+                      <span className="font-bold text-gray-900">$12,000 annually</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Compliance Certification</span>
+                      <span className="font-bold text-gray-900">$XXXX.XX (per operations)</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">ISO Sales Engine CRM + Voice AI</span>
+                      <span className="font-bold text-gray-900">$1,500/mo</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Restaurant or Professional Services white label system</span>
+                      <span className="font-bold text-gray-900">$7,500/ea + server cost</span>
                     </div>
                   </div>
                 </div>
