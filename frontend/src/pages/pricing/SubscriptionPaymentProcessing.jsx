@@ -224,20 +224,26 @@ export default function SubscriptionPaymentProcessing() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
               {
-                tier: '1-10 Locations',
+                tier: 'Bronze Program',
+                locations: '1-10 Locations',
                 price: '$499',
+                interchange: 'Interchange Cost +15 bps & $0.05/txn',
                 color: 'purple',
                 desc: 'Designed for businesses operating a small number of high-volume locations that require advanced payment infrastructure and support.'
               },
               {
-                tier: '11-30 Locations',
+                tier: 'Silver Program',
+                locations: '11-30 Locations',
                 price: '$299',
+                interchange: 'Interchange Cost +10 bps & $0.03/txn',
                 color: 'blue',
                 desc: 'This arrangement is perfect for regional businesses that are expanding into multiple markets. Franchises and Corporate locations.'
               },
               {
-                tier: '30+ Locations',
+                tier: 'Platinum Program',
+                locations: '30+ Locations',
                 price: '$99',
+                interchange: 'Interchange Cost +0 bps & $0.02/txn',
                 color: 'emerald',
                 desc: 'This product is specifically designed for large enterprises who manage multiple high-volume locations. This enterprise model gathers the Volume from all locations and creates a custom plan with the lowest rate at $99/month per location.'
               },
@@ -247,11 +253,13 @@ export default function SubscriptionPaymentProcessing() {
                   <div className="absolute top-0 right-0 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">BEST VALUE</div>
                 )}
                 <CardContent className="p-8 text-center">
-                  <p className={`text-sm font-bold uppercase tracking-wider mb-2 ${i === 0 ? 'text-purple-600' : i === 1 ? 'text-blue-600' : 'text-emerald-600'}`}>{item.tier}</p>
-                  <div className="mb-4">
+                  <p className={`text-lg font-bold mb-1 ${i === 0 ? 'text-purple-600' : i === 1 ? 'text-blue-600' : 'text-emerald-600'}`}>{item.tier}</p>
+                  <p className={`text-sm font-medium uppercase tracking-wider mb-2 ${i === 0 ? 'text-purple-500' : i === 1 ? 'text-blue-500' : 'text-emerald-500'}`}>{item.locations}</p>
+                  <div className="mb-2">
                     <span className={`text-5xl font-extrabold ${i === 0 ? 'text-purple-700' : i === 1 ? 'text-blue-700' : 'text-emerald-700'}`}>{item.price}</span>
                     <span className="text-gray-500 text-lg"> /mo per location</span>
                   </div>
+                  <p className={`text-sm font-semibold mb-4 ${i === 0 ? 'text-purple-600' : i === 1 ? 'text-blue-600' : 'text-emerald-600'}`}>{item.interchange}</p>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">{item.desc}</p>
                   <Button className={`w-full ${i === 0 ? 'bg-purple-600 hover:bg-purple-700' : i === 1 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-emerald-600 hover:bg-emerald-700'} text-white`} onClick={() => setShowFormModal(true)} data-testid={`tier-${i + 1}-cta`}>
                     Contact Sales

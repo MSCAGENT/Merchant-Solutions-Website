@@ -129,11 +129,9 @@ const megaMenus = {
     type: 'dropdown',
     items: [
       { label: 'Pricing Overview', path: '/payment-processing-pricing' },
-      { label: 'Flat Rate Processing', path: '/payment-processing-pricing', hash: '#flat-rate' },
-      { label: 'Interchange Plus Pricing', path: '/payment-processing-pricing', hash: '#interchange-plus' },
       { label: 'Dual Pricing Program', path: '/dual-pricing-cash-discount-payment-processing' },
       { label: 'Subscription Payment Processing', path: '/subscription-payment-processing' },
-      { label: 'Free POS Program', path: '/free-pos-system' },
+      { label: 'Advantage Credit Program', path: '/free-pos-system' },
     ],
   },
   Partnerships: {
