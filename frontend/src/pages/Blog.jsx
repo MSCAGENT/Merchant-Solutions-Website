@@ -66,7 +66,7 @@ const BlogList = () => {
                         <span className="text-xs uppercase tracking-wider text-purple-600 font-semibold">{post.topic}</span>
                       )}
                       <h2 className="text-xl font-bold text-gray-900 mt-1 mb-2 group-hover:text-purple-700 transition-colors">{post.title}</h2>
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">{post.excerpt || post.content?.substring(0, 150) + '...'}</p>
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">{post.excerpt || (post.content ? post.content.replace(/<[^>]*>/g, '').substring(0, 150) + '...' : '')}</p>
                       <div className="flex items-center gap-4 text-xs text-gray-400">
                         <span className="flex items-center gap-1"><User className="h-3 w-3" />{post.author}</span>
                         <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{new Date(post.created_at).toLocaleDateString()}</span>

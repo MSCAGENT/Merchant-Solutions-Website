@@ -26,6 +26,18 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Documents: /resources/documents (login-protected)
 
 ## Completed (2026-03-11)
+- **AutoSEO Webhook — Bearer Token Fix & Hardening**:
+  - Fixed `Bearer Bearer <token>` double-prefix auth by using `split()[-1]` extraction
+  - Both `Bearer <token>` and `Bearer Bearer <token>` headers now accepted
+  - Invalid tokens correctly return 401
+  - Full article creation, deduplication, and test events all verified
+- **Blog Admin SEO Fields — Full Integration**:
+  - `slug`, `meta_title`, `meta_description`, `schema_markup` fields added to ContentPostCreate and ContentPostUpdate models
+  - Blog create endpoint respects user-provided slug (auto-generates only if blank)
+  - Blog update endpoint preserves custom slug unless only title changes
+  - BlogPost component now renders `<Helmet>` with meta_title, meta_description, keywords, canonical URL, OpenGraph tags, and JSON-LD schema_markup
+  - HTML content from AutoSEO rendered via dangerouslySetInnerHTML
+  - Blog listing page strips HTML tags from excerpt display
 - **AutoSEO Webhook Integration** (`POST /api/autoseo/webhook`):
   - Accepts AutoSEO article.published events with full field mapping
   - Bearer token auth (`aseo_wh_...`) + optional HMAC-SHA256 signature verification
