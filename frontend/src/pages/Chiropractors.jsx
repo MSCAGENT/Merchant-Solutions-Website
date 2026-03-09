@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -61,6 +62,12 @@ const Chiropractors = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Chiropractic Payment Processing | EMR Integration & Merchant Services</title>
+        <meta name="description" content="Chiropractic payment processing with EMR integration. Accept credit cards, offer patient payment plans, and streamline billing for chiropractic offices and wellness clinics." />
+        <meta name="keywords" content="chiropractic payment processing, chiropractor merchant services, chiropractic EMR integration, chiropractic billing, patient payment plans, chiropractic POS system" />
+        <link rel="canonical" href="/chiropractic-payment-processing" />
+      </Helmet>
       {/* Video Hero */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
         <video

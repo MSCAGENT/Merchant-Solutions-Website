@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, User, ArrowLeft, ArrowRight, Hash, Tag, FileText } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -26,6 +27,12 @@ const BlogList = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Blog | Payment Processing Tips & Industry Insights | Merchant Solutions Corp</title>
+        <meta name="description" content="Read the latest insights on payment processing, POS systems, merchant services, and business growth from Merchant Solutions Corp. Expert tips and industry news." />
+        <meta name="keywords" content="payment processing blog, merchant services tips, POS system guides, business payment insights, credit card processing news, fintech blog" />
+        <link rel="canonical" href="/resources/blog" />
+      </Helmet>
       <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4" data-testid="blog-h1">Blog</h1>

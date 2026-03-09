@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, ChevronDown, ChevronRight, CreditCard, Shield, Zap, 
@@ -34,6 +35,12 @@ const FAQItem = ({ question, answer }) => {
 const POSOverview = () => {
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>POS Systems | Restaurant, Retail & Service Industry POS Solutions</title>
+        <meta name="description" content="Compare POS systems for restaurants, retail, and service businesses. Clover, Square, Exatouch, PayAnywhere, and more with professional installation, training, and support nationwide." />
+        <meta name="keywords" content="POS systems, restaurant POS, retail POS, point of sale systems, Clover POS, Square POS, Exatouch POS, PayAnywhere POS, best POS system, POS comparison" />
+        <link rel="canonical" href="/pos-systems" />
+      </Helmet>
 
       {/* 1. HERO SECTION */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">

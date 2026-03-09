@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -34,20 +35,6 @@ import {
 const DaySmartSalon = () => {
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
-
-  useEffect(() => {
-    document.title = 'DaySmart Salon Software – All-in-One Salon Management & Payment Processing';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'DaySmart Salon is a cloud-based software solution for appointment scheduling, integrated payments, inventory, CRM, payroll, and salon growth tools. Try free today.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!showDemoModal) return;
@@ -195,6 +182,12 @@ const DaySmartSalon = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>DaySmart Salon Software | All-in-One Salon Management & Payment Processing</title>
+        <meta name="description" content="DaySmart Salon is a cloud-based software solution for appointment scheduling, integrated payments, inventory, CRM, payroll, and salon growth tools. Professional installation and training." />
+        <meta name="keywords" content="DaySmart Salon, salon software, salon management software, salon appointment scheduling, salon POS system, salon payment processing, salon booking software" />
+        <link rel="canonical" href="/daysmart-salon-pos-software" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 py-24 lg:py-32 overflow-hidden" data-testid="daysmart-hero">
         <div className="absolute inset-0 opacity-10">

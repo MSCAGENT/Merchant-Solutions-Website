@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronRight, Wrench, MapPin, Users, Monitor, Cable, GraduationCap } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -100,6 +101,12 @@ const ITServices = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>IT Services & POS Installation | Network Setup & Technical Support</title>
+        <meta name="description" content="Professional IT services for businesses including POS installation, network setup, system configuration, and ongoing technical support. Nationwide service by certified technicians." />
+        <meta name="keywords" content="POS installation service, IT services, network setup, POS technical support, business IT support, POS system setup, restaurant IT services" />
+        <link rel="canonical" href="/it-services" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

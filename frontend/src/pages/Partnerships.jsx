@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ChevronRight, Users, TrendingUp, Shield, DollarSign, Zap, Award, X } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
@@ -143,6 +144,12 @@ const Partnerships = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Agent & ISO Partnership Program | Sell Payment Processing | Merchant Solutions Corp</title>
+        <meta name="description" content="Join the Merchant Solutions Agent & ISO partnership program. Earn residual income selling payment processing and POS systems. Full training, support, and competitive revenue sharing." />
+        <meta name="keywords" content="merchant services agent program, ISO partnership, sell payment processing, payment processing reseller, agent program, merchant services residual income, POS sales agent" />
+        <link rel="canonical" href="/partnerships" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

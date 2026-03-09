@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -64,15 +65,6 @@ const ProfessionalServices = () => {
   }, []);
 
   useEffect(() => {
-    document.title = 'Contractor Payment Processing & Field Service Invoicing | Clover & PYMT360 POS';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Contractor payment processing and field service invoicing with Clover and PYMT360 POS. Estimates, e-signatures, ACH payments, and job-based reporting for service businesses.';
-    if (metaDesc) metaDesc.setAttribute('content', content);
-    else { const meta = document.createElement('meta'); meta.name = 'description'; meta.content = content; document.head.appendChild(meta); }
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
-    canonical.href = 'https://www.merchantsolutionscorp.com/professional-services-payment-processing-clover-pos';
     // Load Calendly
     if (!document.querySelector('link[href*="calendly.com"]')) {
       const link = document.createElement('link');
@@ -196,6 +188,12 @@ const ProfessionalServices = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Professional Services Payment Processing | Clover & PYMT360 POS for Contractors</title>
+        <meta name="description" content="Contractor payment processing and field service invoicing with Clover and PYMT360 POS. Estimates, e-signatures, ACH payments, and job-based reporting for service businesses." />
+        <meta name="keywords" content="contractor payment processing, field service invoicing, professional services POS, Clover for contractors, PYMT360 POS, service business payment processing, contractor billing, mobile invoicing" />
+        <link rel="canonical" href="/professional-services-payment-processing-clover-pos" />
+      </Helmet>
       {/* Hero */}
       <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">
         <video ref={video1Ref} autoPlay muted playsInline onEnded={handleVideoEnd} className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700" style={{ opacity: 1 }}>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronRight, CreditCard, Smartphone, Zap } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -187,6 +188,12 @@ const DejavooTerminals = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Dejavoo Payment Terminals | Z Series Smart Terminals & Mobile POS</title>
+        <meta name="description" content="Dejavoo Z series payment terminals for countertop, wireless, and mobile POS. Z11, Z8 smart terminals with dual-screen displays, EMV, NFC, and built-in receipt printing. Free placement available." />
+        <meta name="keywords" content="Dejavoo terminals, Dejavoo Z11, Dejavoo Z8, smart payment terminal, mobile POS terminal, countertop terminal, EMV terminal, NFC payment terminal, wireless payment terminal" />
+        <link rel="canonical" href="/pos/dejavoo-terminals" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

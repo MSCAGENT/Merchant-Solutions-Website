@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle, ShoppingCart, Wine, Store, Cigarette,
@@ -23,20 +24,6 @@ const Exatouch = () => {
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
   const [activeVertical, setActiveVertical] = useState('grocery');
-
-  useEffect(() => {
-    document.title = 'Exatouch POS System | Grocery, Liquor & Retail Point of Sale | Merchant Solutions Corp';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Exatouch POS by Electronic Payments — the all-in-one point of sale system built for grocery stores, liquor stores, convenience stores, smoke shops, and retail. Inventory management, age verification, scan data reporting, EMV & contactless payments. Free installation & training.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
@@ -175,6 +162,12 @@ const Exatouch = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Exatouch POS System | Grocery, Liquor & Retail Point of Sale</title>
+        <meta name="description" content="Exatouch POS by Electronic Payments — the all-in-one point of sale system built for grocery stores, liquor stores, convenience stores, smoke shops, and retail. Inventory management, age verification, and EMV payments." />
+        <meta name="keywords" content="Exatouch POS, grocery POS system, liquor store POS, retail POS system, convenience store POS, smoke shop POS, Exatouch point of sale, inventory management POS, age verification POS" />
+        <link rel="canonical" href="/pos/exatouch" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950 py-24 lg:py-32 overflow-hidden" data-testid="exatouch-hero">
         <div className="absolute inset-0 opacity-10">

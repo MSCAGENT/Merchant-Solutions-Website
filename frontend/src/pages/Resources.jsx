@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -61,6 +62,12 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Resources | Guides, Tools & Industry Insights | Merchant Solutions Corp</title>
+        <meta name="description" content="Explore resources from Merchant Solutions Corp. Business guides, industry insights, payment processing tips, and tools to help grow your business." />
+        <meta name="keywords" content="payment processing resources, business guides, merchant services tips, POS system guides, payment industry insights, business growth resources" />
+        <link rel="canonical" href="/resources" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

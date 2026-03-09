@@ -26,6 +26,13 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Documents: /resources/documents (login-protected)
 
 ## Completed (2026-03-11)
+- **SEO Batch 3 — 21 POS/Hardware, Industry & Company Pages Optimized**:
+  - POS: POSOverview, POSHardware, DejavooTerminals, IngenicoTerminals, PayAnywhere, Exatouch, DaySmartSalon, SquarePOS
+  - Industry: Chiropractors, GasStationProcessing, ProfessionalServices, SelfOrderingKiosk
+  - Company: Security, Partnerships, ISVPartnerships, Partners, Careers, Pricing
+  - Content: Blog (list page), Resources, ITServices (root)
+  - Removed old document.title/DOM-based meta from 7 pages
+  - Remaining 24 pages without Helmet are all placeholders, admin pages, or auth pages (no SEO needed)
 - **SEO Batch 2 — 14 Solution/Gateway Pages Optimized with react-helmet-async**:
   - PaymentProcessingSolution (`/solutions/payment-processing`)
   - DualPricing (`/dual-pricing-cash-discount-payment-processing`) + FAQ JSON-LD (6Q)
@@ -136,7 +143,6 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Hero section videos may be broken on some pages (user will address later with custom forms)
 
 ## Upcoming Tasks
-- P1: SEO Batch 3 — POS/Hardware pages + remaining industry pages (Chiropractors, Gas Station, Food Trucks, etc.)
 - P1: Create "How to Get a Free POS System for Your Business" page (feeds traffic to Free POS Program)
 - P1: Embed Payment Link after "Continue Activation" button in PayAnywhere flow
 - P2: Fix broken hero section videos on multiple pages (recurring)

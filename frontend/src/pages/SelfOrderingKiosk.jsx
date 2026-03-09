@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronRight, Monitor, Zap, DollarSign, Users, ArrowRight, Phone, ShoppingCart, Globe } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -8,11 +9,6 @@ const SelfOrderingKiosk = () => {
   const [activeFaq, setActiveFaq] = useState(null);
 
   useEffect(() => {
-    document.title = 'Best Self Ordering Kiosk for Restaurants | Clover, Square & iTabPOS | Merchant Solutions Corp';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Compare the best self ordering kiosk systems for restaurants. Clover, Square and iTabPOS with installation, consulting and merchant reimbursement programs across the United States, Canada and Puerto Rico.';
-    if (metaDesc) metaDesc.setAttribute('content', content);
-    else { const meta = document.createElement('meta'); meta.name = 'description'; meta.content = content; document.head.appendChild(meta); }
     window.scrollTo(0, 0);
   }, []);
 
@@ -26,6 +22,12 @@ const SelfOrderingKiosk = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Best Self Ordering Kiosk for Restaurants | Clover, Square & iTabPOS</title>
+        <meta name="description" content="Compare the best self ordering kiosk systems for restaurants. Clover, Square and iTabPOS with installation, consulting and merchant reimbursement programs across the United States, Canada and Puerto Rico." />
+        <meta name="keywords" content="self ordering kiosk, restaurant kiosk, Clover kiosk, Square kiosk, self service kiosk, restaurant self ordering, touchscreen kiosk, QSR kiosk, fast food kiosk" />
+        <link rel="canonical" href="/best-self-ordering-kiosk-for-restaurants" />
+      </Helmet>
       {/* Hero */}
       <section className="relative py-24 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 overflow-hidden">
         <div className="absolute inset-0 opacity-10">

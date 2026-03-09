@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Briefcase, MapPin, Clock, ChevronRight, Lock, CheckCircle } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -143,6 +144,12 @@ const Careers = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Careers at Merchant Solutions Corp | Payment Industry Jobs</title>
+        <meta name="description" content="Join the Merchant Solutions Corp team. Explore career opportunities in payment processing, sales, technology, and customer support. Build your career in the fintech industry." />
+        <meta name="keywords" content="payment processing careers, merchant services jobs, fintech careers, payment industry jobs, POS sales jobs, merchant solutions careers" />
+        <link rel="canonical" href="/company/careers" />
+      </Helmet>
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-blue-700 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

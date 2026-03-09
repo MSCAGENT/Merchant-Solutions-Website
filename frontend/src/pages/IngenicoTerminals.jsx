@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -227,6 +228,12 @@ const IngenicoTerminals = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Ingenico Payment Terminals | Move 5000, Lane 3000 & Link 2500</title>
+        <meta name="description" content="Ingenico payment terminals including Move 5000, Lane 3000, and Link 2500. Smart, secure, and fast payment devices for countertop, mobile, and unattended environments." />
+        <meta name="keywords" content="Ingenico terminals, Ingenico Move 5000, Ingenico Lane 3000, Ingenico Link 2500, payment terminal, smart POS terminal, EMV terminal, contactless terminal" />
+        <link rel="canonical" href="/pos/ingenico" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Check, ChevronRight, CreditCard, Clock, Shield, CheckCircle, Monitor, FileText, RefreshCw, Smartphone, LinkIcon, QrCode, ShoppingCart } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -164,6 +165,12 @@ const PayAnywhere = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>PayAnywhere Smart POS | Mobile Payment Processing & Smart Terminal</title>
+        <meta name="description" content="PayAnywhere smart POS terminals and mobile payment processing. Smart Flex, Smart Terminal, and card readers for businesses of all sizes with next-day funding and transparent pricing." />
+        <meta name="keywords" content="PayAnywhere POS, PayAnywhere smart terminal, mobile payment processing, smart POS terminal, PayAnywhere card reader, portable payment terminal, mobile credit card processing" />
+        <link rel="canonical" href="/pos/payanywhere" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

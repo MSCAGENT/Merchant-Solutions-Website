@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, DollarSign } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -9,6 +10,12 @@ import { mockData } from '../mock';
 const POSHardware = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>POS Hardware | Payment Terminals & Accessories | Merchant Solutions Corp</title>
+        <meta name="description" content="Browse POS hardware including payment terminals, receipt printers, cash drawers, barcode scanners, and kiosks. Clover, Square, Dejavoo, Ingenico, and PAX devices available." />
+        <meta name="keywords" content="POS hardware, payment terminals, receipt printer, cash drawer, barcode scanner, POS accessories, Clover hardware, Square hardware, POS equipment" />
+        <link rel="canonical" href="/pos-hardware" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

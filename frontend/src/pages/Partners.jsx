@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Users, Building2, Briefcase } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -11,6 +12,12 @@ const Partners = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Our Partners | Technology & Service Partners | Merchant Solutions Corp</title>
+        <meta name="description" content="Explore Merchant Solutions Corp technology and service partners. Clover, Square, PayAnywhere, Dejavoo, Ingenico, DaySmart, and more powering business payment solutions." />
+        <meta name="keywords" content="payment processing partners, Clover partner, Square partner, POS technology partners, merchant services partners, payment industry partners" />
+        <link rel="canonical" href="/company/partners" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

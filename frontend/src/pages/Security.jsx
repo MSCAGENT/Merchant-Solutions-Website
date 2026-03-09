@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Shield, Lock, CheckCircle, FileCheck } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -7,6 +8,12 @@ import { Card, CardContent } from '../components/ui/card';
 const Security = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Security & Compliance | PCI DSS, EMV & Data Protection | Merchant Solutions Corp</title>
+        <meta name="description" content="Learn about Merchant Solutions Corp security practices. PCI DSS compliance, EMV chip technology, end-to-end encryption, tokenization, and fraud prevention for secure payment processing." />
+        <meta name="keywords" content="payment security, PCI DSS compliance, EMV chip, payment encryption, tokenization, fraud prevention, secure payment processing, data protection, merchant security" />
+        <link rel="canonical" href="/security" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

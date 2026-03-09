@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   Code,
@@ -150,6 +151,12 @@ const ISVPartnerships = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>ISV Partnership Program | Payment Integration for Software Companies</title>
+        <meta name="description" content="ISV partnership program for software companies. Integrate payment processing into your software with our API, earn revenue share, and provide seamless merchant services to your users." />
+        <meta name="keywords" content="ISV partnership, software payment integration, payment API, ISV program, embedded payments, software company payments, payment integration partner" />
+        <link rel="canonical" href="/partnerships/isv" />
+      </Helmet>
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10">

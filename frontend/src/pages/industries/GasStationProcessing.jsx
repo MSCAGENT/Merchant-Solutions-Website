@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle, Shield, AlertTriangle, ChevronRight, ArrowRight,
@@ -17,14 +18,6 @@ const GasStationProcessing = () => {
   const [showLeadModal, setShowLeadModal] = useState(false);
 
   useEffect(() => {
-    document.title = 'Gas Station Payment Processing, EMV Fuel Pump & POS Upgrades | Merchant Solutions Corp';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Gas station payment processing, EMV fuel pump upgrades, fleet card acceptance, and petroleum POS systems. Reduce fees, improve funding speed, and modernize your forecourt technology.';
-    if (metaDesc) metaDesc.setAttribute('content', content);
-    else { const m = document.createElement('meta'); m.name = 'description'; m.content = content; document.head.appendChild(m); }
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
-    canonical.href = 'https://www.merchantsolutionscorp.com/emv-gas-station-payment-processing';
     if (!document.querySelector('link[href*="calendly.com"]')) {
       const link = document.createElement('link'); link.href = 'https://assets.calendly.com/assets/external/widget.css'; link.rel = 'stylesheet'; document.head.appendChild(link);
     }
@@ -100,6 +93,12 @@ const GasStationProcessing = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Gas Station Payment Processing | EMV Fuel Pump & POS Upgrades</title>
+        <meta name="description" content="Gas station payment processing, EMV fuel pump upgrades, fleet card acceptance, and petroleum POS systems. Reduce fees, improve funding speed, and modernize your forecourt technology." />
+        <meta name="keywords" content="gas station payment processing, EMV fuel pump, gas station POS, petroleum payment processing, fleet card processing, fuel pump upgrade, gas station merchant services, convenience store POS" />
+        <link rel="canonical" href="/emv-gas-station-payment-processing" />
+      </Helmet>
       {/* Hero */}
       <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">

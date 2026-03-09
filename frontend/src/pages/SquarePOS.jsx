@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import { 
@@ -87,20 +88,6 @@ const SquarePOS = () => {
       window.Calendly.initPopupWidget({ url: 'https://calendly.com/mscpayments/posdemo?hide_event_type_details=1&primary_color=1400ff' });
     }
   };
-
-  useEffect(() => {
-    document.title = 'Square Point of Sale Systems | Authorized Square Dealer | Installation & Training Nationwide';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Authorized Square dealer providing complete Square POS setup, installation, training, and ongoing support across all 50 U.S. states. Square Register, Terminal, Stand & Reader hardware with professional onboarding.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   const dealerPainPoints = [
     'Choosing the right hardware',
@@ -293,6 +280,12 @@ const SquarePOS = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Square Point of Sale Systems | Authorized Square Dealer | Installation & Training Nationwide</title>
+        <meta name="description" content="Authorized Square dealer providing complete Square POS setup, installation, training, and ongoing support across all 50 U.S. states. Square Register, Terminal, Stand & Reader hardware with professional onboarding." />
+        <meta name="keywords" content="Square POS, Square Register, Square Terminal, Square dealer, Square POS installation, Square setup, Square point of sale, Square card reader, Square for restaurants, Square for retail" />
+        <link rel="canonical" href="/pos/square" />
+      </Helmet>
       {/* Hero Section with Video */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden" data-testid="hero-video-section">
         {heroVideos.map((src, i) => (

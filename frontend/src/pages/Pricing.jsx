@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CreditCard, Phone } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
@@ -8,19 +9,6 @@ const Pricing = () => {
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [selectedPlatform, setSelectedPlatform] = useState(null);
   const [showAppModal, setShowAppModal] = useState(false);
-
-  useEffect(() => {
-    document.title = 'Pricing | Merchant Processing Rates & POS Plans | Merchant Solutions Corp';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Compare merchant processing rates: Flat Rate, Interchange Plus, and Dual Price/Cash Discount. Choose your POS software, business type, and payment platform. Get started with Clover, Square, Payanywhere, Dejavoo, or Ingenico.';
-    if (metaDesc) metaDesc.setAttribute('content', content);
-    else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   const pricingOptions = [
     { id: 'flat', label: 'Flat rate (2.60%+0.15)', sub: 'Flat rate 3.5%+0.20' },
@@ -107,6 +95,12 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Pricing | Merchant Processing Rates & POS Plans | Merchant Solutions Corp</title>
+        <meta name="description" content="Compare merchant processing rates: Flat Rate, Interchange Plus, and Dual Price/Cash Discount. Choose your POS software, business type, and payment platform. Clover, Square, PayAnywhere, Dejavoo, and Ingenico pricing." />
+        <meta name="keywords" content="payment processing pricing, merchant processing rates, credit card processing fees, POS system pricing, interchange plus pricing, flat rate processing, dual pricing, cash discount program pricing" />
+        <link rel="canonical" href="/pricing" />
+      </Helmet>
       {/* Hero */}
       <section className="relative w-full bg-gradient-to-br from-purple-100 via-white to-purple-50 py-20 lg:py-28 overflow-hidden" data-testid="pricing-hero">
         <div className="absolute inset-0 opacity-20">
