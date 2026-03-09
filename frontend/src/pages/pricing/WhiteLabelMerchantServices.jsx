@@ -392,10 +392,6 @@ export default function WhiteLabelMerchantServices() {
                       <span className="font-bold text-gray-900">$12,000 annually</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Compliance Certification</span>
-                      <span className="font-bold text-gray-900">$XXXX.XX (per operations)</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
                       <span className="text-gray-600">ISO Sales Engine CRM + Voice AI</span>
                       <span className="font-bold text-gray-900">$1,500/mo</span>
                     </div>
@@ -474,6 +470,13 @@ export default function WhiteLabelMerchantServices() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* YOUR LOGO IMAGE */}
+      <section className="py-16 bg-white">
+        <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/l6da82du_slanted_logo.png" alt="Your Logo — White Label Branding" className="w-64 h-64 mx-auto object-contain" />
         </div>
       </section>
 
