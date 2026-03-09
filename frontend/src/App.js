@@ -15,6 +15,7 @@ import Gateway from "./pages/Gateway";
 import Partners from "./pages/Partners";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
+import AboutMSC from "./pages/AboutMSC";
 import Security from "./pages/Security";
 import Login from "./pages/Login";
 import PayAnywhere from "./pages/PayAnywhere";
@@ -199,7 +200,8 @@ function App() {
           <Route path="/resources/industry-guides" element={<Resources />} />
           
           {/* Company Routes */}
-          <Route path="/company/about" element={<About />} />
+          <Route path="/about-merchant-solutions-corp" element={<AboutMSC />} />
+          <Route path="/company/about" element={<AboutMSC />} />
           <Route path="/company/mission" element={<About />} />
           <Route path="/company/why-us" element={<About />} />
           <Route path="/company/security-compliance" element={<Security />} />

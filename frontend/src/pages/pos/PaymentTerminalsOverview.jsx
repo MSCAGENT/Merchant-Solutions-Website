@@ -280,7 +280,7 @@ export default function PaymentTerminalsOverview() {
                 </Link>
               </div>
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm flex items-center justify-center min-h-[260px]">
-                <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/i4gkdzfe_A77_Slider1.png" alt="pax-a77-smart-terminal" className="max-h-[280px] w-auto object-contain" />
+                <img src="https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/307b1972_swipe%20simple%20bundle.png" alt="pax-swipesimple-terminal-bundle" className="max-h-[280px] w-auto object-contain" />
               </div>
             </div>
 

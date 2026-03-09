@@ -26,6 +26,16 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Documents: /resources/documents (login-protected)
 
 ## Completed (2026-03-09)
+- **PAX Terminal Image Updated**: Changed from A77 to SwipeSimple bundle image on Payment Terminals Overview page
+- **About Us Page Created** (`/about-merchant-solutions-corp`):
+  - 8 content sections: About, Payment Processing, POS Systems, Industries, Florida, Dealership Model, Why Choose Us, FAQ
+  - Full SEO: meta title, description, keywords, canonical URL, Organization + FAQ JSON-LD schemas
+  - User-provided images with purple gradient tint overlays
+  - Internal links to all relevant pages
+  - Calendly popup integration, Lead Connector form modal
+  - Navigation updated: "About Us" now points to new page
+
+## Completed (2026-03-09) - Earlier
 - **Subscription Payment Processing — Bronze/Silver/Platinum Tiers**:
   - Added program labels (Bronze, Silver, Platinum) and interchange costs to pricing cards
   - Bronze (1-10 locations): +15 bps & $0.05/txn

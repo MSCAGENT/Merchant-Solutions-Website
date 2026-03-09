@@ -177,7 +177,7 @@ const megaMenus = {
   Company: {
     type: 'dropdown',
     items: [
-      { label: 'About Us', path: '/company/about' },
+      { label: 'About Us', path: '/about-merchant-solutions-corp' },
       { label: 'Contact', path: '/contact' },
       { label: 'Support', path: '/company/support' },
       { label: 'Careers', path: '/partnerships/careers' },
