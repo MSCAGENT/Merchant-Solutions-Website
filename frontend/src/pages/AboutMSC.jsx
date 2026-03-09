@@ -85,6 +85,21 @@ export default function AboutMSC() {
     operations: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/ypw5fvzc_Vivid-LP-FeatureValue-image-operations-v2.jpg',
   };
 
+  const heroVideoRef = React.useRef(null);
+  const videoSources = [
+    'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/1vrr2x41_Miami%20skyline%20aerial.mp4',
+    'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/czhub7hz_Orlando%20Downtown.mp4'
+  ];
+  const videoIdx = React.useRef(0);
+
+  const handleVideoEnded = () => {
+    videoIdx.current = (videoIdx.current + 1) % videoSources.length;
+    if (heroVideoRef.current) {
+      heroVideoRef.current.src = videoSources[videoIdx.current];
+      heroVideoRef.current.play();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -100,36 +115,36 @@ export default function AboutMSC() {
       </Helmet>
 
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-white py-24 md:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" data-testid="about-hero-h1">
-                Merchant Services &amp; POS Systems Provider Since 2012
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-                Merchant Solutions Corp helps businesses accept payments, deploy modern POS systems, and streamline operations through reliable payment technology.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" onClick={() => setShowFormModal(true)} data-testid="hero-contact-btn">
-                  Contact Sales
-                </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6" onClick={openCalendly} data-testid="hero-book-btn">
-                  Book a Consultation
-                </Button>
-              </div>
-              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-400" data-testid="trust-line">
-                <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4 text-purple-400" /> Serving Florida &amp; Surrounding States</span>
-                <span className="flex items-center gap-1.5"><Globe className="h-4 w-4 text-purple-400" /> International Coverage since 2020</span>
-                <span className="flex items-center gap-1.5"><Monitor className="h-4 w-4 text-purple-400" /> POS Systems &amp; Payment Processing</span>
-                <span className="flex items-center gap-1.5"><Shield className="h-4 w-4 text-purple-400" /> Trusted Since 2012</span>
-              </div>
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <video
+          ref={heroVideoRef}
+          autoPlay muted playsInline
+          onEnded={handleVideoEnded}
+          src={videoSources[0]}
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-purple-950/80 to-gray-900/70 z-10" />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" data-testid="about-hero-h1">
+              Merchant Services &amp; POS Systems Provider Since 2012
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+              Merchant Solutions Corp helps businesses accept payments, deploy modern POS systems, and streamline operations through reliable payment technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" onClick={() => setShowFormModal(true)} data-testid="hero-contact-btn">
+                Contact Sales
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6" onClick={openCalendly} data-testid="hero-book-btn">
+                Book a Consultation
+              </Button>
             </div>
-            <div className="hidden lg:block relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-blue-600/20 rounded-2xl z-10 mix-blend-multiply" />
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img src={IMG.hero} alt="merchant-services-pos-systems-overview" className="w-full h-[440px] object-cover object-top" />
-              </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-400" data-testid="trust-line">
+              <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4 text-purple-400" /> Serving Florida &amp; Surrounding States</span>
+              <span className="flex items-center gap-1.5"><Globe className="h-4 w-4 text-purple-400" /> International Coverage since 2020</span>
+              <span className="flex items-center gap-1.5"><Monitor className="h-4 w-4 text-purple-400" /> POS Systems &amp; Payment Processing</span>
+              <span className="flex items-center gap-1.5"><Shield className="h-4 w-4 text-purple-400" /> Trusted Since 2012</span>
             </div>
           </div>
         </div>
