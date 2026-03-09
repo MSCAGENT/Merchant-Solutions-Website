@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
   const [activeTab, setActiveTab] = useState('contact');
-
-  useEffect(() => {
-    document.title = 'Contact Us | Merchant Solutions Corp';
-  }, []);
 
   useEffect(() => {
     // Load Lead Connector script
@@ -21,6 +18,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
+      <Helmet>
+        <title>Contact Us | Merchant Solutions Corp | Payment Processing Support</title>
+        <meta name="description" content="Contact Merchant Solutions Corp for payment processing, POS systems, and merchant services. Call (888) 407-8886 or fill out our form for a free consultation." />
+        <meta name="keywords" content="contact merchant solutions, payment processing support, merchant services phone number, POS system consultation, credit card processing help" />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-testid="contact-heading">Get in Touch</h1>

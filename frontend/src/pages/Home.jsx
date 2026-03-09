@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CreditCard, Globe, Store, Shield, TrendingUp, Award, Clock, DollarSign, CheckCircle, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -27,6 +28,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Merchant Solutions Corp | Payment Processing, POS Systems & Business Solutions</title>
+        <meta name="description" content="Merchant Solutions Corp provides payment processing, POS systems, and merchant services for restaurants, retail, healthcare, and service businesses nationwide. Clover, Square, and custom solutions with next-day funding." />
+        <meta name="keywords" content="payment processing, merchant services, POS systems, credit card processing, Clover POS, Square POS, restaurant POS, retail POS, payment terminals, merchant account, business payment solutions" />
+        <link rel="canonical" href="/" />
+      </Helmet>
       {/* Video Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
         <video

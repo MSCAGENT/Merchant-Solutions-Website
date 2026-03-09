@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -182,8 +183,25 @@ const Healthcare = () => {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Healthcare Payment Processing | HIPAA Compliant Merchant Services & EMR Integration</title>
+        <meta name="description" content="HIPAA compliant healthcare payment processing with EMR and practice management integration. Patient payment plans, text-to-pay, online portals, and compliance solutions for medical, dental, and specialty practices." />
+        <meta name="keywords" content="healthcare payment processing, HIPAA compliant payments, medical merchant services, patient payment plans, EMR payment integration, practice management bridge, dental payment processing, medical billing solutions, healthcare POS system" />
+        <link rel="canonical" href="/medical-payment-processing-emr-integration" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Video Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
         <video

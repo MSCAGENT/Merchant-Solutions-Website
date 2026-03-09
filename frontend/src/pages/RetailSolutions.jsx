@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle, ShoppingCart, Wine, Store, Shirt,
@@ -23,20 +24,6 @@ import {
 const RetailSolutions = () => {
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
-
-  useEffect(() => {
-    document.title = 'Retail Payment Systems | Get a Retail POS for $0';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Retail POS systems for grocery, convenience, smoke shops, CBD, clothing & gift stores. Barcode scanning, inventory tracking, and payment processing installed nationwide.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!showDemoModal) return;
@@ -153,8 +140,25 @@ const RetailSolutions = () => {
     'dual pricing POS', 'cash discount retail', 'multi-location retail POS'
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Retail Payment Systems | Get a Retail POS for $0 | Merchant Solutions Corp</title>
+        <meta name="description" content="Retail POS systems for grocery, convenience, smoke shops, CBD, clothing & gift stores. Barcode scanning, inventory tracking, and payment processing installed nationwide." />
+        <meta name="keywords" content={seoKeywords.join(', ')} />
+        <link rel="canonical" href="/retail-payment-solutions" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero Section with Video */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden" data-testid="retail-hero">
         <video

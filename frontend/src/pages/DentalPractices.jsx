@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -81,19 +82,6 @@ const DentalPractices = () => {
   const handleVideoEnded = () => {
     setActiveVideo((prev) => (prev + 1) % heroVideos.length);
   };
-
-  useEffect(() => {
-    document.title = 'Dental Payment Processing & EMR Integration | Merchant Services for Dental Offices';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Secure dental payment processing integrated with Dentrix, Eaglesoft, Open Dental and more. Merchant services, EMR integration, and dental marketing solutions nationwide.');
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = 'Secure dental payment processing integrated with Dentrix, Eaglesoft, Open Dental and more. Merchant services, EMR integration, and dental marketing solutions nationwide.';
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
@@ -192,8 +180,25 @@ const DentalPractices = () => {
     'Dental credit card processing near me'
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Dental Payment Processing & EMR Integration | Merchant Services for Dental Offices</title>
+        <meta name="description" content="Secure dental payment processing integrated with Dentrix, Eaglesoft, Open Dental and more. Merchant services, EMR integration, and dental marketing solutions nationwide." />
+        <meta name="keywords" content="dental payment processing, dental EMR integration, dental merchant services, Dentrix payment processing, Eaglesoft payment integration, Open Dental payments, dental credit card processing, dental office POS, dental billing solutions" />
+        <link rel="canonical" href="/dental-payment-processing-emr-integration" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
         {heroVideos.map((src, i) => (

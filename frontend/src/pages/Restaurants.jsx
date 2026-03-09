@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -33,20 +34,18 @@ const Restaurants = () => {
   const [showContactModal, setShowContactModal] = useState(false);
   const [showCalendlyModal, setShowCalendlyModal] = useState(false);
 
-  // SEO meta tags
-  useEffect(() => {
-    document.title = 'Restaurant Payment Processing Services | Clover, Square & iTabPOS | Merchant Solutions Corp';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Restaurant payment processing and POS installation services. Clover, Square and iTabPOS with consulting, deployment and digital advertising to grow restaurant sales 20–30 percent.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How fast can my restaurant go live?", "acceptedAnswer": { "@type": "Answer", "text": "Most restaurants in Florida can go live within 3-10 days depending on complexity." } },
+      { "@type": "Question", "name": "Can you import my existing menu?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build or import your menu, modifiers, and pricing before installation." } },
+      { "@type": "Question", "name": "Do you support multi-location restaurant groups?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install and manage reporting across multiple restaurant locations nationwide." } },
+      { "@type": "Question", "name": "What happens if internet goes down?", "acceptedAnswer": { "@type": "Answer", "text": "Most systems offer offline transaction capability to prevent downtime." } },
+      { "@type": "Question", "name": "How does restaurant cash discount work?", "acceptedAnswer": { "@type": "Answer", "text": "We configure compliant dual pricing so customers see both card and cash prices. This helps offset processing fees." } },
+      { "@type": "Question", "name": "Do you help with chargebacks?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide documentation guidance and support for restaurant chargeback disputes." } }
+    ]
+  };
 
   // Load Calendly widget script when modal opens
   useEffect(() => {
@@ -201,6 +200,13 @@ const Restaurants = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Restaurant Payment Processing Services | Clover, Square & iTabPOS | Merchant Solutions Corp</title>
+        <meta name="description" content="Restaurant payment processing and POS installation services. Clover, Square and iTabPOS with consulting, deployment and digital advertising to grow restaurant sales 20-30 percent." />
+        <meta name="keywords" content="restaurant payment processing, restaurant POS system, Clover restaurant POS, Square restaurant, iTabPOS, restaurant credit card processing, restaurant merchant services, POS installation Florida" />
+        <link rel="canonical" href="/restaurant-payment-processing-services" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero Section with Video */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
         <video

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Shield, Award, Users, Target } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -8,6 +9,12 @@ import { mockData } from '../mock';
 const About = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>About Merchant Solutions Corp | Payment Processing Company Since 2005</title>
+        <meta name="description" content="Learn about Merchant Solutions Corp, a leading payment processing provider since 2005. Serving 50,000+ merchants nationwide with POS systems, merchant services, and 24/7 support." />
+        <meta name="keywords" content="about Merchant Solutions Corp, payment processing company, merchant services provider, POS systems company, credit card processing provider" />
+        <link rel="canonical" href="/company/about" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

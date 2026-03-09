@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
@@ -34,20 +35,6 @@ import {
 const SalonSpa = () => {
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
-
-  useEffect(() => {
-    document.title = 'Salon & Spa Payment Processing | Booking Software + POS Installation | DaySmart, Clover & Square';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const content = 'Salon and spa payment processing with DaySmart booking software, Clover POS, and Square POS. Online scheduling, automated reminders, integrated merchant services for hair salons, nail salons, skin clinics, and independent beauty professionals. Nationwide installation.';
-    if (metaDesc) {
-      metaDesc.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   useEffect(() => {
     if (!showDemoModal) return;
@@ -248,8 +235,25 @@ const SalonSpa = () => {
     'salon online booking', 'salon no-show protection', 'salon marketing software'
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Salon & Spa Payment Processing | Booking Software + POS Installation | DaySmart, Clover & Square</title>
+        <meta name="description" content="Salon and spa payment processing with DaySmart booking software, Clover POS, and Square POS. Online scheduling, automated reminders, integrated merchant services for hair salons, nail salons, skin clinics, and independent beauty professionals. Nationwide installation." />
+        <meta name="keywords" content={seoKeywords.join(', ')} />
+        <link rel="canonical" href="/salon-spa-payment-processing" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Hero Section with Video */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden" data-testid="salon-hero">
         <video
