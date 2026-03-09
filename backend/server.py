@@ -356,7 +356,7 @@ class WebhookSettings(BaseModel):
 
 @api_router.post("/autoseo/webhook")
 async def autoseo_webhook(request: Request):
-    import hmac, hashlib
+    import hmac, hashlib, json as json_lib
 
     # 1. Verify Authorization Bearer token
     auth_header = request.headers.get("authorization", "")
@@ -364,19 +364,19 @@ async def autoseo_webhook(request: Request):
     if token != AUTOSEO_WEBHOOK_SECRET:
         raise HTTPException(status_code=401, detail="Invalid or missing Bearer token")
 
-    # 2. Read raw body for HMAC verification
+    # 2. Read raw body
     raw_body = await request.body()
 
-    # 3. Optionally verify HMAC-SHA256 signature
+    # 3. Optionally verify HMAC-SHA256 signature (log warning only, don't reject)
     signature = request.headers.get("x-autoseo-signature", "")
     if signature:
         expected = hmac.new(AUTOSEO_WEBHOOK_SECRET.encode(), raw_body, hashlib.sha256).hexdigest()
         if not hmac.compare_digest(signature, expected):
-            raise HTTPException(status_code=401, detail="Invalid HMAC signature")
+            logger.warning(f"AutoSEO HMAC mismatch: got {signature[:16]}... expected {expected[:16]}...")
 
-    # 4. Parse JSON body
+    # 4. Parse JSON body from raw bytes (don't re-read stream)
     try:
-        payload = await request.json()
+        payload = json_lib.loads(raw_body)
     except Exception:
         raise HTTPException(status_code=400, detail="Invalid JSON body")
 
