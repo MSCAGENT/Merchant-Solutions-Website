@@ -516,28 +516,16 @@ export default function WhiteLabelMerchantServices() {
             We handle the payment rails while you focus on building your brand and merchant network.
           </p>
 
-          {/* Logo Carousel */}
-          <div className="mt-14 overflow-hidden" data-testid="wl-logo-carousel">
-            <style>{`
-              @keyframes wl-logo-scroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-              }
-            `}</style>
-            <div className="flex" style={{ animation: 'wl-logo-scroll 20s linear infinite', width: 'max-content' }}>
-              {[...Array(2)].map((_, setIdx) => (
-                <div key={setIdx} className="flex items-center gap-16 px-8">
-                  {[
-                    { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/576uv1kj_High-Resulation-2.png', alt: 'PaymentLynk' },
-                    { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/ehgdejwz_Lrg.png', alt: 'Ideal Payments' },
-                    { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/6xp1ix02_Pament%20technology.PNG', alt: 'Payment Technology' },
-                    { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/5bt95zy7_6.jpg', alt: 'Enova Gateway Payments' },
-                  ].map((logo, i) => (
-                    <img key={i} src={logo.src} alt={logo.alt} className="h-16 w-auto object-contain flex-shrink-0" style={{ filter: 'grayscale(100%) brightness(0.35)' }} />
-                  ))}
-                </div>
-              ))}
-            </div>
+          {/* Partner Logos */}
+          <div className="mt-14 flex items-center justify-center gap-16 flex-wrap" data-testid="wl-logo-carousel">
+            {[
+              { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/6xp1ix02_Pament%20technology.PNG', alt: 'Payment Technology' },
+              { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/5bt95zy7_6.jpg', alt: 'Enova Gateway Payments' },
+              { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/576uv1kj_High-Resulation-2.png', alt: 'PaymentLynk' },
+              { src: 'https://customer-assets.emergentagent.com/job_d913f905-fbe6-4eac-a560-43e237e806df/artifacts/ehgdejwz_Lrg.png', alt: 'Ideal Payments' },
+            ].map((logo, i) => (
+              <img key={i} src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain" style={{ filter: 'grayscale(100%) brightness(0.3)' }} />
+            ))}
           </div>
         </div>
       </section>
