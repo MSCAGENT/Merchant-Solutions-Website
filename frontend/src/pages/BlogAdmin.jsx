@@ -25,7 +25,9 @@ const BlogAdmin = () => {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('all');
   const [uploading, setUploading] = useState(false);
+  const [coverUploading, setCoverUploading] = useState(false);
   const fileInputRef = useRef(null);
+  const coverInputRef = useRef(null);
 
   const emptyPost = {
     content_type: 'blog', title: '', slug: '', meta_title: '', meta_description: '', schema_markup: '',
@@ -89,6 +91,23 @@ const BlogAdmin = () => {
     } catch (err) { console.error('Upload failed:', err); }
     setUploading(false);
     if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const handleCoverUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setCoverUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      const res = await fetch(`${API}/api/upload`, { method: 'POST', body: formData });
+      if (res.ok) {
+        const data = await res.json();
+        setForm(prev => ({ ...prev, cover_image: `${API}/api/files/${data.storage_path}` }));
+      }
+    } catch (err) { console.error('Cover upload failed:', err); }
+    setCoverUploading(false);
+    if (coverInputRef.current) coverInputRef.current.value = '';
   };
 
   const removeAttachment = (idx) => {
@@ -247,8 +266,21 @@ const BlogAdmin = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1"><Image className="h-3 w-3 inline mr-1" />Cover Image URL</label>
-              <input type="text" value={form.cover_image} onChange={e => setForm({ ...form, cover_image: e.target.value })} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="https://example.com/image.jpg" />
+              <label className="block text-sm font-medium text-gray-700 mb-1"><Image className="h-3 w-3 inline mr-1" />Cover Image</label>
+              <div className="flex items-center gap-3 mb-2">
+                <input ref={coverInputRef} type="file" accept="image/*" onChange={handleCoverUpload} className="hidden" data-testid="cover-upload-input" />
+                <Button type="button" variant="outline" onClick={() => coverInputRef.current?.click()} disabled={coverUploading} className="text-sm" data-testid="cover-upload-btn">
+                  <Upload className="h-4 w-4 mr-2" /> {coverUploading ? 'Uploading...' : 'Upload Image'}
+                </Button>
+                <span className="text-xs text-gray-400">or paste a URL below</span>
+              </div>
+              <input type="text" value={form.cover_image} onChange={e => setForm({ ...form, cover_image: e.target.value })} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm" placeholder="https://example.com/image.jpg" data-testid="cover-url-input" />
+              {form.cover_image && (
+                <div className="mt-2 relative inline-block">
+                  <img src={form.cover_image} alt="Cover preview" className="h-24 rounded-lg object-cover border border-gray-200" onError={e => e.target.style.display = 'none'} />
+                  <button type="button" onClick={() => setForm({ ...form, cover_image: '' })} className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-0.5 hover:bg-red-600" data-testid="cover-remove-btn"><X className="h-3 w-3" /></button>
+                </div>
+              )}
             </div>
 
             {/* SEO Fields */}
