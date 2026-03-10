@@ -1,7 +1,13 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Navigation from "./components/Navigation";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  React.useLayoutEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/sonner";
 
@@ -91,6 +97,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
