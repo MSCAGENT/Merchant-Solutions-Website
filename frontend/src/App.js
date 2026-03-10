@@ -16,6 +16,7 @@ import Partners from "./pages/Partners";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import AboutMSC from "./pages/AboutMSC";
+import FoodTruckPOS from "./pages/FoodTruckPOS";
 import Security from "./pages/Security";
 import Login from "./pages/Login";
 import PayAnywhere from "./pages/PayAnywhere";
@@ -169,6 +170,7 @@ function App() {
           
           {/* Gateway Routes */}
           <Route path="/voice-ai-business-automation" element={<VoiceAIAutomation />} />
+          <Route path="/food-trucks-pos" element={<FoodTruckPOS />} />
           <Route path="/dual-pricing-cash-discount-payment-processing" element={<DualPricing />} />
           <Route path="/solutions/dual-pricing" element={<DualPricing />} />
           <Route path="/gateway/payments-gateway" element={<MSCGateway />} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Calendar, MessageSquare, Bell, TrendingUp, ArrowRight } from 'lucide-react';
+import { Phone, PhoneCall, Calendar, MessageSquare, Bell, TrendingUp, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 const aiFeatures = [
@@ -15,6 +15,12 @@ const aiFeatures = [
     title: 'AI Appointment Scheduling',
     desc: 'Businesses such as salons, spas, and service providers can use AI to schedule appointments and confirm bookings automatically.',
     detail: 'The AI assistant interacts with customers through phone or chat and updates the POS or scheduling system.',
+  },
+  {
+    icon: PhoneCall,
+    title: 'AI Voice Appointment Reservations',
+    desc: 'Voice AI can handle inbound reservation calls for restaurants, answering availability questions and booking tables in real time.',
+    detail: 'Customers call, the AI confirms the reservation, and it syncs directly with your POS or booking system — no staff intervention needed.',
   },
   {
     icon: MessageSquare,

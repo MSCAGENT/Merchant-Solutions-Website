@@ -52,6 +52,7 @@ const megaMenus = {
         items: [
           { label: 'Restaurants', desc: 'POS systems and payment processing for restaurants and food service businesses.', path: '/restaurant-payment-processing-services' },
           { label: 'Food Trucks', desc: 'Mobile payment processing for food trucks and mobile vendors.', path: '/industries/food-trucks' },
+          { label: 'Food Truck POS Systems', desc: 'Best POS systems for food trucks with Payanywhere, Square, and Clover.', path: '/food-trucks-pos' },
           { label: 'Cloud Kitchens', desc: 'Payment solutions for ghost kitchens and virtual restaurant brands.', path: '/industries/cloud-kitchens' },
           { label: 'Delivery Only', desc: 'Payment processing for delivery-only restaurant operations.', path: '/industries/delivery-only' },
         ],

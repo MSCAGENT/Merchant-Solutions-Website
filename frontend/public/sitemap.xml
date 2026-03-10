@@ -56,6 +56,7 @@
   <url><loc>https://merchantsolutionscorp.com/gateway/payments-gateway</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://merchantsolutionscorp.com/gateway/virtual-terminal</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://merchantsolutionscorp.com/voice-ai-business-automation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://merchantsolutionscorp.com/food-trucks-pos</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Industries -->
   <url><loc>https://merchantsolutionscorp.com/restaurant-payment-processing-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

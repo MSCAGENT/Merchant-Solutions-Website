@@ -754,6 +754,8 @@ const Restaurants = () => {
         </div>
       </section>
 
+      <AIPoweredSection onContactClick={() => setShowContactModal(true)} onCalendlyClick={() => setShowCalendlyModal(true)} />
+
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -804,8 +806,6 @@ const Restaurants = () => {
           </p>
         </div>
       </section>
-
-      <AIPoweredSection onContactClick={() => setShowContactModal(true)} onCalendlyClick={() => setShowCalendlyModal(true)} />
 
       {/* Contact Sales Modal (Lead Connector) */}
       {showContactModal && (
