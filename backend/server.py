@@ -27,7 +27,7 @@ api_router = APIRouter(prefix="/api")
 
 STORAGE_URL = "https://integrations.emergentagent.com/objstore/api/v1/storage"
 EMERGENT_KEY = os.environ.get("EMERGENT_LLM_KEY")
-APP_NAME = "msc-payments"
+APP_NAME = os.environ.get("APP_NAME", "msc-payments")
 storage_key = None
 
 def init_storage():
@@ -176,10 +176,10 @@ async def get_status_checks():
 
 # ─── Auth ───
 
-BLOG_USERNAME = "marketing@merchantsolutionscorp.com"
-BLOG_PASSWORD = "Mscpay$1"
-DOC_USERNAME = "admin1"
-DOC_PASSWORD = "12345"
+BLOG_USERNAME = os.environ.get("BLOG_USERNAME")
+BLOG_PASSWORD = os.environ.get("BLOG_PASSWORD")
+DOC_USERNAME = os.environ.get("DOC_USERNAME")
+DOC_PASSWORD = os.environ.get("DOC_PASSWORD")
 
 @api_router.post("/blog/login")
 async def blog_login(creds: DocLoginRequest):
