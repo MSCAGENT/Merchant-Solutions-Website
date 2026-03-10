@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
@@ -52,6 +52,21 @@ export default function CloudKitchenPOS() {
     }
   };
 
+  const heroVideoRef = useRef(null);
+  const videoSources = [
+    'https://customer-assets.emergentagent.com/job_c6b9224d-1fa4-4997-b5ef-41ad9de5ec14/artifacts/irukrkef_cloudkitchen1.mp4',
+    'https://customer-assets.emergentagent.com/job_c6b9224d-1fa4-4997-b5ef-41ad9de5ec14/artifacts/95yl7x4y_cloud%20kitchen2.mp4'
+  ];
+  const videoIdx = useRef(0);
+
+  const handleVideoEnded = () => {
+    videoIdx.current = (videoIdx.current + 1) % videoSources.length;
+    if (heroVideoRef.current) {
+      heroVideoRef.current.src = videoSources[videoIdx.current];
+      heroVideoRef.current.play();
+    }
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -79,11 +94,16 @@ export default function CloudKitchenPOS() {
       </Helmet>
 
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-white py-24 md:py-32">
-        <div className="absolute inset-0 opacity-15">
-          <img src="https://images.unsplash.com/photo-1771574207826-02f0d845e3a7?w=1600&q=80" alt="cloud-kitchen-pos-system" className="w-full h-full object-cover" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <video
+          ref={heroVideoRef}
+          autoPlay muted playsInline
+          onEnded={handleVideoEnded}
+          src={videoSources[0]}
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-purple-950/80 to-gray-900/70 z-10" />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight max-w-4xl" data-testid="cloud-kitchen-hero-h1">
             Cloud Kitchen POS Systems for Delivery-Only Restaurants
           </h1>
