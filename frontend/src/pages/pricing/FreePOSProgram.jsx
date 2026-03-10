@@ -231,6 +231,10 @@ export default function FreePOSProgram() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Advantage Credit Program | POS System with No Upfront Cost</title>
+        <meta property="og:title" content="Advantage Credit Program | POS System with No Upfront Cost" />
+        <meta property="og:description" content="The Advantage Program lets businesses get a Clover, Square, Exatouch POS system or terminal with $0 upfront. Process the required volume in 60 days and receive a statement credit or subscription reimbursement." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/free-pos-system" />
         <meta name="description" content="The Advantage Program lets businesses get a Clover, Square, Exatouch POS system or terminal with $0 upfront. Process the required volume in 60 days and receive a statement credit or subscription reimbursement." />
         <meta name="keywords" content="advantage credit program, POS system no upfront cost, free POS program, Clover POS free, Square POS program, Exatouch POS financing, payment terminal program, POS subscription reimbursement" />
         <link rel="canonical" href="/free-pos-system" />

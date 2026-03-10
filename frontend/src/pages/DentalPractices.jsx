@@ -194,6 +194,10 @@ const DentalPractices = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Dental Payment Processing & EMR Integration | Merchant Services for Dental Offices</title>
+        <meta property="og:title" content="Dental Payment Processing & EMR Integration | Merchant Services for Dental Offices" />
+        <meta property="og:description" content="Secure dental payment processing integrated with Dentrix, Eaglesoft, Open Dental and more. Merchant services, EMR integration, and dental marketing solutions nationwide." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/dental-payment-processing-emr-integration" />
         <meta name="description" content="Secure dental payment processing integrated with Dentrix, Eaglesoft, Open Dental and more. Merchant services, EMR integration, and dental marketing solutions nationwide." />
         <meta name="keywords" content="dental payment processing, dental EMR integration, dental merchant services, Dentrix payment processing, Eaglesoft payment integration, Open Dental payments, dental credit card processing, dental office POS, dental billing solutions" />
         <link rel="canonical" href="/dental-payment-processing-emr-integration" />

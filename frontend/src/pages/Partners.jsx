@@ -14,6 +14,10 @@ const Partners = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>Our Partners | Technology & Service Partners | Merchant Solutions Corp</title>
+        <meta property="og:title" content="Our Partners | Technology & Service Partners | Merchant Solutions Corp" />
+        <meta property="og:description" content="Explore Merchant Solutions Corp technology and service partners. Clover, Square, PayAnywhere, Dejavoo, Ingenico, DaySmart, and more powering business payment solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/company/partners" />
         <meta name="description" content="Explore Merchant Solutions Corp technology and service partners. Clover, Square, PayAnywhere, Dejavoo, Ingenico, DaySmart, and more powering business payment solutions." />
         <meta name="keywords" content="payment processing partners, Clover partner, Square partner, POS technology partners, merchant services partners, payment industry partners" />
         <link rel="canonical" href="/company/partners" />

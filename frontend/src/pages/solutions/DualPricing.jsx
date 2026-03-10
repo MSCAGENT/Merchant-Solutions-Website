@@ -297,6 +297,10 @@ const DualPricing = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Dual Pricing & Cash Discount Payment Processing | Compliant Zero Fee Program</title>
+        <meta property="og:title" content="Dual Pricing & Cash Discount Payment Processing | Compliant Zero Fee Program" />
+        <meta property="og:description" content="Compliant dual pricing and cash discount payment processing for restaurants, retail, healthcare, gas stations & e-commerce. Reduce 3-4% in fees with zero-fee processing." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/dual-pricing-cash-discount-payment-processing" />
         <meta name="description" content="Compliant dual pricing and cash discount payment processing for restaurants, retail, healthcare, gas stations & e-commerce. Reduce 3-4% in fees with zero-fee processing." />
         <meta name="keywords" content="dual pricing payment processing, cash discount program, zero fee processing, compliant dual pricing, restaurant dual pricing, retail cash discount, surcharge alternative, payment processing savings" />
         <link rel="canonical" href="/dual-pricing-cash-discount-payment-processing" />

@@ -190,6 +190,10 @@ const DejavooTerminals = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Dejavoo Payment Terminals | Z Series Smart Terminals & Mobile POS</title>
+        <meta property="og:title" content="Dejavoo Payment Terminals | Z Series Smart Terminals & Mobile POS" />
+        <meta property="og:description" content="Dejavoo Z series payment terminals for countertop, wireless, and mobile POS. Z11, Z8 smart terminals with dual-screen displays, EMV, NFC, and built-in receipt printing. Free placement available." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/pos/dejavoo-terminals" />
         <meta name="description" content="Dejavoo Z series payment terminals for countertop, wireless, and mobile POS. Z11, Z8 smart terminals with dual-screen displays, EMV, NFC, and built-in receipt printing. Free placement available." />
         <meta name="keywords" content="Dejavoo terminals, Dejavoo Z11, Dejavoo Z8, smart payment terminal, mobile POS terminal, countertop terminal, EMV terminal, NFC payment terminal, wireless payment terminal" />
         <link rel="canonical" href="/pos/dejavoo-terminals" />

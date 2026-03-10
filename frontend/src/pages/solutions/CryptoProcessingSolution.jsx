@@ -155,6 +155,10 @@ const CryptoProcessingSolution = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Cryptocurrency Payment Processing | Accept Bitcoin, Ethereum & Stablecoins</title>
+        <meta property="og:title" content="Cryptocurrency Payment Processing | Accept Bitcoin, Ethereum & Stablecoins" />
+        <meta property="og:description" content="Accept cryptocurrency payments for your business. Bitcoin, Ethereum, USDC, and stablecoin processing with instant conversion to USD. Secure blockchain payment solutions for merchants." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/crypto-processing" />
         <meta name="description" content="Accept cryptocurrency payments for your business. Bitcoin, Ethereum, USDC, and stablecoin processing with instant conversion to USD. Secure blockchain payment solutions for merchants." />
         <meta name="keywords" content="cryptocurrency payment processing, accept Bitcoin payments, Ethereum merchant services, stablecoin processing, crypto payment gateway, blockchain payments, USDC payments, crypto merchant account" />
         <link rel="canonical" href="/solutions/crypto-processing" />

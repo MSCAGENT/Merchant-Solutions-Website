@@ -37,6 +37,10 @@ const POSOverview = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>POS Systems | Restaurant, Retail & Service Industry POS Solutions</title>
+        <meta property="og:title" content="POS Systems | Restaurant, Retail & Service Industry POS Solutions" />
+        <meta property="og:description" content="Compare POS systems for restaurants, retail, and service businesses. Clover, Square, Exatouch, PayAnywhere, and more with professional installation, training, and support nationwide." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/pos-systems" />
         <meta name="description" content="Compare POS systems for restaurants, retail, and service businesses. Clover, Square, Exatouch, PayAnywhere, and more with professional installation, training, and support nationwide." />
         <meta name="keywords" content="POS systems, restaurant POS, retail POS, point of sale systems, Clover POS, Square POS, Exatouch POS, PayAnywhere POS, best POS system, POS comparison" />
         <link rel="canonical" href="/pos-systems" />

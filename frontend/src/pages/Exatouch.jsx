@@ -164,6 +164,10 @@ const Exatouch = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Exatouch POS System | Grocery, Liquor & Retail Point of Sale</title>
+        <meta property="og:title" content="Exatouch POS System | Grocery, Liquor & Retail Point of Sale" />
+        <meta property="og:description" content="Exatouch POS by Electronic Payments — the all-in-one point of sale system built for grocery stores, liquor stores, convenience stores, smoke shops, and retail. Inventory management, age verification, and EMV payments." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/pos/exatouch" />
         <meta name="description" content="Exatouch POS by Electronic Payments — the all-in-one point of sale system built for grocery stores, liquor stores, convenience stores, smoke shops, and retail. Inventory management, age verification, and EMV payments." />
         <meta name="keywords" content="Exatouch POS, grocery POS system, liquor store POS, retail POS system, convenience store POS, smoke shop POS, Exatouch point of sale, inventory management POS, age verification POS" />
         <link rel="canonical" href="/pos/exatouch" />

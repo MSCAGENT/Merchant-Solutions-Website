@@ -30,6 +30,10 @@ const Home = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>Merchant Solutions Corp | Payment Processing, POS Systems & Business Solutions</title>
+        <meta property="og:title" content="Merchant Solutions Corp | Payment Processing, POS Systems & Business Solutions" />
+        <meta property="og:description" content="Merchant Solutions Corp provides payment processing, POS systems, and merchant services for restaurants, retail, healthcare, and service businesses nationwide. Clover, Square, and custom solutions with next-day funding." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/" />
         <meta name="description" content="Merchant Solutions Corp provides payment processing, POS systems, and merchant services for restaurants, retail, healthcare, and service businesses nationwide. Clover, Square, and custom solutions with next-day funding." />
         <meta name="keywords" content="payment processing, merchant services, POS systems, credit card processing, Clover POS, Square POS, restaurant POS, retail POS, payment terminals, merchant account, business payment solutions" />
         <link rel="canonical" href="/" />

@@ -62,6 +62,10 @@ export default function CloverKiosk() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Clover Self-Ordering Kiosk | Restaurant Self Service POS</title>
+        <meta property="og:title" content="Clover Self-Ordering Kiosk | Restaurant Self Service POS" />
+        <meta property="og:description" content="Clover Kiosk is a self-ordering POS system designed for restaurants and quick-service businesses. Reduce lines, increase order value and improve service with a modern self-service kiosk." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/clover-kiosk" />
         <meta name="description" content="Clover Kiosk is a self-ordering POS system designed for restaurants and quick-service businesses. Reduce lines, increase order value and improve service with a modern self-service kiosk." />
         <meta name="keywords" content="Clover kiosk, restaurant self ordering kiosk, self service restaurant kiosk, restaurant ordering kiosk, Clover self ordering system, POS kiosk for restaurants, restaurant kiosk POS" />
         <link rel="canonical" href="/clover-kiosk" />

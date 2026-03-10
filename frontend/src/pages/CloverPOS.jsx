@@ -145,6 +145,10 @@ const CloverPOS = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Clover POS System for Restaurants and Retail | Clover Point of Sale</title>
+        <meta property="og:title" content="Clover POS System for Restaurants and Retail | Clover Point of Sale" />
+        <meta property="og:description" content="Explore Clover POS systems including Clover Station, Clover Mini and Clover Flex. Manage payments, inventory and business operations with a powerful cloud POS system." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/clover-pos-system" />
         <meta name="description" content="Explore Clover POS systems including Clover Station, Clover Mini and Clover Flex. Manage payments, inventory and business operations with a powerful cloud POS system." />
         <meta name="keywords" content="Clover POS, Clover POS system, Clover point of sale, Clover POS for small business, Clover Station POS, Clover Mini POS, Clover Flex POS" />
         <link rel="canonical" href="/clover-pos-system" />

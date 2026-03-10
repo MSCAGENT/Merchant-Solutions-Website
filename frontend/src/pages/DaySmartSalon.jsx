@@ -184,6 +184,10 @@ const DaySmartSalon = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>DaySmart Salon Software | All-in-One Salon Management & Payment Processing</title>
+        <meta property="og:title" content="DaySmart Salon Software | All-in-One Salon Management & Payment Processing" />
+        <meta property="og:description" content="DaySmart Salon is a cloud-based software solution for appointment scheduling, integrated payments, inventory, CRM, payroll, and salon growth tools. Professional installation and training." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/daysmart-salon-pos-software" />
         <meta name="description" content="DaySmart Salon is a cloud-based software solution for appointment scheduling, integrated payments, inventory, CRM, payroll, and salon growth tools. Professional installation and training." />
         <meta name="keywords" content="DaySmart Salon, salon software, salon management software, salon appointment scheduling, salon POS system, salon payment processing, salon booking software" />
         <link rel="canonical" href="/daysmart-salon-pos-software" />

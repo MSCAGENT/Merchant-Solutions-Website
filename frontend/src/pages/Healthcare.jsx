@@ -197,6 +197,10 @@ const Healthcare = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Healthcare Payment Processing | HIPAA Compliant Merchant Services & EMR Integration</title>
+        <meta property="og:title" content="Healthcare Payment Processing | HIPAA Compliant Merchant Services & EMR Integration" />
+        <meta property="og:description" content="HIPAA compliant healthcare payment processing with EMR and practice management integration. Patient payment plans, text-to-pay, online portals, and compliance solutions for medical, dental, and specialty practices." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/medical-payment-processing-emr-integration" />
         <meta name="description" content="HIPAA compliant healthcare payment processing with EMR and practice management integration. Patient payment plans, text-to-pay, online portals, and compliance solutions for medical, dental, and specialty practices." />
         <meta name="keywords" content="healthcare payment processing, HIPAA compliant payments, medical merchant services, patient payment plans, EMR payment integration, practice management bridge, dental payment processing, medical billing solutions, healthcare POS system" />
         <link rel="canonical" href="/medical-payment-processing-emr-integration" />

@@ -24,6 +24,10 @@ const SelfOrderingKiosk = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Best Self Ordering Kiosk for Restaurants | Clover, Square & iTabPOS</title>
+        <meta property="og:title" content="Best Self Ordering Kiosk for Restaurants | Clover, Square & iTabPOS" />
+        <meta property="og:description" content="Compare the best self ordering kiosk systems for restaurants. Clover, Square and iTabPOS with installation, consulting and merchant reimbursement programs across the United States, Canada and Puerto Rico." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/best-self-ordering-kiosk-for-restaurants" />
         <meta name="description" content="Compare the best self ordering kiosk systems for restaurants. Clover, Square and iTabPOS with installation, consulting and merchant reimbursement programs across the United States, Canada and Puerto Rico." />
         <meta name="keywords" content="self ordering kiosk, restaurant kiosk, Clover kiosk, Square kiosk, self service kiosk, restaurant self ordering, touchscreen kiosk, QSR kiosk, fast food kiosk" />
         <link rel="canonical" href="/best-self-ordering-kiosk-for-restaurants" />

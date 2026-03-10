@@ -190,6 +190,10 @@ const ProfessionalServices = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Professional Services Payment Processing | Clover & PYMT360 POS for Contractors</title>
+        <meta property="og:title" content="Professional Services Payment Processing | Clover & PYMT360 POS for Contractors" />
+        <meta property="og:description" content="Contractor payment processing and field service invoicing with Clover and PYMT360 POS. Estimates, e-signatures, ACH payments, and job-based reporting for service businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/professional-services-payment-processing-clover-pos" />
         <meta name="description" content="Contractor payment processing and field service invoicing with Clover and PYMT360 POS. Estimates, e-signatures, ACH payments, and job-based reporting for service businesses." />
         <meta name="keywords" content="contractor payment processing, field service invoicing, professional services POS, Clover for contractors, PYMT360 POS, service business payment processing, contractor billing, mobile invoicing" />
         <link rel="canonical" href="/professional-services-payment-processing-clover-pos" />

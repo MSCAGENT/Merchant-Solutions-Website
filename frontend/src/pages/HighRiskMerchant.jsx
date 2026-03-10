@@ -255,6 +255,10 @@ const HighRiskMerchant = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>High Risk Merchant Services | Online Gambling, Peptides, Prop Firms & CBD Processing</title>
+        <meta property="og:title" content="High Risk Merchant Services | Online Gambling, Peptides, Prop Firms & CBD Processing" />
+        <meta property="og:description" content="High risk merchant services for online gambling, peptides, prop trading firms, CBD, and kratom businesses. Secure payment processing with chargeback protection and multi-currency support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/high-risk-merchant-services" />
         <meta name="description" content="High risk merchant services for online gambling, peptides, prop trading firms, CBD, and kratom businesses. Secure payment processing with chargeback protection and multi-currency support." />
         <meta name="keywords" content="high risk merchant services, high risk payment processing, online gambling merchant account, CBD payment processing, peptides merchant account, prop firm payments, kratom payment processing, chargeback protection, high risk credit card processing" />
         <link rel="canonical" href="/high-risk-merchant-services" />

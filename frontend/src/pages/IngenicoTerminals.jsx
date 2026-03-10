@@ -230,6 +230,10 @@ const IngenicoTerminals = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Ingenico Payment Terminals | Move 5000, Lane 3000 & Link 2500</title>
+        <meta property="og:title" content="Ingenico Payment Terminals | Move 5000, Lane 3000 & Link 2500" />
+        <meta property="og:description" content="Ingenico payment terminals including Move 5000, Lane 3000, and Link 2500. Smart, secure, and fast payment devices for countertop, mobile, and unattended environments." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/pos/ingenico" />
         <meta name="description" content="Ingenico payment terminals including Move 5000, Lane 3000, and Link 2500. Smart, secure, and fast payment devices for countertop, mobile, and unattended environments." />
         <meta name="keywords" content="Ingenico terminals, Ingenico Move 5000, Ingenico Lane 3000, Ingenico Link 2500, payment terminal, smart POS terminal, EMV terminal, contactless terminal" />
         <link rel="canonical" href="/pos/ingenico" />

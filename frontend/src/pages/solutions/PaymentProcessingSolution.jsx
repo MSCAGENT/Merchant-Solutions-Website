@@ -190,6 +190,10 @@ const PaymentProcessingSolution = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Payment Processing Solutions | Credit Card, Debit & ACH | Merchant Solutions Corp</title>
+        <meta property="og:title" content="Payment Processing Solutions | Credit Card, Debit & ACH | Merchant Solutions Corp" />
+        <meta property="og:description" content="Full-service payment processing for businesses of all sizes. Accept credit cards, debit cards, ACH, and contactless payments with next-day funding, transparent pricing, and 24/7 support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/payment-processing" />
         <meta name="description" content="Full-service payment processing for businesses of all sizes. Accept credit cards, debit cards, ACH, and contactless payments with next-day funding, transparent pricing, and 24/7 support." />
         <meta name="keywords" content="payment processing, credit card processing, debit card processing, ACH payments, merchant services, contactless payments, next day funding, payment processing solutions, business payment solutions" />
         <link rel="canonical" href="/solutions/payment-processing" />

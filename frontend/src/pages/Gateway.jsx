@@ -11,6 +11,10 @@ const Gateway = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>Payment Gateway Solutions | Online & In-Store Payment Processing</title>
+        <meta property="og:title" content="Payment Gateway Solutions | Online & In-Store Payment Processing" />
+        <meta property="og:description" content="Secure payment gateway solutions for online and in-store businesses. API integration, hosted payment pages, virtual terminals, and recurring billing with PCI DSS compliance." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/gateway/payments-gateway" />
         <meta name="description" content="Secure payment gateway solutions for online and in-store businesses. API integration, hosted payment pages, virtual terminals, and recurring billing with PCI DSS compliance." />
         <meta name="keywords" content="payment gateway, online payment processing, payment API, virtual terminal, hosted payment page, payment gateway integration, secure payments, PCI compliant gateway" />
         <link rel="canonical" href="/gateway/payments-gateway" />

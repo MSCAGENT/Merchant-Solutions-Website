@@ -20,6 +20,10 @@ const Contact = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">
       <Helmet>
         <title>Contact Us | Merchant Solutions Corp | Payment Processing Support</title>
+        <meta property="og:title" content="Contact Us | Merchant Solutions Corp | Payment Processing Support" />
+        <meta property="og:description" content="Contact Merchant Solutions Corp for payment processing, POS systems, and merchant services. Call (888) 407-8886 or fill out our form for a free consultation." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/contact" />
         <meta name="description" content="Contact Merchant Solutions Corp for payment processing, POS systems, and merchant services. Call (888) 407-8886 or fill out our form for a free consultation." />
         <meta name="keywords" content="contact merchant solutions, payment processing support, merchant services phone number, POS system consultation, credit card processing help" />
         <link rel="canonical" href="/contact" />

@@ -102,6 +102,10 @@ const PayrollServicesSolution = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Payroll Services for Small Business | Payroll Processing & Tax Filing</title>
+        <meta property="og:title" content="Payroll Services for Small Business | Payroll Processing & Tax Filing" />
+        <meta property="og:description" content="Full-service payroll processing for small businesses. Automated payroll, tax filing, direct deposit, employee self-service, and HR tools integrated with your business operations." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/payroll-services" />
         <meta name="description" content="Full-service payroll processing for small businesses. Automated payroll, tax filing, direct deposit, employee self-service, and HR tools integrated with your business operations." />
         <meta name="keywords" content="payroll services, small business payroll, payroll processing, payroll tax filing, direct deposit, employee payroll, automated payroll, HR payroll solutions" />
         <link rel="canonical" href="/solutions/payroll-services" />

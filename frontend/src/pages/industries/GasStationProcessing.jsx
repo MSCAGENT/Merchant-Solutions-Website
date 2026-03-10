@@ -95,6 +95,10 @@ const GasStationProcessing = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Gas Station Payment Processing | EMV Fuel Pump & POS Upgrades</title>
+        <meta property="og:title" content="Gas Station Payment Processing | EMV Fuel Pump & POS Upgrades" />
+        <meta property="og:description" content="Gas station payment processing, EMV fuel pump upgrades, fleet card acceptance, and petroleum POS systems. Reduce fees, improve funding speed, and modernize your forecourt technology." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/emv-gas-station-payment-processing" />
         <meta name="description" content="Gas station payment processing, EMV fuel pump upgrades, fleet card acceptance, and petroleum POS systems. Reduce fees, improve funding speed, and modernize your forecourt technology." />
         <meta name="keywords" content="gas station payment processing, EMV fuel pump, gas station POS, petroleum payment processing, fleet card processing, fuel pump upgrade, gas station merchant services, convenience store POS" />
         <link rel="canonical" href="/emv-gas-station-payment-processing" />

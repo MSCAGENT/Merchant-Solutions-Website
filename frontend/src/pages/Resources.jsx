@@ -64,6 +64,10 @@ const Resources = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>Resources | Guides, Tools & Industry Insights | Merchant Solutions Corp</title>
+        <meta property="og:title" content="Resources | Guides, Tools & Industry Insights | Merchant Solutions Corp" />
+        <meta property="og:description" content="Explore resources from Merchant Solutions Corp. Business guides, industry insights, payment processing tips, and tools to help grow your business." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/resources" />
         <meta name="description" content="Explore resources from Merchant Solutions Corp. Business guides, industry insights, payment processing tips, and tools to help grow your business." />
         <meta name="keywords" content="payment processing resources, business guides, merchant services tips, POS system guides, payment industry insights, business growth resources" />
         <link rel="canonical" href="/resources" />

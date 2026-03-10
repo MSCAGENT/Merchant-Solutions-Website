@@ -143,6 +143,10 @@ const SpecialtyMerchant = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>B2B Specialty Merchant Payment Solutions | Virtual Terminal, Invoicing & Crypto Payments</title>
+        <meta property="og:title" content="B2B Specialty Merchant Payment Solutions | Virtual Terminal, Invoicing & Crypto Payments" />
+        <meta property="og:description" content="Customized B2B payment solutions for specialty merchants. Virtual terminals, invoicing, recurring billing, API integrations, and crypto payment processing for wholesale, manufacturing, and service providers." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/specialty-merchant-payment-solutions" />
         <meta name="description" content="Customized B2B payment solutions for specialty merchants. Virtual terminals, invoicing, recurring billing, API integrations, and crypto payment processing for wholesale, manufacturing, and service providers." />
         <meta name="keywords" content="B2B payment solutions, specialty merchant services, virtual terminal, B2B invoicing, recurring billing, crypto payment processing, wholesale payment processing, B2B credit card processing" />
         <link rel="canonical" href="/specialty-merchant-payment-solutions" />

@@ -154,6 +154,10 @@ const RetailSolutions = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Retail Payment Systems | Get a Retail POS for $0 | Merchant Solutions Corp</title>
+        <meta property="og:title" content="Retail Payment Systems | Get a Retail POS for $0 | Merchant Solutions Corp" />
+        <meta property="og:description" content="Retail POS systems for grocery, convenience, smoke shops, CBD, clothing & gift stores. Barcode scanning, inventory tracking, and payment processing installed nationwide." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/retail-payment-solutions" />
         <meta name="description" content="Retail POS systems for grocery, convenience, smoke shops, CBD, clothing & gift stores. Barcode scanning, inventory tracking, and payment processing installed nationwide." />
         <meta name="keywords" content={seoKeywords.join(', ')} />
         <link rel="canonical" href="/retail-payment-solutions" />

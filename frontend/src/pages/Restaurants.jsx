@@ -202,6 +202,10 @@ const Restaurants = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Restaurant Payment Processing Services | Clover, Square & iTabPOS | Merchant Solutions Corp</title>
+        <meta property="og:title" content="Restaurant Payment Processing Services | Clover, Square & iTabPOS | Merchant Solutions Corp" />
+        <meta property="og:description" content="Restaurant payment processing and POS installation services. Clover, Square and iTabPOS with consulting, deployment and digital advertising to grow restaurant sales 20-30 percent." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/restaurant-payment-processing-services" />
         <meta name="description" content="Restaurant payment processing and POS installation services. Clover, Square and iTabPOS with consulting, deployment and digital advertising to grow restaurant sales 20-30 percent." />
         <meta name="keywords" content="restaurant payment processing, restaurant POS system, Clover restaurant POS, Square restaurant, iTabPOS, restaurant credit card processing, restaurant merchant services, POS installation Florida" />
         <link rel="canonical" href="/restaurant-payment-processing-services" />

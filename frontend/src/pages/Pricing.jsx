@@ -97,6 +97,10 @@ const Pricing = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Pricing | Merchant Processing Rates & POS Plans | Merchant Solutions Corp</title>
+        <meta property="og:title" content="Pricing | Merchant Processing Rates & POS Plans | Merchant Solutions Corp" />
+        <meta property="og:description" content="Compare merchant processing rates: Flat Rate, Interchange Plus, and Dual Price/Cash Discount. Choose your POS software, business type, and payment platform. Clover, Square, PayAnywhere, Dejavoo, and Ingenico pricing." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/pricing" />
         <meta name="description" content="Compare merchant processing rates: Flat Rate, Interchange Plus, and Dual Price/Cash Discount. Choose your POS software, business type, and payment platform. Clover, Square, PayAnywhere, Dejavoo, and Ingenico pricing." />
         <meta name="keywords" content="payment processing pricing, merchant processing rates, credit card processing fees, POS system pricing, interchange plus pricing, flat rate processing, dual pricing, cash discount program pricing" />
         <link rel="canonical" href="/pricing" />

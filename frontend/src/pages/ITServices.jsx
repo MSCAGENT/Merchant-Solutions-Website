@@ -103,6 +103,10 @@ const ITServices = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>IT Services & POS Installation | Network Setup & Technical Support</title>
+        <meta property="og:title" content="IT Services & POS Installation | Network Setup & Technical Support" />
+        <meta property="og:description" content="Professional IT services for businesses including POS installation, network setup, system configuration, and ongoing technical support. Nationwide service by certified technicians." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/it-services" />
         <meta name="description" content="Professional IT services for businesses including POS installation, network setup, system configuration, and ongoing technical support. Nationwide service by certified technicians." />
         <meta name="keywords" content="POS installation service, IT services, network setup, POS technical support, business IT support, POS system setup, restaurant IT services" />
         <link rel="canonical" href="/it-services" />

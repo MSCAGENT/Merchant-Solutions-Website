@@ -67,6 +67,10 @@ export default function SubscriptionPaymentProcessing() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Subscription Payment Processing for Multi-Location Businesses</title>
+        <meta property="og:title" content="Subscription Payment Processing for Multi-Location Businesses" />
+        <meta property="og:description" content="Wholesale subscription payment processing designed for high-volume businesses. Lock in long-term processing rates with transparent subscription pricing per location." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/subscription-payment-processing" />
         <meta name="description" content="Wholesale subscription payment processing designed for high-volume businesses. Lock in long-term processing rates with transparent subscription pricing per location." />
         <meta name="keywords" content="subscription payment processor, wholesale credit card processing, enterprise payment processing, multi location payment processing, subscription credit card processing, interchange wholesale processing, payment processor for franchises" />
         <link rel="canonical" href="/subscription-payment-processing" />

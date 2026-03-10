@@ -282,6 +282,10 @@ const SquarePOS = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Square Point of Sale Systems | Authorized Square Dealer | Installation & Training Nationwide</title>
+        <meta property="og:title" content="Square Point of Sale Systems | Authorized Square Dealer | Installation & Training Nationwide" />
+        <meta property="og:description" content="Authorized Square dealer providing complete Square POS setup, installation, training, and ongoing support across all 50 U.S. states. Square Register, Terminal, Stand & Reader hardware with professional onboarding." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/pos/square" />
         <meta name="description" content="Authorized Square dealer providing complete Square POS setup, installation, training, and ongoing support across all 50 U.S. states. Square Register, Terminal, Stand & Reader hardware with professional onboarding." />
         <meta name="keywords" content="Square POS, Square Register, Square Terminal, Square dealer, Square POS installation, Square setup, Square point of sale, Square card reader, Square for restaurants, Square for retail" />
         <link rel="canonical" href="/pos/square" />

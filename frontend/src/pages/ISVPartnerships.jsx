@@ -153,6 +153,10 @@ const ISVPartnerships = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>ISV Partnership Program | Payment Integration for Software Companies</title>
+        <meta property="og:title" content="ISV Partnership Program | Payment Integration for Software Companies" />
+        <meta property="og:description" content="ISV partnership program for software companies. Integrate payment processing into your software with our API, earn revenue share, and provide seamless merchant services to your users." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/partnerships/isv" />
         <meta name="description" content="ISV partnership program for software companies. Integrate payment processing into your software with our API, earn revenue share, and provide seamless merchant services to your users." />
         <meta name="keywords" content="ISV partnership, software payment integration, payment API, ISV program, embedded payments, software company payments, payment integration partner" />
         <link rel="canonical" href="/partnerships/isv" />

@@ -10,6 +10,10 @@ const Security = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>Security & Compliance | PCI DSS, EMV & Data Protection | Merchant Solutions Corp</title>
+        <meta property="og:title" content="Security & Compliance | PCI DSS, EMV & Data Protection | Merchant Solutions Corp" />
+        <meta property="og:description" content="Learn about Merchant Solutions Corp security practices. PCI DSS compliance, EMV chip technology, end-to-end encryption, tokenization, and fraud prevention for secure payment processing." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/security" />
         <meta name="description" content="Learn about Merchant Solutions Corp security practices. PCI DSS compliance, EMV chip technology, end-to-end encryption, tokenization, and fraud prevention for secure payment processing." />
         <meta name="keywords" content="payment security, PCI DSS compliance, EMV chip, payment encryption, tokenization, fraud prevention, secure payment processing, data protection, merchant security" />
         <link rel="canonical" href="/security" />

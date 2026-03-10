@@ -146,6 +146,10 @@ const Partnerships = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Agent & ISO Partnership Program | Sell Payment Processing | Merchant Solutions Corp</title>
+        <meta property="og:title" content="Agent & ISO Partnership Program | Sell Payment Processing | Merchant Solutions Corp" />
+        <meta property="og:description" content="Join the Merchant Solutions Agent & ISO partnership program. Earn residual income selling payment processing and POS systems. Full training, support, and competitive revenue sharing." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/partnerships" />
         <meta name="description" content="Join the Merchant Solutions Agent & ISO partnership program. Earn residual income selling payment processing and POS systems. Full training, support, and competitive revenue sharing." />
         <meta name="keywords" content="merchant services agent program, ISO partnership, sell payment processing, payment processing reseller, agent program, merchant services residual income, POS sales agent" />
         <link rel="canonical" href="/partnerships" />

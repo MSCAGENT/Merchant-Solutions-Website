@@ -62,6 +62,10 @@ export default function PaymentTerminalsOverview() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Payment Terminals for Businesses | Clover, Ingenico, PAX &amp; Dejavoo</title>
+        <meta property="og:title" content="Payment Terminals for Businesses | Clover, Ingenico, PAX &amp; Dejavoo" />
+        <meta property="og:description" content="Compare modern payment terminals for businesses, including Clover, Ingenico, PAX and Dejavoo credit card machines. Accept chip, tap and mobile payments with reliable countertop and wireless terminals." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/payment-terminals" />
         <meta name="description" content="Compare modern payment terminals for businesses, including Clover, Ingenico, PAX and Dejavoo credit card machines. Accept chip, tap and mobile payments with reliable countertop and wireless terminals." />
         <meta name="keywords" content="payment terminals, credit card machines, card machines for business, credit card terminal for small business, EMV payment terminal, countertop credit card machine, wireless payment terminal, Clover terminal, Ingenico terminal, PAX payment terminal, Dejavoo credit card terminal" />
         <link rel="canonical" href="/payment-terminals" />

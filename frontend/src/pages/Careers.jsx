@@ -146,6 +146,10 @@ const Careers = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Careers at Merchant Solutions Corp | Payment Industry Jobs</title>
+        <meta property="og:title" content="Careers at Merchant Solutions Corp | Payment Industry Jobs" />
+        <meta property="og:description" content="Join the Merchant Solutions Corp team. Explore career opportunities in payment processing, sales, technology, and customer support. Build your career in the fintech industry." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/company/careers" />
         <meta name="description" content="Join the Merchant Solutions Corp team. Explore career opportunities in payment processing, sales, technology, and customer support. Build your career in the fintech industry." />
         <meta name="keywords" content="payment processing careers, merchant services jobs, fintech careers, payment industry jobs, POS sales jobs, merchant solutions careers" />
         <link rel="canonical" href="/company/careers" />

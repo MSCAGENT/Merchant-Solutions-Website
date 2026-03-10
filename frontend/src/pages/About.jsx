@@ -11,6 +11,10 @@ const About = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>About Merchant Solutions Corp | Payment Processing Company Since 2005</title>
+        <meta property="og:title" content="About Merchant Solutions Corp | Payment Processing Company Since 2005" />
+        <meta property="og:description" content="Learn about Merchant Solutions Corp, a leading payment processing provider since 2005. Serving 50,000+ merchants nationwide with POS systems, merchant services, and 24/7 support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/company/about" />
         <meta name="description" content="Learn about Merchant Solutions Corp, a leading payment processing provider since 2005. Serving 50,000+ merchants nationwide with POS systems, merchant services, and 24/7 support." />
         <meta name="keywords" content="about Merchant Solutions Corp, payment processing company, merchant services provider, POS systems company, credit card processing provider" />
         <link rel="canonical" href="/company/about" />

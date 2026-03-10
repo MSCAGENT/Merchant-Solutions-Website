@@ -117,6 +117,10 @@ const MSCTranzActionGateway = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>MSC TranzAction Gateway | Secure Payment Gateway by NMI | Merchant Solutions Corp</title>
+        <meta property="og:title" content="MSC TranzAction Gateway | Secure Payment Gateway by NMI | Merchant Solutions Corp" />
+        <meta property="og:description" content="MSC TranzAction Gateway powered by NMI. Accept credit cards, debit cards, ACH, and recurring payments through a secure cloud-based payment gateway with virtual terminal, API integration, and PCI compliance." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/tranzaction-gateway" />
         <meta name="description" content="MSC TranzAction Gateway powered by NMI. Accept credit cards, debit cards, ACH, and recurring payments through a secure cloud-based payment gateway with virtual terminal, API integration, and PCI compliance." />
         <meta name="keywords" content="payment gateway, NMI payment gateway, TranzAction gateway, virtual terminal, online payment processing, recurring billing gateway, API payment integration, PCI compliant gateway, credit card gateway" />
         <link rel="canonical" href="/solutions/tranzaction-gateway" />

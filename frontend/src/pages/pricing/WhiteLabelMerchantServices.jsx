@@ -87,6 +87,10 @@ export default function WhiteLabelMerchantServices() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>White Label Merchant Services | Start Your Own ISO Payment Company</title>
+        <meta property="og:title" content="White Label Merchant Services | Start Your Own ISO Payment Company" />
+        <meta property="og:description" content="Launch your own merchant services brand with our white label payment processing platform. This platform is ideal for ISO agents, marketing agencies, and entrepreneurs who are initiating their own payment company." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/white-label-merchant-services" />
         <meta name="description" content="Launch your own merchant services brand with our white label payment processing platform. This platform is ideal for ISO agents, marketing agencies, and entrepreneurs who are initiating their own payment company." />
         <meta name="keywords" content="white label merchant services, white label payment processing, start your own ISO, merchant services reseller program, ISO agent program, merchant services white label" />
         <link rel="canonical" href="/white-label-merchant-services" />

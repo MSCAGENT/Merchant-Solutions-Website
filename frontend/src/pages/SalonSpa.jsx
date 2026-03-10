@@ -249,6 +249,10 @@ const SalonSpa = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Salon & Spa Payment Processing | Booking Software + POS Installation | DaySmart, Clover & Square</title>
+        <meta property="og:title" content="Salon & Spa Payment Processing | Booking Software + POS Installation | DaySmart, Clover & Square" />
+        <meta property="og:description" content="Salon and spa payment processing with DaySmart booking software, Clover POS, and Square POS. Online scheduling, automated reminders, integrated merchant services for hair salons, nail salons, skin clinics, and independent beauty professionals. Nationwide installation." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/salon-spa-payment-processing" />
         <meta name="description" content="Salon and spa payment processing with DaySmart booking software, Clover POS, and Square POS. Online scheduling, automated reminders, integrated merchant services for hair salons, nail salons, skin clinics, and independent beauty professionals. Nationwide installation." />
         <meta name="keywords" content={seoKeywords.join(', ')} />
         <link rel="canonical" href="/salon-spa-payment-processing" />

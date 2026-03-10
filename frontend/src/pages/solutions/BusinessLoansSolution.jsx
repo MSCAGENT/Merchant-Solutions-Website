@@ -117,6 +117,10 @@ const BusinessLoansSolution = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Business Loans & Merchant Cash Advance | Small Business Funding Solutions</title>
+        <meta property="og:title" content="Business Loans & Merchant Cash Advance | Small Business Funding Solutions" />
+        <meta property="og:description" content="Business loans and merchant cash advances for small businesses. Fast funding, flexible terms, and working capital solutions through Merchant Solutions Corp and Lendio partnership." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/business-loans" />
         <meta name="description" content="Business loans and merchant cash advances for small businesses. Fast funding, flexible terms, and working capital solutions through Merchant Solutions Corp and Lendio partnership." />
         <meta name="keywords" content="business loans, merchant cash advance, small business loans, business funding, working capital, SBA loans, business line of credit, merchant lending, fast business funding" />
         <link rel="canonical" href="/solutions/business-loans" />

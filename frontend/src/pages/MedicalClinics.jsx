@@ -190,6 +190,10 @@ const MedicalClinics = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Medical Payment Processing & EMR Integration | Merchant Services for Clinics</title>
+        <meta property="og:title" content="Medical Payment Processing & EMR Integration | Merchant Services for Clinics" />
+        <meta property="og:description" content="Secure medical payment processing integrated with leading EMR systems including athenahealth, eClinicalWorks, and NextGen. Merchant services, patient payment plans, and compliance solutions for medical offices and urgent care clinics nationwide." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/medical-payment-processing-emr-integration" />
         <meta name="description" content="Secure medical payment processing integrated with leading EMR systems including athenahealth, eClinicalWorks, and NextGen. Merchant services, patient payment plans, and compliance solutions for medical offices and urgent care clinics nationwide." />
         <meta name="keywords" content="medical payment processing, medical EMR integration, medical clinic merchant services, medical credit card processing, patient payment plans, HIPAA compliant payments, medical billing solutions, urgent care payment processing, medical office POS" />
         <link rel="canonical" href="/medical-payment-processing-emr-integration" />

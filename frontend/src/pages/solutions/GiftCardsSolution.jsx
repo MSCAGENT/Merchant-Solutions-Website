@@ -148,6 +148,10 @@ const GiftCardsSolution = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Gift Card Programs for Businesses | Custom Branded & Digital Gift Cards</title>
+        <meta property="og:title" content="Gift Card Programs for Businesses | Custom Branded & Digital Gift Cards" />
+        <meta property="og:description" content="Custom branded gift card programs for restaurants, retail, and service businesses. Physical and digital gift cards with POS integration, tracking, and promotional campaign support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/gift-cards" />
         <meta name="description" content="Custom branded gift card programs for restaurants, retail, and service businesses. Physical and digital gift cards with POS integration, tracking, and promotional campaign support." />
         <meta name="keywords" content="gift card program, custom gift cards, business gift cards, digital gift cards, restaurant gift cards, retail gift cards, gift card POS integration, branded gift cards" />
         <link rel="canonical" href="/solutions/gift-cards" />

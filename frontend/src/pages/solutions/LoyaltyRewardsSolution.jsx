@@ -82,6 +82,10 @@ const LoyaltyRewardsSolution = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Loyalty & Rewards Programs | Customer Retention Solutions for Businesses</title>
+        <meta property="og:title" content="Loyalty & Rewards Programs | Customer Retention Solutions for Businesses" />
+        <meta property="og:description" content="Build customer loyalty with custom rewards programs. Points-based systems, tiered rewards, and digital loyalty cards integrated with your POS for restaurants, retail, and service businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/loyalty-rewards" />
         <meta name="description" content="Build customer loyalty with custom rewards programs. Points-based systems, tiered rewards, and digital loyalty cards integrated with your POS for restaurants, retail, and service businesses." />
         <meta name="keywords" content="loyalty program, rewards program, customer loyalty, loyalty cards, points program, customer retention, restaurant loyalty program, retail rewards, POS loyalty integration" />
         <link rel="canonical" href="/solutions/loyalty-rewards" />

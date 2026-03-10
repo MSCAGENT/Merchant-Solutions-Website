@@ -167,6 +167,10 @@ const PayAnywhere = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>PayAnywhere Smart POS | Mobile Payment Processing & Smart Terminal</title>
+        <meta property="og:title" content="PayAnywhere Smart POS | Mobile Payment Processing & Smart Terminal" />
+        <meta property="og:description" content="PayAnywhere smart POS terminals and mobile payment processing. Smart Flex, Smart Terminal, and card readers for businesses of all sizes with next-day funding and transparent pricing." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/pos/payanywhere" />
         <meta name="description" content="PayAnywhere smart POS terminals and mobile payment processing. Smart Flex, Smart Terminal, and card readers for businesses of all sizes with next-day funding and transparent pricing." />
         <meta name="keywords" content="PayAnywhere POS, PayAnywhere smart terminal, mobile payment processing, smart POS terminal, PayAnywhere card reader, portable payment terminal, mobile credit card processing" />
         <link rel="canonical" href="/pos/payanywhere" />

@@ -134,6 +134,10 @@ const ATMsSolution = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>ATM Solutions | Placement, Partnership & Purchase Programs | ATM Merchant Solutions</title>
+        <meta property="og:title" content="ATM Solutions | Placement, Partnership & Purchase Programs | ATM Merchant Solutions" />
+        <meta property="og:description" content="ATM placement, partnership, and purchase programs for businesses. Free ATM placement, 50/50 partnership, or full ownership. GenMega and Hyosung ATMs at wholesale prices with free processing." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/atms" />
         <meta name="description" content="ATM placement, partnership, and purchase programs for businesses. Free ATM placement, 50/50 partnership, or full ownership. GenMega and Hyosung ATMs at wholesale prices with free processing." />
         <meta name="keywords" content="ATM placement program, ATM partnership, buy ATM machine, ATM solutions business, free ATM placement, GenMega ATM, Hyosung ATM, ATM processing, ATM surcharge revenue, Cardtronics ATM" />
         <link rel="canonical" href="/solutions/atms" />

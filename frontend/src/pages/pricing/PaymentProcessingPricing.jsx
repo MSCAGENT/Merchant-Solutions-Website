@@ -67,6 +67,10 @@ export default function PaymentProcessingPricing() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Payment Processing Pricing Explained | Interchange Plus, Flat Rate &amp; Dual Pricing</title>
+        <meta property="og:title" content="Payment Processing Pricing Explained | Interchange Plus, Flat Rate &amp; Dual Pricing" />
+        <meta property="og:description" content="Learn how payment processing pricing works including interchange plus, flat rate and dual pricing programs. Discover which option is best for your business." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/payment-processing-pricing" />
         <meta name="description" content="Learn how payment processing pricing works including interchange plus, flat rate and dual pricing programs. Discover which option is best for your business." />
         <meta name="keywords" content="payment processing pricing, interchange plus pricing, flat rate payment processing, dual pricing credit card processing, merchant processing fees, credit card processing rates, transparent payment processing" />
         <link rel="canonical" href="/payment-processing-pricing" />

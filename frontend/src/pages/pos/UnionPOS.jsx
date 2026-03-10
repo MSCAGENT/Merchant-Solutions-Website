@@ -62,6 +62,10 @@ export default function UnionPOS() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Union POS System for Bars &amp; Restaurants | High-Volume Hospitality POS</title>
+        <meta property="og:title" content="Union POS System for Bars &amp; Restaurants | High-Volume Hospitality POS" />
+        <meta property="og:description" content="Union POS is a modern hospitality operating system designed for high-volume bars and restaurants. Speed up service, increase revenue, and enhance guest experiences with guest-led ordering and powerful POS tools." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/union-pos-system" />
         <meta name="description" content="Union POS is a modern hospitality operating system designed for high-volume bars and restaurants. Speed up service, increase revenue, and enhance guest experiences with guest-led ordering and powerful POS tools." />
         <meta name="keywords" content="Union POS, Union restaurant POS, Union bar POS, POS system for bars, POS for high-volume restaurants, guest-led ordering POS, hospitality POS system" />
         <link rel="canonical" href="/union-pos-system" />

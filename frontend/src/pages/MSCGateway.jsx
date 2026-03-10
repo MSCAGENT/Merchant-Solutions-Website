@@ -201,6 +201,10 @@ const MSCGateway = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>MSC Payments Gateway | All-in-One Payment Processing Platform</title>
+        <meta property="og:title" content="MSC Payments Gateway | All-in-One Payment Processing Platform" />
+        <meta property="og:description" content="MSC Payments Gateway provides an all-in-one payment processing platform. Accept payments online, in-store, and on mobile with integrated invoicing, recurring billing, and multi-industry support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/gateway/payments-gateway" />
         <meta name="description" content="MSC Payments Gateway provides an all-in-one payment processing platform. Accept payments online, in-store, and on mobile with integrated invoicing, recurring billing, and multi-industry support." />
         <meta name="keywords" content="MSC payments gateway, payment processing platform, all-in-one payment gateway, merchant payment gateway, online payments, mobile payments, invoice payments, multi-industry payment processing" />
         <link rel="canonical" href="/gateway/payments-gateway" />

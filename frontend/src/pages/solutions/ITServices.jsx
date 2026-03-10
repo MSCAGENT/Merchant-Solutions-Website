@@ -135,6 +135,10 @@ const ITServices = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>POS Installation Services Florida | On-Site Tech & Payment Device Setup Nationwide</title>
+        <meta property="og:title" content="POS Installation Services Florida | On-Site Tech & Payment Device Setup Nationwide" />
+        <meta property="og:description" content="Professional POS installation services in Florida and all 50 states. On-site survey, infrastructure mapping, Clover, Square, and iTabPOS setup, training, and support for restaurants, retail, and healthcare." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/it-services" />
         <meta name="description" content="Professional POS installation services in Florida and all 50 states. On-site survey, infrastructure mapping, Clover, Square, and iTabPOS setup, training, and support for restaurants, retail, and healthcare." />
         <meta name="keywords" content="POS installation services, POS setup Florida, on-site POS installation, Clover installation, Square POS setup, restaurant POS installation, retail POS installation, payment device setup, POS technician" />
         <link rel="canonical" href="/solutions/it-services" />

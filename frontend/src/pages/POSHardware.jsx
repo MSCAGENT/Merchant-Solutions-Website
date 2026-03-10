@@ -12,6 +12,10 @@ const POSHardware = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>POS Hardware | Payment Terminals & Accessories | Merchant Solutions Corp</title>
+        <meta property="og:title" content="POS Hardware | Payment Terminals & Accessories | Merchant Solutions Corp" />
+        <meta property="og:description" content="Browse POS hardware including payment terminals, receipt printers, cash drawers, barcode scanners, and kiosks. Clover, Square, Dejavoo, Ingenico, and PAX devices available." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/pos-hardware" />
         <meta name="description" content="Browse POS hardware including payment terminals, receipt printers, cash drawers, barcode scanners, and kiosks. Clover, Square, Dejavoo, Ingenico, and PAX devices available." />
         <meta name="keywords" content="POS hardware, payment terminals, receipt printer, cash drawer, barcode scanner, POS accessories, Clover hardware, Square hardware, POS equipment" />
         <link rel="canonical" href="/pos-hardware" />

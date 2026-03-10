@@ -62,6 +62,10 @@ export default function QRCodeOrdering() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>QR Code Mobile Ordering for Restaurants | Self-Ordering System</title>
+        <meta property="og:title" content="QR Code Mobile Ordering for Restaurants | Self-Ordering System" />
+        <meta property="og:description" content="Enable guests to scan, order and pay from their phone using QR code mobile ordering. Increase table turnover, boost ticket size and reduce wait times with modern self-ordering systems." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/qr-code-mobile-ordering" />
         <meta name="description" content="Enable guests to scan, order and pay from their phone using QR code mobile ordering. Increase table turnover, boost ticket size and reduce wait times with modern self-ordering systems." />
         <meta name="keywords" content="QR code ordering, QR code restaurant ordering, mobile ordering restaurant system, self ordering restaurant system, QR menu ordering, QR code POS ordering, scan to order restaurant, self service ordering system" />
         <link rel="canonical" href="/qr-code-mobile-ordering" />
