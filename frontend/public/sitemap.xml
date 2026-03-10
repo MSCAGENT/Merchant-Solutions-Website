@@ -82,8 +82,7 @@
   <url><loc>https://merchantsolutionscorp.com/industries/high-risk</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://merchantsolutionscorp.com/industries/specialty-merchants</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://merchantsolutionscorp.com/industries/food-trucks</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://merchantsolutionscorp.com/industries/cloud-kitchens</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://merchantsolutionscorp.com/industries/delivery-only</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://merchantsolutionscorp.com/cloud-kitchen-pos-system</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://merchantsolutionscorp.com/industries/b2b-processing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Resources -->

@@ -64,7 +64,7 @@ import DualPricing from "./pages/solutions/DualPricing";
 import GasStationProcessing from "./pages/industries/GasStationProcessing";
 import B2BProcessing from "./pages/industries/B2BProcessing";
 import FoodTrucks from "./pages/industries/FoodTrucks";
-import CloudKitchens from "./pages/industries/CloudKitchens";
+import CloudKitchenPOS from "./pages/industries/CloudKitchenPOS";
 import DeliveryOnly from "./pages/industries/DeliveryOnly";
 
 // New placeholder pages
@@ -146,8 +146,9 @@ function App() {
           <Route path="/industries/gas-station" element={<GasStationProcessing />} />
           <Route path="/industries/b2b-processing" element={<B2BProcessing />} />
           <Route path="/industries/food-trucks" element={<Navigate to="/food-trucks-pos" replace />} />
-          <Route path="/industries/cloud-kitchens" element={<CloudKitchens />} />
-          <Route path="/industries/delivery-only" element={<DeliveryOnly />} />
+          <Route path="/cloud-kitchen-pos-system" element={<CloudKitchenPOS />} />
+          <Route path="/industries/cloud-kitchens" element={<Navigate to="/cloud-kitchen-pos-system" replace />} />
+          <Route path="/industries/delivery-only" element={<Navigate to="/cloud-kitchen-pos-system" replace />} />
           
           {/* POS & Hardware Routes */}
           <Route path="/pos/overview" element={<POSOverview />} />

@@ -52,8 +52,7 @@ const megaMenus = {
         items: [
           { label: 'Restaurants', desc: 'POS systems and payment processing for restaurants and food service businesses.', path: '/restaurant-payment-processing-services' },
           { label: 'Food Truck POS Systems', desc: 'Best POS systems and payment processing for food trucks and mobile vendors.', path: '/food-trucks-pos' },
-          { label: 'Cloud Kitchens', desc: 'Payment solutions for ghost kitchens and virtual restaurant brands.', path: '/industries/cloud-kitchens' },
-          { label: 'Delivery Only', desc: 'Payment processing for delivery-only restaurant operations.', path: '/industries/delivery-only' },
+          { label: 'Cloud Kitchens & Ghost Kitchens', desc: 'POS systems for ghost kitchens, virtual restaurants, and delivery-only operations.', path: '/cloud-kitchen-pos-system' },
         ],
       },
       {
