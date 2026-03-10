@@ -66,9 +66,13 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "What is a merchant services provider?", "acceptedAnswer": { "@type": "Answer", "text": "A merchant services provider supplies businesses with the technology required to accept credit cards and digital payments." } },
-      { "@type": "Question", "name": "What is a POS system?", "acceptedAnswer": { "@type": "Answer", "text": "A POS system allows businesses to process payments, manage inventory and track sales." } },
-      { "@type": "Question", "name": "What industries does Merchant Solutions support?", "acceptedAnswer": { "@type": "Answer", "text": "We support restaurants, retail stores, healthcare practices and service businesses." } }
+      { "@type": "Question", "name": "What does Merchant Solutions Corp do?", "acceptedAnswer": { "@type": "Answer", "text": "Merchant Solutions Corp provides merchant services, payment processing, and POS systems for businesses across restaurants, retail, healthcare, and service industries. Our team installs, programs, and supports modern payment technology, including Clover, Square, Ingenico, Dejavoo and PAX POS systems, so businesses can accept payments securely both in person and online." } },
+      { "@type": "Question", "name": "Is Merchant Solutions a direct provider or a third party?", "acceptedAnswer": { "@type": "Answer", "text": "Merchant Solutions Corp is a direct provider of payment processing services through their six acquiring banks, which work with businesses of all types, including card-present, CNP, online, high-risk, and low-risk businesses. They also provide direct services as a certified dealer for Exatouch, Skytab, Clover, and Square POS and Square Financial." } },
+      { "@type": "Question", "name": "Does Merchant Solutions Corp offer subscription-based payment processing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Merchant Solutions Corp offers subscription-based merchant service programs designed for businesses that want transparent and predictable payment processing costs. Instead of traditional percentage markups, many businesses can choose a flat monthly subscription model that includes payment processing infrastructure and merchant technology services." } },
+      { "@type": "Question", "name": "Can businesses get POS systems without paying upfront?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many businesses qualify for our Free POS Program, which allows merchants to deploy systems like Clover POS or Square POS with no upfront equipment cost. Qualified merchants subscribe to a POS program, and businesses that meet processing requirements may receive full reimbursement of their equipment subscription after the qualification period." } },
+      { "@type": "Question", "name": "What POS systems does Merchant Solutions Corp support?", "acceptedAnswer": { "@type": "Answer", "text": "Merchant Solutions Corp installs and supports several industry-leading POS systems including Clover POS systems, Square POS systems, Payanywhere POS and PAX terminals, itabPOS restaurant and Kiosk systems, Union POS, and Skytab by Shift4." } },
+      { "@type": "Question", "name": "Does Merchant Solutions Corp offer marketing and payroll integrations?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Merchant Solutions Corp integrates POS systems with digital marketing tools and payroll management software to help businesses automate operations including customer loyalty programs, automated marketing campaigns, employee scheduling, payroll processing, and Voice AI order taking." } },
+      { "@type": "Question", "name": "What industries does Merchant Solutions Corp support?", "acceptedAnswer": { "@type": "Answer", "text": "Merchant Solutions Corp supports businesses across many industries including restaurants and food service, retail stores, healthcare practices, specialty and high risk, salons and spas, service businesses, food trucks and cloud kitchens." } }
     ]
   };
 
@@ -436,9 +440,41 @@ const Home = () => {
       <section className="py-20 bg-white" itemScope itemType="https://schema.org/FAQPage">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12" data-testid="faq-h2">Merchant Services FAQ</h2>
-          <FAQItem question="What is a merchant services provider?" answer="A merchant services provider supplies businesses with the technology required to accept credit cards and digital payments. This includes payment terminals, POS systems, payment gateways, and ongoing technical support." />
-          <FAQItem question="What is a POS system?" answer="A POS system allows businesses to process payments, manage inventory and track sales. Modern POS systems like Clover and Square also include employee management, online ordering integration, and customer engagement tools." />
-          <FAQItem question="What industries does Merchant Solutions support?" answer="We support restaurants, retail stores, healthcare practices and service businesses. We also provide specialized POS solutions for food trucks, cloud kitchens, salons, and hospitality venues." />
+
+          <FAQItem
+            question="What does Merchant Solutions Corp do?"
+            answer="Merchant Solutions Corp provides merchant services, payment processing, and POS systems for businesses across restaurants, retail, healthcare, and service industries. Our team installs, programs, and supports modern payment technology, including Clover, Square, Ingenico, Dejavoo and PAX POS systems, so businesses can accept payments securely both in person and online."
+          />
+
+          <FAQItem
+            question="Is Merchant Solutions a direct provider or a third party?"
+            answer="Merchant Solutions Corp is a direct provider of payment processing services through their six acquiring banks, which work with businesses of all types, including card-present, CNP, online, high-risk, and low-risk businesses. But they also provide direct services as a certified dealer for Exatouch, Skytab, Clover, and Square POS and Square Financial, which are only available at their store. Merchant Solutions Corp offers complete merchant services including payment processing, POS systems, payment terminals, online payments, and business automation tools designed to simplify operations and improve customer experience."
+          />
+
+          <FAQItem
+            question="Does Merchant Solutions Corp offer subscription-based payment processing?"
+            answer="Yes. Merchant Solutions Corp offers subscription-based merchant service programs designed for businesses that want transparent and predictable payment processing costs. Instead of traditional percentage markups, many businesses can choose a flat monthly subscription model that includes payment processing infrastructure and merchant technology services. This approach is especially beneficial for businesses processing higher transaction volumes or operating multiple locations."
+          />
+
+          <FAQItem
+            question="Can businesses get POS systems without paying upfront?"
+            answer="Yes. Many businesses qualify for our Free POS Program, which allows merchants to deploy systems like Clover POS or Square POS with no upfront equipment cost. Qualified merchants subscribe to a POS program, and businesses that meet processing requirements may receive full reimbursement of their equipment subscription after the qualification period. This allows businesses to launch modern POS technology without large upfront investments."
+          />
+
+          <FAQItem
+            question="What POS systems does Merchant Solutions Corp support?"
+            answer="Merchant Solutions Corp installs and supports several industry-leading POS systems including: Clover POS systems, Square POS systems, Payanywhere POS and PAX terminals, itabPOS restaurant and Kiosk systems, Union POS, and Skytab by Shift4. These platforms support inventory management, sales reporting, employee management, and payment processing to help businesses operate more efficiently."
+          />
+
+          <FAQItem
+            question="Does Merchant Solutions Corp offer marketing and payroll integrations?"
+            answer="Yes. Merchant Solutions Corp integrates POS (point of sale) systems with digital marketing tools and payroll management software to help businesses automate operations. Businesses can connect their POS systems to solutions that manage: customer loyalty programs, automated marketing campaigns, employee scheduling, payroll processing, and Voice AI order taking. This allows businesses to run their operations from a unified technology platform."
+          />
+
+          <FAQItem
+            question="What industries does Merchant Solutions Corp support?"
+            answer="Merchant Solutions Corp supports businesses across many industries, including: restaurants and food service, retail stores, healthcare practices, specialty and high risk, salons and spas, service businesses, food trucks and cloud kitchens. Each industry requires different payment workflows, which is why we provide industry-specific POS systems and merchant service solutions designed to meet those needs."
+          />
         </div>
       </section>
 
