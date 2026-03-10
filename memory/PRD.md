@@ -1,77 +1,66 @@
 # Merchant Solutions Corp - Payment Processing Website
 
 ## Original Problem Statement
-Build a comprehensive, SEO-optimized payment processing website with a blog CMS, secure document portal, interactive tools, and extensive industry/solution pages.
+Expand the payment processing website's content for SEO purposes, enhance existing pages, and automate blog creation. The site is a comprehensive payment processing and POS systems website for Merchant Solutions Corp.
 
-## Architecture
-- **Frontend**: React + TailwindCSS + Shadcn UI
-- **Backend**: FastAPI + MongoDB
-- **Integrations**: Calendly popups, Lead Connector iframes, Emergent Object Storage, AutoSEO.ai webhook
+## Core Architecture
+- **Frontend**: React (CRA) with react-router-dom, Tailwind CSS, shadcn/ui
+- **Backend**: FastAPI with MongoDB
+- **Integrations**: AutoSEO.ai webhook, Lead Connector iframes, Calendly widgets, Emergent Object Storage
 
 ## What's Been Implemented
-- Full-stack blog CMS with admin panel (SEO fields, cover image upload, file attachments)
-- AutoSEO.ai webhook integration (auto blog publishing with image handling)
-- Secure document portal (login-protected)
-- Interactive savings calculator (Dual Pricing page)
-- Numerous SEO-optimized industry/solution pages (~46 pages with react-helmet-async)
-- Calendly popup standardization across all pages
-- White Label Merchant Services page with purple theme
 
-## Key Pages
-- Home, Contact, About, Security, Pricing, Careers
-- Solutions: Payment Processing, Dual Pricing, Gift Cards, Crypto, Loyalty, Business Loans, ATMs, Payroll, IT Services, Gateway
-- Industries: Restaurants, Healthcare, Chiropractors, Dental, Medical, Salon/Spa, Gas Station, Professional Services, Retail, High Risk, Specialty
-- POS/Hardware: Clover, Square, Exatouch, PayAnywhere, Dejavoo, Ingenico, DaySmart Salon
-- Blog: /resources/blog (public), /resources/blog/admin (admin)
-- Documents: /resources/documents (login-protected)
+### Completed (Previous Sessions)
+- AutoSEO webhook integration (blog creation via API)
+- Blog admin panel with image upload
+- Subscription Payment Processing page (Bronze/Silver/Platinum tiers)
+- Advantage Credit Program page (formerly Free POS Program)
+- White Label Merchant Services page updates
+- Payment Terminals page updates
+- About Us page with video hero
+- Voice AI Business Automation landing page
+- Site-wide SEO: robots.txt, sitemap.xml, Open Graph tags on 54+ pages
+- Navigation cleanup (pricing dropdown)
+- AIPoweredSection reusable component deployed to 7 pages
 
-## Completed (2026-03-10)
-- **AI-Powered Automation Section** added to 7 pages: Clover, Square, Restaurant, QR Ordering, Kiosk, Food Trucks, Cloud Kitchens
-- **Voice AI Business Automation Page** (`/voice-ai-business-automation`) with full SEO, POS logos, FAQ, Restaurant/Retail sections
-- **FoodTrucks & CloudKitchens** upgraded from placeholders to full pages
-
-## Completed (2026-03-09) - Latest
-- **About Us Page Created** (`/about-merchant-solutions-corp`):
-  - 8 content sections: About, Payment Processing, POS Systems, Industries, Florida, Dealership Model, Why Choose Us, FAQ
-  - Full SEO: meta title, description, keywords, canonical URL, Organization + FAQ JSON-LD schemas
-  - User-provided images with purple gradient tint overlays
-  - Internal links to all relevant pages
-  - Calendly popup integration, Lead Connector form modal
-  - Navigation updated: "About Us" now points to new page
-
-## Completed (2026-03-09) - Earlier
-- **Subscription Payment Processing — Bronze/Silver/Platinum Tiers**:
-  - Added program labels (Bronze, Silver, Platinum) and interchange costs to pricing cards
-  - Bronze (1-10 locations): +15 bps & $0.05/txn
-  - Silver (11-30 locations): +10 bps & $0.03/txn
-  - Platinum (30+ locations): +0 bps & $0.02/txn
-- **Navigation — Removed Flat Rate & Interchange Plus**:
-  - Removed "Flat Rate Processing" and "Interchange Plus Pricing" from Pricing dropdown
-  - Pricing menu now: Pricing Overview, Dual Pricing Program, Subscription Payment Processing, Advantage Credit Program
-- **Free POS Program → Advantage Credit Program**:
-  - Complete rebrand from "Free POS Program" to "Advantage Credit Program"
-  - Created tabbed equipment sections: Clover POS, Square POS, Exatouch POS, Terminals
-  - Each equipment card shows subscription cost, processing requirement, and reimbursement details
-  - Structure: merchant signs up for POS subscription + processing agreement, $0 upfront, 60-day qualification
-  - Updated all copy, FAQ, SEO tags, and navigation links
-- **AutoSEO Webhook — Bearer Token Fix & Hardening**:
-  - Fixed `Bearer Bearer <token>` double-prefix auth
-  - Full article creation, deduplication, and test events verified
-- **Blog Admin SEO Fields — Full Integration**:
-  - slug, meta_title, meta_description, schema_markup fields fully integrated
-  - Cover image upload button added to admin panel
-  - BlogPost renders Helmet with all SEO fields and HTML content
+### Completed (This Session - Feb 2026)
+- **Food Truck Page Consolidation**: Removed duplicate `/industries/food-trucks` route, redirected to `/food-trucks-pos`. Navigation updated to single link.
+- **AI Section Relocation**: Moved AIPoweredSection to directly after "Why Choose" sections on all 7 POS pages (CloverPOS, SquarePOS, RestaurantPOS, QRCodeOrdering, SelfOrderingKiosk, FoodTrucksPOS, CloudKitchens)
+- **MSC Logo Added**: Added company logo beneath AI-Powered Automation section via AIPoweredSection component
+- **AI FAQ Questions Added**: Added AI-related FAQ questions to 7 POS pages + VoiceAIAutomation page
+- **SquarePOS FAQ Section**: Created new FAQ section for Square POS page
 
 ## Prioritized Backlog
-### P1
-- Create "How to Get a Free POS System for Your Business" page
-- Embed payment link after "Continue Activation" button in PayAnywhere flow
 
-### P2
-- DocuSign integration for secure document portal
+### P1 - Upcoming
+- Implement Qualifier Wizard (multi-step lead qualification form)
+- PDF Upload for Document Portal
+- Embed Payment Link in PayAnywhere flow
 
-### P3
-- Backend content migration to MongoDB CMS
-- Component refactoring (break down monolithic pages)
-- Fix broken video hero sections
-- Complete Self-Ordering Kiosk page consolidation
+### P2 - Future
+- Create "How to Get a Free POS System" page
+- DocuSign Integration for document portal
+
+### P3 - Backlog
+- Backend Content Migration to MongoDB CMS
+- Component Refactoring (break down monolithic pages)
+- AutoSEO webhook logic refactoring into separate route file
+
+### Known Issues (De-prioritized by User)
+- Video heroes not playing on multiple older pages
+- Incomplete Self-Ordering Kiosk page consolidation
+
+## Key Pages & Routes
+- `/food-trucks-pos` - Food Truck POS (consolidated page)
+- `/industries/food-trucks` - Redirects to `/food-trucks-pos`
+- `/clover-pos-system` - Clover POS
+- `/pos/square` - Square POS
+- `/restaurant-payment-processing-services` - Restaurant POS
+- `/pos/qr-ordering` - QR Code Ordering
+- `/best-self-ordering-kiosk-for-restaurants` - Self Ordering Kiosk
+- `/industries/cloud-kitchens` - Cloud Kitchens
+- `/voice-ai-business-automation` - Voice AI Automation
+
+## Credentials
+- Blog Admin: `/resources/blog/admin` - marketing@merchantsolutionscorp.com / Mscpay$1
+- Document Portal: `/resources/documents` - admin1 / 12345
