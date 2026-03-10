@@ -1,10 +1,12 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://merchantsolutionscorp.com/sitemap.xml
-
+Disallow: /admin/
+Disallow: /wp-admin/
 Disallow: /resources/blog/admin
 Disallow: /resources/documents
 Disallow: /agent-login
 Disallow: /developer-login
 Disallow: /login
+
+Allow: /
+
+Sitemap: https://merchantsolutionscorp.com/sitemap.xml
