@@ -385,6 +385,8 @@ export default function QRCodeOrdering() {
         </div>
       </section>
 
+      <AIPoweredSection onContactClick={() => setShowFormModal(true)} onCalendlyClick={openCalendly} />
+
       {/* 10. FAQ */}
       <section className="py-20 bg-white" itemScope itemType="https://schema.org/FAQPage">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -394,10 +396,11 @@ export default function QRCodeOrdering() {
           <FAQItem question="Can QR ordering integrate with POS systems?" answer="Yes. Systems like iTabPOS, CloverPOS, and UnionPOS integrate orders directly with the POS and kitchen displays." />
           <FAQItem question="Does QR ordering increase sales?" answer="Yes. Many restaurants see higher average order values due to automated upselling features built into the digital ordering experience." />
           <FAQItem question="Is QR ordering good for patios and large dining areas?" answer="Yes. It allows servers to manage larger sections efficiently while maintaining fast service, making it ideal for patios, beer gardens, and large venues." />
+          <FAQItem question="Can AI take phone orders alongside QR code ordering?" answer="Yes. Voice AI can answer incoming calls and take phone orders while QR code ordering handles in-store guests. Both systems send orders directly to your POS and kitchen." />
+          <FAQItem question="How does AI automation complement QR ordering systems?" answer="AI automation handles phone ordering, customer notifications, and marketing while QR ordering manages dine-in guests. Together, they capture orders from every channel and reduce the workload on your staff." />
+          <FAQItem question="What AI features are available for restaurants using QR ordering?" answer="Restaurants can add AI phone ordering, AI voice reservations, automated order notifications, and AI-powered marketing to their QR ordering setup. These tools ensure no customer interaction is missed." />
         </div>
       </section>
-
-      <AIPoweredSection onContactClick={() => setShowFormModal(true)} onCalendlyClick={openCalendly} />
 
       {/* 11. FINAL CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">

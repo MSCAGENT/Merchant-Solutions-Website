@@ -196,6 +196,18 @@ const Restaurants = () => {
     {
       question: 'Do you help with chargebacks?',
       answer: 'Yes. We provide documentation guidance and support for restaurant chargeback disputes.'
+    },
+    {
+      question: 'Can AI take phone orders for my restaurant?',
+      answer: 'Yes. Voice AI can answer incoming calls, take food orders through natural conversation, and send them directly to your POS system for preparation. This ensures no calls are missed during busy service hours.'
+    },
+    {
+      question: 'How does AI automation work with restaurant POS systems?',
+      answer: 'AI automation tools connect directly with POS systems like Clover, Square, and iTabPOS to streamline phone ordering, reservation management, customer notifications, and marketing campaigns without manual intervention.'
+    },
+    {
+      question: 'What AI features are available for restaurants?',
+      answer: 'Restaurants can benefit from AI phone ordering, AI voice reservations, automated order notifications, AI customer support, and AI-powered marketing automation. These tools reduce missed calls, improve customer experience, and increase revenue.'
     }
   ];
 
@@ -650,6 +662,8 @@ const Restaurants = () => {
         </div>
       </section>
 
+      <AIPoweredSection onContactClick={() => setShowContactModal(true)} onCalendlyClick={() => setShowCalendlyModal(true)} />
+
       {/* Digital Advertising & Growth Services */}
       <section className="py-20 bg-white" data-testid="digital-advertising-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -753,8 +767,6 @@ const Restaurants = () => {
           </Accordion>
         </div>
       </section>
-
-      <AIPoweredSection onContactClick={() => setShowContactModal(true)} onCalendlyClick={() => setShowCalendlyModal(true)} />
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">

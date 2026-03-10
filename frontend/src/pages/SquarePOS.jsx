@@ -27,6 +27,7 @@ import {
   GraduationCap,
   Rocket,
   ChevronRight,
+  ChevronDown,
   Search,
   UserPlus,
   Phone,
@@ -952,6 +953,8 @@ const SquarePOS = () => {
         </div>
       </section>
 
+      <AIPoweredSection onContactClick={() => setShowFormModal(true)} onCalendlyClick={openCalendly} />
+
       {/* Nationwide Installation */}
       <section className="py-20 bg-white" data-testid="nationwide-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1168,7 +1171,24 @@ const SquarePOS = () => {
         </div>
       </section>
 
-      <AIPoweredSection onContactClick={() => setShowFormModal(true)} onCalendlyClick={openCalendly} />
+      {/* FAQ */}
+      <section className="py-20 bg-white" data-testid="faq-section">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">Square POS FAQ</h2>
+          <Accordion type="single" collapsible className="w-full">
+            {[
+              { q: 'Can AI take phone orders for my Square POS business?', a: 'Yes. Voice AI can answer incoming calls, take customer orders through natural conversation, and send them directly to your Square POS system. This ensures no orders are missed during busy hours and increases revenue from phone orders.' },
+              { q: 'How does AI automation work with Square POS?', a: 'AI automation tools connect directly with Square POS to streamline phone ordering, appointment scheduling, customer notifications, and marketing campaigns. The AI handles repetitive tasks so your staff can focus on serving customers.' },
+              { q: 'What AI features are available for Square POS businesses?', a: 'Square POS businesses can benefit from AI phone ordering, AI appointment scheduling, automated order notifications, AI customer support, and AI-powered marketing automation. These tools reduce missed calls, improve customer experience, and increase revenue.' },
+            ].map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`}>
+                <AccordionTrigger className="text-left font-semibold text-gray-900">{faq.q}</AccordionTrigger>
+                <AccordionContent className="text-gray-600">{faq.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white" data-testid="cta-section">

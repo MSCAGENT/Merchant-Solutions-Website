@@ -57,7 +57,10 @@ export default function FoodTruckPOS() {
     "mainEntity": [
       { "@type": "Question", "name": "What is the best POS system for a food truck?", "acceptedAnswer": { "@type": "Answer", "text": "Mobile POS systems such as Payanywhere, Square, and Clover Flex are popular choices because they are portable and simple to use." } },
       { "@type": "Question", "name": "Can food trucks accept contactless payments?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most modern POS systems support tap-to-pay payments, including Apple Pay and Google Pay." } },
-      { "@type": "Question", "name": "Do food trucks need internet to process payments?", "acceptedAnswer": { "@type": "Answer", "text": "Many mobile POS systems offer offline transaction capability in case connectivity is temporarily unavailable." } }
+      { "@type": "Question", "name": "Do food trucks need internet to process payments?", "acceptedAnswer": { "@type": "Answer", "text": "Many mobile POS systems offer offline transaction capability in case connectivity is temporarily unavailable." } },
+      { "@type": "Question", "name": "Can AI take phone orders for my food truck?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Voice AI can answer incoming calls, take customer orders through natural conversation, and send them directly to your POS system." } },
+      { "@type": "Question", "name": "How does AI automation integrate with food truck POS systems?", "acceptedAnswer": { "@type": "Answer", "text": "AI automation tools connect directly with POS systems like Clover, Square, and Payanywhere to streamline phone ordering, customer notifications, and marketing campaigns." } },
+      { "@type": "Question", "name": "What AI features are available for food truck businesses?", "acceptedAnswer": { "@type": "Answer", "text": "Food trucks can benefit from AI phone ordering, automated order notifications, AI-powered marketing campaigns, and customer support automation." } }
     ]
   };
 
@@ -335,6 +338,9 @@ export default function FoodTruckPOS() {
           <FAQItem question="What is the best POS system for a food truck?" answer="Mobile POS systems such as Payanywhere, Square, and Clover Flex are popular choices because they are portable and simple to use." />
           <FAQItem question="Can food trucks accept contactless payments?" answer="Yes. Most modern POS systems support tap-to-pay payments, including Apple Pay and Google Pay." />
           <FAQItem question="Do food trucks need internet to process payments?" answer="Many mobile POS systems offer offline transaction capability in case connectivity is temporarily unavailable." />
+          <FAQItem question="Can AI take phone orders for my food truck?" answer="Yes. Voice AI can answer incoming calls, take customer orders through natural conversation, and send them directly to your POS system. This ensures no orders are missed during busy service hours." />
+          <FAQItem question="How does AI automation integrate with food truck POS systems?" answer="AI automation tools connect directly with POS systems like Clover, Square, and Payanywhere to streamline phone ordering, customer notifications, and marketing campaigns without manual intervention." />
+          <FAQItem question="What AI features are available for food truck businesses?" answer="Food trucks can benefit from AI phone ordering, automated order notifications, AI-powered marketing campaigns, and customer support automation. These tools help reduce missed calls and increase revenue." />
         </div>
       </section>
 

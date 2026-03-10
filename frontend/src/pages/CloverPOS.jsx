@@ -665,6 +665,8 @@ const CloverPOS = () => {
         </div>
       </section>
 
+      <AIPoweredSection onContactClick={() => setShowFormModal(true)} onCalendlyClick={openCalendly} />
+
       {/* 9. INSTALLATION AND SETUP */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -814,6 +816,13 @@ const CloverPOS = () => {
             <FAQItem question="How is my monthly processing volume calculated?" answer="Monthly processing volume is based on total approved card transactions (Visa, Mastercard, Discover, Amex, and Pin Debit), processor-generated reporting / Merchant Statement, and a standard 30-day cycle. Volume is measured per terminal when multiple devices are installed." />
           </div>
 
+          {/* AI Automation FAQ */}
+          <div>
+            <FAQItem question="Can AI take phone orders for my Clover POS business?" answer="Yes. Voice AI can answer incoming calls, take customer orders through natural conversation, and send them directly to your Clover POS system. This ensures no orders are missed during busy hours and increases revenue from phone orders." />
+            <FAQItem question="How does AI automation work with Clover POS?" answer="AI automation tools connect directly with Clover POS to streamline phone ordering, appointment scheduling, customer notifications, and marketing campaigns. The AI handles repetitive tasks so your staff can focus on serving customers." />
+            <FAQItem question="What AI features are available for Clover POS businesses?" answer="Clover POS businesses can benefit from AI phone ordering, AI appointment scheduling, automated order notifications, AI customer support, and AI-powered marketing automation. These tools reduce missed calls, improve customer experience, and increase revenue." />
+          </div>
+
           <div className="mt-12 pt-10 border-t border-gray-200 text-center">
             <p className="text-xl font-semibold text-gray-900 mb-4">Do you still have more questions?</p>
             <Button size="lg" onClick={() => setShowFormModal(true)} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg" data-testid="contact-sales-btn">
@@ -822,8 +831,6 @@ const CloverPOS = () => {
           </div>
         </div>
       </section>
-
-      <AIPoweredSection onContactClick={() => setShowFormModal(true)} onCalendlyClick={openCalendly} />
 
       {/* FINAL CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">

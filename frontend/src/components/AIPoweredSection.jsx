@@ -86,6 +86,15 @@ export default function AIPoweredSection({ onContactClick, onCalendlyClick }) {
             Voice AI Business Automation <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
+
+        <div className="mt-10 pt-8 border-t border-white/10 flex justify-center">
+          <img
+            src="https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/7tytj5bz_MSC_1080x560.png"
+            alt="Merchant Solutions Corp - AI Automation Partner"
+            className="h-14 w-auto opacity-80"
+            data-testid="ai-section-msc-logo"
+          />
+        </div>
       </div>
     </section>
   );

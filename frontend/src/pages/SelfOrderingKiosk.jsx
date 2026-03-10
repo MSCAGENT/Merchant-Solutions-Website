@@ -18,7 +18,10 @@ const SelfOrderingKiosk = () => {
     { q: 'Do self ordering kiosks increase revenue?', a: 'Yes. Automated upsells and faster ordering can increase average ticket size and improve throughput.' },
     { q: 'Can kiosk hardware be financed?', a: 'Yes. Qualified merchants may access reimbursement programs or structured payment plans.' },
     { q: 'Do kiosks integrate with online ordering?', a: 'Yes. Modern kiosk POS systems sync with online ordering and kitchen systems.' },
-    { q: 'How long does installation take?', a: 'Most installations are completed after consultation, hardware delivery and menu configuration. Timing depends on business size and readiness.' }
+    { q: 'How long does installation take?', a: 'Most installations are completed after consultation, hardware delivery and menu configuration. Timing depends on business size and readiness.' },
+    { q: 'Can AI help my kiosk business take phone orders?', a: 'Yes. Voice AI can answer incoming calls, take customer orders through natural conversation, and send them directly to your POS and kiosk system. This ensures no orders are missed during busy hours.' },
+    { q: 'How does AI automation work with self-ordering kiosks?', a: 'AI automation tools connect directly with your kiosk POS system to streamline phone ordering, customer notifications, and marketing campaigns. The AI handles tasks like answering calls and sending order updates while your kiosks handle in-store orders.' },
+    { q: 'What AI features are available for restaurant kiosk businesses?', a: 'Restaurant kiosk businesses can benefit from AI phone ordering, automated order notifications, AI customer support, and AI-powered marketing automation. These tools complement your kiosks by capturing phone orders and improving customer communication.' }
   ];
 
   return (
@@ -364,6 +367,8 @@ const SelfOrderingKiosk = () => {
         </div>
       </section>
 
+      <AIPoweredSection onContactClick={() => setShowAppModal(true)} onCalendlyClick={() => setShowAppModal(true)} />
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -385,8 +390,6 @@ const SelfOrderingKiosk = () => {
           </Button>
         </div>
       </section>
-
-      <AIPoweredSection onContactClick={() => setShowAppModal(true)} onCalendlyClick={() => setShowAppModal(true)} />
 
       {/* Calendly Modal */}
       {showAppModal && (

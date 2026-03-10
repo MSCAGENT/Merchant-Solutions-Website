@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/sonner";
@@ -138,7 +138,7 @@ function App() {
           <Route path="/emv-gas-station-payment-processing" element={<GasStationProcessing />} />
           <Route path="/industries/gas-station" element={<GasStationProcessing />} />
           <Route path="/industries/b2b-processing" element={<B2BProcessing />} />
-          <Route path="/industries/food-trucks" element={<FoodTrucks />} />
+          <Route path="/industries/food-trucks" element={<Navigate to="/food-trucks-pos" replace />} />
           <Route path="/industries/cloud-kitchens" element={<CloudKitchens />} />
           <Route path="/industries/delivery-only" element={<DeliveryOnly />} />
           

@@ -360,6 +360,8 @@ export default function VoiceAIAutomation() {
           <FAQItem question="Can Voice AI schedule appointments?" answer="Yes. Salons, spas, medical offices, and service businesses can use Voice AI to schedule, confirm, and reschedule appointments automatically." />
           <FAQItem question="What happens if the AI can't answer a question?" answer="The AI will transfer the call to a live team member or take a message for follow-up." />
           <FAQItem question="Is Voice AI available 24/7?" answer="Yes. Voice AI operates around the clock, answering calls even after business hours." />
+          <FAQItem question="Can Voice AI handle multiple calls at the same time?" answer="Yes. Unlike human staff, Voice AI can manage multiple simultaneous calls, ensuring no customer is placed on hold or sent to voicemail during peak hours." />
+          <FAQItem question="How quickly can Voice AI be deployed for my business?" answer="Voice AI can typically be configured and deployed within a few days. Our team handles setup, integration with your POS system, and testing to ensure everything works correctly before going live." />
         </div>
       </section>
 

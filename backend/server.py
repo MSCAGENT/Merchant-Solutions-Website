@@ -359,7 +359,7 @@ async def seed_documents():
 # ─── AutoSEO Webhook Integration ───
 
 AUTOSEO_WEBHOOK_SECRET = os.environ.get('AUTOSEO_WEBHOOK_SECRET', '')
-SITE_URL = os.environ.get('SITE_URL', 'https://autoseo-blog-hub.preview.emergentagent.com')
+SITE_URL = os.environ.get('SITE_URL', 'https://payment-pos-ai.preview.emergentagent.com')
 
 class WebhookSettings(BaseModel):
     auto_publish: bool = True
