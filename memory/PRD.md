@@ -29,6 +29,11 @@ Expand the payment processing website's content for SEO purposes, enhance existi
 - **MSC Logo Added**: Added company logo beneath AI-Powered Automation section via AIPoweredSection component
 - **AI FAQ Questions Added**: Added AI-related FAQ questions to 7 POS pages + VoiceAIAutomation page
 - **SquarePOS FAQ Section**: Created new FAQ section for Square POS page
+- **Scroll-to-Top Fix**: Added ScrollToTop component so all page navigations start at the top
+- **Cloud Kitchen POS Page Rebuild**: Completely rebuilt Cloud Kitchens page at new SEO-optimized URL `/cloud-kitchen-pos-system` with 8 comprehensive sections, AI section, FAQ with schema markup, Cloud Kitchen Technology Solutions section, and full internal linking
+- **Delivery Only Page Removed**: Removed from navigation and redirected `/industries/delivery-only` to `/cloud-kitchen-pos-system`
+- **Navigation Cleanup**: Consolidated Cloud Kitchens + Delivery Only into single "Cloud Kitchens & Ghost Kitchens" nav item
+- **Sitemap Updated**: Replaced old cloud kitchen/delivery URLs with new `/cloud-kitchen-pos-system`
 
 ## Prioritized Backlog
 
@@ -58,7 +63,9 @@ Expand the payment processing website's content for SEO purposes, enhance existi
 - `/restaurant-payment-processing-services` - Restaurant POS
 - `/pos/qr-ordering` - QR Code Ordering
 - `/best-self-ordering-kiosk-for-restaurants` - Self Ordering Kiosk
-- `/industries/cloud-kitchens` - Cloud Kitchens
+- `/cloud-kitchen-pos-system` - Cloud Kitchen POS (rebuilt, comprehensive)
+- `/industries/cloud-kitchens` - Redirects to `/cloud-kitchen-pos-system`
+- `/industries/delivery-only` - Redirects to `/cloud-kitchen-pos-system`
 - `/voice-ai-business-automation` - Voice AI Automation
 
 ## Credentials
