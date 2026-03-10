@@ -515,12 +515,11 @@ const DejavooTerminals = () => {
                       <DialogTrigger asChild>
                         <Button 
                           className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
-                          onClick={() => setSelectedDevice(terminal)}
                         >
                           Pricing
                         </Button>
                       </DialogTrigger>
-                      <PricingModal device={selectedDevice} />
+                      <PricingModal device={terminal} />
                     </Dialog>
                     
                     <Button
