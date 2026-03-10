@@ -25,8 +25,12 @@ Build a comprehensive, SEO-optimized payment processing website with a blog CMS,
 - Blog: /resources/blog (public), /resources/blog/admin (admin)
 - Documents: /resources/documents (login-protected)
 
-## Completed (2026-03-09)
-- **PAX Terminal Image Updated**: Changed from A77 to SwipeSimple bundle image on Payment Terminals Overview page
+## Completed (2026-03-10)
+- **AI-Powered Automation Section** added to 7 pages: Clover, Square, Restaurant, QR Ordering, Kiosk, Food Trucks, Cloud Kitchens
+- **Voice AI Business Automation Page** (`/voice-ai-business-automation`) with full SEO, POS logos, FAQ, Restaurant/Retail sections
+- **FoodTrucks & CloudKitchens** upgraded from placeholders to full pages
+
+## Completed (2026-03-09) - Latest
 - **About Us Page Created** (`/about-merchant-solutions-corp`):
   - 8 content sections: About, Payment Processing, POS Systems, Industries, Florida, Dealership Model, Why Choose Us, FAQ
   - Full SEO: meta title, description, keywords, canonical URL, Organization + FAQ JSON-LD schemas

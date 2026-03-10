@@ -22,6 +22,7 @@ import {
   RefreshCw
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import AIPoweredSection from '../components/AIPoweredSection';
 import { Card, CardContent } from '../components/ui/card';
 import {
   Accordion,
@@ -803,6 +804,8 @@ const Restaurants = () => {
           </p>
         </div>
       </section>
+
+      <AIPoweredSection onContactClick={() => setShowContactModal(true)} onCalendlyClick={() => setShowCalendlyModal(true)} />
 
       {/* Contact Sales Modal (Lead Connector) */}
       {showContactModal && (

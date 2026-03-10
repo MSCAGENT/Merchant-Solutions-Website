@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronRight, Monitor, Zap, DollarSign, Users, ArrowRight, Phone, ShoppingCart, Globe } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import AIPoweredSection from '../components/AIPoweredSection';
 
 const SelfOrderingKiosk = () => {
   const [showAppModal, setShowAppModal] = useState(false);
@@ -384,6 +385,8 @@ const SelfOrderingKiosk = () => {
           </Button>
         </div>
       </section>
+
+      <AIPoweredSection onContactClick={() => setShowAppModal(true)} onCalendlyClick={() => setShowAppModal(true)} />
 
       {/* Calendly Modal */}
       {showAppModal && (

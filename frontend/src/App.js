@@ -84,6 +84,7 @@ import WhiteLabelPartner from "./pages/WhiteLabelPartner";
 import WhiteLabelMerchantServices from "./pages/pricing/WhiteLabelMerchantServices";
 import Support from "./pages/Support";
 import ServiceAreas from "./pages/ServiceAreas";
+import VoiceAIAutomation from "./pages/solutions/VoiceAIAutomation";
 
 function App() {
   return (
@@ -167,6 +168,7 @@ function App() {
           <Route path="/pos/daysmart-salon" element={<DaySmartSalon />} />
           
           {/* Gateway Routes */}
+          <Route path="/voice-ai-business-automation" element={<VoiceAIAutomation />} />
           <Route path="/dual-pricing-cash-discount-payment-processing" element={<DualPricing />} />
           <Route path="/solutions/dual-pricing" element={<DualPricing />} />
           <Route path="/gateway/payments-gateway" element={<MSCGateway />} />

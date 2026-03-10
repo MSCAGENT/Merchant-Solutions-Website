@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronDown, ChevronRight, CreditCard, Shield, Zap, BarChart3, Package, Users, Heart, UtensilsCrossed, ShoppingBag, Scissors, Briefcase, Settings, GraduationCap, Smartphone, MapPin, Headphones, LayoutGrid } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import AIPoweredSection from '../components/AIPoweredSection';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
 
@@ -821,6 +822,8 @@ const CloverPOS = () => {
           </div>
         </div>
       </section>
+
+      <AIPoweredSection onContactClick={() => setShowFormModal(true)} onCalendlyClick={openCalendly} />
 
       {/* FINAL CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">

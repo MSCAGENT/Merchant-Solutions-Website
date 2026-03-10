@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ChevronDown, ChevronRight, Zap, Users, TrendingUp, ThumbsUp, Clock, Smartphone, QrCode, CreditCard, Shield, Settings, GraduationCap, Headphones, MapPin, UtensilsCrossed, Wine, Coffee, Truck, Building2, Music, Beer } from 'lucide-react';
 import { Button } from '../../components/ui/button';
+import AIPoweredSection from '../../components/AIPoweredSection';
 import { Card, CardContent } from '../../components/ui/card';
 
 const FAQItem = ({ question, answer }) => {
@@ -395,6 +396,8 @@ export default function QRCodeOrdering() {
           <FAQItem question="Is QR ordering good for patios and large dining areas?" answer="Yes. It allows servers to manage larger sections efficiently while maintaining fast service, making it ideal for patios, beer gardens, and large venues." />
         </div>
       </section>
+
+      <AIPoweredSection onContactClick={() => setShowFormModal(true)} onCalendlyClick={openCalendly} />
 
       {/* 11. FINAL CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">

@@ -39,6 +39,7 @@ const megaMenus = {
         items: [
           { label: 'Payroll Services for Small Business', desc: 'Manage employee payroll, taxes, and payments with integrated software.', path: '/solutions/payroll-services' },
           { label: 'POS Installation & Technical Support', desc: 'Professional setup, system configuration, and training for POS equipment.', path: '/solutions/it-services' },
+          { label: 'Voice AI Business Automation', desc: 'AI phone ordering, appointment scheduling, and customer support automation.', path: '/voice-ai-business-automation' },
         ],
       },
     ],
