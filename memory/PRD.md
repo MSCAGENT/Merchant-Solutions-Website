@@ -34,6 +34,8 @@ Expand the payment processing website's content for SEO purposes, enhance existi
 - **Delivery Only Page Removed**: Removed from navigation and redirected `/industries/delivery-only` to `/cloud-kitchen-pos-system`
 - **Navigation Cleanup**: Consolidated Cloud Kitchens + Delivery Only into single "Cloud Kitchens & Ghost Kitchens" nav item
 - **Sitemap Updated**: Replaced old cloud kitchen/delivery URLs with new `/cloud-kitchen-pos-system`
+- **Homepage SEO Overhaul**: Complete rewrite of Home.jsx with optimized meta title, description, OG tags, Organization + FAQ JSON-LD schemas, 8 content sections with proper H1/H2/H3 hierarchy, internal link structure to 10 key pages, and Smart Automation section
+- **Robots.txt Updated**: Added /admin/ and /wp-admin/ disallow rules per user request
 
 ## Prioritized Backlog
 
