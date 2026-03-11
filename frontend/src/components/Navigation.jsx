@@ -118,6 +118,7 @@ const megaMenus = {
       {
         heading: 'Online Payments',
         items: [
+          { label: 'Ecommerce Payments', desc: 'Secure ecommerce payment processing, hosted payment pages, and payment links.', path: '/ecommerce-payments' },
           { label: 'Transaction Gateway', desc: 'Secure payment gateway for e-commerce websites.', path: '/gateway/payments-gateway' },
           { label: 'Virtual Terminal', desc: 'Accept payments manually from any computer.', path: '/pos/virtual-terminal' },
           { label: 'Payment Links', desc: 'Send secure payment links by email or SMS.', path: '/pos/payment-links' },

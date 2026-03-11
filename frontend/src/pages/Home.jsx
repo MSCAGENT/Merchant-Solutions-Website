@@ -165,7 +165,7 @@ const Home = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/online-payments" className="inline-flex items-center text-purple-600 font-semibold text-sm hover:text-purple-700 transition-colors">
+                <Link to="/ecommerce-payments" className="inline-flex items-center text-purple-600 font-semibold text-sm hover:text-purple-700 transition-colors">
                   Learn More <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </CardContent>

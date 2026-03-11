@@ -9,6 +9,7 @@ const Footer = () => {
       links: [
         { label: 'Payment Processing', path: '/payment-processing-pricing' },
         { label: 'Online Payments', path: '/solutions/payment-processing' },
+        { label: 'Online Payments', path: '/ecommerce-payments' },
         { label: 'Gift Cards', path: '/solutions/gift-cards' },
         { label: 'Loyalty & Rewards', path: '/solutions/loyalty-rewards' },
         { label: 'Business Loans', path: '/solutions/business-loans' },
