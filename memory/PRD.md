@@ -36,6 +36,9 @@ Expand the payment processing website's content for SEO purposes, enhance existi
 - **Sitemap Updated**: Replaced old cloud kitchen/delivery URLs with new `/cloud-kitchen-pos-system`
 - **Homepage SEO Overhaul**: Complete rewrite of Home.jsx with optimized meta title, description, OG tags, Organization + FAQ JSON-LD schemas, 8 content sections with proper H1/H2/H3 hierarchy, internal link structure to 10 key pages, and Smart Automation section
 - **Robots.txt Updated**: Added /admin/ and /wp-admin/ disallow rules per user request
+- **Homepage FAQ Rewrite**: Replaced generic FAQs with 7 brand-specific questions covering MSC services, direct provider status, subscription processing, free POS, supported POS systems, marketing integrations, and industries
+- **Footer Sitemap & Social Links**: Rebuilt footer with 44 internal links across 5 columns + 5 social media icons (Facebook, Instagram, LinkedIn, YouTube, Google)
+- **Ecommerce Payments Page**: Created comprehensive `/ecommerce-payments` page with 9 content sections, breadcrumb, 4 JSON-LD schemas (Service, FAQ, Breadcrumb, Organization), full SEO tags, 6 FAQs, CRM/marketing section, and internal linking. Added to nav, homepage, footer, and sitemap.
 
 ## Prioritized Backlog
 
