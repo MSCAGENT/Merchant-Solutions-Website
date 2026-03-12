@@ -33,6 +33,7 @@ const Footer = () => {
         { label: 'PAX Terminals', path: '/pos/pax-terminals' },
         { label: 'Ingenico Terminals', path: '/pos/ingenico-terminals' },
         { label: 'Dejavoo Terminals', path: '/pos/dejavoo-terminals' },
+        { label: 'Smart Terminals', path: '/smart-payment-terminals' },
         { label: 'Self-Ordering Kiosks', path: '/best-self-ordering-kiosk-for-restaurants' },
         { label: 'QR Code Ordering', path: '/qr-code-mobile-ordering' },
       ]

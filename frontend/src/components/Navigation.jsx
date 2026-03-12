@@ -102,7 +102,7 @@ const megaMenus = {
         heading: 'Payment Terminals',
         items: [
           { label: 'Payment Terminals Overview', desc: 'Compare countertop, wireless, and smart terminals.', path: '/pos/payment-terminals-overview' },
-          { label: 'Smart Terminals & Mobile POS', desc: 'Portable Android smart terminals for mobile businesses.', path: '/pos/smart-terminals' },
+          { label: 'Smart Payment Terminals', desc: 'Sunmi V3, Verifone Victa & Android smart POS devices.', path: '/smart-payment-terminals' },
           { label: 'Dejavoo Terminals', desc: 'Reliable countertop and wireless credit card terminals.', path: '/pos/dejavoo-terminals' },
           { label: 'Ingenico Terminals', desc: 'Enterprise-grade EMV and NFC payment devices.', path: '/pos/ingenico-terminals' },
         ],

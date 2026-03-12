@@ -92,6 +92,7 @@ import WhiteLabelPartner from "./pages/WhiteLabelPartner";
 import WhiteLabelMerchantServices from "./pages/pricing/WhiteLabelMerchantServices";
 import Support from "./pages/Support";
 import ServiceAreas from "./pages/ServiceAreas";
+import SmartPaymentTerminals from "./pages/SmartPaymentTerminals";
 import VoiceAIAutomation from "./pages/solutions/VoiceAIAutomation";
 
 function App() {
@@ -162,7 +163,8 @@ function App() {
           <Route path="/pos/pax-terminals" element={<PAXTerminals />} />
           <Route path="/pos/dejavoo-terminals" element={<DejavooTerminals />} />
           <Route path="/pos/exatouch" element={<Exatouch />} />
-          <Route path="/pos/smart-terminals" element={<SmartTerminals />} />
+          <Route path="/smart-payment-terminals" element={<SmartPaymentTerminals />} />
+          <Route path="/pos/smart-terminals" element={<Navigate to="/smart-payment-terminals" replace />} />
           <Route path="/pos/payment-terminals-overview" element={<PaymentTerminalsOverview />} />
           <Route path="/payment-terminals" element={<PaymentTerminalsOverview />} />
           <Route path="/pos/clover-kiosk" element={<CloverKiosk />} />
