@@ -47,6 +47,15 @@ export default function AIPoweredSection({ onContactClick, onCalendlyClick }) {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-white" data-testid="ai-automation-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
+          {/* TalkyToo AI Logo */}
+          <div className="flex justify-center mb-6">
+            <img
+              src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/efagog6d_Transparent%20PNG%20white%20Version.png"
+              alt="TalkyToo AI - Voice AI Automation Partner"
+              className="h-12 w-auto"
+              data-testid="talkytoo-logo"
+            />
+          </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">AI-Powered Automation for Modern Businesses</h2>
           <p className="text-lg text-purple-200 max-w-3xl mx-auto mb-3">
             Modern POS systems are no longer just payment terminals. Today's platforms combine payment processing, artificial intelligence, and automation to help businesses operate more efficiently and deliver better customer experiences.
@@ -87,7 +96,15 @@ export default function AIPoweredSection({ onContactClick, onCalendlyClick }) {
           </Link>
         </div>
 
-        <div className="mt-10 pt-8 border-t border-white/10 flex justify-center">
+        <div className="mt-10 pt-8 border-t border-white/10 flex flex-col items-center gap-6">
+          {/* Maple Logo - white on dark */}
+          <img
+            src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/7ceusbsh_MAPLE.png"
+            alt="Maple - AI Business Automation"
+            className="h-10 w-auto"
+            style={{ filter: 'brightness(0) invert(1)' }}
+            data-testid="maple-logo"
+          />
           <img
             src="https://customer-assets.emergentagent.com/job_98ba5cc9-5a8c-49ab-a17a-dde6797f516c/artifacts/7tytj5bz_MSC_1080x560.png"
             alt="Merchant Solutions Corp - AI Automation Partner"

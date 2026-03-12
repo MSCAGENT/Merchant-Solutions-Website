@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import AIPoweredSection from '../components/AIPoweredSection';
 import { 
   CheckCircle, 
   Shield, 
@@ -521,6 +522,8 @@ const Healthcare = () => {
           </div>
         </div>
       </section>
+
+      <AIPoweredSection onContactClick={openCalendly} onCalendlyClick={openCalendly} />
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">

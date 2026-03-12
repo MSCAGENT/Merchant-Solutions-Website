@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import AIPoweredSection from '../components/AIPoweredSection';
 import {
   CheckCircle,
   ArrowRight,
@@ -440,6 +441,8 @@ const Chiropractors = () => {
           </div>
         </div>
       </section>
+
+      <AIPoweredSection onContactClick={openCalendly} onCalendlyClick={openCalendly} />
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-yellow-500">

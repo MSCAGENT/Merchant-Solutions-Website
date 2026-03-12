@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import AIPoweredSection from '../components/AIPoweredSection';
 import {
   CheckCircle,
   CreditCard,
@@ -510,6 +511,8 @@ const MedicalClinics = () => {
           </p>
         </div>
       </section>
+
+      <AIPoweredSection onContactClick={() => setShowContactModal(true)} onCalendlyClick={openCalendly} />
 
       {/* Florida & Nationwide + Final CTA */}
       <section className="py-16 bg-white">

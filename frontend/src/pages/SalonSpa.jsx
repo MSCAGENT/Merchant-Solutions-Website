@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import AIPoweredSection from '../components/AIPoweredSection';
 import {
   CheckCircle,
   Calendar,
@@ -459,6 +460,8 @@ const SalonSpa = () => {
           </div>
         </div>
       </section>
+
+      <AIPoweredSection onContactClick={() => setShowQuoteModal(true)} onCalendlyClick={() => setShowDemoModal(true)} />
 
       {/* DaySmart Deep Dive */}
       <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50" data-testid="daysmart-section">
