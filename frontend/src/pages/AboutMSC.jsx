@@ -311,7 +311,7 @@ export default function AboutMSC() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { num: '2012', label: 'Founded' },
-                { num: '1000+', label: 'Merchants Served' },
+                { num: '100K+', label: 'Merchants Served' },
                 { num: '50+', label: 'Industries Supported' },
                 { num: '24/7', label: 'Merchant Support' },
               ].map((stat, i) => (

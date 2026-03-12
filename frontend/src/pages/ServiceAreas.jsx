@@ -214,6 +214,20 @@ export default function ServiceAreas() {
       const serviceFeatures = geoJson.features.filter(f => COUNTRY_ISO[f.id]);
       serviceFeatures.forEach(f => { f._svc = COUNTRY_ISO[f.id]; });
 
+      /* Fix: Filter France (250) to only show mainland Europe, not French Guiana */
+      serviceFeatures.forEach(f => {
+        if (f.id === '250' && f.geometry.type === 'MultiPolygon') {
+          f.geometry = {
+            ...f.geometry,
+            coordinates: f.geometry.coordinates.filter(poly => {
+              const lng = poly[0][0][0];
+              const lat = poly[0][0][1];
+              return lng > -10 && lng < 20 && lat > 35 && lat < 55;
+            })
+          };
+        }
+      });
+
       /* Arc connections from Houston to international service regions */
       const arcData = Object.entries(COUNTRY_ISO)
         .filter(([id]) => id !== '840' && id !== '630' && id !== '850')
@@ -335,7 +349,9 @@ export default function ServiceAreas() {
     "mainEntity": [
       { "@type": "Question", "name": "Does Merchant Solutions Corp provide merchant services nationwide?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Merchant Solutions Corp provides payment processing, merchant accounts, ATMs and POS installation services across the United States, Canada, and Puerto Rico." } },
       { "@type": "Question", "name": "Can businesses qualify for free POS systems?", "acceptedAnswer": { "@type": "Answer", "text": "Many businesses qualify for free POS system placement depending on transaction volume and processing requirements." } },
-      { "@type": "Question", "name": "Does Merchant Solutions Corp install POS systems?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Merchant Solutions Corp provides POS system installation, configuration, and training support nationwide." } }
+      { "@type": "Question", "name": "Does Merchant Solutions Corp install POS systems?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Merchant Solutions Corp provides POS system installation, configuration, and training support nationwide." } },
+      { "@type": "Question", "name": "Can Merchant Solutions offer free equipment internationally?", "acceptedAnswer": { "@type": "Answer", "text": "No, unfortunately that program is only open to the US, Canada, and US territories." } },
+      { "@type": "Question", "name": "If Merchant Solutions works and processes in my country, will they also support me locally?", "acceptedAnswer": { "@type": "Answer", "text": "It depends if we have a sales channel available in your vicinity. If we don't, we can manage your account remotely." } }
     ]
   };
 
@@ -392,7 +408,9 @@ export default function ServiceAreas() {
       </div>
 
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-white py-24 md:py-32 overflow-hidden">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/yxyykfyy_Space%20Station.mp4" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-950/70 to-gray-900/80" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight max-w-4xl" data-testid="hero-h1">
             Nationwide Merchant Services &amp; POS Installation
@@ -424,43 +442,26 @@ export default function ServiceAreas() {
       {/* COVERAGE AREAS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="coverage-h2">Merchant Services Coverage Areas</h2>
-              <p className="text-lg text-gray-700 mb-6">Merchant Solutions Corp supports businesses across North America with payment processing infrastructure, POS system deployment, and installation services.</p>
-              <p className="text-gray-700 font-semibold mb-3">Our current service territories include:</p>
-              <div className="flex flex-wrap gap-3 mb-6">
-                {['United States', 'Canada', 'Puerto Rico'].map((r, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2.5 rounded-xl border border-purple-100 font-medium">
-                    <MapPin className="h-4 w-4" /> {r}
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-700 font-semibold mb-3">Businesses in these regions can receive:</p>
-              <div className="space-y-2.5">
-                {['Low rate merchant accounts', 'Free POS system programs', 'Payment gateway solutions', 'Online payment processing', 'POS installation and setup', 'Merchant onboarding and training'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-purple-500 flex-shrink-0" /> {item}
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-600 mt-6">Our technology infrastructure allows us to support merchants remotely and through installation partners nationwide.</p>
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                { val: '50+', label: 'US States Covered' },
-                { val: '13', label: 'Canadian Provinces' },
-                { val: '3+', label: 'Territories' },
-                { val: '24/7', label: 'Technical Support' },
-                { val: '1000+', label: 'Merchants Served' },
-                { val: '6', label: 'Banking Partners' },
-              ].map((stat, i) => (
-                <div key={i} className="bg-purple-50 rounded-2xl p-5 text-center border border-purple-100">
-                  <div className="text-2xl font-bold text-purple-600">{stat.val}</div>
-                  <div className="text-xs text-gray-600 mt-1">{stat.label}</div>
+          <div className="max-w-3xl">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="coverage-h2">Merchant Services Coverage Areas</h2>
+            <p className="text-lg text-gray-700 mb-6">Merchant Solutions Corp supports businesses across North America with payment processing infrastructure, POS system deployment, and installation services.</p>
+            <p className="text-gray-700 font-semibold mb-3">Our current service territories include:</p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              {['United States', 'Canada', 'Puerto Rico'].map((r, i) => (
+                <div key={i} className="flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2.5 rounded-xl border border-purple-100 font-medium">
+                  <MapPin className="h-4 w-4" /> {r}
                 </div>
               ))}
             </div>
+            <p className="text-gray-700 font-semibold mb-3">Businesses in these regions can receive:</p>
+            <div className="space-y-2.5">
+              {['Low rate merchant accounts', 'Free POS system programs', 'Payment gateway solutions', 'Online payment processing', 'POS installation and setup', 'Merchant onboarding and training'].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 text-gray-700">
+                  <CheckCircle className="h-5 w-5 text-purple-500 flex-shrink-0" /> {item}
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-600 mt-6">Our technology infrastructure allows us to support merchants remotely and through installation partners nationwide.</p>
           </div>
         </div>
       </section>
@@ -468,6 +469,22 @@ export default function ServiceAreas() {
       {/* INTERACTIVE GLOBE */}
       <section className="py-20 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Stats bar */}
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-12">
+            {[
+              { val: '50+', label: 'US States' },
+              { val: '13', label: 'Canadian Provinces' },
+              { val: '3+', label: 'Territories' },
+              { val: '24/7', label: 'Support' },
+              { val: '100K+', label: 'Merchants Served' },
+              { val: '6', label: 'Banking Partners' },
+            ].map((stat, i) => (
+              <div key={i} className="bg-purple-900/40 rounded-xl p-4 text-center border border-purple-700/30">
+                <div className="text-xl font-bold text-purple-300">{stat.val}</div>
+                <div className="text-xs text-gray-400 mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="globe-h2">Interactive Global Coverage Map</h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">Explore our service territories. Hover on a highlighted country to see available services. Click and drag to rotate.</p>
@@ -516,6 +533,10 @@ export default function ServiceAreas() {
               <span key={i} className="text-xs bg-purple-900/50 text-purple-300 px-3 py-1.5 rounded-full border border-purple-700/50">{r.name}</span>
             ))}
           </div>
+          {/* Disclaimer */}
+          <p className="text-xs text-gray-500 text-center mt-8 max-w-2xl mx-auto leading-relaxed" data-testid="globe-disclaimer">
+            Merchant Solutions Corp offers merchant services in specific regions through exclusive banking partners. Please <Link to="/contact" className="text-purple-400 hover:underline">contact us</Link> if you'd like to find out if we work in your territory.
+          </p>
         </div>
       </section>
 
@@ -576,21 +597,36 @@ export default function ServiceAreas() {
             {[
               { name: 'Clover POS', link: '/clover-pos-system' },
               { name: 'Square POS', link: '/pos/square' },
-              { name: 'Toast POS', link: '/restaurant-payment-processing-services' },
-              { name: 'Lightspeed Retail', link: '/best-pos-system-for-retail' },
-            ].map((pos, i) => (
-              <Link key={i} to={pos.link} className="group">
-                <Card className="h-full border-2 border-transparent hover:border-purple-400 hover:shadow-xl transition-all">
-                  <CardContent className="p-6 text-center">
-                    <Monitor className="h-10 w-10 text-purple-500 mx-auto mb-3" />
-                    <h3 className="font-bold text-gray-900 mb-2">{pos.name}</h3>
-                    <span className="text-purple-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:underline">
-                      Learn More <ArrowRight className="h-4 w-4" />
-                    </span>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+              { name: 'SkyTab POS', link: 'https://www.shift4hospitality.com', external: true },
+              { name: 'Union POS', link: '/union-pos-system' },
+            ].map((pos, i) => {
+              const isExt = pos.external;
+              return isExt ? (
+                <a key={i} href={pos.link} target="_blank" rel="noopener noreferrer" className="group">
+                  <Card className="h-full border-2 border-transparent hover:border-purple-400 hover:shadow-xl transition-all">
+                    <CardContent className="p-6 text-center">
+                      <Monitor className="h-10 w-10 text-purple-500 mx-auto mb-3" />
+                      <h3 className="font-bold text-gray-900 mb-2">{pos.name}</h3>
+                      <span className="text-purple-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:underline">
+                        Learn More <ArrowRight className="h-4 w-4" />
+                      </span>
+                    </CardContent>
+                  </Card>
+                </a>
+              ) : (
+                <Link key={i} to={pos.link} className="group">
+                  <Card className="h-full border-2 border-transparent hover:border-purple-400 hover:shadow-xl transition-all">
+                    <CardContent className="p-6 text-center">
+                      <Monitor className="h-10 w-10 text-purple-500 mx-auto mb-3" />
+                      <h3 className="font-bold text-gray-900 mb-2">{pos.name}</h3>
+                      <span className="text-purple-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:underline">
+                        Learn More <ArrowRight className="h-4 w-4" />
+                      </span>
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
           <div className="text-center">
             <p className="text-gray-700 font-semibold mb-4">These systems help businesses manage:</p>
@@ -703,6 +739,8 @@ export default function ServiceAreas() {
           <FAQItem question="Does Merchant Solutions Corp provide merchant services nationwide?" answer="Yes, Merchant Solutions Corp provides payment processing, merchant accounts, ATMs and POS installation services across the United States, Canada, and Puerto Rico." />
           <FAQItem question="Can businesses qualify for free POS systems?" answer="Many businesses qualify for free POS system placement depending on transaction volume and processing requirements." />
           <FAQItem question="Does Merchant Solutions Corp install POS systems?" answer="Yes. Merchant Solutions Corp provides POS system installation, configuration, and training support nationwide." />
+          <FAQItem question="Can Merchant Solutions offer free equipment internationally?" answer="No, unfortunately that program is only open to the US, Canada, and US territories." />
+          <FAQItem question="If Merchant Solutions works and processes in my country, will they also support me locally?" answer="It depends if we have a sales channel available in your vicinity. If we don't, we can manage your account remotely." />
         </div>
       </section>
 

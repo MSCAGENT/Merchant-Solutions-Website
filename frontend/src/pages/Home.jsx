@@ -407,7 +407,7 @@ const Home = () => {
             <div className="grid grid-cols-2 gap-5">
               {[
                 { val: '2012', label: 'Founded' },
-                { val: '1000+', label: 'Merchants Served' },
+                { val: '100K+', label: 'Merchants Served' },
                 { val: '50+', label: 'POS Models Deployed' },
                 { val: '24/7', label: 'Technical Support' },
               ].map((stat, i) => (
