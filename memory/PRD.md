@@ -39,10 +39,12 @@ Expand the payment processing website's content for SEO purposes, enhance existi
 - **Homepage FAQ Rewrite**: Replaced generic FAQs with 7 brand-specific questions covering MSC services, direct provider status, subscription processing, free POS, supported POS systems, marketing integrations, and industries
 - **Footer Sitemap & Social Links**: Rebuilt footer with 44 internal links across 5 columns + 5 social media icons (Facebook, Instagram, LinkedIn, YouTube, Google)
 - **Ecommerce Payments Page**: Created comprehensive `/ecommerce-payments` page with 9 content sections, breadcrumb, 4 JSON-LD schemas (Service, FAQ, Breadcrumb, Organization), full SEO tags, 6 FAQs, CRM/marketing section, and internal linking. Added to nav, homepage, footer, and sitemap.
+- **3D Globe Enhancements (Mar 2026)**: Rebuilt the interactive globe on `/service-areas` with polygon-based country highlighting (GeoJSON via topojson-client), electric arc connections from Houston to international regions, pulsing rings at service centers, hover popups showing service availability per country, click popups with persistent detail panels, Jetsons-style UFO animation with glowing trail, rocket launch animation from Houston TX with exhaust flame, and a color-coded legend distinguishing Square POS vs Clover/Exatouch service regions.
 
 ## Prioritized Backlog
 
 ### P1 - Upcoming
+- Full Site-wide SEO Overhaul (bring all ~40+ pages up to EcommercePayments.jsx standard)
 - Implement Qualifier Wizard (multi-step lead qualification form)
 - PDF Upload for Document Portal
 - Embed Payment Link in PayAnywhere flow
@@ -72,6 +74,8 @@ Expand the payment processing website's content for SEO purposes, enhance existi
 - `/industries/cloud-kitchens` - Redirects to `/cloud-kitchen-pos-system`
 - `/industries/delivery-only` - Redirects to `/cloud-kitchen-pos-system`
 - `/voice-ai-business-automation` - Voice AI Automation
+- `/service-areas` - Service Areas (enhanced 3D globe with polygon highlighting)
+- `/ecommerce-payments` - Ecommerce Payments (SEO standard reference)
 
 ## Credentials
 - Blog Admin: `/resources/blog/admin` - marketing@merchantsolutionscorp.com / Mscpay$1
