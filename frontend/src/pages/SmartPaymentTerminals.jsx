@@ -30,6 +30,21 @@ const FAQItem = ({ question, answer }) => {
 
 export default function SmartPaymentTerminals() {
   const [showFormModal, setShowFormModal] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const HERO_SLIDES = [
+    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/edh9qpqg_Victa%20mobile.avif', alt: 'Verifone Victa mobile smart payment terminal' },
+    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/tiyepm9q_Victa%20reader.avif', alt: 'Verifone Victa reader payment device' },
+    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/msjf5j4d_Victa%20register.avif', alt: 'Verifone Victa register POS terminal' },
+    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/10xw050q_Victa%20unnatended.avif', alt: 'Verifone Victa unattended payment terminal' },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % 4);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
@@ -156,13 +171,30 @@ export default function SmartPaymentTerminals() {
                 </Button>
               </div>
             </div>
-            <div className="hidden lg:block">
-              <img
-                src="https://images.unsplash.com/photo-1607609972246-a14762f20d3e?w=600&q=80"
-                alt="Modern smart payment terminals including Sunmi V3 and Verifone Victa POS devices"
-                className="rounded-2xl shadow-2xl w-full object-cover border border-purple-500/20"
-                loading="eager"
-              />
+            <div className="hidden lg:block relative" data-testid="hero-slideshow">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-purple-500/20">
+                {HERO_SLIDES.map((slide, i) => (
+                  <img
+                    key={i}
+                    src={slide.src}
+                    alt={slide.alt}
+                    className={`absolute inset-0 w-full h-full object-contain bg-gradient-to-br from-gray-800 to-gray-900 transition-opacity duration-700 ease-in-out ${i === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                  />
+                ))}
+              </div>
+              {/* Slide indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {HERO_SLIDES.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentSlide(i)}
+                    className={`h-2 rounded-full transition-all duration-300 ${i === currentSlide ? 'bg-white w-6' : 'bg-white/40 w-2 hover:bg-white/60'}`}
+                    aria-label={`Go to slide ${i + 1}`}
+                    data-testid={`slide-indicator-${i}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -311,9 +343,9 @@ export default function SmartPaymentTerminals() {
               <h3 className="text-2xl font-bold mb-2">Verifone Victa Series</h3>
               <p className="text-gray-400 mb-6">New generation of payment terminals for high-performance business environments</p>
               <img
-                src="https://images.unsplash.com/photo-1664490697404-5c84e8829f49?w=500&q=80"
-                alt="Verifone Victa smart payment terminal for retail and restaurants"
-                className="w-full h-48 object-cover rounded-xl mb-6"
+                src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/44uo2xp7_Victa%20portable.avif"
+                alt="Verifone Victa portable smart payment terminal"
+                className="w-full h-48 object-contain bg-gray-800 rounded-xl mb-6"
                 loading="lazy"
               />
               <p className="text-gray-300 font-semibold mb-3">Features include:</p>
@@ -338,9 +370,9 @@ export default function SmartPaymentTerminals() {
               <h3 className="text-2xl font-bold mb-2">Verifone V Series Payment Terminals</h3>
               <p className="text-gray-400 mb-6">Reliable countertop and portable terminals used by merchants worldwide</p>
               <img
-                src="https://images.unsplash.com/photo-1716388008248-09c77a05606c?w=500&q=80"
-                alt="Verifone V series payment terminal for businesses"
-                className="w-full h-48 object-cover rounded-xl mb-6"
+                src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/3y6glwen_Victa%20Soft%20POS.avif"
+                alt="Verifone Soft POS payment solution for businesses"
+                className="w-full h-48 object-contain bg-gray-800 rounded-xl mb-6"
                 loading="lazy"
               />
               <p className="text-gray-300 font-semibold mb-3">These terminals offer:</p>
