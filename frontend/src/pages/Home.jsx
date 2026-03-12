@@ -91,6 +91,7 @@ const Home = () => {
         <meta property="og:image" content="https://merchantsolutionscorp.com/images/merchant-solutions-og.jpg" />
         <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"}]})}</script>
       </Helmet>
 
       {/* HERO */}

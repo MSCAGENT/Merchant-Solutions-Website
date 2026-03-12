@@ -108,7 +108,11 @@ const PayrollServicesSolution = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/payroll-services" />
         <meta name="description" content="Full-service payroll processing for small businesses. Automated payroll, tax filing, direct deposit, employee self-service, and HR tools integrated with your business operations." />
         <meta name="keywords" content="payroll services, small business payroll, payroll processing, payroll tax filing, direct deposit, employee payroll, automated payroll, HR payroll solutions" />
-        <link rel="canonical" href="/solutions/payroll-services" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/solutions/payroll-services" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Payroll Services","serviceType":"Business Payroll Processing Services","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/solutions/payroll-services","description":"Payroll processing services for small and medium businesses from Merchant Solutions Corp."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"Payroll Services","item":"https://merchantsolutionscorp.com/solutions/payroll-services"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">

@@ -90,7 +90,11 @@ export default function FoodTruckPOS() {
         <meta name="description" content="Discover the best POS systems for food trucks. Accept payments anywhere with mobile POS solutions like Payanywhere, Square, and Clover." />
         <meta name="keywords" content="food truck POS, POS for food trucks, mobile POS system, food truck credit card processing, POS for mobile food vendors" />
         <link rel="canonical" href="https://merchantsolutionscorp.com/food-trucks-pos" />
+        <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Food Truck POS System","serviceType":"Food Truck Payment Processing and Mobile POS","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/food-trucks-pos","description":"Mobile POS and payment processing solutions designed specifically for food trucks and mobile vendors."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://merchantsolutionscorp.com/industries/restaurants"},{"@type":"ListItem","position":3,"name":"Food Trucks","item":"https://merchantsolutionscorp.com/food-trucks-pos"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
 
       {/* HERO */}

@@ -123,7 +123,11 @@ const BusinessLoansSolution = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/business-loans" />
         <meta name="description" content="Business loans and merchant cash advances for small businesses. Fast funding, flexible terms, and working capital solutions through Merchant Solutions Corp and Lendio partnership." />
         <meta name="keywords" content="business loans, merchant cash advance, small business loans, business funding, working capital, SBA loans, business line of credit, merchant lending, fast business funding" />
-        <link rel="canonical" href="/solutions/business-loans" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/solutions/business-loans" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Business Loans","serviceType":"Small Business Loans and Financing","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/solutions/business-loans","description":"Business loan and financing solutions for small businesses from Merchant Solutions Corp."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"Business Loans","item":"https://merchantsolutionscorp.com/solutions/business-loans"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">

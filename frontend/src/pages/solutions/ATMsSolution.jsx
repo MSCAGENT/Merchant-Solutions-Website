@@ -140,8 +140,12 @@ const ATMsSolution = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/atms" />
         <meta name="description" content="ATM placement, partnership, and purchase programs for businesses. Free ATM placement, 50/50 partnership, or full ownership. GenMega and Hyosung ATMs at wholesale prices with free processing." />
         <meta name="keywords" content="ATM placement program, ATM partnership, buy ATM machine, ATM solutions business, free ATM placement, GenMega ATM, Hyosung ATM, ATM processing, ATM surcharge revenue, Cardtronics ATM" />
-        <link rel="canonical" href="/solutions/atms" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/solutions/atms" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"ATM Solutions","serviceType":"ATM Placement and Processing","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/solutions/atms","description":"ATM placement and processing solutions for businesses and independent deployers."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"ATMs","item":"https://merchantsolutionscorp.com/solutions/atms"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-gray-900">

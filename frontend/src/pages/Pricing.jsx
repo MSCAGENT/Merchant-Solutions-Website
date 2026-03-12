@@ -103,7 +103,10 @@ const Pricing = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/pricing" />
         <meta name="description" content="Compare merchant processing rates: Flat Rate, Interchange Plus, and Dual Price/Cash Discount. Choose your POS software, business type, and payment platform. Clover, Square, PayAnywhere, Dejavoo, and Ingenico pricing." />
         <meta name="keywords" content="payment processing pricing, merchant processing rates, credit card processing fees, POS system pricing, interchange plus pricing, flat rate processing, dual pricing, cash discount program pricing" />
-        <link rel="canonical" href="/pricing" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/resources/pricing" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Pricing","item":"https://merchantsolutionscorp.com/resources/pricing"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero */}
       <section className="relative w-full bg-gradient-to-br from-purple-100 via-white to-purple-50 py-20 lg:py-28 overflow-hidden" data-testid="pricing-hero">

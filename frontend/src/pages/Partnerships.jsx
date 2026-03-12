@@ -152,7 +152,11 @@ const Partnerships = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/partnerships" />
         <meta name="description" content="Join the Merchant Solutions Agent & ISO partnership program. Earn residual income selling payment processing and POS systems. Full training, support, and competitive revenue sharing." />
         <meta name="keywords" content="merchant services agent program, ISO partnership, sell payment processing, payment processing reseller, agent program, merchant services residual income, POS sales agent" />
-        <link rel="canonical" href="/partnerships" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/partnerships" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Agent & ISO Partnership Program","serviceType":"Payment Processing Partnership Program","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/partnerships","description":"Partner with Merchant Solutions Corp as an agent or ISO to offer payment processing, POS systems, and merchant services."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Partnerships","item":"https://merchantsolutionscorp.com/partnerships"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-32">

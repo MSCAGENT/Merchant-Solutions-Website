@@ -106,12 +106,15 @@ export default function AboutMSC() {
         <title>Merchant Services &amp; POS Systems Provider | Merchant Solutions Corp</title>
         <meta name="description" content="Merchant Solutions Corp has provided merchant services and POS systems to businesses across Florida since 2012. Payment processing, POS technology, and payment solutions for growing businesses." />
         <meta name="keywords" content="merchant services company, payment processing provider, POS systems provider, merchant services Florida, restaurant POS systems, retail POS systems" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://merchantsolutionscorp.com/about-merchant-solutions-corp" />
         <meta property="og:title" content="Merchant Services & POS Systems Provider | Merchant Solutions Corp" />
         <meta property="og:description" content="Merchant Solutions Corp has provided merchant services and POS systems to businesses across Florida since 2012." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://merchantsolutionscorp.com/about-merchant-solutions-corp" />
         <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://merchantsolutionscorp.com/about-merchant-solutions-corp"}]})}</script>
       </Helmet>
 
       {/* HERO */}

@@ -196,7 +196,11 @@ const PaymentProcessingSolution = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/payment-processing" />
         <meta name="description" content="Full-service payment processing for businesses of all sizes. Accept credit cards, debit cards, ACH, and contactless payments with next-day funding, transparent pricing, and 24/7 support." />
         <meta name="keywords" content="payment processing, credit card processing, debit card processing, ACH payments, merchant services, contactless payments, next day funding, payment processing solutions, business payment solutions" />
-        <link rel="canonical" href="/solutions/payment-processing" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/solutions/payment-processing" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Payment Processing Solutions","serviceType":"Credit Card and Payment Processing","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/solutions/payment-processing","description":"Complete payment processing solutions for businesses of all sizes from Merchant Solutions Corp."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">

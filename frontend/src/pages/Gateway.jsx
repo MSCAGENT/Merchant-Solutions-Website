@@ -17,7 +17,11 @@ const Gateway = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/gateway/payments-gateway" />
         <meta name="description" content="Secure payment gateway solutions for online and in-store businesses. API integration, hosted payment pages, virtual terminals, and recurring billing with PCI DSS compliance." />
         <meta name="keywords" content="payment gateway, online payment processing, payment API, virtual terminal, hosted payment page, payment gateway integration, secure payments, PCI compliant gateway" />
-        <link rel="canonical" href="/gateway/payments-gateway" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/gateway/payments-gateway" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Payment Gateway Solutions","serviceType":"Online and In-Store Payment Gateway","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/gateway/payments-gateway","description":"Secure payment gateway solutions for online and in-store businesses with API integration, hosted payment pages, and PCI DSS compliance."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Gateway","item":"https://merchantsolutionscorp.com/gateway/payments-gateway"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">

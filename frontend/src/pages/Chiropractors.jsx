@@ -72,7 +72,11 @@ const Chiropractors = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/chiropractic-payment-processing" />
         <meta name="description" content="Chiropractic payment processing with EMR integration. Accept credit cards, offer patient payment plans, and streamline billing for chiropractic offices and wellness clinics." />
         <meta name="keywords" content="chiropractic payment processing, chiropractor merchant services, chiropractic EMR integration, chiropractic billing, patient payment plans, chiropractic POS system" />
-        <link rel="canonical" href="/chiropractic-payment-processing" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/industries/chiropractors" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Chiropractic Payment Processing","serviceType":"Chiropractic Office Payment Processing and EMR Integration","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/industries/chiropractors","description":"Chiropractic payment processing with EMR integration, patient payment plans, and streamlined billing for chiropractic offices."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Healthcare","item":"https://merchantsolutionscorp.com/industries/healthcare"},{"@type":"ListItem","position":3,"name":"Chiropractors","item":"https://merchantsolutionscorp.com/industries/chiropractors"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Video Hero */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">

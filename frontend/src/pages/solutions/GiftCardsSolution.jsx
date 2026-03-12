@@ -154,7 +154,11 @@ const GiftCardsSolution = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/gift-cards" />
         <meta name="description" content="Custom branded gift card programs for restaurants, retail, and service businesses. Physical and digital gift cards with POS integration, tracking, and promotional campaign support." />
         <meta name="keywords" content="gift card program, custom gift cards, business gift cards, digital gift cards, restaurant gift cards, retail gift cards, gift card POS integration, branded gift cards" />
-        <link rel="canonical" href="/solutions/gift-cards" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/solutions/gift-cards" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Gift Card Program","serviceType":"Business Gift Card and Loyalty Solutions","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/solutions/gift-cards","description":"Custom gift card programs to increase revenue, drive repeat visits, and build customer loyalty."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"Gift Cards","item":"https://merchantsolutionscorp.com/solutions/gift-cards"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">

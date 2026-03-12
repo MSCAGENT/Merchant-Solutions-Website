@@ -68,8 +68,12 @@ export default function UnionPOS() {
         <meta property="og:url" content="https://merchantsolutionscorp.com/union-pos-system" />
         <meta name="description" content="Union POS is a modern hospitality operating system designed for high-volume bars and restaurants. Speed up service, increase revenue, and enhance guest experiences with guest-led ordering and powerful POS tools." />
         <meta name="keywords" content="Union POS, Union restaurant POS, Union bar POS, POS system for bars, POS for high-volume restaurants, guest-led ordering POS, hospitality POS system" />
-        <link rel="canonical" href="/union-pos-system" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/union-pos-system" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Union POS System","serviceType":"Union POS Point of Sale System","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/union-pos-system","description":"Union POS system for restaurants and retail businesses with integrated payment processing."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"POS Systems","item":"https://merchantsolutionscorp.com/pos-systems"},{"@type":"ListItem","position":3,"name":"Union POS","item":"https://merchantsolutionscorp.com/union-pos-system"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
 
       {/* 1. HERO */}

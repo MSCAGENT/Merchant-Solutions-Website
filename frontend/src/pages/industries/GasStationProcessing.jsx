@@ -101,7 +101,11 @@ const GasStationProcessing = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/emv-gas-station-payment-processing" />
         <meta name="description" content="Gas station payment processing, EMV fuel pump upgrades, fleet card acceptance, and petroleum POS systems. Reduce fees, improve funding speed, and modernize your forecourt technology." />
         <meta name="keywords" content="gas station payment processing, EMV fuel pump, gas station POS, petroleum payment processing, fleet card processing, fuel pump upgrade, gas station merchant services, convenience store POS" />
-        <link rel="canonical" href="/emv-gas-station-payment-processing" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/emv-gas-station-payment-processing" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Gas Station Payment Processing","serviceType":"EMV Gas Station and Fuel Payment Processing","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/emv-gas-station-payment-processing","description":"EMV-compliant gas station payment processing solutions for fuel stations and convenience stores."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://merchantsolutionscorp.com/industries/restaurants"},{"@type":"ListItem","position":3,"name":"Gas Station Processing","item":"https://merchantsolutionscorp.com/emv-gas-station-payment-processing"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero */}
       <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">

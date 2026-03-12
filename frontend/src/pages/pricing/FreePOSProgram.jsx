@@ -237,8 +237,12 @@ export default function FreePOSProgram() {
         <meta property="og:url" content="https://merchantsolutionscorp.com/free-pos-system" />
         <meta name="description" content="The Advantage Program lets businesses get a Clover, Square, Exatouch POS system or terminal with $0 upfront. Process the required volume in 60 days and receive a statement credit or subscription reimbursement." />
         <meta name="keywords" content="advantage credit program, POS system no upfront cost, free POS program, Clover POS free, Square POS program, Exatouch POS financing, payment terminal program, POS subscription reimbursement" />
-        <link rel="canonical" href="/free-pos-system" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/free-pos-system" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Free POS System Program","serviceType":"Free POS System and Advantage Credit Program","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/free-pos-system","description":"Get a free POS system through the Advantage Credit Program from Merchant Solutions Corp."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Pricing","item":"https://merchantsolutionscorp.com/pricing"},{"@type":"ListItem","position":3,"name":"Free POS System","item":"https://merchantsolutionscorp.com/free-pos-system"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
 
       {/* 1. HERO */}

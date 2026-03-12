@@ -66,6 +66,7 @@ export default function VoiceAIAutomation() {
         <meta property="og:url" content="https://merchantsolutionscorp.com/voice-ai-business-automation" />
         <meta name="description" content="Automate customer calls, order taking, reservations, and appointment scheduling with Voice AI. Reduce missed calls and improve service with AI-powered phone assistants." />
         <meta name="keywords" content="voice AI business, AI phone receptionist, AI call answering system, AI ordering system, AI automation for restaurants, AI automation for Healthcare" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://merchantsolutionscorp.com/voice-ai-business-automation" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -76,6 +77,8 @@ export default function VoiceAIAutomation() {
           "serviceType": "AI Automation",
           "areaServed": { "@type": "Country", "name": "United States" }
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"Voice AI","item":"https://merchantsolutionscorp.com/voice-ai-business-automation"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
 
       {/* HERO */}

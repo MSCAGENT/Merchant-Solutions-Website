@@ -18,7 +18,11 @@ const POSHardware = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/pos-hardware" />
         <meta name="description" content="Browse POS hardware including payment terminals, receipt printers, cash drawers, barcode scanners, and kiosks. Clover, Square, Dejavoo, Ingenico, and PAX devices available." />
         <meta name="keywords" content="POS hardware, payment terminals, receipt printer, cash drawer, barcode scanner, POS accessories, Clover hardware, Square hardware, POS equipment" />
-        <link rel="canonical" href="/pos-hardware" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/pos-systems" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"POS Hardware","serviceType":"Point of Sale Hardware and Equipment","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/pos-systems","description":"POS hardware and equipment for businesses of all sizes from Merchant Solutions Corp."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"POS Hardware","item":"https://merchantsolutionscorp.com/pos-systems"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20">

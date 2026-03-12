@@ -141,8 +141,12 @@ const ITServices = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/it-services" />
         <meta name="description" content="Professional POS installation services in Florida and all 50 states. On-site survey, infrastructure mapping, Clover, Square, and iTabPOS setup, training, and support for restaurants, retail, and healthcare." />
         <meta name="keywords" content="POS installation services, POS setup Florida, on-site POS installation, Clover installation, Square POS setup, restaurant POS installation, retail POS installation, payment device setup, POS technician" />
-        <link rel="canonical" href="/solutions/it-services" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/solutions/it-services" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"POS Installation Services","serviceType":"On-Site POS Installation and IT Services","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/solutions/it-services","description":"Professional on-site POS installation, network setup, training, and support services across all 50 states."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"IT Services","item":"https://merchantsolutionscorp.com/solutions/it-services"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-gray-900">

@@ -31,7 +31,10 @@ const BlogList = () => {
         <title>Blog | Payment Processing Tips & Industry Insights | Merchant Solutions Corp</title>
         <meta name="description" content="Read the latest insights on payment processing, POS systems, merchant services, and business growth from Merchant Solutions Corp. Expert tips and industry news." />
         <meta name="keywords" content="payment processing blog, merchant services tips, POS system guides, business payment insights, credit card processing news, fintech blog" />
-        <link rel="canonical" href="/resources/blog" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/resources/blog" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://merchantsolutionscorp.com/resources/blog"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -127,7 +130,9 @@ const BlogPost = () => {
         <title>{post.meta_title || post.title} | Merchant Solutions Corp</title>
         <meta name="description" content={post.meta_description || post.excerpt || ''} />
         {post.keywords?.length > 0 && <meta name="keywords" content={post.keywords.join(', ')} />}
-        <link rel="canonical" href={`/resources/blog/${post.slug}`} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://merchantsolutionscorp.com/resources/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://merchantsolutionscorp.com/resources/blog/${post.slug}`} />
         <meta property="og:title" content={post.meta_title || post.title} />
         <meta property="og:description" content={post.meta_description || post.excerpt || ''} />
         <meta property="og:type" content="article" />

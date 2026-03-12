@@ -68,8 +68,12 @@ export default function PaymentTerminalsOverview() {
         <meta property="og:url" content="https://merchantsolutionscorp.com/payment-terminals" />
         <meta name="description" content="Compare modern payment terminals for businesses, including Clover, Ingenico, PAX and Dejavoo credit card machines. Accept chip, tap and mobile payments with reliable countertop and wireless terminals." />
         <meta name="keywords" content="payment terminals, credit card machines, card machines for business, credit card terminal for small business, EMV payment terminal, countertop credit card machine, wireless payment terminal, Clover terminal, Ingenico terminal, PAX payment terminal, Dejavoo credit card terminal" />
-        <link rel="canonical" href="/payment-terminals" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/payment-terminals" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Payment Terminals","serviceType":"Payment Terminal Sales and Deployment","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/payment-terminals","description":"Payment terminals overview including countertop, wireless, and mobile options from Merchant Solutions Corp."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"POS Systems","item":"https://merchantsolutionscorp.com/pos-systems"},{"@type":"ListItem","position":3,"name":"Payment Terminals","item":"https://merchantsolutionscorp.com/payment-terminals"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
 
       {/* 1. HERO */}

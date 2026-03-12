@@ -152,7 +152,10 @@ const Careers = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/company/careers" />
         <meta name="description" content="Join the Merchant Solutions Corp team. Explore career opportunities in payment processing, sales, technology, and customer support. Build your career in the fintech industry." />
         <meta name="keywords" content="payment processing careers, merchant services jobs, fintech careers, payment industry jobs, POS sales jobs, merchant solutions careers" />
-        <link rel="canonical" href="/company/careers" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/partnerships/careers" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Partnerships","item":"https://merchantsolutionscorp.com/partnerships"},{"@type":"ListItem","position":3,"name":"Careers","item":"https://merchantsolutionscorp.com/partnerships/careers"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-blue-700 py-24">

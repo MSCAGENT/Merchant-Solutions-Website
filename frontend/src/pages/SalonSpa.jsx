@@ -256,8 +256,12 @@ const SalonSpa = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/salon-spa-payment-processing" />
         <meta name="description" content="Salon and spa payment processing with DaySmart booking software, Clover POS, and Square POS. Online scheduling, automated reminders, integrated merchant services for hair salons, nail salons, skin clinics, and independent beauty professionals. Nationwide installation." />
         <meta name="keywords" content={seoKeywords.join(', ')} />
-        <link rel="canonical" href="/salon-spa-payment-processing" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/salon-spa-payment-processing" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Salon & Spa Payment Processing","serviceType":"Salon and Spa Payment Processing and POS","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/salon-spa-payment-processing","description":"Payment processing solutions for salons, spas, and beauty businesses with integrated booking and POS systems."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://merchantsolutionscorp.com/industries/healthcare"},{"@type":"ListItem","position":3,"name":"Salon & Spa","item":"https://merchantsolutionscorp.com/salon-spa-payment-processing"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section with Video */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden" data-testid="salon-hero">

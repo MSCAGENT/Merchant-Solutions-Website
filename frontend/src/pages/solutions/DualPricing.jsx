@@ -303,8 +303,12 @@ const DualPricing = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/dual-pricing-cash-discount-payment-processing" />
         <meta name="description" content="Compliant dual pricing and cash discount payment processing for restaurants, retail, healthcare, gas stations & e-commerce. Reduce 3-4% in fees with zero-fee processing." />
         <meta name="keywords" content="dual pricing payment processing, cash discount program, zero fee processing, compliant dual pricing, restaurant dual pricing, retail cash discount, surcharge alternative, payment processing savings" />
-        <link rel="canonical" href="/dual-pricing-cash-discount-payment-processing" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/dual-pricing-cash-discount-payment-processing" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Dual Pricing Program","serviceType":"Cash Discount and Dual Pricing Payment Processing","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/dual-pricing-cash-discount-payment-processing","description":"Dual pricing and cash discount programs that eliminate processing fees for merchants."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"Dual Pricing","item":"https://merchantsolutionscorp.com/dual-pricing-cash-discount-payment-processing"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero */}
       <section className="relative py-24 overflow-hidden min-h-[600px] flex items-center">

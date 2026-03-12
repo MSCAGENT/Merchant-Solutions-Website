@@ -261,8 +261,12 @@ const HighRiskMerchant = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/high-risk-merchant-services" />
         <meta name="description" content="High risk merchant services for online gambling, peptides, prop trading firms, CBD, and kratom businesses. Secure payment processing with chargeback protection and multi-currency support." />
         <meta name="keywords" content="high risk merchant services, high risk payment processing, online gambling merchant account, CBD payment processing, peptides merchant account, prop firm payments, kratom payment processing, chargeback protection, high risk credit card processing" />
-        <link rel="canonical" href="/high-risk-merchant-services" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/high-risk-merchant-services" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"High-Risk Merchant Services","serviceType":"High-Risk Payment Processing","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/high-risk-merchant-services","description":"Specialized payment processing for high-risk businesses including CBD, vape, firearms, and adult industries."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://merchantsolutionscorp.com/industries/restaurants"},{"@type":"ListItem","position":3,"name":"High-Risk","item":"https://merchantsolutionscorp.com/high-risk-merchant-services"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-gray-900">

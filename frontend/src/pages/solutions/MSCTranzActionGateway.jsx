@@ -123,8 +123,12 @@ const MSCTranzActionGateway = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/solutions/tranzaction-gateway" />
         <meta name="description" content="MSC TranzAction Gateway powered by NMI. Accept credit cards, debit cards, ACH, and recurring payments through a secure cloud-based payment gateway with virtual terminal, API integration, and PCI compliance." />
         <meta name="keywords" content="payment gateway, NMI payment gateway, TranzAction gateway, virtual terminal, online payment processing, recurring billing gateway, API payment integration, PCI compliant gateway, credit card gateway" />
-        <link rel="canonical" href="/solutions/tranzaction-gateway" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/solutions/tranzaction-gateway" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"MSC TranzAction Gateway","serviceType":"Payment Gateway Integration","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/solutions/tranzaction-gateway","description":"MSC TranzAction Gateway for integrated payment processing with developer-friendly APIs."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"TranzAction Gateway","item":"https://merchantsolutionscorp.com/solutions/tranzaction-gateway"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">

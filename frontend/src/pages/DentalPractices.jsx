@@ -201,8 +201,12 @@ const DentalPractices = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/dental-payment-processing-emr-integration" />
         <meta name="description" content="Secure dental payment processing integrated with Dentrix, Eaglesoft, Open Dental and more. Merchant services, EMR integration, and dental marketing solutions nationwide." />
         <meta name="keywords" content="dental payment processing, dental EMR integration, dental merchant services, Dentrix payment processing, Eaglesoft payment integration, Open Dental payments, dental credit card processing, dental office POS, dental billing solutions" />
-        <link rel="canonical" href="/dental-payment-processing-emr-integration" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/dental-payment-processing-emr-integration" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Dental Payment Processing","serviceType":"Dental Office Payment Processing and EMR Integration","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/dental-payment-processing-emr-integration","description":"Payment processing for dental practices with EMR integration, patient payment plans, and streamlined billing."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Healthcare","item":"https://merchantsolutionscorp.com/industries/healthcare"},{"@type":"ListItem","position":3,"name":"Dental Practices","item":"https://merchantsolutionscorp.com/dental-payment-processing-emr-integration"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">

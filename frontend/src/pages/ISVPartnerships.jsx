@@ -159,7 +159,11 @@ const ISVPartnerships = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/partnerships/isv" />
         <meta name="description" content="ISV partnership program for software companies. Integrate payment processing into your software with our API, earn revenue share, and provide seamless merchant services to your users." />
         <meta name="keywords" content="ISV partnership, software payment integration, payment API, ISV program, embedded payments, software company payments, payment integration partner" />
-        <link rel="canonical" href="/partnerships/isv" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/partnerships/isv" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"ISV Partnership Program","serviceType":"Payment Integration for Software Companies","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/partnerships/isv","description":"ISV partnership program for software companies to embed payment processing using APIs and SDKs."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Partnerships","item":"https://merchantsolutionscorp.com/partnerships"},{"@type":"ListItem","position":3,"name":"ISV Partnerships","item":"https://merchantsolutionscorp.com/partnerships/isv"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 py-24 overflow-hidden">

@@ -196,7 +196,11 @@ const DejavooTerminals = () => {
         <meta property="og:url" content="https://merchantsolutionscorp.com/pos/dejavoo-terminals" />
         <meta name="description" content="Dejavoo Z series payment terminals for countertop, wireless, and mobile POS. Z11, Z8 smart terminals with dual-screen displays, EMV, NFC, and built-in receipt printing. Free placement available." />
         <meta name="keywords" content="Dejavoo terminals, Dejavoo Z11, Dejavoo Z8, smart payment terminal, mobile POS terminal, countertop terminal, EMV terminal, NFC payment terminal, wireless payment terminal" />
-        <link rel="canonical" href="/pos/dejavoo-terminals" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://merchantsolutionscorp.com/pos/dejavoo-terminals" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Dejavoo Payment Terminals","serviceType":"Smart Payment Terminal Sales and Deployment","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/pos/dejavoo-terminals","description":"Dejavoo Z series payment terminals for countertop, wireless, and mobile POS with EMV, NFC, and built-in receipt printing."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"POS Systems","item":"https://merchantsolutionscorp.com/pos-systems"},{"@type":"ListItem","position":3,"name":"Dejavoo Terminals","item":"https://merchantsolutionscorp.com/pos/dejavoo-terminals"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-yellow-50 py-20 md:py-32">
