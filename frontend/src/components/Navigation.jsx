@@ -182,7 +182,7 @@ const megaMenus = {
       { label: 'Contact', path: '/contact' },
       { label: 'Support', path: '/company/support' },
       { label: 'Careers', path: '/partnerships/careers' },
-      { label: 'Service Areas', path: '/company/service-areas' },
+      { label: 'Service Areas', path: '/service-areas' },
     ],
   },
 };

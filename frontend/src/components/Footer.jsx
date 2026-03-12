@@ -71,6 +71,7 @@ const Footer = () => {
         { label: 'Partnerships', path: '/partnerships' },
         { label: 'Agent Program', path: '/partners/agents' },
         { label: 'Careers', path: '/partnerships/careers' },
+        { label: 'Service Areas', path: '/service-areas' },
         { label: 'Blog', path: '/resources/blog' },
       ]
     },

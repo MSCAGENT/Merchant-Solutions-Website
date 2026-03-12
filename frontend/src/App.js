@@ -221,7 +221,8 @@ function App() {
           <Route path="/company/security-compliance" element={<Security />} />
           <Route path="/company/contact" element={<Contact />} />
           <Route path="/company/support" element={<Support />} />
-          <Route path="/company/service-areas" element={<ServiceAreas />} />
+          <Route path="/service-areas" element={<ServiceAreas />} />
+          <Route path="/company/service-areas" element={<Navigate to="/service-areas" replace />} />
           
           {/* Login Routes */}
           <Route path="/login" element={<Login />} />
