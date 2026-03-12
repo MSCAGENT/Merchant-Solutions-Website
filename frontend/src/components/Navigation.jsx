@@ -60,7 +60,6 @@ const megaMenus = {
         items: [
           { label: 'Retail Stores', desc: 'POS systems with inventory management for retail and specialty stores.', path: '/retail-payment-solutions' },
           { label: 'Gas Station & EMV', desc: 'Fuel pump EMV compliance and payment systems for gas stations.', path: '/emv-gas-station-payment-processing' },
-          { label: 'Specialty Merchants', desc: 'Solutions for smoke shops, CBD stores, Kratom and niche retail businesses.', path: '/specialty-merchant-payment-solutions' },
         ],
       },
       {
@@ -78,7 +77,7 @@ const megaMenus = {
         items: [
           { label: 'Professional Services', desc: 'Payment solutions for consultants, contractors, and service providers.', path: '/professional-services-payment-processing-clover-pos' },
           { label: 'High-Risk Businesses', desc: 'Payment processing solutions for high-risk industries.', path: '/high-risk-merchant-services' },
-          { label: 'B2B Payment Processing', desc: 'Payment processing for complex and custom business models.', path: '/industries/b2b-processing' },
+          { label: 'B2B Payment Processing for Complex', desc: 'Solutions for specialty merchants, niche retail, and complex business models.', path: '/specialty-merchant-payment-solutions' },
         ],
       },
     ],

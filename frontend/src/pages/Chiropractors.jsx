@@ -30,6 +30,7 @@ import {
 
 const Chiropractors = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
+  const videoRef = useRef(null);
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
       const link = document.createElement('link');

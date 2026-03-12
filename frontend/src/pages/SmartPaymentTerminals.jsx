@@ -6,7 +6,7 @@ import {
   Smartphone, Wifi, Printer, CreditCard, Shield, Monitor,
   BarChart3, Zap, Users, ShoppingBag, UtensilsCrossed,
   Briefcase, Truck, QrCode, Nfc, Settings, Package,
-  TabletSmartphone, Globe
+  TabletSmartphone, Globe, FileText, ExternalLink
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
@@ -31,12 +31,13 @@ const FAQItem = ({ question, answer }) => {
 export default function SmartPaymentTerminals() {
   const [showFormModal, setShowFormModal] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [expandedDocs, setExpandedDocs] = useState({ sunmi: true, victa: false, vseries: false, general: false });
 
   const HERO_SLIDES = [
-    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/edh9qpqg_Victa%20mobile.avif', alt: 'Verifone Victa mobile smart payment terminal' },
-    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/tiyepm9q_Victa%20reader.avif', alt: 'Verifone Victa reader payment device' },
-    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/msjf5j4d_Victa%20register.avif', alt: 'Verifone Victa register POS terminal' },
-    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/10xw050q_Victa%20unnatended.avif', alt: 'Verifone Victa unattended payment terminal' },
+    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/edh9qpqg_Victa%20mobile.avif', alt: 'Verifone Victa mobile smart payment terminal for restaurants and retail businesses' },
+    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/tiyepm9q_Victa%20reader.avif', alt: 'Verifone Victa contactless card reader for tap-to-pay and NFC payments' },
+    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/msjf5j4d_Victa%20register.avif', alt: 'Verifone Victa register POS terminal with touchscreen for countertop payments' },
+    { src: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/10xw050q_Victa%20unnatended.avif', alt: 'Verifone Victa unattended payment terminal for self-service kiosks' },
   ];
 
   useEffect(() => {
@@ -178,7 +179,7 @@ export default function SmartPaymentTerminals() {
                     key={i}
                     src={slide.src}
                     alt={slide.alt}
-                    className={`absolute inset-0 w-full h-full object-contain bg-gradient-to-br from-gray-800 to-gray-900 transition-opacity duration-700 ease-in-out ${i === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ease-in-out ${i === currentSlide ? 'opacity-100' : 'opacity-0'}`}
                     loading={i === 0 ? 'eager' : 'lazy'}
                   />
                 ))}
@@ -344,8 +345,8 @@ export default function SmartPaymentTerminals() {
               <p className="text-gray-400 mb-6">New generation of payment terminals for high-performance business environments</p>
               <img
                 src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/44uo2xp7_Victa%20portable.avif"
-                alt="Verifone Victa portable smart payment terminal"
-                className="w-full h-48 object-contain bg-gray-800 rounded-xl mb-6"
+                alt="Verifone Victa portable Android smart payment terminal for mobile and countertop businesses"
+                className="w-full h-48 object-contain rounded-xl mb-6"
                 loading="lazy"
               />
               <p className="text-gray-300 font-semibold mb-3">Features include:</p>
@@ -371,8 +372,8 @@ export default function SmartPaymentTerminals() {
               <p className="text-gray-400 mb-6">Reliable countertop and portable terminals used by merchants worldwide</p>
               <img
                 src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/3y6glwen_Victa%20Soft%20POS.avif"
-                alt="Verifone Soft POS payment solution for businesses"
-                className="w-full h-48 object-contain bg-gray-800 rounded-xl mb-6"
+                alt="Verifone Soft POS contactless payment solution for credit card processing"
+                className="w-full h-48 object-contain rounded-xl mb-6"
                 loading="lazy"
               />
               <p className="text-gray-300 font-semibold mb-3">These terminals offer:</p>
@@ -416,6 +417,89 @@ export default function SmartPaymentTerminals() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* TERMINAL RESOURCES & DOCUMENTATION */}
+      <section className="py-20 bg-white" data-testid="docs-section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-testid="docs-h2">Terminal Resources &amp; Documentation</h2>
+            <p className="text-lg text-gray-600">Access specification sheets, setup guides, and product information for our smart terminal lineup.</p>
+          </div>
+          <div className="space-y-3">
+            {[
+              {
+                key: 'sunmi', label: 'Sunmi Smart Terminals', color: 'purple',
+                items: [
+                  { name: 'Sunmi V3 — Product Specifications', desc: 'Android OS, 4G/WiFi/BT, built-in printer, 5.5" touchscreen' },
+                  { name: 'Sunmi V2 — Product Specifications', desc: 'Handheld POS with barcode scanner, printer, wireless payments' },
+                  { name: 'Sunmi Terminal Setup Guide', desc: 'Step-by-step onboarding and configuration instructions' },
+                  { name: 'Sunmi App Ecosystem Overview', desc: 'Compatible apps for inventory, loyalty, and reporting' },
+                ],
+              },
+              {
+                key: 'victa', label: 'Verifone Victa Series', color: 'indigo',
+                items: [
+                  { name: 'Victa Portable — Product Specifications', desc: 'Handheld Android terminal with advanced security architecture' },
+                  { name: 'Victa Register — Product Specifications', desc: 'Countertop POS register with touchscreen interface' },
+                  { name: 'Victa Mobile — Product Specifications', desc: 'Mobile payment terminal for tableside and on-the-go transactions' },
+                  { name: 'Victa Soft POS — Product Specifications', desc: 'Phone-based contactless payment acceptance solution' },
+                  { name: 'Victa Unattended — Product Specifications', desc: 'Self-service kiosk payment terminal for unattended environments' },
+                ],
+              },
+              {
+                key: 'vseries', label: 'Verifone V Series', color: 'blue',
+                items: [
+                  { name: 'V Series Countertop Terminal Specifications', desc: 'Reliable fixed-location payment terminal with NFC and EMV' },
+                  { name: 'V Series Portable Terminal Specifications', desc: 'Wireless payment terminal for restaurants and retail' },
+                  { name: 'V Series Integration Guide', desc: 'POS system compatibility and gateway setup' },
+                ],
+              },
+              {
+                key: 'general', label: 'General Resources', color: 'gray',
+                items: [
+                  { name: 'Smart Terminal Comparison Chart', desc: 'Side-by-side comparison of all supported smart terminals' },
+                  { name: 'Payment Security & PCI Compliance', desc: 'Encryption standards, tokenization, and compliance overview' },
+                  { name: 'Merchant Onboarding Checklist', desc: 'Everything needed to get started with your new terminal' },
+                ],
+              },
+            ].map(cat => {
+              const colors = { purple: 'from-purple-600 to-purple-500 border-purple-200 bg-purple-50 text-purple-700', indigo: 'from-indigo-600 to-indigo-500 border-indigo-200 bg-indigo-50 text-indigo-700', blue: 'from-blue-600 to-blue-500 border-blue-200 bg-blue-50 text-blue-700', gray: 'from-gray-600 to-gray-500 border-gray-200 bg-gray-50 text-gray-700' };
+              const c = colors[cat.color];
+              const isOpen = expandedDocs[cat.key];
+              return (
+                <div key={cat.key} className="rounded-xl border border-gray-200 overflow-hidden shadow-sm" data-testid={`doc-cat-${cat.key}`}>
+                  <button
+                    onClick={() => setExpandedDocs(prev => ({ ...prev, [cat.key]: !prev[cat.key] }))}
+                    className={`w-full flex items-center justify-between p-4 bg-gradient-to-r ${c.split(' ')[0]} ${c.split(' ')[1]} text-white font-semibold text-left`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <FileText className="h-5 w-5" />
+                      <span>{cat.label}</span>
+                      <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">{cat.items.length} items</span>
+                    </div>
+                    <ChevronDown className={`h-5 w-5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isOpen && (
+                    <div className="divide-y divide-gray-100">
+                      {cat.items.map((item, j) => (
+                        <div key={j} className="flex items-center gap-4 px-5 py-3.5 hover:bg-gray-50 transition-colors">
+                          <FileText className={`h-4 w-4 flex-shrink-0 ${c.split(' ').pop()}`} />
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900">{item.name}</p>
+                            <p className="text-xs text-gray-500">{item.desc}</p>
+                          </div>
+                          <ExternalLink className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <p className="text-sm text-gray-500 text-center mt-8">Contact your account representative for access to full documentation and spec sheets.</p>
         </div>
       </section>
 
