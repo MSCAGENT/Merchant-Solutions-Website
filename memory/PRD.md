@@ -1,84 +1,71 @@
-# Merchant Solutions Corp - Payment Processing Website
+# PRD: Merchant Solutions Corp Website
 
 ## Original Problem Statement
-Expand the payment processing website's content for SEO purposes, enhance existing pages, and automate blog creation. The site is a comprehensive payment processing and POS systems website for Merchant Solutions Corp.
+Build and maintain a comprehensive marketing/sales website for a merchant services company. Key goals: expand content for SEO, enhance existing pages, automate blog creation, and create lead qualification tools.
 
-## Core Architecture
-- **Frontend**: React (CRA) with react-router-dom, Tailwind CSS, shadcn/ui
-- **Backend**: FastAPI with MongoDB
-- **Integrations**: AutoSEO.ai webhook, Lead Connector iframes, Calendly widgets, Emergent Object Storage
+## Core Requirements
+- Payment processing marketing website with 50+ pages
+- Full SEO implementation (meta tags, OG tags, canonical URLs, JSON-LD schemas)
+- Blog system with admin panel
+- Lead capture via Lead Connector iframes and Calendly
+- Interactive 3D globe on Service Areas page
+- Support Center with live search
+- Secure document portal
 
 ## What's Been Implemented
 
-### Completed (Previous Sessions)
-- AutoSEO webhook integration (blog creation via API)
-- Blog admin panel with image upload
-- Subscription Payment Processing page (Bronze/Silver/Platinum tiers)
-- Advantage Credit Program page (formerly Free POS Program)
-- White Label Merchant Services page updates
-- Payment Terminals page updates
-- About Us page with video hero
-- Voice AI Business Automation landing page
-- Site-wide SEO: robots.txt, sitemap.xml, Open Graph tags on 54+ pages
-- Navigation cleanup (pricing dropdown)
-- AIPoweredSection reusable component deployed to 7 pages
+### SEO Overhaul (March 2026) - COMPLETED
+- **All 50+ public pages** now have:
+  - Absolute canonical URLs (https://merchantsolutionscorp.com/...)
+  - `<meta name="robots" content="index, follow">`
+  - OG tags (og:title, og:description, og:url, og:type)
+  - JSON-LD BreadcrumbList schema
+  - JSON-LD Organization schema
+  - JSON-LD Service schema (on service/product pages)
+  - JSON-LD FAQPage schema (on pages with FAQs)
+- Zero relative canonical URLs remaining
+- 12 placeholder pages upgraded from zero SEO to full SEO
+- ~30 pages upgraded from basic meta to include all schemas
+- ~20 pages upgraded from partial schemas to complete coverage
 
-### Completed (This Session - Feb 2026)
-- **Food Truck Page Consolidation**: Removed duplicate `/industries/food-trucks` route, redirected to `/food-trucks-pos`. Navigation updated to single link.
-- **AI Section Relocation**: Moved AIPoweredSection to directly after "Why Choose" sections on all 7 POS pages (CloverPOS, SquarePOS, RestaurantPOS, QRCodeOrdering, SelfOrderingKiosk, FoodTrucksPOS, CloudKitchens)
-- **MSC Logo Added**: Added company logo beneath AI-Powered Automation section via AIPoweredSection component
-- **AI FAQ Questions Added**: Added AI-related FAQ questions to 7 POS pages + VoiceAIAutomation page
-- **SquarePOS FAQ Section**: Created new FAQ section for Square POS page
-- **Scroll-to-Top Fix**: Added ScrollToTop component so all page navigations start at the top
-- **Cloud Kitchen POS Page Rebuild**: Completely rebuilt Cloud Kitchens page at new SEO-optimized URL `/cloud-kitchen-pos-system` with 8 comprehensive sections, AI section, FAQ with schema markup, Cloud Kitchen Technology Solutions section, and full internal linking
-- **Delivery Only Page Removed**: Removed from navigation and redirected `/industries/delivery-only` to `/cloud-kitchen-pos-system`
-- **Navigation Cleanup**: Consolidated Cloud Kitchens + Delivery Only into single "Cloud Kitchens & Ghost Kitchens" nav item
-- **Sitemap Updated**: Replaced old cloud kitchen/delivery URLs with new `/cloud-kitchen-pos-system`
-- **Homepage SEO Overhaul**: Complete rewrite of Home.jsx with optimized meta title, description, OG tags, Organization + FAQ JSON-LD schemas, 8 content sections with proper H1/H2/H3 hierarchy, internal link structure to 10 key pages, and Smart Automation section
-- **Robots.txt Updated**: Added /admin/ and /wp-admin/ disallow rules per user request
-- **Homepage FAQ Rewrite**: Replaced generic FAQs with 7 brand-specific questions covering MSC services, direct provider status, subscription processing, free POS, supported POS systems, marketing integrations, and industries
-- **Footer Sitemap & Social Links**: Rebuilt footer with 44 internal links across 5 columns + 5 social media icons (Facebook, Instagram, LinkedIn, YouTube, Google)
-- **Ecommerce Payments Page**: Created comprehensive `/ecommerce-payments` page with 9 content sections, breadcrumb, 4 JSON-LD schemas (Service, FAQ, Breadcrumb, Organization), full SEO tags, 6 FAQs, CRM/marketing section, and internal linking. Added to nav, homepage, footer, and sitemap.
-- **3D Globe Enhancements (Mar 2026)**: Rebuilt the interactive globe on `/service-areas` with polygon-based country highlighting (GeoJSON via topojson-client), electric arc connections from Houston to international regions, pulsing rings at service centers, hover popups showing service availability per country, click popups with persistent detail panels, Jetsons-style UFO animation with glowing trail, rocket launch animation from Houston TX with exhaust flame, and a color-coded legend distinguishing Square POS vs Clover/Exatouch service regions.
-- **AI Section Logos & Healthcare Expansion (Mar 2026)**: Added TalkyToo AI white logo above "AI-Powered Automation" header and Maple logo (white, CSS inverted) above MSC logo in the shared AIPoweredSection component (affects 9 existing pages). Added AIPoweredSection to all 5 Healthcare & Wellness pages (Healthcare, DentalPractices, Chiropractors, MedicalClinics, SalonSpa) below their "Why Choose Us" sections. Added hero slideshow with 4 Verifone Victa images (auto-advance + dot indicators), cleared image backgrounds, enhanced SEO alt tags, created Documents-like expandable resource section (4 categories: Sunmi, Victa, V Series, General), updated Verifone cards with real product images (Victa portable, Soft POS). Fixed Chiropractors page crash (missing videoRef). Moved Specialty Merchants to Professional Services as "B2B Payment Processing for Complex" in navigation.
-- **Service Areas 8-Point Update (Mar 2026)**: Fixed globe French Guiana mismap (filtered France MultiPolygon to European mainland only), replaced Toast/Lightspeed with SkyTab POS (external link to shift4hospitality.com) and Union POS in Free POS section, added Space Station.mp4 video hero background, moved stats bar above interactive globe, changed site-wide Merchants Served count from 1000+ to 100K+ (ServiceAreas, Home, AboutMSC), added regional banking disclaimer, added 2 new FAQs about international equipment and local support, updated FAQ schema.
+### Pages Created
+- `/support` - Support Center with live search, knowledge base
+- `/smart-payment-terminals` - Smart Payment Terminals with slideshow
+- `/service-areas` - Service Areas with 3D interactive globe
+- `/ecommerce-payments` - Ecommerce Payments (SEO gold standard)
+- `/cloud-kitchen-pos-system` - Cloud Kitchen POS with video hero
+- `/food-trucks-pos` - Food Trucks POS with video hero
+
+### Key Features
+- ScrollToTop navigation fix (site-wide)
+- AI-Powered Section component on 14 pages
+- Footer with full sitemap and social links
+- Blog admin panel with attachment uploads
+- Secure document portal with auth
 
 ## Prioritized Backlog
 
-### P1 - Upcoming
-- Full Site-wide SEO Overhaul (bring all ~40+ pages up to EcommercePayments.jsx standard)
+### P1 - High Priority
 - Implement Qualifier Wizard (multi-step lead qualification form)
+
+### P2 - Medium Priority
 - PDF Upload for Document Portal
 - Embed Payment Link in PayAnywhere flow
 
-### P2 - Future
-- Create "How to Get a Free POS System" page
+### P3 - Lower Priority
+- "How to Get a Free POS System" content page
 - DocuSign Integration for document portal
 
-### P3 - Backlog
+### P4 - Future
 - Backend Content Migration to MongoDB CMS
 - Component Refactoring (break down monolithic pages)
-- AutoSEO webhook logic refactoring into separate route file
+- Fix broken video heroes on older pages
+- Self-Ordering Kiosk page consolidation
 
-### Known Issues (De-prioritized by User)
-- Video heroes not playing on multiple older pages
-- Incomplete Self-Ordering Kiosk page consolidation
-
-## Key Pages & Routes
-- `/food-trucks-pos` - Food Truck POS (consolidated page)
-- `/industries/food-trucks` - Redirects to `/food-trucks-pos`
-- `/clover-pos-system` - Clover POS
-- `/pos/square` - Square POS
-- `/restaurant-payment-processing-services` - Restaurant POS
-- `/pos/qr-ordering` - QR Code Ordering
-- `/best-self-ordering-kiosk-for-restaurants` - Self Ordering Kiosk
-- `/cloud-kitchen-pos-system` - Cloud Kitchen POS (rebuilt, comprehensive)
-- `/industries/cloud-kitchens` - Redirects to `/cloud-kitchen-pos-system`
-- `/industries/delivery-only` - Redirects to `/cloud-kitchen-pos-system`
-- `/voice-ai-business-automation` - Voice AI Automation
-- `/service-areas` - Service Areas (enhanced 3D globe with polygon highlighting)
-- `/ecommerce-payments` - Ecommerce Payments (SEO standard reference)
-- `/smart-payment-terminals` - Smart Payment Terminals (Sunmi, Verifone)
+## Tech Stack
+- Frontend: React, react-helmet-async, globe.gl, three.js, topojson-client
+- Backend: FastAPI, MongoDB
+- Integrations: AutoSEO.ai, Lead Connector, Calendly, Emergent Object Storage
 
 ## Credentials
 - Blog Admin: `/resources/blog/admin` - marketing@merchantsolutionscorp.com / Mscpay$1
