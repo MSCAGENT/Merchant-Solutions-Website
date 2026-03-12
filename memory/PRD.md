@@ -40,6 +40,7 @@ Expand the payment processing website's content for SEO purposes, enhance existi
 - **Footer Sitemap & Social Links**: Rebuilt footer with 44 internal links across 5 columns + 5 social media icons (Facebook, Instagram, LinkedIn, YouTube, Google)
 - **Ecommerce Payments Page**: Created comprehensive `/ecommerce-payments` page with 9 content sections, breadcrumb, 4 JSON-LD schemas (Service, FAQ, Breadcrumb, Organization), full SEO tags, 6 FAQs, CRM/marketing section, and internal linking. Added to nav, homepage, footer, and sitemap.
 - **3D Globe Enhancements (Mar 2026)**: Rebuilt the interactive globe on `/service-areas` with polygon-based country highlighting (GeoJSON via topojson-client), electric arc connections from Houston to international regions, pulsing rings at service centers, hover popups showing service availability per country, click popups with persistent detail panels, Jetsons-style UFO animation with glowing trail, rocket launch animation from Houston TX with exhaust flame, and a color-coded legend distinguishing Square POS vs Clover/Exatouch service regions.
+- **Smart Payment Terminals Page (Mar 2026)**: Created comprehensive `/smart-payment-terminals` page with 9 content sections covering Sunmi V3, Sunmi V2, Verifone Victa, and Verifone V Series terminals. Includes full SEO (4 JSON-LD schemas, OG tags, canonical, keywords), breadcrumb navigation, hero with image, terminal feature cards, benefits grid, payment methods, industry use cases, FAQ, CTA, and internal linking. Old `/pos/smart-terminals` placeholder now redirects. Added to nav and footer.
 
 ## Prioritized Backlog
 
@@ -76,6 +77,7 @@ Expand the payment processing website's content for SEO purposes, enhance existi
 - `/voice-ai-business-automation` - Voice AI Automation
 - `/service-areas` - Service Areas (enhanced 3D globe with polygon highlighting)
 - `/ecommerce-payments` - Ecommerce Payments (SEO standard reference)
+- `/smart-payment-terminals` - Smart Payment Terminals (Sunmi, Verifone)
 
 ## Credentials
 - Blog Admin: `/resources/blog/admin` - marketing@merchantsolutionscorp.com / Mscpay$1
