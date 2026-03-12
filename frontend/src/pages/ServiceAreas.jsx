@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
@@ -27,24 +27,162 @@ const FAQItem = ({ question, answer }) => {
   );
 };
 
-const SERVICE_REGIONS = [
-  { name: 'United States', lat: 39.8, lng: -98.5, color: '#8b5cf6' },
-  { name: 'Canada', lat: 56.1, lng: -106.3, color: '#8b5cf6' },
-  { name: 'Puerto Rico', lat: 18.2, lng: -66.5, color: '#8b5cf6' },
-  { name: 'US Virgin Islands', lat: 18.3, lng: -64.9, color: '#a78bfa' },
-  { name: 'United Kingdom', lat: 55.4, lng: -3.4, color: '#6366f1' },
-  { name: 'Spain', lat: 40.5, lng: -3.7, color: '#6366f1' },
-  { name: 'France', lat: 46.2, lng: 2.2, color: '#6366f1' },
-  { name: 'Ireland', lat: 53.1, lng: -7.7, color: '#6366f1' },
-  { name: 'Japan', lat: 36.2, lng: 138.3, color: '#6366f1' },
-  { name: 'Australia', lat: -25.3, lng: 133.8, color: '#6366f1' },
-];
+/* ── Country & Service Data ── */
+const COUNTRY_ISO = {
+  '840': { name: 'United States', groups: ['square', 'clover'], lat: 39.8, lng: -98.5 },
+  '124': { name: 'Canada', groups: ['square', 'clover'], lat: 56.1, lng: -106.3 },
+  '826': { name: 'United Kingdom', groups: ['square'], lat: 55.4, lng: -3.4 },
+  '392': { name: 'Japan', groups: ['square'], lat: 36.2, lng: 138.3 },
+  '036': { name: 'Australia', groups: ['square'], lat: -25.3, lng: 133.8 },
+  '724': { name: 'Spain', groups: ['square'], lat: 40.5, lng: -3.7 },
+  '250': { name: 'France', groups: ['square'], lat: 46.2, lng: 2.2 },
+  '372': { name: 'Ireland', groups: ['square'], lat: 53.1, lng: -7.7 },
+  '630': { name: 'Puerto Rico', groups: ['clover'], lat: 18.2, lng: -66.5 },
+  '850': { name: 'US Virgin Islands', groups: ['clover'], lat: 18.3, lng: -64.9 },
+};
+
+const SERVICE_GROUPS = {
+  square: {
+    label: 'Square POS & Terminals',
+    services: ['Square POS Systems', 'Square Terminal', 'Square Register', 'Square Online'],
+    color: '#a855f7',
+  },
+  clover: {
+    label: 'Clover, Exatouch & More',
+    services: ['Clover POS', 'Exatouch POS', 'Dejavoo Terminals', 'PAX Terminals'],
+    color: '#818cf8',
+  },
+};
+
+const HOUSTON = { lat: 29.76, lng: -95.36 };
+
+/* ── Color helpers ── */
+function capColor(id, isHovered) {
+  const d = COUNTRY_ISO[id];
+  if (!d) return 'rgba(0,0,0,0)';
+  const both = d.groups.includes('square') && d.groups.includes('clover');
+  if (isHovered) return both ? '#c084fc' : '#a78bfa';
+  return both ? '#8b5cf6' : d.groups.includes('square') ? '#7c3aed' : '#6366f1';
+}
+
+/* ── UFO Component ── */
+const UfoAnimation = () => (
+  <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 5 }}>
+    <style>{`
+      @keyframes ufoPath {
+        0%   { left: -6%; top: 32%; }
+        12%  { left: 10%; top: 18%; }
+        28%  { left: 30%; top: 38%; }
+        42%  { left: 48%; top: 14%; }
+        58%  { left: 62%; top: 34%; }
+        74%  { left: 78%; top: 12%; }
+        88%  { left: 92%; top: 28%; }
+        100% { left: 106%; top: 22%; }
+      }
+      @keyframes ufoGlow {
+        0%, 100% { box-shadow: 0 0 8px 3px rgba(168,85,247,0.4); }
+        50% { box-shadow: 0 0 16px 6px rgba(168,85,247,0.7); }
+      }
+    `}</style>
+    <div style={{
+      position: 'absolute',
+      animation: 'ufoPath 22s linear infinite',
+    }}>
+      {/* Trail */}
+      <div style={{
+        position: 'absolute', right: '100%', top: '50%', transform: 'translateY(-50%)',
+        width: '3.5vw', height: '3px',
+        background: 'linear-gradient(to left, rgba(168,85,247,0.7), rgba(129,140,248,0.3), transparent)',
+        borderRadius: '2px', filter: 'blur(1px)',
+      }} />
+      {/* Saucer body */}
+      <div style={{
+        width: 'clamp(24px, 2.5vw, 36px)', height: 'clamp(9px, 0.9vw, 14px)',
+        background: 'linear-gradient(135deg, #c4b5fd 0%, #7c3aed 60%, #4c1d95 100%)',
+        borderRadius: '50%',
+        animation: 'ufoGlow 2s ease-in-out infinite',
+        position: 'relative',
+      }}>
+        {/* Dome */}
+        <div style={{
+          position: 'absolute', top: '-45%', left: '50%', transform: 'translateX(-50%)',
+          width: '42%', height: '70%',
+          background: 'radial-gradient(ellipse at center, #ede9fe, #a78bfa)',
+          borderRadius: '50% 50% 20% 20%',
+        }} />
+        {/* Underlight */}
+        <div style={{
+          position: 'absolute', bottom: '-4px', left: '50%', transform: 'translateX(-50%)',
+          width: '60%', height: '4px',
+          background: 'radial-gradient(ellipse, rgba(196,181,253,0.8), transparent)',
+          borderRadius: '50%',
+        }} />
+      </div>
+    </div>
+  </div>
+);
+
+/* ── Rocket Component ── */
+const RocketAnimation = () => (
+  <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 5 }}>
+    <style>{`
+      @keyframes rocketLaunch {
+        0%   { bottom: 22%; left: 32%; opacity: 0; transform: scale(1) rotate(-8deg); }
+        4%   { opacity: 1; }
+        50%  { bottom: 60%; left: 30%; opacity: 1; transform: scale(0.6) rotate(-4deg); }
+        85%  { bottom: 88%; left: 28%; opacity: 0.4; transform: scale(0.35) rotate(-2deg); }
+        100% { bottom: 100%; left: 27%; opacity: 0; transform: scale(0.2) rotate(0deg); }
+      }
+      @keyframes exhaustFlicker {
+        0%, 100% { height: clamp(10px, 1.2vw, 18px); opacity: 0.9; }
+        50% { height: clamp(14px, 1.6vw, 24px); opacity: 1; }
+      }
+    `}</style>
+    <div style={{
+      position: 'absolute',
+      animation: 'rocketLaunch 10s ease-out infinite',
+      animationDelay: '4s',
+    }}>
+      {/* Rocket body */}
+      <div style={{
+        width: 'clamp(5px, 0.5vw, 8px)', height: 'clamp(14px, 1.4vw, 22px)',
+        background: 'linear-gradient(to top, #d1d5db, #f9fafb, #e5e7eb)',
+        borderRadius: '3px 3px 0 0', position: 'relative',
+      }}>
+        {/* Nose cone */}
+        <div style={{
+          position: 'absolute', top: '-40%', left: '50%', transform: 'translateX(-50%)',
+          width: 0, height: 0,
+          borderLeft: 'clamp(3px,0.3vw,5px) solid transparent',
+          borderRight: 'clamp(3px,0.3vw,5px) solid transparent',
+          borderBottom: 'clamp(6px,0.6vw,10px) solid #ef4444',
+        }} />
+        {/* Exhaust flame */}
+        <div style={{
+          position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)',
+          width: 'clamp(4px,0.4vw,7px)',
+          background: 'linear-gradient(to bottom, #f97316, #fbbf24, rgba(251,191,36,0.3), transparent)',
+          borderRadius: '0 0 50% 50%',
+          animation: 'exhaustFlicker 0.3s ease-in-out infinite',
+        }} />
+        {/* Smoke trail */}
+        <div style={{
+          position: 'absolute', top: 'calc(100% + clamp(10px,1.2vw,18px))', left: '50%', transform: 'translateX(-50%)',
+          width: 'clamp(6px,0.6vw,10px)', height: 'clamp(20px,2vw,35px)',
+          background: 'linear-gradient(to bottom, rgba(209,213,219,0.5), rgba(209,213,219,0.1), transparent)',
+          borderRadius: '50%', filter: 'blur(2px)',
+        }} />
+      </div>
+    </div>
+  </div>
+);
 
 export default function ServiceAreas() {
   const [showFormModal, setShowFormModal] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const globeContainerRef = useRef(null);
   const globeRef = useRef(null);
+  const hoveredRef = useRef(null);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
@@ -61,37 +199,95 @@ export default function ServiceAreas() {
     }
   }, []);
 
+  /* ── Globe Initialization ── */
   useEffect(() => {
     let globe;
     const initGlobe = async () => {
       if (!globeContainerRef.current) return;
       const Globe = (await import('globe.gl')).default;
-      globe = Globe()(globeContainerRef.current)
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+      const topojson = await import('topojson-client');
+
+      const res = await fetch('https://unpkg.com/world-atlas@2/countries-110m.json');
+      const worldTopo = await res.json();
+      const geoJson = topojson.feature(worldTopo, worldTopo.objects.countries);
+
+      const serviceFeatures = geoJson.features.filter(f => COUNTRY_ISO[f.id]);
+      serviceFeatures.forEach(f => { f._svc = COUNTRY_ISO[f.id]; });
+
+      /* Arc connections from Houston to international service regions */
+      const arcData = Object.entries(COUNTRY_ISO)
+        .filter(([id]) => id !== '840' && id !== '630' && id !== '850')
+        .map(([, c]) => ({
+          startLat: HOUSTON.lat, startLng: HOUSTON.lng,
+          endLat: c.lat, endLng: c.lng,
+        }));
+
+      /* Pulsing rings at each country center */
+      const ringsData = Object.values(COUNTRY_ISO).map(c => ({ lat: c.lat, lng: c.lng }));
+
+      const container = globeContainerRef.current;
+      globe = Globe()(container)
+        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
         .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
         .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-        .width(globeContainerRef.current.offsetWidth)
-        .height(500)
-        .pointsData(SERVICE_REGIONS)
-        .pointLat('lat')
-        .pointLng('lng')
-        .pointColor('color')
-        .pointAltitude(0.06)
-        .pointRadius(1.2)
-        .pointsMerge(false)
-        .labelsData(SERVICE_REGIONS)
-        .labelLat('lat')
-        .labelLng('lng')
-        .labelText('name')
-        .labelSize(1.4)
-        .labelDotRadius(0.6)
-        .labelColor(() => '#e9d5ff')
-        .labelResolution(2)
-        .onPointClick((point) => {
-          setSelectedRegion(point);
+        .width(container.offsetWidth)
+        .height(540)
+        /* ── Country polygons ── */
+        .polygonsData(serviceFeatures)
+        .polygonCapColor(d => capColor(d.id, false))
+        .polygonSideColor(() => 'rgba(139, 92, 246, 0.25)')
+        .polygonStrokeColor(() => 'rgba(196, 181, 253, 0.6)')
+        .polygonAltitude(0.04)
+        .polygonLabel(d => {
+          const data = COUNTRY_ISO[d.id];
+          if (!data) return '';
+          let html = `<div style="background:rgba(10,10,25,0.92);padding:14px 16px;border-radius:10px;border:1px solid rgba(139,92,246,0.5);backdrop-filter:blur(12px);min-width:200px;font-family:system-ui,sans-serif;">`;
+          html += `<div style="font-weight:700;color:#e9d5ff;font-size:15px;margin-bottom:8px;">${data.name}</div>`;
+          data.groups.forEach(g => {
+            const grp = SERVICE_GROUPS[g];
+            html += `<div style="margin-bottom:6px;"><div style="color:${grp.color};font-weight:600;font-size:12px;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.5px;">${grp.label}</div>`;
+            grp.services.forEach(s => {
+              html += `<div style="color:#d1d5db;font-size:12px;padding-left:10px;">&#8226; ${s}</div>`;
+            });
+            html += `</div>`;
+          });
+          html += `</div>`;
+          return html;
         })
+        .onPolygonHover(polygon => {
+          hoveredRef.current = polygon;
+          globe
+            .polygonCapColor(d => capColor(d.id, d === polygon))
+            .polygonAltitude(d => d === polygon ? 0.08 : 0.04);
+        })
+        .onPolygonClick(polygon => {
+          if (polygon && COUNTRY_ISO[polygon.id]) {
+            setSelectedRegion(COUNTRY_ISO[polygon.id]);
+          }
+        })
+        .polygonsTransitionDuration(300)
+        /* ── Electric arcs ── */
+        .arcsData(arcData)
+        .arcStartLat(d => d.startLat)
+        .arcStartLng(d => d.startLng)
+        .arcEndLat(d => d.endLat)
+        .arcEndLng(d => d.endLng)
+        .arcColor(() => ['rgba(168,85,247,0.6)', 'rgba(129,140,248,0.6)'])
+        .arcDashLength(0.4)
+        .arcDashGap(0.2)
+        .arcDashAnimateTime(3000)
+        .arcStroke(0.5)
+        /* ── Pulsing rings ── */
+        .ringsData(ringsData)
+        .ringLat(d => d.lat)
+        .ringLng(d => d.lng)
+        .ringColor(() => 'rgba(168,85,247,0.45)')
+        .ringMaxRadius(3)
+        .ringPropagationSpeed(1.5)
+        .ringRepeatPeriod(2500)
+        /* ── Atmosphere ── */
         .atmosphereColor('#7c3aed')
-        .atmosphereAltitude(0.2);
+        .atmosphereAltitude(0.22);
 
       globe.pointOfView({ lat: 30, lng: -40, altitude: 2.2 }, 0);
       globe.controls().autoRotate = true;
@@ -111,8 +307,8 @@ export default function ServiceAreas() {
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      if (globeRef.current) {
-        globeRef.current._destructor && globeRef.current._destructor();
+      if (globeRef.current && globeRef.current._destructor) {
+        globeRef.current._destructor();
       }
     };
   }, []);
@@ -128,7 +324,7 @@ export default function ServiceAreas() {
     "@type": "Service",
     "name": "Merchant Services & POS Installation",
     "provider": { "@type": "Organization", "name": "Merchant Solutions Corp" },
-    "areaServed": ["United States", "Canada", "Puerto Rico", "US Virgin Islands", "United Kingdom", "Spain", "Japan"],
+    "areaServed": ["United States", "Canada", "Puerto Rico", "US Virgin Islands", "United Kingdom", "Spain", "Japan", "Australia", "France", "Ireland"],
     "serviceType": "Merchant Services and POS Installation",
     "url": "https://merchantsolutionscorp.com/service-areas"
   };
@@ -178,6 +374,9 @@ export default function ServiceAreas() {
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
       </Helmet>
+
+      {/* Tooltip override so globe.gl label shows our custom HTML cleanly */}
+      <style>{`.scene-tooltip{background:transparent!important;border:none!important;box-shadow:none!important;padding:0!important;}`}</style>
 
       {/* BREADCRUMB */}
       <div className="bg-gray-50 border-b border-gray-200">
@@ -271,20 +470,49 @@ export default function ServiceAreas() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" data-testid="globe-h2">Interactive Global Coverage Map</h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">Explore our service territories. Click and drag to rotate the globe. Click on a highlighted region to see service availability.</p>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">Explore our service territories. Hover on a highlighted country to see available services. Click and drag to rotate.</p>
           </div>
           <div className="relative max-w-4xl mx-auto">
-            <div ref={globeContainerRef} className="w-full rounded-2xl overflow-hidden" data-testid="globe-container" style={{ minHeight: '500px' }} />
+            <div ref={globeContainerRef} className="w-full rounded-2xl overflow-hidden" data-testid="globe-container" style={{ minHeight: '540px' }} />
+            {/* Animations overlaid on globe */}
+            <UfoAnimation />
+            <RocketAnimation />
+            {/* Click popup */}
             {selectedRegion && (
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-sm rounded-xl px-6 py-4 shadow-xl border border-purple-200 max-w-md text-center z-10" data-testid="globe-popup">
-                <p className="font-bold text-gray-900 text-lg mb-1">{selectedRegion.name}</p>
-                <p className="text-sm text-gray-600">Merchant Solutions Corp provides payment processing and POS installation services in this region.</p>
-                <button onClick={() => setSelectedRegion(null)} className="text-xs text-purple-600 mt-2 hover:underline">Close</button>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gray-900/95 backdrop-blur-sm rounded-xl px-6 py-4 shadow-xl border border-purple-500/40 max-w-md text-center z-20" data-testid="globe-popup">
+                <p className="font-bold text-purple-200 text-lg mb-2">{selectedRegion.name}</p>
+                {selectedRegion.groups.map(g => (
+                  <div key={g} className="mb-2">
+                    <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: SERVICE_GROUPS[g].color }}>{SERVICE_GROUPS[g].label}</p>
+                    <p className="text-xs text-gray-400">{SERVICE_GROUPS[g].services.join(' \u00B7 ')}</p>
+                  </div>
+                ))}
+                <button onClick={() => setSelectedRegion(null)} className="text-xs text-purple-400 mt-2 hover:underline">Close</button>
               </div>
             )}
           </div>
-          <div className="flex flex-wrap justify-center gap-3 mt-8">
-            {SERVICE_REGIONS.map((r, i) => (
+          {/* Legend */}
+          <div className="flex flex-wrap justify-center gap-6 mt-8">
+            <div className="flex items-center gap-2">
+              <span className="w-4 h-4 rounded" style={{ background: '#8b5cf6' }} />
+              <span className="text-sm text-gray-300">Square + Clover Services</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-4 h-4 rounded" style={{ background: '#7c3aed' }} />
+              <span className="text-sm text-gray-300">Square POS &amp; Terminals</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-4 h-4 rounded" style={{ background: '#6366f1' }} />
+              <span className="text-sm text-gray-300">Clover, Exatouch &amp; More</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-px bg-purple-400 rounded" style={{ width: 16 }} />
+              <span className="text-sm text-gray-300">Service Connections</span>
+            </div>
+          </div>
+          {/* Country tags */}
+          <div className="flex flex-wrap justify-center gap-3 mt-6">
+            {Object.values(COUNTRY_ISO).map((r, i) => (
               <span key={i} className="text-xs bg-purple-900/50 text-purple-300 px-3 py-1.5 rounded-full border border-purple-700/50">{r.name}</span>
             ))}
           </div>
