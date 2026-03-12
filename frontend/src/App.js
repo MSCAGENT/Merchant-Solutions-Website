@@ -93,6 +93,7 @@ import WhiteLabelMerchantServices from "./pages/pricing/WhiteLabelMerchantServic
 import Support from "./pages/Support";
 import ServiceAreas from "./pages/ServiceAreas";
 import SmartPaymentTerminals from "./pages/SmartPaymentTerminals";
+import SupportCenter from "./pages/SupportCenter";
 import VoiceAIAutomation from "./pages/solutions/VoiceAIAutomation";
 
 function App() {
@@ -222,8 +223,9 @@ function App() {
           <Route path="/company/why-us" element={<About />} />
           <Route path="/company/security-compliance" element={<Security />} />
           <Route path="/company/contact" element={<Contact />} />
-          <Route path="/company/support" element={<Support />} />
           <Route path="/service-areas" element={<ServiceAreas />} />
+          <Route path="/support" element={<SupportCenter />} />
+          <Route path="/company/support" element={<Navigate to="/support" replace />} />
           <Route path="/company/service-areas" element={<Navigate to="/service-areas" replace />} />
           
           {/* Login Routes */}

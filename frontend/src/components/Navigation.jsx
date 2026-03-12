@@ -179,7 +179,7 @@ const megaMenus = {
     items: [
       { label: 'About Us', path: '/about-merchant-solutions-corp' },
       { label: 'Contact', path: '/contact' },
-      { label: 'Support', path: '/company/support' },
+      { label: 'Support Center', path: '/support' },
       { label: 'Careers', path: '/partnerships/careers' },
       { label: 'Service Areas', path: '/service-areas' },
     ],

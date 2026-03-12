@@ -69,6 +69,7 @@ const Footer = () => {
       links: [
         { label: 'About Us', path: '/about-merchant-solutions-corp' },
         { label: 'Contact', path: '/contact' },
+        { label: 'Support Center', path: '/support' },
         { label: 'Partnerships', path: '/partnerships' },
         { label: 'Agent Program', path: '/partners/agents' },
         { label: 'Careers', path: '/partnerships/careers' },
