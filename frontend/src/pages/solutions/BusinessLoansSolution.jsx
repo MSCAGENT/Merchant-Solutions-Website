@@ -22,6 +22,23 @@ import {
 import { Button } from '../../components/ui/button';
 import { Card, CardContent } from '../../components/ui/card';
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is the difference between a merchant cash advance and a traditional business loan?","acceptedAnswer":{"@type":"Answer","text":"A merchant cash advance provides funding based on a business's future credit card or debit card sales. Repayments are typically taken as a percentage of daily transactions. Traditional business loans are issued by banks and require fixed monthly payments, longer approval times, and stricter credit requirements."}},
+    {"@type":"Question","name":"How much funding can a business qualify for?","acceptedAnswer":{"@type":"Answer","text":"Funding amounts depend on factors such as monthly revenue, credit card processing volume, and overall financial stability. Many merchant capital programs provide funding ranging from $5,000 to $500,000 or more, depending on the size of the business and its payment processing activity."}},
+    {"@type":"Question","name":"How are merchant capital payments collected?","acceptedAnswer":{"@type":"Answer","text":"Repayments are commonly collected through a small percentage of daily credit card sales or through scheduled ACH withdrawals from the business bank account. This structure allows payments to fluctuate with business revenue instead of requiring fixed monthly payments."}},
+    {"@type":"Question","name":"Can startups qualify for merchant capital?","acceptedAnswer":{"@type":"Answer","text":"Some lenders offer funding programs for newer businesses, but most merchant capital providers require a minimum operating history of 3–6 months and consistent revenue deposits. Businesses with steady sales activity have a better chance of qualifying."}},
+    {"@type":"Question","name":"Is merchant capital the same as a small business loan?","acceptedAnswer":{"@type":"Answer","text":"No. Merchant capital is technically a purchase of future receivables rather than a loan. Because the funding is tied to future revenue, the approval process is often faster and requires fewer traditional underwriting requirements compared to bank loans."}},
+    {"@type":"Question","name":"What documents are required to apply for merchant funding?","acceptedAnswer":{"@type":"Answer","text":"Most applications require basic documentation such as recent business bank statements, merchant processing statements, business identification information, and proof of ownership. These documents help lenders verify revenue and determine the funding amount."}},
+    {"@type":"Question","name":"Can businesses with existing loans still qualify for merchant capital?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many businesses obtain merchant capital even if they already have existing financing. Approval depends on revenue levels and the ability to support additional funding without affecting cash flow."}},
+    {"@type":"Question","name":"How long does the merchant capital approval process take?","acceptedAnswer":{"@type":"Answer","text":"Approval timelines are typically faster than traditional bank financing. Many funding programs review applications within 24–48 hours, with funds deposited shortly after final approval."}},
+    {"@type":"Question","name":"Are there restrictions on how merchant capital funds can be used?","acceptedAnswer":{"@type":"Answer","text":"Most merchant capital programs allow businesses to use the funds for any legitimate business purpose such as inventory, payroll, equipment, marketing, expansion, or managing cash flow during slower seasons."}},
+    {"@type":"Question","name":"What industries commonly use merchant capital financing?","acceptedAnswer":{"@type":"Answer","text":"Merchant capital is frequently used by industries with consistent payment activity such as restaurants, retail stores, salons and spas, healthcare providers, contractors, and service businesses. These businesses benefit from flexible repayment tied to their sales volume."}}
+  ]
+};
+
 const BusinessLoansSolution = () => {
   const keyBenefits = [
     { title: 'Fast Funding', desc: 'Funds in 24-48 hours' },
@@ -65,6 +82,13 @@ const BusinessLoansSolution = () => {
       desc: 'Government-backed loans with competitive rates and longer terms for qualified businesses.',
       amount: '$25,000 - $5,000,000',
       applyUrl: 'https://lp.lendio.com/partners-low-lf?source=MerchantSolutionsCorp&affiliate=3808303628&medium=SRP'
+    },
+    { 
+      icon: ArrowUpRight, 
+      title: 'Square Financial', 
+      desc: 'Square offers loans to eligible businesses based on their monthly revenue through Square. Flexible repayment deducted automatically from daily Square sales.',
+      amount: '$150,000 - $1,500,000',
+      applyUrl: '/pos/square'
     }
   ];
 
@@ -128,6 +152,7 @@ const BusinessLoansSolution = () => {
         <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Service","name":"Business Loans","serviceType":"Small Business Loans and Financing","provider":{"@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com"},"areaServed":"United States","url":"https://merchantsolutionscorp.com/solutions/business-loans","description":"Business loan and financing solutions for small businesses from Merchant Solutions Corp."})}</script>
         <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://merchantsolutionscorp.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://merchantsolutionscorp.com/solutions/payment-processing"},{"@type":"ListItem","position":3,"name":"Business Loans","item":"https://merchantsolutionscorp.com/solutions/business-loans"}]})}</script>
         <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Merchant Solutions Corp","url":"https://merchantsolutionscorp.com","logo":"https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png","sameAs":["https://www.facebook.com/merchantsolutionscorp/","https://www.instagram.com/merchant_solutions_corp","https://www.linkedin.com/company/merchantsolutionscorp/","https://www.youtube.com/merchantsolutionscorp"]})}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden bg-gray-900 flex items-center">
@@ -209,11 +234,19 @@ const BusinessLoansSolution = () => {
                         <h3 className="font-bold text-xl mb-2 text-gray-900">{option.title}</h3>
                         <p className="text-gray-600 mb-3">{option.desc}</p>
                         <p className="text-purple-600 font-semibold mb-4">{option.amount}</p>
-                        <a href={option.applyUrl} target="_blank" rel="noopener noreferrer">
-                          <Button size="sm" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={`apply-btn-${index}`}>
-                            Apply Now
-                          </Button>
-                        </a>
+                        {option.applyUrl.startsWith('/') ? (
+                          <Link to={option.applyUrl}>
+                            <Button size="sm" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={`apply-btn-${index}`}>
+                              Apply Now
+                            </Button>
+                          </Link>
+                        ) : (
+                          <a href={option.applyUrl} target="_blank" rel="noopener noreferrer">
+                            <Button size="sm" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" data-testid={`apply-btn-${index}`}>
+                              Apply Now
+                            </Button>
+                          </a>
+                        )}
                       </div>
                     </div>
                   </CardContent>
@@ -344,6 +377,65 @@ const BusinessLoansSolution = () => {
             {industries.map((industry, index) => (
               <div key={index} className="bg-white border-2 border-gray-200 hover:border-purple-600 rounded-full px-6 py-3 text-gray-700 font-medium transition-all duration-300">
                 {industry}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white" data-testid="faq-section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600">Common questions about merchant capital and business funding</p>
+          </div>
+          <div className="space-y-6">
+            {[
+              {
+                q: 'What is the difference between a merchant cash advance and a traditional business loan?',
+                a: 'A merchant cash advance provides funding based on a business\'s future credit card or debit card sales. Repayments are typically taken as a percentage of daily transactions. Traditional business loans are issued by banks and require fixed monthly payments, longer approval times, and stricter credit requirements.'
+              },
+              {
+                q: 'How much funding can a business qualify for?',
+                a: 'Funding amounts depend on factors such as monthly revenue, credit card processing volume, and overall financial stability. Many merchant capital programs provide funding ranging from $5,000 to $500,000 or more, depending on the size of the business and its payment processing activity.'
+              },
+              {
+                q: 'How are merchant capital payments collected?',
+                a: 'Repayments are commonly collected through a small percentage of daily credit card sales or through scheduled ACH withdrawals from the business bank account. This structure allows payments to fluctuate with business revenue instead of requiring fixed monthly payments.'
+              },
+              {
+                q: 'Can startups qualify for merchant capital?',
+                a: 'Some lenders offer funding programs for newer businesses, but most merchant capital providers require a minimum operating history of 3\u20136 months and consistent revenue deposits. Businesses with steady sales activity have a better chance of qualifying.'
+              },
+              {
+                q: 'Is merchant capital the same as a small business loan?',
+                a: 'No. Merchant capital is technically a purchase of future receivables rather than a loan. Because the funding is tied to future revenue, the approval process is often faster and requires fewer traditional underwriting requirements compared to bank loans.'
+              },
+              {
+                q: 'What documents are required to apply for merchant funding?',
+                a: 'Most applications require basic documentation such as recent business bank statements, merchant processing statements, business identification information, and proof of ownership. These documents help lenders verify revenue and determine the funding amount.'
+              },
+              {
+                q: 'Can businesses with existing loans still qualify for merchant capital?',
+                a: 'Yes. Many businesses obtain merchant capital even if they already have existing financing. Approval depends on revenue levels and the ability to support additional funding without affecting cash flow.'
+              },
+              {
+                q: 'How long does the merchant capital approval process take?',
+                a: 'Approval timelines are typically faster than traditional bank financing. Many funding programs review applications within 24\u201348 hours, with funds deposited shortly after final approval.'
+              },
+              {
+                q: 'Are there restrictions on how merchant capital funds can be used?',
+                a: 'Most merchant capital programs allow businesses to use the funds for any legitimate business purpose such as inventory, payroll, equipment, marketing, expansion, or managing cash flow during slower seasons.'
+              },
+              {
+                q: 'What industries commonly use merchant capital financing?',
+                a: 'Merchant capital is frequently used by industries with consistent payment activity such as restaurants, retail stores, salons and spas, healthcare providers, contractors, and service businesses. These businesses benefit from flexible repayment tied to their sales volume.'
+              }
+            ].map((faq, index) => (
+              <div key={index} className="border-2 border-gray-100 rounded-xl p-6 hover:border-purple-200 transition-colors" data-testid={`faq-item-${index}`}>
+                <h3 className="font-bold text-lg text-gray-900 mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

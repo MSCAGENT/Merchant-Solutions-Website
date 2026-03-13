@@ -281,7 +281,7 @@ const PaymentProcessingSolution = () => {
                 <h2 className="text-3xl font-bold text-gray-900">Card-Present Processing</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6">
-                Accept payments face-to-face with secure EMV chip, contactless tap, and swipe transactions. Perfect for retail stores, restaurants, and service businesses.
+                Accept payments face-to-face with secure EMV chip, contactless tap, and swipe transactions. Perfect for retail stores, restaurants, and service businesses. Explore our <Link to="/clover-pos-system" className="text-purple-600 hover:underline font-medium">Clover POS systems</Link>, <Link to="/pos/dejavoo-terminals" className="text-purple-600 hover:underline font-medium">Dejavoo terminals</Link>, and <Link to="/pos/ingenico-terminals" className="text-purple-600 hover:underline font-medium">Ingenico devices</Link>.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {cardPresentFeatures.map((feature, index) => (
@@ -349,7 +349,7 @@ const PaymentProcessingSolution = () => {
                 <h2 className="text-3xl font-bold text-gray-900">eCommerce Payment Processing</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6">
-                Sell online with secure checkout pages, powerful API integrations, and compatibility with all major shopping cart platforms. Manage subscriptions and digital invoicing from one dashboard.
+                Sell online with secure checkout pages, powerful API integrations, and compatibility with all major shopping cart platforms. Manage subscriptions and digital invoicing from one dashboard. See our full <Link to="/ecommerce-payments" className="text-purple-600 hover:underline font-medium">eCommerce payment solutions</Link>.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {ecommerceFeatures.map((feature, index) => (
@@ -390,7 +390,7 @@ const PaymentProcessingSolution = () => {
                 <h2 className="text-3xl font-bold text-gray-900">Mobile Payments</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6">
-                Accept payments anywhere with tap-to-pay on your phone, QR code payments, and portable card readers. Ideal for field service, delivery, events, and pop-up retail.
+                Accept payments anywhere with tap-to-pay on your phone, QR code payments, and portable card readers. Ideal for field service, delivery, events, and pop-up retail. See our <Link to="/clover-pos-system" className="text-purple-600 hover:underline font-medium">Clover mobile solutions</Link>, <Link to="/payanywhere" className="text-purple-600 hover:underline font-medium">PayAnywhere</Link>, and <Link to="/food-trucks-pos" className="text-purple-600 hover:underline font-medium">food truck POS systems</Link>.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {mobileFeatures.map((feature, index) => (
@@ -417,7 +417,7 @@ const PaymentProcessingSolution = () => {
                 <h2 className="text-3xl font-bold text-gray-900">ACH Processing & Bank Transfers</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6">
-                Lower your processing costs with direct bank transfers. Set up recurring ACH billing for memberships and subscriptions. Same-day ACH options available for faster access to funds.
+                Lower your processing costs with direct bank transfers. Set up recurring ACH billing for memberships and subscriptions. Same-day ACH options available for faster access to funds. Learn more about our <Link to="/solutions/ach-processing" className="text-purple-600 hover:underline font-medium">ACH processing solutions</Link>.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {achFeatures.map((feature, index) => (
@@ -454,7 +454,7 @@ const PaymentProcessingSolution = () => {
                 <h2 className="text-3xl font-bold text-gray-900">Payment Integrations</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6">
-                Connect payments to your existing business systems. Integrate with POS platforms, CRM software, QuickBooks, Xero, and custom applications through our flexible APIs.
+                Connect payments to your existing business systems. Integrate with POS platforms, CRM software, QuickBooks, Xero, and custom applications through our flexible APIs. Explore the <Link to="/solutions/tranzaction-gateway" className="text-purple-600 hover:underline font-medium">MSC TranzAction Gateway</Link> and <Link to="/gateway/payments-gateway" className="text-purple-600 hover:underline font-medium">MSC Payments Gateway</Link>.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {integrationFeatures.map((feature, index) => (
@@ -506,7 +506,7 @@ const PaymentProcessingSolution = () => {
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Cash Discount & Dual Pricing</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Reduce or eliminate credit card processing fees with a compliant cash discount or dual pricing program — configured, installed, and supported by Merchant Solutions Corp.
+              Reduce or eliminate credit card processing fees with a compliant cash discount or dual pricing program — configured, installed, and supported by Merchant Solutions Corp. See our full <Link to="/dual-pricing-cash-discount-payment-processing" className="text-purple-600 hover:underline font-medium">dual pricing program details</Link>.
             </p>
           </div>
 
