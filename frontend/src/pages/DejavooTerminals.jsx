@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ChevronRight, CreditCard, Smartphone, Zap } from 'lucide-react';
+import { CheckCircle, ChevronRight, CreditCard, Smartphone, Zap, Shield } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
@@ -18,6 +18,7 @@ const DejavooTerminals = () => {
   const [showApplyModal, setShowApplyModal] = useState(false);
   const [heroIndex, setHeroIndex] = useState(0);
   const [purchaseDevice, setPurchaseDevice] = useState(null);
+  const [showActivation, setShowActivation] = useState(false);
 
   // Hero image slideshow - 3s interval
   useEffect(() => {
@@ -102,21 +103,21 @@ const DejavooTerminals = () => {
   const testimonials = [
     {
       id: 1,
-      quote: 'Switched from Clover to Bank of America and haven\'t looked back.',
+      quote: 'Switched from Bank of America and haven\'t looked back. MSC\'s team is great, always available.',
       author: 'Jason D.',
-      location: 'Florida'
+      location: 'Orlando, FL'
     },
     {
       id: 2,
-      quote: 'The subscription includes everything—hardware, SIM, and software. No surprises.',
+      quote: 'The subscription includes everything—hardware, SIM, and software. No surprises. One flat cost every month and no credit card fees.',
       author: 'Linda M.',
-      location: 'Texas'
+      location: 'Katy, TX'
     },
     {
       id: 3,
-      quote: 'Setup was fast, and the support team was amazing. Our salon runs on the QD4 now.',
+      quote: 'Setup was quick, and the support team was amazing. Our salon runs on the QD4 now.',
       author: 'Brianna G.',
-      location: 'New York'
+      location: 'New York, NY'
     }
   ];
 
@@ -127,7 +128,7 @@ const DejavooTerminals = () => {
       <>
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center mb-6">
-            {device.name} - Pricing Options
+            {device.name} - Free Placement
           </DialogTitle>
         </DialogHeader>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
@@ -148,11 +149,13 @@ const DejavooTerminals = () => {
                 </div>
               </div>
               
-              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
-                  Apply Now <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
+              <Button 
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg"
+                onClick={() => { setSelectedDevice(null); setShowActivation(true); }}
+                data-testid="pricing-modal-dual-apply-btn"
+              >
+                Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
             </CardContent>
           </Card>
 
@@ -174,13 +177,20 @@ const DejavooTerminals = () => {
                 Plans start at $49.99/month
               </div>
               
-              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
-                  Apply Now <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
+              <Button 
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
+                onClick={() => { setSelectedDevice(null); setShowActivation(true); }}
+                data-testid="pricing-modal-flat-apply-btn"
+              >
+                Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
             </CardContent>
           </Card>
+        </div>
+
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4">
+          <p className="text-xs font-semibold text-gray-700 mb-2">Free Placement disclosure:</p>
+          <p className="text-xs text-gray-600">All equipment comes with a limited warranty for the term of the agreement of 36 months. All free placements are subject to a $99 annual fee and a $5k minimum monthly volume.</p>
         </div>
       </>
     );
@@ -497,6 +507,9 @@ const DejavooTerminals = () => {
                   Create an Account <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
+              <p className="text-xs text-gray-500 mt-3 leading-relaxed" data-testid="free-placement-disclosure">
+                <span className="font-semibold text-gray-700">Free Placement disclosure:</span> All equipment comes with a limited warranty for the term of the agreement of 36 months. All free placements are subject to a $99 annual fee and a $5k minimum monthly volume.
+              </p>
             </div>
           </div>
         </div>
@@ -530,7 +543,7 @@ const DejavooTerminals = () => {
                       data-testid={`pricing-btn-${terminal.id}`}
                       onClick={() => setSelectedDevice(terminal)}
                     >
-                      Pricing
+                      Free Placement
                     </Button>
                     
                     <Button
@@ -770,6 +783,72 @@ const DejavooTerminals = () => {
           <PricingModalContent device={selectedDevice} />
         </DialogContent>
       </Dialog>
+
+      {/* Activation & Shipping Deposit Popup */}
+      {showActivation && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowActivation(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <button
+              data-testid="dejavoo-activation-modal-close-btn"
+              onClick={() => setShowActivation(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+
+            <div className="p-8 pt-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">Activation & Shipping Deposit</h2>
+
+              <p className="text-gray-600 text-center mb-6">
+                To reserve your Free of cost POS/Terminal system and begin the onboarding process, an account setup fee of <span className="font-bold text-gray-900">$45 for activation</span> and a <span className="font-bold text-gray-900">shipping deposit</span> are required.
+              </p>
+
+              <p className="text-sm text-gray-500 text-center mb-6">
+                This step helps us verify legitimate applications and prepare your equipment for 2nd-day air. It will be debited from your first monthly statement.
+              </p>
+
+              <div className="bg-purple-50 rounded-xl p-5 mb-6">
+                <h3 className="text-sm font-bold text-gray-900 mb-3">Your deposit covers:</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">Free Equipment reservation</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">Processing account setup</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">Terminal Configuring / SIM Card setup</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">Shipping and handling</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-xs text-gray-500 text-center mb-6">
+                Once you have completed this step, you will proceed to the secure business application to create and activate your merchant account. This will take roughly 5-10 min.
+              </p>
+
+              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block">
+                <Button
+                  data-testid="dejavoo-continue-activation-btn"
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg py-6 shadow-lg"
+                >
+                  Continue Activation <ChevronRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Purchase Now Modal */}
       {purchaseDevice && (
