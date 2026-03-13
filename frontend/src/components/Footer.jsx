@@ -15,6 +15,7 @@ const Footer = () => {
         { label: 'Business Loans', path: '/solutions/business-loans' },
         { label: 'Payroll Services', path: '/solutions/payroll-services' },
         { label: 'ACH Processing', path: '/solutions/ach-processing' },
+        { label: 'ACH & eCheck Processing', path: '/ach-echeck-processing' },
         { label: 'Dual Pricing', path: '/dual-pricing-cash-discount-payment-processing' },
         { label: 'IT Services', path: '/solutions/it-services' },
         { label: 'Voice AI Automation', path: '/voice-ai-business-automation' },

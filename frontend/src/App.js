@@ -29,6 +29,7 @@ import PayAnywhere from "./pages/PayAnywhere";
 import CloverPOS from "./pages/CloverPOS";
 import DejavooTerminals from "./pages/DejavooTerminals";
 import EcommercePayments from "./pages/EcommercePayments";
+import ACHEcheckProcessing from "./pages/ACHEcheckProcessing";
 import MSCGateway from "./pages/MSCGateway";
 import Partnerships from "./pages/Partnerships";
 import ITServices from "./pages/solutions/ITServices";
@@ -117,6 +118,7 @@ function App() {
           <Route path="/solutions/payroll-services" element={<PayrollServicesSolution />} />
           <Route path="/solutions/it-services" element={<ITServices />} />
           <Route path="/ecommerce-payments" element={<EcommercePayments />} />
+          <Route path="/ach-echeck-processing" element={<ACHEcheckProcessing />} />
           <Route path="/solutions/tranzaction-gateway" element={<MSCTranzActionGateway />} />
           <Route path="/solutions/merchant-rewards" element={<MerchantRewards />} />
           <Route path="/solutions/lines-of-credit" element={<LinesOfCredit />} />
