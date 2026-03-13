@@ -14,33 +14,25 @@ Build and maintain a comprehensive marketing/sales website for a merchant servic
 
 ## What's Been Implemented
 
-### Dejavoo Terminals - Free Placement & Activation Flow (March 2026) - COMPLETED
-1. Added Free Placement disclosure below Dual Pricing rate card
-2. Updated all 3 testimonials (Jason D. Orlando FL, Linda M. Katy TX, Brianna G. New York NY)
-3. Changed terminal "Pricing" buttons to "Free Placement" with:
-   - Pricing modal showing Dual Pricing + Flat Rate with disclosure
-   - "Apply Now" triggers Activation & Shipping Deposit popup ($45 activation, deposit covers)
-   - "Continue Activation" links to JotForm application
+### Navigation & Modal Redesign (March 2026) - COMPLETED
+1. Moved PayAnywhere POS from "POS Systems" to "Payment Terminals" in navigation
+2. Redesigned Dejavoo Free Placement modal to match provided screenshot:
+   - "MOST POPULAR" purple gradient badge on Dual Pricing card
+   - Benefit-style checkmarks (purple for Dual, blue for Flat Rate)
+   - Full Advantage Program disclosure (36-month, $595 ETF, $99 annual, 30-day trial)
+   - Rounded gradient "Apply Now" buttons
+3. Maverick form button color: CANNOT be changed (cross-origin iframe limitation from merchantsolutionscorpdb.com)
+
+### Free Placement & Activation Flow (March 2026) - COMPLETED
+1. Free Placement disclosure on Dual Pricing rate card
+2. Updated testimonials (Jason D., Linda M., Brianna G.)
+3. Terminal "Free Placement" button → pricing modal → Activation popup → JotForm
 
 ### 8-Point Dejavoo & Smart Terminals Update (March 2026) - COMPLETED
-1. MAPLE logo in AIPoweredSection reverted to original colors (removed filter)
-2. Dejavoo Standard plan: added 4G Sim Card Service feature; Premium plan: rewrote all features
-3. Added "Create an Account" buttons to Flat Rate and Dual Pricing rate cards
-4. Changed Xerocharge merchant rate from 3.89% to 0%
-5. Fixed CRITICAL recurring pricing modal glitch (single controlled Dialog pattern)
-6. Replaced P18 terminal image with user-provided asset
-7. Added "Purchase Now" buttons to all 4 Smart Terminals product cards
-8. Added 5 new FAQs with FAQPage schema to Smart Terminals page
+- Standard/Premium features, Create Account buttons, Xerocharge 0%, P18 image, modal fix, Purchase Now buttons, 5 Smart Terminal FAQs
 
 ### Site-wide SEO Overhaul (March 2026) - COMPLETED
-- All 50+ public pages have absolute canonical URLs, robots meta, OG tags, BreadcrumbList, Organization, Service, and FAQPage JSON-LD schemas
-
-### Other Completed Work
-- Payment Processing page interlinking (10 internal links)
-- Business Loans page: Square Financial funding option + 10 FAQs with schema
-- ScrollToTop navigation fix (site-wide)
-- Footer with full sitemap and social links
-- Multiple new pages: EcommercePayments, ServiceAreas, CloudKitchenPOS, FoodTrucksPOS
+- All 50+ public pages have full JSON-LD schemas and canonical URLs
 
 ## Prioritized Backlog
 
@@ -57,14 +49,13 @@ Build and maintain a comprehensive marketing/sales website for a merchant servic
 
 ### P4 - Future
 - Backend Content Migration to MongoDB CMS
-- Component Refactoring (break down monolithic pages)
+- Component Refactoring
 - Fix broken video heroes on older pages
-- Self-Ordering Kiosk page consolidation
 
 ## Tech Stack
 - Frontend: React, react-helmet-async, globe.gl, three.js, topojson-client
 - Backend: FastAPI, MongoDB
-- Integrations: AutoSEO.ai, Lead Connector, Calendly, Emergent Object Storage
+- Integrations: AutoSEO.ai, Lead Connector, Calendly, Emergent Object Storage, MaverickClient
 
 ## Credentials
 - Blog Admin: `/resources/blog/admin` - marketing@merchantsolutionscorp.com / Mscpay$1
