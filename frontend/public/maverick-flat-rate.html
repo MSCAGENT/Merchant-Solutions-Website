@@ -4,43 +4,265 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apply Now - Flat Rate</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; }
-    #maverick { width: 100%; min-height: calc(100vh - 80px); }
-    .logo-header { display: flex; justify-content: center; padding: 16px 0; border-bottom: 1px solid #f3f4f6; background: #fff; }
-    .logo-header img { height: 48px; object-fit: contain; }
-  </style>
 </head>
-<body>
-  <div class="logo-header">
-    <img src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/kkyjoo51_MSC_300x150.png" alt="Merchant Solutions Corp" />
+<body style="margin:0; background:#f9fafb;">
+
+<div class="maverick-wrap">
+
+  <div class="application-header">
+    <h2 class="application-title">Start Boarding Application</h2>
+    <p class="application-subtitle">Complete the secure application below to finish your merchant setup.</p>
   </div>
+
+  <div class="application-progress">
+
+    <div class="progress-steps">
+
+      <div class="progress-step active">
+        <span class="step-number">1</span>
+        <span class="step-label">Business Info</span>
+      </div>
+
+      <div class="progress-line"></div>
+
+      <div class="progress-step">
+        <span class="step-number">2</span>
+        <span class="step-label">Personal Info</span>
+      </div>
+
+      <div class="progress-line light"></div>
+
+      <div class="progress-step">
+        <span class="step-number">3</span>
+        <span class="step-label">Complete</span>
+      </div>
+
+    </div>
+
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill"></div>
+    </div>
+
+    <p class="progress-note">Secure merchant application &bull; Takes about 5 minutes</p>
+
+  </div>
+
   <div id="maverick"></div>
-  <script>
-    (function() {
-      var l = function() { new MaverickClient({ target: 'maverick', url: e.src, options: {id: '1497', agentId: '132194', referral: '0', title: '', theme: 'light', label: 'true'} }); };
-      if(typeof window.MaverickClient === 'undefined') {
-        window.webroot = "https://merchantsolutionscorpdb.com";
-        var e = document.createElement('script'); e.async = true;
-        e.src = window.webroot + "/js/campaign/client.js?v=" + Date.now();
-        document.getElementsByTagName('head')[0].appendChild(e);
-        e.onload = e.onreadystatechange = function() { l(); };
-      } else { l(); }
-      var observer = new MutationObserver(function() {
-        var btns = document.querySelectorAll('#maverick button, #maverick input[type="submit"], #maverick [class*="submit"], #maverick [class*="btn"]');
-        btns.forEach(function(btn) {
-          var text = (btn.textContent || btn.value || '').toLowerCase();
-          if (text.includes('continue') || text.includes('submit') || text.includes('apply') || btn.type === 'submit') {
-            btn.style.background = 'linear-gradient(to right, #8b5cf6, #6d28d9)';
-            btn.style.border = 'none';
-            btn.style.borderRadius = '8px';
-            btn.style.color = '#fff';
-          }
-        });
-      });
-      observer.observe(document.getElementById('maverick'), { childList: true, subtree: true });
-    }());
-  </script>
+
+</div>
+
+<style>
+.maverick-wrap{
+  max-width:760px;
+  margin:30px auto;
+  padding:28px;
+  background:#ffffff;
+  border-radius:18px;
+  box-shadow:0 18px 45px rgba(0,0,0,0.08);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+.application-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.application-title{
+  margin:0 0 8px;
+  font-size:30px;
+  font-weight:700;
+  color:#1f2937;
+  line-height:1.2;
+}
+
+.application-subtitle{
+  margin:0;
+  font-size:15px;
+  color:#6b7280;
+  line-height:1.5;
+}
+
+/* progress header */
+.application-progress{
+  margin-bottom:24px;
+}
+
+.progress-steps{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.progress-step{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#8b8b98;
+  font-size:14px;
+  font-weight:600;
+}
+
+.progress-step.active{
+  color:#5b21b6;
+}
+
+.step-number{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#e9ddff;
+  color:#5b21b6;
+  font-size:13px;
+  font-weight:700;
+}
+
+.progress-step.active .step-number{
+  background:linear-gradient(135deg,#7c3aed,#9333ea);
+  color:#ffffff;
+}
+
+.progress-line{
+  width:50px;
+  height:3px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#7c3aed,#9333ea);
+}
+
+.progress-line.light{
+  background:#e5e7eb;
+}
+
+/* progress bar */
+.progress-bar-track{
+  width:100%;
+  height:8px;
+  background:#ede9fe;
+  border-radius:999px;
+  overflow:hidden;
+  margin:0 auto 10px;
+}
+
+.progress-bar-fill{
+  width:33%;
+  height:100%;
+  background:linear-gradient(135deg,#7c3aed,#9333ea);
+  border-radius:999px;
+}
+
+.progress-note{
+  margin:0;
+  text-align:center;
+  font-size:13px;
+  color:#6b7280;
+}
+
+/* iframe sizing */
+#maverick iframe{
+  width:100% !important;
+  min-height:300px !important;
+  border:0 !important;
+  overflow:auto !important;
+}
+
+/* form styling */
+#maverick input,
+#maverick select,
+#maverick textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  font-size:14px;
+  box-sizing:border-box;
+  margin-bottom:14px;
+}
+
+#maverick input:focus,
+#maverick select:focus,
+#maverick textarea:focus{
+  outline:none;
+  border-color:#7c3aed;
+  box-shadow:0 0 0 3px rgba(124,58,237,0.15);
+}
+
+#maverick label{
+  display:block;
+  margin-bottom:6px;
+  font-size:13px;
+  font-weight:600;
+  color:#374151;
+}
+
+/* smaller gradient purple button */
+#maverick button,
+#maverick .btn,
+#maverick input[type="submit"],
+#maverick a.button,
+#maverick a.btn{
+  background:linear-gradient(135deg,#7c3aed,#9333ea) !important;
+  color:#ffffff !important;
+  border:none !important;
+  padding:8px 18px !important;
+  font-size:13px !important;
+  font-weight:600 !important;
+  border-radius:8px !important;
+  width:auto !important;
+  min-width:120px;
+  display:block !important;
+  margin:14px auto 0 !important;
+  text-align:center !important;
+  cursor:pointer;
+  transition:all .2s ease;
+  box-shadow:0 6px 16px rgba(124,58,237,0.25);
+  text-decoration:none !important;
+}
+
+#maverick button:hover,
+#maverick .btn:hover,
+#maverick input[type="submit"]:hover,
+#maverick a.button:hover,
+#maverick a.btn:hover{
+  background:linear-gradient(135deg,#6d28d9,#7e22ce) !important;
+  color:#ffffff !important;
+  transform:translateY(-1px);
+}
+</style>
+
+<script>
+(function() {
+  var l = function() {
+    new MaverickClient({
+      target:'maverick',
+      url:e.src,
+      options:{
+        id:'1497',
+        agentId:'132194',
+        referral:'0',
+        title:'',
+        theme:'light',
+        label:'true'
+      }
+    });
+  };
+
+  if(typeof window.MaverickClient === 'undefined'){
+    window.webroot="https://merchantsolutionscorpdb.com";
+    var e=document.createElement('script');
+    e.async=true;
+    e.src=window.webroot+"/js/campaign/client.js?v="+Date.now();
+    document.getElementsByTagName('head')[0].appendChild(e);
+    e.onload=e.onreadystatechange=function(){ l(); };
+  } else {
+    l();
+  }
+})();
+</script>
+
 </body>
 </html>
