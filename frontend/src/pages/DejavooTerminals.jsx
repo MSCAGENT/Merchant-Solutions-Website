@@ -19,6 +19,8 @@ const DejavooTerminals = () => {
   const [heroIndex, setHeroIndex] = useState(0);
   const [purchaseDevice, setPurchaseDevice] = useState(null);
   const [showActivation, setShowActivation] = useState(false);
+  const [showDualPricingForm, setShowDualPricingForm] = useState(false);
+  const [showFlatRateForm, setShowFlatRateForm] = useState(false);
 
   // Hero image slideshow - 3s interval
   useEffect(() => {
@@ -168,7 +170,7 @@ const DejavooTerminals = () => {
             
             <Button 
               className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white rounded-full py-5 shadow-lg"
-              onClick={() => { setSelectedDevice(null); setShowActivation(true); }}
+              onClick={() => { setSelectedDevice(null); setShowDualPricingForm(true); }}
               data-testid="pricing-modal-dual-apply-btn"
             >
               Apply Now <ChevronRight className="ml-2 h-4 w-4" />
@@ -207,7 +209,7 @@ const DejavooTerminals = () => {
             
             <Button 
               className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-full py-5 shadow-lg"
-              onClick={() => { setSelectedDevice(null); setShowActivation(true); }}
+              onClick={() => { setSelectedDevice(null); setShowFlatRateForm(true); }}
               data-testid="pricing-modal-flat-apply-btn"
             >
               Apply Now <ChevronRight className="ml-2 h-4 w-4" />
@@ -220,7 +222,7 @@ const DejavooTerminals = () => {
           <ul className="space-y-1 text-xs text-gray-600">
             <li>&#8226; 36-month service agreement required</li>
             <li>&#8226; $595 early termination fee (ETF) if the agreement is cancelled before the end of the term</li>
-            <li>&#8226; $99 annual Advantage Program fee</li>
+            <li>&#8226; $79 annual Advantage Program fee</li>
           </ul>
           <p className="text-xs text-gray-700 mt-2 font-semibold">30-day trial period from the date the account is activated</p>
           <p className="text-xs text-gray-500 mt-1">During the 30-day trial period, merchants may cancel the program without the early termination fee. After the trial period, the standard agreement terms apply.</p>
@@ -508,18 +510,19 @@ const DejavooTerminals = () => {
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Qualified</p>
-                  <p className="text-2xl font-bold text-purple-600">2.69% + $0.10</p>
+                  <p className="text-2xl font-bold text-purple-600">2.60% + $0.10</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Non-Qualified</p>
                   <p className="text-2xl font-bold text-gray-600">3.5% + $0.20</p>
                 </div>
               </div>
-              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block mt-4">
-                <Button data-testid="flat-rate-create-account-btn" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-                  Create an Account <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
+              <Button data-testid="flat-rate-create-account-btn" className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" onClick={() => setShowFlatRateForm(true)}>
+                Create an Account <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+              <p className="text-xs text-gray-500 mt-3 leading-relaxed">
+                <span className="font-semibold text-gray-700">Free Placement disclosure:</span> All equipment comes with a limited warranty for the term of the agreement of 36 months. All free placements are subject to a $99 annual fee and a $5k minimum monthly volume.
+              </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-purple-600">
@@ -535,11 +538,9 @@ const DejavooTerminals = () => {
                   <p className="text-2xl font-bold text-purple-600">4%</p>
                 </div>
               </div>
-              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block mt-4">
-                <Button data-testid="dual-pricing-create-account-btn" className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-                  Create an Account <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
+              <Button data-testid="dual-pricing-create-account-btn" className="w-full mt-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white" onClick={() => setShowDualPricingForm(true)}>
+                Create an Account <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
               <p className="text-xs text-gray-500 mt-3 leading-relaxed" data-testid="free-placement-disclosure">
                 <span className="font-semibold text-gray-700">Free Placement disclosure:</span> All equipment comes with a limited warranty for the term of the agreement of 36 months. All free placements are subject to a $99 annual fee and a $5k minimum monthly volume.
               </p>
@@ -576,8 +577,14 @@ const DejavooTerminals = () => {
                       data-testid={`pricing-btn-${terminal.id}`}
                       onClick={() => setSelectedDevice(terminal)}
                     >
-                      Free Placement
+                      Subscribe Now
                     </Button>
+                    {terminal.id === 'xerocharge-go' && (
+                      <div className="text-xs text-gray-500 text-center mt-1 space-y-0.5">
+                        <p>Dual Price: <span className="font-semibold text-purple-600">$9.99/mo</span></p>
+                        <p>Flat Rate: <span className="font-semibold text-blue-600">$14.95/mo</span></p>
+                      </div>
+                    )}
                     
                     <Button
                       variant="outline"
@@ -805,6 +812,46 @@ const DejavooTerminals = () => {
               src="/maverick-apply.html"
               className="w-full flex-1 border-0"
               title="Apply Now - Boarding Application"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Dual Pricing Maverick Form Popup */}
+      {showDualPricingForm && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowDualPricingForm(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 h-[90vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
+            <button
+              data-testid="dual-pricing-form-close-btn"
+              onClick={() => setShowDualPricingForm(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+            <iframe
+              src="/maverick-dual-pricing.html"
+              className="w-full flex-1 border-0 rounded-2xl"
+              title="Apply Now - Dual Pricing"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Flat Rate Maverick Form Popup */}
+      {showFlatRateForm && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowFlatRateForm(false)}>
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 h-[90vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
+            <button
+              data-testid="flat-rate-form-close-btn"
+              onClick={() => setShowFlatRateForm(false)}
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition-colors"
+            >
+              &#x2715;
+            </button>
+            <iframe
+              src="/maverick-flat-rate.html"
+              className="w-full flex-1 border-0 rounded-2xl"
+              title="Apply Now - Flat Rate"
             />
           </div>
         </div>
