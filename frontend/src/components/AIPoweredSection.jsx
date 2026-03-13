@@ -102,7 +102,6 @@ export default function AIPoweredSection({ onContactClick, onCalendlyClick }) {
             src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/7ceusbsh_MAPLE.png"
             alt="Maple - AI Business Automation"
             className="h-10 w-auto"
-            style={{ filter: 'brightness(0) invert(1)' }}
             data-testid="maple-logo"
           />
           <img

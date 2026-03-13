@@ -1,0 +1,131 @@
+{
+  "summary": "Frontend testing of 8 requested changes across Dejavoo Terminals, Smart Payment Terminals, and AIPoweredSection. ALL 8 CHANGES VERIFIED WORKING.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_results": {
+    "dejavoo_terminals_page": {
+      "url": "/pos/dejavoo-terminals",
+      "status": "ALL PASS",
+      "tests": {
+        "subscription_plans_standard_features": {
+          "feature_tested": "Standard plan shows 5 features including '4G Sim Card Service included a $35/mo value'",
+          "result": "PASS"
+        },
+        "subscription_plans_premium_features": {
+          "feature_tested": "Premium plan shows 6 features including 'Everything in standard' and '4G sim card Service Included'",
+          "result": "PASS"
+        },
+        "flat_rate_create_account_button": {
+          "feature_tested": "Flat Rate card has 'Create an Account' button with data-testid='flat-rate-create-account-btn'",
+          "result": "PASS"
+        },
+        "dual_pricing_create_account_button": {
+          "feature_tested": "Dual Pricing card has 'Create an Account' button with data-testid='dual-pricing-create-account-btn'",
+          "result": "PASS"
+        },
+        "xerocharge_merchant_rate": {
+          "feature_tested": "Xerocharge shows 0% to Merchant (not 3.89%)",
+          "result": "PASS"
+        },
+        "p18_terminal_image": {
+          "feature_tested": "P18 terminal image updated to new URL (2ws6tj1x_unnamed)",
+          "result": "PASS"
+        },
+        "pricing_modal_no_stale_data": {
+          "feature_tested": "Pricing modal shows correct terminal name for each terminal (controlled Dialog pattern)",
+          "terminals_tested": [
+            "XerochargeGO - PASS",
+            "QD4 Countertop - PASS",
+            "QD4 Dual Pin - PASS",
+            "QD2 Wireless - PASS",
+            "P1 Terminal - PASS",
+            "P3 Terminal - PASS",
+            "P8 Smart Wireless Terminal - PASS",
+            "P18 Countertop POS - PASS"
+          ],
+          "result": "ALL 8 TERMINALS PASS - No stale data issue"
+        }
+      }
+    },
+    "smart_payment_terminals_page": {
+      "url": "/smart-payment-terminals",
+      "status": "ALL PASS",
+      "tests": {
+        "purchase_now_buttons": {
+          "feature_tested": "4 product cards have 'Purchase Now' buttons",
+          "buttons_verified": [
+            "Sunmi V3 - data-testid='purchase-now-sunmi-v3' - PASS",
+            "Sunmi V2 - data-testid='purchase-now-sunmi-v2' - PASS",
+            "Verifone Victa - data-testid='purchase-now-verifone-victa' - PASS",
+            "Verifone V Series - data-testid='purchase-now-verifone-vseries' - PASS"
+          ],
+          "result": "PASS"
+        },
+        "faq_section_5_questions": {
+          "feature_tested": "FAQ section has 5 questions with proper content",
+          "questions_verified": [
+            "What smart terminals do you offer? - PASS",
+            "Are Verifone and Sunmi your primary POS terminals? - PASS",
+            "Can I purchase a Verifone or Sunmi terminal outright? - PASS",
+            "What software works with Sunmi terminals? - PASS",
+            "How do I know if a smart terminal is right for my business? - PASS"
+          ],
+          "result": "PASS - All 5 FAQs present"
+        },
+        "faq_contact_us_link": {
+          "feature_tested": "'Contact Us' link in 3rd FAQ opens lead form modal",
+          "data_testid": "faq-contact-us-link",
+          "result": "PASS - Modal opens correctly"
+        },
+        "faq_schema": {
+          "feature_tested": "FAQPage JSON-LD schema with 5 questions",
+          "schema_type": "FAQPage",
+          "questions_count": 5,
+          "result": "PASS"
+        }
+      }
+    },
+    "ai_powered_section": {
+      "page_tested": "/restaurant-payment-processing-services",
+      "status": "PASS",
+      "tests": {
+        "maple_logo_no_filter": {
+          "feature_tested": "MAPLE logo displays without brightness/invert filter (original colors)",
+          "data_testid": "maple-logo",
+          "computed_filter": "none",
+          "image_src": "https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/7ceusbsh_MAPLE.png",
+          "result": "PASS - Original colors visible"
+        }
+      }
+    }
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "DejavooTerminals.jsx: Pricing modal correctly uses controlled Dialog pattern with open/onOpenChange props and state-driven content - fixes stale data bug",
+    "DejavooTerminals.jsx: Subscription plans correctly show Standard (5 features) and Premium (6 features) with SIM card values",
+    "DejavooTerminals.jsx: Rate cards have proper 'Create an Account' buttons with data-testid attributes",
+    "DejavooTerminals.jsx: Xerocharge section correctly shows 0% merchant rate",
+    "DejavooTerminals.jsx: P18 image URL updated to new image",
+    "SmartPaymentTerminals.jsx: All 4 product cards have 'Purchase Now' buttons with proper data-testid",
+    "SmartPaymentTerminals.jsx: FAQ section has 5 questions with FAQPage schema",
+    "SmartPaymentTerminals.jsx: 'Contact Us' link in FAQ correctly triggers modal",
+    "AIPoweredSection.jsx: MAPLE logo displays without filter (class='h-10 w-auto' only)"
+  ],
+  "updated_files": [],
+  "success_rate": {
+    "backend": "N/A - Frontend only testing",
+    "frontend": "100%"
+  },
+  "seed_data_creation": "N/A",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "All 8 requested changes verified working on preview URL. Dejavoo pricing modal no longer has stale data issue - uses controlled Dialog pattern. Smart Terminals page has Purchase Now buttons and 5 FAQs with schema. MAPLE logo in AIPoweredSection displays original colors without filter."
+}

@@ -82,9 +82,11 @@ export default function SmartPaymentTerminals() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "What is a smart payment terminal?", "acceptedAnswer": { "@type": "Answer", "text": "A smart payment terminal is an advanced POS device that combines credit card processing with business management features such as reporting, inventory tracking, and mobile payment support." } },
-      { "@type": "Question", "name": "What businesses use smart POS terminals?", "acceptedAnswer": { "@type": "Answer", "text": "Restaurants, retail stores, service businesses, and mobile merchants commonly use smart POS terminals to accept payments and manage transactions." } },
-      { "@type": "Question", "name": "Do smart terminals support contactless payments?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Smart payment terminals support NFC contactless payments including mobile wallets like Apple Pay and Google Pay." } }
+      { "@type": "Question", "name": "What smart terminals do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "We offer advanced smart payment terminals from Verifone, Ingenico, Pax, Dejavoo and Sunmi. These devices feature Android-based operating systems, large touchscreen displays, Wi-Fi and 4G connectivity, contactless payments, and app-based business tools. They are ideal for businesses that want a compact POS system without a full counter station." } },
+      { "@type": "Question", "name": "Are Verifone and Sunmi your primary POS terminals?", "acceptedAnswer": { "@type": "Answer", "text": "No. Our primary POS deployments usually include full POS stations and specialized industry terminals like PAX or Dejavoo. However, Verifone and Sunmi smart terminals are available for businesses that prefer an all-in-one handheld or countertop device. These terminals are offered primarily as outright purchase options." } },
+      { "@type": "Question", "name": "Can I purchase a Verifone or Sunmi terminal outright?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both Verifone and Sunmi smart terminals can be purchased outright and connected to supported payment processing software under TSYS or EPX. Pricing depends on the model and configuration. These terminals are commonly used for mobile payments, retail counters, service providers, and small checkout environments." } },
+      { "@type": "Question", "name": "What software works with Sunmi terminals?", "acceptedAnswer": { "@type": "Answer", "text": "At this time, Sunmi smart terminals are supported with Payanywhere software. This allows businesses to accept chip cards, tap-to-pay, mobile wallets, and traditional swipe transactions. Verifone terminals come with a native payment application." } },
+      { "@type": "Question", "name": "How do I know if a smart terminal is right for my business?", "acceptedAnswer": { "@type": "Answer", "text": "Smart terminals work best for businesses that want a compact, all-in-one payment device without a full POS system. They are commonly used by retail stores, mobile vendors, small service providers, and field sales teams. Businesses that require advanced POS features may benefit from a full POS system instead." } }
     ]
   };
 
@@ -291,6 +293,13 @@ export default function SmartPaymentTerminals() {
                   ))}
                 </div>
                 <p className="text-sm text-gray-600 mt-4">This device allows staff to take payments anywhere in the store or at the table.</p>
+                <Button
+                  data-testid="purchase-now-sunmi-v3"
+                  className="w-full mt-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                  onClick={() => setShowFormModal(true)}
+                >
+                  Purchase Now <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
             </div>
 
@@ -322,6 +331,13 @@ export default function SmartPaymentTerminals() {
                   ))}
                 </div>
                 <p className="text-sm text-gray-600 mt-4">The Sunmi V2 provides a balance between portability and full POS functionality.</p>
+                <Button
+                  data-testid="purchase-now-sunmi-v2"
+                  className="w-full mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
+                  onClick={() => setShowFormModal(true)}
+                >
+                  Purchase Now <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
             </div>
           </div>
@@ -364,6 +380,13 @@ export default function SmartPaymentTerminals() {
                 ))}
               </div>
               <p className="text-sm text-gray-400 mt-4">Commonly used in retail stores, restaurants, and service businesses.</p>
+              <Button
+                data-testid="purchase-now-verifone-victa"
+                className="w-full mt-4 bg-white text-purple-600 hover:bg-gray-100 font-semibold"
+                onClick={() => setShowFormModal(true)}
+              >
+                Purchase Now <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
 
             {/* Verifone V Series */}
@@ -385,6 +408,13 @@ export default function SmartPaymentTerminals() {
                 ))}
               </div>
               <p className="text-sm text-gray-400 mt-4">Businesses rely on Verifone terminals for stable, secure payment acceptance.</p>
+              <Button
+                data-testid="purchase-now-verifone-vseries"
+                className="w-full mt-4 bg-white text-purple-600 hover:bg-gray-100 font-semibold"
+                onClick={() => setShowFormModal(true)}
+              >
+                Purchase Now <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </div>
         </div>
@@ -630,9 +660,92 @@ export default function SmartPaymentTerminals() {
       <section className="py-20 bg-gray-50" itemScope itemType="https://schema.org/FAQPage" data-testid="faq-section">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12" data-testid="faq-h2">Frequently Asked Questions</h2>
-          <FAQItem question="What is a smart payment terminal?" answer="A smart payment terminal is an advanced POS device that combines credit card processing with business management features such as reporting, inventory tracking, and mobile payment support." />
-          <FAQItem question="What businesses use smart POS terminals?" answer="Restaurants, retail stores, service businesses, and mobile merchants commonly use smart POS terminals to accept payments and manage transactions." />
-          <FAQItem question="Do smart terminals support contactless payments?" answer="Yes. Smart payment terminals support NFC contactless payments including mobile wallets like Apple Pay and Google Pay." />
+          
+          <FAQItem 
+            question="What smart terminals do you offer?" 
+            answer={
+              <div>
+                <p className="mb-3">We offer advanced smart payment terminals from Verifone, Ingenico, Pax, Dejavoo and Sunmi.</p>
+                <p className="mb-3">These devices feature:</p>
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Android-based operating systems</li>
+                  <li>Large touchscreen displays</li>
+                  <li>Wi-Fi and 4G connectivity</li>
+                  <li>Contactless payments</li>
+                  <li>App-based business tools</li>
+                </ul>
+                <p className="mb-3">They are ideal for businesses that want a compact POS system without a full counter station.</p>
+                <p>While we support these devices, our core solutions typically focus on other POS platforms depending on the industry and workflow needs.</p>
+              </div>
+            } 
+          />
+
+          <FAQItem 
+            question="Are Verifone and Sunmi your primary POS terminals?" 
+            answer={
+              <div>
+                <p className="mb-3 font-semibold">No.</p>
+                <p className="mb-3">Our primary POS deployments usually include full POS stations and specialized industry terminals like PAX or Dejavoo, which are designed for restaurants, retail, and service businesses.</p>
+                <p className="mb-3">However, Verifone and Sunmi smart terminals are available for businesses that prefer an all-in-one handheld or countertop device.</p>
+                <p>These terminals are offered primarily as outright purchase options, as no promotions are currently available and have a limited functionality software. Our Payanywhere smart terminal works the same across all smart terminal models and mobile devices.</p>
+              </div>
+            } 
+          />
+
+          <FAQItem 
+            question="Can I purchase a Verifone or Sunmi terminal outright?" 
+            answer={
+              <div>
+                <p className="mb-3 font-semibold">Yes.</p>
+                <p className="mb-3">Both Verifone and Sunmi smart terminals can be purchased outright and connected to supported payment processing software under TSYS or EPX. Our trusted payment rails.</p>
+                <p className="mb-3">Pricing depends on the model and configuration.</p>
+                <p className="mb-3">These terminals are commonly used for:</p>
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Mobile payments</li>
+                  <li>Retail counters</li>
+                  <li>Service providers</li>
+                  <li>Small checkout environments</li>
+                </ul>
+                <p>Our team can help determine if a smart terminal or a full POS station is the better fit for your business. <button onClick={() => setShowFormModal(true)} className="text-purple-600 font-semibold hover:underline" data-testid="faq-contact-us-link">Contact Us</button> to learn more.</p>
+              </div>
+            } 
+          />
+
+          <FAQItem 
+            question="What software works with Sunmi terminals?" 
+            answer={
+              <div>
+                <p className="mb-3">At this time, Sunmi smart terminals are supported with Payanywhere software.</p>
+                <p className="mb-3">This allows businesses to accept:</p>
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Chip cards</li>
+                  <li>Tap-to-pay</li>
+                  <li>Mobile wallets</li>
+                  <li>Traditional swipe transactions</li>
+                </ul>
+                <p className="mb-3">Sunmi devices paired with Payanywhere provide a simple, cloud-based payment experience with reporting and transaction management.</p>
+                <p>Verifone come with a native payment application. No additional features available at the time.</p>
+              </div>
+            } 
+          />
+
+          <FAQItem 
+            question="How do I know if a smart terminal is right for my business?" 
+            answer={
+              <div>
+                <p className="mb-3">Smart terminals work best for businesses that want a compact, all-in-one payment device without a full POS system.</p>
+                <p className="mb-3">They are commonly used by:</p>
+                <ul className="list-disc pl-5 space-y-1 mb-3">
+                  <li>Retail stores</li>
+                  <li>Mobile vendors</li>
+                  <li>Small service providers</li>
+                  <li>Field sales teams</li>
+                </ul>
+                <p className="mb-3">Businesses that require advanced POS features such as inventory management, kitchen displays, or multi-station setups may benefit from a full POS system instead.</p>
+                <p>Our team can review your workflow and recommend the best hardware and software combination for your business.</p>
+              </div>
+            } 
+          />
         </div>
       </section>
 

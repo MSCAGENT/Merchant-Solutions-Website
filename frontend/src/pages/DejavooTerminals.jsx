@@ -74,7 +74,7 @@ const DejavooTerminals = () => {
       id: 'p18',
       name: 'P18 Countertop POS',
       description: 'Advanced countertop POS with a large flip-screen display.',
-      image: 'https://static.prod-images.emergentagent.com/jobs/0e6143ea-cbd5-43ca-901c-b8ab37491cb0/images/3879f0e714e451d605d4d87050fcc1af1756b0719ce07b1e319294fee40d418f.png'
+      image: 'https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/2ws6tj1x_unnamed%20%289%29.jpg'
     }
   ];
 
@@ -89,13 +89,13 @@ const DejavooTerminals = () => {
       name: 'Standard',
       price: '$69.99',
       bestFor: 'Quick-service restaurants, cafés',
-      features: ['Recurring billing', 'Invoicing tools', 'Unlimited users', '$9.99 per additional device']
+      features: ['Recurring billing', 'Invoicing tools', 'Unlimited users', '$9.99 per additional device', '4G Sim Card Service included a $35/mo value']
     },
     {
       name: 'Premium',
       price: '$99.99',
       bestFor: 'Full-service restaurants, franchises',
-      features: ['Loyalty tools', 'Online ordering', 'Appointments', 'Multi-user', '$14.95 per additional device']
+      features: ['Everything in standard', 'Gateway or Invoicing tools', 'Marketing module, included a $50/mo value', 'Unlimited users', '$14.95 per additional device', '4G sim card Service Included a $35/mo value']
     }
   ];
 
@@ -120,11 +120,11 @@ const DejavooTerminals = () => {
     }
   ];
 
-  const PricingModal = ({ device }) => {
+  const PricingModalContent = ({ device }) => {
     if (!device) return null;
 
     return (
-      <DialogContent className="max-w-3xl">
+      <>
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center mb-6">
             {device.name} - Pricing Options
@@ -182,7 +182,7 @@ const DejavooTerminals = () => {
             </CardContent>
           </Card>
         </div>
-      </DialogContent>
+      </>
     );
   };
 
@@ -472,6 +472,11 @@ const DejavooTerminals = () => {
                   <p className="text-2xl font-bold text-gray-600">3.5% + $0.20</p>
                 </div>
               </div>
+              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block mt-4">
+                <Button data-testid="flat-rate-create-account-btn" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                  Create an Account <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-purple-600">
@@ -480,13 +485,18 @@ const DejavooTerminals = () => {
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <p className="text-sm text-gray-600 mb-1">To the Merchant</p>
-                  <p className="text-2xl font-bold text-purple-600">3.89%</p>
+                  <p className="text-2xl font-bold text-purple-600">0%</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 mb-1">To the Consumer</p>
                   <p className="text-2xl font-bold text-purple-600">4%</p>
                 </div>
               </div>
+              <a href="https://form.jotform.com/242266135050145" target="_blank" rel="noopener noreferrer" className="block mt-4">
+                <Button data-testid="dual-pricing-create-account-btn" className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                  Create an Account <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -515,16 +525,13 @@ const DejavooTerminals = () => {
                   <p className="text-sm text-gray-600 mb-5 min-h-[3rem]">{terminal.description}</p>
                   
                   <div className="space-y-2">
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button 
-                          className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
-                        >
-                          Pricing
-                        </Button>
-                      </DialogTrigger>
-                      <PricingModal device={terminal} />
-                    </Dialog>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                      data-testid={`pricing-btn-${terminal.id}`}
+                      onClick={() => setSelectedDevice(terminal)}
+                    >
+                      Pricing
+                    </Button>
                     
                     <Button
                       variant="outline"
@@ -756,6 +763,13 @@ const DejavooTerminals = () => {
           </div>
         </div>
       )}
+
+      {/* Pricing Modal (Single Controlled Dialog) */}
+      <Dialog open={!!selectedDevice} onOpenChange={(open) => { if (!open) setSelectedDevice(null); }}>
+        <DialogContent className="max-w-3xl" data-testid="pricing-modal">
+          <PricingModalContent device={selectedDevice} />
+        </DialogContent>
+      </Dialog>
 
       {/* Purchase Now Modal */}
       {purchaseDevice && (
