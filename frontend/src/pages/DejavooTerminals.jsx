@@ -127,70 +127,103 @@ const DejavooTerminals = () => {
     return (
       <>
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center mb-6">
-            {device.name} - Free Placement
+          <DialogTitle className="text-2xl font-bold text-center" data-testid="pricing-modal-title">
+            {device.name}
           </DialogTitle>
+          <p className="text-sm text-gray-500 text-center">Choose the plan that works best for your business</p>
         </DialogHeader>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
-          {/* Dual Pricing */}
-          <Card className="border-2 border-purple-600">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Dual Pricing Program</h3>
-              <p className="text-sm text-gray-600 mb-6">Zero cost to merchant</p>
-              
-              <div className="space-y-4 mb-6">
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-purple-600 mb-1">$0</div>
-                  <div className="text-sm text-gray-600">Fee to Merchant</div>
-                </div>
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-purple-600 mb-1">4%</div>
-                  <div className="text-sm text-gray-600">to the Cardholder</div>
-                </div>
+          {/* Dual Pricing - MOST POPULAR */}
+          <div className="relative border-2 border-purple-500 rounded-xl overflow-visible pt-8 pb-6 px-6">
+            <div className="absolute -top-0 left-0 right-0">
+              <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white text-xs font-bold tracking-wider text-center py-2 rounded-t-xl uppercase">
+                Most Popular
               </div>
-              
-              <Button 
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg"
-                onClick={() => { setSelectedDevice(null); setShowActivation(true); }}
-                data-testid="pricing-modal-dual-apply-btn"
-              >
-                Apply Now <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </CardContent>
-          </Card>
+            </div>
+            
+            <h3 className="text-xl font-bold text-gray-900 mb-1">Dual Pricing Program</h3>
+            <p className="text-sm text-purple-500 mb-5">Zero cost processing to merchant</p>
+            
+            <div className="space-y-4 mb-5">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">$0 Processing Fees</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">Free Terminal/POS Included</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">4% to the Cardholder</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">$0 Fee Next Day Funding / Same-Day Funding</span>
+              </div>
+            </div>
+
+            <p className="text-xs text-gray-400 mb-1">Dual pricing compliant program</p>
+            <p className="text-xs text-gray-400 mb-5">Software fee applies - New or Established Business</p>
+            
+            <Button 
+              className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white rounded-full py-5 shadow-lg"
+              onClick={() => { setSelectedDevice(null); setShowActivation(true); }}
+              data-testid="pricing-modal-dual-apply-btn"
+            >
+              Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
 
           {/* Flat Rate */}
-          <Card className="border-2 border-blue-600">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Flat Rate Program</h3>
-              <p className="text-sm text-gray-600 mb-6">Simple, straightforward pricing</p>
-              
-              <div className="bg-blue-50 p-6 rounded-lg mb-4">
-                <div className="text-3xl font-bold text-blue-600 mb-2">2.69% + $0.10</div>
-                <div className="text-sm text-gray-600 mb-3">Qualified Transactions</div>
-                <div className="text-xs text-gray-500 border-t border-gray-300 pt-2">
-                  Non-qualified: 3.5% + $0.20
-                </div>
+          <div className="border border-gray-200 rounded-xl pt-6 pb-6 px-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-1">Flat Rate Program</h3>
+            <p className="text-sm text-blue-500 mb-5">Traditional Pricing</p>
+            
+            <div className="space-y-4 mb-5">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">Simple predictable processing</span>
               </div>
-              
-              <div className="text-xs text-gray-500 mb-4">
-                Plans start at $49.99/month
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">No fees to consumer</span>
               </div>
-              
-              <Button 
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
-                onClick={() => { setSelectedDevice(null); setShowActivation(true); }}
-                data-testid="pricing-modal-flat-apply-btn"
-              >
-                Apply Now <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </CardContent>
-          </Card>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">Free Terminal/POS Included</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">$0 Fee Next Day Funding / Same-Day Funding</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-3 mb-5">
+              <p className="text-sm text-gray-600">2.6% + $0.15</p>
+              <p className="text-sm text-gray-600">3.5% + $0.20 keyed</p>
+              <p className="text-xs text-gray-400 mt-1">Software fee applies</p>
+            </div>
+            
+            <Button 
+              className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-full py-5 shadow-lg"
+              onClick={() => { setSelectedDevice(null); setShowActivation(true); }}
+              data-testid="pricing-modal-flat-apply-btn"
+            >
+              Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </div>
 
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4">
-          <p className="text-xs font-semibold text-gray-700 mb-2">Free Placement disclosure:</p>
-          <p className="text-xs text-gray-600">All equipment comes with a limited warranty for the term of the agreement of 36 months. All free placements are subject to a $99 annual fee and a $5k minimum monthly volume.</p>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-2">
+          <p className="text-xs font-semibold text-gray-700 mb-2">All Free Placement terminals are provided under the Advantage Program and are subject to the following terms.</p>
+          <ul className="space-y-1 text-xs text-gray-600">
+            <li>&#8226; 36-month service agreement required</li>
+            <li>&#8226; $595 early termination fee (ETF) if the agreement is cancelled before the end of the term</li>
+            <li>&#8226; $99 annual Advantage Program fee</li>
+          </ul>
+          <p className="text-xs text-gray-700 mt-2 font-semibold">30-day trial period from the date the account is activated</p>
+          <p className="text-xs text-gray-500 mt-1">During the 30-day trial period, merchants may cancel the program without the early termination fee. After the trial period, the standard agreement terms apply.</p>
         </div>
       </>
     );

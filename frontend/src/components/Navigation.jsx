@@ -93,7 +93,6 @@ const megaMenus = {
           { label: 'Square POS System', desc: 'Cloud POS and payment processing for growing small businesses.', path: '/pos/square' },
           { label: 'Exatouch POS', desc: 'Retail & C-store POS with barcode scanning, inventory, and reporting.', path: '/pos/exatouch' },
           { label: 'DaySmart Salon POS', desc: 'POS and appointment scheduling for salons and spas.', path: '/retail-software/daysmart-salon' },
-          { label: 'PayAnywhere POS', desc: 'Mobile POS terminals with zero processing fees and free placement.', path: '/payanywhere' },
           { label: 'Union POS', desc: 'High-volume venue operating system for bars and restaurants.', path: '/pos/union' },
         ],
       },
@@ -101,6 +100,7 @@ const megaMenus = {
         heading: 'Payment Terminals',
         items: [
           { label: 'Payment Terminals Overview', desc: 'Compare countertop, wireless, and smart terminals.', path: '/pos/payment-terminals-overview' },
+          { label: 'PayAnywhere POS', desc: 'Mobile POS terminals with zero processing fees and free placement.', path: '/payanywhere' },
           { label: 'Smart Payment Terminals', desc: 'Sunmi V3, Verifone Victa & Android smart POS devices.', path: '/smart-payment-terminals' },
           { label: 'Dejavoo Terminals', desc: 'Reliable countertop and wireless credit card terminals.', path: '/pos/dejavoo-terminals' },
           { label: 'Ingenico Terminals', desc: 'Enterprise-grade EMV and NFC payment devices.', path: '/pos/ingenico-terminals' },

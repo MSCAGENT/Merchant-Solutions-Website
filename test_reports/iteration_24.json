@@ -1,0 +1,145 @@
+{
+  "summary": "Frontend testing of 3 NEW changes: Navigation PayAnywhere moved, Dejavoo modal redesign, Maverick purple button. 2 of 3 changes VERIFIED WORKING. 1 change CANNOT be implemented due to cross-origin iframe limitation.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "Maverick boarding form",
+        "issue": "Continue button is GREEN, not purple gradient as requested",
+        "priority": "MEDIUM",
+        "root_cause": "The MaverickClient widget renders content inside a CROSS-ORIGIN IFRAME from merchantsolutionscorpdb.com. CSS injection in maverick-apply.html CANNOT override styles inside cross-origin iframes due to browser Same-Origin Policy security restrictions.",
+        "technical_details": "The iframe src is: https://merchantsolutionscorpdb.com/boarding/campaign/embed - this is a different domain that the application does not control",
+        "possible_solutions": [
+          "Contact merchantsolutionscorpdb.com to request a purple theme option for the widget",
+          "Check if MaverickClient config supports custom theme/button colors (currently theme: 'dark' is used)",
+          "If merchantsolutionscorpdb.com is an internal service, update the button styling on their server"
+        ]
+      }
+    ],
+    "console_warnings": [
+      {
+        "message": "Missing `Description` or `aria-describedby={undefined}` for {DialogContent}",
+        "priority": "LOW",
+        "note": "Radix UI accessibility warning - non-blocking"
+      }
+    ]
+  },
+  "test_results": {
+    "test_1_navigation_payanywhere_moved": {
+      "url": "/",
+      "status": "PASS",
+      "details": {
+        "feature_tested": "PayAnywhere POS moved from POS Systems to Payment Terminals in navigation mega menu",
+        "verification": [
+          "Hovered on 'POS & Hardware' nav trigger",
+          "Mega menu opened showing 4 sections: POS Systems, Payment Terminals, Self-Ordering & Kiosk Systems, Online Payments",
+          "POS Systems section has 6 items (NO PayAnywhere): POS Systems Overview, Clover, Square, Exatouch, DaySmart Salon, Union POS",
+          "Payment Terminals section has 5 items (INCLUDING PayAnywhere): Payment Terminals Overview, PayAnywhere POS, Smart Payment Terminals, Dejavoo Terminals, Ingenico Terminals"
+        ],
+        "data_testid_used": "nav-trigger-POS & Hardware, panel-POS & Hardware, mega-link-/payanywhere"
+      }
+    },
+    "test_2_dejavoo_modal_redesign": {
+      "url": "/pos/dejavoo-terminals",
+      "status": "PASS",
+      "subtests": {
+        "modal_title": {
+          "tested": "Title shows terminal name + subtitle",
+          "verified": "QD4 Countertop title + 'Choose the plan that works best for your business' subtitle",
+          "result": "PASS"
+        },
+        "most_popular_badge": {
+          "tested": "Left card has 'MOST POPULAR' purple gradient badge at top",
+          "verified": "Badge visible with purple gradient background and white text",
+          "result": "PASS"
+        },
+        "dual_pricing_card": {
+          "tested": "Left card is Dual Pricing Program with purple border and 4 benefits",
+          "verified": [
+            "$0 Processing Fees",
+            "Free Terminal/POS Included",
+            "4% to the Cardholder",
+            "$0 Fee Next Day Funding / Same-Day Funding"
+          ],
+          "result": "PASS"
+        },
+        "flat_rate_card": {
+          "tested": "Right card is Flat Rate Program with gray border and 4 benefits",
+          "verified": [
+            "Simple predictable processing",
+            "No fees to consumer",
+            "Free Terminal/POS Included",
+            "$0 Fee Next Day Funding / Same-Day Funding"
+          ],
+          "result": "PASS"
+        },
+        "rate_box": {
+          "tested": "Rate box shows 2.6% + $0.15",
+          "verified": "Rate box displays '2.6% + $0.15' and '3.5% + $0.20 keyed'",
+          "result": "PASS"
+        },
+        "apply_now_buttons": {
+          "tested": "Both cards have rounded Apply Now buttons",
+          "verified": "Dual Pricing has purple gradient button, Flat Rate has blue-to-purple gradient button",
+          "result": "PASS"
+        },
+        "advantage_program_disclosure": {
+          "tested": "Bottom disclosure shows Advantage Program terms",
+          "verified": [
+            "36-month service agreement required",
+            "$595 early termination fee (ETF)",
+            "$99 annual Advantage Program fee",
+            "30-day trial period"
+          ],
+          "result": "PASS"
+        },
+        "apply_now_flow": {
+          "tested": "Apply Now buttons close modal and open Activation & Shipping Deposit popup",
+          "verified": "Both Dual and Flat Rate Apply Now buttons trigger activation popup",
+          "result": "PASS"
+        },
+        "no_stale_data": {
+          "tested": "Different terminals show correct names in modal",
+          "verified": "QD4 shows 'QD4 Countertop', P18 shows 'P18 Countertop POS'",
+          "result": "PASS"
+        }
+      }
+    },
+    "test_3_maverick_purple_button": {
+      "url": "/maverick-apply.html",
+      "status": "FAIL - NOT POSSIBLE TO FIX",
+      "details": {
+        "feature_tested": "Change Maverick boarding form Continue button from green to purple gradient",
+        "current_state": "Button is GREEN",
+        "css_implementation": "maverick-apply.html has CSS rules and MutationObserver for purple styling",
+        "why_not_working": "The MaverickClient widget renders inside a CROSS-ORIGIN IFRAME from merchantsolutionscorpdb.com. Browser Same-Origin Policy prevents CSS/JS in the parent document from affecting content inside cross-origin iframes.",
+        "iframe_src": "https://merchantsolutionscorpdb.com/boarding/campaign/embed?id=957&agentId=132194",
+        "result": "FAIL - architectural limitation, not a code bug"
+      }
+    }
+  },
+  "test_report_links": [],
+  "action_items": [
+    "CRITICAL: The Maverick Continue button CANNOT be styled from maverick-apply.html due to cross-origin iframe security. Options: 1) Contact merchantsolutionscorpdb.com to add purple button theme, 2) Check if MaverickClient config supports button color customization, 3) If you control merchantsolutionscorpdb.com server, update button styles there"
+  ],
+  "critical_code_review_comments": [
+    "Navigation.jsx: PayAnywhere correctly moved to Payment Terminals section (line 103)",
+    "DejavooTerminals.jsx: PricingModalContent redesigned correctly with MOST POPULAR badge, benefit checkmarks, and Advantage Program disclosure",
+    "maverick-apply.html: CSS injection approach cannot work due to cross-origin iframe - this is a browser security limitation, not a code bug"
+  ],
+  "updated_files": [],
+  "success_rate": {
+    "backend": "N/A - Frontend only testing",
+    "frontend": "67% (2/3 features working, 1 blocked by external dependency)"
+  },
+  "seed_data_creation": "N/A",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Tests 1 (Navigation) and Test 2 (Dejavoo Modal) are 100% working. Test 3 (Maverick purple button) CANNOT be fixed via CSS injection due to cross-origin iframe. The MaverickClient widget from merchantsolutionscorpdb.com controls the button styling.",
+  "rca_of_the_issue": "Maverick Continue Button Issue RCA: The button is GREEN because MaverickClient renders content inside a cross-origin iframe (merchantsolutionscorpdb.com domain). Browser Same-Origin Policy prevents any CSS or JavaScript in maverick-apply.html from accessing or modifying elements inside this iframe. The CSS injection and MutationObserver in maverick-apply.html can only affect the parent document, not iframe content. Solution requires server-side changes on merchantsolutionscorpdb.com or finding a MaverickClient configuration option for custom button colors."
+}

@@ -8,6 +8,34 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; }
     #maverick { width: 100%; min-height: 100vh; }
+    /* Override green button to purple gradient */
+    button[type="submit"],
+    input[type="submit"],
+    .btn-success,
+    .btn-primary,
+    .submit-btn,
+    .jf-form-buttons button,
+    .form-submit-button,
+    #maverick button,
+    #maverick input[type="submit"],
+    .maverick-submit,
+    .mav-btn,
+    .mav-submit,
+    [class*="submit"],
+    [class*="continue"],
+    [class*="Continue"] {
+      background: linear-gradient(to right, #8b5cf6, #6d28d9) !important;
+      background-color: #7c3aed !important;
+      border: none !important;
+      border-radius: 8px !important;
+      color: #fff !important;
+    }
+    button[type="submit"]:hover,
+    input[type="submit"]:hover,
+    #maverick button:hover,
+    #maverick input[type="submit"]:hover {
+      background: linear-gradient(to right, #7c3aed, #5b21b6) !important;
+    }
   </style>
 </head>
 <body>
@@ -20,8 +48,24 @@
         var e = document.createElement('script'); e.async = true;
         e.src = window.webroot + "/js/campaign/client.js?v=" + Date.now();
         document.getElementsByTagName('head')[0].appendChild(e);
-        e.onload = e.onreadystatechange = function() { l(); }
+        e.onload = e.onreadystatechange = function() { l(); };
       } else { l(); }
+
+      // Observe for dynamically created buttons and style them
+      var observer = new MutationObserver(function(mutations) {
+        var btns = document.querySelectorAll('#maverick button, #maverick input[type="submit"], #maverick [class*="submit"], #maverick [class*="btn"]');
+        btns.forEach(function(btn) {
+          var text = (btn.textContent || btn.value || '').toLowerCase();
+          if (text.includes('continue') || text.includes('submit') || text.includes('apply') || btn.type === 'submit') {
+            btn.style.background = 'linear-gradient(to right, #8b5cf6, #6d28d9)';
+            btn.style.backgroundColor = '#7c3aed';
+            btn.style.border = 'none';
+            btn.style.borderRadius = '8px';
+            btn.style.color = '#fff';
+          }
+        });
+      });
+      observer.observe(document.getElementById('maverick'), { childList: true, subtree: true });
     }());
   </script>
 </body>
