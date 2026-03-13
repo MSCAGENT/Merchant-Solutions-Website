@@ -17,7 +17,7 @@ const orgSchema = {
   "@type": "Organization",
   "name": "Merchant Solutions Corp",
   "url": "https://merchantsolutionscorp.com",
-  "logo": "https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png",
+  "logo": "https://merchantsolutionscorp.com/logo.png",
   "sameAs": [
     "https://www.facebook.com/merchantsolutionscorp/",
     "https://www.instagram.com/merchant_solutions_corp",

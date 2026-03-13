@@ -5,33 +5,27 @@ Build and maintain a comprehensive marketing/sales website for a merchant servic
 
 ## What's Been Implemented
 
+### Site-wide SEO Domain Audit (March 2026) - COMPLETED
+- Audited all 76+ pages for SEO consistency
+- Updated 71 files: Organization schema logo URL changed from Emergent CDN to https://merchantsolutionscorp.com/logo.png
+- Verified: 76 canonical tags, 76 OG tags, 55 Organization schemas, 57 Breadcrumb schemas, 46 Service schemas, 30 FAQ schemas — all using merchantsolutionscorp.com
+
 ### ACH & eCheck Processing Page (March 2026) - COMPLETED
-- New page at `/ach-echeck-processing` with full SEO (Service, FAQ, Breadcrumb, Organization schemas)
-- Placed under Solutions > Payments & Processing in navigation
-- 11 content sections: Hero, What is ACH, eCheck, Benefits, How it Works, Accept ACH Online, Recurring Billing, Security, Industries, Why MSC, FAQ, CTA
-- All schemas and canonicals use `merchantsolutionscorp.com` domain
-- 4 FAQs with toggle, internal links, lead form modal
+- New page at /ach-echeck-processing under Solutions > Payments & Processing
+- Full SEO: Service, FAQ, Breadcrumb, Organization schemas with merchantsolutionscorp.com
+- 11 content sections, 4 FAQs, internal links, CTA with lead form
 
 ### Dejavoo Terminal Cards & Maverick Forms (March 2026) - COMPLETED
-- Flat Rate: 2.60% + $0.10, Free Placement disclosure, Create Account opens Maverick form
-- All 8 terminal buttons: "Subscribe Now", XerochargeGO monthly fees ($9.99/$14.95)
-- Modal: $79 annual fee, MOST POPULAR badge, Advantage Program disclosure
-- Dual Price Apply Now → Maverick id:1180, Flat Rate → id:1497
-- Progress stepper design with MSC logo on both forms
-
-### Previous Dejavoo Updates (March 2026) - COMPLETED
-- Standard/Premium features, Xerocharge 0%, P18 image, modal glitch fix
-- Updated testimonials, activation flow, Create Account buttons
+- Subscribe Now buttons, monthly fees on XerochargeGO
+- Free Placement modal with MOST POPULAR badge, $79 annual fee
+- Maverick boarding forms (Dual: id 1180, Flat: id 1497) with progress stepper
 
 ### Smart Terminals (March 2026) - COMPLETED
-- Purchase Now buttons on 4 cards, 5 new FAQs with schema
+- Purchase Now buttons, 5 new FAQs with schema
 
-### Navigation (March 2026) - COMPLETED
+### Navigation Updates (March 2026) - COMPLETED
 - PayAnywhere moved to Payment Terminals
-- ACH & eCheck Processing under Solutions > Payments & Processing
-
-### Site-wide SEO (March 2026) - COMPLETED
-- 50+ pages with full JSON-LD schemas and canonical URLs
+- ACH & eCheck under Solutions > Payments & Processing
 
 ## Known Limitations
 - Maverick form button color (cross-origin iframe from merchantsolutionscorpdb.com)
@@ -45,5 +39,5 @@ Build and maintain a comprehensive marketing/sales website for a merchant servic
 - P4: Backend CMS migration, Component refactoring
 
 ## Credentials
-- Blog Admin: `/resources/blog/admin` - marketing@merchantsolutionscorp.com / Mscpay$1
-- Document Portal: `/resources/documents` - admin1 / 12345
+- Blog Admin: /resources/blog/admin - marketing@merchantsolutionscorp.com / Mscpay$1
+- Document Portal: /resources/documents - admin1 / 12345

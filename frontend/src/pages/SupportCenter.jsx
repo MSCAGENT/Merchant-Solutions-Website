@@ -162,7 +162,7 @@ export default function SupportCenter() {
     { "@type": "ListItem", "position": 2, "name": "Company", "item": "https://merchantsolutionscorp.com/about-merchant-solutions-corp" },
     { "@type": "ListItem", "position": 3, "name": "Support Center", "item": "https://merchantsolutionscorp.com/support" },
   ]};
-  const orgSchema = { "@context": "https://schema.org", "@type": "Organization", "name": "Merchant Solutions Corp", "url": "https://merchantsolutionscorp.com", "logo": "https://customer-assets.emergentagent.com/job_merchant-central-11/artifacts/vmzehzol_MSC_1080x560.png" };
+  const orgSchema = { "@context": "https://schema.org", "@type": "Organization", "name": "Merchant Solutions Corp", "url": "https://merchantsolutionscorp.com", "logo": "https://merchantsolutionscorp.com/logo.png" };
 
   return (
     <div className="min-h-screen bg-gray-50">
