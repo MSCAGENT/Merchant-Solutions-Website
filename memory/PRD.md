@@ -14,20 +14,28 @@ Build and maintain a comprehensive marketing/sales website for a merchant servic
 
 ## What's Been Implemented
 
-### Payment Processing Interlinking (March 2026) - COMPLETED
-- Added internal links on `/solutions/payment-processing` page connecting each payment type section to its dedicated page (Clover, Dejavoo, Ingenico, PayAnywhere, ACH, eCommerce, Gateways, Dual Pricing)
-
-### Business Loans Page Enhancements (March 2026) - COMPLETED
-- Added Square Financial as 6th funding option ($150K-$1.5M, links to Square page)
-- Added 10 detailed FAQs with FAQ schema markup for rich search results
+### 8-Point Dejavoo & Smart Terminals Update (March 2026) - COMPLETED
+1. MAPLE logo in AIPoweredSection reverted to original colors (removed brightness/invert filter)
+2. Dejavoo Standard plan: added 4G Sim Card Service feature; Premium plan: rewrote all features
+3. Added "Create an Account" buttons to Flat Rate and Dual Pricing rate cards
+4. Changed Xerocharge merchant rate from 3.89% to 0%
+5. Fixed CRITICAL recurring pricing modal glitch (replaced per-card Dialog pattern with single controlled Dialog)
+6. Replaced P18 terminal image with user-provided asset
+7. Added "Purchase Now" buttons to all 4 Smart Terminals product cards
+8. Added 5 new FAQs with FAQPage schema to Smart Terminals page
 
 ### Site-wide SEO Overhaul (March 2026) - COMPLETED
 - All 50+ public pages have absolute canonical URLs, robots meta, OG tags, BreadcrumbList, Organization, Service, and FAQPage JSON-LD schemas
-- Zero relative canonical URLs remaining
+
+### Payment Processing Interlinking (March 2026) - COMPLETED
+- Added internal links on `/solutions/payment-processing` page
+
+### Business Loans Page Enhancements (March 2026) - COMPLETED
+- Added Square Financial funding option and 10 FAQs with schema
 
 ### Pages Created
 - `/support` - Support Center with live search, knowledge base
-- `/smart-payment-terminals` - Smart Payment Terminals with slideshow
+- `/smart-payment-terminals` - Smart Payment Terminals with slideshow, Purchase Now buttons, 5 FAQs
 - `/service-areas` - Service Areas with 3D interactive globe
 - `/ecommerce-payments` - Ecommerce Payments (SEO gold standard)
 - `/cloud-kitchen-pos-system` - Cloud Kitchen POS with video hero
