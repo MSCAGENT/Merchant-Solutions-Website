@@ -6,41 +6,121 @@
   <title>Apply Now - Dual Pricing</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; }
-    #maverick { width: 100%; min-height: calc(100vh - 80px); }
-    .logo-header { display: flex; justify-content: center; padding: 16px 0; border-bottom: 1px solid #f3f4f6; background: #fff; }
-    .logo-header img { height: 48px; object-fit: contain; }
+
+    /* Page Background */
+    .application-wrapper{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      background:#f4f6fb;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+    }
+
+    /* Form Card */
+    .application-card{
+      background:white;
+      padding:40px;
+      border-radius:14px;
+      width:520px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.08);
+    }
+
+    /* Header */
+    .app-title{
+      margin:0;
+      font-size:26px;
+      font-weight:600;
+      text-align:center;
+      color:#1f2937;
+    }
+
+    .app-subtitle{
+      text-align:center;
+      font-size:14px;
+      color:#6b7280;
+      margin-bottom:25px;
+    }
+
+    /* Inputs */
+    #maverick input,
+    #maverick select{
+      width:100%;
+      padding:14px;
+      border-radius:8px;
+      border:1px solid #d1d5db;
+      margin-bottom:14px;
+      font-size:14px;
+    }
+
+    /* Focus effect */
+    #maverick input:focus,
+    #maverick select:focus{
+      outline:none;
+      border-color:#7c3aed;
+      box-shadow:0 0 0 3px rgba(124,58,237,0.15);
+    }
+
+    /* Gradient Purple Button */
+    #maverick button,
+    #maverick .btn,
+    #maverick input[type="submit"]{
+      background:linear-gradient(135deg,#7c3aed,#9333ea);
+      border:none;
+      color:white;
+      padding:14px 18px;
+      border-radius:8px;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      width:100%;
+      transition:all .2s ease;
+    }
+
+    /* Hover */
+    #maverick button:hover,
+    #maverick .btn:hover,
+    #maverick input[type="submit"]:hover{
+      background:linear-gradient(135deg,#6d28d9,#7e22ce);
+    }
   </style>
 </head>
 <body>
-  <div class="logo-header">
-    <img src="https://customer-assets.emergentagent.com/job_ff2671fe-c29b-4325-802b-6a52152abd9a/artifacts/kkyjoo51_MSC_300x150.png" alt="Merchant Solutions Corp" />
+  <div class="application-wrapper">
+    <div class="application-card">
+      <h2 class="app-title">Complete Your Setup</h2>
+      <p class="app-subtitle">Finish your merchant application in just a few minutes.</p>
+      <div id="maverick"></div>
+    </div>
   </div>
-  <div id="maverick"></div>
+
   <script>
     (function() {
-      var l = function() { new MaverickClient({ target: 'maverick', url: e.src, options: {id: '1180', agentId: '132194', referral: '0', title: 'Apply Now', theme: 'light', label: 'true'} }); };
+      var l = function() { 
+        new MaverickClient({
+          target: 'maverick',
+          url: e.src,
+          options: {
+            id: '1180',
+            agentId: '132194',
+            referral: '0',
+            title: 'Subscribe now',
+            theme: 'light',
+            label: 'true'
+          }
+        }); 
+      };
       if(typeof window.MaverickClient === 'undefined') {
         window.webroot = "https://merchantsolutionscorpdb.com";
-        var e = document.createElement('script'); e.async = true;
+        var e = document.createElement('script'); 
+        e.async = true;
         e.src = window.webroot + "/js/campaign/client.js?v=" + Date.now();
         document.getElementsByTagName('head')[0].appendChild(e);
-        e.onload = e.onreadystatechange = function() { l(); };
-      } else { l(); }
-      var observer = new MutationObserver(function() {
-        var btns = document.querySelectorAll('#maverick button, #maverick input[type="submit"], #maverick [class*="submit"], #maverick [class*="btn"]');
-        btns.forEach(function(btn) {
-          var text = (btn.textContent || btn.value || '').toLowerCase();
-          if (text.includes('continue') || text.includes('submit') || text.includes('apply') || btn.type === 'submit') {
-            btn.style.background = 'linear-gradient(to right, #8b5cf6, #6d28d9)';
-            btn.style.border = 'none';
-            btn.style.borderRadius = '8px';
-            btn.style.color = '#fff';
-          }
-        });
-      });
-      observer.observe(document.getElementById('maverick'), { childList: true, subtree: true });
-    }());
+        e.onload = e.onreadystatechange = function() { l(); }
+      } else { 
+        l(); 
+      }
+    })();
   </script>
 </body>
 </html>
