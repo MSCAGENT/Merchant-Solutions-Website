@@ -14,7 +14,7 @@ const megaMenus = {
           { label: 'Payment Processing for Businesses', desc: 'Accept credit cards, debit cards, ACH, and digital payments in-store and online.', path: '/solutions/payment-processing' },
           { label: 'Crypto Payment Processing', desc: 'Accept Bitcoin and other cryptocurrencies with automatic settlement options.', path: '/solutions/crypto-processing' },
           { label: 'Dual Pricing & Cash Discount', desc: 'Reduce or eliminate credit card processing fees with compliant dual pricing or surcharge programs.', path: '/dual-pricing-cash-discount-payment-processing' },
-          { label: 'ACH & E-Check Processing', desc: 'Accept direct bank transfers and electronic checks from customers.', path: '/solutions/ach-processing' },
+          { label: 'ACH & E-Check Processing', desc: 'Accept direct bank transfers and electronic checks from customers.', path: '/ach-echeck-processing' },
         ],
       },
       {
@@ -118,7 +118,6 @@ const megaMenus = {
         heading: 'Online Payments',
         items: [
           { label: 'Ecommerce Payments', desc: 'Secure ecommerce payment processing, hosted payment pages, and payment links.', path: '/ecommerce-payments' },
-          { label: 'ACH & eCheck Processing', desc: 'Accept secure bank transfers, recurring billing, and electronic check payments.', path: '/ach-echeck-processing' },
           { label: 'Transaction Gateway', desc: 'Secure payment gateway for e-commerce websites.', path: '/gateway/payments-gateway' },
           { label: 'Virtual Terminal', desc: 'Accept payments manually from any computer.', path: '/pos/virtual-terminal' },
           { label: 'Payment Links', desc: 'Send secure payment links by email or SMS.', path: '/pos/payment-links' },

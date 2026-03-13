@@ -81,7 +81,7 @@ export default function ACHEcheckProcessing() {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://merchantsolutionscorp.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Online Payments", "item": "https://merchantsolutionscorp.com/online-payments" },
+      { "@type": "ListItem", "position": 2, "name": "Payments & Processing", "item": "https://merchantsolutionscorp.com/solutions/payment-processing" },
       { "@type": "ListItem", "position": 3, "name": "ACH & eCheck Processing", "item": "https://merchantsolutionscorp.com/ach-echeck-processing" }
     ]
   };
@@ -118,7 +118,7 @@ export default function ACHEcheckProcessing() {
           <nav className="flex items-center text-sm text-gray-500" aria-label="Breadcrumb" data-testid="breadcrumb-nav">
             <Link to="/" className="hover:text-purple-600 transition-colors">Home</Link>
             <ChevronRight className="h-4 w-4 mx-2 flex-shrink-0" />
-            <Link to="/online-payments" className="hover:text-purple-600 transition-colors">Online Payments</Link>
+            <Link to="/solutions/payment-processing" className="hover:text-purple-600 transition-colors">Payments &amp; Processing</Link>
             <ChevronRight className="h-4 w-4 mx-2 flex-shrink-0" />
             <span className="text-gray-900 font-medium">ACH &amp; eCheck Processing</span>
           </nav>
