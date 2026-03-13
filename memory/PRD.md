@@ -14,19 +14,16 @@ Build and maintain a comprehensive marketing/sales website for a merchant servic
 
 ## What's Been Implemented
 
-### SEO Overhaul (March 2026) - COMPLETED
-- **All 50+ public pages** now have:
-  - Absolute canonical URLs (https://merchantsolutionscorp.com/...)
-  - `<meta name="robots" content="index, follow">`
-  - OG tags (og:title, og:description, og:url, og:type)
-  - JSON-LD BreadcrumbList schema
-  - JSON-LD Organization schema
-  - JSON-LD Service schema (on service/product pages)
-  - JSON-LD FAQPage schema (on pages with FAQs)
+### Payment Processing Interlinking (March 2026) - COMPLETED
+- Added internal links on `/solutions/payment-processing` page connecting each payment type section to its dedicated page (Clover, Dejavoo, Ingenico, PayAnywhere, ACH, eCommerce, Gateways, Dual Pricing)
+
+### Business Loans Page Enhancements (March 2026) - COMPLETED
+- Added Square Financial as 6th funding option ($150K-$1.5M, links to Square page)
+- Added 10 detailed FAQs with FAQ schema markup for rich search results
+
+### Site-wide SEO Overhaul (March 2026) - COMPLETED
+- All 50+ public pages have absolute canonical URLs, robots meta, OG tags, BreadcrumbList, Organization, Service, and FAQPage JSON-LD schemas
 - Zero relative canonical URLs remaining
-- 12 placeholder pages upgraded from zero SEO to full SEO
-- ~30 pages upgraded from basic meta to include all schemas
-- ~20 pages upgraded from partial schemas to complete coverage
 
 ### Pages Created
 - `/support` - Support Center with live search, knowledge base
