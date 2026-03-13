@@ -14,12 +14,20 @@ Build and maintain a comprehensive marketing/sales website for a merchant servic
 
 ## What's Been Implemented
 
+### Dejavoo Terminals - Free Placement & Activation Flow (March 2026) - COMPLETED
+1. Added Free Placement disclosure below Dual Pricing rate card
+2. Updated all 3 testimonials (Jason D. Orlando FL, Linda M. Katy TX, Brianna G. New York NY)
+3. Changed terminal "Pricing" buttons to "Free Placement" with:
+   - Pricing modal showing Dual Pricing + Flat Rate with disclosure
+   - "Apply Now" triggers Activation & Shipping Deposit popup ($45 activation, deposit covers)
+   - "Continue Activation" links to JotForm application
+
 ### 8-Point Dejavoo & Smart Terminals Update (March 2026) - COMPLETED
-1. MAPLE logo in AIPoweredSection reverted to original colors (removed brightness/invert filter)
+1. MAPLE logo in AIPoweredSection reverted to original colors (removed filter)
 2. Dejavoo Standard plan: added 4G Sim Card Service feature; Premium plan: rewrote all features
 3. Added "Create an Account" buttons to Flat Rate and Dual Pricing rate cards
 4. Changed Xerocharge merchant rate from 3.89% to 0%
-5. Fixed CRITICAL recurring pricing modal glitch (replaced per-card Dialog pattern with single controlled Dialog)
+5. Fixed CRITICAL recurring pricing modal glitch (single controlled Dialog pattern)
 6. Replaced P18 terminal image with user-provided asset
 7. Added "Purchase Now" buttons to all 4 Smart Terminals product cards
 8. Added 5 new FAQs with FAQPage schema to Smart Terminals page
@@ -27,26 +35,12 @@ Build and maintain a comprehensive marketing/sales website for a merchant servic
 ### Site-wide SEO Overhaul (March 2026) - COMPLETED
 - All 50+ public pages have absolute canonical URLs, robots meta, OG tags, BreadcrumbList, Organization, Service, and FAQPage JSON-LD schemas
 
-### Payment Processing Interlinking (March 2026) - COMPLETED
-- Added internal links on `/solutions/payment-processing` page
-
-### Business Loans Page Enhancements (March 2026) - COMPLETED
-- Added Square Financial funding option and 10 FAQs with schema
-
-### Pages Created
-- `/support` - Support Center with live search, knowledge base
-- `/smart-payment-terminals` - Smart Payment Terminals with slideshow, Purchase Now buttons, 5 FAQs
-- `/service-areas` - Service Areas with 3D interactive globe
-- `/ecommerce-payments` - Ecommerce Payments (SEO gold standard)
-- `/cloud-kitchen-pos-system` - Cloud Kitchen POS with video hero
-- `/food-trucks-pos` - Food Trucks POS with video hero
-
-### Key Features
+### Other Completed Work
+- Payment Processing page interlinking (10 internal links)
+- Business Loans page: Square Financial funding option + 10 FAQs with schema
 - ScrollToTop navigation fix (site-wide)
-- AI-Powered Section component on 14 pages
 - Footer with full sitemap and social links
-- Blog admin panel with attachment uploads
-- Secure document portal with auth
+- Multiple new pages: EcommercePayments, ServiceAreas, CloudKitchenPOS, FoodTrucksPOS
 
 ## Prioritized Backlog
 
